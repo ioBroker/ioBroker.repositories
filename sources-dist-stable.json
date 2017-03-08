@@ -2,7 +2,7 @@
   "admin": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
-    "version": "0.1.7"
+    "version": "1.7.0"
   },
   "amazon-dash": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/io-package.json",
@@ -213,7 +213,7 @@
   "js-controller": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.js-controller/master/io-package.json",
     "url": "https://github.com/ioBroker/ioBroker.js-controller/tarball/master",
-    "version": "0.16.1"
+    "version": "0.16.2"
   },
   "km200": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.km200/master/io-package.json",

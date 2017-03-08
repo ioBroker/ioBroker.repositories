@@ -1,0 +1,32 @@
+{
+  "name": "iobroker.repositories",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ioBroker/ioBroker.build.git"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=4"
+  },
+  "dependencies": {
+  },
+  "homepage": "http://iobroker.net",
+  "description": "...domesticate the Internet of Things",
+  "scripts": {
+    "init": "node lib/scripts.js --init"
+  },
+  "bugs": {
+    "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ioBroker/ioBroker.repositories/blob/master/LICENSE"
+    }
+  ],
+  "author": "bluefox <dogafox@gmail.com>",
+  "contributors": [
+    "bluefox <dogafox@gmail.com>"
+  ]
+}
