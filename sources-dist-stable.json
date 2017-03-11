@@ -639,5 +639,10 @@
     "meta": "https://raw.githubusercontent.com/hieblmedia/ioBroker.broadlink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/hieblmedia/ioBroker.broadlink/master/admin/broadlink.png",
     "version": "0.1.1"
+  },
+  "proxy": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
+    "version": "0.1.0"
   }
 }
