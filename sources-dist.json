@@ -272,6 +272,10 @@
     "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/admin/piface.png"
   },
+  "pimatic": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.pimatic/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.pimatic/master/admin/pimatic.png"
+  },
   "ping": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ping/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ping/master/admin/ping.png"

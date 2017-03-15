@@ -644,5 +644,10 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
     "version": "0.1.0"
+  },
+  "pimatic": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.pimatic/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.pimatic/master/admin/pimatic.png",
+    "version": "0.1.1"
   }
 }
