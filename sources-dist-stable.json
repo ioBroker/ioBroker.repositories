@@ -258,14 +258,12 @@
   "megadd": {
     "meta": "https://raw.githubusercontent.com/ausHaus/ioBroker.megadd/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ausHaus/ioBroker.megadd/master/admin/megad.png",
-    "published": "2017-03-16T15:53:22.103Z",
-    "version": "0.1.8"
+    "version": "0.2.0"
   },
   "megaesp": {
     "meta": "https://raw.githubusercontent.com/ausHaus/ioBroker.megaesp/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ausHaus/ioBroker.megaesp/master/admin/megad.png",
-    "published": "2017-03-16T15:53:22.103Z",
-    "version": "0.0.6"
+    "version": "0.1.0"
   },
   "miele": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.miele/master/io-package.json",
