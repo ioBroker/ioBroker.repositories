@@ -44,6 +44,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cul/master/admin/busware.jpg",
     "version": "0.2.2"
   },
+  "daikin": {
+    "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.daikin/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.daikin/master/admin/daikin.jpg",
+    "version": "0.2.3"
+  },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/admin/discovery.jpg",
