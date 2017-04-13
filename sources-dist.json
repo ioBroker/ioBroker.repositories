@@ -225,8 +225,8 @@
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.miele/master/admin/xmiele.png"
   },
   "mihome-vacuum": {
-    "meta": "https://raw.githubusercontent.com/soef/ioBroker.mihome-vacuum/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/soef/ioBroker.mihome-vacuum/master/admin/mihome-vacuum.png"
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-vacuum/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-vacuum/master/admin/mihome-vacuum.png"
   },
   "mobile": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/io-package.json",
