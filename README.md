@@ -8,10 +8,8 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 
 ## Defined categories for non-repo adapters
 
-* fritzdect	infrastructure
-* milight	lighting
 * pilight	IoT-systems
 * samsung2016	multimedia
 * scriptgui	logic
-* viessmann	heating
+* viessmann	climate-control
 * vuplus	multimedia
