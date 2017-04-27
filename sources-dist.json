@@ -370,6 +370,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.owntracks/master/admin/owntracks.png",
     "type": "geoposition"
   },
+   "paw": {
+    "meta": "https://raw.githubusercontent.com/bondrogeen/iobroker.paw/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bondrogeen/iobroker.paw/master/admin/paw.png",
+    "type": "hardware"
+  },
   "parser": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/admin/parser.png",
