@@ -44,7 +44,7 @@
   "cloud": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/admin/cloud.jpg",
-    "version": "0.7.1",
+    "version": "0.8.2",
     "type": "communication"
   },
   "cul": {
@@ -280,7 +280,7 @@
   "js-controller": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.js-controller/master/io-package.json",
     "url": "https://github.com/ioBroker/ioBroker.js-controller/tarball/master",
-    "version": "0.17.2",
+    "version": "1.0.0",
     "type": "general"
   },
   "km200": {
@@ -678,12 +678,6 @@
     "version": "0.1.2",
     "type": "visualization-widgets"
   },
-  "vis-beta": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/admin/vis.png",
-    "version": "0.12.20",
-    "type": "visualization"
-  },
   "vis-canvas-gauges": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-canvas-gauges/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-canvas-gauges/master/admin/vis-canvas-gauges.png",
@@ -747,7 +741,7 @@
   "vis-map": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-map/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-map/master/admin/vis-map.png",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "type": "visualization-widgets"
   },
   "vis-metro": {

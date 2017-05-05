@@ -560,11 +560,6 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-bars/master/admin/bars.png",
     "type": "visualization-widgets"
   },
-  "vis-beta": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/admin/vis.png",
-    "type": "visualization"
-  },
   "vis-canvas-gauges": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-canvas-gauges/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-canvas-gauges/master/admin/vis-canvas-gauges.png",
