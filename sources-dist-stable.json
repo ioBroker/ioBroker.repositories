@@ -322,7 +322,7 @@
   "lightify": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.lightify/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.lightify/master/admin/lightify.png",
-    "version": "0.0.27",
+    "version": "0.0.28",
     "type": "lighting"
   },
   "maxcul": {
@@ -639,7 +639,7 @@
   "tr-064": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.tr-064/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.tr-064/master/admin/tr-064.png",
-    "version": "0.3.11",
+    "version": "0.3.17",
     "type": "infrastructure"
   },
   "tvspielfilm": {
@@ -795,7 +795,7 @@
   "wifilight": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.wifilight/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.wifilight/master/admin/wifilight.png",
-    "version": "0.1.1",
+    "version": "0.1.4",
     "type": "lighting"
   },
   "wm-bus": {
@@ -825,7 +825,7 @@
   "yamaha": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.yamaha/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.yamaha/master/admin/yamaha.png",
-    "version": "0.3.5",
+    "version": "0.3.14",
     "type": "multimedia"
   },
   "yr": {
