@@ -89,6 +89,11 @@
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.find-my-iphone/master/admin/find-my-iphone.png",
     "type": "geoposition"
   },
+  "firetv": {
+    "meta": "https://raw.githubusercontent.com/soef/ioBroker.firetv/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/soef/ioBroker.firetv/master/admin/firetv.png",
+    "type": "multimedia"
+  },
   "flot": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/admin/flot.png",
