@@ -108,10 +108,17 @@
     "version": "0.1.3",
     "type": "geoposition"
   },
+  "firetv": {
+    "meta": "https://raw.githubusercontent.com/soef/ioBroker.firetv/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/soef/ioBroker.firetv/master/admin/firetv.png",
+    "type": "multimedia",
+    "published": "2017-05-18T20:30:53.871Z",
+    "version": "0.0.27"
+  },
   "flot": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/admin/flot.png",
-    "version": "1.5.6",
+    "version": "1.6.0",
     "type": "visualisation"
   },
   "foobar2000": {
@@ -375,7 +382,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/admin/mobile.png",
     "version": "0.4.10",
-    "type": "communication"
+    "type": "visualisation"
   },
   "modbus": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.modbus/master/io-package.json",
@@ -436,6 +443,13 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.onkyo/master/admin/onkyo.png",
     "version": "0.2.0",
     "type": "multimedia"
+  },
+  "openhab": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.openhab/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.openhab/master/admin/openhab.png",
+    "type": "multimedia",
+    "published": "2017-05-18T20:30:53.876Z",
+    "version": "0.1.0"
   },
   "owfs": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/io-package.json",
