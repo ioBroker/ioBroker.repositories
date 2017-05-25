@@ -447,7 +447,7 @@
   "openhab": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.openhab/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.openhab/master/admin/openhab.png",
-    "type": "multimedia",
+    "type": "iot-systems",
     "published": "2017-05-18T20:30:53.876Z",
     "version": "0.1.0"
   },
