@@ -24,6 +24,11 @@
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/admin/botvac.png",
     "type": "household"
   },
+  "boblight": {
+    "meta": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.boblight/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.boblight/master/admin/boblight.png",
+    "type": "lighting"
+  },
   "broadlink": {
     "meta": "https://raw.githubusercontent.com/hieblmedia/ioBroker.broadlink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/hieblmedia/ioBroker.broadlink/master/admin/broadlink.png",
@@ -89,6 +94,11 @@
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.find-my-iphone/master/admin/find-my-iphone.png",
     "type": "geoposition"
   },
+  "firetv": {
+    "meta": "https://raw.githubusercontent.com/soef/ioBroker.firetv/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/soef/ioBroker.firetv/master/admin/firetv.png",
+    "type": "multimedia"
+  },
   "flot": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/admin/flot.png",
@@ -118,6 +128,11 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.geofency/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.geofency/master/admin/geofency.png",
     "type": "geoposition"
+  },
+  "habpanel": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.habpanel/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.habpanel/master/admin/habpanel.png",
+    "type": "visualisation"
   },
   "harmony": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/io-package.json",
@@ -295,6 +310,11 @@
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.miele/master/admin/xmiele.png",
     "type": "household"
   },
+  "mihome": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome/master/admin/mihome.png",
+    "type": "iot-systems"
+  },
   "mihome-vacuum": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-vacuum/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-vacuum/master/admin/mihome-vacuum.png",
@@ -308,12 +328,18 @@
   "mobile": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/admin/mobile.png",
-    "type": "communication"
+    "type": "visualisation"
   },
   "modbus": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.modbus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.modbus/master/admin/modbus.png",
     "type": "protocols"
+  },
+  "motion": {
+    "meta": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.motion/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.motion/master/admin/motion.png",
+    "type": "utility"
+	"comment": "actually the type must be monitoring..."
   },
   "mpd": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.mpd/master/io-package.json",
@@ -360,6 +386,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.onkyo/master/admin/onkyo.png",
     "type": "multimedia"
   },
+  "openhab": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.openhab/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.openhab/master/admin/openhab.png",
+    "type": "iot-systems"
+  },
   "owfs": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/admin/owfs.png",
@@ -374,6 +405,11 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/admin/parser.png",
     "type": "logic"
+  },
+  "paw": {
+    "meta": "https://raw.githubusercontent.com/bondrogeen/iobroker.paw/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bondrogeen/iobroker.paw/master/admin/paw.png",
+    "type": "hardware"
   },
   "phantomjs": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.phantomjs/master/io-package.json",
@@ -554,11 +590,6 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-bars/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-bars/master/admin/bars.png",
     "type": "visualization-widgets"
-  },
-  "vis-beta": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/admin/vis.png",
-    "type": "visualization"
   },
   "vis-canvas-gauges": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-canvas-gauges/master/io-package.json",

@@ -14,7 +14,8 @@
   "homepage": "http://iobroker.net",
   "description": "...domesticate the Internet of Things",
   "scripts": {
-    "init": "node lib/scripts.js --init"
+    "init": "node lib/scripts.js --init",
+    "update": "node repo.js"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
@@ -28,8 +29,5 @@
   "author": "bluefox <dogafox@gmail.com>",
   "contributors": [
     "bluefox <dogafox@gmail.com>"
-  ],
-  "scripts": {
-	"update": "node repo.js"
-  }
+  ]
 }
