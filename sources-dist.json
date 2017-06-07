@@ -338,7 +338,7 @@
   "motion": {
     "meta": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.motion/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.motion/master/admin/motion.png",
-    "type": "utility"
+    "type": "utility",
 	"comment": "actually the type must be monitoring..."
   },
   "mpd": {
