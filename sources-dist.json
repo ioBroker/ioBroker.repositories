@@ -19,15 +19,15 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.b-control-em/master/admin/bcontrol.png",
     "type": "energy"
   },
-  "botvac": {
-    "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/admin/botvac.png",
-    "type": "household"
-  },
   "boblight": {
     "meta": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.boblight/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.boblight/master/admin/boblight.png",
     "type": "lighting"
+  },
+  "botvac": {
+    "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/admin/botvac.png",
+    "type": "household"
   },
   "broadlink": {
     "meta": "https://raw.githubusercontent.com/hieblmedia/ioBroker.broadlink/master/io-package.json",
@@ -339,7 +339,7 @@
     "meta": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.motion/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.motion/master/admin/motion.png",
     "type": "utility",
-	"comment": "actually the type must be monitoring..."
+    "comment": "actually the type must be monitoring..."
   },
   "mpd": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.mpd/master/io-package.json",
