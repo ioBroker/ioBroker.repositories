@@ -124,6 +124,11 @@
     "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.fronius/master/admin/fronius.png",
     "type": "energy"
   },
+  "fullcalendar": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.fullcalendar/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.fullcalendar/master/admin/fullcalendar.png",
+    "type": "date-and-time"
+  },
   "geofency": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.geofency/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.geofency/master/admin/geofency.png",
@@ -131,7 +136,7 @@
   },
   "habpanel": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.habpanel/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.habpanel/master/admin/habpanel.png",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.habpanel/master/admin/habpanel.png",
     "type": "visualisation"
   },
   "harmony": {
