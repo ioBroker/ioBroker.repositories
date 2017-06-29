@@ -119,7 +119,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/admin/flot.png",
     "version": "1.6.1",
-    "type": "visualisation"
+    "type": "visualization"
   },
   "foobar2000": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.foobar2000/master/io-package.json",
@@ -382,7 +382,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/admin/mobile.png",
     "version": "0.4.10",
-    "type": "visualisation"
+    "type": "visualization"
   },
   "modbus": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.modbus/master/io-package.json",
@@ -540,7 +540,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.rickshaw/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.rickshaw/master/admin/rickshaw.png",
     "version": "0.4.4",
-    "type": "visualisation"
+    "type": "visualization"
   },
   "rpi2": {
     "meta": "https://raw.githubusercontent.com/ioBroker/iobroker.rpi2/master/io-package.json",
