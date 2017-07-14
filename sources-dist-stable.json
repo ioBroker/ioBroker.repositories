@@ -172,7 +172,7 @@
   "hm-rega": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/admin/homematic.png",
-    "version": "1.4.8",
+    "version": "1.5.0",
     "type": "iot-systems"
   },
   "hm-rpc": {
@@ -269,7 +269,7 @@
   "influxdb": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/admin/influxdb.jpeg",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "type": "storage"
   },
   "innogy-smarthome": {
