@@ -435,7 +435,7 @@
   "nut": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.nut/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.nut/master/admin/nut.png",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "type": "hardware"
   },
   "onkyo": {
@@ -611,7 +611,7 @@
   "sql": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/admin/sql.png",
-    "version": "1.5.3",
+    "version": "1.5.4",
     "type": "storage"
   },
   "squeezebox": {
