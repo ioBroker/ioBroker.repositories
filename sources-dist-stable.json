@@ -172,7 +172,7 @@
   "hm-rega": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/admin/homematic.png",
-    "version": "1.4.8",
+    "version": "1.5.0",
     "type": "iot-systems"
   },
   "hm-rpc": {
@@ -269,7 +269,7 @@
   "influxdb": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/admin/influxdb.jpeg",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "type": "storage"
   },
   "innogy-smarthome": {
@@ -435,7 +435,7 @@
   "nut": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.nut/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.nut/master/admin/nut.png",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "type": "hardware"
   },
   "onkyo": {
@@ -611,7 +611,7 @@
   "sql": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/admin/sql.png",
-    "version": "1.5.3",
+    "version": "1.5.4",
     "type": "storage"
   },
   "squeezebox": {
