@@ -105,7 +105,7 @@
   "find-my-iphone": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.find-my-iphone/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.find-my-iphone/master/admin/find-my-iphone.png",
-    "version": "0.1.3",
+    "version": "0.2.8",
     "type": "geoposition"
   },
   "firetv": {
@@ -329,7 +329,7 @@
   "lightify": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.lightify/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.lightify/master/admin/lightify.png",
-    "version": "0.0.28",
+    "version": "0.2.10",
     "type": "lighting"
   },
   "maxcul": {
@@ -563,7 +563,7 @@
   "samsung": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.samsung/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.samsung/master/admin/samsung.png",
-    "version": "0.1.1",
+    "version": "0.2.4",
     "type": "multimedia"
   },
   "sayit": {
