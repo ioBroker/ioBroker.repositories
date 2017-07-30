@@ -365,11 +365,17 @@
     "version": "0.1.2",
     "type": "household"
   },
+  "mihome": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome/master/admin/mihome.png",
+    "type": "iot-systems",
+    "version": "0.2.0"
+  },
   "mihome-vacuum": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-vacuum/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-vacuum/master/admin/mihome-vacuum.png",
     "published": "2017-04-10T17:10:21.690Z",
-    "version": "0.3.1",
+    "version": "0.5.6",
     "type": "household"
   },
   "milight": {
