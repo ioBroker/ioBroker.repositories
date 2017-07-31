@@ -59,6 +59,11 @@
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.daikin/master/admin/daikin.jpg",
     "type": "climate-control"
   },
+  "daswetter": {
+    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/admin/daswettercom.png",
+    "type": "weather"
+  },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/admin/discovery.jpg",
@@ -516,6 +521,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sayit/master/admin/sayit.png",
     "type": "multimedia"
   },
+  "sbfspot": {
+    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/admin/myhomecontrol.png",
+    "type": "hardware"
+  },
   "scenes": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/admin/scenes.png",
@@ -694,6 +704,11 @@
   "vis-timeandweather": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-timeandweather/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-timeandweather/master/admin/timeandweather.png",
+    "type": "visualization-widgets"
+  },
+  "vis-weather": {
+    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-weather/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-weather/master/admin/vis-weather.png",
     "type": "visualization-widgets"
   },
   "weatherunderground": {
