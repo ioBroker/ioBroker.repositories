@@ -371,6 +371,12 @@
     "type": "iot-systems",
     "version": "0.2.0"
   },
+  "mihome-plug": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-plug/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-plug/master/admin/mihome-plug.png",
+    "type": "hardware",
+    "version": "0.1.1"
+  },
   "mihome-vacuum": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-vacuum/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-vacuum/master/admin/mihome-vacuum.png",
@@ -803,7 +809,7 @@
   "web": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.web/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.web/master/admin/web.png",
-    "version": "2.0.2",
+    "version": "2.0.6",
     "type": "general"
   },
   "wetty": {

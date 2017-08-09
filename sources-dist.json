@@ -335,6 +335,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome/master/admin/mihome.png",
     "type": "iot-systems"
   },
+  "mihome-plug": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-plug/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-plug/master/admin/mihome-plug.png",
+    "type": "hardware"
+  },
   "mihome-vacuum": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-vacuum/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-vacuum/master/admin/mihome-vacuum.png",
@@ -359,12 +364,6 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.modbus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.modbus/master/admin/modbus.png",
     "type": "protocols"
-  },
-  "motion": {
-    "meta": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.motion/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.motion/master/admin/motion.png",
-    "type": "utility",
-    "comment": "actually the type must be monitoring..."
   },
   "mpd": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.mpd/master/io-package.json",
