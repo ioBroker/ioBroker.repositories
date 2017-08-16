@@ -142,7 +142,7 @@
   "fronius": {
     "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.fronius/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.fronius/master/admin/fronius.png",
-    "version": "0.0.5",
+    "version": "1.0.0",
     "type": "energy"
   },
   "geofency": {
@@ -311,7 +311,7 @@
   "landroid": {
     "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.landroid/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.landroid/master/admin/landroid.png",
-    "version": "0.1.1",
+    "version": "1.0.0",
     "type": "garden"
   },
   "landroid-s": {
