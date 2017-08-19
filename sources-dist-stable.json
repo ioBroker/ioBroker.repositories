@@ -2,7 +2,7 @@
   "admin": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
-    "version": "1.7.6",
+    "version": "2.0.2",
     "type": "general"
   },
   "amazon-dash": {
@@ -281,7 +281,7 @@
   "javascript": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/admin/js.jpeg",
-    "version": "3.2.6",
+    "version": "3.4.0",
     "type": "logic"
   },
   "js-controller": {
@@ -611,7 +611,7 @@
   "socketio": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/admin/socketio.png",
-    "version": "1.7.4",
+    "version": "1.8.0",
     "type": "communication"
   },
   "solarwetter": {
@@ -815,7 +815,7 @@
   "web": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.web/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.web/master/admin/web.png",
-    "version": "2.0.6",
+    "version": "2.1.3",
     "type": "general"
   },
   "wetty": {
