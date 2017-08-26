@@ -590,6 +590,11 @@
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.tr-064/master/admin/tr-064.png",
     "type": "infrastructure"
   },
+  "tradfri": {
+    "meta": "https://raw.githubusercontent.com/soef/ioBroker.tr-064/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AlCalzone/iobroker.tradfri/master/admin/tradfri.png",
+    "type": "hardware"
+  },
   "tvspielfilm": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/admin/tvspielfilm.png",
