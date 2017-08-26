@@ -149,6 +149,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.habpanel/master/admin/habpanel.png",
     "type": "visualization"
   },
+  "haier": {
+    "meta": "https://raw.githubusercontent.com/instalator/ioBroker.haier/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/instalator/ioBroker.haier/master/admin/haier.png",
+    "type": "hardware"
+  },
   "harmony": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
