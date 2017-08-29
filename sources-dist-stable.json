@@ -414,6 +414,12 @@
     "version": "0.3.0",
     "type": "lighting"
   },
+  "milight-smart-light": {
+    "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.milight-smart-light/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Steiger04/ioBroker.milight-smart-light/master/admin/lib/images/milight-smart-light-md.png",
+    "version": "0.0.5",
+    "type": "lighting"
+  },
   "mobile": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/admin/mobile.png",

@@ -385,6 +385,11 @@
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.milight/master/admin/easybulb_logo.png",
     "type": "lighting"
   },
+  "milight-smart-light": {
+    "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.milight-smart-light/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Steiger04/ioBroker.milight-smart-light/master/admin/lib/images/milight-smart-light-md.png",
+    "type": "lighting"
+  },
   "mobile": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/admin/mobile.png",
