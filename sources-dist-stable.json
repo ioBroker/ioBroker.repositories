@@ -296,6 +296,12 @@
     "version": "3.4.0",
     "type": "logic"
   },
+  "js2fs": {
+    "meta": "https://raw.githubusercontent.com/soef/ioBroker.js2fs/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/soef/ioBroker.js2fs/master/admin/js2fs.png",
+    "version": "0.0.12",
+    "type": "utility"
+  },
   "js-controller": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.js-controller/master/io-package.json",
     "url": "https://github.com/ioBroker/ioBroker.js-controller/tarball/master",
