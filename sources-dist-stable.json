@@ -710,6 +710,12 @@
     "version": "0.3.22",
     "type": "infrastructure"
   },
+  "tradfri": {
+    "meta": "https://raw.githubusercontent.com/AlCalzone/iobroker.tradfri/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AlCalzone/iobroker.tradfri/master/admin/tradfri.png",
+    "version": "0.2.1",
+    "type": "hardware"
+  },  
   "tvspielfilm": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/admin/tvspielfilm.png",
