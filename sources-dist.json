@@ -320,6 +320,11 @@
     "icon": "https://raw.githubusercontent.com/SMundt/ioBroker.lgtv/master/admin/lgtv.png",
     "type": "multimedia"
   },
+  "lgtv-rs": {
+    "meta": "https://raw.githubusercontent.com/instalator/ioBroker.lgtv-rs/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/instalator/ioBroker.lgtv-rs/master/admin/lg.png",
+    "type": "multimedia"
+  },
   "lifx": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/admin/lifx_logo.png",
