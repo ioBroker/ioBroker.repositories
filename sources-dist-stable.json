@@ -579,7 +579,7 @@
     "type": "messaging"
   },
   "radar": {
-    "meta": "https://raw.githubusercontent.com/frankjoke/iobroker.radar/master/io-package.json",
+    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.radar/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.radar/master/admin/radar.png",
     "version": "0.7.3",
     "type": "network"
@@ -907,5 +907,17 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/admin/zwave.png",
     "version": "0.4.4",
     "type": "hardware"
+  },
+  "bmw": {
+    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/admin/bmw.png",
+    "version": "1.2.0",
+    "type": "hardware"
+  },
+  "broadlink2": {
+    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/admin/broadlink.png",
+    "version": "1.01",
+    "type": "iot-systems"
   }
 }
