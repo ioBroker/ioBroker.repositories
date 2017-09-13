@@ -24,6 +24,11 @@
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.benq/master/admin/benq.png",
     "type": "multimedia"
   },
+  "bmw": {
+    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/admin/bmw.png",
+    "type": "hardware"
+  },
   "boblight": {
     "meta": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.boblight/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.boblight/master/admin/boblight.png",
@@ -38,6 +43,11 @@
     "meta": "https://raw.githubusercontent.com/hieblmedia/ioBroker.broadlink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/hieblmedia/ioBroker.broadlink/master/admin/broadlink.png",
     "type": "multimedia"
+  },
+  "broadlink2": {
+    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/admin/broadlink.png",
+    "type": "iot-systems"
   },
   "chromecast": {
     "meta": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/io-package.json",
@@ -516,7 +526,7 @@
     "type": "messaging"
   },
   "radar": {
-    "meta": "https://raw.githubusercontent.com/frankjoke/iobroker.radar/master/io-package.json",
+    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.radar/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.radar/master/admin/radar.png",
     "type": "network"
   },
