@@ -29,11 +29,6 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.ble/master/admin/ble.png",
     "type": "hardware"
   },  
-  "bmw": {
-    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/admin/bmw.png",
-    "type": "hardware"
-  },
   "boblight": {
     "meta": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.boblight/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.boblight/master/admin/boblight.png",
