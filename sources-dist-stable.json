@@ -29,6 +29,12 @@
     "version": "0.0.6",
     "type": "multimedia"
   },
+  "bmw": {
+    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/admin/bmw.png",
+    "version": "1.2.1",
+    "type": "hardware"
+  },
   "botvac": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/admin/botvac.png",
@@ -40,6 +46,12 @@
     "icon": "https://raw.githubusercontent.com/hieblmedia/ioBroker.broadlink/master/admin/broadlink.png",
     "version": "0.1.1",
     "type": "multimedia"
+  },
+  "broadlink2": {
+    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/admin/broadlink.png",
+    "version": "1.0.1",
+    "type": "iot-systems"
   },
   "chromecast": {
     "meta": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/io-package.json",
@@ -908,16 +920,5 @@
     "version": "0.4.4",
     "type": "hardware"
   },
-  "bmw": {
-    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/admin/bmw.png",
-    "version": "1.2.0",
-    "type": "hardware"
-  },
-  "broadlink2": {
-    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/admin/broadlink.png",
-    "version": "1.0.1",
-    "type": "iot-systems"
-  }
+  
 }
