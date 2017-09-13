@@ -160,7 +160,7 @@
   "fronius": {
     "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.fronius/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.fronius/master/admin/fronius.png",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "type": "energy"
   },
   "geofency": {
@@ -323,7 +323,7 @@
   "km200": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.km200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.km200/master/admin/km200.png",
-    "version": "1.0.1",
+    "version": "1.01",
     "type": "climate-control"
   },
   "knx": {
@@ -347,7 +347,7 @@
   "landroid-s": {
     "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.landroid-s/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MeisterTR/iobroker.landroid-s/master/admin/landroid-s.png",
-    "version": "0.3.0",
+    "version": "1.0.3",
     "type": "garden"
   },
   "lgtv": {
@@ -722,6 +722,12 @@
     "version": "0.3.22",
     "type": "infrastructure"
   },
+  "tradfri": {
+    "meta": "https://raw.githubusercontent.com/AlCalzone/iobroker.tradfri/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AlCalzone/iobroker.tradfri/master/admin/tradfri.png",
+    "version": "0.2.1",
+    "type": "hardware"
+  },  
   "tvspielfilm": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/admin/tvspielfilm.png",
@@ -919,6 +925,5 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/admin/zwave.png",
     "version": "0.4.4",
     "type": "hardware"
-  },
-  
+  }
 }
