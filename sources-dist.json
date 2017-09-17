@@ -521,6 +521,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonos/master/admin/sonos.png",
     "type": "multimedia"
   },
+  "sony-bravia": {
+    "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.sony-bravia/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.sony-bravia/admin/sony-bravia.png",
+    "type": "multimedia"
+  },
   "sql": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/admin/sql.png",
