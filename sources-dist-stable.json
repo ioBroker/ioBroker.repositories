@@ -308,17 +308,17 @@
     "version": "3.4.0",
     "type": "logic"
   },
-  "js2fs": {
-    "meta": "https://raw.githubusercontent.com/soef/ioBroker.js2fs/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/soef/ioBroker.js2fs/master/admin/js2fs.png",
-    "version": "0.0.12",
-    "type": "utility"
-  },
   "js-controller": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.js-controller/master/io-package.json",
     "url": "https://github.com/ioBroker/ioBroker.js-controller/tarball/master",
     "version": "1.1.2",
     "type": "general"
+  },
+  "js2fs": {
+    "meta": "https://raw.githubusercontent.com/soef/ioBroker.js2fs/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/soef/ioBroker.js2fs/master/admin/js2fs.png",
+    "version": "0.0.12",
+    "type": "utility"
   },
   "km200": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.km200/master/io-package.json",
@@ -551,7 +551,7 @@
   "piface": {
     "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/admin/piface.png",
-    "version": "0.0.9",
+    "version": "1.0.0",
     "type": "hardware"
   },
   "pimatic": {
@@ -727,7 +727,7 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/iobroker.tradfri/master/admin/tradfri.png",
     "version": "0.2.1",
     "type": "hardware"
-  },  
+  },
   "tvspielfilm": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/admin/tvspielfilm.png",
