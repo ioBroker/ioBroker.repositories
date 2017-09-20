@@ -608,12 +608,6 @@
     "version": "1.4.2",
     "type": "multimedia"
   },
-  "sony-bravia": {
-    "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.sony-bravia/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.sony-bravia/master/admin/sony-bravia.png",
-    "version": "0.0.5",
-    "type": "multimedia"
-  },
   "sql": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/admin/sql.png",
