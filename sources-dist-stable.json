@@ -653,7 +653,7 @@
   "smartmeter": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.smartmeter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.smartmeter/master/admin/smartmeter.png",
-    "version": "0.5.8",
+    "version": "1.0.0",
     "type": "energy"
   },
   "socketio": {
