@@ -2,7 +2,7 @@
   "admin": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
-    "version": "2.0.2",
+    "version": "2.0.4",
     "type": "general"
   },
   "amazon-dash": {
@@ -62,7 +62,7 @@
   "cloud": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/admin/cloud.jpg",
-    "version": "1.0.7",
+    "version": "2.0.4",
     "type": "communication"
   },
   "cul": {
@@ -190,7 +190,7 @@
   "history": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.history/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.history/master/admin/history.png",
-    "version": "1.6.2",
+    "version": "1.6.3",
     "type": "storage"
   },
   "hm-rega": {
@@ -647,7 +647,7 @@
   "simple-api": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/admin/simple-api.png",
-    "version": "1.3.0",
+    "version": "1.6.0",
     "type": "communication"
   },
   "smartmeter": {
@@ -659,7 +659,7 @@
   "socketio": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/admin/socketio.png",
-    "version": "1.8.0",
+    "version": "1.8.2",
     "type": "communication"
   },
   "solarwetter": {
@@ -677,7 +677,7 @@
   "sql": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/admin/sql.png",
-    "version": "1.5.4",
+    "version": "1.5.6",
     "type": "storage"
   },
   "squeezebox": {
@@ -701,7 +701,7 @@
   "telegram": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.telegram/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.telegram/master/admin/telegram.png",
-    "version": "1.0.2",
+    "version": "1.0.6",
     "type": "messaging"
   },
   "terminal": {
