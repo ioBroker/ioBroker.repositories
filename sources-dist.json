@@ -485,6 +485,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.owntracks/master/admin/owntracks.png",
     "type": "geoposition"
   },
+  "panasonic-viera": {
+    "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.panasonic-viera/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.panasonic-viera/admin/panasonic-viera.png",
+    "type": "multimedia"
+  },
   "parser": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/admin/parser.png",
