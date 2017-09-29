@@ -77,6 +77,12 @@
     "version": "0.2.3",
     "type": "climate-control"
   },
+  "daswetter": {
+    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/admin/daswettercom.png",
+    "version": "0.1.6",
+    "type": "weather"
+  },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/admin/discovery.jpg",
@@ -638,6 +644,7 @@
     "version": "1.5.1",
     "type": "multimedia"
   },
+
   "scenes": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/admin/scenes.png",
@@ -858,6 +865,12 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-timeandweather/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-timeandweather/master/admin/timeandweather.png",
     "version": "1.1.7",
+    "type": "visualization-widgets"
+  },
+  "vis-weather": {
+    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-weather/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-weather/master/admin/vis-weather.png",
+    "version": "0.0.6",
     "type": "visualization-widgets"
   },
   "weatherunderground": {
