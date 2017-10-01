@@ -317,7 +317,7 @@
   "js-controller": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.js-controller/master/io-package.json",
     "url": "https://github.com/ioBroker/ioBroker.js-controller/tarball/master",
-    "version": "1.1.2",
+    "version": "1.2.0",
     "type": "general"
   },
   "js2fs": {
@@ -644,7 +644,6 @@
     "version": "1.5.1",
     "type": "multimedia"
   },
-
   "scenes": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/admin/scenes.png",
