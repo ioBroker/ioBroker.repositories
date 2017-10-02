@@ -89,6 +89,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.dwd/master/admin/dwd.png",
     "type": "weather"
   },
+  "egigeozone": {
+    "meta": "https://raw.githubusercontent.com/BasGo/ioBroker.egigeozone/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BasGo/ioBroker.egigeozone/master/admin/egigeozone.png",
+    "type": "geoposition"
+  },
   "email": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.email/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.email/master/admin/email.png",

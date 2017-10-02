@@ -96,6 +96,12 @@
     "version": "2.1.1",
     "type": "weather"
   },
+  "egigeozone": {
+    "meta": "https://raw.githubusercontent.com/BasGo/ioBroker.egigeozone/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BasGo/ioBroker.egigeozone/master/admin/egigeozone.png",
+    "version": "0.0.2",
+    "type": "geoposition"
+  },
   "email": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.email/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.email/master/admin/email.png",
