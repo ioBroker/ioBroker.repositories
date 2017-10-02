@@ -535,6 +535,13 @@
     "version": "0.2.0",
     "type": "geoposition"
   },
+  "panasonic-viera": {
+    "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.panasonic-viera/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.panasonic-viera/master/admin/panasonic-viera.png",
+    "version": "0.1.0",
+    "published": "2017-10-02T02:11:12.134Z",
+    "type": "multimedia"
+  },
   "parser": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/admin/parser.png",
