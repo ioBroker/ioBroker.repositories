@@ -620,6 +620,11 @@
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.solarwetter/master/admin/solarwetter.png",
     "type": "weather"
   },
+  "sonoff": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/admin/sonoff.png",
+    "type": "lighting"
+  },
   "sonos": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonos/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonos/master/admin/sonos.png",
