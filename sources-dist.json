@@ -530,6 +530,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ping/master/admin/ping.png",
     "type": "network"
   },
+    "plexconnect": {
+    "meta": "https://raw.githubusercontent.com/eisbaeeer/iobroker.plexconnect/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/eisbaeeer/iobroker.plexconnect/master/admin/plex-logo.png",
+    "type": "multimedia"
+  },
   "proxy": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
