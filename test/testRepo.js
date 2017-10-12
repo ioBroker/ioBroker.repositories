@@ -27,7 +27,7 @@ describe('Test Repository', function() {
     });
 
     it('Test Repository: compare types', function (done) {
-        this.timeout(60000);
+        this.timeout(120000);
         for (let id in stable) {
             if (stable.hasOwnProperty(id)) {
                 expect(latest[id]).to.be.not.undefined;
