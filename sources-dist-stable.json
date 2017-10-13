@@ -223,12 +223,6 @@
     "version": "1.0.1",
     "type": "iot-systems"
   },
-  "homekit2": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.homekit2/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.homekit2/master/admin/homekit.png",
-    "version": "0.1.6",
-    "type": "iot-systems"
-  },
   "homepilot": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/admin/homepilot.png",
