@@ -55,13 +55,13 @@
   },
   "chromecast": {
     "meta": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/admin/chromecast.jpg",
+    "icon": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/admin/chromecast.png",
     "version": "1.2.3",
     "type": "multimedia"
   },
   "cloud": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/admin/cloud.jpg",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/admin/cloud.png",
     "version": "2.0.5",
     "type": "communication"
   },
@@ -85,7 +85,7 @@
   },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/admin/discovery.jpg",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/admin/discovery.png",
     "published": "2017-03-22T06:30:11.864Z",
     "version": "0.4.4",
     "type": "general"
@@ -219,7 +219,7 @@
   },
   "hmm": {
     "meta": "https://raw.githubusercontent.com/husky-koglhof/ioBroker.hmm/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/husky-koglhof/ioBroker.hmm/master/admin/hmm.png",
+    "icon": "https://raw.githubusercontent.com/husky-koglhof/ioBroker.hmm/master/admin/homematic.png",
     "version": "1.0.1",
     "type": "iot-systems"
   },
@@ -298,7 +298,7 @@
   },
   "influxdb": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/admin/influxdb.jpeg",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/admin/influxdb.png",
     "version": "1.4.4",
     "type": "storage"
   },
@@ -334,7 +334,7 @@
   },
   "knx": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.knx/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.knx/master/admin/eib_knx.png",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.knx/master/admin/knx.png",
     "version": "0.8.3",
     "type": "iot-systems"
   },
@@ -352,7 +352,7 @@
   },
   "landroid-s": {
     "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.landroid-s/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/MeisterTR/iobroker.landroid-s/master/admin/landroid-s.png",
+    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.landroid-s/master/admin/landroid-s.png",
     "version": "1.0.3",
     "type": "garden"
   },
@@ -549,8 +549,8 @@
     "type": "logic"
   },
   "paw": {
-    "meta": "https://raw.githubusercontent.com/bondrogeen/iobroker.paw/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/bondrogeen/iobroker.paw/master/admin/paw.png",
+    "meta": "https://raw.githubusercontent.com/bondrogeen/ioBroker.paw/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bondrogeen/ioBroker.paw/master/admin/paw.png",
     "type": "hardware",
     "published": "2017-04-29T06:43:12.134Z",
     "version": "0.0.4"
@@ -622,8 +622,8 @@
     "type": "visualization"
   },
   "rpi2": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/iobroker.rpi2/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/iobroker.rpi2/master/admin/rpi.png",
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.rpi2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.rpi2/master/admin/rpi.png",
     "version": "0.3.1",
     "type": "hardware"
   },
@@ -749,8 +749,8 @@
     "type": "infrastructure"
   },
   "tradfri": {
-    "meta": "https://raw.githubusercontent.com/AlCalzone/iobroker.tradfri/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/AlCalzone/iobroker.tradfri/master/admin/tradfri.png",
+    "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/admin/tradfri.png",
     "version": "0.2.1",
     "type": "hardware"
   },

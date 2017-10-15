@@ -56,12 +56,12 @@
   },
   "chromecast": {
     "meta": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/admin/chromecast.jpg",
+    "icon": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/admin/chromecast.png",
     "type": "multimedia"
   },
   "cloud": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/admin/cloud.jpg",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/admin/cloud.png",
     "type": "communication"
   },
   "cul": {
@@ -81,7 +81,7 @@
   },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/admin/discovery.jpg",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/admin/discovery.png",
     "type": "general"
   },
   "dwd": {
@@ -206,7 +206,7 @@
   },
   "hmm": {
     "meta": "https://raw.githubusercontent.com/husky-koglhof/ioBroker.hmm/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/husky-koglhof/ioBroker.hmm/master/admin/hmm.png",
+    "icon": "https://raw.githubusercontent.com/husky-koglhof/ioBroker.hmm/master/admin/homematic.png",
     "type": "iot-systems"
   },
   "homepilot": {
@@ -277,7 +277,7 @@
   },
   "influxdb": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/admin/influxdb.jpeg",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/admin/influxdb.png",
     "type": "storage"
   },
   "innogy-smarthome": {
@@ -312,7 +312,7 @@
   },
   "knx": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.knx/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.knx/master/admin/eib_knx.png",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.knx/master/admin/knx.png",
     "type": "iot-systems"
   },
   "kodi": {
@@ -492,7 +492,7 @@
   },
   "panasonic-viera": {
     "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.panasonic-viera/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.panasonic-viera/admin/panasonic-viera.png",
+    "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.panasonic-viera/master/admin/panasonic-viera.png",
     "type": "multimedia"
   },
   "parser": {
@@ -501,8 +501,8 @@
     "type": "logic"
   },
   "paw": {
-    "meta": "https://raw.githubusercontent.com/bondrogeen/iobroker.paw/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/bondrogeen/iobroker.paw/master/admin/paw.png",
+    "meta": "https://raw.githubusercontent.com/bondrogeen/ioBroker.paw/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bondrogeen/ioBroker.paw/master/admin/paw.png",
     "type": "hardware"
   },
   "phantomjs": {
@@ -566,8 +566,8 @@
     "type": "visualization"
   },
   "rpi2": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/iobroker.rpi2/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/iobroker.rpi2/master/admin/rpi.png",
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.rpi2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.rpi2/master/admin/rpi.png",
     "type": "hardware"
   },
   "rwe-smarthome": {
@@ -632,7 +632,7 @@
   },
   "sony-bravia": {
     "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.sony-bravia/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.sony-bravia/admin/sony-bravia.png",
+    "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.sony-bravia/master/admin/sony-bravia.png",
     "type": "multimedia"
   },
   "sql": {
@@ -676,8 +676,8 @@
     "type": "infrastructure"
   },
   "tradfri": {
-    "meta": "https://raw.githubusercontent.com/AlCalzone/iobroker.tradfri/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/AlCalzone/iobroker.tradfri/master/admin/tradfri.png",
+    "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/admin/tradfri.png",
     "type": "hardware"
   },
   "tvspielfilm": {

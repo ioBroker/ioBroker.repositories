@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>ioBroker Adapter's List</title>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+            crossorigin="anonymous"></script>
+<style>
+    .table-list {
+        font-family: "Roboto", sans-serif;
+        width: 100%;
+        border: none;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-size: 15px;
+        font-weight: normal;
+        color: rgba(0,0,0,0.87);
+        line-height: 1.5;
+    }
+    .table-list a {
+        text-decoration: none;
+        color: #0069ae;
+        font-weight: bold;
+    }
+
+    .table-list thead {
+        border-bottom: 1px solid #d0d0d0;
+    }
+    .table-list th {
+        padding: 5px 5px;
+        display: table-cell;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .table-list td, .table-list th {
+        padding: 5px 5px;
+        display: table-cell;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .table-list .header-index {
+        text-align: center;
+    }
+    .table-list th {
+        background-color: #878787;
+        color: #FFF;
+    }
+    .table-list>tbody>tr:nth-child(even) {
+        background: #f2f2f2
+    }
+    .table-list>tbody>tr:nth-child(odd) {
+        /*background: #FFF*/
+    }
+    .header-desc {
+        width: 100%;
+    }
+    .table-version td, .table-version th {
+        padding: 1px 5px;
+        white-space: nowrap;
+    }
+    .title {
+        font-weight: bold;
+        font-size: large;
+    }
+</style>
+</head>
+<body>
+    <span class="title">ioBroker Adapter's List</span>
+    // -- INSERT HERE --
+
+    <script>
+
+        $('#filter').change(function () {
+            var type = $(this).val();
+            if (!type) {
+                $('.type-all').show();
+            } else {
+                $('.type-all').hide();
+                $('.type-' + type).show();
+            }
+        });
+    </script>
+</body>
+</html>
