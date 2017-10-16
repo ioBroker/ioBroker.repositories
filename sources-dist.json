@@ -229,6 +229,11 @@
     "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.i2c/master/admin/i2c.png",
     "type": "hardware"
   },
+  "hilink": {
+    "meta": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/admin/hilink.png",
+    "type": "hardware"
+  },  
   "ical": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ical/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ical/master/admin/ical.png",
