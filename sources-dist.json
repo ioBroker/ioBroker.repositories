@@ -177,7 +177,7 @@
   "haier": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.haier/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.haier/master/admin/haier.png",
-    "type": "hardware"
+    "type": "climate-control"
   },
   "harmony": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/io-package.json",
@@ -214,6 +214,11 @@
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/admin/homepilot.png",
     "type": "iot-systems"
   },
+  "hs100": {
+    "meta": "https://raw.githubusercontent.com/arteck/ioBroker.hs100/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/arteck/ioBroker.hs100/master/admin/hs100.png",
+    "type": "hardware"
+  },
   "hue": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hue/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hue/master/admin/hue.jpeg",
@@ -222,6 +227,11 @@
   "i2c": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.i2c/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.i2c/master/admin/i2c.png",
+    "type": "hardware"
+  },
+  "hilink": {
+    "meta": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/admin/hilink.png",
     "type": "hardware"
   },
   "ical": {
