@@ -29,6 +29,12 @@
     "version": "0.0.6",
     "type": "multimedia"
   },
+  "ble": {
+    "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.ble/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.ble/master/admin/ble.png",
+    "version": "0.3.2",
+    "type": "hardware"
+  },
   "bmw": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/admin/bmw.png",
