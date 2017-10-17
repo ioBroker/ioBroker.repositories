@@ -66,3 +66,14 @@ app.listen(port, function () {
     console.log('Repo started on http://' + ipAddr + ':' + port);
     console.log('http://' + ipAddr + ':' + port + '/sources-dist.json');
 });
+
+// start local npm
+let localNpm = require('local-npm/lib/index')({
+    port:           5080,
+    pouchPort:      16984,
+    logLevel:       'error',
+    remote:         'https://registry.npmjs.org',
+    remoteSkim:     'https://replicate.npmjs.com',
+    url:            'http://127.0.0.1:5080',
+    directory:      __dirname + '/db'
+});
