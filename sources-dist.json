@@ -162,7 +162,7 @@
   "g-homa": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.g-homa/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.g-homa/master/admin/g-homa.png",
-    "type": "hardware"
+    "type": "iot-systems"
   },
   "geofency": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.geofency/master/io-package.json",
@@ -688,7 +688,7 @@
   "tradfri": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/admin/tradfri.png",
-    "type": "hardware"
+    "type": "lighting"
   },
   "tvspielfilm": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/io-package.json",
