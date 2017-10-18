@@ -99,7 +99,7 @@ gulp.task('clean', function (){
     return del([
         'db/**/*',
         // here we use a globbing pattern to match everything inside the `mobile` folder
-        'ioBroker/node_modules/**/*',
+        'ioBroker/**/*',
         'public/**/*'
     ]);
 });
