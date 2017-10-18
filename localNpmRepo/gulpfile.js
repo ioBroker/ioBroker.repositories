@@ -31,7 +31,7 @@ function getLogos(list, destination, callback) {
     }
 }
 
-gulp.task('activateLocalNpm', function (done) {
+gulp.task('activateLocalNpm', ['createStableRepo'], function (done) {
     // npm cache clean
     console.log('Clean cache...');
     exec('npm cache clean', function (err, stdout, stderr) {
@@ -95,7 +95,7 @@ gulp.task('activateLocalNpm', function (done) {
     });
 });
 
-gulp.task('clean', function (){
+gulp.task('clean', ['activateLocalNpm'], function (){
     return del([
         'db/**/*',
         // here we use a globbing pattern to match everything inside the `mobile` folder
@@ -117,11 +117,15 @@ gulp.task('createStableRepo', function (done) {
             }
         }
     }
-    // update versions
-    fs.writeFileSync(__dirname + '/public/sources-dist-stable.json', JSON.stringify(stable, null, 2));
+    if (!fs.existsSync(__dirname + '/public')) {
+        fs.mkdirSync(__dirname + '/public');
+    }    // update versions
     if (!fs.existsSync(__dirname + '/ioBroker')) {
         fs.mkdirSync(__dirname + '/ioBroker');
     }
+
+    fs.writeFileSync(__dirname + '/public/sources-dist-stable.json', JSON.stringify(stable, null, 2));
+
     fs.writeFileSync(__dirname + '/ioBroker/package.json', JSON.stringify(pack, null, 2));
 
     tools.getRepositoryFile(__dirname + '/public/sources-dist-stable.json', latest, function (err, data) {
@@ -137,9 +141,7 @@ gulp.task('createStableRepo', function (done) {
             data[i].extIcon = '/imgs/logo-' + i.toLowerCase() + '.png';
         }
 
-        if (!fs.existsSync(__dirname + '/public')) {
-            fs.mkdirSync(__dirname + '/public');
-        }
+
         if (!fs.existsSync(__dirname + '/public/imgs')) {
             fs.mkdirSync(__dirname + '/public/imgs');
         }
