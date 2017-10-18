@@ -79,7 +79,6 @@ gulp.task('activateLocalNpm', ['createStableRepo'], function (done) {
                 }
 
                 // work with result
-                localNpm.shutdown();
                 console.log('npm set registry remote...');
                 exec('npm set registry https://registry.npmjs.org', function (err, stdout, stderr) {
                     if (err) {
@@ -88,6 +87,7 @@ gulp.task('activateLocalNpm', ['createStableRepo'], function (done) {
                     } else {
                         console.log('npm set registry remote DONE');
                     }
+                    localNpm.shutdown(); // something calls process exit inside
                     done();
                 });
             });
