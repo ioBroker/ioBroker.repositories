@@ -47,7 +47,7 @@ if (!ipAddr) {
 let file = require(__dirname + '/public/sources-dist.json');
 for (let a in file) {
     if (file.hasOwnProperty(a) && file[a].extIcon) {
-        file[a].extIcon = file[a].extIcon.replace('%%LOCAL_SERVER%%', 'http://' + ipAddr + ':' + port);
+        file[a].extIcon = 'http://' + ipAddr + ':' + port + file[a].extIcon;
     }
 }
 

@@ -1,0 +1,27 @@
+{
+  "name": "iobroker.local",
+  "private": true,
+  "description": "Cache all packets for ioBroker",
+  "version": "1.0.0",
+  "author": {
+    "name": "bluefox",
+    "email": "dogafox@gmail.com"
+  },
+  "dependencies": {
+    "iobroker": "*",
+    "iobroker.discovery": "*",
+    "iobroker.js-controller": "*",
+    "iobroker.admin": "*",
+    "iobroker.web": "*",
+    "iobroker.vis": "*",
+    "iobroker.sql": "*",
+    "iobroker.history": "*",
+    "iobroker.flot": "*",
+    "iobroker.javascript": "*",
+    "iobroker.ping": "*",
+    "iobroker.scenes": "*",
+    "iobroker.modbus": "*",
+    "iobroker.mqtt": "*",
+    "iobroker.s7": "*"
+  }
+}

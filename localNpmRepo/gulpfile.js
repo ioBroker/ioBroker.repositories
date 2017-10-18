@@ -10,6 +10,7 @@ function getLogos(list, destination, callback) {
         callback && callback();
     } else {
         let task = list.pop();
+        console.log('Get ' + task.url + '...');
         request.get({url: task.url, encoding: 'binary'}, function (error, response, body) {
             if (!error && body) {
                 fs.writeFile(destination + task.name, body, 'binary', function (err) {
@@ -98,41 +99,59 @@ gulp.task('clean', function (){
     return del([
         'db/**/*',
         // here we use a globbing pattern to match everything inside the `mobile` folder
-        'ioBroker/node_modules/**/*'
+        'ioBroker/node_modules/**/*',
+        'public/**/*'
     ]);
 });
 
 gulp.task('createStableRepo', function (done) {
-    fs.readFileSync(__dirname + '/../sources-dist-stable.json', function (err, resp, body) {
-        let latest = JSON.parse(body);
-        tools.getRepositoryFile(__dirname + '/../sources-dist-stable.json', latest, function (err, data) {
-            if (err) {
-                console.error(err);
-                process.exit(1);
+    let latest = require(__dirname + '/../sources-dist.json');
+    let stable = require(__dirname + '/../sources-dist-stable.json');
+    let pack   = require(__dirname + '/packageProd.json');
+    for (let a in stable) {
+        if (stable.hasOwnProperty(a)) {
+            if (pack.dependencies['iobroker.' + a]) {
+                pack.dependencies['iobroker.' + a] = stable[a].version;
+            } else {
+                delete stable[a];
             }
-            // get all icons
-            let list = [];
-            for (let i in data) {
-                if (!data.hasOwnProperty(i)) continue;
-                list.push({url: data[i].extIcon, name: 'logo-' + i.toLowerCase() + '.png'});
-                data[i].extIcon = '%%LOCAL_SERVER%%/imgs/logo-' + i.toLowerCase() + '.png';
-            }
+        }
+    }
+    // update versions
+    fs.writeFileSync(__dirname + '/public/sources-dist-stable.json', JSON.stringify(stable, null, 2));
+    if (!fs.existsSync(__dirname + '/ioBroker')) {
+        fs.mkdirSync(__dirname + '/ioBroker');
+    }
+    fs.writeFileSync(__dirname + '/ioBroker/package.json', JSON.stringify(pack, null, 2));
 
-            if (!fs.existsSync(__dirname + '/public')) {
-                fs.mkdirSync(__dirname + '/public');
-            }
-            if (!fs.existsSync(__dirname + '/public/imgs')) {
-                fs.mkdirSync(__dirname + '/public/imgs');
-            }
+    tools.getRepositoryFile(__dirname + '/public/sources-dist-stable.json', latest, function (err, data) {
+        if (err) {
+            console.error(err);
+            process.exit(1);
+        }
+        // get all icons
+        let list = [];
+        for (let i in data) {
+            if (!data.hasOwnProperty(i) || !data[i].extIcon) continue;
+            list.push({url: data[i].extIcon, name: 'logo-' + i.toLowerCase() + '.png'});
+            data[i].extIcon = '/imgs/logo-' + i.toLowerCase() + '.png';
+        }
 
-            getLogos(list, __dirname + '/public/imgs/', function () {
-                fs.writeFileSync(__dirname + '/public/sources-dist-stable.json', JSON.stringify(data, null, 2));
-                fs.writeFileSync(__dirname + '/public/sources-dist.json', JSON.stringify(data, null, 2));
+        if (!fs.existsSync(__dirname + '/public')) {
+            fs.mkdirSync(__dirname + '/public');
+        }
+        if (!fs.existsSync(__dirname + '/public/imgs')) {
+            fs.mkdirSync(__dirname + '/public/imgs');
+        }
 
-                done();
-            });
+        console.log('Get images...');
+        getLogos(list, __dirname + '/public/imgs/', function () {
+            fs.writeFileSync(__dirname + '/public/sources-dist-stable.json', JSON.stringify(data, null, 2));
+            fs.writeFileSync(__dirname + '/public/sources-dist.json', JSON.stringify(data, null, 2));
+
+            done();
         });
     });
 });
 
-gulp.task('default', ['clean', 'activateLocalNpm']);
+gulp.task('default', ['clean', 'createStableRepo', 'activateLocalNpm']);
