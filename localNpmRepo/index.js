@@ -1,7 +1,8 @@
-const express = require('express');
-const fs      = require('fs');
-const os      = require('os');
-const argv    = require('optimist').argv;
+const express        = require('express');
+const fs             = require('fs');
+const os             = require('os');
+const argv           = require('optimist').argv;
+const createLocalNpm = require('local-npm/lib/index');
 // --port=3000 --ip=192.168.1.1
 
 function getIpAddresses () {
@@ -25,7 +26,12 @@ function getIpAddresses () {
 
 let app    = express();
 let ipAddr = argv.ip;
-let port   = argv.port || 3000;
+let port   = argv.port || 5081;
+
+if (!fs.existsSync(__dirname + '/db')) {
+    console.error('No DB with npm packets found.');
+    process.exit(1);
+}
 
 if (!fs.existsSync(__dirname + '/public/sources-dist.json')) {
     console.error('please build first repository: npm i, gulp createStableRepo');
@@ -68,12 +74,16 @@ app.listen(port, function () {
 });
 
 // start local npm
-let localNpm = require('local-npm/lib/index')({
+let localNpm = createLocalNpm({
     port:           5080,
     pouchPort:      16984,
     logLevel:       'error',
     remote:         'https://registry.npmjs.org',
     remoteSkim:     'https://replicate.npmjs.com',
-    url:            'http://127.0.0.1:5080',
+    url:            'http://localhost:5080',
     directory:      __dirname + '/db'
 });
+
+console.log('To activate this repository, write: "npm set registry http://' + ipAddr + ':5080" on the system, where you want to install ioBroker.');
+console.log('To use normal npm again, write "npm set registry https://registry.npmjs.org"');
+console.log('Add additional repository after the install of ioBroker: "iobroker addset http://' + ipAddr + ':5081/sources-dist.json"');
