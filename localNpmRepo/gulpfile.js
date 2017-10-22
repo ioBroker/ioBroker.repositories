@@ -163,7 +163,7 @@ function activateLocalNpm(done) {
                         } else {
                             console.log('npm set registry remote DONE');
                         }
-                        console.log('Now you can zip: zip -r localNpm.zip ../localNpmRepo');
+                        console.log('Now you can zip: zip -r ../localNpm.zip ../localNpmRepo');
                         localNpm.shutdown(); // something calls process exit inside
                         done();
                     });
