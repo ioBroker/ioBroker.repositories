@@ -3,7 +3,12 @@ const fs      = require('fs');
 const exec    = require('child_process').exec;
 const del     = require('del');
 const request = require('request');
-const tools   = require(__dirname + '/../lib/tools.js');
+
+if (!fs.existsSync(__dirname + '/tools.js')) {
+    fs.writeFileSync(__dirname + '/tools.js', fs.readFileSync(__dirname + '/../lib/tools.js'));
+}
+
+const tools   = require(__dirname + '/tools.js');
 
 function getLogos(list, destination, callback) {
     if (!list || !list.length) {
@@ -34,7 +39,7 @@ function getLogos(list, destination, callback) {
 function createStableRepo(done) {
     let latest = require(__dirname + '/../sources-dist.json');
     let stable = require(__dirname + '/../sources-dist-stable.json');
-    let pack   = require(__dirname + '/packageProd.json');
+    let pack   = Object.assign({}, require(__dirname + '/packageProd.json'));
     for (let a in stable) {
         if (stable.hasOwnProperty(a)) {
             if (pack.dependencies['iobroker.' + a]) {
@@ -61,7 +66,7 @@ function createStableRepo(done) {
     fs.writeFileSync(__dirname + '/public/sources-dist-stable.json', JSON.stringify(stable, null, 2));
     fs.writeFileSync(__dirname + '/public/sources-dist.json', JSON.stringify(latest, null, 2));
 
-    fs.writeFileSync(__dirname + '/ioBroker/package-latest.json', JSON.stringify(require(__dirname + '/packageProd.json'), null, 2));
+    fs.writeFileSync(__dirname + '/ioBroker/package-latest.json', fs.readFileSync(__dirname + '/packageProd.json'));
     fs.writeFileSync(__dirname + '/ioBroker/package-stable.json', JSON.stringify(pack, null, 2));
 
     tools.getRepositoryFile(__dirname + '/public/sources-dist.json', latest, function (err, dataLatest) {
@@ -107,6 +112,7 @@ function callInstall(done) {
         done();
     });
 }
+
 function activateLocalNpm(done) {
     // npm cache clean
     console.log('Clean cache...');

@@ -14,7 +14,8 @@
     "request": "^2.83.0",
     "express": "^4.16.2",
     "optimist": "^0.6.1",
-    "node.extend": "^2.0.0"
+    "node.extend": "^2.0.0",
+    "npm": "^3.10.10"
   },
   "scripts": {
     "build": "node node_modules/gulp/bin/gulp",
