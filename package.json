@@ -1,6 +1,6 @@
 {
   "name": "iobroker.repositories",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/ioBroker/ioBroker.build.git"
@@ -9,13 +9,13 @@
   "engines": {
     "node": ">=4"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "homepage": "http://iobroker.net",
   "description": "...domesticate the Internet of Things",
   "scripts": {
     "init": "node lib/scripts.js --init",
-    "update": "node repo.js"
+    "update": "node repo.js",
+    "test": "node node_modules/mocha/bin/mocha"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
@@ -29,5 +29,11 @@
   "author": "bluefox <dogafox@gmail.com>",
   "contributors": [
     "bluefox <dogafox@gmail.com>"
-  ]
+  ],
+  "devDependencies": {
+    "mocha": "^3.5.3",
+    "chai": "^4.1.2",
+    "request": "^2.83.0",
+    "node.extend": "^2.0.0"
+  }
 }

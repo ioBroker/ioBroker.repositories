@@ -1,2 +1,9 @@
 /.idea
 /nbproject
+node_modules
+/.git
+/localNpmRepo/public
+/localNpmRepo/db
+/localNpmRepo/ioBroker
+/list.html
+/localNpmRepo/tools.js

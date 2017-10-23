@@ -1,4 +1,5 @@
-var scripts = require(__dirname + '/lib/scripts.js');
+'use strict';
+let scripts = require(__dirname + '/lib/scripts.js');
 
 scripts.init(function (sources) {
     if (process.argv[2]) {
