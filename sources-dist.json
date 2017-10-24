@@ -189,6 +189,11 @@
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/admin/hid.png",
     "type": "utility"
   },
+  "hilink": {
+    "meta": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/admin/hilink.png",
+    "type": "hardware"
+  },
   "history": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.history/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.history/master/admin/history.png",
@@ -227,11 +232,6 @@
   "i2c": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.i2c/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.i2c/master/admin/i2c.png",
-    "type": "hardware"
-  },
-  "hilink": {
-    "meta": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/admin/hilink.png",
     "type": "hardware"
   },
   "ical": {
@@ -615,14 +615,14 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/admin/simple-api.png",
     "type": "communication"
   },
+  "sma-em": {
+    "meta": "https://raw.githubusercontent.com/ctjaeger/ioBroker.sma-em/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ctjaeger/ioBroker.sma-em/master/admin/sma-em.png",
+    "type": "energy"
+  },
   "smartmeter": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.smartmeter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.smartmeter/master/admin/smartmeter.png",
-    "type": "energy"
-  },
-   "sma-em": {
-    "meta": "https://raw.githubusercontent.com/ctjaeger/ioBroker.sma-em/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ctjaeger/ioBroker.sma-em/master/admin/sma-em.png",
     "type": "energy"
   },
   "socketio": {
