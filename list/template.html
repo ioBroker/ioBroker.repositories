@@ -69,13 +69,45 @@
         font-size: large;
     }
 </style>
+<script>
+    //-- INSERT HERE --
+</script>
 </head>
 <body>
     <span class="title">ioBroker Adapter's List</span>
-    // -- INSERT HERE --
+    <!-- INSERT HERE -->
 
     <script>
+        var dirs = {};
+        function getInterval(date) {
+            if (!date) return '';
+            if (typeof date === 'string') date = new Date(date);
 
+            let days = new Date().getTime() - date.getTime();
+            days /= 24 * 3600000;
+            days = Math.floor(days);
+            if (days < 100) {
+                return 'for ' + days + ' days';
+            } else {
+                return 'for ' + Math.floor(days / 30) + ' months';
+            }
+        }
+
+        function getDate(date) {
+            if (!date) return '';
+            if (typeof date === 'string') date = new Date(date);
+            return  ('0' + (date.getDate())).slice(-2) + '.' +
+                ('0' + (date.getMonth() + 1)).slice(-2) + '.' +
+                date.getFullYear();
+        }
+
+        var textTypes = '<select id="filter"><option value="">all</option>';
+        for (var t in types) {
+            if (types.hasOwnProperty(t))  {
+                textTypes += '<option value="' + t + '">' + t + ' - ' + types[t] + '</option>'
+            }
+        }
+        $('body').append(textTypes);
         $('#filter').change(function () {
             var type = $(this).val();
             if (!type) {
@@ -85,6 +117,98 @@
                 $('.type-' + type).show();
             }
         });
+
+        function sortTable(name, dir) {
+            var i = 1;
+            var keys = [];
+
+            if (name === 'name') {
+                for (var a in adapters) {
+                    if (adapters.hasOwnProperty(a)) {
+                        keys.push(a);
+                    }
+                }
+                keys.sort(function (a, b) {
+                    if (a > b) return (dir ? -1 : 1);
+                    if (a < b) return (dir ? 1 : -1);
+                    return 0;
+                });
+
+            } else {
+                var values = [];
+                for (var a in adapters) {
+                    if (adapters.hasOwnProperty(a)) {
+                        values.push({data: (adapters[a][name] || '') .toLowerCase(), name: a});
+                    }
+                }
+                values.sort(function (a, b) {
+                    if (name === 'version') {
+                        var aVersion = a.versions.githubDate;
+                        if (!aVersion) aVersion = a.versions.latestDate;
+                        if (!aVersion) aVersion = a.versions.stableDate;
+                        var bVersion = b.versions.githubDate;
+                        if (!bVersion) bVersion = b.versions.latestDate;
+                        if (!bVersion) bVersion = b.versions.stableDate;
+                        if (aVersion > bVersion) return (dir ? -1 : 1);
+                        if (aVersion < bVersion) return (dir ? 1 : -1);
+                        return 0;
+                    } else {
+                        if (a.data > b.data) return (dir ? -1 : 1);
+                        if (a.data < b.data) return (dir ? 1 : -1);
+                        return 0;
+                    }
+                });
+                for (var k = 0; k < values.length; k++) {
+                    keys.push(values[k].name);
+                }
+            }
+
+            var table = '<table class="table-list">';
+            table += '<tr>' +
+                '<th class="header-index"></th>' +
+                '<th class="header-img"></th>' +
+                '<th class="header-name header-sort" data-name="name">Name' + (name === 'name' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-desc header-sort" data-name="desc">Description' + (name === 'desc' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-type header-sort" data-name="type">Type' + (name === 'type' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-discover header-sort" data-name="discovery">Discover' + (name === 'discover' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-maintainer header-sort" data-name="maintainers">Maintainer' + (name === 'maintainers' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-created-on header-sort"data-name="created">Created' + (name === 'created' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-version header-sort"data-name="versions">Versions' + (name === 'versions' ? (dir ? '&uarr;' : '&darr;') : '') + '</th></tr>';
+            for (var a = 0; a < keys.length; a++) {
+                var aItem = adapters[keys[a]];
+                table += '<tr class="type-all type-' + aItem.type + '">' +
+                    '<td class="header-index">' + (i++) + '</td>' +
+                    '<td><img src="' + aItem.icon + '" width="64px"/></td>' +
+                    '<td><a href="' + aItem.link + '" target="_blank">' + keys[a] + '</a></td>' +
+                    '<td>' + aItem.desc + '</td>' +
+                    '<td><span style="' + (aItem.typeError ? 'color: red' : '') + '" title="' + (aItem.typeTitle || '') + '">' + aItem.type + '</span></td>' +
+                    '<td>' + (aItem.discovery ? '☑' : '') + '</td>' +
+                    '<td>' + aItem.maintainers + '</td>' +
+                    '<td style="">' + getDate(aItem.created) + '</td>';
+
+                table += '<td><table class="table-version">' +
+                    '<tr><td>github:</td><td>' + (aItem.versions.github || '-.-.-') + (aItem.versions.githubDate ? ' ' + getInterval(aItem.versions.githubDate) : '') + '</td></tr>' +
+                    '<tr><td>latest:</td><td>' + (aItem.versions.latest || '-.-.-') + (aItem.versions.latestDate ? ' ' + getInterval(aItem.versions.latestDate) : '') + '</td></tr>' +
+                    '<tr><td>stable:</td><td>' + (aItem.versions.stable || '-.-.-') + (aItem.versions.stableDate ? ' ' + getInterval(aItem.versions.stableDate) : '') + '</td></tr></table></td>';
+                '</tr>';
+            }
+            $('.table-list').remove();
+            $('body').append(table);
+            $('.header-sort').click(function () {
+                var name = $(this).data('name');
+                if (dirs[name] === undefined) {
+                    dirs[name] = false;
+                } else {
+                    dirs[name] = !dirs[name];
+                }
+
+                sortTable(name, dirs[name])
+            });
+        }
+
+        sortTable('name');
+        dirs.name = false;
+
     </script>
 </body>
 </html>
