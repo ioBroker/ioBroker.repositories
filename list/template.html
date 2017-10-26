@@ -96,9 +96,9 @@
         function getDate(date) {
             if (!date) return '';
             if (typeof date === 'string') date = new Date(date);
-            return  ('0' + (date.getDate())).slice(-2) + '.' +
+            return  date.getFullYear() + '.' +
                 ('0' + (date.getMonth() + 1)).slice(-2) + '.' +
-                date.getFullYear();
+                ('0' + (date.getDate())).slice(-2);
         }
 
         var textTypes = '<select id="filter"><option value="">all</option>';
@@ -162,7 +162,7 @@
                     keys.push(values[k].name);
                 }
             }
-
+            var now = new Date().getTime();
             var table = '<table class="table-list">';
             table += '<tr>' +
                 '<th class="header-index"></th>' +
@@ -184,7 +184,7 @@
                     '<td><span style="' + (aItem.typeError ? 'color: red' : '') + '" title="' + (aItem.typeTitle || '') + '">' + aItem.type + '</span></td>' +
                     '<td>' + (aItem.discovery ? '☑' : '') + '</td>' +
                     '<td>' + aItem.maintainers + '</td>' +
-                    '<td style="">' + getDate(aItem.created) + '</td>';
+                    '<td style="' + (aItem.created && (now - new Date(aItem.created).getTime() < 30 * 24 * 3600000) ? 'color: green; font-weight: bold' : '') + '">' + getDate(aItem.created) + '</td>';
 
                 table += '<td><table class="table-version">' +
                     '<tr><td>github:</td><td>' + (aItem.versions.github || '-.-.-') + (aItem.versions.githubDate ? ' ' + getInterval(aItem.versions.githubDate) : '') + '</td></tr>' +
