@@ -56,7 +56,7 @@
   "broadlink2": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/admin/broadlink.png",
-    "version": "1.1.1",
+    "version": "1.8.0",
     "type": "iot-systems"
   },
   "chromecast": {
@@ -341,7 +341,7 @@
   "km200": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.km200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.km200/master/admin/km200.png",
-    "version": "1.01",
+    "version": "1.1.2",
     "type": "climate-control"
   },
   "knx": {
