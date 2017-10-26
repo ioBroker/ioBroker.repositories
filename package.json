@@ -1,6 +1,6 @@
 {
   "name": "iobroker.repositories",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/ioBroker/ioBroker.build.git"
@@ -32,6 +32,8 @@
   ],
   "devDependencies": {
     "mocha": "^3.5.3",
-    "chai": "^4.1.2"
+    "chai": "^4.1.2",
+    "request": "^2.83.0",
+    "node.extend": "^2.0.0"
   }
 }
