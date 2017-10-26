@@ -178,7 +178,7 @@
                 var aItem = adapters[keys[a]];
                 table += '<tr class="type-all type-' + aItem.type + '">' +
                     '<td class="header-index">' + (i++) + '</td>' +
-                    '<td><img src="' + aItem.icon + '" width="64px"/></td>' +
+                    '<td><img src="' + (aItem.icon || '') + '" width="64px"/></td>' +
                     '<td><a href="' + aItem.link + '" target="_blank">' + keys[a] + '</a></td>' +
                     '<td>' + aItem.desc + '</td>' +
                     '<td><span style="' + (aItem.typeError ? 'color: red' : '') + '" title="' + (aItem.typeTitle || '') + '">' + aItem.type + '</span></td>' +
