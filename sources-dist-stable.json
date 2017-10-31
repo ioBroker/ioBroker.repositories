@@ -973,7 +973,7 @@
   "zwave": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/admin/zwave.png",
-    "version": "0.8.0",
+    "version": "0.7.0",
     "type": "hardware"
   }
 }
