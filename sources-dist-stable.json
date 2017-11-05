@@ -172,7 +172,7 @@
   "fritzdect": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.fritzdect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.fritzdect/master/admin/fritzdect_logo.png",
-    "version": "0.0.7",
+    "version": "0.0.10",
     "type": "hardware"
   },
   "fronius": {
@@ -377,7 +377,7 @@
   "lifx": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/admin/lifx_logo.png",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "type": "lighting"
   },
   "lightify": {
@@ -453,7 +453,7 @@
   "milight": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.milight/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.milight/master/admin/easybulb_logo.png",
-    "version": "0.3.0",
+    "version": "0.3.2",
     "type": "lighting"
   },
   "milight-smart-light": {
