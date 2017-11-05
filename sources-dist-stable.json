@@ -172,7 +172,7 @@
   "fritzdect": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.fritzdect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.fritzdect/master/admin/fritzdect_logo.png",
-    "version": "0.0.7",
+    "version": "0.0.10",
     "type": "hardware"
   },
   "fronius": {
@@ -377,7 +377,7 @@
   "lifx": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/admin/lifx_logo.png",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "type": "lighting"
   },
   "lightify": {
