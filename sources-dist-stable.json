@@ -684,7 +684,7 @@
   "socketio": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/admin/socketio.png",
-    "version": "1.8.3",
+    "version": "1.8.6",
     "type": "communication"
   },
   "solarwetter": {
@@ -799,7 +799,7 @@
   "vis": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/admin/vis.png",
-    "version": "0.15.5",
+    "version": "1.0.4",
     "type": "visualization"
   },
   "vis-bars": {
@@ -919,7 +919,7 @@
   "web": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.web/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.web/master/admin/web.png",
-    "version": "2.1.7",
+    "version": "2.1.8",
     "type": "general"
   },
   "wetty": {
