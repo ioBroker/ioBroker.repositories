@@ -869,5 +869,10 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/admin/zwave.png",
     "type": "hardware"
+  },
+  "viessmann-tcp": {
+    "meta": "https://raw.githubusercontent.com/Bjoern3003/ioBroker.viessmann-tcp/master/package.json",
+    "icon": "https://raw.githubusercontent.com/Bjoern3003/ioBroker.viessmann-tcp/master/admin/viessmann-tcp.png",
+    "type": "climate-control"
   }
 }
