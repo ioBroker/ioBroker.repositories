@@ -720,6 +720,11 @@
     "icon": "https://raw.githubusercontent.com/misanorot/ioBroker.viessmann/master/admin/viessmann.png",
     "type": "climate-control"
   },
+  "viessmann-tcp": {
+    "meta": "https://raw.githubusercontent.com/Bjoern3003/ioBroker.viessmann-tcp/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Bjoern3003/ioBroker.viessmann-tcp/master/admin/viessmann-tcp.png",
+    "type": "climate-control"
+  },
   "vis": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/admin/vis.png",
@@ -814,7 +819,7 @@
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-weather/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-weather/master/admin/vis-weather.png",
     "type": "visualization-widgets"
-  },
+  },  
   "weatherunderground": {
     "meta": "https://raw.githubusercontent.com/dschaedl/ioBroker.weatherunderground/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/dschaedl/ioBroker.weatherunderground/master/admin/wu.png",
@@ -869,10 +874,5 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/admin/zwave.png",
     "type": "hardware"
-  },
-  "viessmann-tcp": {
-    "meta": "https://raw.githubusercontent.com/Bjoern3003/ioBroker.viessmann-tcp/master/package.json",
-    "icon": "https://raw.githubusercontent.com/Bjoern3003/ioBroker.viessmann-tcp/master/admin/viessmann-tcp.png",
-    "type": "climate-control"
   }
 }
