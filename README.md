@@ -10,12 +10,12 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 
 *already required for latest repository*
 
-* Adapter needs to be available as package on npm
-* Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome.
-* Adapter must have a predefined license.
-* Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
-* Define one of the types in io-package.json
-* Include "author" in io-package.json and "authors" in io-package.json
+1. Adapter needs to be available as package on npm
+2. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome.
+3. Adapter must have a predefined license.
+4. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
+5. Define one of the types in io-package.json
+6. Include "author" in io-package.json and "authors" in io-package.json
 
 ### Requirements for adapter to get added to the stable repository
 
@@ -105,7 +105,7 @@ The io-package.json must have attribute type in common part. Like here https://g
 * vuplus	multimedia
 
 ### Authors
-Please define in package.json following attributes:
+Please define following attributes in package.json :
 - https://github.com/ioBroker/ioBroker.template/blob/master/package.json#L5 (Only one author)
 - https://github.com/ioBroker/ioBroker.template/blob/master/package.json#L9 (Many contributors)
 - https://github.com/ioBroker/ioBroker.template/blob/master/io-package.json#L32 (Same here, but you can set many authors/contributors if desired)
