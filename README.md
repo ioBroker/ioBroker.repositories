@@ -40,7 +40,7 @@ and the files are here https://github.com/ioBroker/ioBroker.admin/tree/master/do
 And make the link in your readme file to this files, like here: https://github.com/ioBroker/ioBroker.javascript/blob/master/README.md
 
 ### Licenses
-Following licenses used now in ioBroker project:
+Following licenses are used now in ioBroker project:
 
 * MIT (used for most of adapters and core)
 * Apache 2.0
