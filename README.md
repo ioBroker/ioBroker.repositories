@@ -69,7 +69,8 @@ See how testing is implemented on ioBroker.template:
 You can find some help in this [PDF](http://forum.iobroker.net/download/file.php?id=11259) (Only german) See **Adapter Testing** Section.
 
 ### Types
-The io-package.json must have attribute type in common part. Like here https://github.com/ioBroker/ioBroker.template/blob/master/io-package.json#L43 (Line can be changed with the time. Please report if this link do not point to according line any more)
+The io-package.json must have attribute type in common part. Like here https://github.com/ioBroker/ioBroker.template/blob/master/io-package.json#L43 (Line can be changed with the time. Please report if this link do not point to according line any more):
+
     - general
     - hardware
     - lighting
