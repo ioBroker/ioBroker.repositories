@@ -27,7 +27,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 
 https://docs.npmjs.com/getting-started/publishing-npm-packages
 
-### Example of README.ms
+### Example of README.md
 
 https://github.com/ioBroker/ioBroker.admin/blob/master/README.md
 
