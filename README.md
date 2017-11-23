@@ -60,7 +60,7 @@ Of course you can add your own licenses, even WTFPL.
 You must of course take in count the licenses of components, that used in your adapter. E.g. if you use main packet under GPLv2 license, you cannot make CC-BY-NC from that.
 
 ### Testing
-See how is testing is implemented on ioBroker.template:
+See how testing is implemented on ioBroker.template:
  - https://github.com/ioBroker/ioBroker.template/tree/master/test
  - https://github.com/ioBroker/ioBroker.template/blob/master/package.json#L39
  - Activate tests on travis-ci.org: https://github.com/mbonaci/mbo-storm/wiki/Integrate-Travis-CI-with-your-GitHub-repo
