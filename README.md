@@ -10,12 +10,13 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 
 *already required for latest repository*
 
-* Adapter needs to be available as package on npm
-* Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome.
-* Adapter must have a predefined license.
-* Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
-* Define one of the types in io-package.json
-* Include "author" in io-package.json and "authors" in io-package.json
+1. Adapter needs to be available as package on npm. See (How to publish on npm)[#how-to-publish-on-npm]
+2. bluefox must be added as owner to npm package. (Why and how to do that.)[#add-owner-to-packet]
+3. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md)
+4. Adapter must have a predefined license.
+5. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
+6. Define one of the types in io-package.json
+7. Include "author" in io-package.json and "authors" in io-package.json
 
 ### Requirements for adapter to get added to the stable repository
 
@@ -27,7 +28,24 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 
 https://docs.npmjs.com/getting-started/publishing-npm-packages
 
-### Example of README.ms
+### Add owner to packet
+We are really happy, that other developer contributing to ioBroker. But some of them with the time lost the enthusiasms and stop support and maintain the adapter.
+
+There is no problem with github repository. We can just fork it and maintain it in owr organisation, but the situation with **npm** is different.
+
+Is some name is blocked (e.g. iobroker.rpi) we cannot publish changed adapter under the same name, we must change the name to e.g. iobroker.rpi2.
+
+Than we must change the ioBroker repositories and the user must install the new adapter and migrate the old settings and objects into new adapter.
+
+This is not suitable.
+
+Because of that we ask you to give ioBroker organisation publish rights to update the npm package. We will use it only in emergency or if author do not react on owr requests.
+
+To add new owner to npm packet, you must write following, after the packet is published:
+
+```npm owner add bluefox iobroker.<adaptername>```
+
+### Example of README.md
 
 https://github.com/ioBroker/ioBroker.admin/blob/master/README.md
 
@@ -40,7 +58,7 @@ and the files are here https://github.com/ioBroker/ioBroker.admin/tree/master/do
 And make the link in your readme file to this files, like here: https://github.com/ioBroker/ioBroker.javascript/blob/master/README.md
 
 ### Licenses
-Following licenses used now in ioBroker project:
+Following licenses are used now in ioBroker project:
 
 * MIT (used for most of adapters and core)
 * Apache 2.0
@@ -60,7 +78,7 @@ Of course you can add your own licenses, even WTFPL.
 You must of course take in count the licenses of components, that used in your adapter. E.g. if you use main packet under GPLv2 license, you cannot make CC-BY-NC from that.
 
 ### Testing
-See how is testing is implemented on ioBroker.template:
+See how testing is implemented on ioBroker.template:
  - https://github.com/ioBroker/ioBroker.template/tree/master/test
  - https://github.com/ioBroker/ioBroker.template/blob/master/package.json#L39
  - Activate tests on travis-ci.org: https://github.com/mbonaci/mbo-storm/wiki/Integrate-Travis-CI-with-your-GitHub-repo
@@ -69,7 +87,8 @@ See how is testing is implemented on ioBroker.template:
 You can find some help in this [PDF](http://forum.iobroker.net/download/file.php?id=11259) (Only german) See **Adapter Testing** Section.
 
 ### Types
-The io-package.json must have attribute type in common part. Like here https://github.com/ioBroker/ioBroker.template/blob/master/io-package.json#L43 (Line can be changed with the time. Please report if this link do not point to according line any more)
+The io-package.json must have attribute type in common part. Like here https://github.com/ioBroker/ioBroker.template/blob/master/io-package.json#L43 (Line can be changed with the time. Please report if this link do not point to according line any more):
+
     - general
     - hardware
     - lighting
@@ -104,7 +123,7 @@ The io-package.json must have attribute type in common part. Like here https://g
 * vuplus	multimedia
 
 ### Authors
-Please define in package.json following attributes:
+Please define following attributes in package.json :
 - https://github.com/ioBroker/ioBroker.template/blob/master/package.json#L5 (Only one author)
 - https://github.com/ioBroker/ioBroker.template/blob/master/package.json#L9 (Many contributors)
 - https://github.com/ioBroker/ioBroker.template/blob/master/io-package.json#L32 (Same here, but you can set many authors/contributors if desired)
