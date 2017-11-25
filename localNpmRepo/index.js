@@ -33,7 +33,7 @@ if (!fs.existsSync(__dirname + '/db')) {
     process.exit(1);
 }
 
-if (!fs.existsSync(__dirname + '/public/sources-dist.json')) {
+if (!fs.existsSync(__dirname + '/public/sources-dist-stable.json')) {
     console.error('please build first repository: npm i, gulp createStableRepo');
     process.exit(1);
 }
@@ -44,7 +44,7 @@ if (!ipAddr) {
         console.error('No IP addresses found!');
         process.exit(2);
     }
-    if (ip.length > 1) {
+    if (ip.length >= 1) {
         console.warn('More than one IP address found. Take firts: ' + ip[0]);
         ipAddr = ip[0];
     }
