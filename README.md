@@ -10,8 +10,8 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 
 *already required for latest repository*
 
-1. Adapter needs to be available as package on npm. See (How to publish on npm)[#how-to-publish-on-npm]
-2. bluefox must be added as owner to npm package. (Why and how to do that.)[#add-owner-to-packet]
+1. Adapter needs to be available as package on npm. See [How to publish on npm](#how-to-publish-on-npm)
+2. bluefox must be added as owner to npm package. [Why and how to do that.](#add-owner-to-packet)
 3. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md)
 4. Adapter must have a predefined license.
 5. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
