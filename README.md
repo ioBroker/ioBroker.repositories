@@ -29,7 +29,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 https://docs.npmjs.com/getting-started/publishing-npm-packages
 
 ### Add owner to packet
-We are really happy, that other developer contributing to ioBroker. But some of them with the time lost the enthusiasms and stop support and maintain the adapter.
+We are really happy, that other developers are contributing to ioBroker. But some of them with the time lost the enthusiasms and stop support and maintain the adapter.
 
 There is no problem with github repository. We can just fork it and maintain it in owr organisation, but the situation with **npm** is different.
 
