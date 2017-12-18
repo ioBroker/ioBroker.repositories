@@ -17,6 +17,9 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 5. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
 6. Define one of the types in io-package.json
 7. Include "author" in io-package.json and "authors" in io-package.json
+8. Add your adapter into the list (first latest and after that into stable, when tested). 
+   Examples of entries you can find [here](#samples).
+   *Note*: don't forget to add attribute *published* to **both** repositories.
 
 ### Requirements for adapter to get added to the stable repository
 
@@ -127,3 +130,29 @@ Please define following attributes in package.json :
 - https://github.com/ioBroker/ioBroker.template/blob/master/package.json#L5 (Only one author)
 - https://github.com/ioBroker/ioBroker.template/blob/master/package.json#L9 (Many contributors)
 - https://github.com/ioBroker/ioBroker.template/blob/master/io-package.json#L32 (Same here, but you can set many authors/contributors if desired)
+
+### Samples
+For **latest** (sources-dist.json):
+
+```
+  "admin": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
+    "published": "2017-04-10T17:10:21.690Z",
+    "type": "general"
+  },
+```
+
+For **stable** (sources-dist-stable.json):
+
+```
+  "admin": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
+    "version": "2.0.7",
+    "published": "2017-04-10T17:10:21.690Z",
+    "type": "general"
+  },
+```
+
+*Note*: stable has always specific version.
