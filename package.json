@@ -1,6 +1,6 @@
 {
   "name": "iobroker.repositories",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/ioBroker/ioBroker.build.git"
@@ -11,11 +11,13 @@
   },
   "dependencies": {},
   "homepage": "http://iobroker.net",
-  "description": "...domesticate the Internet of Things",
+  "description": "List of all official adapters for ioBroker project",
   "scripts": {
     "init": "node lib/scripts.js --init",
     "update": "node repo.js",
-    "test": "node node_modules/mocha/bin/mocha"
+    "test": "node node_modules/mocha/bin/mocha",
+    "latest": "node lib/build.js --file /var/www/download/sources-dist.json --shields /var/www/download/img",
+    "stable": "node lib/build.js --latest --file /var/www/download/sources-dist-latest.json"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
