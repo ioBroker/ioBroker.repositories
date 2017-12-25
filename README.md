@@ -36,7 +36,7 @@ We are really happy, that other developers are contributing to ioBroker. But som
 
 There is no problem with github repository. We can just fork it and maintain it in owr organisation, but the situation with **npm** is different.
 
-Is some name is blocked (e.g. iobroker.rpi) we cannot publish changed adapter under the same name, we must change the name to e.g. iobroker.rpi2.
+If some name is blocked (e.g. iobroker.rpi) we cannot publish the changed adapter under the same name, we must change the name to e.g. iobroker.rpi2.
 
 Than we must change the ioBroker repositories and the user must install the new adapter and migrate the old settings and objects into new adapter.
 
