@@ -39,6 +39,11 @@
     "icon": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.boblight/master/admin/boblight.png",
     "type": "lighting"
   },
+  "bosesoundtouch": {
+    "meta": "https://raw.githubusercontent.com/SwedishChef1/ioBroker.bosesoundtouch/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SwedishChef1/ioBroker.bosesoundtouch/master/admin/bosesoundtouch.png",
+    "type": "multimedia"
+  },
   "botvac": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/admin/botvac.png",
