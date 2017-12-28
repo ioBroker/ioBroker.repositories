@@ -33,6 +33,7 @@
     "bluefox <dogafox@gmail.com>"
   ],
   "devDependencies": {
+    "gulp": "^3.9.1",
     "npm": "^2.15.12",
     "mocha": "^3.5.3",
     "chai": "^4.1.2",
