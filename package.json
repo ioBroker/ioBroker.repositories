@@ -1,6 +1,6 @@
 {
   "name": "iobroker.repositories",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/ioBroker/ioBroker.build.git"
@@ -9,13 +9,15 @@
   "engines": {
     "node": ">=4"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "homepage": "http://iobroker.net",
-  "description": "...domesticate the Internet of Things",
+  "description": "List of all official adapters for ioBroker project",
   "scripts": {
     "init": "node lib/scripts.js --init",
-    "update": "node repo.js"
+    "update": "node repo.js",
+    "test": "node node_modules/mocha/bin/mocha",
+    "latest": "node lib/build.js --file /var/www/download/sources-dist.json --shields /var/www/download/img",
+    "stable": "node lib/build.js --latest --file /var/www/download/sources-dist-latest.json"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
@@ -29,5 +31,12 @@
   "author": "bluefox <dogafox@gmail.com>",
   "contributors": [
     "bluefox <dogafox@gmail.com>"
-  ]
+  ],
+  "devDependencies": {
+    "npm": "^2.15.12",
+    "mocha": "^3.5.3",
+    "chai": "^4.1.2",
+    "request": "^2.83.0",
+    "node.extend": "^2.0.0"
+  }
 }

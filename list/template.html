@@ -1,0 +1,284 @@
+<html>
+<head>
+    <title>ioBroker Adapter's List</title>
+    <meta charset="UTF-8">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+            crossorigin="anonymous"></script>
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+    }
+    .table-list {
+        font-family: "Roboto", sans-serif;
+        width: 100%;
+        border: none;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-size: 15px;
+        font-weight: normal;
+        color: rgba(0,0,0,0.87);
+        line-height: 1.5;
+    }
+    .table-list a {
+        text-decoration: none;
+        color: #0069ae;
+        font-weight: bold;
+    }
+
+    .table-list thead {
+        border-bottom: 1px solid #d0d0d0;
+    }
+    .table-list th {
+        padding: 5px 5px;
+        display: table-cell;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .table-list td, .table-list th {
+        padding: 5px 5px;
+        display: table-cell;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .table-list .header-index {
+        text-align: center;
+    }
+    .table-list th {
+        background-color: #878787;
+        color: #FFF;
+    }
+    .table-list>tbody>tr:nth-child(even) {
+        background: #f2f2f2
+    }
+    .table-list>tbody>tr:nth-child(odd) {
+        /*background: #FFF*/
+    }
+    .header-desc {
+        width: 100%;
+    }
+    .table-version td, .table-version th {
+        padding: 1px 5px;
+        white-space: nowrap;
+    }
+    .title {
+        font-weight: bold;
+        font-size: large;
+    }
+</style>
+<script>
+    //-- INSERT HERE --
+</script>
+</head>
+<body>
+    <span class="title">ioBroker Adapter's List</span>
+    <!-- INSERT HERE -->
+
+    <script>
+        var dirs = {
+            discovery: true,
+            installs:  true,
+            created:   true
+        };
+        var activeSort = 'name';
+        function getInterval(date) {
+            if (!date) return '';
+            if (typeof date === 'string') date = new Date(date);
+
+            let days = new Date().getTime() - date.getTime();
+            days /= 24 * 3600000;
+            days = Math.floor(days);
+            if (days < 100) {
+                return 'for ' + days + ' days';
+            } else {
+                return 'for ' + Math.floor(days / 30) + ' months';
+            }
+        }
+
+        function getDate(date) {
+            if (!date) return '';
+            if (typeof date === 'string') date = new Date(date);
+            return  date.getFullYear() + '.' +
+                ('0' + (date.getMonth() + 1)).slice(-2) + '.' +
+                ('0' + (date.getDate())).slice(-2);
+        }
+
+        var textTypes = '<select id="filter"><option value="">all</option>';
+        for (var t in types) {
+            if (types.hasOwnProperty(t))  {
+                textTypes += '<option value="' + t + '">' + t + ' - ' + types[t] + '</option>'
+            }
+        }
+        $('body').append(textTypes);
+        $('#filter').change(function () {
+            var type = $(this).val();
+            if (!type) {
+                $('.type-all').show();
+            } else {
+                $('.type-all').hide();
+                $('.type-' + type).show();
+            }
+            var data = parseHash();
+            data.filter = type;
+            setHash(data);
+        });
+
+        function sortTable(name, dir) {
+            var i = 1;
+            var keys = [];
+            var useInstalls;
+
+            if (name === 'name') {
+                for (var a in adapters) {
+                    if (adapters.hasOwnProperty(a)) {
+                        keys.push(a);
+                        if (adapters[a].installs) useInstalls = true;
+                    }
+                }
+                keys.sort(function (a, b) {
+                    if (a > b) return (dir ? -1 : 1);
+                    if (a < b) return (dir ? 1 : -1);
+                    return 0;
+                });
+
+            } else {
+                var values = [];
+                for (var a in adapters) {
+                    if (adapters.hasOwnProperty(a)) {
+                        values.push({data: typeof adapters[a][name] === 'object' ? adapters[a][name] : ((adapters[a][name] || '').toString().toLowerCase()), name: a});
+                        if (adapters[a].installs) useInstalls = true;
+                    }
+                }
+                values.sort(function (a, b) {
+                    if (name === 'versions') {
+                        var aVersion = a.data.githubDate;
+                        if (!aVersion) aVersion = a.data.latestDate;
+                        if (!aVersion) aVersion = a.data.stableDate;
+                        var bVersion = b.data.githubDate;
+                        if (!bVersion) bVersion = b.data.latestDate;
+                        if (!bVersion) bVersion = b.data.stableDate;
+                        if ((aVersion || '') > (bVersion || '')) return (dir ? -1 : 1);
+                        if ((aVersion || '') < (bVersion || '')) return (dir ? 1 : -1);
+                        return 0;
+                    } else if (name === 'installs') {
+                        var aa = a.data !== '' ? parseInt(a.data, 10) : 0;
+                        var bb = b.data !== '' ? parseInt(b.data, 10) : 0;
+                        if (aa > bb) return (dir ? -1 : 1);
+                        if (aa < bb) return (dir ? 1 : -1);
+                    } else {
+                        if (a.data > b.data) return (dir ? -1 : 1);
+                        if (a.data < b.data) return (dir ? 1 : -1);
+                        return 0;
+                    }
+                });
+                for (var k = 0; k < values.length; k++) {
+                    keys.push(values[k].name);
+                }
+            }
+            var now = new Date().getTime();
+            var table = '<table class="table-list">';
+            table += '<tr>' +
+                '<th class="header-index"></th>' +
+                '<th class="header-img"></th>' +
+                '<th class="header-name header-sort" data-name="name">Name' + (name === 'name' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-desc header-sort" data-name="desc">Description' + (name === 'desc' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-type header-sort" data-name="type">Type' + (name === 'type' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                (useInstalls ? '<th class="header-type header-sort" data-name="installs">Installs' + (name === 'installs' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' : '') +
+                '<th class="header-discover header-sort" data-name="discovery">Discover' + (name === 'discovery' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-discover header-sort" data-name="license">License' + (name === 'license' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-maintainer header-sort" data-name="maintainers">Maintainer' + (name === 'maintainers' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-created-on header-sort"data-name="created">Created' + (name === 'created' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-version header-sort"data-name="versions">Versions' + (name === 'versions' ? (dir ? '&uarr;' : '&darr;') : '') + '</th></tr>';
+            for (var a = 0; a < keys.length; a++) {
+                var aItem = adapters[keys[a]];
+                table += '<tr class="type-all type-' + aItem.type + '">' +
+                    '<td class="header-index">' + (i++) + '</td>' +
+                    '<td>' + (aItem.icon ? '<img src="' + (aItem.icon || '') + '" width="64px"/>' : '') + '</td>' +
+                    '<td><a href="' + aItem.link + '" target="_blank">' + keys[a] + '</a></td>' +
+                    '<td>' + aItem.desc + '</td>' +
+                    '<td><span style="' + (aItem.typeError ? 'color: red' : '') + '" title="' + (aItem.typeTitle || '') + '">' + aItem.type + '</span></td>' +
+                    (useInstalls ? '<td>' + (aItem.installs || '<10') + '</td>' : '') +
+                    '<td>' + (aItem.discovery ? '☑' : '') + '</td>' +
+                    '<td>' + (aItem.license || '') + '</td>' +
+                    '<td>' + aItem.maintainers + '</td>' +
+                    '<td style="' + (aItem.created && (now - new Date(aItem.created).getTime() < 30 * 24 * 3600000) ? 'color: green; font-weight: bold' : '') + '">' + getDate(aItem.created) + '</td>';
+
+                table += '<td><table class="table-version">' +
+                    '<tr><td>github:</td><td>' + (aItem.versions.github || '-.-.-') + (aItem.versions.githubDate ? ' ' + getInterval(aItem.versions.githubDate) : '') + '</td></tr>' +
+                    '<tr><td>latest:</td><td>' + (aItem.versions.latest || '-.-.-') + (aItem.versions.latestDate ? ' ' + getInterval(aItem.versions.latestDate) : '') + '</td></tr>' +
+                    '<tr><td>stable:</td><td>' + (aItem.versions.stable || '-.-.-') + (aItem.versions.stableDate ? ' ' + getInterval(aItem.versions.stableDate) : '') + '</td></tr></table></td>';
+                '</tr>';
+            }
+            $('.table-list').remove();
+            $('body').append(table);
+            $('.header-sort').click(function () {
+                var name = $(this).data('name');
+                if (name !== activeSort) {
+                    if (dirs[name] === undefined) {
+                        dirs[name] = false;
+                    }
+                } else {
+                    if (dirs[name] === undefined) {
+                        dirs[name] = false;
+                    } else {
+                        dirs[name] = !dirs[name];
+                    }
+                }
+
+                activeSort = name;
+
+                var data = parseHash();
+                data.name = name;
+                data.dir = dirs[name];
+                setHash(data);
+
+                sortTable(name, dirs[name]);
+            });
+        }
+
+        function parseHash() {
+            var result = {
+                name: 'name',
+                dir: false,
+                filter: ''
+            };
+            if (window.location.hash) {
+                var n = window.location.hash.match(/sortCol=(\w+)/);
+                if (n) {
+                    result.name = n[1];
+                }
+                n = window.location.hash.match(/sortDir=(\d+)/);
+                if (n) {
+                    result.dir = n[1] === '1';
+                }
+                n = window.location.hash.match(/filter=(\w+)/);
+                if (n) {
+                    result.filter = n[1];
+                }
+            }
+            return result;
+        }
+
+        function setHash(data) {
+            var hash = '#sortCol=' + (data.name || 'name') + '&sortDir=' + (dirs[data.name] ? 1 : 0) + '&filter=' + data.filter;
+            if (history.pushState) {
+                history.pushState(null, null, hash) ;
+            } else {
+                window.location.hash = hash;
+            }
+        }
+
+        var data = parseHash();
+        dirs[data.name] = data.dir;
+        sortTable(data.name, data.dir);
+        activeSort = data.name;
+        if (data.filter) {
+            $('#filter').val(data.filter).trigger('change');
+        }
+
+    </script>
+</body>
+</html>
