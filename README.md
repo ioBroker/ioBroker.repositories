@@ -11,7 +11,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 *already required for latest repository*
 
 1. Adapter needs to be available as package on npm. See [How to publish on npm](#how-to-publish-on-npm)
-2. bluefox must be added as owner to npm package. [Why and how to do that.](#add-owner-to-packet)
+2. iobroker organisation must be added as owner to npm package. [Why and how to do that.](#add-owner-to-packet)
 3. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md)
 4. Adapter must have a predefined license.
 5. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
@@ -44,9 +44,9 @@ This is not suitable.
 
 Because of that we ask you to give ioBroker organisation publish rights to update the npm package. We will use it only in emergency or if author do not react on owr requests.
 
-To add new owner to npm packet, you must write following, after the packet is published:
+To add the ioBroker organisation to npm packet, you must write following, after the packet is published:
 
-```npm owner add bluefox iobroker.<adaptername>```
+```npm access grant read-write iobroker:developers iobroker.<adaptername>```
 
 ### Example of README.md
 
