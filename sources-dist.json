@@ -107,6 +107,12 @@
     "type": "weather",
     "published": "2017-05-14T10:42:31.173Z"
   },
+  "deconz": {
+    "meta": "https://raw.githubusercontent.com/jey-cee/ioBroker.deconz/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/jey-cee/ioBroker.deconz/master/admin/deconz.png",
+    "type": "hardware",
+    "published": "2018-01-02T20:06:31.173Z"
+  },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/admin/discovery.png",
