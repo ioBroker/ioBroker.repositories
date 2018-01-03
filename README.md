@@ -48,6 +48,10 @@ To add the ioBroker organisation to npm packet, you must write following, after 
 
 ```npm access grant read-write iobroker:developers iobroker.<adaptername>```
 
+If the command does not work just add bluefox as owner.
+
+```npm owner add bluefox iobroker.<adaptername>```
+
 ### Example of README.md
 
 https://github.com/ioBroker/ioBroker.admin/blob/master/README.md
