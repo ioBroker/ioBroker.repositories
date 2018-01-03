@@ -813,7 +813,7 @@
   "synology": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.synology/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.synology/master/admin/synology.png",
-    "type": "multimedia",
+    "type": "infrastructure",
     "published": "2018-01-03T23:48:20.298Z"
   },
   "systeminfo": {
