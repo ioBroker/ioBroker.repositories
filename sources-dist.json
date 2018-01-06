@@ -900,11 +900,6 @@
     "type": "climate-control",
     "published": "2017-10-16T19:37:29.283Z"
   },
-  "viessmann-tcp": {
-    "meta": "https://raw.githubusercontent.com/Bjoern3003/ioBroker.viessmann-tcp/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Bjoern3003/ioBroker.viessmann-tcp/master/admin/viessmann-tcp.png",
-    "type": "climate-control"
-  },
   "vis": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/admin/vis.png",
