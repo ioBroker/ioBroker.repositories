@@ -188,7 +188,8 @@
                 '<th class="header-type header-sort" data-name="type">Type' + (name === 'type' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
                 (useInstalls ? '<th class="header-type header-sort" data-name="installs">Installs' + (name === 'installs' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' : '') +
                 '<th class="header-discover header-sort" data-name="discovery">Discover' + (name === 'discovery' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
-                '<th class="header-discover header-sort" data-name="license">License' + (name === 'license' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-materialize header-sort" data-name="materialize" title="Admin3 ready">M' + (name === 'materialize' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
+                '<th class="header-license header-sort" data-name="license">License' + (name === 'license' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
                 '<th class="header-maintainer header-sort" data-name="maintainers">Maintainer' + (name === 'maintainers' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
                 '<th class="header-created-on header-sort"data-name="created">Created' + (name === 'created' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
                 '<th class="header-version header-sort"data-name="versions">Versions' + (name === 'versions' ? (dir ? '&uarr;' : '&darr;') : '') + '</th></tr>';
@@ -202,6 +203,7 @@
                     '<td><span style="' + (aItem.typeError ? 'color: red' : '') + '" title="' + (aItem.typeTitle || '') + '">' + aItem.type + '</span></td>' +
                     (useInstalls ? '<td>' + (aItem.installs || '<10') + '</td>' : '') +
                     '<td>' + (aItem.discovery ? '☑' : '') + '</td>' +
+                    '<td>' + (aItem.materialize ? '☑' : '') + '</td>' +
                     '<td>' + (aItem.license || '') + '</td>' +
                     '<td>' + aItem.maintainers + '</td>' +
                     '<td style="' + (aItem.created && (now - new Date(aItem.created).getTime() < 30 * 24 * 3600000) ? 'color: green; font-weight: bold' : '') + '">' + getDate(aItem.created) + '</td>';
