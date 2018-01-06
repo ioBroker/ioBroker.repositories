@@ -20,6 +20,9 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 8. Add your adapter into the list (first latest and after that into stable, when tested). 
    Examples of entries you can find [here](#samples).
    *Note*: don't forget to add attribute *published* to **both** repositories.
+9. Your github repository must have name "ioBroker.<adaptername>". **B** is capital in "ioBroker", but in the package.json the *name* must be low case, because npm does not allow upper case letters.
+10. *title* in io-package.json (common) is simple short name of adapter in english. *titleLang* is object that consist short names in many languages. *Lang* ist not german Länge, but english LANGuages.
+11. Do not use in the title the words "ioBroker" or "Adapter". It is clear anyway, that it is adapter for ioBroker. 
 
 ### Requirements for adapter to get added to the stable repository
 
