@@ -366,6 +366,12 @@
     "type": "storage",
     "published": "2015-12-14T22:28:26.453Z"
   },
+  "info": {
+    "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.info/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.info/master/admin/info.png",
+    "type": "misc-data",
+    "published": "2018-01-03T00:01:29.423Z"
+  },
   "innogy-smarthome": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.innogy-smarthome/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.innogy-smarthome/master/admin/innogy-smarthome.png",
