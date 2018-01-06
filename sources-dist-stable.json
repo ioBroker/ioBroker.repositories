@@ -770,6 +770,12 @@
     "type": "multimedia",
     "published": "2015-02-14T20:00:09.375Z"
   },
+  "sbfspot": {
+    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/admin/myhomecontrol.png",
+    "version": "1.0.1",
+    "type": "hardware"
+  },
   "scenes": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/admin/scenes.png",
