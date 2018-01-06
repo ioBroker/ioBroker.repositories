@@ -11,7 +11,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 *already required for latest repository*
 
 1. Adapter needs to be available as package on npm. See [How to publish on npm](#how-to-publish-on-npm)
-2. bluefox must be added as owner to npm package. [Why and how to do that.](#add-owner-to-packet)
+2. iobroker organisation must be added as owner to npm package. [Why and how to do that.](#add-owner-to-packet)
 3. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md)
 4. Adapter must have a predefined license.
 5. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
@@ -20,6 +20,9 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 8. Add your adapter into the list (first latest and after that into stable, when tested). 
    Examples of entries you can find [here](#samples).
    *Note*: don't forget to add attribute *published* to **both** repositories.
+9. Your github repository must have name "ioBroker.<adaptername>". **B** is capital in "ioBroker", but in the package.json the *name* must be low case, because npm does not allow upper case letters.
+10. *title* in io-package.json (common) is simple short name of adapter in english. *titleLang* is object that consist short names in many languages. *Lang* ist not german Länge, but english LANGuages.
+11. Do not use in the title the words "ioBroker" or "Adapter". It is clear anyway, that it is adapter for ioBroker. 
 
 ### Requirements for adapter to get added to the stable repository
 
@@ -44,7 +47,11 @@ This is not suitable.
 
 Because of that we ask you to give ioBroker organisation publish rights to update the npm package. We will use it only in emergency or if author do not react on owr requests.
 
-To add new owner to npm packet, you must write following, after the packet is published:
+To add the ioBroker organisation to npm packet, you must write following, after the packet is published:
+
+```npm access grant read-write iobroker:developers iobroker.<adaptername>```
+
+If the command does not work just add bluefox as owner.
 
 ```npm owner add bluefox iobroker.<adaptername>```
 

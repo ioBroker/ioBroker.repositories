@@ -1,6 +1,6 @@
 {
   "name": "iobroker.repositories",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/ioBroker/ioBroker.build.git"
@@ -15,7 +15,7 @@
   "scripts": {
     "init": "node lib/scripts.js --init",
     "update": "node repo.js",
-    "test": "node node_modules/mocha/bin/mocha",
+    "test": "node node_modules/mocha/bin/mocha --exit",
     "latest": "node lib/build.js --file /var/www/download/sources-dist.json --shields /var/www/download/img",
     "stable": "node lib/build.js --latest --file /var/www/download/sources-dist-latest.json"
   },
@@ -33,8 +33,9 @@
     "bluefox <dogafox@gmail.com>"
   ],
   "devDependencies": {
+    "gulp": "^3.9.1",
     "npm": "^2.15.12",
-    "mocha": "^3.5.3",
+    "mocha": "^4.1.0",
     "chai": "^4.1.2",
     "request": "^2.83.0",
     "node.extend": "^2.0.0"

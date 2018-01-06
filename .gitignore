@@ -1,10 +1,5 @@
 /.idea
 /nbproject
-<<<<<<< HEAD
-
-*.njsproj
-/typings/*
-=======
 node_modules
 /.git
 /localNpmRepo/public
@@ -12,4 +7,4 @@ node_modules
 /localNpmRepo/ioBroker
 /list.html
 /localNpmRepo/tools.js
->>>>>>> c0b7d054cefcc3b550b22d533ce381d79a36679e
+/package-lock.json
