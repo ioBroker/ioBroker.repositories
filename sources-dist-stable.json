@@ -508,7 +508,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome/master/admin/mihome.png",
     "type": "iot-systems",
-    "version": "0.2.3",
+    "version": "1.0.0",
     "published": "2017-06-05T17:40:26.665Z"
   },
   "mihome-plug": {
@@ -781,7 +781,8 @@
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/admin/myhomecontrol.png",
     "version": "1.0.1",
-    "type": "hardware"
+    "type": "hardware",
+    "published": "2017-06-03T14:49:48.110Z"
   },
   "scenes": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/io-package.json",
