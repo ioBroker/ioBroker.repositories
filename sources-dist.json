@@ -978,6 +978,12 @@
     "type": "visualization-widgets",
     "published": "2016-07-09T06:35:25.570Z"
   },
+  "vis-material": {
+    "meta": "https://raw.githubusercontent.com/nisiode/ioBroker.vis-material/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/nisiode/ioBroker.vis-material/master/admin/admin.png",
+    "type": "visualization-widgets",
+    "published": "2018-01-10T20:55:37.228Z"
+  },
   "vis-metro": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-metro/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-metro/master/admin/metro.png",
