@@ -1,6 +1,6 @@
 {
   "name": "iobroker.repositories",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/ioBroker/ioBroker.build.git"
@@ -16,8 +16,8 @@
     "init": "node lib/scripts.js --init",
     "update": "node repo.js",
     "test": "node node_modules/mocha/bin/mocha --exit",
-    "latest": "node lib/build.js --file /var/www/download/sources-dist.json --shields /var/www/download/img",
-    "stable": "node lib/build.js --latest --file /var/www/download/sources-dist-latest.json"
+    "list": "node lib/scripts.js --list --file /var/www/download/list.html",
+    "repos": "node lib/build.js --stable /var/www/download/sources-dist.json --latest /var/www/download/sources-dist-latest.json --shields /var/www/download/img"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"

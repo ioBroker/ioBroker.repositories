@@ -68,6 +68,13 @@
         font-weight: bold;
         font-size: large;
     }
+    .header-sort {
+        cursor: pointer;
+    }
+    .update-required {
+        color: #ff9500;
+    }
+
 </style>
 <script>
     //-- INSERT HERE --
@@ -193,6 +200,7 @@
                 '<th class="header-maintainer header-sort" data-name="maintainers">Maintainer' + (name === 'maintainers' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
                 '<th class="header-created-on header-sort"data-name="created">Created' + (name === 'created' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
                 '<th class="header-version header-sort"data-name="versions">Versions' + (name === 'versions' ? (dir ? '&uarr;' : '&darr;') : '') + '</th></tr>';
+
             for (var a = 0; a < keys.length; a++) {
                 var aItem = adapters[keys[a]];
                 table += '<tr class="type-all type-' + aItem.type + '">' +
@@ -208,10 +216,25 @@
                     '<td>' + aItem.maintainers + '</td>' +
                     '<td style="' + (aItem.created && (now - new Date(aItem.created).getTime() < 30 * 24 * 3600000) ? 'color: green; font-weight: bold' : '') + '">' + getDate(aItem.created) + '</td>';
 
+                var signalAboutUpdate = '';
+                if (aItem.versions.latestDate) aItem.versions.latestDate = new Date(aItem.versions.latestDate);
+                if (aItem.versions.stableDate) aItem.versions.stableDate = new Date(aItem.versions.stableDate);
+
+                // if difference is bigger than month
+                if (aItem.versions.latestDate && aItem.versions.stableDate) {
+                    if (now - aItem.versions.latestDate.getTime() > 30 * 24 * 3600000) {
+                        if (aItem.versions.latestDate.getTime() - aItem.versions.stableDate.getTime() > 30 * 24 * 3600000) {
+                            signalAboutUpdate = 'The versions differ of over ' + Math.floor((aItem.versions.latestDate.getTime() - aItem.versions.stableDate.getTime()) / (24 * 3600000)) + ' days';
+                        } else if (aItem.versions.latestDate.getTime() !== aItem.versions.stableDate.getTime() && now - aItem.versions.stableDate.getTime() >  30 * 24 * 3600000) {
+                            signalAboutUpdate = 'Last update of stable is old and not equal to latest';
+                        }
+                    }
+                }
+
                 table += '<td><table class="table-version">' +
                     '<tr><td>github:</td><td>' + (aItem.versions.github || '-.-.-') + (aItem.versions.githubDate ? ' ' + getInterval(aItem.versions.githubDate) : '') + '</td></tr>' +
                     '<tr><td>latest:</td><td>' + (aItem.versions.latest || '-.-.-') + (aItem.versions.latestDate ? ' ' + getInterval(aItem.versions.latestDate) : '') + '</td></tr>' +
-                    '<tr><td>stable:</td><td>' + (aItem.versions.stable || '-.-.-') + (aItem.versions.stableDate ? ' ' + getInterval(aItem.versions.stableDate) : '') + '</td></tr></table></td>';
+                    '<tr><td>stable:</td><td class="' + (signalAboutUpdate ? 'update-required': '') + '" title="' + (signalAboutUpdate || '') + '">' + (aItem.versions.stable || '-.-.-') + (aItem.versions.stableDate ? ' ' + getInterval(aItem.versions.stableDate) : '') + '</td></tr></table></td>';
                 '</tr>';
             }
             $('.table-list').remove();
