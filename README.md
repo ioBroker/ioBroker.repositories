@@ -6,6 +6,10 @@ This is github project for storage of latest and stable repositories.
 Write ```npm run update``` to just get new adapters from sources-dist.json into sources-dist-stable.json.
 And write ```npm run update adapterName``` to write latest version of adapterName into sources-dist-stable.json
 
+## Update of the version in stable
+1. Be sure that the version is tested in forum by users or you fix the critical bug with that.
+2. Delete the versionTime or update it to the current time
+
 ## Requirements for adapter to get added to the repository
 
 *already required for latest repository*
