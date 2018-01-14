@@ -293,6 +293,12 @@
     "type": "lighting",
     "published": "2015-03-04T22:35:03.350Z"
   },
+  "hyperion": {
+    "meta": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.hyperion/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.hyperion/master/admin/hyperion.png",
+    "type": "lighting",
+    "published": "2018-01-14T12:03:03.350Z"
+  },
   "i2c": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.i2c/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.i2c/master/admin/i2c.png",
