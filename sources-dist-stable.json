@@ -102,7 +102,7 @@
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/admin/daswettercom.png",
     "version": "1.0.1",
     "type": "weather",
-    "published": "2018-01-13T18:51:31.173Z"
+    "published": "2017-05-14T10:42:31.173Z"
   },
   "deconz": {
     "meta": "https://raw.githubusercontent.com/jey-cee/ioBroker.deconz/master/io-package.json",
@@ -782,7 +782,7 @@
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/admin/myhomecontrol.png",
     "version": "2.0.1",
     "type": "hardware",
-    "published": "2018-01-13T18:51:48.110Z"
+    "published": "2017-06-03T14:49:48.110Z"
   },
   "scenes": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/io-package.json",
@@ -1069,7 +1069,7 @@
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-weather/master/admin/vis-weather.png",
     "version": "1.1.2",
     "type": "visualization-widgets",
-    "published": "2018-01-13T18:51:23.840Z"
+    "published": "2017-05-14T10:52:23.840Z"
   },
   "weatherunderground": {
     "meta": "https://raw.githubusercontent.com/dschaedl/ioBroker.weatherunderground/master/io-package.json",
