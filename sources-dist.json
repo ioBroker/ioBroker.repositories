@@ -5,12 +5,6 @@
     "type": "general",
     "published": "2014-12-04T18:45:44.907Z"
   },
-  "admin-beta": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/3.0.1/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/3.0.1/admin/admin.png",
-    "type": "general",
-    "published": "2018-01-01T22:55:00.907Z"
-  },
   "amazon-dash": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/admin/amazon-dash.png",
