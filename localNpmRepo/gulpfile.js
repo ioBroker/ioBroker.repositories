@@ -116,7 +116,7 @@ function callInstall(done) {
 function activateLocalNpm(done) {
     // npm cache clean
     console.log('Clean cache...');
-    exec('npm cache clean', function (err, stdout, stderr) {
+    exec('npm cache clean --force', function (err, stdout, stderr) {
         if (err) {
             console.error(err);
             process.exit(1);

@@ -55,13 +55,6 @@
     "type": "household",
     "published": "2016-07-24T22:08:47.215Z"
   },
-  "broadlink": {
-    "meta": "https://raw.githubusercontent.com/hieblmedia/ioBroker.broadlink/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/hieblmedia/ioBroker.broadlink/master/admin/broadlink.png",
-    "version": "0.1.1",
-    "type": "multimedia",
-    "published": "2017-02-26T00:59:33.793Z"
-  },
   "broadlink2": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/admin/broadlink.png",
