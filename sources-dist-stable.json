@@ -93,7 +93,7 @@
   "daswetter": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/admin/daswettercom.png",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "type": "weather",
     "published": "2017-05-14T10:42:31.173Z"
   },
@@ -780,7 +780,7 @@
   "sbfspot": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/admin/myhomecontrol.png",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "type": "hardware",
     "published": "2017-06-03T14:49:48.110Z"
   },
