@@ -1080,6 +1080,13 @@
     "type": "weather",
     "published": "2015-01-30T22:05:03.364Z"
   },
+  "zont": {
+    "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/admin/zont.png",
+    "version": "0.5.2",
+    "type": "communication",
+    "published": "2018-02-07T20:48:00.364Z"
+  },
   "zwave": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/admin/zwave.png",
