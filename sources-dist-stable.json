@@ -427,6 +427,13 @@
     "type": "garden",
     "published": "2017-02-08T23:54:56.311Z"
   },
+    "landroid-s": {
+    "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.landroid-s/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.landroid-s/master/admin/landroid-s.png",
+    "version": "2.0.0",
+    "type": "garden",
+    "published": "2017-07-22T11:45:31.427Z"
+  },
   "lgtv": {
     "meta": "https://raw.githubusercontent.com/SMundt/ioBroker.lgtv/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SMundt/ioBroker.lgtv/master/admin/lgtv.png",
