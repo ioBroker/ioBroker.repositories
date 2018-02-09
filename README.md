@@ -6,17 +6,27 @@ This is github project for storage of latest and stable repositories.
 Write ```npm run update``` to just get new adapters from sources-dist.json into sources-dist-stable.json.
 And write ```npm run update adapterName``` to write latest version of adapterName into sources-dist-stable.json
 
+## Update of the version in stable
+1. Be sure that the version is tested in forum by users or you fix the critical bug with that.
+2. Delete the versionTime or update it to the current time
+
 ## Requirements for adapter to get added to the repository
 
 *already required for latest repository*
 
-1. Adapter needs to be available as package on npm. See (How to publish on npm)[#how-to-publish-on-npm]
-2. bluefox must be added as owner to npm package. (Why and how to do that.)[#add-owner-to-packet]
+1. Adapter needs to be available as package on npm. See [How to publish on npm](#how-to-publish-on-npm)
+2. iobroker organisation must be added as owner to npm package. [Why and how to do that.](#add-owner-to-packet)
 3. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md)
 4. Adapter must have a predefined license.
 5. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
 6. Define one of the types in io-package.json
 7. Include "author" in io-package.json and "authors" in io-package.json
+8. Add your adapter into the list (first latest and after that into stable, when tested). 
+   Examples of entries you can find [here](#samples).
+   *Note*: don't forget to add attribute *published* to **both** repositories.
+9. Your github repository must have name "ioBroker.<adaptername>". **B** is capital in "ioBroker", but in the package.json the *name* must be low case, because npm does not allow upper case letters.
+10. *title* in io-package.json (common) is simple short name of adapter in english. *titleLang* is object that consist short names in many languages. *Lang* ist not german Länge, but english LANGuages.
+11. Do not use in the title the words "ioBroker" or "Adapter". It is clear anyway, that it is adapter for ioBroker. 
 
 ### Requirements for adapter to get added to the stable repository
 
@@ -29,11 +39,11 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 https://docs.npmjs.com/getting-started/publishing-npm-packages
 
 ### Add owner to packet
-We are really happy, that other developer contributing to ioBroker. But some of them with the time lost the enthusiasms and stop support and maintain the adapter.
+We are really happy, that other developers are contributing to ioBroker. But some of them with the time lost the enthusiasms and stop support and maintain the adapter.
 
 There is no problem with github repository. We can just fork it and maintain it in owr organisation, but the situation with **npm** is different.
 
-Is some name is blocked (e.g. iobroker.rpi) we cannot publish changed adapter under the same name, we must change the name to e.g. iobroker.rpi2.
+If some name is blocked (e.g. iobroker.rpi) we cannot publish the changed adapter under the same name, we must change the name to e.g. iobroker.rpi2.
 
 Than we must change the ioBroker repositories and the user must install the new adapter and migrate the old settings and objects into new adapter.
 
@@ -41,7 +51,11 @@ This is not suitable.
 
 Because of that we ask you to give ioBroker organisation publish rights to update the npm package. We will use it only in emergency or if author do not react on owr requests.
 
-To add new owner to npm packet, you must write following, after the packet is published:
+To add the ioBroker organisation to npm packet, you must write following, after the packet is published:
+
+```npm access grant read-write iobroker:developers iobroker.<adaptername>```
+
+If the command does not work just add bluefox as owner.
 
 ```npm owner add bluefox iobroker.<adaptername>```
 
@@ -127,3 +141,29 @@ Please define following attributes in package.json :
 - https://github.com/ioBroker/ioBroker.template/blob/master/package.json#L5 (Only one author)
 - https://github.com/ioBroker/ioBroker.template/blob/master/package.json#L9 (Many contributors)
 - https://github.com/ioBroker/ioBroker.template/blob/master/io-package.json#L32 (Same here, but you can set many authors/contributors if desired)
+
+### Samples
+For **latest** (sources-dist.json):
+
+```
+  "admin": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
+    "published": "2017-04-10T17:10:21.690Z",
+    "type": "general"
+  },
+```
+
+For **stable** (sources-dist-stable.json):
+
+```
+  "admin": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
+    "version": "2.0.7",
+    "published": "2017-04-10T17:10:21.690Z",
+    "type": "general"
+  },
+```
+
+*Note*: stable has always specific version.
