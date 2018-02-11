@@ -390,6 +390,12 @@
     "type": "general",
     "published": "2015-01-03T14:47:20.911Z"
   },
+  "jeelink": {
+    "meta": "https://raw.githubusercontent.com/foxthefix/ioBroker.jeelink/master/io-package.json",
+    "url":  "https://raw.githubusercontent.com/foxthefix/ioBroker.jeelink/master/admin/jeelab_logo.png",
+    "type": "hardware",
+    "published": "2017-03-17T14:47:20.911Z"
+  },
   "js2fs": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.js2fs/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.js2fs/master/admin/js2fs.png",
@@ -569,6 +575,12 @@
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.mqtt-client/master/admin/mqtt-client.png",
     "type": "protocols",
     "published": "2016-06-19T20:44:36.935Z"
+  },
+  "musiccast": {
+    "meta": "https://raw.githubusercontent.com/foxthefix/ioBroker.musiccast/master/io-package.json",
+    "url":  "https://raw.githubusercontent.com/foxthefix/ioBroker.musiccast/master/admin/musiccast.png",
+    "type": "multimedia",
+    "published": "2017-05-01T14:47:20.911Z"
   },
   "mysensors": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mysensors/master/io-package.json",
