@@ -198,9 +198,9 @@
   "fritzdect": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.fritzdect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.fritzdect/master/admin/fritzdect_logo.png",
-    "version": "0.0.10",
+    "version": "0.1.1",
     "type": "hardware",
-    "published": "2017-01-21T22:19:40.633Z"
+    "published": "2018-02-11T14:19:40.633Z"
   },
   "fronius": {
     "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.fronius/master/io-package.json",
@@ -385,6 +385,13 @@
     "type": "logic",
     "published": "2015-01-02T23:37:49.644Z"
   },
+  "jeelink": {
+    "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.jeelink/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.jeelink/master/admin/jeelab_logo.png",
+    "version": "0.0.4",
+    "type": "hardware",
+    "published": "2018-02-11T16:19:40.633Z"
+  },
   "js-controller": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.js-controller/master/io-package.json",
     "url": "https://github.com/ioBroker/ioBroker.js-controller/tarball/master",
@@ -451,9 +458,9 @@
   "lifx": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/admin/lifx_logo.png",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "type": "lighting",
-    "published": "2017-01-22T13:26:57.226Z"
+    "published": "2018-02-11T13:26:57.226Z"
   },
   "lightify": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.lightify/master/io-package.json",
@@ -535,9 +542,9 @@
   "milight": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.milight/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.milight/master/admin/easybulb_logo.png",
-    "version": "0.3.3",
+    "version": "0.3.4",
     "type": "lighting",
-    "published": "2017-01-28T00:02:47.304Z"
+    "published": "2018-02-11T14:02:47.304Z"
   },
   "milight-smart-light": {
     "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.milight-smart-light/master/io-package.json",
@@ -580,6 +587,13 @@
     "version": "1.0.1",
     "type": "protocols",
     "published": "2016-06-19T20:44:36.935Z"
+  },
+  "musiccast": {
+    "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.musiccast/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.musiccast/master/admin/musiccast.png",
+    "version": "0.0.7",
+    "type": "multimedia",
+    "published": "2018-02-11T16:19:40.633Z"
   },
   "mysensors": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mysensors/master/io-package.json",
