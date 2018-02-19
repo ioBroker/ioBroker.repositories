@@ -41,7 +41,7 @@ https://docs.npmjs.com/getting-started/publishing-npm-packages
 ### Add owner to packet
 We are really happy, that other developers are contributing to ioBroker. But some of them with the time lost the enthusiasms and stop support and maintain the adapter.
 
-There is no problem with github repository. We can just fork it and maintain it in owr organisation, but the situation with **npm** is different.
+There is no problem with github repository. We can just fork it and maintain it in our organisation, but the situation with **npm** is different.
 
 If some name is blocked (e.g. iobroker.rpi) we cannot publish the changed adapter under the same name, we must change the name to e.g. iobroker.rpi2.
 
@@ -49,7 +49,7 @@ Than we must change the ioBroker repositories and the user must install the new 
 
 This is not suitable.
 
-Because of that we ask you to give ioBroker organisation publish rights to update the npm package. We will use it only in emergency or if author do not react on owr requests.
+Because of that we ask you to give ioBroker organisation publish rights to update the npm package. We will use it only in emergency or if author do not react to our requests.
 
 To add the ioBroker organisation to npm packet, you must write following, after the packet is published:
 
