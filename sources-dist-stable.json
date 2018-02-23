@@ -55,6 +55,13 @@
     "type": "household",
     "published": "2016-07-24T22:08:47.215Z"
   },
+  "vr200": {
+    "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.vr200/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.vr200/master/admin/VR200.png",
+    "version": "0.0.1",
+    "type": "household",
+    "published": "2018-02-23T20:41:35.213Z"
+  },
   "broadlink2": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/admin/broadlink.png",
@@ -714,6 +721,12 @@
     "type": "network",
     "published": "2015-01-02T23:47:36.408Z"
   },
+  "plexconnect": {
+    "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.plexconnect/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.plexconnect/master/admin/plex-logo.png",
+    "type": "multimedia",
+    "published": "2018-02-23T20:39:21.007Z"
+  },  
   "proxy": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
