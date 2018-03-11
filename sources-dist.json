@@ -65,7 +65,7 @@
     "version": "0.2.0",
     "type": "household",
     "published": "2018-02-23T20:41:35.213Z"
-  },  
+  },
   "broadlink2": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/admin/broadlink.png",
@@ -486,6 +486,12 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcul/master/admin/maxcul.png",
     "type": "iot-systems",
     "published": "2017-04-10T20:26:24.569Z"
+  },
+  "mbus": {
+    "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/admin/mbus.png",
+    "type": "hardware",
+    "published": "2018-03-11T22:00:00.000Z"
   },
   "megad": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/io-package.json",
