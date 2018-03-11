@@ -490,7 +490,7 @@
   "mbus": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/admin/mbus.png",
-    "type": "hardware",
+    "type": "energy",
     "published": "2018-03-11T22:00:00.000Z"
   },
   "megad": {
