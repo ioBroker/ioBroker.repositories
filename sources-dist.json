@@ -691,6 +691,12 @@
     "type": "network",
     "published": "2015-01-02T23:47:36.408Z"
   },
+  "places": {
+    "meta": "https://raw.githubusercontent.com/BasGo/ioBroker.places/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BasGo/ioBroker.places/master/admin/places.png",
+    "type": "geoposition",
+    "published": "2018-03-14T14:21:33.986Z"
+  },
   "plexconnect": {
     "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.plexconnect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.plexconnect/master/admin/plex-logo.png",
