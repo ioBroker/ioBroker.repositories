@@ -65,7 +65,7 @@
     "version": "0.2.0",
     "type": "household",
     "published": "2018-02-23T20:41:35.213Z"
-  },  
+  },
   "broadlink2": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/admin/broadlink.png",
@@ -487,6 +487,12 @@
     "type": "iot-systems",
     "published": "2017-04-10T20:26:24.569Z"
   },
+  "mbus": {
+    "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/admin/mbus.png",
+    "type": "energy",
+    "published": "2018-03-11T22:00:00.000Z"
+  },
   "megad": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/admin/megad.png",
@@ -684,6 +690,12 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ping/master/admin/ping.png",
     "type": "network",
     "published": "2015-01-02T23:47:36.408Z"
+  },
+  "places": {
+    "meta": "https://raw.githubusercontent.com/BasGo/ioBroker.places/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BasGo/ioBroker.places/master/admin/places.png",
+    "type": "geoposition",
+    "published": "2018-03-14T14:21:33.986Z"
   },
   "plexconnect": {
     "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.plexconnect/master/io-package.json",
