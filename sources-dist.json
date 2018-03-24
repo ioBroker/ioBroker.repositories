@@ -493,6 +493,12 @@
     "type": "energy",
     "published": "2018-03-11T22:00:00.000Z"
   },
+  "mclighting": {
+    "meta": "https://raw.githubusercontent.com/instalator/ioBroker.mclighting/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/instalator/ioBroker.mclighting/master/admin/mihome-lamp.png",
+    "type": "lighting",
+    "published": "2018-03-24T16:30:00.180Z"
+  },
   "megad": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/admin/megad.png",
