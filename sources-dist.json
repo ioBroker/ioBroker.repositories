@@ -481,6 +481,12 @@
     "type": "visualization",
     "published": "2017-06-26T21:15:39.259Z"
   },
+  "maxcube": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/admin/maxcube.png",
+    "type": "climate-control",
+    "published": "2017-06-05T20:26:24.569Z"
+  },
   "maxcul": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcul/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcul/master/admin/maxcul.png",
