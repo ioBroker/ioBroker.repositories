@@ -63,7 +63,7 @@ function createRepo(done) {
     fs.writeFileSync(__dirname + '/public/sources-dist-stable.json', JSON.stringify(stable, null, 2));
     fs.writeFileSync(__dirname + '/ioBroker/package-stable.json',    JSON.stringify(packStable, null, 2));
 
-    tools.getRepositoryFile(__dirname + '/public/sources-dist-stable.json', latest, (err, data) => {
+    tools.getRepositoryFile(__dirname + '/public/sources-dist-stable.json', (err, data) => {
         if (err) {
             console.error(err);
             process.exit(1);
