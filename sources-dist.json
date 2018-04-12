@@ -5,6 +5,12 @@
     "type": "general",
     "published": "2014-12-04T18:45:44.907Z"
   },
+  "admin-2": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
+    "type": "general",
+    "published": "2014-12-04T18:45:44.907Z"
+  },
   "amazon-dash": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/admin/amazon-dash.png",
