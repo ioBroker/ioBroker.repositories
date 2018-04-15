@@ -205,6 +205,12 @@
     "version": "0.2.6",
     "type": "iot-systems"
   },
+  "hp-ilo": {
+    "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/admin/hp-ilo.png",
+    "version": "1.0.0",
+    "type": "hardware"
+  },
   "hue": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hue/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hue/master/admin/hue.jpeg",
