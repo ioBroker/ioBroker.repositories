@@ -144,6 +144,11 @@
     "type": "messaging",
     "published": "2015-01-02T23:50:13.927Z"
   },
+  "enet": {
+    "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
+    "type": "iot-systems",
+  },
   "epson_stylus_px830": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.epson_stylus_px830/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.epson_stylus_px830/master/admin/epson_stylus_px830.png",
@@ -286,6 +291,12 @@
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/admin/homepilot.png",
     "type": "iot-systems",
+    "published": "2016-07-09T11:17:48.404Z"
+  },
+  "hp-ilo": {
+    "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/admin/hp-ilo.png",
+    "type": "hardware",
     "published": "2016-07-09T11:17:48.404Z"
   },
   "hs100": {
@@ -452,8 +463,14 @@
     "published": "2017-07-22T11:45:31.427Z"
   },
   "lgtv": {
-    "meta": "https://raw.githubusercontent.com/SMundt/ioBroker.lgtv/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/SMundt/ioBroker.lgtv/master/admin/lgtv.png",
+    "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/admin/lgtv.png",
+    "type": "multimedia",
+    "published": "2016-09-05T17:34:06.772Z"
+  },
+  "lgtv2011": {
+    "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv2011/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv2011/master/admin/lgtv2011.png",
     "type": "multimedia",
     "published": "2016-09-05T17:34:06.772Z"
   },
