@@ -672,6 +672,13 @@
     "type": "iot-systems",
     "published": "2017-05-09T21:14:27.652Z"
   },
+  "opi": {
+    "meta": "https://raw.githubusercontent.com/PrinzEisenherz1/ioBroker.opi/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/PrinzEisenherz1/ioBroker.opi/master/admin/opi.png",
+    "type": "hardware",
+    "published": "2018-01-24T14:38:00.000Z",
+    "version": "0.1.1"
+  },
   "owfs": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/admin/owfs.png",
