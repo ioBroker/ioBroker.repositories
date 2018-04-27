@@ -107,9 +107,8 @@
   "deconz": {
     "meta": "https://raw.githubusercontent.com/jey-cee/ioBroker.deconz/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/jey-cee/ioBroker.deconz/master/admin/deconz.png",
-    "version": "0.1.1",
-    "type": "hardware",
-    "published": "2018-01-02T20:06:31.173Z"
+    "version": "0.2.0",
+    "type": "hardware"
   },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
@@ -470,15 +469,15 @@
     "published": "2017-07-22T11:45:31.427Z"
   },
   "lgtv": {
-    "meta": "https://raw.githubusercontent.com/SMundt/ioBroker.lgtv/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/SMundt/ioBroker.lgtv/master/admin/lgtv.png",
+    "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/admin/lgtv.png",
     "version": "1.0.5",
     "type": "multimedia",
     "published": "2016-09-05T17:34:06.772Z"
   },
   "lgtv11": {
-    "meta": "https://raw.githubusercontent.com/SMundt/ioBroker.lgtv11/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/SMundt/ioBroker.lgtv11/master/admin/lgtv2011.png",
+    "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv11/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv11/master/admin/lgtv2011.png",
     "version": "1.0.3",
     "type": "multimedia",
     "published": "2016-09-05T17:34:06.772Z"

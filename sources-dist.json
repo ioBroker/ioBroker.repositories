@@ -147,7 +147,7 @@
   "enet": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
-    "type": "iot-systems",
+    "type": "iot-systems"
   },
   "epson_stylus_px830": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.epson_stylus_px830/master/io-package.json",
@@ -671,6 +671,13 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.openhab/master/admin/openhab.png",
     "type": "iot-systems",
     "published": "2017-05-09T21:14:27.652Z"
+  },
+  "opi": {
+    "meta": "https://raw.githubusercontent.com/PrinzEisenherz1/ioBroker.opi/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/PrinzEisenherz1/ioBroker.opi/master/admin/opi.png",
+    "type": "hardware",
+    "published": "2018-01-24T14:38:00.000Z",
+    "version": "0.1.1"
   },
   "owfs": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/io-package.json",
