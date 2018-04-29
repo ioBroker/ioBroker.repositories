@@ -27,6 +27,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 9. Your github repository must have name "ioBroker.<adaptername>". **B** is capital in "ioBroker", but in the package.json the *name* must be low case, because npm does not allow upper case letters.
 10. *title* in io-package.json (common) is simple short name of adapter in english. *titleLang* is object that consist short names in many languages. *Lang* ist not german Länge, but english LANGuages.
 11. Do not use in the title the words "ioBroker" or "Adapter". It is clear anyway, that it is adapter for ioBroker. 
+12. **new!** No new adapters will be accepted to repo without admin3 Configuration dialog. Admin2 dialog is optional!
 
 ### Requirements for adapter to get added to the stable repository
 
@@ -41,7 +42,7 @@ https://docs.npmjs.com/getting-started/publishing-npm-packages
 ### Add owner to packet
 We are really happy, that other developers are contributing to ioBroker. But some of them with the time lost the enthusiasms and stop support and maintain the adapter.
 
-There is no problem with github repository. We can just fork it and maintain it in owr organisation, but the situation with **npm** is different.
+There is no problem with github repository. We can just fork it and maintain it in our organisation, but the situation with **npm** is different.
 
 If some name is blocked (e.g. iobroker.rpi) we cannot publish the changed adapter under the same name, we must change the name to e.g. iobroker.rpi2.
 
@@ -49,7 +50,7 @@ Than we must change the ioBroker repositories and the user must install the new 
 
 This is not suitable.
 
-Because of that we ask you to give ioBroker organisation publish rights to update the npm package. We will use it only in emergency or if author do not react on owr requests.
+Because of that we ask you to give ioBroker organisation publish rights to update the npm package. We will use it only in emergency or if author do not react to our requests.
 
 To add the ioBroker organisation to npm packet, you must write following, after the packet is published:
 

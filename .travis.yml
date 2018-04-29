@@ -2,8 +2,7 @@ os:
   - linux
 language: node_js
 node_js:
-  - '8'
-before_script:
+  - '10'
 env:
   - CXX=g++-4.8
 addons:

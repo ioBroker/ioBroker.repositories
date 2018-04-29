@@ -5,6 +5,12 @@
     "type": "general",
     "published": "2014-12-04T18:45:44.907Z"
   },
+  "admin-2": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
+    "type": "general",
+    "published": "2014-12-04T18:45:44.907Z"
+  },
   "amazon-dash": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/admin/amazon-dash.png",
@@ -58,6 +64,13 @@
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/admin/botvac.png",
     "type": "household",
     "published": "2016-07-24T22:08:47.215Z"
+  },
+  "vr200": {
+    "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.vr200/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.vr200/master/admin/VR200.png",
+    "version": "0.2.0",
+    "type": "household",
+    "published": "2018-02-23T20:41:35.213Z"
   },
   "broadlink2": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
@@ -130,6 +143,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.email/master/admin/email.png",
     "type": "messaging",
     "published": "2015-01-02T23:50:13.927Z"
+  },
+  "enet": {
+    "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
+    "type": "iot-systems"
   },
   "epson_stylus_px830": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.epson_stylus_px830/master/io-package.json",
@@ -275,6 +293,12 @@
     "type": "iot-systems",
     "published": "2016-07-09T11:17:48.404Z"
   },
+  "hp-ilo": {
+    "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/admin/hp-ilo.png",
+    "type": "hardware",
+    "published": "2016-07-09T11:17:48.404Z"
+  },
   "hs100": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.hs100/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.hs100/master/admin/hs100.png",
@@ -390,6 +414,12 @@
     "type": "general",
     "published": "2015-01-03T14:47:20.911Z"
   },
+  "jeelink": {
+    "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.jeelink/master/io-package.json",
+    "url":  "https://raw.githubusercontent.com/foxthefox/ioBroker.jeelink/master/admin/jeelab_logo.png",
+    "type": "hardware",
+    "published": "2017-03-17T14:47:20.911Z"
+  },
   "js2fs": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.js2fs/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.js2fs/master/admin/js2fs.png",
@@ -433,8 +463,14 @@
     "published": "2017-07-22T11:45:31.427Z"
   },
   "lgtv": {
-    "meta": "https://raw.githubusercontent.com/SMundt/ioBroker.lgtv/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/SMundt/ioBroker.lgtv/master/admin/lgtv.png",
+    "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/admin/lgtv.png",
+    "type": "multimedia",
+    "published": "2016-09-05T17:34:06.772Z"
+  },
+  "lgtv11": {
+    "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv11/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv11/master/admin/lgtv2011.png",
     "type": "multimedia",
     "published": "2016-09-05T17:34:06.772Z"
   },
@@ -468,11 +504,29 @@
     "type": "visualization",
     "published": "2017-06-26T21:15:39.259Z"
   },
+  "maxcube": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/admin/maxcube.png",
+    "type": "climate-control",
+    "published": "2017-06-05T20:26:24.569Z"
+  },
   "maxcul": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcul/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcul/master/admin/maxcul.png",
     "type": "iot-systems",
     "published": "2017-04-10T20:26:24.569Z"
+  },
+  "mbus": {
+    "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/admin/mbus.png",
+    "type": "energy",
+    "published": "2018-03-11T22:00:00.000Z"
+  },
+  "mclighting": {
+    "meta": "https://raw.githubusercontent.com/instalator/ioBroker.mclighting/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/instalator/ioBroker.mclighting/master/admin/mclighting.png",
+    "type": "lighting",
+    "published": "2018-03-24T16:30:00.180Z"
   },
   "megad": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/io-package.json",
@@ -570,6 +624,12 @@
     "type": "protocols",
     "published": "2016-06-19T20:44:36.935Z"
   },
+  "musiccast": {
+    "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.musiccast/master/io-package.json",
+    "url":  "https://raw.githubusercontent.com/foxthefox/ioBroker.musiccast/master/admin/musiccast.png",
+    "type": "multimedia",
+    "published": "2017-05-01T14:47:20.911Z"
+  },
   "mysensors": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mysensors/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mysensors/master/admin/mysensors.png",
@@ -611,6 +671,13 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.openhab/master/admin/openhab.png",
     "type": "iot-systems",
     "published": "2017-05-09T21:14:27.652Z"
+  },
+  "opi": {
+    "meta": "https://raw.githubusercontent.com/PrinzEisenherz1/ioBroker.opi/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/PrinzEisenherz1/ioBroker.opi/master/admin/opi.png",
+    "type": "hardware",
+    "published": "2018-01-24T14:38:00.000Z",
+    "version": "0.1.1"
   },
   "owfs": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/io-package.json",
@@ -665,6 +732,12 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ping/master/admin/ping.png",
     "type": "network",
     "published": "2015-01-02T23:47:36.408Z"
+  },
+  "places": {
+    "meta": "https://raw.githubusercontent.com/BasGo/ioBroker.places/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BasGo/ioBroker.places/master/admin/places.png",
+    "type": "geoposition",
+    "published": "2018-03-14T14:21:33.986Z"
   },
   "plexconnect": {
     "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.plexconnect/master/io-package.json",
