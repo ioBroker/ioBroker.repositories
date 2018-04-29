@@ -93,9 +93,8 @@
   "daikin": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.daikin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.daikin/master/admin/daikin.jpg",
-    "version": "0.2.3",
-    "type": "climate-control",
-    "published": "2017-03-29T22:00:25.803Z"
+    "version": "1.0.1",
+    "type": "climate-control"
   },
   "daswetter": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/io-package.json",
@@ -919,8 +918,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/admin/sql.png",
     "version": "1.7.4",
-    "type": "storage",
-    "published": "2015-12-06T16:07:51.458Z"
+    "type": "storage"
   },
   "squeezebox": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.squeezebox/master/io-package.json",
