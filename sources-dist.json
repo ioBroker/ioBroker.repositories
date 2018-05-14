@@ -895,6 +895,13 @@
     "type": "multimedia",
     "published": "2017-09-17T21:26:41.970Z"
   },
+  "spotify-premium": {
+    "meta": "https://raw.githubusercontent.com/twonky4/ioBroker.spotify-premium/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/twonky4/ioBroker.spotify-premium/master/admin/spotify-premium.png",
+    "version": "0.2.1",
+    "type": "multimedia",
+    "published": "2018-05-14T20:15:39.928Z"
+  },
   "sql": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/admin/sql.png",
