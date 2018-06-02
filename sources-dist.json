@@ -510,6 +510,12 @@
     "type": "iot-systems",
     "published": "2017-04-24T19:18:46.399Z"
   },
+    "lupusec": {
+    "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/admin/lupusec.png",
+    "type": "alarm",
+    "published": "2018-06-02T12:00:00.0000Z"
+  },
   "material": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.material/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.material/master/admin/material.png",
