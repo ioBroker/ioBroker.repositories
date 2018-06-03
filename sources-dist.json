@@ -93,7 +93,7 @@
   "contactid": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.contactid/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.contactid/master/contactidext.png",
-    "type": "utility",
+    "type": "alarm",
     "published": "2018-05-18T09:00:00.0000Z"
   },
   "cul": {
