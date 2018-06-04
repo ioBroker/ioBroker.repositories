@@ -414,6 +414,12 @@
     "type": "iot-systems",
     "published": "2017-01-07T12:19:30.574Z"
   },
+  "intesishome": {
+    "meta": "https://raw.githubusercontent.com/maxtox/ioBroker.intesishome/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/maxtox/ioBroker.intesishome/master/admin/intesishome.png",
+    "type": "climate-control",
+    "published": "2018-06-04T22:38:30.574Z"
+  },
   "javascript": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/admin/js.jpeg",
