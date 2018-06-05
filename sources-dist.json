@@ -1189,9 +1189,9 @@
     "type": "multimedia",
     "published": "2016-01-16T17:39:17.385Z"
   },
-  "yeelight": {
-    "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.yeelight/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.yeelight/master/admin/yeelight.png",
+  "yeelight2": {
+    "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.yeelight2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.yeelight2/master/admin/yeelight.png",
     "type": "lighting",
     "published": "2018-06-05T05:30:03.364Z"
   },
