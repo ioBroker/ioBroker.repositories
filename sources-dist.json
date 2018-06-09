@@ -1201,6 +1201,13 @@
     "type": "weather",
     "published": "2015-01-30T22:05:03.364Z"
   },
+  "zigbee": {
+    "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zigbee/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/kirovilya/ioBroker.zigbee/master/admin/zigbee.png",
+    "version": "0.5.2",
+    "type": "hardware",
+    "published": "2018-06-09T19:50:00.364Z"
+  },
   "zont": {
     "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/admin/zont.png",
