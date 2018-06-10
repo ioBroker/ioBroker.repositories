@@ -660,6 +660,12 @@
     "type": "iot-systems",
     "published": "2016-02-24T21:13:56.700Z"
   },
+  "mystrom-wifi-switch":{
+    "meta": "https://raw.githubusercontent.com/rgwch/ioBroker.mystrom-wifi-switch/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rgwch/ioBroker.mystrom-wifi-switch/master/admin/mystrom-wifi-switch.png",
+    "type": "hardware",
+    "published": "2018-06-10T08:24:56.700Z"
+  },
   "netatmo": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/admin/netatmo.png",
