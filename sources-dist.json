@@ -257,6 +257,12 @@
     "type": "climate-control",
     "published": "2017-08-26T18:38:38.677Z"
   },
+  "ham": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham/master/admin/ham.png",
+    "type": "iot-systems",
+    "published": "2018-06-17T15:00:00.000Z"
+  },
   "harmony": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
