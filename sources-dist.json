@@ -263,6 +263,12 @@
     "type": "iot-systems",
     "published": "2018-06-17T15:00:00.000Z"
   },
+  "ham-wemo": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham-wemo/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham-wemo/master/admin/ham-wemo.png",
+    "type": "iot-systems",
+    "published": "2018-06-23T23:00:00.000Z"
+  },
   "harmony": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
