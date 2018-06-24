@@ -781,6 +781,11 @@
     "type": "multimedia",
     "published": "2017-10-09T13:54:21.007Z"
   },
+  "primelab": {
+    "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.primelab/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.primelab/master/admin/logo.png",
+    "type": "misc-data"
+  },
    "proxmox": {
     "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.proxmox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.proxmox/master/admin/logo.png",
