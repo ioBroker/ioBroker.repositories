@@ -58,7 +58,7 @@
   "vr200": {
     "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.vr200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.vr200/master/admin/VR200.png",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "type": "household",
     "published": "2018-02-23T20:41:35.213Z"
   },
@@ -108,6 +108,13 @@
     "icon": "https://raw.githubusercontent.com/jey-cee/ioBroker.deconz/master/admin/deconz.png",
     "version": "0.2.0",
     "type": "hardware"
+  },
+  "denon": {
+    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
+    "version": "0.2.0",
+    "type": "multimedia",
+    "published": "2018-06-24T19:34:40.803Z"
   },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
@@ -1221,7 +1228,7 @@
   "zigbee": {
     "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zigbee/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/kirovilya/ioBroker.zigbee/master/admin/zigbee.png",
-    "version": "0.5.5",
+    "version": "0.6.0",
     "type": "hardware",
     "published": "2018-06-10T07:00:00.364Z"
   },

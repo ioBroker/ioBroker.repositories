@@ -120,6 +120,12 @@
     "type": "hardware",
     "published": "2018-01-02T20:06:31.173Z"
   },
+  "denon": {
+    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
+    "type": "multimedia",
+    "published": "2018-06-24T19:34:40.803Z"
+  },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/admin/discovery.png",
@@ -781,6 +787,12 @@
     "type": "multimedia",
     "published": "2017-10-09T13:54:21.007Z"
   },
+  "primelab": {
+    "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.primelab/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.primelab/master/admin/primelab.png",
+    "type": "misc-data",
+    "published": "2018-06-024T16:05:44.907Z"
+  },
    "proxmox": {
     "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.proxmox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.proxmox/master/admin/logo.png",
@@ -1216,7 +1228,7 @@
   "zigbee": {
     "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zigbee/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/kirovilya/ioBroker.zigbee/master/admin/zigbee.png",
-    "version": "0.5.5",
+    "version": "0.6.0",
     "type": "hardware",
     "published": "2018-06-10T07:00:00.364Z"
   },
