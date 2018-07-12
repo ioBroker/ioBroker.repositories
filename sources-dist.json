@@ -1248,7 +1248,7 @@
   "luftdaten": {
     "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/admin/luftdaten.png",
-    "type": "iot-systems",
+    "type": "weather",
     "published": "2018-07-12T11:00:00.000Z"
   }
 }
