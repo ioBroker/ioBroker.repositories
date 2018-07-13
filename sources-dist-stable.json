@@ -649,6 +649,13 @@
     "type": "iot-systems",
     "published": "2016-02-24T21:13:56.700Z"
   },
+  "nanoleaf-lightpanels": {
+    "meta": "https://raw.githubusercontent.com/daniel-2k/ioBroker.nanoleaf-lightpanels/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/daniel-2k/ioBroker.nanoleaf-lightpanels/master/admin/nanoleaf-lightpanels.png",
+    "version": "0.4.1",
+    "type": "lighting",
+    "published": "2018-07-13T18:38:10.100Z"
+  },
   "netatmo": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/admin/netatmo.png",
