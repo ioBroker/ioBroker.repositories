@@ -1046,6 +1046,12 @@
     "type": "climate-control",
     "published": "2017-10-16T19:37:29.283Z"
   },
+  "alpha2": {
+    "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/admin/mh-logo.png",
+    "type": "climate-control",
+    "published": "2018-07-16T12:45:32.112Z"
+  },
   "vis": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/admin/vis.png",
