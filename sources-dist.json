@@ -68,7 +68,6 @@
   "vr200": {
     "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.vr200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.vr200/master/admin/VR200.png",
-    "version": "0.2.0",
     "type": "household",
     "published": "2018-02-23T20:41:35.213Z"
   },
@@ -1045,6 +1044,12 @@
     "icon": "https://raw.githubusercontent.com/misanorot/ioBroker.viessmann/master/admin/viessmann.png",
     "type": "climate-control",
     "published": "2017-10-16T19:37:29.283Z"
+  },
+  "alpha2": {
+    "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/admin/mh-logo.png",
+    "type": "climate-control",
+    "published": "2018-07-16T12:45:32.112Z"
   },
   "vis": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
