@@ -106,31 +106,32 @@ The io-package.json must have attribute type in common part.
 Like here https://github.com/ioBroker/ioBroker.template/blob/master/io-package.json#L43
 (Line can be changed with the time. Please report if this link do not point to according line any more):
 
-    - alarm
-    - climate-control
-    - communication
-    - date-and-time
-    - energy
-    - garden
-    - general
-    - geoposition
-    - hardware
-    - household
-    - infrastructure
-    - iot-systems
-    - lighting
-    - logic
-    - messaging
-    - misc-data
-    - multimedia
-    - network
-    - protocols
-    - storage
-    - utility
-    - visualization
-    - visualization-icons
-    - visualization-widgets
-    - weather
+    - **alarm** - security of home, car, boat, ...
+    - **climate-control** - climate, heaters, air filters, water heaters, ...
+    - **communication** - deliver data for other services via RESTapi, websockets
+    - **date-and-time** - schedules, calendars, ...
+    - **energy** - energy metering
+    - **metering** - other, but energy metering (water, gas, oil, ...)
+    - **garden** - mower, springs, ...
+    - **general** - general purpose adapters, like admin, web, discovery, ...
+    - **geoposition** - geo-positioning. These adapters delivers or accepst the position of other objects or persons.
+    - **hardware** - different multi-purpose hardware, arduino, esp, bluetooth, ...
+    - **household** - vacuum-cleaner, kitchen devices, ...
+    - **infrastructure** - Network, printers, phones, NAS, ...
+    - **iot-systems** - Other comprehensive smarthome systems (software and hardware)
+    - **lighting** - light
+    - **logic** - rules, scripts, parsers, scenes, ...
+    - **messaging** - these adapters send and receive messages from message services: telegram, email, whatsapp, ...
+    - **misc-data** - export/import of some unsorted information, contacts, systeminfo, gazoline prises, share curses, currents (EUR=>USD), ...
+    - **multimedia** - TV, AV Receivers, TV play boxes, Android/apple TV boxes, multi-room music, IR controls, speech input/output, ...
+    - **network** - ping, network detectors, UPnP, ...
+    - **protocols** - Communication protocols: MQTT,
+    - **storage** - logging, data protocols, SQL/NoSQL DBs, file storage, ...
+    - **utility** - different help adapters. Like backup, export/import
+    - **visualization** - visualisation, like vis, material, mobile
+    - **visualization-icons** - icons for visualisation
+    - **visualization-widgets** - iobroker.vis widgets
+    - **weather** - weather info, air quality, environment statistics
 
 You can see the types of existing adapters [here](http://download.iobroker.net/list.html#sortCol=type&sortDir=0) and try to find the similar one.
 
