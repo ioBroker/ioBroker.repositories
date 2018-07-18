@@ -19,7 +19,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 3. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md)
 4. Adapter must have a predefined license.
 5. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
-6. Define one of the types in io-package.json
+6. Define one of the types in io-package.json. See details [here](#types)
 7. Include "author" in io-package.json and "authors" in io-package.json
 8. Add your adapter into the list (first latest and after that into stable, when tested). 
    Examples of entries you can find [here](#samples).
@@ -102,33 +102,37 @@ See how testing is implemented on ioBroker.template:
 You can find some help in this [PDF](http://forum.iobroker.net/download/file.php?id=11259) (Only german) See **Adapter Testing** Section.
 
 ### Types
-The io-package.json must have attribute type in common part. Like here https://github.com/ioBroker/ioBroker.template/blob/master/io-package.json#L43 (Line can be changed with the time. Please report if this link do not point to according line any more):
+The io-package.json must have attribute type in common part.
+Like here https://github.com/ioBroker/ioBroker.template/blob/master/io-package.json#L43
+(Line can be changed with the time. Please report if this link do not point to according line any more):
 
-    - general
-    - hardware
-    - lighting
-    - energy
-    - multimedia
-    - household
-    - iot-systems
-    - communication
-    - climate-control
-    - weather
-    - geoposition
-    - messaging
-    - infrastructure
-    - date-and-time
-    - visualization
-    - utility
-    - storage
-    - visualization-icons
-    - logic
-    - garden
-    - protocols
-    - network
     - alarm
+    - climate-control
+    - communication
+    - date-and-time
+    - energy
+    - garden
+    - general
+    - geoposition
+    - hardware
+    - household
+    - infrastructure
+    - iot-systems
+    - lighting
+    - logic
+    - messaging
     - misc-data
+    - multimedia
+    - network
+    - protocols
+    - storage
+    - utility
+    - visualization
+    - visualization-icons
     - visualization-widgets
+    - weather
+
+You can see the types of existing adapters [here](http://download.iobroker.net/list.html#sortCol=type&sortDir=0) and try to find the similar one.
 
 #### Defined categories for non-repo adapters
 * pilight	IoT-systems
