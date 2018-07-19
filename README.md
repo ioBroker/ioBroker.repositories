@@ -29,6 +29,8 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
    *Note*: don't forget to add attribute *published* to **both** repositories.
 12. **new!** No new adapters will be accepted to repo without admin3 Configuration dialog. Admin2 dialog is optional!
 
+*Note:* you can watch the video about it (only german) on [youtube](https://www.youtube.com/watch?v=7N8fsJcAdlE)
+
 ### Requirements for adapter to get added to the stable repository
 
 Additionally to all above listed points:
