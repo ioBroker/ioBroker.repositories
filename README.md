@@ -36,7 +36,8 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 Additionally to all above listed points:
 
 13. Forum thread with question to test the adapter.
-14. Some feedback on [forum](http://forum.iobroker.net) .
+14. Some feedback on [forum](http://forum.iobroker.net).
+15. **Important** Discovery function! If device can be found automatically (USB, IP) it must be implemented in discovery adapter.
 
 ## How-to
 ### How to publish on npm
