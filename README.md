@@ -19,15 +19,16 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 3. *title* in io-package.json (common) is simple short name of adapter in english. *titleLang* is object that consist short names in many languages. *Lang* ist not german Länge, but english LANGuages.
 4. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md)
 5. Adapter must have a predefined license.
-6. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
-7. Define one of the types in io-package.json. See details [here](#types)
-8. Include "author" in io-package.json and "authors" in io-package.json. See [here](#authors).
-9. Adapter needs to be available as package on npm. See [How to publish on npm](#how-to-publish-on-npm)
-10. iobroker organisation must be added as owner to npm package. [Why and how to do that.](#add-owner-to-packet)
-11. Add your adapter into the list (first latest and after that into stable, when tested).
+6. Please remove www, widgets and docs directories if not used.
+7. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
+8. Define one of the types in io-package.json. See details [here](#types)
+9. Include "author" in io-package.json and "authors" in io-package.json. See [here](#authors).
+10. Adapter needs to be available as package on npm. See [How to publish on npm](#how-to-publish-on-npm)
+11. iobroker organisation must be added as owner to npm package. [Why and how to do that.](#add-owner-to-packet)
+12. Add your adapter into the list (first latest and after that into stable, when tested).
    Examples of entries you can find [here](#samples).
    *Note*: don't forget to add attribute *published* to **both** repositories.
-12. **new!** No new adapters will be accepted to repo without admin3 Configuration dialog. Admin2 dialog is optional!
+13. **new!** No new adapters will be accepted to repo without admin3 Configuration dialog. Admin2 dialog is optional!
 
 *Note:* you can watch the video about it (only german) on [youtube](https://www.youtube.com/watch?v=7N8fsJcAdlE)
 
@@ -35,9 +36,9 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 
 Additionally to all above listed points:
 
-13. Forum thread with question to test the adapter.
-14. Some feedback on [forum](http://forum.iobroker.net).
-15. **Important** Discovery function! If device can be found automatically (USB, IP) it must be implemented in discovery adapter.
+14. Forum thread with question to test the adapter.
+15. Some feedback on [forum](http://forum.iobroker.net).
+16. **Important** Discovery function! If device can be found automatically (USB, IP) it must be implemented in discovery adapter.
 
 ## How-to
 ### How to publish on npm

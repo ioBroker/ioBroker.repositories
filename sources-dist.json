@@ -457,7 +457,7 @@
   },
   "jeelink": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.jeelink/master/io-package.json",
-    "url":  "https://raw.githubusercontent.com/foxthefox/ioBroker.jeelink/master/admin/jeelab_logo.png",
+    "icon":  "https://raw.githubusercontent.com/foxthefox/ioBroker.jeelink/master/admin/jeelab_logo.png",
     "type": "hardware",
     "published": "2017-03-17T14:47:20.911Z"
   },
@@ -885,7 +885,7 @@
   },
   "sbfspot": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/admin/myhomecontrol.png",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/admin/sbfspot.png",
     "type": "hardware",
     "published": "2017-06-03T14:49:48.110Z"
   },
@@ -1137,7 +1137,7 @@
   },
   "vis-material": {
     "meta": "https://raw.githubusercontent.com/nisiode/ioBroker.vis-material/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/nisiode/ioBroker.vis-material/master/admin/admin.png",
+    "icon": "https://raw.githubusercontent.com/nisiode/ioBroker.vis-material/master/admin/material.png",
     "type": "visualization-widgets",
     "published": "2018-01-10T20:55:37.228Z"
   },
