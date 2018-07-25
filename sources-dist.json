@@ -11,6 +11,12 @@
     "type": "general",
     "published": "2014-12-04T18:45:44.907Z"
   },
+  "alexa2": {
+    "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/admin/alexa.png",
+    "type": "iot-systems",
+    "published": "2018-07-20T15:00:00.000Z"
+  },
   "amazon-dash": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/admin/amazon-dash.png",
@@ -68,7 +74,6 @@
   "vr200": {
     "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.vr200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.vr200/master/admin/VR200.png",
-    "version": "0.2.0",
     "type": "household",
     "published": "2018-02-23T20:41:35.213Z"
   },
@@ -92,7 +97,7 @@
   },
   "contactid": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.contactid/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.contactid/master/contactidext.png",
+    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.contactid/master/admin/contactid.png",
     "type": "alarm",
     "published": "2018-05-18T09:00:00.0000Z"
   },
@@ -119,6 +124,12 @@
     "icon": "https://raw.githubusercontent.com/jey-cee/ioBroker.deconz/master/admin/deconz.png",
     "type": "hardware",
     "published": "2018-01-02T20:06:31.173Z"
+  },
+  "denon": {
+    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
+    "type": "multimedia",
+    "published": "2018-06-24T19:34:40.803Z"
   },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
@@ -256,6 +267,18 @@
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.haier/master/admin/haier.png",
     "type": "climate-control",
     "published": "2017-08-26T18:38:38.677Z"
+  },
+  "ham": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham/master/admin/ham.png",
+    "type": "iot-systems",
+    "published": "2018-06-17T15:00:00.000Z"
+  },
+  "ham-wemo": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham-wemo/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham-wemo/master/admin/ham-wemo.png",
+    "type": "iot-systems",
+    "published": "2018-06-23T23:00:00.000Z"
   },
   "harmony": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/io-package.json",
@@ -434,7 +457,7 @@
   },
   "jeelink": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.jeelink/master/io-package.json",
-    "url":  "https://raw.githubusercontent.com/foxthefox/ioBroker.jeelink/master/admin/jeelab_logo.png",
+    "icon":  "https://raw.githubusercontent.com/foxthefox/ioBroker.jeelink/master/admin/jeelab_logo.png",
     "type": "hardware",
     "published": "2017-03-17T14:47:20.911Z"
   },
@@ -660,6 +683,13 @@
     "type": "iot-systems",
     "published": "2016-02-24T21:13:56.700Z"
   },
+  "nanoleaf-lightpanels": {
+    "meta": "https://raw.githubusercontent.com/daniel-2k/ioBroker.nanoleaf-lightpanels/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/daniel-2k/ioBroker.nanoleaf-lightpanels/master/admin/nanoleaf-lightpanels.png",
+    "version": "0.4.1",
+    "type": "lighting",
+    "published": "2018-07-13T18:38:10.100Z"
+  },
   "netatmo": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/admin/netatmo.png",
@@ -769,6 +799,12 @@
     "type": "multimedia",
     "published": "2017-10-09T13:54:21.007Z"
   },
+  "primelab": {
+    "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.primelab/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.primelab/master/admin/primelab.png",
+    "type": "misc-data",
+    "published": "2018-06-024T16:05:44.907Z"
+  },
    "proxmox": {
     "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.proxmox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.proxmox/master/admin/logo.png",
@@ -849,7 +885,7 @@
   },
   "sbfspot": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/admin/myhomecontrol.png",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.sbfspot/master/admin/sbfspot.png",
     "type": "hardware",
     "published": "2017-06-03T14:49:48.110Z"
   },
@@ -1015,6 +1051,12 @@
     "type": "climate-control",
     "published": "2017-10-16T19:37:29.283Z"
   },
+  "alpha2": {
+    "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/admin/mh-logo.png",
+    "type": "climate-control",
+    "published": "2018-07-16T12:45:32.112Z"
+  },
   "vis": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/admin/vis.png",
@@ -1095,7 +1137,7 @@
   },
   "vis-material": {
     "meta": "https://raw.githubusercontent.com/nisiode/ioBroker.vis-material/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/nisiode/ioBroker.vis-material/master/admin/admin.png",
+    "icon": "https://raw.githubusercontent.com/nisiode/ioBroker.vis-material/master/admin/material.png",
     "type": "visualization-widgets",
     "published": "2018-01-10T20:55:37.228Z"
   },
@@ -1212,7 +1254,7 @@
     "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/admin/zont.png",
     "version": "0.5.2",
-    "type": "communication",
+    "type": "climate-control",
     "published": "2018-02-07T20:48:00.364Z"
   },
   "zwave": {
@@ -1220,5 +1262,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/admin/zwave.png",
     "type": "hardware",
     "published": "2015-01-03T00:02:56.370Z"
+  },
+  "luftdaten": {
+    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/admin/luftdaten.png",
+    "type": "weather",
+    "published": "2018-07-12T11:00:00.000Z"
   }
 }
