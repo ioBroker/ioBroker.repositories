@@ -127,7 +127,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/admin/discovery.png",
     "published": "2017-03-22T06:30:11.864Z",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "type": "general"
   },
   "dwd": {
@@ -529,6 +529,13 @@
     "version": "0.4.0",
     "type": "iot-systems",
     "published": "2017-04-24T19:18:46.399Z"
+  },
+  "luftdaten": {
+    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/admin/luftdaten.png",
+    "version": "0.0.5",
+    "type": "weather",
+    "published": "2018-07-12T11:00:00.000Z"
   },
   "maxcube": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/io-package.json",
@@ -1263,15 +1270,8 @@
   "zwave": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/admin/zwave.png",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "type": "hardware",
     "published": "2015-01-03T00:02:56.370Z"
-  },
-  "luftdaten": {
-    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/admin/luftdaten.png",
-    "version": "0.0.5",
-    "type": "weather",
-    "published": "2018-07-12T11:00:00.000Z"
   }
 }
