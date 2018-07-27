@@ -273,7 +273,7 @@
   "harmony": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
-    "version": "0.9.0",
+    "version": "0.9.3",
     "type": "multimedia",
     "published": "2015-08-18T08:32:32.461Z"
   },
@@ -294,14 +294,14 @@
   "hm-rega": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/admin/homematic.png",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "type": "iot-systems",
     "published": "2015-01-02T23:31:13.087Z"
   },
   "hm-rpc": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
-    "version": "1.6.0",
+    "version": "1.7.2",
     "type": "iot-systems",
     "published": "2015-01-02T23:35:36.140Z"
   },
@@ -596,7 +596,7 @@
   "mikrotik": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.mikrotik/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.mikrotik/master/admin/mikrotik.png",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "type": "hardware",
     "published": "2017-07-27T16:46:54.455Z"
   },
