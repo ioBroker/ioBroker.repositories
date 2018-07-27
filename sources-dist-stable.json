@@ -6,6 +6,13 @@
     "type": "general",
     "published": "2014-12-04T18:45:44.907Z"
   },
+  "alexa2": {
+    "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/admin/alexa.png",
+    "version": "0.3.4",
+    "type": "iot-systems",
+    "published": "2018-07-20T15:00:00.000Z"
+  },
   "amazon-dash": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/admin/amazon-dash.png",
@@ -304,6 +311,13 @@
     "version": "1.0.1",
     "type": "iot-systems",
     "published": "2015-02-26T17:41:33.345Z"
+  },
+  "homee": {
+    "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.homee/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.homee/master/admin/homee.png",
+    "version": "0.3.1",
+    "type": "iot-systems",
+    "published": "2016-07-27T11:17:48.404Z"
   },
   "homepilot": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/io-package.json",
