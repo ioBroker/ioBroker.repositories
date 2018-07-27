@@ -22,13 +22,14 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 6. Please remove www, widgets and docs directories if not used.
 7. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
 8. Define one of the types in io-package.json. See details [here](#types)
-9. Include "author" in io-package.json and "authors" in io-package.json. See [here](#authors).
-10. Adapter needs to be available as package on npm. See [How to publish on npm](#how-to-publish-on-npm)
-11. iobroker organisation must be added as owner to npm package. [Why and how to do that.](#add-owner-to-packet)
-12. Add your adapter into the list (first latest and after that into stable, when tested).
+9. All states must have according [valid roles](https://github.com/ioBroker/ioBroker/blob/master/doc/STATE_ROLES.md#state-roles) (and not just "state")
+10. Include "author" in io-package.json and "authors" in io-package.json. See [here](#authors).
+11. Adapter needs to be available as package on npm. See [How to publish on npm](#how-to-publish-on-npm)
+12. iobroker organisation must be added as owner to npm package. [Why and how to do that.](#add-owner-to-packet)
+13. Add your adapter into the list (first latest and after that into stable, when tested).
    Examples of entries you can find [here](#samples).
    *Note*: don't forget to add attribute *published* to **both** repositories.
-13. **new!** No new adapters will be accepted to repo without admin3 Configuration dialog. Admin2 dialog is optional!
+14. **new!** No new adapters will be accepted to repo without admin3 Configuration dialog. Admin2 dialog is optional!
 
 *Note:* you can watch the video about it (only german) on [youtube](https://www.youtube.com/watch?v=7N8fsJcAdlE)
 
@@ -36,9 +37,9 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 
 Additionally to all above listed points:
 
-14. Forum thread with question to test the adapter.
-15. Some feedback on [forum](http://forum.iobroker.net).
-16. **Important** Discovery function! If device can be found automatically (USB, IP) it must be implemented in discovery adapter.
+15. Forum thread with question to test the adapter.
+16. Some feedback on [forum](http://forum.iobroker.net).
+17. **Important** Discovery function! If device can be found automatically (USB, IP) it must be implemented in discovery adapter.
 
 ## How-to
 ### How to publish on npm
