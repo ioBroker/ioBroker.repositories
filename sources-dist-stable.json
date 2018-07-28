@@ -9,7 +9,7 @@
   "alexa2": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/admin/alexa.png",
-    "version": "0.3.4",
+    "version": "0.3.8",
     "type": "iot-systems",
     "published": "2018-07-20T15:00:00.000Z"
   },
@@ -273,7 +273,7 @@
   "harmony": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
-    "version": "0.9.0",
+    "version": "0.9.3",
     "type": "multimedia",
     "published": "2015-08-18T08:32:32.461Z"
   },
@@ -294,14 +294,14 @@
   "hm-rega": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/admin/homematic.png",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "type": "iot-systems",
     "published": "2015-01-02T23:31:13.087Z"
   },
   "hm-rpc": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
-    "version": "1.6.0",
+    "version": "1.7.2",
     "type": "iot-systems",
     "published": "2015-01-02T23:35:36.140Z"
   },
@@ -530,6 +530,13 @@
     "type": "iot-systems",
     "published": "2017-04-24T19:18:46.399Z"
   },
+  "luftdaten": {
+    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/admin/luftdaten.png",
+    "version": "0.0.5",
+    "type": "weather",
+    "published": "2018-07-12T11:00:00.000Z"
+  },
   "maxcube": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/admin/maxcube.png",
@@ -596,7 +603,7 @@
   "mikrotik": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.mikrotik/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.mikrotik/master/admin/mikrotik.png",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "type": "hardware",
     "published": "2017-07-27T16:46:54.455Z"
   },
@@ -1263,15 +1270,8 @@
   "zwave": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/admin/zwave.png",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "type": "hardware",
     "published": "2015-01-03T00:02:56.370Z"
-  },
-  "luftdaten": {
-    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/admin/luftdaten.png",
-    "version": "0.0.5",
-    "type": "weather",
-    "published": "2018-07-12T11:00:00.000Z"
   }
 }
