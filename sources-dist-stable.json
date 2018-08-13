@@ -158,6 +158,13 @@
     "type": "messaging",
     "published": "2015-01-02T23:50:13.927Z"
   },
+  "energymanager": {
+    "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
+    "version": "0.0.5",
+    "type": "energy",
+    "published": "2018-08-13T16:48:00.000Z"
+  },
   "enet": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
