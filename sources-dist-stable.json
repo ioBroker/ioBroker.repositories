@@ -160,8 +160,8 @@
   },
   "energymanager": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
-    "version": "0.1.0",
+    "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/admin/energymanager.png",
+    "version": "0.1.1",
     "type": "energy",
     "published": "2018-08-13T16:48:00.000Z"
   },
