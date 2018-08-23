@@ -545,6 +545,12 @@
     "type": "lighting",
     "published": "2016-03-16T00:01:08.739Z"
   },
+  "link": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.link/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.link/master/admin/link.png",
+    "type": "communication",
+    "published": "2018-08-23T23:11:08.739Z"
+  },
   "loxone": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/admin/loxone.png",
