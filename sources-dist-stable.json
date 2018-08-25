@@ -509,6 +509,13 @@
     "type": "iot-systems",
     "published": "2017-04-24T19:18:46.399Z"
   },
+  "lupusec": {
+    "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/admin/lupusec.png",
+    "version": "0.2.7",
+    "type": "alarm",
+    "published": "2018-08-25T20:17:00.0000Z"
+  },
   "maxcube": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/admin/maxcube.png",
