@@ -960,6 +960,12 @@
     "type": "weather",
     "published": "2016-06-01T10:34:25.177Z"
   },
+  "sonnen": {
+    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/admin/sonnen.png",
+    "type": "energy",
+    "published": "2018-08-08T16:08:35.694Z"
+  }, 
   "sonoff": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/admin/sonoff.png",
