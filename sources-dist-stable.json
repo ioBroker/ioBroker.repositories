@@ -1033,8 +1033,9 @@
   "upnp": {
     "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.upnp/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.upnp/master/admin/upnp-discovery.png",
-    "version": "0.3.8",
-    "type": "network"
+    "version": "0.3.9",
+    "type": "network",
+    "published": "2018-08-26T18:30:22.374Z"
   },
   "vcard": {
     "meta": "https://raw.githubusercontent.com/hometm/ioBroker.vcard/master/io-package.json",
