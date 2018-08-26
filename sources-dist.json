@@ -964,7 +964,8 @@
   "upnp": {
     "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.upnp/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.upnp/master/admin/upnp-discovery.png",
-    "type": "network"
+    "type": "network",
+    "published": "2016-10-31T18:40:22.374Z"
   },
   "vcard": {
     "meta": "https://raw.githubusercontent.com/hometm/ioBroker.vcard/master/io-package.json",
