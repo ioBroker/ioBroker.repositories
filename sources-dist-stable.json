@@ -537,6 +537,13 @@
     "type": "weather",
     "published": "2018-07-12T11:00:00.000Z"
   },
+  "lupusec": {
+    "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/admin/lupusec.png",
+    "version": "0.2.7",
+    "type": "alarm",
+    "published": "2018-08-25T20:17:00.0000Z"
+  },
   "maxcube": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/admin/maxcube.png",
