@@ -73,11 +73,21 @@ describe('Test Repository', function() {
         if (!count) done();
     });
 
-    it('Test Repository: stable', function (done) {
+    it('Test Repository: check latest vs. stable', function (done) {
         console.log();
         for (let id in latest) {
             if (latest.hasOwnProperty(id) && !stable.hasOwnProperty(id)) {
                 console.log('Info: Adapter "' + id + '" is not in stable.')
+            }
+        }
+        done();
+    });
+
+    it('Test Repository: check stable vs latest', function (done) {
+        console.log();
+        for (let id in stable) {
+            if (stable.hasOwnProperty(id) && !latest.hasOwnProperty(id)) {
+                console.error('Error: Adapter "' + id + '" is not in latest but in stable.')
             }
         }
         done();
