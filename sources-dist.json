@@ -35,6 +35,12 @@
     "type": "energy",
     "published": "2015-01-02T17:10:47.222Z"
   },
+  "backitup": {
+    "meta": "https://raw.githubusercontent.com/simatec/ioBroker.backitup/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/simatec/ioBroker.backitup/master/admin/backitup.png",
+    "type": "general",
+    "published": "2018-07-28T10:40:00.000Z"
+  },
   "benq": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.benq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.benq/master/admin/benq.png",
@@ -169,7 +175,7 @@
   },
   "energymanager": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
+    "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/admin/energymanager.png",
     "type": "energy",
     "published": "2018-08-13T16:48:00.000Z"
   },
@@ -563,7 +569,13 @@
     "type": "iot-systems",
     "published": "2017-04-24T19:18:46.399Z"
   },
-    "lupusec": {
+  "luftdaten": {
+    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/admin/luftdaten.png",
+    "type": "weather",
+    "published": "2018-07-12T11:00:00.000Z"
+  },
+  "lupusec": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/admin/lupusec.png",
     "type": "alarm",
@@ -929,7 +941,7 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/admin/sia.png",
     "type": "alarm",
     "published": "2018-06-07T09:00:00.0000Z"
-  }, 
+  },
   "simple-api": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/admin/simple-api.png",
@@ -971,7 +983,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/admin/sonnen.png",
     "type": "energy",
     "published": "2018-08-08T16:08:35.694Z"
-  }, 
+  },
   "sonoff": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/admin/sonoff.png",
@@ -1302,18 +1314,6 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/admin/zwave.png",
     "type": "hardware",
     "published": "2015-01-03T00:02:56.370Z"
-  },
-  "luftdaten": {
-    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/admin/luftdaten.png",
-    "type": "weather",
-    "published": "2018-07-12T11:00:00.000Z"
-  },
-  "backitup": {
-    "meta": "https://raw.githubusercontent.com/simatec/ioBroker.backitup/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/simatec/ioBroker.backitup/master/admin/backitup.png",
-    "type": "general",
-    "published": "2018-07-28T10:40:00.000Z"
   },
   "wiffi-wz": {
     "meta": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.wiffi-wz/master/io-package.json",
