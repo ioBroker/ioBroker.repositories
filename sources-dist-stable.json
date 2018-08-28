@@ -90,6 +90,13 @@
     "type": "communication",
     "published": "2016-06-24T18:36:32.658Z"
   },
+  "contactid": {
+    "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.contactid/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.contactid/master/admin/contactid.png",
+    "type": "alarm",
+    "version": "0.1.2",
+    "published": "2018-08-27T21:45.0000Z"
+  },
   "cul": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cul/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cul/master/admin/busware.jpg",
@@ -912,6 +919,13 @@
     "version": "2.0.0",
     "type": "communication",
     "published": "2015-02-06T06:54:32.754Z"
+  },
+  "sia": {
+    "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/admin/sia.png",
+    "type": "alarm",
+    "version": "0.0.5",
+    "published": "2018-08-27T21:45:00.0000Z"
   },
   "smartmeter": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.smartmeter/master/io-package.json",
