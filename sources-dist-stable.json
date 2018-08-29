@@ -822,6 +822,13 @@
     "type": "multimedia",
     "published": "2018-02-23T20:39:21.007Z"
   },
+  "proxmox": {
+    "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.proxmox/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.proxmox/master/admin/logo.png",
+    "version": "0.1.0",
+    "type": "infrastructure",
+    "published": "2018-04-29T05:45:31.427Z"
+  },
   "proxy": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
