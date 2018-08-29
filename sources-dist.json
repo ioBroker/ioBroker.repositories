@@ -35,6 +35,12 @@
     "type": "energy",
     "published": "2015-01-02T17:10:47.222Z"
   },
+  "backitup": {
+    "meta": "https://raw.githubusercontent.com/simatec/ioBroker.backitup/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/simatec/ioBroker.backitup/master/admin/backitup.png",
+    "type": "general",
+    "published": "2018-07-28T10:40:00.000Z"
+  },
   "benq": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.benq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.benq/master/admin/benq.png",
@@ -166,6 +172,12 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.email/master/admin/email.png",
     "type": "messaging",
     "published": "2015-01-02T23:50:13.927Z"
+  },
+  "energymanager": {
+    "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/admin/energymanager.png",
+    "type": "energy",
+    "published": "2018-08-13T16:48:00.000Z"
   },
   "enet": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/io-package.json",
@@ -473,6 +485,12 @@
     "type": "hardware",
     "published": "2017-06-11T17:00:43.355Z"
   },
+  "klf200": {
+    "meta": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/admin/klf200.png",
+    "type": "hardware",
+    "published": "2018-08-13T18:36:15.970Z"
+  },
   "km200": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.km200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.km200/master/admin/km200.png",
@@ -539,13 +557,25 @@
     "type": "lighting",
     "published": "2016-03-16T00:01:08.739Z"
   },
+  "link": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.link/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.link/master/admin/link.png",
+    "type": "communication",
+    "published": "2018-08-23T23:11:08.739Z"
+  },
   "loxone": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/admin/loxone.png",
     "type": "iot-systems",
     "published": "2017-04-24T19:18:46.399Z"
   },
-    "lupusec": {
+  "luftdaten": {
+    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/admin/luftdaten.png",
+    "type": "weather",
+    "published": "2018-07-12T11:00:00.000Z"
+  },
+  "lupusec": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/admin/lupusec.png",
     "type": "alarm",
@@ -692,7 +722,6 @@
   "nanoleaf-lightpanels": {
     "meta": "https://raw.githubusercontent.com/daniel-2k/ioBroker.nanoleaf-lightpanels/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/daniel-2k/ioBroker.nanoleaf-lightpanels/master/admin/nanoleaf-lightpanels.png",
-    "version": "0.4.1",
     "type": "lighting",
     "published": "2018-07-13T18:38:10.100Z"
   },
@@ -907,6 +936,12 @@
     "type": "logic",
     "published": "2015-08-09T09:01:54.033Z"
   },
+  "sia": {
+    "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/admin/sia.png",
+    "type": "alarm",
+    "published": "2018-06-07T09:00:00.0000Z"
+  },
   "simple-api": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/admin/simple-api.png",
@@ -942,6 +977,12 @@
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.solarwetter/master/admin/solarwetter.png",
     "type": "weather",
     "published": "2016-06-01T10:34:25.177Z"
+  },
+  "sonnen": {
+    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/admin/sonnen.png",
+    "type": "energy",
+    "published": "2018-08-08T16:08:35.694Z"
   },
   "sonoff": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/io-package.json",
@@ -1258,7 +1299,6 @@
   "zigbee": {
     "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zigbee/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/kirovilya/ioBroker.zigbee/master/admin/zigbee.png",
-    "version": "0.6.0",
     "type": "hardware",
     "published": "2018-06-10T07:00:00.364Z"
   },
@@ -1275,16 +1315,10 @@
     "type": "hardware",
     "published": "2015-01-03T00:02:56.370Z"
   },
-  "luftdaten": {
-    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/admin/luftdaten.png",
-    "type": "weather",
-    "published": "2018-07-12T11:00:00.000Z"
-  },
-  "backitup": {
-    "meta": "https://raw.githubusercontent.com/simatec/ioBroker.backitup/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/simatec/ioBroker.backitup/master/admin/backitup.png",
-    "type": "general",
-    "published": "2018-07-28T10:40:00.000Z"
+  "wiffi-wz": {
+    "meta": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.wiffi-wz/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.wiffi-wz/master/admin/wiffi-wz.png",
+    "published": "2018-08-14T19:15:00.000Z",
+    "type": "hardware"
   }
 }
