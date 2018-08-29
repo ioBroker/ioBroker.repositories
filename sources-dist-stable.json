@@ -481,6 +481,13 @@
     "type": "multimedia",
     "published": "2016-05-22T15:47:37.487Z"
   },
+  "kress": {
+    "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.kress/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.kress/master/admin/kress.png",
+    "version": "2.5.5",
+    "type": "garden",
+    "published": "2018-08-09T13:36:22.427Z"
+  },
   "landroid": {
     "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.landroid/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.landroid/master/admin/landroid.png",
@@ -491,7 +498,7 @@
   "landroid-s": {
     "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.landroid-s/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.landroid-s/master/admin/landroid-s.png",
-    "version": "2.1.1",
+    "version": "2.5.4",
     "type": "garden",
     "published": "2017-07-22T11:45:31.427Z"
   },
