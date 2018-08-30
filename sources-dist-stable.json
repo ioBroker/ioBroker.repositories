@@ -1016,6 +1016,13 @@
     "type": "alarm",
     "published": "2016-04-20T13:50:38.550Z"
   },
+ "systeminfo": {
+    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.systeminfo/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.systeminfo/master/admin/systeminfo.png",
+    "version": "0.2.2",
+    "type": "general",
+    "published": "2017-10-26T23:34:57.045Z"
+  },
   "tankerkoenig": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tankerkoenig/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.tankerkoenig/master/admin/tankerkoenig.png",
