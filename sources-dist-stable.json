@@ -481,6 +481,13 @@
     "type": "multimedia",
     "published": "2016-05-22T15:47:37.487Z"
   },
+  "kress": {
+    "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.kress/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.kress/master/admin/kress.png",
+    "version": "2.5.5",
+    "type": "garden",
+    "published": "2018-08-09T13:36:22.427Z"
+  },
   "landroid": {
     "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.landroid/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.landroid/master/admin/landroid.png",
@@ -491,7 +498,7 @@
   "landroid-s": {
     "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.landroid-s/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.landroid-s/master/admin/landroid-s.png",
-    "version": "2.1.1",
+    "version": "2.5.4",
     "type": "garden",
     "published": "2017-07-22T11:45:31.427Z"
   },
@@ -599,6 +606,13 @@
     "type": "iot-systems",
     "version": "1.0.5",
     "published": "2017-06-05T17:40:26.665Z"
+  },
+    "mihome-lamp": {
+    "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.mihome-lamp/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.mihome-lamp/master/admin/mihome-lamp.png",
+    "version": "1.0.0",
+    "type": "lighting",
+    "published": "2017-08-09T04:28:19.180Z"
   },
   "mihome-plug": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-plug/master/io-package.json",
@@ -814,6 +828,13 @@
     "icon": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.plexconnect/master/admin/plex-logo.png",
     "type": "multimedia",
     "published": "2018-02-23T20:39:21.007Z"
+  },
+  "proxmox": {
+    "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.proxmox/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.proxmox/master/admin/logo.png",
+    "version": "0.1.0",
+    "type": "infrastructure",
+    "published": "2018-04-29T05:45:31.427Z"
   },
   "proxy": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/io-package.json",
@@ -1267,6 +1288,13 @@
     "version": "0.3.18",
     "type": "multimedia",
     "published": "2016-01-16T17:39:17.385Z"
+  },
+  "yeelight-2": {
+    "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.yeelight-2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.yeelight-2/master/admin/yeelight.png",
+    "version": "0.4.0",
+    "type": "lighting",
+    "published": "2018-06-05T05:30:03.364Z"
   },
   "yr": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.yr/master/io-package.json",
