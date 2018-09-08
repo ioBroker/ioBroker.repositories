@@ -143,6 +143,12 @@
     "type": "general",
     "published": "2017-03-15T12:16:13.934Z"
   },
+  "doorbird": {
+    "meta": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/admin/doorbird.png",
+    "type": "iot-systems",
+    "published": "2018-09-08T20:17:14.841Z"
+  },
   "dwd": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.dwd/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.dwd/master/admin/dwd.png",
