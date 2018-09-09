@@ -1023,7 +1023,14 @@
     "type": "alarm",
     "published": "2016-04-20T13:50:38.550Z"
   },
- "systeminfo": {
+  "stiebel-isg": {
+    "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.stiebel-isg/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.stiebel-isg/master/admin/stiebel-isg.png",
+    "version": "1.0.0",
+    "type": "climate-control",
+    "published": "2018-09-09T12:00:00.000Z"
+  },
+  "systeminfo": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.systeminfo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.systeminfo/master/admin/systeminfo.png",
     "version": "0.2.2",
