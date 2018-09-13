@@ -460,6 +460,13 @@
     "type": "utility",
     "published": "2017-07-10T13:01:38.945Z"
   },
+  "klf200": {
+    "meta": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/admin/klf200.png",
+    "version": "0.9.5",
+    "type": "hardware",
+    "published": "2018-08-13T18:36:15.970Z"
+  },
   "km200": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.km200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.km200/master/admin/km200.png",
