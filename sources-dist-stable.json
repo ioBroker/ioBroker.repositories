@@ -120,8 +120,9 @@
   "deconz": {
     "meta": "https://raw.githubusercontent.com/jey-cee/ioBroker.deconz/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/jey-cee/ioBroker.deconz/master/admin/deconz.png",
-    "version": "0.2.0",
-    "type": "hardware"
+    "version": "0.2.5",
+    "type": "hardware",
+    "published": "2018-01-02T20:06:31.173Z"
   },
   "denon": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/io-package.json",
