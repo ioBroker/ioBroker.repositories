@@ -1332,5 +1332,11 @@
     "icon": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.wiffi-wz/master/admin/wiffi-wz.png",
     "published": "2018-08-14T19:15:00.000Z",
     "type": "hardware"
+  },
+  "google-sharedlocations": {
+    "meta": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.google-sharedlocations/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.google-sharedlocations/master/admin/google-sharedlocations.png",
+    "published": "2018-02-13T14:17:46.370Z",
+    "type": "geoposition"
   }
 }
