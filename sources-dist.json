@@ -467,6 +467,12 @@
     "type": "infrastructure",
     "published": "2018-09-11T21:06:07.786Z"
   },
+  "iot": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.iot/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.iot/master/admin/iot.png",
+    "type": "infrastructure",
+    "published": "2018-09-22T21:06:07.786Z"
+  },
   "javascript": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/admin/js.jpeg",
