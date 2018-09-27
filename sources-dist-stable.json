@@ -1318,6 +1318,13 @@
     "type": "multimedia",
     "published": "2016-01-16T17:39:17.385Z"
   },
+	"yeelight": {
+    "meta": "https://raw.githubusercontent.com/instalator/ioBroker.yeelight/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/instalator/ioBroker.yeelight/master/admin/yeelight.png",
+	  "version": "0.1.1",
+    "type": "lighting",
+    "published": "2018-05-28T05:30:03.364Z"
+  },
   "yeelight-2": {
     "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.yeelight-2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.yeelight-2/master/admin/yeelight.png",
