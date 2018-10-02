@@ -1296,6 +1296,12 @@
     "type": "climate-control",
     "published": "2015-10-08T23:20:16.800Z"
   },
+  "xbox": {
+    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/admin/xbox.png",
+    "type": "multimedia",
+    "published": "2018-10-02T11:47:49.562Z"
+  },
   "xs1": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/admin/xs1.png",
