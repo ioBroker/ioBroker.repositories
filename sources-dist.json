@@ -764,8 +764,8 @@
   "nuki": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.nuki/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.nuki/master/admin/nuki-logo.png",
-    "published": "2018-10-05T13:01:00.000Z",
-    "type": "hardware"
+    "type": "hardware",
+    "published": "2018-10-05T13:01:00.000Z"
   },
   "nut": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.nut/master/io-package.json",
