@@ -71,6 +71,13 @@
     "published": "2017-09-02T11:56:25.197Z",
     "versionDate": "2017-10-26T12:41:18.549Z"
   },
+  "bosesoundtouch": {
+    "meta": "https://raw.githubusercontent.com/SwedishChef1/ioBroker.bosesoundtouch/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SwedishChef1/ioBroker.bosesoundtouch/master/admin/bosesoundtouch.png",
+    "type": "multimedia",
+    "published": "2017-12-22T15:15:44.610Z",
+    "version": "0.1.9"
+  },
   "botvac": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/admin/botvac.png",
