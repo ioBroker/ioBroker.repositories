@@ -151,10 +151,9 @@
   "denon": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
-    "version": "0.6.0",
+    "version": "1.0.0",
     "type": "multimedia",
     "published": "2018-06-04T22:51:21.999Z",
-    "versionDate": "2018-09-30T11:44:01.279Z"
   },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
@@ -1166,10 +1165,9 @@
   "sonnen": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/admin/sonnen.png",
-    "version": "0.0.8",
+    "version": "1.0.0",
     "type": "energy",
     "published": "2018-08-02T23:05:38.370Z",
-    "versionDate": "2018-09-26T10:16:19.956Z"
   },
   "sonoff": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/io-package.json",
