@@ -48,6 +48,13 @@
     "published": "2015-01-02T17:10:47.222Z",
     "versionDate": "2016-11-03T21:54:23.135Z"
   },
+  "beckhoff": {
+    "meta": "https://raw.githubusercontent.com/dkleber89/ioBroker.beckhoff/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/dkleber89/ioBroker.beckhoff/master/admin/beckhoff.png",
+    "type": "hardware",
+    "published": "2018-11-01T19:15:00.000Z",
+    "versionDate": "2018-11-01T19:15:00.000Z"
+  },
   "backitup": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.backitup/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.backitup/master/admin/backitup.png",
