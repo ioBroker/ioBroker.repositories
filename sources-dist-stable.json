@@ -520,10 +520,10 @@
   "innogy-smarthome": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.innogy-smarthome/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.innogy-smarthome/master/admin/innogy-smarthome.png",
-    "version": "0.1.17",
+    "version": "0.2.7",
     "type": "iot-systems",
     "published": "2017-01-07T12:19:30.574Z",
-    "versionDate": "2017-05-13T11:04:53.997Z"
+    "versionDate": "2018-11-02T09:04:53.997Z"
   },
   "iogo": {
     "meta": "https://raw.githubusercontent.com/nisiode/ioBroker.iogo/master/io-package.json",
@@ -1067,14 +1067,6 @@
     "type": "hardware",
     "published": "2016-10-23T14:16:37.202Z",
     "versionDate": "2017-12-28T23:05:08.626Z"
-  },
-  "rwe-smarthome": {
-    "meta": "https://raw.githubusercontent.com/PArns/ioBroker.rwe-smarthome/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/PArns/ioBroker.rwe-smarthome/master/admin/rwe-smarthome.png",
-    "version": "0.1.11",
-    "type": "iot-systems",
-    "published": "2016-04-03T19:31:17.154Z",
-    "versionDate": "2017-01-15T00:17:38.642Z"
   },
   "s7": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.s7/master/io-package.json",
