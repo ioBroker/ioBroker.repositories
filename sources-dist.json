@@ -34,13 +34,13 @@
     "published": "2016-09-05T19:03:16.756Z",
     "versionDate": "2018-03-30T10:06:58.156Z"
   },
-  "admin": {
+  "asterisk": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.asterisk/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.asterisk/master/admin/asterisk.png",
     "type": "communication",
     "published": "2018-11-11T16:15:00.000Z",
     "versionDate": "2018-11-11T16:15:00.000Z"
-  }
+  },
   "artnet": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/admin/artnet.png",
