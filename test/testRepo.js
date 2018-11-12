@@ -30,7 +30,7 @@ describe('Test Repository', function() {
         this.timeout(120000);
         for (let id in stable) {
             if (stable.hasOwnProperty(id)) {
-                expect(latest[id]).to.be.not.undefined;
+                expect(latest[id], id + ' not in latest but in stable').to.be.not.undefined;
                 expect(latest[id].type).to.be.not.undefined;
                 expect(latest[id].type).to.be.not.equal('');
                 expect(latest[id].type).to.be.equal(stable[id].type);
@@ -72,4 +72,15 @@ describe('Test Repository', function() {
         }
         if (!count) done();
     });
+
+    it('Test Repository: check latest vs. stable', function (done) {
+        console.log();
+        for (let id in latest) {
+            if (latest.hasOwnProperty(id) && !stable.hasOwnProperty(id)) {
+                console.log('Info: Adapter "' + id + '" is not in stable.')
+            }
+        }
+        done();
+    });
+
 });
