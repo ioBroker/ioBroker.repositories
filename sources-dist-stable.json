@@ -113,8 +113,7 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.contactid/master/admin/contactid.png",
     "type": "alarm",
     "version": "0.1.5",
-    "published": "2018-11-15T17:59:52.182Z",
-    "versionDate": "2018-06-07T16:17:44.547Z"
+    "published": "2018-05-12T17:59:52.182Z"
   },
   "cul": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cul/master/io-package.json",
@@ -1111,16 +1110,14 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
     "version": "1.0.0",
     "type": "iot-systems",
-    "published": "2018-11-15T19:53:52.255Z",
-    "versionDate": "2018-11-11T19:28:11.001Z"
+    "published": "2018-09-03T18:00:52.255Z"
   },
   "sia": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/admin/sia.png",
     "type": "alarm",
     "version": "0.1.6",
-    "published": "2018-11-15T19:46:58.927Z",
-    "versionDate": "2018-10-23T11:35:57.210Z"
+    "published": "2018-06-08T09:46:58.927Z"
   },
   "simple-api": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/io-package.json",
