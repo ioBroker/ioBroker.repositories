@@ -1327,10 +1327,9 @@
   "viessmann": {
     "meta": "https://raw.githubusercontent.com/misanorot/ioBroker.viessmann/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/misanorot/ioBroker.viessmann/master/admin/viessmann.png",
-    "version": "0.6.1",
+    "version": "0.8.4",
     "type": "climate-control",
-    "published": "2017-10-16T19:37:29.283Z",
-    "versionDate": "2018-09-24T19:42:03.687Z"
+    "published": "2017-10-16T19:37:29.283Z"
   },
   "vis": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
