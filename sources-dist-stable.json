@@ -855,6 +855,13 @@
     "published": "2018-05-03T18:41:42.916Z",
     "versionDate": "2018-07-13T16:52:33.201Z"
   },
+  "nello": {
+    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.nello/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.nello/master/admin/nello.png",
+    "type": "hardware",
+    "published": "2018-12-02T21:01:00.000Z",
+    "versionDate": "2018-11-23T20:12:00.000Z"
+  },
   "netatmo": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/admin/netatmo.png",
