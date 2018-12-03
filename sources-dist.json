@@ -1106,6 +1106,13 @@
     "published": "2015-01-02T20:46:10.368Z",
     "versionDate": "2018-10-21T16:15:41.588Z"
   },
+  "roomba": {
+    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/admin/roomba.png",
+    "type": "household",
+    "published": "2018-12-02T21:26:00.000Z",
+    "versionDate": "2018-12-02T21:26:00.000Z"
+  },
   "rpi2": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.rpi2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.rpi2/master/admin/rpi.png",
