@@ -334,13 +334,6 @@
     "published": "2016-01-15T20:18:56.071Z",
     "versionDate": "2018-03-07T21:05:22.640Z"
   },
-  "google-sharedlocations": {
-    "meta": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.google-sharedlocations/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.google-sharedlocations/master/admin/google-sharedlocations.png",
-    "published": "2018-07-15T17:16:57.857Z",
-    "type": "geoposition",
-    "versionDate": "2018-09-19T23:08:34.644Z"
-  },
   "habpanel": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.habpanel/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.habpanel/master/admin/habpanel.png",
