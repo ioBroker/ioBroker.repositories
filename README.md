@@ -110,8 +110,7 @@ You can find some help in this [PDF](http://forum.iobroker.net/download/file.php
 
 ### Types
 The io-package.json must have attribute type in common part.
-Like here https://github.com/ioBroker/ioBroker.template/blob/master/io-package.json#L43
-(Line can be changed with the time. Please report if this link do not point to according line any more):
+An example can be seen [here](https://github.com/ioBroker/ioBroker.template/blob/1e48d01e69c9ad15c70ab8dced572a4d6882ae0d/io-package.json#L76):
 
     - **alarm** - security of home, car, boat, ...
     - **climate-control** - climate, heaters, air filters, water heaters, ...
