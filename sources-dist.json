@@ -181,6 +181,13 @@
     "published": "2017-03-15T12:16:13.934Z",
     "versionDate": "2018-09-28T11:41:21.063Z"
   },
+  "discovergy": {
+    "meta": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.discovergy/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.discovergy/master/admin/discovergy.png",
+    "type": "energy",
+    "published": "2017-04-12T12:21:60.934Z",
+    "versionDate": "2017-04-12T12:21:60.934Z"
+  },  
   "doorbird": {
     "meta": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/admin/doorbird.png",
