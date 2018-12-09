@@ -33,12 +33,12 @@
     "bluefox <dogafox@gmail.com>"
   ],
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "^4.2.0",
     "gulp": "^3.9.1",
     "mocha": "^5.2.0",
-    "node.extend": "^2.0.0",
-    "npm": "^2.15.12",
-    "request": "^2.87.0",
-    "semver": "^5.5.0"
+    "node.extend": "^2.0.2",
+    "npm": "^6.4.1",
+    "request": "^2.88.0",
+    "semver": "^5.6.0"
   }
 }
