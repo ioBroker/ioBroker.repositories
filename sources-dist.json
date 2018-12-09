@@ -185,8 +185,8 @@
     "meta": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.discovergy/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.discovergy/master/admin/discovergy.png",
     "type": "energy",
-    "published": "2017-04-12T12:21:60.934Z",
-    "versionDate": "2017-04-12T12:21:60.934Z"
+    "published": "2018-12-07T12:21:60.934Z",
+    "versionDate": "2018-12-07T12:21:60.934Z"
   },  
   "doorbird": {
     "meta": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/io-package.json",
@@ -951,6 +951,13 @@
     "type": "iot-systems",
     "published": "2017-05-09T21:14:27.652Z",
     "versionDate": "2018-08-12T20:06:26.505Z"
+  },
+  "opentherm": {
+    "meta": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.opentherm/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.opentherm/master/admin/opentherm.png",
+    "type": "energy",
+    "published": "2018-12-09T12:21:60.934Z",
+    "versionDate": "2018-12-09T12:21:60.934Z"
   },
   "openweathermap": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.openweathermap/master/io-package.json",
