@@ -1187,10 +1187,9 @@
   "solarlog": {
     "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.solarlog/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.solarlog/master/admin/solarlog.png",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "type": "energy",
-    "published": "2018-11-28T19:52:32.339Z",
-    "versionDate": "2018-12-02T15:45:53.213Z"
+    "published": "2018-11-28T19:52:32.339Z"
   },
   "solarwetter": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.solarwetter/master/io-package.json",
