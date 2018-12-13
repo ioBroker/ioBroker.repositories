@@ -328,6 +328,11 @@
     "published": "2017-06-12T22:10:16.740Z",
     "versionDate": "2017-11-23T22:24:52.267Z"
   },
+  "fullyBrowser": {
+    "meta": "https://raw.githubusercontent.com/arteck/ioBroker.fullyBrowser/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/arteck/ioBroker.fullyBrowser/master/admin/fully.png",
+    "type": "hardware"
+  }, 
   "g-homa": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.g-homa/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.g-homa/master/admin/g-homa.png",
@@ -1639,6 +1644,11 @@
     "type": "climate-control",
     "published": "2018-02-06T17:36:01.009Z",
     "versionDate": "2018-07-25T18:14:46.995Z"
+  },
+  "zigbee": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/admin/zigbee.png",
+    "type": "hardware"
   },
   "zwave": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/io-package.json",
