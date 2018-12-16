@@ -759,6 +759,14 @@
     "type": "hardware",
     "versionDate": "2017-03-19T22:26:13.507Z"
   },
+  "meross": {
+    "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.meross/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.meross/master/admin/meross.png",
+    "type": "iot-systems",
+    "version": "1.0.0",
+    "published": "2018-12-01T20:00:00.00Z",
+    "versionDate": "2018-12-16T23:00:00.000Z"
+  },
   "miele": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.miele/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.miele/master/admin/xmiele.png",
