@@ -30,6 +30,7 @@ describe('Test Repository', function() {
         this.timeout(120000);
         for (let id in stable) {
             if (stable.hasOwnProperty(id)) {
+                expect(stable[id]).to.be.equal(stable[id].toLowerCase());
                 expect(latest[id], id + ' not in latest but in stable').to.be.not.undefined;
                 expect(latest[id].type).to.be.not.undefined;
                 expect(latest[id].type).to.be.not.equal('');
@@ -40,6 +41,7 @@ describe('Test Repository', function() {
         // compare types with io-package.json
         for (let id in latest) {
             if (latest.hasOwnProperty(id)) {
+                expect(latest[id]).to.be.equal(latest[id].toLowerCase());
                 if (latest[id].meta && latest[id].meta.match(/io-package\.json$/)) {
                     count++;
                     (function (_type, _id) {
