@@ -328,11 +328,13 @@
     "published": "2017-06-12T22:10:16.740Z",
     "versionDate": "2017-11-23T22:24:52.267Z"
   },
-  "fullyBrowser": {
+  "fullybrowser": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.fullyBrowser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.fullyBrowser/master/admin/fully.png",
-    "type": "hardware"
-  }, 
+    "type": "hardware",
+    "published": "2018-12-16T11:09:00.000Z",
+    "versionDate": "2018-12-16T11:09:00.000Z"
+  },
   "g-homa": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.g-homa/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.g-homa/master/admin/g-homa.png",
