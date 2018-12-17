@@ -1128,6 +1128,13 @@
     "published": "2015-01-02T20:46:10.368Z",
     "versionDate": "2018-10-21T16:15:41.588Z"
   },
+  "ring": {
+    "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/admin/ring.png",
+    "type": "hardware",
+    "published": "2018-12-14T14:33:39.641Z",
+    "versionDate": "2018-12-14T13:59:26.701Z"
+  },
   "roomba": {
     "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/admin/roomba.png",
