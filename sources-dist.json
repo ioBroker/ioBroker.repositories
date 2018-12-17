@@ -1638,8 +1638,8 @@
     "versionDate": "2018-10-11T19:21:34.014Z"
   },
   "zigbee": {
-    "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zigbee/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/kirovilya/ioBroker.zigbee/master/admin/zigbee.png",
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/admin/zigbee.png",
     "type": "hardware",
     "published": "2018-06-08T19:33:19.576Z",
     "versionDate": "2018-10-21T18:20:09.329Z"
@@ -1651,11 +1651,6 @@
     "type": "climate-control",
     "published": "2018-02-06T17:36:01.009Z",
     "versionDate": "2018-07-25T18:14:46.995Z"
-  },
-  "zigbee": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/admin/zigbee.png",
-    "type": "hardware"
   },
   "zwave": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/io-package.json",
