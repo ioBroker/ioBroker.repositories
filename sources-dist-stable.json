@@ -161,10 +161,9 @@
   "denon": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "type": "multimedia",
-    "published": "2018-06-04T22:51:21.999Z",
-    "versionDate": "2018-11-21T13:33:37.763Z"
+    "published": "2018-06-04T22:51:21.999Z"
   },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
@@ -393,18 +392,16 @@
   "hm-rega": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/admin/homematic.png",
-    "version": "1.7.1",
+    "version": "2.0.0",
     "type": "iot-systems",
-    "published": "2015-01-02T23:31:13.087Z",
-    "versionDate": "2018-07-27T13:32:18.271Z"
+    "published": "2015-01-02T23:31:13.087Z"
   },
   "hm-rpc": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
-    "version": "1.7.6",
+    "version": "1.8.0",
     "type": "iot-systems",
-    "published": "2015-01-02T23:35:36.140Z",
-    "versionDate": "2018-07-29T08:26:34.667Z"
+    "published": "2015-01-02T23:35:36.140Z"
   },
   "homee": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.homee/master/io-package.json",
@@ -1225,10 +1222,9 @@
   "sonnen": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/admin/sonnen.png",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "type": "energy",
-    "published": "2018-08-02T23:05:38.370Z",
-    "versionDate": "2018-11-09T00:43:03.993Z"
+    "published": "2018-08-02T23:05:38.370Z"
   },
   "sonoff": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/io-package.json",
@@ -1613,6 +1609,13 @@
     "type": "climate-control",
     "published": "2015-10-08T23:20:16.800Z",
     "versionDate": "2016-12-19T02:11:54.645Z"
+  },
+  "xbox": {
+    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/admin/xbox.png",
+    "version": "0.4.2",
+    "type": "multimedia",
+    "published": "2018-09-17T17:44:59.021Z"
   },
   "xs1": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",
