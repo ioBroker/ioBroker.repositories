@@ -187,7 +187,7 @@
     "type": "energy",
     "published": "2018-12-07T12:21:60.934Z",
     "versionDate": "2018-12-07T12:21:60.934Z"
-  },  
+  },
   "doorbird": {
     "meta": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/admin/doorbird.png",
@@ -853,6 +853,13 @@
     "type": "lighting",
     "published": "2017-08-29T11:37:57.432Z",
     "versionDate": "2018-01-21T20:07:49.681Z"
+  },
+  "minmax": {
+    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.minmax/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.minmax/master/admin/minmax.png",
+    "type": "storage",
+    "published": "2018-12-21T19:44:25.331Z ",
+    "versionDate": "2018-12-21T19:44:25.331Z "
   },
   "mobile": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/io-package.json",

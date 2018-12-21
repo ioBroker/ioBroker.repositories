@@ -145,10 +145,10 @@
   "daswetter": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/admin/daswettercom.png",
-    "version": "2.3.1",
+    "version": "2.5.0",
     "type": "weather",
     "published": "2017-05-14T10:42:31.173Z",
-    "versionDate": "2018-08-26T09:22:08.844Z"
+    "versionDate": "2018-12-08T14:23:19.740Z"
   },
   "deconz": {
     "meta": "https://raw.githubusercontent.com/jey-cee/ioBroker.deconz/master/io-package.json",
