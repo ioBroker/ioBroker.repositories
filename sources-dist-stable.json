@@ -368,10 +368,9 @@
   "harmony": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
-    "version": "0.9.3",
+    "version": "1.1.0",
     "type": "multimedia",
-    "published": "2015-08-18T08:32:32.461Z",
-    "versionDate": "2018-06-30T14:01:41.190Z"
+    "published": "2015-08-18T08:32:32.461Z"
   },
   "hid": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/io-package.json",
