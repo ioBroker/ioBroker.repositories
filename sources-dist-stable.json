@@ -36,7 +36,8 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.asterisk/master/admin/asterisk.png",
     "type": "communication",
     "version": "0.1.6",
-    "published": "2018-11-23T16:15:00.000Z"
+    "published": "2018-11-10T15:30:17.077Z",
+    "versionDate": "2018-11-29T18:57:58.881Z"
   },
   "b-control-em": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.b-control-em/master/io-package.json",
@@ -163,7 +164,8 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
     "version": "1.2.2",
     "type": "multimedia",
-    "published": "2018-06-04T22:51:21.999Z"
+    "published": "2018-06-04T22:51:21.999Z",
+    "versionDate": "2018-12-10T19:25:10.529Z"
   },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
@@ -370,7 +372,8 @@
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
     "version": "1.1.0",
     "type": "multimedia",
-    "published": "2015-08-18T08:32:32.461Z"
+    "published": "2015-08-18T08:32:32.461Z",
+    "versionDate": "2018-12-21T10:28:15.443Z"
   },
   "hid": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/io-package.json",
@@ -393,14 +396,16 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/admin/homematic.png",
     "version": "2.0.0",
     "type": "iot-systems",
-    "published": "2015-01-02T23:31:13.087Z"
+    "published": "2015-01-02T23:31:13.087Z",
+    "versionDate": "2018-12-07T14:09:58.462Z"
   },
   "hm-rpc": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
     "version": "1.8.0",
     "type": "iot-systems",
-    "published": "2015-01-02T23:35:36.140Z"
+    "published": "2015-01-02T23:35:36.140Z",
+    "versionDate": "2018-12-07T14:17:24.305Z"
   },
   "homee": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.homee/master/io-package.json",
@@ -559,7 +564,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.iot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.iot/master/admin/iot.png",
     "type": "communication",
-    "version": "0.1.9",
+    "version": "0.2.2",
     "published": "2018-09-22T16:11:37.398Z",
     "versionDate": "2018-10-21T17:40:32.063Z"
   },
@@ -1208,7 +1213,8 @@
     "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.solarlog/master/admin/solarlog.png",
     "version": "0.0.7",
     "type": "energy",
-    "published": "2018-11-28T19:52:32.339Z"
+    "published": "2018-11-28T19:52:32.339Z",
+    "versionDate": "2018-12-16T20:26:51.553Z"
   },
   "solarwetter": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.solarwetter/master/io-package.json",
@@ -1223,7 +1229,8 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/admin/sonnen.png",
     "version": "1.0.2",
     "type": "energy",
-    "published": "2018-08-02T23:05:38.370Z"
+    "published": "2018-08-02T23:05:38.370Z",
+    "versionDate": "2018-12-10T19:22:27.032Z"
   },
   "sonoff": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/io-package.json",
@@ -1614,7 +1621,8 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/admin/xbox.png",
     "version": "0.4.2",
     "type": "multimedia",
-    "published": "2018-09-17T17:44:59.021Z"
+    "published": "2018-09-17T17:44:59.021Z",
+    "versionDate": "2018-12-10T19:16:34.562Z"
   },
   "xs1": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",
