@@ -45,8 +45,8 @@
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.asterisk/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.asterisk/master/admin/asterisk.png",
     "type": "communication",
-    "published": "2018-11-11T16:15:00.000Z",
-    "versionDate": "2018-11-11T16:15:00.000Z"
+    "published": "2018-11-10T15:30:17.077Z",
+    "versionDate": "2018-11-29T18:57:58.881Z"
   },
   "b-control-em": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.b-control-em/master/io-package.json",
@@ -172,14 +172,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
     "type": "multimedia",
     "published": "2018-06-04T22:51:21.999Z",
-    "versionDate": "2018-11-21T13:33:37.763Z"
-  },
-  "discovery": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/admin/discovery.png",
-    "type": "general",
-    "published": "2017-03-15T12:16:13.934Z",
-    "versionDate": "2018-09-28T11:41:21.063Z"
+    "versionDate": "2018-12-19T14:32:13.510Z"
   },
   "discovergy": {
     "meta": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.discovergy/master/io-package.json",
@@ -187,6 +180,13 @@
     "type": "energy",
     "published": "2018-12-07T12:21:60.934Z",
     "versionDate": "2018-12-07T12:21:60.934Z"
+  },
+  "discovery": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/admin/discovery.png",
+    "type": "general",
+    "published": "2017-03-15T12:16:13.934Z",
+    "versionDate": "2018-09-28T11:41:21.063Z"
   },
   "doorbird": {
     "meta": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/io-package.json",
@@ -382,7 +382,7 @@
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
     "type": "multimedia",
     "published": "2015-08-18T08:32:32.461Z",
-    "versionDate": "2018-06-30T14:01:41.190Z"
+    "versionDate": "2018-12-21T17:57:11.519Z"
   },
   "hid": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/io-package.json",
@@ -410,14 +410,14 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/admin/homematic.png",
     "type": "iot-systems",
     "published": "2015-01-02T23:31:13.087Z",
-    "versionDate": "2018-07-27T13:32:18.271Z"
+    "versionDate": "2018-12-07T14:09:58.462Z"
   },
   "hm-rpc": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
     "type": "iot-systems",
     "published": "2015-01-02T23:35:36.140Z",
-    "versionDate": "2018-11-03T21:34:51.929Z"
+    "versionDate": "2018-12-07T14:17:24.305Z"
   },
   "homee": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.homee/master/io-package.json",
@@ -1245,7 +1245,7 @@
     "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.solarlog/master/admin/solarlog.png",
     "type": "energy",
     "published": "2018-11-28T19:52:32.339Z",
-    "versionDate": "2018-12-02T15:45:53.213Z"
+    "versionDate": "2018-12-16T20:26:51.553Z"
   },
   "solarwetter": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.solarwetter/master/io-package.json",
@@ -1259,7 +1259,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/admin/sonnen.png",
     "type": "energy",
     "published": "2018-08-02T23:05:38.370Z",
-    "versionDate": "2018-11-09T00:43:03.993Z"
+    "versionDate": "2018-12-10T19:22:27.032Z"
   },
   "sonoff": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/io-package.json",
@@ -1616,7 +1616,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/admin/xbox.png",
     "type": "multimedia",
     "published": "2018-09-17T17:44:59.021Z",
-    "versionDate": "2018-10-12T11:41:39.718Z"
+    "versionDate": "2018-12-10T19:16:34.562Z"
   },
   "xs1": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",
