@@ -162,10 +162,9 @@
   "denon": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
-    "version": "1.2.2",
+    "version": "1.2.7",
     "type": "multimedia",
-    "published": "2018-06-04T22:51:21.999Z",
-    "versionDate": "2018-12-10T19:25:10.529Z"
+    "published": "2018-06-04T22:51:21.999Z"
   },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
@@ -402,10 +401,9 @@
   "hm-rpc": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
-    "version": "1.8.0",
+    "version": "1.8.2",
     "type": "iot-systems",
-    "published": "2015-01-02T23:35:36.140Z",
-    "versionDate": "2018-12-07T14:17:24.305Z"
+    "published": "2015-01-02T23:35:36.140Z"
   },
   "homee": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.homee/master/io-package.json",
