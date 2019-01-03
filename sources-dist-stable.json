@@ -958,6 +958,14 @@
     "published": "2015-03-22T15:08:19.799Z",
     "versionDate": "2024-11-19T20:20:11.201Z"
   },
+  "onvif": {
+    "meta": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/admin/onvif.png",
+    "version": "0.0.2",
+    "type": "infrastructure",
+    "published": "2018-12-11T17:47:57.690Z",
+    "versionDate": "2018-12-11T17:47:57.690Z"
+  },
   "openhab": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.openhab/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.openhab/master/admin/openhab.png",
