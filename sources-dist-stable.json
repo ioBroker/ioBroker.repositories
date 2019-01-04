@@ -742,6 +742,14 @@
     "version": "0.5.3",
     "versionDate": "2018-03-25T17:15:26.198Z"
   },
+  "mbus": {
+    "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/admin/mbus.png",
+    "type": "energy",
+    "version": "1.1.1",
+    "published": "2018-03-11T20:48:55.590Z",
+    "versionDate": "2019-01-04T15:45:00.000Z"
+  },
   "megad": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/admin/megad.png",
