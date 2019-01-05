@@ -43,10 +43,10 @@
     "meta": "https://raw.githubusercontent.com/mcdhrts/ioBroker.asuswrt/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/mcdhrts/ioBroker.asuswrt/master/admin/asuswrt.png",
     "type": "hardware",
-    "version": "0.3.1",    
+    "version": "0.3.1",
     "published": "2018-01-03T16:02:17.077Z",
     "versionDate": "2018-01-03T16:02:17.077Z"
-  },    
+  },
   "b-control-em": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.b-control-em/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.b-control-em/master/admin/bcontrol.png",
@@ -172,7 +172,8 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
     "version": "1.2.7",
     "type": "multimedia",
-    "published": "2018-06-04T22:51:21.999Z"
+    "published": "2018-06-04T22:51:21.999Z",
+    "versionDate": "2018-12-25T00:48:03.054Z"
   },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
@@ -411,7 +412,8 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
     "version": "1.8.2",
     "type": "iot-systems",
-    "published": "2015-01-02T23:35:36.140Z"
+    "published": "2015-01-02T23:35:36.140Z",
+    "versionDate": "2018-12-30T22:59:45.474Z"
   },
   "homee": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.homee/master/io-package.json",
@@ -964,7 +966,7 @@
     "version": "2.0.2",
     "type": "multimedia",
     "published": "2015-03-22T15:08:19.799Z",
-    "versionDate": "2024-11-19T20:20:11.201Z"
+    "versionDate": "2018-11-25T17:09:21.267Z"
   },
   "onvif": {
     "meta": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/io-package.json",
