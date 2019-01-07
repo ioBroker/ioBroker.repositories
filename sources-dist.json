@@ -338,7 +338,7 @@
   "fullybrowser": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.fullybrowser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.fullybrowser/master/admin/fully.png",
-    "type": "hardware",
+    "type": "utility",
     "published": "2018-12-16T11:09:00.000Z",
     "versionDate": "2018-12-16T11:09:00.000Z"
   },
@@ -1326,7 +1326,7 @@
   "statistics": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.statistics/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.statistics/master/admin/statistics.png",
-    "type": "misc-data",
+    "type": "logic",
     "published": "2019-01-06T21:33:35.419Z",
     "versionDate": "2019-01-06T21:33:35.419Z"
   },
