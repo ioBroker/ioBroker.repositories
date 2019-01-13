@@ -1,4 +1,4 @@
-{ 
+{
   "admin": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
@@ -32,7 +32,7 @@
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/admin/amazon-dash.png",
     "type": "hardware",
     "published": "2016-09-05T19:03:16.756Z",
-    "versionDate": "2018-03-30T10:06:58.156Z"
+    "versionDate": "2018-12-17T20:44:12.999Z"
   },
   "artnet": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/io-package.json",
@@ -179,7 +179,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
     "type": "multimedia",
     "published": "2018-06-04T22:51:21.999Z",
-    "versionDate": "2018-12-25T00:48:03.054Z"
+    "versionDate": "2019-01-08T10:40:16.007Z"
   },
   "discovergy": {
     "meta": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.discovergy/master/io-package.json",
@@ -389,7 +389,7 @@
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
     "type": "multimedia",
     "published": "2015-08-18T08:32:32.461Z",
-    "versionDate": "2018-12-21T17:57:11.519Z"
+    "versionDate": "2018-12-29T03:52:36.183Z"
   },
   "hid": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/io-package.json",
@@ -818,12 +818,13 @@
     "type": "iot-systems",
     "published": "2017-06-05T17:40:26.665Z",
     "versionDate": "2018-10-20T13:34:06.588Z"
-  },  
+  },
   "mihome-airpurifier": {
     "meta": "https://raw.githubusercontent.com/JoJ123/ioBroker.mihome-airpurifier/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/JoJ123/ioBroker.mihome-airpurifier/master/admin/mihome-airpurifier.png",
     "type": "climate-control",
-    "published": "2019-01-02T13:41:00.000Z"
+    "published": "2018-12-18T12:20:09.290Z",
+    "versionDate": "2019-01-06T16:20:25.837Z"
   },
   "mihome-lamp": {
     "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.mihome-lamp/master/io-package.json",
@@ -964,6 +965,13 @@
     "type": "hardware",
     "published": "2016-07-06T10:12:46.812Z",
     "versionDate": "2018-04-15T20:59:40.679Z"
+  },
+  "oilfox": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/admin/oilfox.png",
+    "type": "hardware",
+    "published": "2019-01-07T21:34:00.000Z",
+    "versionDate": "2019-01-07T21:34:00.000Z"
   },
   "onkyo": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.onkyo/master/io-package.json",
@@ -1272,7 +1280,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/admin/sonnen.png",
     "type": "energy",
     "published": "2018-08-02T23:05:38.370Z",
-    "versionDate": "2018-12-10T19:22:27.032Z"
+    "versionDate": "2019-01-09T13:01:52.194Z"
   },
   "sonoff": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/io-package.json",
@@ -1636,7 +1644,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/admin/xbox.png",
     "type": "multimedia",
     "published": "2018-09-17T17:44:59.021Z",
-    "versionDate": "2018-12-10T19:16:34.562Z"
+    "versionDate": "2019-01-08T10:30:41.894Z"
   },
   "xs1": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",
@@ -1694,12 +1702,5 @@
     "type": "hardware",
     "published": "2015-01-03T00:02:56.370Z",
     "versionDate": "2018-07-25T09:54:52.755Z"
-  },
-  "oilfox": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/admin/oilfox.png",
-    "type": "hardware",
-    "published": "2019-01-07T21:34:00.000Z",
-    "versionDate": "2019-01-07T21:34:00.000Z"
   }
 }
