@@ -608,6 +608,14 @@
     "published": "2017-07-10T13:01:38.945Z",
     "versionDate": "2018-01-07T12:30:32.216Z"
   },
+  "kecontact": {
+    "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.kecontact/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.kecontact/master/admin/charger.png",
+    "version": "0.1.0",
+    "type": "hardware",
+    "published": "2019-01-12T11:13:41.789Z",
+    "versionDate": "2019-01-12T11:13:41.789Z"
+  },
   "klf200": {
     "meta": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/admin/klf200.png",
