@@ -175,6 +175,14 @@
     "published": "2018-06-04T22:51:21.999Z",
     "versionDate": "2019-01-08T10:40:16.007Z"
   },
+  "discovergy": {
+    "meta": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.discovergy/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.discovergy/master/admin/discovergy.png",
+    "published": "2018-12-07T12:21:60.934Z",
+    "version": "0.4.0",
+    "type": "energy",
+    "versionDate": "2019-01-14T13:30:21.063Z"
+  },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/admin/discovery.png",
