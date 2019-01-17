@@ -1251,10 +1251,10 @@
   "snips": {
     "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.snips/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Bettman66/ioBroker.snips/master/admin/snips.png",
-    "version": "0.0.9",
+    "version": "0.1.0",
     "type": "iot-systems",
     "published": "2019-01-16T14:15:00.000Z",
-    "versionDate": "2019-01-16T14:15:00.000Z"
+    "versionDate": "2019-01-17T05:30:00.000Z"
   },
   "socketio": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/io-package.json",
