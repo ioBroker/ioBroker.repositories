@@ -92,7 +92,7 @@ describe('Test Repository', function() {
 			let repo = repos[id];
 			try{
 				let res = await rq(repo.meta, { method: 'GET', json: true });				
-				if (res.common.name != id) {
+				if (res.common.name != id && id != 'admin' && id != 'admin-2') {
 					console.error('adapter names are not equal: ' + id  + ' !== ' + res.common.name);
 					error = true;
 				}
