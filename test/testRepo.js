@@ -96,6 +96,9 @@ describe('Test Repository', function() {
 					console.error('adapter names are not equal: ' + id  + ' !== ' + res.common.name);
 					error = true;
 				}
+				if (res.common.type != repo.type) {
+					console.info('adapter types are not equal in ' + id  + ': ' + repo.type + ' !== ' + res.common.type);
+				}
 			}
 			catch(err){
 				console.error('Meta of adapter ' + id + ': ' + repo.meta + ' not getable');
@@ -116,16 +119,14 @@ describe('Test Repository', function() {
 			throw "Error occured, see console output";
 	}
 	
-	it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async function (done) {
+	it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async function () {
 		this.timeout(120000);   		
         await checkRepos(latest);
-        done();
     });
 	
-	it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async function (done) {
+	it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async function () {
 		this.timeout(120000);   		
         await checkRepos(stable);
-        done();
     });
 
 });
