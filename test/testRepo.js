@@ -2,6 +2,7 @@
 let expect    = require('chai').expect;
 const fs      = require('fs');
 const request = require('request');
+const rq      = require('request-promise-native');
 let latest;
 let stable;
 
@@ -82,6 +83,48 @@ describe('Test Repository', function() {
                 console.log('Info: Adapter "' + id + '" is not in stable.')
             }
         }
+        done();
+    });
+	
+	async function checkRepos(repos) {
+		let error = false;		
+		for (let id in repos) {
+			let repo = repos[id];
+			try{
+				let res = await rq(repo.meta, { method: 'GET', json: true });				
+				if (res.common.name != id) {
+					console.error('adapter names are not equal: ' + id  + ' !== ' + res.common.name);
+					error = true;
+				}
+			}
+			catch(err){
+				console.error('Meta of adapter ' + id + ': ' + repo.meta + ' not getable');
+				error = true;
+			}
+			if (repo.icon) {
+				try{
+					let res = await rq(repo.icon, { method: 'GET', json: true });
+				}
+				catch(err){
+					console.error('Icon of adapter ' + id + ': ' + repo.icon + ' not getable');
+					error = true;
+				}
+			}
+			//console.info('done with adapter ' + id);
+        }
+		if (error)
+			throw "Error occured, see console output";
+	}
+	
+	it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async function (done) {
+		this.timeout(120000);   		
+        await checkRepos(latest);
+        done();
+    });
+	
+	it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async function (done) {
+		this.timeout(120000);   		
+        await checkRepos(stable);
         done();
     });
 
