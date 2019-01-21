@@ -148,7 +148,7 @@
   "enet": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "iot-systems",
     "published": "2015-01-02T23:50:13.927Z"
   },
@@ -309,7 +309,7 @@
   "hp-ilo": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/admin/hp-ilo.png",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "hardware",
     "published": "2016-07-09T11:17:48.404Z"
   },
@@ -471,14 +471,14 @@
   "lgtv": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/admin/lgtv.png",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "type": "multimedia",
     "published": "2016-09-05T17:34:06.772Z"
   },
   "lgtv11": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv11/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv11/master/admin/lgtv2011.png",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "type": "multimedia",
     "published": "2016-09-05T17:34:06.772Z"
   },
