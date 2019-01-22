@@ -2,6 +2,7 @@
 let expect    = require('chai').expect;
 const fs      = require('fs');
 const request = require('request');
+const rq      = require('request-promise-native');
 let latest;
 let stable;
 
@@ -30,6 +31,7 @@ describe('Test Repository', function() {
         this.timeout(120000);
         for (let id in stable) {
             if (stable.hasOwnProperty(id)) {
+                expect(id).to.be.equal(id.toLowerCase());
                 expect(latest[id], id + ' not in latest but in stable').to.be.not.undefined;
                 expect(latest[id].type).to.be.not.undefined;
                 expect(latest[id].type).to.be.not.equal('');
@@ -40,6 +42,7 @@ describe('Test Repository', function() {
         // compare types with io-package.json
         for (let id in latest) {
             if (latest.hasOwnProperty(id)) {
+                expect(id).to.be.equal(id.toLowerCase());
                 if (latest[id].meta && latest[id].meta.match(/io-package\.json$/)) {
                     count++;
                     (function (_type, _id) {
@@ -81,6 +84,49 @@ describe('Test Repository', function() {
             }
         }
         done();
+    });
+	
+	async function checkRepos(repos) {
+		let error = false;		
+		for (let id in repos) {
+			let repo = repos[id];
+			try{
+				let res = await rq(repo.meta, { method: 'GET', json: true });				
+				if (res.common.name != id && id != 'admin' && id != 'admin-2') {
+					console.error('adapter names are not equal: ' + id  + ' !== ' + res.common.name);
+					error = true;
+				}
+				if (res.common.type != repo.type) {
+					console.info('adapter types are not equal in ' + id  + ': ' + repo.type + ' !== ' + res.common.type);
+				}
+			}
+			catch(err){
+				console.error('Meta of adapter ' + id + ': ' + repo.meta + ' not getable');
+				error = true;
+			}
+			if (repo.icon) {
+				try{
+					let res = await rq(repo.icon, { method: 'GET', json: true });
+				}
+				catch(err){
+					console.error('Icon of adapter ' + id + ': ' + repo.icon + ' not getable');
+					error = true;
+				}
+			}
+			//console.info('done with adapter ' + id);
+        }
+		if (error)
+			throw "Error occured, see console output";
+	}
+	
+	it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async function () {
+		this.timeout(120000);   		
+        await checkRepos(latest);
+    });
+	
+	it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async function () {
+		this.timeout(120000);   		
+        await checkRepos(stable);
     });
 
 });
