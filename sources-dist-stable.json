@@ -359,6 +359,14 @@
     "published": "2016-01-15T20:18:56.071Z",
     "versionDate": "2018-03-07T21:05:22.640Z"
   },
+  "habpanel": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.habpanel/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.habpanel/master/admin/habpanel.png",
+    "version": "0.2.6",
+    "type": "visualization",
+    "published": "2017-05-14T19:24:21.906Z",
+    "versionDate": "2019-01-14T20:27:33.817Z"
+  },
   "haier": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.haier/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.haier/master/admin/haier.png",
