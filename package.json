@@ -9,7 +9,10 @@
   "engines": {
     "node": ">=4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "http": "0.0.0",
+    "request-promise-native": "^1.0.5"
+  },
   "homepage": "http://iobroker.net",
   "description": "List of all official adapters for ioBroker project",
   "scripts": {
@@ -34,11 +37,13 @@
   ],
   "devDependencies": {
     "chai": "^4.2.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "mocha": "^5.2.0",
     "node.extend": "^2.0.2",
-    "npm": "^6.4.1",
+    "npm": "^6.6.0",
     "request": "^2.88.0",
-    "semver": "^5.6.0"
+    "semver": "^5.6.0",
+    "eslint": "^5.12.0",
+    "request-promise-native": "^1.0.5"
   }
 }

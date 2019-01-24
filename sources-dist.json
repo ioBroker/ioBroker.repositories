@@ -3,7 +3,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
     "type": "general",
-    "published": "2014-12-04T18:45:44.907Z",
+    "published": "2014-12-04T18:45:44.907Z", 
     "versionDate": "2018-09-22T09:45:38.378Z"
   },
   "admin-2": {
@@ -32,7 +32,7 @@
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/admin/amazon-dash.png",
     "type": "hardware",
     "published": "2016-09-05T19:03:16.756Z",
-    "versionDate": "2018-03-30T10:06:58.156Z"
+    "versionDate": "2018-12-17T20:44:12.999Z"
   },
   "artnet": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/io-package.json",
@@ -45,8 +45,15 @@
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.asterisk/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.asterisk/master/admin/asterisk.png",
     "type": "communication",
-    "published": "2018-11-11T16:15:00.000Z",
-    "versionDate": "2018-11-11T16:15:00.000Z"
+    "published": "2018-11-10T15:30:17.077Z",
+    "versionDate": "2018-11-29T18:57:58.881Z"
+  },
+  "asuswrt": {
+    "meta": "https://raw.githubusercontent.com/mcdhrts/ioBroker.asuswrt/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mcdhrts/ioBroker.asuswrt/master/admin/asuswrt.png",
+    "type": "hardware",
+    "published": "2018-01-03T16:02:17.077Z",
+    "versionDate": "2018-01-03T16:02:17.077Z"
   },
   "b-control-em": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.b-control-em/master/io-package.json",
@@ -172,7 +179,14 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
     "type": "multimedia",
     "published": "2018-06-04T22:51:21.999Z",
-    "versionDate": "2018-11-21T13:33:37.763Z"
+    "versionDate": "2019-01-08T10:40:16.007Z"
+  },
+  "discovergy": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.discovergy/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.discovergy/master/admin/discovergy.png",
+    "type": "energy",
+    "published": "2018-12-07T12:21:60.934Z",
+    "versionDate": "2018-12-07T12:21:60.934Z"
   },
   "discovery": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.discovery/master/io-package.json",
@@ -181,13 +195,6 @@
     "published": "2017-03-15T12:16:13.934Z",
     "versionDate": "2018-09-28T11:41:21.063Z"
   },
-  "discovergy": {
-    "meta": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.discovergy/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.discovergy/master/admin/discovergy.png",
-    "type": "energy",
-    "published": "2018-12-07T12:21:60.934Z",
-    "versionDate": "2018-12-07T12:21:60.934Z"
-  },  
   "doorbird": {
     "meta": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/admin/doorbird.png",
@@ -315,8 +322,8 @@
     "versionDate": "2018-10-08T19:39:37.135Z"
   },
   "fronius": {
-    "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.fronius/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.fronius/master/admin/fronius.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fronius/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fronius/master/admin/fronius.png",
     "type": "energy",
     "published": "2017-02-23T23:25:42.603Z",
     "versionDate": "2017-08-25T14:35:09.185Z"
@@ -327,6 +334,13 @@
     "type": "date-and-time",
     "published": "2017-06-12T22:10:16.740Z",
     "versionDate": "2017-11-23T22:24:52.267Z"
+  },
+  "fullybrowser": {
+    "meta": "https://raw.githubusercontent.com/arteck/ioBroker.fullybrowser/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/arteck/ioBroker.fullybrowser/master/admin/fully.png",
+    "type": "utility",
+    "published": "2018-12-16T11:09:00.000Z",
+    "versionDate": "2018-12-16T11:09:00.000Z"
   },
   "g-homa": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.g-homa/master/io-package.json",
@@ -375,7 +389,7 @@
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
     "type": "multimedia",
     "published": "2015-08-18T08:32:32.461Z",
-    "versionDate": "2018-06-30T14:01:41.190Z"
+    "versionDate": "2018-12-29T03:52:36.183Z"
   },
   "hid": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/io-package.json",
@@ -403,14 +417,21 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/admin/homematic.png",
     "type": "iot-systems",
     "published": "2015-01-02T23:31:13.087Z",
-    "versionDate": "2018-07-27T13:32:18.271Z"
+    "versionDate": "2018-12-07T14:09:58.462Z"
   },
   "hm-rpc": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
     "type": "iot-systems",
     "published": "2015-01-02T23:35:36.140Z",
-    "versionDate": "2018-11-03T21:34:51.929Z"
+    "versionDate": "2019-01-04T16:00:26.634Z"
+  },
+  "hmip": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/admin/homematic.png",
+    "type": "hardware",
+    "published": "2019-01-17T20:53:36.140Z",
+    "versionDate": "2019-01-17T20:53:36.140Z"
   },
   "homee": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.homee/master/io-package.json",
@@ -551,7 +572,7 @@
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.innogy-smarthome/master/admin/innogy-smarthome.png",
     "type": "iot-systems",
     "published": "2017-01-07T12:19:30.574Z",
-    "versionDate": "2018-11-09T16:29:26.148Z"
+    "versionDate": "2018-12-18T20:32:26.148Z"
   },
   "intesishome": {
     "meta": "https://raw.githubusercontent.com/maxtox/ioBroker.intesishome/master/io-package.json",
@@ -645,8 +666,8 @@
     "versionDate": "2018-08-09T18:26:15.009Z"
   },
   "landroid": {
-    "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.landroid/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.landroid/master/admin/landroid.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.landroid/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.landroid/master/admin/landroid.png",
     "type": "garden",
     "published": "2017-02-08T23:54:56.311Z",
     "versionDate": "2017-08-16T07:28:52.121Z"
@@ -754,7 +775,7 @@
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/admin/mbus.png",
     "type": "energy",
     "published": "2018-03-11T20:48:55.590Z",
-    "versionDate": "2018-04-03T20:29:55.964Z"
+    "versionDate": "2019-01-04T15:45:00.000Z"
   },
   "mclighting": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.mclighting/master/io-package.json",
@@ -784,6 +805,13 @@
     "published": "2017-03-16T07:01:19.216Z",
     "versionDate": "2017-03-19T22:26:13.507Z"
   },
+  "meross": {
+    "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.meross/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.meross/master/admin/meross.png",
+    "type": "iot-systems",
+    "published": "2018-12-01T20:00:00.00Z",
+    "versionDate": "2018-12-16T23:00:00.000Z"
+  },
   "miele": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.miele/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.miele/master/admin/xmiele.png",
@@ -797,6 +825,13 @@
     "type": "iot-systems",
     "published": "2017-06-05T17:40:26.665Z",
     "versionDate": "2018-10-20T13:34:06.588Z"
+  },
+  "mihome-airpurifier": {
+    "meta": "https://raw.githubusercontent.com/JoJ123/ioBroker.mihome-airpurifier/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/JoJ123/ioBroker.mihome-airpurifier/master/admin/mihome-airpurifier.png",
+    "type": "climate-control",
+    "published": "2018-12-18T12:20:09.290Z",
+    "versionDate": "2019-01-06T16:20:25.837Z"
   },
   "mihome-lamp": {
     "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.mihome-lamp/master/io-package.json",
@@ -929,7 +964,7 @@
     "icon": "https://raw.githubusercontent.com/smaragdschlange/ioBroker.nuki/master/admin/nuki-logo.png",
     "type": "hardware",
     "published": "2018-10-05T09:37:04.501Z",
-    "versionDate": "2018-10-12T16:52:47.916Z"
+    "versionDate": "2019-01-21T13:37:47.916Z"
   },
   "nut": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.nut/master/io-package.json",
@@ -938,12 +973,26 @@
     "published": "2016-07-06T10:12:46.812Z",
     "versionDate": "2018-04-15T20:59:40.679Z"
   },
+  "oilfox": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/admin/oilfox.png",
+    "type": "hardware",
+    "published": "2019-01-07T21:34:00.000Z",
+    "versionDate": "2019-01-07T21:34:00.000Z"
+  },
   "onkyo": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.onkyo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.onkyo/master/admin/onkyo.png",
     "type": "multimedia",
     "published": "2015-03-22T15:08:19.799Z",
     "versionDate": "2017-07-24T11:36:10.302Z"
+  },
+  "onvif": {
+    "meta": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/admin/onvif.png",
+    "type": "infrastructure",
+    "published": "2018-12-11T17:47:57.690Z",
+    "versionDate": "2018-12-11T17:47:57.690Z"
   },
   "openhab": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.openhab/master/io-package.json",
@@ -953,8 +1002,8 @@
     "versionDate": "2018-08-12T20:06:26.505Z"
   },
   "opentherm": {
-    "meta": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.opentherm/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DutchmanNL/ioBroker.opentherm/master/admin/opentherm.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.opentherm/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.opentherm/master/admin/opentherm.png",
     "type": "energy",
     "published": "2018-12-09T12:21:60.934Z",
     "versionDate": "2018-12-09T12:21:60.934Z"
@@ -989,8 +1038,8 @@
     "versionDate": "2018-10-19T08:38:17.556Z"
   },
   "panasonic-viera": {
-    "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.panasonic-viera/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.panasonic-viera/master/admin/panasonic-viera.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.panasonic-viera/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.panasonic-viera/master/admin/panasonic-viera.png",
     "type": "multimedia",
     "published": "2017-09-20T12:04:02.249Z",
     "versionDate": "2017-10-01T23:59:29.735Z"
@@ -1114,6 +1163,13 @@
     "published": "2015-01-02T20:46:10.368Z",
     "versionDate": "2018-10-21T16:15:41.588Z"
   },
+  "ring": {
+    "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/admin/ring.png",
+    "type": "hardware",
+    "published": "2018-12-14T14:33:39.641Z",
+    "versionDate": "2018-12-14T13:59:26.701Z"
+  },
   "roomba": {
     "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/admin/roomba.png",
@@ -1198,6 +1254,13 @@
     "published": "2017-01-30T20:48:39.862Z",
     "versionDate": "2018-06-23T22:03:44.968Z"
   },
+  "snips": {
+    "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.snips/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Bettman66/ioBroker.snips/master/admin/snips.png",
+    "type": "iot-systems",
+    "published": "2019-01-16T14:15:00.000Z",
+    "versionDate": "2019-01-17T05:30:00.000Z"
+  },
   "snmp": {
     "meta": "https://raw.githubusercontent.com/ctjaeger/ioBroker.snmp/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ctjaeger/ioBroker.snmp/master/admin/snmp.png",
@@ -1217,7 +1280,7 @@
     "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.solarlog/master/admin/solarlog.png",
     "type": "energy",
     "published": "2018-11-28T19:52:32.339Z",
-    "versionDate": "2018-12-02T15:45:53.213Z"
+    "versionDate": "2018-12-16T20:26:51.553Z"
   },
   "solarwetter": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.solarwetter/master/io-package.json",
@@ -1231,7 +1294,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/admin/sonnen.png",
     "type": "energy",
     "published": "2018-08-02T23:05:38.370Z",
-    "versionDate": "2018-11-09T00:43:03.993Z"
+    "versionDate": "2019-01-09T13:01:52.194Z"
   },
   "sonoff": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/io-package.json",
@@ -1248,18 +1311,25 @@
     "versionDate": "2018-08-27T21:24:15.632Z"
   },
   "sony-bravia": {
-    "meta": "https://raw.githubusercontent.com/ldittmar81/ioBroker.sony-bravia/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ldittmar81/ioBroker.sony-bravia/master/admin/sony-bravia.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sony-bravia/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sony-bravia/master/admin/sony-bravia.png",
     "type": "multimedia",
     "published": "2017-09-17T21:26:41.970Z",
     "versionDate": "2017-10-02T21:44:16.588Z"
+  },
+  "sourceanalytix": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sourceanalytix/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sourceanalytix/master/admin/sourceanalytix.png",
+    "type": "energy",
+    "published": "2019-01-13T20:30:60.934Z",
+    "versionDate": "2019-01-13T20:30:60.934Z"
   },
   "spotify-premium": {
     "meta": "https://raw.githubusercontent.com/twonky4/ioBroker.spotify-premium/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/twonky4/ioBroker.spotify-premium/master/admin/spotify-premium.png",
     "type": "multimedia",
     "published": "2018-02-16T08:58:22.449Z",
-    "versionDate": "2018-06-20T20:36:20.059Z"
+    "versionDate": "2018-12-18T23:31:28.000Z"
   },
   "sql": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/io-package.json",
@@ -1281,6 +1351,13 @@
     "type": "alarm",
     "published": "2016-04-20T13:50:38.550Z",
     "versionDate": "2017-11-13T13:56:46.102Z"
+  },
+  "statistics": {
+    "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.statistics/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.statistics/master/admin/statistics.png",
+    "type": "misc-data",
+    "published": "2019-01-06T21:33:35.419Z",
+    "versionDate": "2019-01-06T21:33:35.419Z"
   },
   "stiebel-isg": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.stiebel-isg/master/io-package.json",
@@ -1588,7 +1665,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/admin/xbox.png",
     "type": "multimedia",
     "published": "2018-09-17T17:44:59.021Z",
-    "versionDate": "2018-10-12T11:41:39.718Z"
+    "versionDate": "2019-01-08T10:30:41.894Z"
   },
   "xs1": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",
@@ -1626,8 +1703,8 @@
     "versionDate": "2018-10-11T19:21:34.014Z"
   },
   "zigbee": {
-    "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zigbee/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/kirovilya/ioBroker.zigbee/master/admin/zigbee.png",
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/admin/zigbee.png",
     "type": "hardware",
     "published": "2018-06-08T19:33:19.576Z",
     "versionDate": "2018-10-21T18:20:09.329Z"
