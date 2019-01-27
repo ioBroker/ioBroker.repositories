@@ -232,10 +232,10 @@
   "energymanager": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/admin/energymanager.png",
-    "version": "1.1.4",
+    "version": "1.2.0",
     "type": "energy",
     "published": "2018-07-23T20:26:21.308Z",
-    "versionDate": "2019-01-09T16:29:47.485Z"
+    "versionDate": "2019-01-21T18:07:47.485Z"
   },
   "enet": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/io-package.json",
@@ -1268,10 +1268,10 @@
   "snips": {
     "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.snips/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Bettman66/ioBroker.snips/master/admin/snips.png",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "iot-systems",
     "published": "2019-01-16T14:15:00.000Z",
-    "versionDate": "2019-01-17T05:30:00.000Z"
+    "versionDate": "2019-01-21T05:30:00.000Z"
   },
   "socketio": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/io-package.json",
@@ -1372,10 +1372,10 @@
   "stiebel-isg": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.stiebel-isg/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.stiebel-isg/master/admin/stiebel-isg.png",
-    "version": "1.2.4",
+    "version": "1.3.2",
     "type": "climate-control",
     "published": "2018-09-08T19:23:53.004Z",
-    "versionDate": "2019-01-09T16:29:50.274Z"
+    "versionDate": "2019-01-25T14:51:50.274Z"
   },
   "systeminfo": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.systeminfo/master/io-package.json",
