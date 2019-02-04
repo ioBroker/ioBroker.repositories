@@ -1030,6 +1030,14 @@
     "published": "2015-04-16T21:20:18.623Z",
     "versionDate": "2018-03-16T22:23:02.852Z"
   },
+  "oppoplayer": {
+    "meta": "https://raw.githubusercontent.com/volkerrichert/ioBroker.oppoplayer/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/volkerrichert/ioBroker.oppoplayer/master/admin/oppoplayer.png",
+    "type": "multimedia",
+    "version": "0.2.1",
+    "published": "2018-02-04T13:00:00.000Z",
+    "versionDate": "2018-02-04T13:00:00.000Z"
+  },
   "owntracks": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.owntracks/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.owntracks/master/admin/owntracks.png",
