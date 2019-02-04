@@ -1020,14 +1020,12 @@
     "icon": "https://raw.githubusercontent.com/PrinzEisenherz1/ioBroker.opi/master/admin/opi.png",
     "type": "hardware",
     "published": "2018-01-22T21:44:32.139Z",
-    "version": "0.1.1",
     "versionDate": "2018-01-27T12:37:54.796Z"
   },
   "oppoplayer": {
     "meta": "https://raw.githubusercontent.com/volkerrichert/ioBroker.oppoplayer/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/volkerrichert/ioBroker.oppoplayer/master/admin/oppoplayer.png",
     "type": "multimedia",
-    "version": "0.2.1",
     "published": "2019-02-04T13:00:00.000Z",
     "versionDate": "2019-02-04T13:00:00.000Z"
   },
@@ -1727,7 +1725,6 @@
   "zont": {
     "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/admin/zont.png",
-    "version": "0.5.3",
     "type": "climate-control",
     "published": "2018-02-06T17:36:01.009Z",
     "versionDate": "2018-07-25T18:14:46.995Z"
