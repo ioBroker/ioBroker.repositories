@@ -1484,6 +1484,12 @@
     "published": "2017-10-16T19:37:29.283Z",
     "versionDate": "2018-11-16T20:58:50.222Z"
   },
+  "viessmannapi": {
+    "meta": "https://raw.githubusercontent.com/thovid/ioBroker.viessmannapi/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/thovid/ioBroker.viessmannapi/master/admin/viessmannapi.png",
+    "type": "climate-control",
+    "published": "2019-02-05T13:30:29.283Z"
+  },
   "vis": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/admin/vis.png",
