@@ -36,7 +36,8 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.asterisk/master/admin/asterisk.png",
     "type": "communication",
     "version": "1.0.2",
-    "published": "2018-11-10T15:30:17.077Z"
+    "published": "2018-11-10T15:30:17.077Z",
+    "versionDate": "2019-01-22T21:40:02.432Z"
   },
   "asuswrt": {
     "meta": "https://raw.githubusercontent.com/mcdhrts/ioBroker.asuswrt/master/io-package.json",
@@ -131,7 +132,8 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.contactid/master/admin/contactid.png",
     "type": "alarm",
     "version": "1.0.0",
-    "published": "2018-05-12T17:59:52.182Z"
+    "published": "2018-05-12T17:59:52.182Z",
+    "versionDate": "2019-01-20T07:02:31.880Z"
   },
   "cul": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cul/master/io-package.json",
@@ -418,14 +420,16 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/admin/homematic.png",
     "version": "2.1.7",
     "type": "iot-systems",
-    "published": "2015-01-02T23:31:13.087Z"
+    "published": "2015-01-02T23:31:13.087Z",
+    "versionDate": "2019-01-21T09:14:17.974Z"
   },
   "hm-rpc": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
     "version": "1.9.2",
     "type": "iot-systems",
-    "published": "2015-01-02T23:35:36.140Z"
+    "published": "2015-01-02T23:35:36.140Z",
+    "versionDate": "2019-01-14T21:57:03.538Z"
   },
   "hmip": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/io-package.json",
@@ -753,7 +757,8 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/admin/lupusec.png",
     "version": "0.4.1",
     "type": "alarm",
-    "published": "2018-05-17T18:33:39.641Z"
+    "published": "2018-05-17T18:33:39.641Z",
+    "versionDate": "2018-12-27T17:12:57.282Z"
   },
   "maxcube": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/io-package.json",
@@ -1184,7 +1189,8 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/admin/ring.png",
     "type": "hardware",
     "version": "1.0.0",
-    "published": "2019-01-26T09:33:39.641Z"
+    "published": "2018-12-14T13:36:22.039Z",
+    "versionDate": "2019-01-04T11:28:11.802Z"
   },
   "rpi2": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.rpi2/master/io-package.json",
@@ -1239,7 +1245,8 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
     "version": "2.0.7",
     "type": "iot-systems",
-    "published": "2018-09-03T18:00:52.255Z"
+    "published": "2018-09-03T18:00:52.255Z",
+    "versionDate": "2019-01-21T20:20:00.803Z"
   },
   "sia": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/io-package.json",
