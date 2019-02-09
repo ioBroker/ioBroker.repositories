@@ -755,7 +755,7 @@
   "lupusec": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/admin/lupusec.png",
-    "version": "0.4.1",
+    "version": "1.0.0",
     "type": "alarm",
     "published": "2018-05-17T18:33:39.641Z",
     "versionDate": "2018-12-27T17:12:57.282Z"
@@ -1188,7 +1188,7 @@
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/admin/ring.png",
     "type": "hardware",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "published": "2018-12-14T13:36:22.039Z",
     "versionDate": "2019-01-04T11:28:11.802Z"
   },
@@ -1243,7 +1243,7 @@
   "shelly": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
-    "version": "2.0.7",
+    "version": "2.0.8",
     "type": "iot-systems",
     "published": "2018-09-03T18:00:52.255Z",
     "versionDate": "2019-01-21T20:20:00.803Z"
