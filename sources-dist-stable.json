@@ -596,7 +596,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.iot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.iot/master/admin/iot.png",
     "type": "communication",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "published": "2018-09-22T16:11:37.398Z",
     "versionDate": "2018-10-21T17:40:32.063Z"
   },
@@ -757,7 +757,8 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/admin/lupusec.png",
     "version": "1.0.0",
     "type": "alarm",
-    "published": "2018-05-17T18:33:39.641Z"
+    "published": "2018-05-17T18:33:39.641Z",
+    "versionDate": "2019-01-29T20:53:15.763Z"
   },
   "maxcube": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/io-package.json",
@@ -1188,7 +1189,8 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/admin/ring.png",
     "type": "hardware",
     "version": "1.0.1",
-    "published": "2018-12-14T13:36:22.039Z"
+    "published": "2018-12-14T13:36:22.039Z",
+    "versionDate": "2019-01-27T13:49:18.661Z"
   },
   "rpi2": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.rpi2/master/io-package.json",
@@ -1243,7 +1245,8 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
     "version": "2.0.8",
     "type": "iot-systems",
-    "published": "2018-09-03T18:00:52.255Z"
+    "published": "2018-09-03T18:00:52.255Z",
+    "versionDate": "2019-02-01T16:48:50.463Z"
   },
   "sia": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/io-package.json",
@@ -1284,6 +1287,14 @@
     "type": "iot-systems",
     "published": "2019-01-16T14:15:00.000Z",
     "versionDate": "2019-02-08T18:40:00.000Z"
+  },
+  "snmp": {
+    "meta": "https://raw.githubusercontent.com/ctjaeger/ioBroker.snmp/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ctjaeger/ioBroker.snmp/master/admin/snmp.png",
+    "version": "0.5.0",
+    "type": "infrastructure",
+    "published": "2017-10-21T17:56:45.754Z",
+    "versionDate": "2017-12-05T19:14:38.400Z"
   },
   "socketio": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/io-package.json",

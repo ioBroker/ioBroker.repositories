@@ -1244,7 +1244,7 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
     "type": "iot-systems",
     "published": "2018-09-03T18:00:52.255Z",
-    "versionDate": "2019-02-01T16:48:50.463Z"
+    "versionDate": "2019-02-09T08:02:47.222Z"
   },
   "sia": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/io-package.json",
@@ -1502,7 +1502,8 @@
     "meta": "https://raw.githubusercontent.com/thovid/ioBroker.viessmannapi/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/thovid/ioBroker.viessmannapi/master/admin/viessmannapi.png",
     "type": "climate-control",
-    "published": "2019-02-05T13:30:29.283Z"
+    "published": "2019-02-05T11:55:26.630Z",
+    "versionDate": "2019-02-10T19:33:01.703Z"
   },
   "vis": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
