@@ -172,7 +172,8 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
     "version": "1.5.0",
     "type": "multimedia",
-    "published": "2018-06-04T22:51:21.999Z"
+    "published": "2018-06-04T22:51:21.999Z",
+    "versionDate": "2019-01-31T13:44:45.702Z"
   },
   "discovergy": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.discovergy/master/io-package.json",
@@ -419,14 +420,16 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/admin/homematic.png",
     "version": "2.3.0",
     "type": "iot-systems",
-    "published": "2015-01-02T23:31:13.087Z"
+    "published": "2015-01-02T23:31:13.087Z",
+    "versionDate": "2019-02-07T18:01:59.849Z"
   },
   "hm-rpc": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
     "version": "1.9.6",
     "type": "iot-systems",
-    "published": "2015-01-02T23:35:36.140Z"
+    "published": "2015-01-02T23:35:36.140Z",
+    "versionDate": "2019-02-02T00:14:09.143Z"
   },
   "hmip": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/io-package.json",
@@ -1020,6 +1023,14 @@
     "published": "2017-05-09T21:14:27.652Z",
     "version": "0.3.0",
     "versionDate": "2018-08-12T20:06:26.505Z"
+  },
+  "openweathermap": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.openweathermap/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.openweathermap/master/admin/openweathermap.png",
+    "type": "weather",
+    "version": "0.1.0",
+    "published": "2018-08-03T07:35:01.926Z",
+    "versionDate": "2018-08-03T07:35:05.003Z"
   },
   "opi": {
     "meta": "https://raw.githubusercontent.com/PrinzEisenherz1/ioBroker.opi/master/io-package.json",
@@ -1722,7 +1733,8 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/admin/xbox.png",
     "version": "0.5.5",
     "type": "multimedia",
-    "published": "2018-09-17T17:44:59.021Z"
+    "published": "2018-09-17T17:44:59.021Z",
+    "versionDate": "2019-01-27T11:42:25.813Z"
   },
   "xs1": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",
