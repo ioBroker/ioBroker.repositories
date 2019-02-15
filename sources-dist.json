@@ -146,6 +146,13 @@
     "published": "2016-06-24T18:36:32.658Z",
     "versionDate": "2018-06-18T20:44:54.968Z"
   },
+  "comfoair": {
+    "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.comfoair/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.comfoair/master/admin/comfoair.png",
+    "type": "climate-control",
+    "published": "2019-02-13T23:30:00.339Z",
+    "versionDate": "2019-02-13T23:30:00.213Z"
+  },
   "contactid": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.contactid/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.contactid/master/admin/contactid.png",
