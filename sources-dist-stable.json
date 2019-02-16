@@ -1459,10 +1459,9 @@
   "tradfri": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/admin/tradfri.png",
-    "version": "1.5.4",
+    "version": "2.1.0",
     "type": "lighting",
-    "published": "2017-08-23T11:33:34.827Z",
-    "versionDate": "2018-05-14T14:24:24.327Z"
+    "published": "2017-08-23T11:33:34.827Z"
   },
   "tuya": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.tuya/master/io-package.json",
