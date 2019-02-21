@@ -696,6 +696,14 @@
     "published": "2017-07-22T11:45:31.427Z",
     "versionDate": "2018-08-09T18:25:54.887Z"
   },
+  "lcn": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.lcn/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.lcn/master/admin/lcn.png",
+    "type": "iot-systems",
+    "version": "0.3.1",
+    "published": "2018-11-05T23:29:40.991Z",
+    "versionDate": "2018-09-23T21:10:12.043Z"
+  },
   "lgtv": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/admin/lgtv.png",
@@ -1469,7 +1477,8 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/admin/tradfri.png",
     "version": "2.1.0",
     "type": "lighting",
-    "published": "2017-08-23T11:33:34.827Z"
+    "published": "2017-08-23T11:33:34.827Z",
+    "versionDate": "2019-01-08T19:45:13.317Z"
   },
   "tuya": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.tuya/master/io-package.json",
@@ -1808,4 +1817,3 @@
     "versionDate": "2018-07-25T09:54:52.755Z"
   }
 }
-
