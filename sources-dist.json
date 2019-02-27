@@ -1211,6 +1211,13 @@
     "published": "2018-12-14T13:36:22.039Z",
     "versionDate": "2019-01-27T13:49:18.661Z"
   },
+  "roadtraffic": {
+    "meta": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.roadtraffic/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.roadtraffic/master/admin/roadtraffic.png",
+    "type": "misc-data",
+    "published": "2019-02-27T15:34:11.039Z",
+    "versionDate": "2019-02-27T15:34:11.039Z"
+  },
   "roomba": {
     "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/admin/roomba.png",
