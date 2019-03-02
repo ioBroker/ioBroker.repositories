@@ -252,8 +252,8 @@
     "versionDate": "2018-05-11T19:35:48.404Z"
   },
   "email": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.email/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.email/master/admin/email.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.email/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.email/master/admin/email.png",
     "type": "messaging",
     "published": "2015-01-02T23:50:13.927Z",
     "versionDate": "2018-03-27T13:04:52.307Z"
@@ -294,8 +294,8 @@
     "versionDate": "2018-09-15T07:45:18.860Z"
   },
   "fhem": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.fhem/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.fhem/master/admin/fhem.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fhem/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fhem/master/admin/fhem.png",
     "type": "iot-systems",
     "published": "2016-05-31T20:33:16.704Z",
     "versionDate": "2018-11-08T11:49:07.877Z"
@@ -378,8 +378,8 @@
     "versionDate": "2018-03-07T21:05:22.640Z"
   },
   "habpanel": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.habpanel/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.habpanel/master/admin/habpanel.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/admin/habpanel.png",
     "type": "visualization",
     "published": "2017-05-14T19:24:21.906Z",
     "versionDate": "2017-05-20T22:08:33.817Z"
@@ -483,8 +483,8 @@
     "versionDate": "2018-12-01T20:50:49.195Z"
   },
   "hue": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hue/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hue/master/admin/hue.jpeg",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hue/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hue/master/admin/hue.jpeg",
     "type": "lighting",
     "published": "2015-03-04T22:35:03.350Z",
     "versionDate": "2018-08-17T21:45:06.259Z"
@@ -504,8 +504,8 @@
     "versionDate": "2018-07-23T20:02:23.923Z"
   },
   "ical": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ical/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ical/master/admin/ical.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ical/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ical/master/admin/ical.png",
     "type": "date-and-time",
     "published": "2015-02-22T11:33:05.718Z",
     "versionDate": "2018-12-03T21:21:49.728Z"
@@ -862,15 +862,15 @@
     "versionDate": "2018-09-16T05:04:24.948Z"
   },
   "mihome-plug": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-plug/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-plug/master/admin/mihome-plug.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mihome-plug/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mihome-plug/master/admin/mihome-plug.png",
     "type": "hardware",
     "published": "2017-08-04T16:03:47.676Z",
     "versionDate": "2018-09-02T12:30:55.974Z"
   },
   "mihome-vacuum": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-vacuum/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome-vacuum/master/admin/mihome-vacuum.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mihome-vacuum/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mihome-vacuum/master/admin/mihome-vacuum.png",
     "type": "household",
     "published": "2017-02-05T20:50:25.120Z",
     "versionDate": "2018-09-02T15:06:41.833Z"
@@ -1023,8 +1023,8 @@
     "versionDate": "2018-12-11T17:47:57.690Z"
   },
   "openhab": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.openhab/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.openhab/master/admin/openhab.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.openhab/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.openhab/master/admin/openhab.png",
     "type": "iot-systems",
     "published": "2017-05-09T21:14:27.652Z",
     "versionDate": "2018-08-12T20:06:26.505Z"
@@ -1065,8 +1065,8 @@
     "versionDate": "2018-03-16T22:23:02.852Z"
   },
   "owntracks": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.owntracks/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.owntracks/master/admin/owntracks.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.owntracks/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.owntracks/master/admin/owntracks.png",
     "type": "geoposition",
     "published": "2016-09-04T17:18:10.022Z",
     "versionDate": "2018-10-19T08:38:17.556Z"
@@ -1226,8 +1226,8 @@
     "versionDate": "2018-12-02T21:26:00.000Z"
   },
   "rpi2": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.rpi2/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.rpi2/master/admin/rpi.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.rpi2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.rpi2/master/admin/rpi.png",
     "type": "hardware",
     "published": "2016-10-23T14:16:37.202Z",
     "versionDate": "2018-08-20T21:39:31.384Z"
@@ -1450,8 +1450,8 @@
     "versionDate": "2019-01-25T21:05:00.000Z"
   },
   "telegram": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.telegram/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.telegram/master/admin/telegram.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/admin/telegram.png",
     "type": "messaging",
     "published": "2016-02-14T13:00:28.242Z",
     "versionDate": "2018-09-19T18:37:42.740Z"
