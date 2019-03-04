@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "http": "0.0.0",
-    "request-promise-native": "^1.0.5"
+    "request-promise-native": "^1.0.5",
+    "@iobroker/adapter-core": "^1.0.3"
   },
   "homepage": "http://iobroker.net",
   "description": "List of all official adapters for ioBroker project",
@@ -44,7 +45,6 @@
     "request": "^2.88.0",
     "semver": "^5.6.0",
     "eslint": "^5.12.0",
-    "request-promise-native": "^1.0.5",
-    "@iobroker/adapter-core": "^1.0.3"
+    "request-promise-native": "^1.0.5"
   }
 }
