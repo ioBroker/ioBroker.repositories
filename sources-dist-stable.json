@@ -108,7 +108,8 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.bring/master/admin/bring.png",
     "version": "1.0.0",
     "type": "household",
-    "published": "2019-02-12T20:10:09.422Z"
+    "published": "2019-02-12T20:10:09.422Z",
+    "versionDate": "2019-02-24T12:09:31.781Z"
   },
   "broadlink2": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
@@ -403,7 +404,8 @@
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
     "version": "1.2.1",
     "type": "multimedia",
-    "published": "2015-08-18T08:32:32.461Z"
+    "published": "2015-08-18T08:32:32.461Z",
+    "versionDate": "2019-02-22T14:16:35.430Z"
   },
   "hid": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/io-package.json",
