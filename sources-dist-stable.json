@@ -81,7 +81,7 @@
   "epson_stylus_px830": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.epson_stylus_px830/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.epson_stylus_px830/master/admin/epson_stylus_px830.png",
-    "version": "0.0.2",
+    "version": "0.2.1",
     "type": "infrastructure"
   },
   "fakeroku": {
@@ -93,7 +93,7 @@
   "feiertage": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.feiertage/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.feiertage/master/admin/feiertage.png",
-    "version": "0.3.6",
+    "version": "1.0.11",
     "type": "date-and-time"
   },
   "fhem": {
@@ -196,7 +196,7 @@
   "homepilot": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/admin/homepilot.png",
-    "version": "0.2.6",
+    "version": "1.0.3",
     "type": "iot-systems"
   },
   "hue": {
@@ -599,7 +599,7 @@
   "solarwetter": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.solarwetter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.solarwetter/master/admin/solarwetter.png",
-    "version": "0.1.2",
+    "version": "1.0.0",
     "type": "weather"
   },
   "sonos": {
@@ -629,7 +629,7 @@
   "tankerkoenig": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tankerkoenig/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.tankerkoenig/master/admin/tankerkoenig.png",
-    "version": "1.0.0",
+    "version": "2.0.5",
     "type": "misc-data"
   },
   "telegram": {
@@ -659,7 +659,7 @@
   "tvspielfilm": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/admin/tvspielfilm.png",
-    "version": "0.2.2",
+    "version": "1.0.4",
     "type": "misc-data"
   },
   "unifi": {
