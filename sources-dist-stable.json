@@ -1136,6 +1136,14 @@
     "version": "0.0.6",
     "versionDate": "2017-10-10T08:02:32.604Z"
   },
+  "pollenflug": {
+    "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.pollenflug/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.pollenflug/master/admin/pollenflug.png",
+    "type": "weather",
+    "published": "2019-03-13T09:00:00.000Z",
+    "version": "1.0.2",
+    "versionDate": "2019-03-12T09:00:00.000Z"
+  },
   "proxmox": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.proxmox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.proxmox/master/admin/logo.png",
