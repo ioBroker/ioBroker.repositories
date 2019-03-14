@@ -5,7 +5,7 @@
     "version": "3.6.0",
     "type": "general",
     "published": "2014-12-04T18:45:44.907Z",
-    "versionDate": "2018-09-22T09:45:38.378Z"
+    "versionDate": "2019-01-24T09:45:38.378Z"
   },
   "alexa2": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/io-package.json",
@@ -309,7 +309,7 @@
     "version": "1.9.2",
     "type": "visualization",
     "published": "2015-06-10T19:35:14.599Z",
-    "versionDate": "2018-06-04T17:45:11.425Z"
+    "versionDate": "2018-09-14T17:45:11.425Z"
   },
   "foobar2000": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.foobar2000/master/io-package.json",
@@ -418,10 +418,10 @@
   "history": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.history/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.history/master/admin/history.png",
-    "version": "1.8.5",
+    "version": "1.8.6",
     "type": "storage",
     "published": "2015-01-02T21:07:06.894Z",
-    "versionDate": "2018-07-03T20:39:40.455Z"
+    "versionDate": "2019-02-25T20:39:40.455Z"
   },
   "hm-rega": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/io-package.json",
@@ -493,7 +493,7 @@
     "version": "1.7.0",
     "type": "date-and-time",
     "published": "2015-02-22T11:33:05.718Z",
-    "versionDate": "2018-11-05T10:54:57.159Z"
+    "versionDate": "2018-12-14T10:54:57.159Z"
   },
   "icons-addictive-flavour-png": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-addictive-flavour-png/master/io-package.json",
@@ -1037,8 +1037,8 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.openhab/master/admin/openhab.png",
     "type": "iot-systems",
     "published": "2017-05-09T21:14:27.652Z",
-    "version": "0.3.0",
-    "versionDate": "2018-08-12T20:06:26.505Z"
+    "version": "1.1.0",
+    "versionDate": "2019-02-13T20:06:26.505Z"
   },
   "openweathermap": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.openweathermap/master/io-package.json",
@@ -1214,7 +1214,7 @@
     "version": "1.0.0",
     "type": "visualization",
     "published": "2015-01-02T20:46:10.368Z",
-    "versionDate": "2017-03-11T23:52:51.330Z"
+    "versionDate": "2018-11-14T23:52:51.330Z"
   },
   "ring": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/io-package.json",
@@ -1467,10 +1467,10 @@
   "text2command": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.text2command/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.text2command/master/admin/text2command.png",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "type": "logic",
     "published": "2016-02-09T22:46:16.344Z",
-    "versionDate": "2018-09-01T22:14:42.762Z"
+    "versionDate": "2019-02-12T22:14:42.762Z"
   },
   "tr-064": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.tr-064/master/io-package.json",
@@ -1550,7 +1550,7 @@
     "version": "1.1.10",
     "type": "visualization",
     "published": "2015-01-03T16:36:01.398Z",
-    "versionDate": "2018-07-24T16:50:53.375Z"
+    "versionDate": "2019-02-01T16:50:53.375Z"
   },
   "vis-bars": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-bars/master/io-package.json",
