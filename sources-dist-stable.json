@@ -971,10 +971,10 @@
   "nello": {
     "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.nello/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.nello/master/admin/nello.png",
-    "version": "2.0.1",
+    "version": "2.0.4",
     "type": "hardware",
     "published": "2018-12-09T12:08:00.000Z",
-    "versionDate": "2018-02-03T21:29:00.000Z"
+    "versionDate": "2019-03-15T15:30:00.000Z"
   },
   "netatmo": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/io-package.json",
@@ -1231,6 +1231,14 @@
     "version": "1.0.1",
     "published": "2018-12-14T13:36:22.039Z",
     "versionDate": "2019-01-27T13:49:18.661Z"
+  },
+  "roomba": {
+    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/admin/roomba.png",
+    "type": "household",
+    "version": "0.4.4",
+    "published": "2018-12-02T21:26:00.000Z",
+    "versionDate": "2019-03-15T16:42:00.000Z"
   },
   "rpi2": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.rpi2/master/io-package.json",
