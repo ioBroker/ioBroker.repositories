@@ -14,7 +14,7 @@ function getLogos(list, destination, callback) {
     if (!list || !list.length) {
         callback && callback();
     } else {
-        let task = list.pop();
+        const task = list.pop();
         console.log('Get ' + task.url + '...');
         request.get({url: task.url, encoding: 'binary'}, (error, response, body) => {
             if (!error && body) {
@@ -37,17 +37,17 @@ function getLogos(list, destination, callback) {
 }
 
 function createRepo(done) {
-    let stable     = require(__dirname + '/../sources-dist-stable.json');
-    let packStable = Object.assign({}, require(__dirname + '/packageProd.json'));
+    const stable     = require(__dirname + '/../sources-dist-stable.json');
+    const packStable = Object.assign({}, require(__dirname + '/packageProd.json'));
 
     // update versions
 
     // process stable repo
     packStable.dependencies =  {
-        "node-gyp": "*"
+        'node-gyp': '*'
     };
 
-    for (let a in stable) {
+    for (const a in stable) {
         if (stable.hasOwnProperty(a)) {
             packStable.dependencies['iobroker.' + a] = stable[a].version;
         }
@@ -69,8 +69,8 @@ function createRepo(done) {
             process.exit(1);
         }
         // get all icons
-        let list = [];
-        for (let i in data) {
+        const list = [];
+        for (const i in data) {
             if (!data.hasOwnProperty(i) || !data[i].extIcon) continue;
             list.push({url: data[i].extIcon, name: 'logo-' + i.toLowerCase() + '.png'});
             data[i].extIcon = '/imgs/logo-' + i.toLowerCase() + '.png';
@@ -129,7 +129,7 @@ function activateLocalNpm(done) {
                 console.log('npm set registry local DONE');
             }
             // start local npm
-            let localNpm = require('local-npm/lib/index')({
+            const localNpm = require('local-npm/lib/index')({
                 port: 5080,
                 pouchPort: 16984,
                 logLevel: 'error',

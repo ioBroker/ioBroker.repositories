@@ -7,8 +7,8 @@ const createLocalNpm = require('local-npm/lib/index');
 
 function getIpAddresses () {
     const ifaces = os.networkInterfaces();
-    let result = [];
-    for (let iface in ifaces) {
+    const result = [];
+    for (const iface in ifaces) {
         if (!ifaces.hasOwnProperty(iface)) continue;
         const _iface = ifaces[iface];
         for (let alias = 0; alias < _iface.length; alias++) {
@@ -24,10 +24,10 @@ function getIpAddresses () {
     return result.length ? result : null;
 }
 
-let app     = express();
+const app     = express();
 let ipAddr  = argv.ip;
-let port    = argv.port || 5081;
-let npmPort = argv.npmPort  || 5080;
+const port    = argv.port || 5081;
+const npmPort = argv.npmPort  || 5080;
 let url     = argv.url || ('http://localhost:' + npmPort);
 
 if (!url.match(/:(\d+)\/?/)) {
@@ -45,7 +45,7 @@ if (!fs.existsSync(__dirname + '/public/sources-dist-stable.json')) {
 }
 
 if (!ipAddr) {
-    let ip = getIpAddresses();
+    const ip = getIpAddresses();
     if (!ip) {
         console.error('No IP addresses found!');
         process.exit(2);
@@ -56,8 +56,8 @@ if (!ipAddr) {
     }
 }
 
-let file = require(__dirname + '/public/sources-dist-stable.json');
-for (let a in file) {
+const file = require(__dirname + '/public/sources-dist-stable.json');
+for (const a in file) {
     if (file.hasOwnProperty(a) && file[a].extIcon) {
         file[a].extIcon = 'http://' + ipAddr + ':' + port + file[a].extIcon;
     }
