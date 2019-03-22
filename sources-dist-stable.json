@@ -1038,10 +1038,10 @@
   "owntracks": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.owntracks/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.owntracks/master/admin/owntracks.png",
-    "version": "0.2.0",
+    "version": "0.6.2",
     "type": "geoposition",
     "published": "2016-09-04T17:18:10.022Z",
-    "versionDate": "2017-01-03T09:36:14.423Z"
+    "versionDate": "2019-03-12T16:33:00.000Z"
   },
   "panasonic-viera": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.panasonic-viera/master/io-package.json",
