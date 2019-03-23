@@ -1008,6 +1008,14 @@
     "published": "2018-10-05T09:37:04.501Z",
     "versionDate": "2018-10-12T16:52:47.916Z"
   },
+  "nuki2": {
+    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki2/master/admin/nuki-logo.png",
+    "version": "0.9.5",
+    "type": "hardware",
+    "published": "2019-02-10T12:42:00.000Z",
+    "versionDate": "2019-03-22T22:34:00.000Z"
+  },
   "nut": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.nut/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.nut/master/admin/nut.png",
@@ -1075,10 +1083,10 @@
   "owntracks": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.owntracks/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.owntracks/master/admin/owntracks.png",
-    "version": "0.2.0",
+    "version": "0.6.2",
     "type": "geoposition",
     "published": "2016-09-04T17:18:10.022Z",
-    "versionDate": "2019-02-15T09:36:14.423Z"
+    "versionDate": "2019-03-12T16:33:00.000Z"
   },
   "panasonic-viera": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.panasonic-viera/master/io-package.json",
