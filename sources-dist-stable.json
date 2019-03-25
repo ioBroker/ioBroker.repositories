@@ -35,9 +35,9 @@
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.asterisk/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.asterisk/master/admin/asterisk.png",
     "type": "communication",
-    "version": "1.0.2",
+    "version": "1.0.6",
     "published": "2018-11-10T15:30:17.077Z",
-    "versionDate": "2019-01-22T21:40:02.432Z"
+    "versionDate": "2019-02-27T12:00:00.000Z"
   },
   "asuswrt": {
     "meta": "https://raw.githubusercontent.com/mcdhrts/ioBroker.asuswrt/master/io-package.json",
@@ -1236,9 +1236,9 @@
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/admin/ring.png",
     "type": "hardware",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "published": "2018-12-14T13:36:22.039Z",
-    "versionDate": "2019-01-27T13:49:18.661Z"
+    "versionDate": "2019-03-09T12:00:00.000Z"
   },
   "roomba": {
     "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/io-package.json",
@@ -1299,18 +1299,18 @@
   "shelly": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
-    "version": "2.0.8",
+    "version": "2.1.7",
     "type": "iot-systems",
     "published": "2018-09-03T18:00:52.255Z",
-    "versionDate": "2019-02-01T16:48:50.463Z"
+    "versionDate": "2019-03-15T12:00:00.000Z"
   },
   "sia": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/admin/sia.png",
     "type": "alarm",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "published": "2018-06-08T09:46:58.927Z",
-    "versionDate": "2018-11-12T07:52:00.759Z"
+    "versionDate": "2019-03-05T12:00:00.000Z"
   },
   "simple-api": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/io-package.json",
