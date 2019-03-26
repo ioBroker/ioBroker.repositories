@@ -984,6 +984,13 @@
     "published": "2016-06-01T20:14:22.572Z",
     "versionDate": "2017-12-30T19:35:24.731Z"
   },
+  "nibeuplink": {
+    "meta": "https://raw.githubusercontent.com/sebilm/ioBroker.nibeuplink/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sebilm/ioBroker.nibeuplink/master/admin/nibeuplink.png",
+    "version": "0.2.2",
+    "published": "2019-03-24T15:12:00.840Z",
+    "type": "climate-control"
+  },
   "node-red": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/admin/node-red.png",
