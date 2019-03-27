@@ -63,6 +63,14 @@
     "published": "2018-06-29T15:39:03.465Z",
     "versionDate": "2018-10-03T19:02:59.523Z"
   },
+  "beckhoff": {
+    "meta": "https://raw.githubusercontent.com/dkleber89/ioBroker.beckhoff/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/dkleber89/ioBroker.beckhoff/master/admin/beckhoff.png",
+    "version": "1.0.0",
+    "type": "hardware",
+    "published": "2018-11-01T17:44:00.917Z",
+    "versionDate": "2019-03-23T19:01:12.187Z"
+  },
   "benq": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.benq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.benq/master/admin/benq.png",
