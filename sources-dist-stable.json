@@ -106,10 +106,9 @@
   "bring": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.bring/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.bring/master/admin/bring.png",
-    "version": "1.0.0",
+    "version": "1.3.2",
     "type": "household",
-    "published": "2019-02-12T20:10:09.422Z",
-    "versionDate": "2019-02-24T12:09:31.781Z"
+    "published": "2019-02-12T20:10:09.422Z"
   },
   "broadlink2": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
@@ -186,10 +185,9 @@
   "denon": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "type": "multimedia",
-    "published": "2018-06-04T22:51:21.999Z",
-    "versionDate": "2019-01-31T13:44:45.702Z"
+    "published": "2018-06-04T22:51:21.999Z"
   },
   "discovergy": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.discovergy/master/io-package.json",
@@ -410,10 +408,9 @@
   "harmony": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "type": "multimedia",
-    "published": "2015-08-18T08:32:32.461Z",
-    "versionDate": "2019-02-22T14:16:35.430Z"
+    "published": "2015-08-18T08:32:32.461Z"
   },
   "hid": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/io-package.json",
@@ -434,18 +431,16 @@
   "hm-rega": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/admin/homematic.png",
-    "version": "2.3.0",
+    "version": "2.3.2",
     "type": "iot-systems",
-    "published": "2015-01-02T23:31:13.087Z",
-    "versionDate": "2019-02-07T18:01:59.849Z"
+    "published": "2015-01-02T23:31:13.087Z"
   },
   "hm-rpc": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
-    "version": "1.9.6",
+    "version": "1.9.9",
     "type": "iot-systems",
-    "published": "2015-01-02T23:35:36.140Z",
-    "versionDate": "2019-02-02T00:14:09.143Z"
+    "published": "2015-01-02T23:35:36.140Z"
   },
   "hmip": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/io-package.json",
@@ -1386,10 +1381,9 @@
   "sonnen": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/admin/sonnen.png",
-    "version": "1.1.2",
+    "version": "1.2.0",
     "type": "energy",
-    "published": "2018-08-02T23:05:38.370Z",
-    "versionDate": "2019-01-09T13:01:52.194Z"
+    "published": "2018-08-02T23:05:38.370Z"
   },
   "sonoff": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/io-package.json",
@@ -1794,10 +1788,9 @@
   "xbox": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/admin/xbox.png",
-    "version": "0.5.5",
+    "version": "0.5.6",
     "type": "multimedia",
-    "published": "2018-09-17T17:44:59.021Z",
-    "versionDate": "2019-01-27T11:42:25.813Z"
+    "published": "2018-09-17T17:44:59.021Z"
   },
   "xs1": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",
