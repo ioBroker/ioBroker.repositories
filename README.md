@@ -1,5 +1,4 @@
 # ioBroker.repositories
-===================
 
 This is github project for storage of latest and stable repositories.
 
