@@ -896,6 +896,13 @@
     "published": "2017-02-05T20:50:25.120Z",
     "versionDate": "2018-09-02T15:06:41.833Z"
   },
+  "miio": {
+    "meta": "https://raw.githubusercontent.com/smarthomefans/ioBroker.miio/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/smarthomefans/ioBroker.miio/master/admin/miio.png",
+    "type": "iot-systems",
+    "published": "2019-04-03T00:05:54.455Z",
+    "versionDate": "2019-04-03T00:05:54.455Z"
+  },
   "mikrotik": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.mikrotik/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.mikrotik/master/admin/mikrotik.png",
