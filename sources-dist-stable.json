@@ -787,6 +787,14 @@
     "published": "2018-05-17T18:33:39.641Z",
     "versionDate": "2019-01-29T20:53:15.763Z"
   },
+  "luxtronik1": {
+    "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.luxtronik1/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.luxtronik1/master/admin/luxtronik1.png",
+   "version": "0.0.7",
+    "type": "climate-control",
+    "published": "2019-03-19T21:30:00.339Z",
+    "versionDate": "2019-04-05T20:43:54.763Z"
+  },
   "maxcube": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/admin/maxcube.png",
@@ -1336,7 +1344,7 @@
     "version": "0.2.2",
     "type": "energy",
     "published": "2019-02-04T21:00:00.339Z",
-    "versionDate": "2019-03-14T22:00:00.213Z"
+    "versionDate": "2019-03-14T21:45:30.213Z"
   },
   "smartmeter": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.smartmeter/master/io-package.json",
@@ -1373,10 +1381,10 @@
   "solarlog": {
     "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.solarlog/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.solarlog/master/admin/solarlog.png",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "type": "energy",
     "published": "2018-11-28T19:52:32.339Z",
-    "versionDate": "2019-03-14T22:00:00.213Z"
+    "versionDate": "2019-03-21T22:27:51.213Z"
   },
   "solarwetter": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.solarwetter/master/io-package.json",
