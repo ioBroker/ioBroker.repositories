@@ -1310,7 +1310,7 @@
     "version": "0.2.2",
     "type": "energy",
     "published": "2019-02-04T21:00:00.339Z",
-    "versionDate": "2019-03-14T22:00:00.213Z"
+    "versionDate": "2019-03-14T21:45:30.213Z"
   },
   "smartmeter": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.smartmeter/master/io-package.json",
@@ -1347,10 +1347,10 @@
   "solarlog": {
     "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.solarlog/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.solarlog/master/admin/solarlog.png",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "type": "energy",
     "published": "2018-11-28T19:52:32.339Z",
-    "versionDate": "2019-03-14T22:00:00.213Z"
+    "versionDate": "2019-03-21T22:27:51.213Z"
   },
   "solarwetter": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.solarwetter/master/io-package.json",
