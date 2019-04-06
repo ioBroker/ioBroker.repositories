@@ -784,6 +784,14 @@
     "published": "2018-05-17T18:33:39.641Z",
     "versionDate": "2019-01-29T20:53:15.763Z"
   },
+  "luxtronik1": {
+    "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.luxtronik1/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.luxtronik1/master/admin/luxtronik1.png",
+   "version": "0.0.7",
+    "type": "climate-control",
+    "published": "2019-03-19T21:30:00.339Z",
+    "versionDate": "2019-04-05T20:43:54.763Z"
+  },
   "maxcube": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/admin/maxcube.png",
