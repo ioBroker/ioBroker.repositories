@@ -123,7 +123,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.bring/master/admin/bring.png",
     "type": "household",
     "published": "2019-02-12T20:10:09.422Z",
-    "versionDate": "2019-02-27T09:46:38.997Z"
+    "versionDate": "2019-03-26T19:18:52.186Z"
   },
   "broadlink2": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
@@ -200,7 +200,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
     "type": "multimedia",
     "published": "2018-06-04T22:51:21.999Z",
-    "versionDate": "2019-01-31T13:44:45.702Z"
+    "versionDate": "2019-03-14T20:19:44.802Z"
   },
   "discovergy": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.discovergy/master/io-package.json",
@@ -417,7 +417,7 @@
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
     "type": "multimedia",
     "published": "2015-08-18T08:32:32.461Z",
-    "versionDate": "2019-02-22T14:16:35.430Z"
+    "versionDate": "2019-03-12T23:47:36.396Z"
   },
   "hid": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/io-package.json",
@@ -445,14 +445,14 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/admin/homematic.png",
     "type": "iot-systems",
     "published": "2015-01-02T23:31:13.087Z",
-    "versionDate": "2019-02-07T18:01:59.849Z"
+    "versionDate": "2019-04-06T16:22:20.044Z"
   },
   "hm-rpc": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
     "type": "iot-systems",
     "published": "2015-01-02T23:35:36.140Z",
-    "versionDate": "2019-02-02T00:14:09.143Z"
+    "versionDate": "2019-04-12T20:23:44.002Z"
   },
   "hmip": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/io-package.json",
@@ -997,8 +997,9 @@
   "nibeuplink": {
     "meta": "https://raw.githubusercontent.com/sebilm/ioBroker.nibeuplink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/sebilm/ioBroker.nibeuplink/master/admin/nibeuplink.png",
-    "published": "2019-03-24T15:12:00.840Z",
-    "type": "climate-control"
+    "published": "2019-03-21T19:15:28.166Z",
+    "type": "climate-control",
+    "versionDate": "2019-03-24T15:12:00.840Z"
   },
   "node-red": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/io-package.json",
@@ -1088,8 +1089,8 @@
     "meta": "https://raw.githubusercontent.com/volkerrichert/ioBroker.oppoplayer/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/volkerrichert/ioBroker.oppoplayer/master/admin/oppoplayer.png",
     "type": "multimedia",
-    "published": "2019-02-04T13:00:00.000Z",
-    "versionDate": "2019-02-04T13:00:00.000Z"
+    "published": "2019-02-04T14:13:29.341Z",
+    "versionDate": "2019-02-04T14:15:20.585Z"
   },
   "owfs": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/io-package.json",
@@ -1383,7 +1384,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/admin/sonnen.png",
     "type": "energy",
     "published": "2018-08-02T23:05:38.370Z",
-    "versionDate": "2019-01-09T13:01:52.194Z"
+    "versionDate": "2019-03-16T18:00:37.466Z"
   },
   "sonoff": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/io-package.json",
@@ -1508,7 +1509,8 @@
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.tinker/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.tinker/master/admin/tinker.png",
     "type": "hardware",
-    "published": "2019-03-14T21:02:13.304Z"
+    "published": "2018-07-10T12:20:15.468Z",
+    "versionDate": "2019-03-15T10:07:41.653Z"
   },
   "tr-064": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.tr-064/master/io-package.json",
@@ -1781,7 +1783,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/admin/xbox.png",
     "type": "multimedia",
     "published": "2018-09-17T17:44:59.021Z",
-    "versionDate": "2019-01-27T11:42:25.813Z"
+    "versionDate": "2019-03-12T21:43:38.214Z"
   },
   "xs1": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",

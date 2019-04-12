@@ -5,9 +5,8 @@ const request = require('request');
 // and published attribute
 gulp.task('init', done => {
     const scripts = require('./lib/scripts');
-    scripts.init(function () {
-        done();
-    });
+    scripts.init(() =>
+        done());
 });
 
 gulp.task('stable', done => {
