@@ -1090,6 +1090,14 @@
     "version": "0.1.1",
     "versionDate": "2018-01-27T12:37:54.796Z"
   },
+  "oppoplayer": {
+    "meta": "https://raw.githubusercontent.com/volkerrichert/ioBroker.oppoplayer/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/volkerrichert/ioBroker.oppoplayer/master/admin/oppoplayer.png",
+    "type": "multimedia",
+    "version": "0.2.1",
+    "published": "2019-02-04T13:00:00.000Z",
+    "versionDate": "2019-02-04T13:00:00.000Z"
+  },
   "owfs": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/admin/owfs.png",
