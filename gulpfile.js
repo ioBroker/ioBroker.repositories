@@ -26,9 +26,8 @@ gulp.task('stable', done => {
                     }
                 }
             }
-            build.processRepository(data, ['--file', '/var/www/download/sources-dist-latest.json'], () => {
-                done();
-            });
+            build.processRepository(data, ['--file', '/var/www/download/sources-dist-latest.json'], () =>
+                done());
         });
     });
 });
@@ -41,7 +40,7 @@ gulp.task('latest', done => {
         tools.getRepositoryFile('https://raw.githubusercontent.com/' + tools.appName + '/' + tools.appName + '.repositories/master/sources-dist.json', latest, (err, data) => {
             if (err) {
                 console.error(err);
-                if (!data) process.exit(1);
+                !data && process.exit(1);
             }
             build.getStats((err, stats) => {
                 if (stats) {
@@ -51,9 +50,8 @@ gulp.task('latest', done => {
                         }
                     }
                 }
-                build.processRepository(data, ['--file', '/var/www/download/sources-dist.json', '--shields', '/var/www/download/img'], () => {
-                    done();
-                });
+                build.processRepository(data, ['--file', '/var/www/download/sources-dist.json', '--shields', '/var/www/download/img'], () =>
+                    done());
             });
         });
     });
