@@ -1526,6 +1526,13 @@
     "published": "2017-08-23T11:33:34.827Z",
     "versionDate": "2019-01-08T19:45:13.317Z"
   },
+  "zwave": {
+    "meta": "https://raw.githubusercontent.com/PowerPan/ioBroker.tunnelbroker-endpoint-updater/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/PowerPan/ioBroker.tunnelbroker-endpoint-updater/master/admin/tunnelbroker-endpoint-updater.png.png",
+    "type": "network",
+    "published": "2019-04-14T20:00:00.000Z",
+    "versionDate": "2019-04-14T20:00:00.000Z"
+  },
   "tuya": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.tuya/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.tuya/master/admin/tuya.png",
