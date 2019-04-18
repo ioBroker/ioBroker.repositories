@@ -1847,5 +1847,12 @@
     "type": "hardware",
     "published": "2015-01-03T00:02:56.370Z",
     "versionDate": "2018-07-25T09:54:52.755Z"
+  },
+    "moma": {
+    "meta": "https://raw.githubusercontent.com/AWhiteKnight/ioBroker.moma/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AWhiteKnight/ioBroker.moma/master/admin/moma.png",
+    "type": "general",
+    "published": "2019-04-18T14:42:00.000Z",
+    "versionDate": "2019-04-18T14:42:00.000Z"
   }
 }
