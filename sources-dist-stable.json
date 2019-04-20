@@ -787,10 +787,10 @@
   "lupusec": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/admin/lupusec.png",
-    "version": "1.0.0",
+    "version": "1.1.4",
     "type": "alarm",
     "published": "2018-05-17T18:33:39.641Z",
-    "versionDate": "2019-01-29T20:53:15.763Z"
+    "versionDate": "2019-04-13T20:53:15.763Z"
   },
   "luxtronik1": {
     "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.luxtronik1/master/io-package.json",
@@ -1197,8 +1197,8 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.pollenflug/master/admin/pollenflug.png",
     "type": "weather",
     "published": "2019-03-13T09:00:00.000Z",
-    "version": "1.0.2",
-    "versionDate": "2019-03-12T09:00:00.000Z"
+    "version": "1.0.3",
+    "versionDate": "2019-04-12T09:00:00.000Z"
   },
   "proxmox": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.proxmox/master/io-package.json",
@@ -1331,10 +1331,10 @@
   "shelly": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
-    "version": "2.1.7",
+    "version": "2.2.0",
     "type": "iot-systems",
     "published": "2018-09-03T18:00:52.255Z",
-    "versionDate": "2019-03-15T12:00:00.000Z"
+    "versionDate": "2019-04-13T12:00:00.000Z"
   },
   "sia": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/io-package.json",
