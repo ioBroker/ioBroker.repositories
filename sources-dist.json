@@ -630,6 +630,12 @@
     "published": "2018-09-22T16:11:37.398Z",
     "versionDate": "2018-10-21T17:40:32.063Z"
   },
+  "iqontrol": {
+    "meta": "https://raw.githubusercontent.com/sbormann/ioBroker.iqontrol/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sbormann/ioBroker.iqontrol/master/admin/iqontrol.png",
+    "type": "visualization",
+    "published": "2019-04-26T22:59:00.000Z"
+  },  
   "javascript": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/admin/javascript.png",
@@ -1853,11 +1859,5 @@
     "icon": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/admin/valloxmv.png",
     "type": "climate-control",
     "published": "2019-04-18T19:42:57.000Z"
-  },
-  "iqontrol": {
-    "meta": "https://raw.githubusercontent.com/sbormann/ioBroker.iqontrol/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/sbormann/ioBroker.iqontrol/master/admin/iqontrol.png",
-    "type": "visualization",
-    "published": "2019-04-26T22:59:00.000Z"
-  }  
+  } 
 }
