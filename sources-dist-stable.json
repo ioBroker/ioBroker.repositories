@@ -82,10 +82,9 @@
   "ble": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.ble/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.ble/master/admin/ble.png",
-    "version": "0.5.2",
+    "version": "0.7.2",
     "type": "hardware",
-    "published": "2017-09-05T15:57:13.123Z",
-    "versionDate": "2018-03-28T10:31:58.677Z"
+    "published": "2017-09-05T15:57:13.123Z"
   },
   "bmw": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/io-package.json",
