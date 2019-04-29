@@ -1567,6 +1567,12 @@
     "published": "2016-10-31T18:40:22.374Z",
     "versionDate": "2018-08-26T16:26:09.617Z"
   },
+  "valloxmv": {
+    "meta": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/admin/valloxmv.png",
+    "type": "climate-control",
+    "published": "2019-04-18T19:42:57.000Z"
+  },
   "vcard": {
     "meta": "https://raw.githubusercontent.com/hometm/ioBroker.vcard/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/hometm/ioBroker.vcard/master/admin/vcard.png",
@@ -1853,11 +1859,5 @@
     "type": "hardware",
     "published": "2015-01-03T00:02:56.370Z",
     "versionDate": "2018-07-25T09:54:52.755Z"
-  },
-  "valloxmv": {
-    "meta": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/admin/valloxmv.png",
-    "type": "climate-control",
-    "published": "2019-04-18T19:42:57.000Z"
-  } 
+  }
 }
