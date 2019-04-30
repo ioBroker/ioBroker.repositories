@@ -486,10 +486,10 @@
   "hs100": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.hs100/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.hs100/master/admin/hs100.png",
-    "version": "1.0.5",
+    "version": "1.0.9",
     "type": "hardware",
     "published": "2017-08-08T19:55:36.776Z",
-    "versionDate": "2018-07-25T16:51:31.098Z"
+    "versionDate": "2019-04-30T09:00:31.098Z"
   },
   "hue": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hue/master/io-package.json",
