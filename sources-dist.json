@@ -1873,5 +1873,12 @@
     "type": "general",
     "published": "2019-04-18T14:42:00.000Z",
     "versionDate": "2019-04-18T14:42:00.000Z"
+  },
+    "squeezeboxrpc": {
+    "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.squeezeboxrpc/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.squeezeboxrpc/master/admin/squeezeboxrpc.png",
+    "type": "multimedia",
+    "published": "2019-04-30T12:00:00.000Z",
+    "versionDate": "2019-04-30T12:00:00.000Z"
   }
 }
