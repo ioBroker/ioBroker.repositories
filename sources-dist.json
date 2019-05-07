@@ -1448,6 +1448,13 @@
     "published": "2016-01-16T12:56:24.243Z",
     "versionDate": "2017-10-08T12:34:51.434Z"
   },
+    "squeezeboxrpc": {
+    "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.squeezeboxrpc/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.squeezeboxrpc/master/admin/squeezeboxrpc.png",
+    "type": "multimedia",
+    "published": "2019-05-08T01:00:00.000Z",
+    "versionDate": "2019-05-08T01:00:00.000Z"
+  },
   "starline": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.starline/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.starline/master/admin/starline.png",
@@ -1873,12 +1880,5 @@
     "type": "general",
     "published": "2019-04-18T14:42:00.000Z",
     "versionDate": "2019-04-18T14:42:00.000Z"
-  },
-    "squeezeboxrpc": {
-    "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.squeezeboxrpc/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.squeezeboxrpc/master/admin/squeezeboxrpc.png",
-    "type": "multimedia",
-    "published": "2019-04-30T12:00:00.000Z",
-    "versionDate": "2019-04-30T12:00:00.000Z"
   }
 }
