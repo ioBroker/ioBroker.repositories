@@ -253,6 +253,14 @@
     "published": "2015-01-02T23:50:13.927Z",
     "versionDate": "2018-03-27T13:04:52.307Z"
   },
+  "emby": {
+    "meta": "https://raw.githubusercontent.com/thewhobox/ioBroker.emby/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/thewhobox/ioBroker.emby/master/admin/emby.png",
+    "version": "0.1.2",
+    "type": "multimedia",
+    "published": "2019-05-02T13:40:21.690Z",
+    "versionDate": "2019-05-02T13:40:21.690Z"
+  },
   "energymanager": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/admin/energymanager.png",
