@@ -1375,10 +1375,10 @@
   "snips": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.snips/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.snips/master/admin/snips.png",
-    "version": "1.0.0",
+    "version": "1.1.6",
     "type": "iot-systems",
     "published": "2019-01-16T14:15:00.000Z",
-    "versionDate": "2019-02-08T18:40:00.000Z"
+    "versionDate": "2019-05-06T18:40:00.000Z"
   },
   "snmp": {
     "meta": "https://raw.githubusercontent.com/ctjaeger/ioBroker.snmp/master/io-package.json",
@@ -1487,10 +1487,10 @@
   "stiebel-isg": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.stiebel-isg/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.stiebel-isg/master/admin/stiebel-isg.png",
-    "version": "1.4.1",
+    "version": "1.4.4",
     "type": "climate-control",
     "published": "2018-09-08T19:23:53.004Z",
-    "versionDate": "2019-03-12T09:33:47.485Z"
+    "versionDate": "2019-04-22T19:33:47.485Z"
   },
   "systeminfo": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.systeminfo/master/io-package.json",
