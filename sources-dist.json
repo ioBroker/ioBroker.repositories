@@ -384,6 +384,13 @@
     "published": "2016-01-15T20:18:56.071Z",
     "versionDate": "2018-03-07T21:05:22.640Z"
   },
+  "gruenbeck": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/admin/gruenbeck.png",
+    "type": "household",
+    "published": "2019-05-06T08:44:23.717Z",
+    "versionDate": "2019-05-06T08:44:23.717Z"
+  },
   "habpanel": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/admin/habpanel.png",
