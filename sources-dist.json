@@ -384,6 +384,13 @@
     "published": "2016-01-15T20:18:56.071Z",
     "versionDate": "2018-03-07T21:05:22.640Z"
   },
+  "gruenbeck": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/admin/gruenbeck.png",
+    "type": "household",
+    "published": "2019-05-06T08:44:23.717Z",
+    "versionDate": "2019-05-06T08:44:23.717Z"
+  },
   "habpanel": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/admin/habpanel.png",
@@ -630,6 +637,12 @@
     "published": "2018-09-22T16:11:37.398Z",
     "versionDate": "2018-10-21T17:40:32.063Z"
   },
+  "iqontrol": {
+    "meta": "https://raw.githubusercontent.com/sbormann/ioBroker.iqontrol/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sbormann/ioBroker.iqontrol/master/admin/iqontrol.png",
+    "type": "visualization",
+    "published": "2019-04-26T22:59:00.000Z"
+  },  
   "javascript": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/admin/javascript.png",
@@ -678,6 +691,13 @@
     "type": "climate-control",
     "published": "2016-11-18T21:35:17.155Z",
     "versionDate": "2017-11-21T19:01:28.669Z"
+  },
+  "knmi-weather": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.knmi-weather/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.knmi-weather/master/admin/knmi-weather.png",
+    "type": "weather",
+    "published": "2019-04-19T22:40:00.000",
+    "versionDate": "2019-04-19T22:40:00.000"
   },
   "knx": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.knx/master/io-package.json",
@@ -1162,6 +1182,13 @@
     "published": "2018-03-14T13:54:23.398Z",
     "versionDate": "2018-08-06T11:08:53.623Z"
   },
+  "plex": {
+    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.plex/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.plex/master/admin/plex.jpg",
+    "type": "multimedia",
+    "published": "2019-04-28T21:21:00.000Z",
+    "versionDate": "2019-04-28T21:21:00.000Z"
+  },
   "plexconnect": {
     "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.plexconnect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.plexconnect/master/admin/plex-logo.png",
@@ -1477,13 +1504,6 @@
     "published": "2016-06-12T14:59:04.116Z",
     "versionDate": "2017-03-21T15:46:17.347Z"
   },
-  "tautulli": {
-    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.tautulli/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.tautulli/master/admin/tautulli.jpeg",
-    "type": "multimedia",
-    "published": "2019-01-25T21:05:00.000Z",
-    "versionDate": "2019-01-25T21:05:00.000Z"
-  },
   "telegram": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/admin/telegram.png",
@@ -1560,6 +1580,12 @@
     "type": "network",
     "published": "2016-10-31T18:40:22.374Z",
     "versionDate": "2018-08-26T16:26:09.617Z"
+  },
+  "valloxmv": {
+    "meta": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/admin/valloxmv.png",
+    "type": "climate-control",
+    "published": "2019-04-18T19:42:57.000Z"
   },
   "vcard": {
     "meta": "https://raw.githubusercontent.com/hometm/ioBroker.vcard/master/io-package.json",
