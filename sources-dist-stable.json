@@ -280,10 +280,9 @@
   "epson_stylus_px830": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.epson_stylus_px830/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.epson_stylus_px830/master/admin/epson_stylus_px830.png",
-    "version": "0.0.2",
+    "version": "0.2.1",
     "type": "infrastructure",
-    "published": "2016-06-27T10:18:05.711Z",
-    "versionDate": "2016-06-27T12:17:47.058Z"
+    "published": "2016-06-27T10:18:05.711Z"
   },
   "fakeroku": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.fakeroku/master/io-package.json",
@@ -478,10 +477,9 @@
   "homepilot": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/admin/homepilot.png",
-    "version": "0.3.1",
+    "version": "1.0.3",
     "type": "iot-systems",
-    "published": "2016-07-09T11:17:48.404Z",
-    "versionDate": "2017-10-18T20:02:59.598Z"
+    "published": "2016-07-09T11:17:48.404Z"
   },
   "hp-ilo": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/io-package.json",
@@ -1503,7 +1501,7 @@
   "tankerkoenig": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tankerkoenig/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.tankerkoenig/master/admin/tankerkoenig.png",
-    "version": "1.0.4",
+    "version": "2.0.5",
     "type": "misc-data",
     "published": "2016-06-12T14:59:04.116Z",
     "versionDate": "2017-03-21T15:46:17.347Z"
