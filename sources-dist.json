@@ -783,6 +783,13 @@
     "published": "2018-06-10T19:29:40.991Z",
     "versionDate": "2018-09-23T21:10:12.043Z"
   },
+  "linkeddevices": {
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.linkeddevices/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.linkeddevices/master/admin/linkeddevices.png",
+    "type": "logic",
+    "published": "2019-05-13T19:01:00.991Z",
+    "versionDate": "2019-05-13T19:01:00.043Z"
+  },  
   "loxone": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/admin/loxone.png",
