@@ -1360,6 +1360,14 @@
     "published": "2018-06-08T09:46:58.927Z",
     "versionDate": "2019-03-05T12:00:00.000Z"
   },
+  "siegenia": {
+    "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.siegenia/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.siegenia/master/admin/siegenia.png",
+    "type": "climate-control",
+    "version": "1.0.10",
+    "published": "2019-05-17T23:00:00.000Z",
+    "versionDate": "2019-05-17T23:00:00.000Z"
+  },
   "simple-api": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/admin/simple-api.png",
