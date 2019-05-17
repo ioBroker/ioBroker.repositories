@@ -868,6 +868,13 @@
     "published": "2017-03-16T07:01:19.216Z",
     "versionDate": "2017-03-19T22:26:13.507Z"
   },
+  "mercedesme": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.mercedesme/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.mercedesme/master/admin/mercedesme.png",
+    "type": "household",
+    "published": "2019-05-17T10:00:00.00Z",
+    "versionDate": "2019-05-17T13:00:00.000Z"
+  },
   "meross": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.meross/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.meross/master/admin/meross.png",
