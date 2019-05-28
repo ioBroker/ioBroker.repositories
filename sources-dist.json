@@ -433,6 +433,13 @@
     "published": "2019-05-17T16:43:46.836Z",
     "versionDate": "2019-05-17T16:43:46.836Z"
   },
+  "heytech": {
+    "meta": "https://raw.githubusercontent.com/jey-cee/ioBroker.heytech/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/jey-cee/ioBroker.heytech/master/admin/heytech.png",
+    "type": "hardware",
+    "published": "2019-04-10T23:59:47.756Z",
+    "versionDate": "2019-04-10T23:59:47.756Z"
+  },
   "hid": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/admin/hid.png",
