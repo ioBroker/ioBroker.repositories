@@ -2,10 +2,10 @@
   "admin": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
-    "version": "3.6.0",
+    "version": "3.6.2",
     "type": "general",
     "published": "2014-12-04T18:45:44.907Z",
-    "versionDate": "2019-01-24T09:45:38.378Z"
+    "versionDate": "2019-05-05T21:40:16.000Z"
   },
   "alexa2": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/io-package.json",
