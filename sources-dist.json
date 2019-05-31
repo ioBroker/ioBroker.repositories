@@ -433,6 +433,13 @@
     "published": "2019-05-17T16:43:46.836Z",
     "versionDate": "2019-05-17T16:43:46.836Z"
   },
+  "heatingcontrol": {
+    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/admin/heatingcontrol.png",
+    "type": "hardware",
+    "published": "2019-04-27T15:11:05.105Z ",
+    "versionDate": "2019-05-19T15:40:48.028Z "
+  },
   "heytech": {
     "meta": "https://raw.githubusercontent.com/jey-cee/ioBroker.heytech/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/jey-cee/ioBroker.heytech/master/admin/heytech.png",
@@ -804,7 +811,7 @@
     "type": "logic",
     "published": "2019-05-13T19:01:00.991Z",
     "versionDate": "2019-05-13T19:01:00.043Z"
-  },  
+  },
   "loxone": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/admin/loxone.png",
