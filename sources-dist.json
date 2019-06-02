@@ -473,7 +473,7 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
     "type": "iot-systems",
     "published": "2015-01-02T23:35:36.140Z",
-    "versionDate": "2019-04-21T21:10:12.189Z"
+    "versionDate": "2019-05-27T20:47:25.266Z"
   },
   "hmip": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/io-package.json",
@@ -804,7 +804,14 @@
     "type": "logic",
     "published": "2019-05-13T19:01:00.991Z",
     "versionDate": "2019-05-13T19:01:00.043Z"
-  },  
+  },
+  "lovelace": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.lovelace/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.lovelace/master/admin/lovelace.png",
+    "type": "visualization",
+    "published": "2019-06-02T10:00:10.000Z",
+    "versionDate": "2019-06-02T10:00:10.000Z"
+  },
   "loxone": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/admin/loxone.png",
@@ -1183,6 +1190,13 @@
     "published": "2016-04-29T06:04:14.612Z",
     "versionDate": "2018-05-04T22:49:35.541Z"
   },
+  "pi-hole": {
+    "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.pi-hole/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.pi-hole/master/admin/pi-hole.png",
+    "type": "network",
+    "published": "2019-05-29T16:23:00.000Z",
+    "versionDate": "2019-05-29T16:23:00.000Z"
+  },
   "piface": {
     "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/admin/piface.png",
@@ -1203,13 +1217,6 @@
     "type": "network",
     "published": "2015-01-02T23:47:36.408Z",
     "versionDate": "2017-09-20T20:59:50.369Z"
-  },
-  "pi-hole": {
-    "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.pi-hole/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.pi-hole/master/admin/pi-hole.png",
-    "type": "network",
-    "published": "2019-05-29T16:23:00.000Z",
-    "versionDate": "2019-05-29T16:23:00.000Z"
   },
   "places": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.places/master/io-package.json",
@@ -1454,7 +1461,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.sonnen/master/admin/sonnen.png",
     "type": "energy",
     "published": "2018-08-02T23:05:38.370Z",
-    "versionDate": "2019-03-16T18:00:37.466Z"
+    "versionDate": "2019-05-11T19:36:40.985Z"
   },
   "sonoff": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonoff/master/io-package.json",
@@ -1874,7 +1881,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/admin/xbox.png",
     "type": "multimedia",
     "published": "2018-09-17T17:44:59.021Z",
-    "versionDate": "2019-03-12T21:43:38.214Z"
+    "versionDate": "2019-05-08T06:18:12.404Z"
   },
   "xs1": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",
