@@ -1176,6 +1176,14 @@
     "published": "2016-04-29T06:04:14.612Z",
     "versionDate": "2018-05-04T22:49:35.541Z"
   },
+  "pi-hole": {
+    "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.pi-hole/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.pi-hole/master/admin/pi-hole.png",
+    "version": "1.0.0",
+    "type": "network",
+    "published": "2019-05-29T16:23:00.000Z",
+    "versionDate": "2019-05-29T16:23:00.000Z"
+},
   "piface": {
     "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/admin/piface.png",
