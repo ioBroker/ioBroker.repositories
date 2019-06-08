@@ -811,10 +811,10 @@
   "lupusec": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/admin/lupusec.png",
-    "version": "1.1.4",
+    "version": "1.1.7",
     "type": "alarm",
     "published": "2018-05-17T18:33:39.641Z",
-    "versionDate": "2019-04-13T20:53:15.763Z"
+    "versionDate": "2019-05-06T20:53:15.763Z"
   },
   "luxtronik1": {
     "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.luxtronik1/master/io-package.json",
@@ -1300,9 +1300,9 @@
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/admin/ring.png",
     "type": "hardware",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "published": "2018-12-14T13:36:22.039Z",
-    "versionDate": "2019-03-09T12:00:00.000Z"
+    "versionDate": "2019-04-17T12:00:00.000Z"
   },
   "roomba": {
     "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/io-package.json",
@@ -1363,18 +1363,18 @@
   "shelly": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
-    "version": "2.2.0",
+    "version": "3.0.3",
     "type": "iot-systems",
     "published": "2018-09-03T18:00:52.255Z",
-    "versionDate": "2019-04-13T12:00:00.000Z"
+    "versionDate": "2019-06-02T12:00:00.000Z"
   },
   "sia": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/admin/sia.png",
     "type": "alarm",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "published": "2018-06-08T09:46:58.927Z",
-    "versionDate": "2019-03-05T12:00:00.000Z"
+    "versionDate": "2019-05-16T12:00:00.000Z"
   },
   "siegenia": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.siegenia/master/io-package.json",
