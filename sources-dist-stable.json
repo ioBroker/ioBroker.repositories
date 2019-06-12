@@ -792,6 +792,14 @@
     "published": "2016-03-16T00:01:08.739Z",
     "versionDate": "2018-01-07T13:09:47.916Z"
   },
+  "link": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.link/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.link/master/admin/link.png",
+    "version": "0.4.2",
+    "type": "communication",
+    "published": "2018-06-10T19:29:40.991Z",
+    "versionDate": "2019-03-28T14:38:35.309Z"
+  },
   "loxone": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/admin/loxone.png",
