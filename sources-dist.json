@@ -1393,6 +1393,13 @@
     "published": "2018-09-03T18:00:52.255Z",
     "versionDate": "2019-02-09T08:02:47.222Z"
   },
+  "shuttercontrol": {
+    "meta": "https://raw.githubusercontent.com/simatec/ioBroker.shuttercontrol/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/simatec/ioBroker.shuttercontrol/master/admin/shuttercontrol.png",
+    "type": "climate-control",
+    "published": "2019-06-18T17:39:03.465Z",
+    "versionDate": "2019-06-18T17:37:54.127Z"
+  },
   "sia": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/admin/sia.png",
