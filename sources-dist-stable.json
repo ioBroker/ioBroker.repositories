@@ -1367,6 +1367,14 @@
     "published": "2015-08-09T09:01:54.033Z",
     "versionDate": "2018-04-25T06:32:34.515Z"
   },
+  "schoolfree": {
+    "meta": "https://raw.githubusercontent.com/simatec/ioBroker.schoolfree/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/simatec/ioBroker.schoolfree/master/admin/schoolfree.png",
+    "version": "0.2.2",
+    "type": "date-and-time",
+    "published": "2019-06-04T12:39:03.465Z",
+    "versionDate": "2019-06-04T12:37:54.127Z"
+  },
   "shelly": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
