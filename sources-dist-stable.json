@@ -735,14 +735,6 @@
     "published": "2017-02-08T23:54:56.311Z",
     "versionDate": "2019-01-17T07:28:52.121Z"
   },
-  "landroid-s": {
-    "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.landroid-s/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.landroid-s/master/admin/landroid-s.png",
-    "version": "2.5.5",
-    "type": "garden",
-    "published": "2017-07-22T11:45:31.427Z",
-    "versionDate": "2019-04-08T19:26:55.887Z"
-  },
   "lcn": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.lcn/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.lcn/master/admin/lcn.png",
@@ -1885,6 +1877,14 @@
     "type": "climate-control",
     "published": "2015-10-08T23:20:16.800Z",
     "versionDate": "2016-12-19T02:11:54.645Z"
+  },
+  "worx": {
+    "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.worx/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.worx/master/admin/worx.png",
+    "version": "0.3.1",
+    "type": "garden",
+    "published": "2019-05-20T09:00:26.427Z",
+    "versionDate": "2019-06-12T21:01:01.887Z"
   },
   "xbox": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/io-package.json",
