@@ -436,7 +436,7 @@
   "heatingcontrol": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/admin/heatingcontrol.png",
-    "type": "hardware",
+    "type": "climate-control",
     "published": "2019-04-27T15:11:05.105Z ",
     "versionDate": "2019-05-19T15:40:48.028Z "
   },
