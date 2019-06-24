@@ -30,6 +30,14 @@
     "published": "2016-10-13T18:11:08.868Z",
     "versionDate": "2018-02-18T21:10:14.190Z"
   },
+    "alpha2": {
+    "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/admin/mh-logo.png",
+    "version": "1.0.0",
+	"type": "climate-control",
+    "published": "2018-07-16T12:45:33.660Z",
+    "versionDate": "2019-06-23T15:55:20.832Z"
+  },
   "b-control-em": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.b-control-em/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.b-control-em/master/admin/bcontrol.png",
