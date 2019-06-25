@@ -399,6 +399,14 @@
     "published": "2016-01-15T20:18:56.071Z",
     "versionDate": "2018-03-07T21:05:22.640Z"
   },
+  "gruenbeck": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/admin/gruenbeck.png",
+    "type": "household",
+    "version": "0.0.12",
+    "published": "2019-05-06T08:44:23.717Z",
+    "versionDate": "2019-05-06T08:44:23.717Z"
+  },
   "habpanel": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/admin/habpanel.png",
@@ -485,6 +493,14 @@
     "type": "hardware",
     "published": "2019-01-23T19:53:36.140Z",
     "versionDate": "2019-02-27T07:19:36.140Z"
+  },
+    "homeconnect": {
+    "meta": "https://raw.githubusercontent.com/dna909/ioBroker.homeconnect/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/dna909/ioBroker.homeconnect/master/admin/homeconnect.png",
+    "version": "0.0.15",
+    "type": "household",
+    "published": "2019-06-13T06:47:49.181Z",
+    "versionDate": "2019-06-13T06:47:49.311Z"
   },
   "homee": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.homee/master/io-package.json",
@@ -870,6 +886,14 @@
     "version": "0.1.0",
     "type": "hardware",
     "versionDate": "2017-03-19T22:26:13.507Z"
+  },
+  "mercedesme": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.mercedesme/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.mercedesme/master/admin/mercedesme.png",
+    "version": "0.0.12",
+    "type": "household",
+    "published": "2019-05-17T10:00:00.00Z",
+    "versionDate": "2019-05-17T13:00:00.000Z"
   },
   "meross": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.meross/master/io-package.json",
