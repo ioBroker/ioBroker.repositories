@@ -10,10 +10,9 @@
   "alexa2": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/admin/alexa.png",
-    "version": "2.3.3",
+    "version": "2.4.4",
     "type": "iot-systems",
-    "published": "2018-07-20T14:34:19.324Z",
-    "versionDate": "2019-06-21T22:28:58.075Z"
+    "published": "2018-07-20T14:34:19.324Z"
   },
   "amazon-dash": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/io-package.json",
