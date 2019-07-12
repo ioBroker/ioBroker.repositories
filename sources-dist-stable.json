@@ -1270,10 +1270,10 @@
   "proxy": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
-    "version": "1.0.2",
+    "version": "1.1.1",
     "type": "network",
     "published": "2017-03-11T23:57:45.008Z",
-    "versionDate": "2018-06-30T07:23:36.497Z"
+    "versionDate": "2019-07-02T07:23:36.497Z"
   },
   "pushbullet": {
     "meta": "https://raw.githubusercontent.com/Jens1809/ioBroker.pushbullet/master/io-package.json",
