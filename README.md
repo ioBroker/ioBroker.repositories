@@ -16,7 +16,8 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 1. Your github repository must have name "ioBroker.<adaptername>". **B** is capital in "ioBroker", but in the package.json the *name* must be low case, because npm does not allow upper case letters.
 2. Do not use in the title the words "ioBroker" or "Adapter". It is clear anyway, that it is adapter for ioBroker.
 3. *title* in io-package.json (common) is simple short name of adapter in english. *titleLang* is object that consist short names in many languages. *Lang* ist not german Länge, but english LANGuages.
-4. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md)
+4. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md).
+   
 **It is required to have link to the device or service page of manufacturer or service provider with photo of device. Services require no photo, but anyway are welcome.**
 5. Adapter must have a predefined license.
 6. Please remove www, widgets and docs directories if not used.
