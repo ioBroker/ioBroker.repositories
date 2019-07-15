@@ -1206,10 +1206,10 @@
   "pi-hole": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.pi-hole/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.pi-hole/master/admin/pi-hole.png",
-    "version": "1.0.0",
+    "version": "1.2.1",
     "type": "network",
     "published": "2019-05-29T16:23:00.000Z",
-    "versionDate": "2019-05-29T16:23:00.000Z"
+    "versionDate": "2019-07-01T16:23:00.000Z"
 },
   "piface": {
     "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/io-package.json",
@@ -1558,10 +1558,10 @@
   "stiebel-isg": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.stiebel-isg/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.stiebel-isg/master/admin/stiebel-isg.png",
-    "version": "1.4.4",
+    "version": "1.4.7",
     "type": "climate-control",
     "published": "2018-09-08T19:23:53.004Z",
-    "versionDate": "2019-04-22T19:33:47.485Z"
+    "versionDate": "2019-07-12T19:33:47.485Z"
   },
   "systeminfo": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.systeminfo/master/io-package.json",
