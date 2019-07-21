@@ -165,6 +165,14 @@
     "published": "2018-05-12T17:59:52.182Z",
     "versionDate": "2019-01-20T07:02:31.880Z"
   },
+  "countdown": {
+    "meta": "https://raw.githubusercontent.com/jack-blackson/ioBroker.countdown/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/jack-blackson/ioBroker.countdown/master/admin/countdown.png",
+    "version": "1.0.1",
+    "type": "date-and-time",
+    "published": "2019-07-21T20:43:41.319Z",
+    "versionDate": "2019-07-21T20:43:43.326Z"
+  },
   "cul": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cul/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cul/master/admin/busware.jpg",
