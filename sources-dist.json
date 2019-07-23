@@ -763,6 +763,13 @@
     "published": "2018-11-05T23:29:40.991Z",
     "versionDate": "2018-09-23T21:10:12.043Z"
   },
+  "letrika_comgw": {
+    "meta": "https://raw.githubusercontent.com/AWhiteKnight/ioBroker.letrika_comgw/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AWhiteKnight/ioBroker.letrika_comgw/master/admin/letrika_comgw.png",
+    "type": "energy",
+    "published": "2019-07-23T08:15:00.000Z",
+    "versionDate": "2019-07-23T08:15:00.000Z"
+  },
   "lgtv": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/admin/lgtv.png",
