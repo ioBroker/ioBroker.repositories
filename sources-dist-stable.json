@@ -1071,7 +1071,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/admin/nina.png",
     "version": "0.0.5",
-    "type": "household",
+    "type": "misc-data",
   },
   "node-red": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/io-package.json",
