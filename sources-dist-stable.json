@@ -1444,10 +1444,10 @@
   "snips": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.snips/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.snips/master/admin/snips.png",
-    "version": "1.1.7",
+    "version": "1.5.0",
     "type": "iot-systems",
     "published": "2019-01-16T14:15:00.000Z",
-    "versionDate": "2019-05-28T17:09:00.000Z"
+    "versionDate": "2019-07-25T17:09:00.000Z"
   },
   "snmp": {
     "meta": "https://raw.githubusercontent.com/ctjaeger/ioBroker.snmp/master/io-package.json",
