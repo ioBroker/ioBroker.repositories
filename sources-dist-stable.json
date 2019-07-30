@@ -1061,13 +1061,6 @@
     "type": "climate-control",
     "versionDate": "2019-03-24T15:12:00.840Z"
   },
-  "nightscout": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nightscout/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nightscout/master/admin/nightscout.png",
-    "version": "0.0.8",
-    "published": "2019-07-02T19:15:28.166Z",
-    "type": "household",
-  },
   "nina": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/admin/nina.png",
