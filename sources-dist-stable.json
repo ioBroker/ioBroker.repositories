@@ -1243,6 +1243,14 @@
     "published": "2018-03-14T13:54:23.398Z",
     "versionDate": "2018-04-13T09:28:07.903Z"
   },
+  "plex": {
+    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.plex/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.plex/master/admin/plex.jpg",
+    "type": "multimedia",
+    "version": "0.3.1",
+    "published": "2019-07-20T20:43:00.000Z",
+    "versionDate": "2019-07-20T20:43:00.000Z"
+  },
   "plexconnect": {
     "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.plexconnect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.plexconnect/master/admin/plex-logo.png",
