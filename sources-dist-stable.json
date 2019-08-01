@@ -499,7 +499,7 @@
     "homeconnect": {
     "meta": "https://raw.githubusercontent.com/dna909/ioBroker.homeconnect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/dna909/ioBroker.homeconnect/master/admin/homeconnect.png",
-    "version": "0.0.18",
+    "version": "0.0.22",
     "type": "household",
     "published": "2019-06-13T06:47:49.181Z"
   },
@@ -1068,6 +1068,13 @@
     "published": "2019-03-21T19:15:28.166Z",
     "type": "climate-control",
     "versionDate": "2019-03-24T15:12:00.840Z"
+  },
+  "nina": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/admin/nina.png",
+    "version": "0.0.5",
+    "published": "2019-07-28T11:28:03.378Z",
+    "type": "misc-data",
   },
   "node-red": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/io-package.json",
