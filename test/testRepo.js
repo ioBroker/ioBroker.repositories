@@ -46,22 +46,27 @@ describe('Test Repository', function () {
                     count++;
                     (function (_type, _id) {
                         // console.log('Check "' + _id + '"');
-                        request(latest[_id].meta, function (error, response, body) {
-                            let pack;
-                            try {
-                                pack = JSON.parse(body);
-                            } catch (e) {
-                                console.error('Cannot parse pack "' + _id + '": ' + body);
-                                expect(e).to.be.null;
-                            }
+                        request(latest[_id].meta, (error, response, body) => {
+                            if (error || !body) {
+                                console.error('Cannot get response for "' + _id + '": ' + (error || response.statusCode));
+                            } else {
+                                let pack;
+                                try {
+                                    pack = JSON.parse(body);
+                                } catch (e) {
+                                    console.error('Cannot parse pack "' + _id + '": ' + body);
+                                    expect(e).to.be.null;
+                                }
 
-                            if (pack && pack.common && pack.common.type !== _type) {
-                                console.error('Types in "' + _id + '" are not equal: ' + pack.common.type  + ' !== ' + _type);
-                            }
+                                if (pack && pack.common && pack.common.type !== _type) {
+                                    console.error('Types in "' + _id + '" are not equal: ' + pack.common.type  + ' !== ' + _type);
+                                }
 
-                            /*expect(pack).to.be.not.undefined;
-                            expect(pack.common).to.be.not.undefined;
-                            expect(pack.common.type).to.be.equal(_type);*/
+                                /*expect(pack).to.be.not.undefined;
+                                expect(pack.common).to.be.not.undefined;
+                                expect(pack.common.type).to.be.equal(_type);*/
+
+                            }
 
                             if (!--count) {
                                 done();
@@ -90,7 +95,7 @@ describe('Test Repository', function () {
 		for (let id in repos) {
 		    if (!repos.hasOwnProperty(id)) continue;
 			let repo = repos[id];
-			try{
+			try {
 				let res = await rq(repo.meta, {method: 'GET', json: true});
 				if (res.common.name !== id && id !== 'admin' && id !== 'admin-2') {
 					console.error('adapter names are not equal: ' + id  + ' !== ' + res.common.name);
@@ -99,16 +104,14 @@ describe('Test Repository', function () {
 				if (res.common.type !== repo.type) {
 					console.info('adapter types are not equal in ' + id  + ': ' + repo.type + ' !== ' + res.common.type);
 				}
-			}
-			catch(err){
+			} catch(err){
 				console.error('Meta of adapter ' + id + ': ' + repo.meta + ' not getable');
 				error = true;
 			}
 			if (repo.icon) {
-				try{
+				try {
 					let res = await rq(repo.icon, { method: 'GET', json: true });
-				}
-				catch(err){
+				} catch(err){
 					console.error('Icon of adapter ' + id + ': ' + repo.icon + ' not getable');
 					error = true;
 				}
