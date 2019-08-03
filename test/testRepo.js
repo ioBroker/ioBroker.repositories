@@ -28,7 +28,6 @@ describe('Test Repository', function () {
     });
 
     it('Test Repository: compare types', done => {
-        this.timeout(120000);
         for (let id in stable) {
             if (stable.hasOwnProperty(id)) {
                 expect(id).to.be.equal(id.toLowerCase());
@@ -74,7 +73,7 @@ describe('Test Repository', function () {
             }
         }
         if (!count) done();
-    });
+    }).timeout(120000);
 
     it('Test Repository: check latest vs. stable', done => {
         console.log();
@@ -92,7 +91,7 @@ describe('Test Repository', function () {
 		    if (!repos.hasOwnProperty(id)) continue;
 			let repo = repos[id];
 			try{
-				let res = await rq(repo.meta, { method: 'GET', json: true });				
+				let res = await rq(repo.meta, {method: 'GET', json: true});
 				if (res.common.name !== id && id !== 'admin' && id !== 'admin-2') {
 					console.error('adapter names are not equal: ' + id  + ' !== ' + res.common.name);
 					error = true;
@@ -116,18 +115,17 @@ describe('Test Repository', function () {
 			}
 			//console.info('done with adapter ' + id);
         }
-		if (error)
-			throw "Error occured, see console output";
+		if (error) {
+            throw 'Error occured, see console output';
+        }
 	}
 	
 	it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async function () {
-		this.timeout(120000);   		
         await checkRepos(latest);
-    });
+    }).timeout(120000);
 	
 	it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async function () {
-		this.timeout(120000);   		
         await checkRepos(stable);
-    });
+    }).timeout(120000);
 
 });
