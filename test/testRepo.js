@@ -27,7 +27,7 @@ describe('Test Repository', function () {
         done();
     });
 
-    it('Test Repository: compare types', done => {
+    it('Test Repository: compare types', async () => {
         for (let id in stable) {
             if (stable.hasOwnProperty(id)) {
                 expect(id).to.be.equal(id.toLowerCase());
@@ -37,47 +37,19 @@ describe('Test Repository', function () {
                 expect(latest[id].type).to.be.equal(stable[id].type);
             }
         }
-        let count = 0;
         // compare types with io-package.json
         for (let id in latest) {
             if (latest.hasOwnProperty(id)) {
                 expect(id).to.be.equal(id.toLowerCase());
                 if (latest[id].meta && latest[id].meta.match(/io-package\.json$/)) {
-                    count++;
-                    (function (_type, _id) {
-                        // console.log('Check "' + _id + '"');
-                        request(latest[_id].meta, (error, response, body) => {
-                            if (error || !body) {
-                                console.error('Cannot get response for "' + _id + '": ' + (error || response.statusCode));
-                            } else {
-                                let pack;
-                                try {
-                                    pack = JSON.parse(body);
-                                } catch (e) {
-                                    console.error('Cannot parse pack "' + _id + '": ' + body);
-                                    expect(e).to.be.null;
-                                }
+                    const pack = await rq(latest[id].meta, {method: 'GET', json: true});
 
-                                if (pack && pack.common && pack.common.type !== _type) {
-                                    console.error('Types in "' + _id + '" are not equal: ' + pack.common.type  + ' !== ' + _type);
-                                }
-
-                                /*expect(pack).to.be.not.undefined;
-                                expect(pack.common).to.be.not.undefined;
-                                expect(pack.common.type).to.be.equal(_type);*/
-
-                            }
-
-                            if (!--count) {
-                                done();
-                            }
-                            // console.log('Only ' + count + ' urls left');
-                        });
-                    })(latest[id].type, id);
+                    if (pack && pack.common && pack.common.type !== latest[id].type) {
+                        console.error('Types in "' + id + '" are not equal: ' + pack.common.type  + ' !== ' + latest[id].type);
+                    }
                 }
             }
         }
-        if (!count) done();
     }).timeout(120000);
 
     it('Test Repository: check latest vs. stable', done => {
