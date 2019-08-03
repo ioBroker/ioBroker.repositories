@@ -6,8 +6,8 @@ const rq      = require('request-promise-native');
 let latest;
 let stable;
 
-describe('Test Repository', function() {
-    it('Test Repository: latest', function (done) {
+describe('Test Repository', function () {
+    it('Test Repository: latest', done => {
         let text = fs.readFileSync(__dirname + '/../sources-dist.json');
         try {
             latest = JSON.parse(text);
@@ -17,7 +17,7 @@ describe('Test Repository', function() {
         done();
     });
 
-    it('Test Repository: stable', function (done) {
+    it('Test Repository: stable', done => {
         let text = fs.readFileSync(__dirname + '/../sources-dist-stable.json');
         try {
             stable = JSON.parse(text);
@@ -27,7 +27,7 @@ describe('Test Repository', function() {
         done();
     });
 
-    it('Test Repository: compare types', function (done) {
+    it('Test Repository: compare types', done => {
         this.timeout(120000);
         for (let id in stable) {
             if (stable.hasOwnProperty(id)) {
@@ -52,7 +52,7 @@ describe('Test Repository', function() {
                             try {
                                 pack = JSON.parse(body);
                             } catch (e) {
-                                console.error('Cannot parse pack "' + _id + '": ' + e);
+                                console.error('Cannot parse pack "' + _id + '": ' + body);
                                 expect(e).to.be.null;
                             }
 
@@ -76,7 +76,7 @@ describe('Test Repository', function() {
         if (!count) done();
     });
 
-    it('Test Repository: check latest vs. stable', function (done) {
+    it('Test Repository: check latest vs. stable', done => {
         console.log();
         for (let id in latest) {
             if (latest.hasOwnProperty(id) && !stable.hasOwnProperty(id)) {
@@ -89,14 +89,15 @@ describe('Test Repository', function() {
 	async function checkRepos(repos) {
 		let error = false;		
 		for (let id in repos) {
+		    if (!repos.hasOwnProperty(id)) continue;
 			let repo = repos[id];
 			try{
 				let res = await rq(repo.meta, { method: 'GET', json: true });				
-				if (res.common.name != id && id != 'admin' && id != 'admin-2') {
+				if (res.common.name !== id && id !== 'admin' && id !== 'admin-2') {
 					console.error('adapter names are not equal: ' + id  + ' !== ' + res.common.name);
 					error = true;
 				}
-				if (res.common.type != repo.type) {
+				if (res.common.type !== repo.type) {
 					console.info('adapter types are not equal in ' + id  + ': ' + repo.type + ' !== ' + res.common.type);
 				}
 			}
