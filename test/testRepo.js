@@ -38,19 +38,22 @@ describe('Test Repository', function () {
             }
         }
         // compare types with io-package.json
+        const len = Object.keys(latest).length;
+        let i = 0;
         for (let id in latest) {
             if (latest.hasOwnProperty(id)) {
                 expect(id).to.be.equal(id.toLowerCase());
                 if (latest[id].meta && latest[id].meta.match(/io-package\.json$/)) {
                     const pack = await rq(latest[id].meta, {method: 'GET', json: true});
-
+                    console.log(`[${i}/${len}] Check ${id}`);
                     if (pack && pack.common && pack.common.type !== latest[id].type) {
                         console.error('Types in "' + id + '" are not equal: ' + pack.common.type  + ' !== ' + latest[id].type);
                     }
                 }
             }
+            i++;
         }
-    }).timeout(120000);
+    }).timeout(180000);
 
     it('Test Repository: check latest vs. stable', done => {
         console.log();
@@ -62,11 +65,15 @@ describe('Test Repository', function () {
         done();
     });
 	
-	async function checkRepos(repos) {
-		let error = false;		
+	async function checkRepos(name, repos) {
+		let error = false;
+        const len = Object.keys(repos).length;
+        let i = 0;
 		for (let id in repos) {
 		    if (!repos.hasOwnProperty(id)) continue;
 			let repo = repos[id];
+            console.log(`${name}: [${i}/${len}] Check ${id}`);
+
 			try {
 				let res = await rq(repo.meta, {method: 'GET', json: true});
 				if (res.common.name !== id && id !== 'admin' && id !== 'admin-2') {
@@ -89,6 +96,7 @@ describe('Test Repository', function () {
 				}
 			}
 			//console.info('done with adapter ' + id);
+            i++;
         }
 		if (error) {
             throw 'Error occured, see console output';
@@ -96,11 +104,11 @@ describe('Test Repository', function () {
 	}
 	
 	it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async () =>
-        await checkRepos(latest)
-    ).timeout(120000);
+        await checkRepos('latest', latest)
+    ).timeout(180000);
 	
 	it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async () =>
-        await checkRepos(stable)
-    ).timeout(120000);
+        await checkRepos('stable', stable)
+    ).timeout(180000);
 
 });
