@@ -105,10 +105,10 @@ describe('Test Repository', function () {
 	
 	it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async () =>
         await checkRepos('latest', latest)
-    ).timeout(360000);
+    ).timeout(480000);
 	
 	it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async () =>
         await checkRepos('stable', stable)
-    ).timeout(360000);
+    ).timeout(480000);
 
 });
