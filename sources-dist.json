@@ -1644,6 +1644,20 @@
     "published": "2018-07-10T12:20:15.468Z",
     "versionDate": "2019-03-15T10:07:41.653Z"
   },
+  "tino": {
+    "meta": "https://raw.githubusercontent.com/bowao/ioBroker.tino/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bowao/ioBroker.tino/master/admin/tino.png",
+    "type": "hardware",
+    "published": "2019-08-09T20:30:26.824Z",
+    "versionDate": "2019-08-09T20:30:26.824Z"
+  },
+"tinyrx4": {
+    "meta": "https://raw.githubusercontent.com/bowao/ioBroker.tinyrx4/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bowao/ioBroker.tinyrx4/master/admin/tinyRX4.png",
+    "type": "hardware",
+    "published": "2019-08-09T19:16:19.154Z",
+    "versionDate": "2019-08-09T19:16:19.154Z"
+  },
   "tr-064": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.tr-064/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.tr-064/master/admin/tr-064.png",
