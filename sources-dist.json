@@ -1036,6 +1036,13 @@
     "published": "2016-06-19T20:44:36.935Z",
     "versionDate": "2018-01-30T14:48:13.680Z"
   },
+  "multicast": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.multicast/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.multicast/master/admin/multicast.png",
+    "type": "weather",
+    "published": "2019-08-07T22:40:00.000",
+    "versionDate": "2019-08-07T22:40:00.000"
+  },
   "musiccast": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.musiccast/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.musiccast/master/admin/musiccast.png",
