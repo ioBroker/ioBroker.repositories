@@ -1750,6 +1750,13 @@
     "published": "2016-09-28T09:50:23.697Z",
     "versionDate": "2017-12-26T19:25:15.711Z"
   },
+  "wlan-thermo": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wlanthermo-nano/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wlanthermo-nano/master/admin/wlanthermo-nano.png",
+    "type": "household",
+    "published": "2019-08-15T09:30:00.000",
+    "versionDate": "2019-08-15T09:30:00.000"
+  },
   "wm-bus": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.wm-bus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.wm-bus/master/admin/wm-bus.png",
