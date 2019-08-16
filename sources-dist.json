@@ -1038,7 +1038,7 @@
   },
   "multicast": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.multicast/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.multicast/master/admin/multicast.jpeg",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.multicast/master/admin/multicast.png",
     "type": "network",
     "published": "2019-08-07T22:40:00.000",
     "versionDate": "2019-08-07T22:40:00.000"
@@ -1909,6 +1909,13 @@
     "type": "lighting",
     "published": "2016-09-28T09:50:23.697Z",
     "versionDate": "2017-12-26T19:25:15.711Z"
+  },
+  "wlanthermo-nano": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wlanthermo-nano/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wlanthermo-nano/master/admin/wlanthermo-nano.png",
+    "type": "household",
+    "published": "2019-08-15T09:30:00.000",
+    "versionDate": "2019-08-15T09:30:00.000"
   },
   "wm-bus": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.wm-bus/master/io-package.json",
