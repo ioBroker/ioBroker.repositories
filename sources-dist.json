@@ -503,6 +503,13 @@
     "published": "2015-03-04T22:35:03.350Z",
     "versionDate": "2018-08-17T21:45:06.259Z"
   },
+  "hue-extended": {
+    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.hue-extended/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.hue-extended/master/admin/hue-extended.png",
+    "type": "lighting",
+    "published": "2019-08-16T20:23:00.000Z",
+    "versionDate": "2019-08-16T20:23:00.000Z"
+  },
   "hyperion": {
     "meta": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.hyperion/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.hyperion/master/admin/hyperion.png",
