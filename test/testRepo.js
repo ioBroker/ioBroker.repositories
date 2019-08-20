@@ -6,8 +6,8 @@ const rq      = require('request-promise-native');
 let latest;
 let stable;
 
-describe('Test Repository', function() {
-    it('Test Repository: latest', function (done) {
+describe('Test Repository', function () {
+    it('Test Repository: latest', done => {
         let text = fs.readFileSync(__dirname + '/../sources-dist.json');
         try {
             latest = JSON.parse(text);
@@ -17,7 +17,7 @@ describe('Test Repository', function() {
         done();
     });
 
-    it('Test Repository: stable', function (done) {
+    it('Test Repository: stable', done => {
         let text = fs.readFileSync(__dirname + '/../sources-dist-stable.json');
         try {
             stable = JSON.parse(text);
@@ -27,8 +27,7 @@ describe('Test Repository', function() {
         done();
     });
 
-    it('Test Repository: compare types', function (done) {
-        this.timeout(120000);
+    it('Test Repository: compare types', async () => {
         for (let id in stable) {
             if (stable.hasOwnProperty(id)) {
                 expect(id).to.be.equal(id.toLowerCase());
@@ -38,45 +37,25 @@ describe('Test Repository', function() {
                 expect(latest[id].type).to.be.equal(stable[id].type);
             }
         }
-        let count = 0;
         // compare types with io-package.json
+        const len = Object.keys(latest).length;
+        let i = 0;
         for (let id in latest) {
             if (latest.hasOwnProperty(id)) {
                 expect(id).to.be.equal(id.toLowerCase());
                 if (latest[id].meta && latest[id].meta.match(/io-package\.json$/)) {
-                    count++;
-                    (function (_type, _id) {
-                        // console.log('Check "' + _id + '"');
-                        request(latest[_id].meta, function (error, response, body) {
-                            let pack;
-                            try {
-                                pack = JSON.parse(body);
-                            } catch (e) {
-                                console.error('Cannot parse pack "' + _id + '": ' + e);
-                                expect(e).to.be.null;
-                            }
-
-                            if (pack && pack.common && pack.common.type !== _type) {
-                                console.error('Types in "' + _id + '" are not equal: ' + pack.common.type  + ' !== ' + _type);
-                            }
-
-                            /*expect(pack).to.be.not.undefined;
-                            expect(pack.common).to.be.not.undefined;
-                            expect(pack.common.type).to.be.equal(_type);*/
-
-                            if (!--count) {
-                                done();
-                            }
-                            // console.log('Only ' + count + ' urls left');
-                        });
-                    })(latest[id].type, id);
+                    const pack = await rq(latest[id].meta, {method: 'GET', json: true});
+                    console.log(`[${i}/${len}] Check ${id}`);
+                    if (pack && pack.common && pack.common.type !== latest[id].type) {
+                        console.error('Types in "' + id + '" are not equal: ' + pack.common.type  + ' !== ' + latest[id].type);
+                    }
                 }
             }
+            i++;
         }
-        if (!count) done();
-    });
+    }).timeout(360000);
 
-    it('Test Repository: check latest vs. stable', function (done) {
+    it('Test Repository: check latest vs. stable', done => {
         console.log();
         for (let id in latest) {
             if (latest.hasOwnProperty(id) && !stable.hasOwnProperty(id)) {
@@ -86,47 +65,50 @@ describe('Test Repository', function() {
         done();
     });
 	
-	async function checkRepos(repos) {
-		let error = false;		
+	async function checkRepos(name, repos) {
+		let error = false;
+        const len = Object.keys(repos).length;
+        let i = 0;
 		for (let id in repos) {
+		    if (!repos.hasOwnProperty(id)) continue;
 			let repo = repos[id];
-			try{
-				let res = await rq(repo.meta, { method: 'GET', json: true });				
-				if (res.common.name != id && id != 'admin' && id != 'admin-2') {
+            console.log(`${name}: [${i}/${len}] Check ${id}`);
+
+			try {
+				let res = await rq(repo.meta, {method: 'GET', json: true});
+				if (res.common.name !== id && id !== 'admin' && id !== 'admin-2') {
 					console.error('adapter names are not equal: ' + id  + ' !== ' + res.common.name);
 					error = true;
 				}
-				if (res.common.type != repo.type) {
+				if (res.common.type !== repo.type) {
 					console.info('adapter types are not equal in ' + id  + ': ' + repo.type + ' !== ' + res.common.type);
 				}
-			}
-			catch(err){
+			} catch(err){
 				console.error('Meta of adapter ' + id + ': ' + repo.meta + ' not getable');
 				error = true;
 			}
 			if (repo.icon) {
-				try{
+				try {
 					let res = await rq(repo.icon, { method: 'GET', json: true });
-				}
-				catch(err){
+				} catch(err){
 					console.error('Icon of adapter ' + id + ': ' + repo.icon + ' not getable');
 					error = true;
 				}
 			}
 			//console.info('done with adapter ' + id);
+            i++;
         }
-		if (error)
-			throw "Error occured, see console output";
+		if (error) {
+            throw 'Error occured, see console output';
+        }
 	}
 	
-	it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async function () {
-		this.timeout(120000);   		
-        await checkRepos(latest);
-    });
+	it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async () =>
+        await checkRepos('latest', latest)
+    ).timeout(480000);
 	
-	it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async function () {
-		this.timeout(120000);   		
-        await checkRepos(stable);
-    });
+	it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async () =>
+        await checkRepos('stable', stable)
+    ).timeout(480000);
 
 });
