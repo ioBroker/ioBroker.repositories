@@ -55,3 +55,9 @@ gulp.task('latest', done => {
         });
     });
 });
+
+gulp.task('sort', done => {
+    const scripts = require('./lib/scripts');
+    scripts.init(() =>
+        done());
+});

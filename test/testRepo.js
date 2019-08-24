@@ -1,7 +1,6 @@
 'use strict';
 let expect    = require('chai').expect;
 const fs      = require('fs');
-const request = require('request');
 const rq      = require('request-promise-native');
 let latest;
 let stable;
@@ -54,6 +53,96 @@ describe('Test Repository', function () {
             i++;
         }
     }).timeout(360000);
+
+    it('Test Repository: Versions in latest', done => {
+        let text = fs.readFileSync(__dirname + '/../sources-dist.json');
+        latest = JSON.parse(text);
+        for (const name in latest) {
+            if (!latest.hasOwnProperty(name)) {
+                continue;
+            }
+            expect(!!latest[name].published).to.be.true;
+
+            if (new Date(latest[name].published).toString() === 'Invalid Date') {
+                console.error(`Adapter ${name} has invalid published date: "${latest[name].published}"`);
+            }
+
+            expect(new Date(latest[name].published).toString()).to.be.not.equal('Invalid Date');
+
+            if (new Date(latest[name].versionDate).toString() === 'Invalid Date') {
+                console.error(`Adapter ${name} has invalid versionDate: "${latest[name].versionDate}"`);
+            }
+
+            expect(!!latest[name].versionDate).to.be.true;
+            expect(new Date(latest[name].versionDate).toString()).to.be.not.equal('Invalid Date');
+
+            expect(!!latest[name].meta).to.be.true;
+            expect(!latest[name].meta.match(/\s/)).to.be.true;
+
+            if (name !== 'js-controller') {
+                if (!latest[name].icon) {
+                    console.error(`Adapter ${name} has no icon in latest`);
+                }
+                expect(!!latest[name].icon).to.be.true;
+                expect(!latest[name].icon.match(/\s/)).to.be.true;
+            }
+        }
+        done();
+    });
+
+    it('Test Repository: Versions in stable', done => {
+        let text = fs.readFileSync(__dirname + '/../sources-dist-stable.json');
+        stable = JSON.parse(text);
+        for (const name in stable) {
+            if (!stable.hasOwnProperty(name)) {
+                continue;
+            }
+            if (new Date(stable[name].published).toString() === 'Invalid Date') {
+                console.error(`Adapter ${name} has invalid published: "${stable[name].published}"`);
+            }
+            expect(!!stable[name].published).to.be.true;
+            expect(new Date(stable[name].published).toString()).to.be.not.equal('Invalid Date');
+
+            if (new Date(stable[name].versionDate).toString() === 'Invalid Date') {
+                console.error(`Adapter ${name} has invalid versionDate: "${stable[name].versionDate}"`);
+            }
+            expect(!!stable[name].versionDate).to.be.true;
+            expect(new Date(stable[name].versionDate).toString()).to.be.not.equal('Invalid Date');
+
+            expect(!!stable[name].version).to.be.true;
+            expect(!stable[name].version.match(/\s/)).to.be.true;
+
+            expect(!!stable[name].meta).to.be.true;
+            expect(!stable[name].meta.match(/\s/)).to.be.true;
+
+            if (name !== 'js-controller') {
+                if (!stable[name].icon) {
+                    console.error(`Adapter ${name} has no icon in stable`);
+                }
+
+                expect(!!stable[name].icon).to.be.true;
+                expect(!stable[name].icon.match(/\s/)).to.be.true;
+            }
+        }
+        done();
+    });
+
+    it('Test Repository: Compare stable and latest', done => {
+        stable = JSON.parse(fs.readFileSync(__dirname + '/../sources-dist-stable.json').toString('utf8'));
+        latest = JSON.parse(fs.readFileSync(__dirname + '/../sources-dist.json').toString('utf8'));
+        for (const name in stable) {
+            if (!stable.hasOwnProperty(name)) continue;
+
+            // latest must have all stable adapters and more unstable
+            expect(!!latest[name]).to.be.true;
+
+            expect(latest[name].meta).to.be.equal(stable[name].meta);
+            expect(latest[name].icon).to.be.equal(stable[name].icon);
+            expect(latest[name].type).to.be.equal(stable[name].type);
+        }
+
+        done();
+    });
 
     it('Test Repository: check latest vs. stable', done => {
         console.log();
