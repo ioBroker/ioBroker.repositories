@@ -617,8 +617,8 @@
   },
   "icons-open-icon-library-png": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-open-icon-library-png/master/io-package.json",
-    "url": "https://github.com/ioBroker/ioBroker.icons-open-icon-library-png/tarball/master",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-open-icon-library-png/master/admin/icons-open-icon-library-png.png",
+    "url": "https://github.com/ioBroker/ioBroker.icons-open-icon-library-png/tarball/master",
     "type": "visualization-icons",
     "published": "2015-05-31T17:49:40.646Z",
     "versionDate": "2019-01-04T05:20:50.689Z"
@@ -1088,8 +1088,8 @@
   "nibeuplink": {
     "meta": "https://raw.githubusercontent.com/sebilm/ioBroker.nibeuplink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/sebilm/ioBroker.nibeuplink/master/admin/nibeuplink.png",
-    "published": "2019-03-21T19:15:28.166Z",
     "type": "climate-control",
+    "published": "2019-03-21T19:15:28.166Z",
     "versionDate": "2019-03-24T15:12:03.611Z"
   },
   "nina": {
@@ -1914,8 +1914,8 @@
   "wiffi-wz": {
     "meta": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.wiffi-wz/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.wiffi-wz/master/admin/wiffi-wz.png",
-    "published": "2017-12-10T19:27:01.107Z",
     "type": "hardware",
+    "published": "2017-12-10T19:27:01.107Z",
     "versionDate": "2019-06-29T07:14:13.591Z"
   },
   "wifilight": {
