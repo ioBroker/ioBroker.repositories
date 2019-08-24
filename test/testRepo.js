@@ -188,7 +188,7 @@ describe('Test Repository', function () {
             i++;
         }
 		if (error) {
-            throw 'Error occured, see console output';
+            throw 'Error occurred, see console output';
         }
 	}
 	
