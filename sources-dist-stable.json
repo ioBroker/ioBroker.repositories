@@ -2021,5 +2021,13 @@
     "version": "1.4.2",
     "published": "2015-01-03T00:02:56.370Z",
     "versionDate": "2019-07-01T19:44:42.826Z"
+  },
+  "linkeddevices": {
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.linkeddevices/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.linkeddevices/master/admin/linkeddevices.png",
+    "type": "logic",
+    "published": "2019-05-13T19:01:00.991Z",
+    "versionDate": "2019-09-02T22:41:00.000Z",
+    "version": "1.0.0"
   }
 }
