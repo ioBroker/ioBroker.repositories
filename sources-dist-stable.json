@@ -34,7 +34,7 @@
     "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/admin/mh-logo.png",
     "version": "1.0.0",
-	  "type": "climate-control",
+    "type": "climate-control",
     "published": "2018-07-16T12:45:33.660Z",
     "versionDate": "2019-06-23T15:55:20.832Z"
   },
@@ -387,7 +387,7 @@
     "type": "utility",
     "published": "2018-12-16T11:09:00.000Z",
     "versionDate": "2019-05-22T19_01_59_071Z"
-  },  
+  },
   "g-homa": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.g-homa/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.g-homa/master/admin/g-homa.png",
@@ -496,7 +496,7 @@
     "published": "2019-01-23T19:53:36.140Z",
     "versionDate": "2019-07-03T19:57:36.140Z"
   },
-    "homeconnect": {
+  "homeconnect": {
     "meta": "https://raw.githubusercontent.com/dna909/ioBroker.homeconnect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/dna909/ioBroker.homeconnect/master/admin/homeconnect.png",
     "version": "0.0.22",
@@ -663,14 +663,14 @@
     "published": "2018-09-22T16:11:37.398Z",
     "versionDate": "2019-04-15T07:11:56.014Z"
   },
- "iqontrol": {
+  "iqontrol": {
     "meta": "https://raw.githubusercontent.com/sbormann/ioBroker.iqontrol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/sbormann/ioBroker.iqontrol/master/admin/iqontrol.png",
     "type": "visualization",
     "version": "0.1.0",
     "published": "2019-04-25T19:54:15.696Z",
     "versionDate": "2019-07-27T21:55:25.988Z"
-  },	
+  },
   "javascript": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/admin/javascript.png",
@@ -1217,7 +1217,7 @@
     "type": "network",
     "published": "2019-05-29T16:23:00.000Z",
     "versionDate": "2019-07-01T16:23:00.000Z"
-},
+  },
   "piface": {
     "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/admin/piface.png",
@@ -1996,5 +1996,13 @@
     "version": "1.4.2",
     "type": "hardware",
     "published": "2015-01-03T00:02:56.370Z"
+  },
+  "linkeddevices": {
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.linkeddevices/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.linkeddevices/master/admin/linkeddevices.png",
+    "type": "logic",
+    "published": "2019-05-13T19:01:00.991Z",
+    "versionDate": "2019-09-02T17:21:00.000Z",
+    "version": "1.0.0"
   }
 }
