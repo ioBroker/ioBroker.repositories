@@ -141,7 +141,7 @@
     "type": "multimedia",
     "version": "2.2.3",
     "published": "2016-01-18T22:15:11.609Z",
-    "versionDate": "2019-03-19T22:02:40.457Z"
+    "versionDate": "2019-03-18T23:19:36.095Z"
   },
   "cloud": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/io-package.json",
@@ -170,10 +170,10 @@
   "countdown": {
     "meta": "https://raw.githubusercontent.com/jack-blackson/ioBroker.countdown/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/jack-blackson/ioBroker.countdown/master/admin/countdown.png",
-    "version": "1.0.4",
     "type": "date-and-time",
+    "version": "1.0.4",
     "published": "2019-08-25T19:43:41.319Z",
-    "versionDate": "2019-08-25T19:43:43.326Z"
+    "versionDate": "2019-08-25T18:54:04.351Z"
   },
   "cul": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cul/master/io-package.json",
@@ -830,13 +830,13 @@
     "published": "2018-06-10T19:29:40.991Z",
     "versionDate": "2019-03-28T14:38:35.309Z"
   },
-    "linkeddevices": {
+  "linkeddevices": {
     "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.linkeddevices/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.linkeddevices/master/admin/linkeddevices.png",
     "type": "logic",
+    "version": "1.0.0",
     "published": "2019-05-13T19:01:00.991Z",
-    "versionDate": "2019-09-02T22:41:00.000Z",
-    "version": "1.0.0"
+    "versionDate": "2019-09-02T15:18:51.670Z"
   },
   "loxone": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/io-package.json",
@@ -924,7 +924,7 @@
     "type": "household",
     "version": "0.0.14",
     "published": "2019-05-17T10:00:00.00Z",
-    "versionDate": "2019-09-01T11:57:36.465Z"
+    "versionDate": "2019-09-01T20:49:49.066Z"
   },
   "meross": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.meross/master/io-package.json",
@@ -1100,7 +1100,7 @@
     "type": "misc-data",
     "version": "0.0.8",
     "published": "2019-07-28T11:28:03.378Z",
-    "versionDate": "2019-09-01T11:17:24.450Z"
+    "versionDate": "2019-09-01T10:00:07.119Z"
   },
   "node-red": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/io-package.json",
@@ -1724,7 +1724,7 @@
     "type": "climate-control",
     "version": "1.2.0",
     "published": "2017-10-16T19:37:29.283Z",
-    "versionDate": "2019-06-23T18:35:27.683Z"
+    "versionDate": "2019-08-08T20:49:43.905Z"
   },
   "virtualpowermeter": {
     "meta": "https://raw.githubusercontent.com/Omega236/ioBroker.virtualpowermeter/master/io-package.json",
