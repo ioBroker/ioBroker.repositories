@@ -559,6 +559,14 @@
     "published": "2015-03-04T22:35:03.350Z",
     "versionDate": "2019-07-14T20:21:39.635Z"
   },
+  "hue-extended": {
+    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.hue-extended/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.hue-extended/master/admin/hue-extended.png",
+    "type": "lighting",
+    "version": "0.8.0",
+    "published": "2019-09-08T19:20:00.000Z",
+    "versionDate": "2019-09-08T19:20:00.000Z"
+  },
   "ical": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ical/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ical/master/admin/ical.png",
