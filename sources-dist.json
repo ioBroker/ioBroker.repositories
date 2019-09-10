@@ -2022,5 +2022,12 @@
     "type": "hardware",
     "published": "2015-01-03T00:02:56.370Z",
     "versionDate": "2019-09-05T14:41:00.444Z"
+  },
+  "zwave2": {
+    "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg",
+    "published": "2019-09-04T20:40:37.945Z",
+    "versionDate": "2019-09-04T20:40:37.945Z",
+    "type": "hardware"
   }
 }
