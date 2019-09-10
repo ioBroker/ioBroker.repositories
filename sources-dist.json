@@ -123,7 +123,7 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.bring/master/admin/bring.png",
     "type": "household",
     "published": "2019-02-12T20:10:09.422Z",
-    "versionDate": "2019-08-30T16:29:55.330Z"
+    "versionDate": "2019-09-07T17:44:55.723Z"
   },
   "broadlink2": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/io-package.json",
@@ -445,7 +445,7 @@
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/admin/heatingcontrol.png",
     "type": "climate-control",
     "published": "2019-04-27T15:11:04.962Z",
-    "versionDate": "2019-08-25T14:18:50.705Z"
+    "versionDate": "2019-09-08T10:43:58.355Z"
   },
   "heytech": {
     "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.heytech/master/io-package.json",
@@ -508,7 +508,7 @@
     "icon": "https://raw.githubusercontent.com/dna909/ioBroker.homeconnect/master/admin/homeconnect.png",
     "type": "household",
     "published": "2018-10-11T03:59:49.298Z",
-    "versionDate": "2019-07-26T12:38:33.953Z"
+    "versionDate": "2019-09-09T07:14:29.345Z"
   },
   "homee": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.homee/master/io-package.json",
@@ -550,7 +550,7 @@
     "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.hue-extended/master/admin/hue-extended.png",
     "type": "lighting",
     "published": "2019-08-09T22:00:27.913Z",
-    "versionDate": "2019-09-03T16:41:29.860Z"
+    "versionDate": "2019-09-09T17:33:33.661Z"
   },
   "hyperion": {
     "meta": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.hyperion/master/io-package.json",
@@ -649,7 +649,7 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.info/master/admin/info.png",
     "type": "misc-data",
     "published": "2017-12-08T12:55:08.977Z",
-    "versionDate": "2019-08-26T16:39:34.648Z"
+    "versionDate": "2019-09-09T09:07:38.969Z"
   },
   "innogy-smarthome": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.innogy-smarthome/master/io-package.json",
@@ -670,21 +670,21 @@
     "icon": "https://raw.githubusercontent.com/nisiode/ioBroker.iogo/master/admin/iogo.png",
     "type": "visualization",
     "published": "2018-09-10T19:15:03.742Z",
-    "versionDate": "2019-09-02T20:44:00.186Z"
+    "versionDate": "2019-09-07T18:27:19.361Z"
   },
   "iot": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.iot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.iot/master/admin/iot.png",
     "type": "communication",
     "published": "2018-09-22T16:11:37.398Z",
-    "versionDate": "2019-08-10T18:25:30.573Z"
+    "versionDate": "2019-09-10T21:04:21.181Z"
   },
   "iqontrol": {
     "meta": "https://raw.githubusercontent.com/sbormann/ioBroker.iqontrol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/sbormann/ioBroker.iqontrol/master/admin/iqontrol.png",
     "type": "visualization",
     "published": "2019-04-25T19:54:15.696Z",
-    "versionDate": "2019-09-01T21:46:12.374Z"
+    "versionDate": "2019-09-07T11:52:32.214Z"
   },
   "javascript": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/io-package.json",
@@ -859,7 +859,7 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/admin/lupusec.png",
     "type": "alarm",
     "published": "2018-05-17T18:33:39.641Z",
-    "versionDate": "2019-06-10T11:10:55.151Z"
+    "versionDate": "2019-09-07T06:16:00.100Z"
   },
   "luxtronik1": {
     "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.luxtronik1/master/io-package.json",
@@ -1461,7 +1461,7 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/admin/simple-api.png",
     "type": "communication",
     "published": "2015-02-06T06:54:32.754Z",
-    "versionDate": "2019-07-08T21:09:06.041Z"
+    "versionDate": "2019-09-05T20:39:13.736Z"
   },
   "sma-em": {
     "meta": "https://raw.githubusercontent.com/ctjaeger/ioBroker.sma-em/master/io-package.json",
@@ -1678,7 +1678,7 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/admin/tradfri.png",
     "type": "lighting",
     "published": "2017-08-23T11:33:34.827Z",
-    "versionDate": "2019-08-18T07:47:07.262Z"
+    "versionDate": "2019-09-05T14:21:08.711Z"
   },
   "tunnelbroker-endpoint-updater": {
     "meta": "https://raw.githubusercontent.com/PowerPan/ioBroker.tunnelbroker-endpoint-updater/master/io-package.json",
@@ -2021,6 +2021,6 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zwave/master/admin/zwave.png",
     "type": "hardware",
     "published": "2015-01-03T00:02:56.370Z",
-    "versionDate": "2019-08-14T10:37:57.048Z"
+    "versionDate": "2019-09-05T14:41:00.444Z"
   }
 }
