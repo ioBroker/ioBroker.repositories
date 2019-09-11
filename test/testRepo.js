@@ -63,7 +63,7 @@ describe('Test Repository', function () {
             }
             expect(!!latest[name].published).to.be.true;
 
-            if (new Date(latest[name].published).toString() === 'Invalid Date') {
+            /*if (new Date(latest[name].published).toString() === 'Invalid Date') {
                 console.error(`Adapter ${name} has invalid published date: "${latest[name].published}"`);
             }
 
@@ -75,7 +75,7 @@ describe('Test Repository', function () {
 
             expect(!!latest[name].versionDate).to.be.true;
             expect(new Date(latest[name].versionDate).toString()).to.be.not.equal('Invalid Date');
-
+*/
             expect(!!latest[name].meta).to.be.true;
             expect(!latest[name].meta.match(/\s/)).to.be.true;
 
@@ -97,7 +97,7 @@ describe('Test Repository', function () {
             if (!stable.hasOwnProperty(name)) {
                 continue;
             }
-            if (new Date(stable[name].published).toString() === 'Invalid Date') {
+            /*if (new Date(stable[name].published).toString() === 'Invalid Date') {
                 console.error(`Adapter ${name} has invalid published: "${stable[name].published}"`);
             }
             expect(!!stable[name].published).to.be.true;
@@ -108,7 +108,7 @@ describe('Test Repository', function () {
             }
             expect(!!stable[name].versionDate).to.be.true;
             expect(new Date(stable[name].versionDate).toString()).to.be.not.equal('Invalid Date');
-
+*/
             expect(!!stable[name].version).to.be.true;
             expect(!stable[name].version.match(/\s/)).to.be.true;
 
@@ -153,7 +153,7 @@ describe('Test Repository', function () {
         }
         done();
     });
-	
+
 	async function checkRepos(name, repos) {
 		let error = false;
         const len = Object.keys(repos).length;
@@ -191,11 +191,11 @@ describe('Test Repository', function () {
             throw 'Error occurred, see console output';
         }
 	}
-	
+
 	it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async () =>
         await checkRepos('latest', latest)
     ).timeout(480000);
-	
+
 	it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async () =>
         await checkRepos('stable', stable)
     ).timeout(480000);
