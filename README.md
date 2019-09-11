@@ -17,7 +17,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 2. Do not use in the title the words "ioBroker" or "Adapter". It is clear anyway, that it is adapter for ioBroker.
 3. *title* in io-package.json (common) is simple short name of adapter in english. *titleLang* is object that consist short names in many languages. *Lang* ist not german Länge, but english LANGuages.
 4. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md).
-   
+
    **In README.md, there must be a link to the device or the manufacturer's website. Devices must have a photo. Services do not require a photo, but are still welcome.**
 5. Adapter must have a predefined license.
 6. Please remove www, widgets and docs directories if not used.
@@ -29,7 +29,6 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 12. iobroker organisation must be added as owner to npm package. [Why and how to do that.](#add-owner-to-packet)
 13. Add your adapter into the list (first latest and after that into stable, when tested).
    Examples of entries you can find [here](#samples).
-   *Note*: don't forget to add attribute *published* to **both** repositories.
 14. **new!** No new adapters will be accepted to repo without admin3 Configuration dialog. Admin2 dialog is optional!
 
 *Note:* you can watch the video about it (only german) on [youtube](https://www.youtube.com/watch?v=7N8fsJcAdlE)
@@ -162,7 +161,6 @@ For **latest** (sources-dist.json):
   "admin": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
-    "published": "2017-04-10T17:10:21.690Z",
     "type": "general"
   },
 ```
@@ -173,9 +171,8 @@ For **stable** (sources-dist-stable.json):
   "admin": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
-    "version": "2.0.7",
-    "published": "2017-04-10T17:10:21.690Z",
-    "type": "general"
+    "type": "general",
+    "version": "2.0.7"
   },
 ```
 

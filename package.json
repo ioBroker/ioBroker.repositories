@@ -18,7 +18,8 @@
     "init": "node lib/scripts.js --init",
     "test": "node node_modules/mocha/bin/mocha --exit",
     "list": "node lib/scripts.js --list --file /var/www/download/list.html",
-    "repos": "node lib/build.js --stable /var/www/download/sources-dist.json --latest /var/www/download/sources-dist-latest.json --shields /var/www/download/img"
+    "repos": "node lib/build.js --stable /var/www/download/sources-dist.json --latest /var/www/download/sources-dist-latest.json --shields /var/www/download/img",
+    "nodates": "node lib/scripts.js --nodates"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
