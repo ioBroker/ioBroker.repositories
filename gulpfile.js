@@ -61,3 +61,9 @@ gulp.task('sort', done => {
     scripts.sort();
     done()
 });
+
+gulp.task('nodates', done => {
+    const scripts = require('./lib/scripts');
+    scripts.nodates();
+    done()
+});
