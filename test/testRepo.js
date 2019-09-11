@@ -61,9 +61,9 @@ describe('Test Repository', function () {
             if (!latest.hasOwnProperty(name)) {
                 continue;
             }
-            expect(!!latest[name].published).to.be.true;
+            /*expect(!!latest[name].published).to.be.true;
 
-            /*if (new Date(latest[name].published).toString() === 'Invalid Date') {
+            if (new Date(latest[name].published).toString() === 'Invalid Date') {
                 console.error(`Adapter ${name} has invalid published date: "${latest[name].published}"`);
             }
 
