@@ -1,5 +1,6 @@
-const gulp    = require('gulp');
+const gulp = require('gulp');
 const request = require('request');
+const yargs = require('yargs');
 
 // check if all adapters in stable have the version attribute
 // and published attribute
@@ -59,11 +60,20 @@ gulp.task('latest', done => {
 gulp.task('sort', done => {
     const scripts = require('./lib/scripts');
     scripts.sort();
-    done()
+    done();
 });
 
 gulp.task('nodates', done => {
     const scripts = require('./lib/scripts');
     scripts.nodates();
-    done()
+    done();
+});
+
+gulp.task('addToLatest', async () => {
+    const {name, type} = yargs.argv;
+    if (typeof name !== 'string') throw new Error('Please specify the adapter name!');
+    if (typeof type !== 'string') throw new Error('Please specify the adapter type!');
+
+    const scripts = require('./lib/scripts');
+    await scripts.addToLatest(name, type);
 });

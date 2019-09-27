@@ -9,6 +9,15 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 1. Be sure that the version is tested in forum by users or you fix the critical bug with that.
 2. Delete the versionTime or update it to the current time
 
+## Add a new adapter to the latest repository
+1. Fork this repo and clone your fork
+2. Run `npm i`
+3. If `gulp` is not installed globally, run `npm i -g gulp`
+4. Run `gulp addToLatest --name <adapter-name> --type <adapter-type>`  
+    (replace `<adapter-name>` with your adapter's name and `<adapter-type>` with the adapter type)
+5. Push a commit with the changes to `sources-dist.json`
+6. Create a PR
+
 ## Requirements for adapter to get added to the latest repository
 
 *already required for latest repository*
