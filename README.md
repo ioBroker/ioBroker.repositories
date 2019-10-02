@@ -9,6 +9,14 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 1. Be sure that the version is tested in forum by users or you fix the critical bug with that.
 2. Delete the versionTime or update it to the current time
 
+## Add a new adapter to the latest repository
+1. Fork this repo and clone your fork
+2. Run `npm i`
+3. Run `npm run addToLatest -- --name <adapter-name> --type <adapter-type>`  
+    (replace `<adapter-name>` with your adapter's name and `<adapter-type>` with the adapter type)
+4. Push a commit with the changes to `sources-dist.json`
+5. Create a PR
+
 ## Requirements for adapter to get added to the latest repository
 
 *already required for latest repository*
@@ -32,6 +40,14 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 14. **new!** No new adapters will be accepted to repo without admin3 Configuration dialog. Admin2 dialog is optional!
 
 *Note:* you can watch the video about it (only german) on [youtube](https://www.youtube.com/watch?v=7N8fsJcAdlE)
+
+## Add a new adapter to the stable repository
+1. Fork this repo and clone your fork
+2. Run `npm i`
+3. Run `npm run addToStable -- --name <adapter-name> --version <stable-version>`  
+    (replace `<adapter-name>` with your adapter's name and `<stable-version>` with the version that should be added to the stable repo)
+4. Push a commit with the changes to `sources-dist-stable.json`
+5. Create a PR
 
 ### Requirements for adapter to get added to the stable repository
 
