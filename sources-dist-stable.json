@@ -3,7 +3,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
     "type": "general",
-    "version": "3.6.2"
+    "version": "3.6.7"
   },
   "alexa2": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/io-package.json",
@@ -1352,7 +1352,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-history/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-history/master/admin/vis-history.png",
     "type": "visualization-widgets",
-    "version": "0.2.7"
+    "version": "1.0.0"
   },
   "vis-hqwidgets": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-hqwidgets/master/io-package.json",
