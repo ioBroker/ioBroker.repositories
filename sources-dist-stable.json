@@ -644,7 +644,7 @@
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/admin/lupusec.png",
     "type": "alarm",
-    "version": "1.1.8"
+    "version": "1.2.0"
   },
   "luxtronik1": {
     "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.luxtronik1/master/io-package.json",
@@ -1040,7 +1040,7 @@
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/admin/ring.png",
     "type": "hardware",
-    "version": "1.0.4"
+    "version": "1.0.5"
   },
   "roomba": {
     "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/io-package.json",
@@ -1094,7 +1094,7 @@
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
     "type": "iot-systems",
-    "version": "3.0.8"
+    "version": "3.1.1"
   },
   "sia": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.sia/master/io-package.json",
