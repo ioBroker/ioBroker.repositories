@@ -1121,11 +1121,18 @@
     "versionDate": "2019-08-31T08:39:39.803Z"
   },
   "nuki2": {
-    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki2/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki2/master/admin/nuki-logo.png",
+    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki-extended/nuki2/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki-extended/nuki2/admin/nuki-logo.png",
     "type": "hardware",
     "published": "2019-02-09T22:58:18.515Z",
     "versionDate": "2019-08-30T16:55:26.452Z"
+  },
+  "nuki-extended": {
+    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki-extended/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki-extended/master/admin/nuki-logo.png",
+    "type": "hardware",
+    "published": "2019-10-15T22:22:22.000Z",
+    "versionDate": "2019-10-15T22:22:22.000Z"
   },
   "nut": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.nut/master/io-package.json",
