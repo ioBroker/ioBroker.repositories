@@ -812,9 +812,9 @@
     "icon": "https://raw.githubusercontent.com/smaragdschlange/ioBroker.nuki/master/admin/nuki-logo.png",
     "type": "hardware"
   },
-  "nuki2": {
-    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki2/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki2/master/admin/nuki-logo.png",
+  "nuki-extended": {
+    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki-extended/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki-extended/master/admin/nuki-extended.png",
     "type": "hardware"
   },
   "nut": {
