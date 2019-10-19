@@ -1172,6 +1172,11 @@
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.systeminfo/master/admin/systeminfo.png",
     "type": "misc-data"
   },
+  "tado": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tado/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tado/master/admin/tado.png",
+    "type": "climate-control"
+  },
   "tankerkoenig": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tankerkoenig/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.tankerkoenig/master/admin/tankerkoenig.png",
@@ -1246,6 +1251,11 @@
     "meta": "https://raw.githubusercontent.com/hometm/ioBroker.vcard/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/hometm/ioBroker.vcard/master/admin/vcard.png",
     "type": "misc-data"
+  },
+  "vedirect": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vedirect/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vedirect/master/admin/Vedirect_Adapterimage.png",
+    "type": "energy"
   },
   "viessmann": {
     "meta": "https://raw.githubusercontent.com/misanorot/ioBroker.viessmann/master/io-package.json",
