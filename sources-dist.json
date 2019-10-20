@@ -550,6 +550,11 @@
     "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.kress/master/admin/kress.png",
     "type": "garden"
   },
+  "lametric": {
+    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.lametric/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.lametric/master/admin/lametric.png",
+    "type": "hardware"
+  },
   "landroid": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.landroid/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.landroid/master/admin/landroid.png",
@@ -1456,6 +1461,11 @@
     "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.yeelight-2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.yeelight-2/master/admin/yeelight.png",
     "type": "lighting"
+  },
+  "youtube": {
+    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.youtube/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.youtube/master/admin/youtube.png",
+    "type": "misc-data"
   },
   "yr": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.yr/master/io-package.json",

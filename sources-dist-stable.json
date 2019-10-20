@@ -574,6 +574,12 @@
     "type": "garden",
     "version": "2.5.5"
   },
+  "lametric": {
+    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.lametric/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.lametric/master/admin/lametric.png",
+    "type": "hardware",
+    "version": "0.0.6"
+  },
   "landroid": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.landroid/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.landroid/master/admin/landroid.png",
@@ -638,7 +644,7 @@
     "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.luftdaten/master/admin/luftdaten.png",
     "type": "weather",
-    "version": "0.0.6"
+    "version": "0.0.9"
   },
   "lupusec": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.lupusec/master/io-package.json",
@@ -1503,6 +1509,12 @@
     "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.yeelight-2/master/admin/yeelight.png",
     "type": "lighting",
     "version": "1.0.0"
+  },
+  "youtube": {
+    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.youtube/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.youtube/master/admin/youtube.png",
+    "type": "misc-data",
+    "version": "0.0.2"
   },
   "yr": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.yr/master/io-package.json",
