@@ -1,12 +1,11 @@
-const gulp    = require('gulp');
+const gulp = require('gulp');
 const request = require('request');
 
 // check if all adapters in stable have the version attribute
 // and published attribute
 gulp.task('init', done => {
     const scripts = require('./lib/scripts');
-    scripts.init(() =>
-        done());
+    scripts.init().then(() => done());
 });
 
 gulp.task('stable', done => {
@@ -54,4 +53,14 @@ gulp.task('latest', done => {
             });
         });
     });
+});
+
+gulp.task('sort', done => {
+    const scripts = require('./lib/scripts');
+    scripts.sort().then(done);
+});
+
+gulp.task('nodates', done => {
+    const scripts = require('./lib/scripts');
+    scripts.nodates().then(done);
 });
