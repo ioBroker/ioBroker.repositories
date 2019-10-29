@@ -89,6 +89,11 @@
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.broadlink2/master/admin/broadlink.png",
     "type": "iot-systems"
   },
+  "bshb": {
+    "meta": "https://raw.githubusercontent.com/holomekc/ioBroker.bshb/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/holomekc/ioBroker.bshb/master/admin/bshb-logo.jpg",
+    "type": "iot-systems"
+  },
   "chromecast": {
     "meta": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/admin/chromecast.png",
@@ -1224,7 +1229,7 @@
     "published": "2019-08-09T20:30:26.824Z",
     "versionDate": "2019-08-09T20:30:26.824Z"
   },
-"tinyrx4": {
+  "tinyrx4": {
     "meta": "https://raw.githubusercontent.com/bowao/ioBroker.tinyrx4/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/bowao/ioBroker.tinyrx4/master/admin/tinyRX4.png",
     "type": "hardware",
