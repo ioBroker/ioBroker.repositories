@@ -1,26 +1,28 @@
 {
   "name": "iobroker.repositories",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/ioBroker/ioBroker.build.git"
   },
   "private": true,
   "engines": {
-    "node": ">=4"
+    "node": ">=12"
   },
   "dependencies": {
-    "http": "0.0.0",
-    "request-promise-native": "^1.0.5"
+    "request-promise-native": "^1.0.7"
   },
   "homepage": "http://iobroker.net",
   "description": "List of all official adapters for ioBroker project",
   "scripts": {
-    "init": "node lib/scripts.js --init",
-    "update": "node repo.js",
+    "init": "node lib/scripts.js init",
+    "sort": "node lib/scripts.js sort",
     "test": "node node_modules/mocha/bin/mocha --exit",
-    "list": "node lib/scripts.js --list --file /var/www/download/list.html",
-    "repos": "node lib/build.js --stable /var/www/download/sources-dist.json --latest /var/www/download/sources-dist-latest.json --shields /var/www/download/img"
+    "list": "node lib/scripts.js list --file /var/www/download/list.html",
+    "repos": "node lib/build.js --stable /var/www/download/sources-dist.json --latest /var/www/download/sources-dist-latest.json --shields /var/www/download/img",
+    "nodates": "node lib/scripts.js nodates",
+    "addToLatest": "node lib/scripts.js addToLatest",
+    "addToStable": "node lib/scripts.js addToStable"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
@@ -37,13 +39,13 @@
   ],
   "devDependencies": {
     "chai": "^4.2.0",
-    "gulp": "^4.0.0",
-    "mocha": "^6.0.2",
+    "eslint": "^6.2.2",
+    "gulp": "^4.0.2",
+    "minimist": "^1.2.0",
+    "mocha": "^6.2.0",
     "node.extend": "^2.0.2",
-    "npm": "^6.6.0",
     "request": "^2.88.0",
-    "semver": "^5.6.0",
-    "eslint": "^5.12.0",
-    "request-promise-native": "^1.0.5"
+    "request-promise-native": "^1.0.7",
+    "semver": "^6.3.0"
   }
 }
