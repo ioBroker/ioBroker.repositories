@@ -239,6 +239,11 @@
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.firetv/master/admin/firetv.png",
     "type": "multimedia"
   },
+  "fitbit-api": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fitbit-api/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fitbit-api/master/admin/firetv.png",
+    "type": "health"
+  },
   "flot": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/admin/flot.png",
