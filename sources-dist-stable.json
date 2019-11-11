@@ -474,10 +474,10 @@
   "hp-ilo": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/admin/hp-ilo.png",
-    "version": "1.0.1",
+    "version": "1.0.5",
     "type": "hardware",
     "published": "2018-04-12T00:00:39.833Z",
-    "versionDate": "2019-01-21T23:57:18.748Z"
+    "versionDate": "2019-11-11T23:57:18.748Z"
   },
   "hs100": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.hs100/master/io-package.json",
