@@ -626,8 +626,8 @@
     "type": "alarm"
   },
   "luxtronik1": {
-    "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.luxtronik1/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.luxtronik1/master/admin/luxtronik1.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.luxtronik1/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.luxtronik1/master/admin/luxtronik1.png",
     "type": "climate-control"
   },
   "material": {
@@ -1073,8 +1073,8 @@
     "type": "energy"
   },
   "smappee": {
-    "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.smappee/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.smappee/master/admin/smappee.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.smappee/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.smappee/master/admin/smappee.png",
     "type": "energy"
   },
   "smartmeter": {
@@ -1098,8 +1098,8 @@
     "type": "communication"
   },
   "solarlog": {
-    "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.solarlog/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.solarlog/master/admin/solarlog.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solarlog/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solarlog/master/admin/solarlog.png",
     "type": "energy"
   },
   "solarwetter": {
