@@ -1241,6 +1241,11 @@
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.tr-064/master/admin/tr-064.png",
     "type": "infrastructure"
   },
+  "ioBroker.tr-064-community": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tr-064-community/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tr-064-community/master/admin/tr-064-community.png",
+    "type": "infrastructure"
+  },
   "tradfri": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/admin/tradfri.png",
