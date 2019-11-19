@@ -1177,6 +1177,11 @@
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.stiebel-isg/master/admin/stiebel-isg.png",
     "type": "climate-control"
   },
+  "stockmarket": {
+    "meta": "https://raw.githubusercontent.com/waoler/ioBroker.stockmarket/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/waoler/iobroker.stockmarket/master/admin/stockmarket.png",
+    "type": "misc-data"
+  }
   "synology": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.synology/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.synology/master/admin/synology.png",
@@ -1510,10 +1515,5 @@
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware"
-  },
-  "stockmarket": {
-    "meta": "https://raw.githubusercontent.com/waoler/ioBroker.stockmarket/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/waoler/iobroker.stockmarket/master/admin/stockmarket.png",
-    "type": "misc-data"
   }
 }
