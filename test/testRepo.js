@@ -172,13 +172,13 @@ describe('Test Repository', function () {
 				if (res.common.type !== repo.type) {
 					console.info('adapter types are not equal in ' + id  + ': ' + repo.type + ' !== ' + res.common.type);
 				}
-			} catch(err){
+			} catch (err){
 				console.error('Meta of adapter ' + id + ': ' + repo.meta + ' not getable');
 				error = true;
 			}
 			if (repo.icon) {
 				try {
-					let res = await rq(repo.icon, { method: 'GET', json: true });
+					let res = await rq(repo.icon, {method: 'GET', json: true});
 				} catch(err){
 					console.error('Icon of adapter ' + id + ': ' + repo.icon + ' not getable');
 					error = true;
