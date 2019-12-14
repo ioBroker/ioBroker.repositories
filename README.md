@@ -166,9 +166,9 @@ You can see the types of existing adapters [here](http://download.iobroker.net/l
 
 ### Authors
 Please define following attributes in package.json :
-- https://github.com/ioBroker/ioBroker.template/blob/master/package.json#L5 (Only one author)
-- https://github.com/ioBroker/ioBroker.template/blob/master/package.json#L9 (Many contributors)
-- https://github.com/ioBroker/ioBroker.template/blob/master/io-package.json#L32 (Same here, but you can set many authors/contributors if desired)
+- https://github.com/ioBroker/ioBroker.template/blob/master/JavaScript/package.json#L5 (Only one author)
+- https://github.com/ioBroker/ioBroker.template/blob/master/JavaScript/package.json#L9 (Many contributors)
+- https://github.com/ioBroker/ioBroker.template/blob/master/JavaScript/io-package.json#L32 (Same here, but you can set many authors/contributors if desired)
 
 ### Samples
 For **latest** (sources-dist.json):
