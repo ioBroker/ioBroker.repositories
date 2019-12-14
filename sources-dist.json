@@ -1472,8 +1472,8 @@
     "type": "climate-control"
   },
   "worx": {
-    "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.worx/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.worx/master/admin/worx.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.worx/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.worx/master/admin/worx.png",
     "type": "garden"
   },
   "xbox": {
@@ -1497,8 +1497,8 @@
     "type": "multimedia"
   },
   "yeelight-2": {
-    "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.yeelight-2/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.yeelight-2/master/admin/yeelight.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.yeelight-2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.yeelight-2/master/admin/yeelight.png",
     "type": "lighting"
   },
   "youtube": {
