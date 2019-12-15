@@ -42,6 +42,7 @@ describe('Test Repository', function () {
 		// check latest names
 		id = Object.keys(latest).find(id => reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')));
         expect(id).to.be.not.ok;
+                done();
 	});
 	
     it('Test Repository: compare types', async () => {
