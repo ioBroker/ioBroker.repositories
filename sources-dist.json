@@ -1396,6 +1396,11 @@
     "icon": "https://raw.githubusercontent.com/nisiode/ioBroker.vis-material/master/admin/material.png",
     "type": "visualization-widgets"
   },
+  "vis-material-webfont": {
+    "meta": "https://raw.githubusercontent.com/om2804/ioBroker.vis-material-webfont/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/om2804/ioBroker.vis-material-webfont/master/admin/material-webfont.png",
+    "type": "visualization-widgets"
+  },
   "vis-materialdesign": {
     "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.vis-materialdesign/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.vis-materialdesign/master/admin/vis-materialdesign.png",
