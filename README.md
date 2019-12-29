@@ -160,6 +160,13 @@ An example can be seen [here](https://github.com/ioBroker/ioBroker.template/blob
 
 You can see the types of existing adapters [here](http://download.iobroker.net/list.html#sortCol=type&sortDir=0) and try to find the similar one.
 
+### Connection type
+- `guess` - The status of the device cannot be determined. ioBroker takes status based on last ioBroker command.
+- `cloud polling` - The integration of this device takes place via the cloud and requires an active internet connection. Querying the status means that an update may be noticed later.
+- `cloud-push` - The integration of this device takes place via the cloud and requires an active internet connection. ioBroker will be notified when a new status is available.
+- `local polling` - Provides direct communication with the device. Querying the status means that an update may be noticed later.
+- `local-push` - Offers direct communication with the device. ioBroker will be notified when a new status is available.
+
 #### Defined categories for non-repo adapters
 * pilight -	 iot-systems
 * samsung2016 -	multimedia
