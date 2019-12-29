@@ -152,6 +152,7 @@ An example can be seen [here](https://github.com/ioBroker/ioBroker.template/blob
 - **protocols** - Communication protocols: MQTT,
 - **storage** - logging, data protocols, SQL/NoSQL DBs, file storage, ...
 - **utility** - different help adapters. Like backup, export/import
+- **vehicle** - cars 
 - **visualization** - visualisation, like vis, material, mobile
 - **visualization-icons** - icons for visualisation
 - **visualization-widgets** - iobroker.vis widgets
