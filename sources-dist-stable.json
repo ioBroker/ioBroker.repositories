@@ -662,7 +662,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.luxtronik1/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.luxtronik1/master/admin/luxtronik1.png",
     "type": "climate-control",
-    "version": "0.0.7"
+    "version": "0.1.0"
   },
   "maxcube": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/io-package.json",
@@ -1154,7 +1154,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solarlog/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solarlog/master/admin/solarlog.png",
     "type": "energy",
-    "version": "1.0.0" 
+    "version": "1.2.1"
   },
   "solarwetter": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.solarwetter/master/io-package.json",
