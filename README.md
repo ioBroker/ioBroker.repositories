@@ -53,8 +53,8 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 * add all editable fields from index_m.html to io-package native with their default values
 * **You need to make sure to clean up ALL resources in "unload". Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode**
 * Please test in compact mode! Especially starting, running, stopping adapter and verify that nothing runs any longer and no logs are triggered and also a new start works.
-* Be careful with "setObject" because it iverwrites the object and (especially in js-controller < 2.2) custom settings like history may be removed by this! Use setObjectNotExists or get/set/extendObject
-* Do not use process.exit() because this breaks compact mode. Use adapter.terminate() if the methid is available.
+* Be careful with "setObject" because it overwrites the object and (especially in js-controller < 2.2) custom settings like history may be removed by this! Use setObjectNotExists or read the object to detect if it exists and use extendObject to update.
+* Do not use process.exit() because this breaks compact mode. Use adapter.terminate() if the method is available.
 * When using Intervals together with external communication think about timeout and error cases - an interval triggers the next call also if the last has not finished. So requests might pile up and you DOS the external API. A better practice might be to use setTimeout and set at the end of one call for the next call
 * Consider the asynchronous nature of JavaScript and make sure to know what will happen in parallel and what makes more sence to be sequencially
 
