@@ -166,9 +166,9 @@ If your adapter control some device/car/house the adapter could be connected wit
  
 - `guess` - The status of the device cannot be determined. ioBroker takes status based on last ioBroker command.
 - `cloud polling` - The integration of this device takes place via the cloud and requires an active internet connection. Querying the status means that an update may be noticed later.
-- `cloud-push` - The integration of this device takes place via the cloud and requires an active internet connection. ioBroker will be notified when a new status is available.
+- `cloud push` - The integration of this device takes place via the cloud and requires an active internet connection. ioBroker will be notified when a new status is available.
 - `local polling` - Provides direct communication with the device. Querying the status means that an update may be noticed later.
-- `local-push` - Offers direct communication with the device. ioBroker will be notified when a new status is available.
+- `local push` - Offers direct communication with the device. ioBroker will be notified when a new status is available.
 
 Define `connection-type` in `common` part of `io-package.json`.
 
