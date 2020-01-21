@@ -48,7 +48,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 * Do not copy a package.json or io-package.json after an installation because some fields might have been added on installation! e.g. io-package with common.installedFrom eds to be removed
 * Use the Adapter Checker and fix all issues shown there: https://adapter-check.iobroker.in/
 * Do not commit .vscode, .idea or other IDE files/helper directories to GitHub
-* If you do not implement onState/ObjectChange/Message please do not implement it
+* If you do not need onState/ObjectChange/Message please do not implement it
 * if you need to store passwords please encrypt them in Admin
 * add all editable fields from index_m.html to io-package native with their default values
 * **You need to make sure to clean up ALL resources in "unload". Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode**
