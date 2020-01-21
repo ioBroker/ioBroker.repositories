@@ -170,7 +170,7 @@ If your adapter control some device/car/house the adapter could be connected wit
 - `local polling` - Provides direct communication with the device. Querying the status means that an update may be noticed later.
 - `local push` - Offers direct communication with the device. ioBroker will be notified when a new status is available.
 
-Define `connection-type` in `common` part of `io-package.json`.
+Define `connectionType` in `common` part of `io-package.json`.
 
 #### Defined categories for non-repo adapters
 * pilight -	 iot-systems
