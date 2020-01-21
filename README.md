@@ -29,7 +29,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
    **In README.md, there must be a link to the device or the manufacturer's website. Devices must have a photo. Services do not require a photo, but are still welcome.**
 5. Adapter must have a predefined license.
 6. Please remove www, widgets and docs directories (admin/tab_m.html, admin/custom_m.html) if not used.
-7. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI and Appveyor. More information in Forum from apollon77 (Just take from other adapters the samples)
+7. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI (optionally and Appveyor). More information in Forum from apollon77 (Just take from other adapters the samples)
 8. Define one of the types in io-package.json. See details [here](#types)
 9. Define one of the connection types (if applied) in io-package.json. See details [here](#connection-types)
 10. All states must have according [valid roles](https://github.com/ioBroker/ioBroker/blob/master/doc/STATE_ROLES.md#state-roles) (and not just "state")
@@ -39,9 +39,24 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 14. Add your adapter into the list (first latest and after that into stable, when tested).
    Examples of entries you can find [here](#samples).
 15. No new adapters will be accepted to repo without admin3 Configuration dialog. Admin2 dialog is optional!
+16. Check and Follow the Coding best practices listed below
 
 *Note:* you can watch the video about it (only german) on [youtube](https://www.youtube.com/watch?v=7N8fsJcAdlE)
 *Note:* There is a helper https://adapter-check.iobroker.in/ to check many points automatically. Just place your github adapter repo there, e.g `https://github.com/ioBroker/ioBroker.admin` and press enter or on the check button.
+
+## Coding best practices
+* Do not copy a package.json or io-package.json after an installation because some fields might have been added on installation! e.g. io-package with common.installedFrom eds to be removed
+* Use the Adapter Checker and fix all issues shown there: https://adapter-check.iobroker.in/
+* Do not commit .vscode, .idea or other IDE files/helper directories to GitHub
+* If you do not implement onState/ObjectChange/Message please do not implement it
+* if you need to store passwords please encrypt them in Admin
+* add all editable fields from index_m.html to io-package native with their default values
+* **You need to make sure to clean up ALL resources in "unload". Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode**
+* Please test in compact mode! Especially starting, running, stopping adapter and verify that nothing runs any longer and no logs are triggered and also a new start works.
+* Be careful with "setObject" because it iverwrites the object and (especially in js-controller < 2.2) custom settings like history may be removed by this! Use setObjectNotExists or get/set/extendObject
+* Do not use process.exit() because this breaks compact mode. Use adapter.terminate() if the methid is available.
+* When using Intervals together with external communication think about timeout and error cases - an interval triggers the next call also if the last has not finished. So requests might pile up and you DOS the external API. A better practice might be to use setTimeout and set at the end of one call for the next call
+* Consider the asynchronous nature of JavaScript and make sure to know what will happen in parallel and what makes more sence to be sequencially
 
 ## Add a new adapter to the stable repository
 1. Fork this repo and clone your fork
