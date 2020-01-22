@@ -44,19 +44,24 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 *Note:* you can watch the video about it (only german) on [youtube](https://www.youtube.com/watch?v=7N8fsJcAdlE)
 *Note:* There is a helper https://adapter-check.iobroker.in/ to check many points automatically. Just place your github adapter repo there, e.g `https://github.com/ioBroker/ioBroker.admin` and press enter or on the check button.
 
-## Coding best practices
+## Development and Coding best practices
+* Best use the adapter creator (https://github.com/ioBroker/create-adapter) or get a fresh relevant version from the Template Repository (https://github.com/ioBroker/ioBroker.template) to start coding to always get the latest basic version and also updates. You should not always copy basic files from former adapters!
 * Do not copy a package.json or io-package.json after an installation because some fields might have been added on installation! e.g. io-package with common.installedFrom eds to be removed
 * Use the Adapter Checker and fix all issues shown there: https://adapter-check.iobroker.in/
-* Do not commit .vscode, .idea or other IDE files/helper directories to GitHub
+* Only commit .vscode, .idea or other IDE files/helper directories to GitHub if there is a need to. This is to prevent other users settings to interfer with yours or make PRs more complex because of this.
 * If you do not need onState/ObjectChange/Message please do not implement it
 * if you need to store passwords please encrypt them in Admin
 * add all editable fields from index_m.html to io-package native with their default values
 * **You need to make sure to clean up ALL resources in "unload". Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode**
-* Please test in compact mode! Especially starting, running, stopping adapter and verify that nothing runs any longer and no logs are triggered and also a new start works.
+* **Please test in compact mode!** Especially starting, running, stopping adapter and verify that nothing runs any longer and no logs are triggered and also a new start works.
 * Be careful with "setObject" because it overwrites the object and (especially in js-controller < 2.2) custom settings like history may be removed by this! Use setObjectNotExists or read the object to detect if it exists and use extendObject to update.
 * Do not use process.exit() because this breaks compact mode. Use adapter.terminate() if the method is available.
 * When using Intervals together with external communication think about timeout and error cases - an interval triggers the next call also if the last has not finished. So requests might pile up and you DOS the external API. A better practice might be to use setTimeout and set at the end of one call for the next call
-* Consider the asynchronous nature of JavaScript and make sure to know what will happen in parallel and what makes more sence to be sequencially
+* If you use "connections" to other systems (Websockets, MQTT, TCP, Serial or other) please also implement the info.connection state (directly create objects by including in io-package) and set the connection value accordingly. Using this enables Admin to differentiate the status between green (ok, running), yellow (basically running but not connected) and red (not running).
+* Consider and understand the asynchronous nature of JavaScript and make sure to know what will happen in parallel and what makes more sence to be sequencially! It is ok to use callbacks or Promises/async/await - the latter makes it more easy to understand and control how your code really flows.
+* Consider using ESLink or other JavaScript code and type checker to see errors in your code before releasing a new version.
+* The adapter etsting using Travis and/or GitHub Actions is not for us - it is for you! Please check it after pushing changes to GitHub and before telling it to users or publish an NPM package. If testing is "red" you should check the testing log to see whats broken.
+* If you like to increase testing you can start implementing adapter specific tests that always run when you push changes to GitHub.
 
 ## Add a new adapter to the stable repository
 1. Fork this repo and clone your fork
