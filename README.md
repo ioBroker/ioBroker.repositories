@@ -182,15 +182,16 @@ An example can be seen [here](https://github.com/ioBroker/ioBroker.template/blob
 You can see the types of existing adapters [here](http://download.iobroker.net/list.html#sortCol=type&sortDir=0) and try to find the similar one.
 
 ### Connection types
-If your adapter control some device/car/house the adapter could be connected with with various methods:
- 
-- `guess` - The status of the device cannot be determined. ioBroker takes status based on last ioBroker command.
-- `cloud polling` - The integration of this device takes place via the cloud and requires an active internet connection. Querying the status means that an update may be noticed later.
-- `cloud push` - The integration of this device takes place via the cloud and requires an active internet connection. ioBroker will be notified when a new status is available.
-- `local polling` - Provides direct communication with the device. Querying the status means that an update may be noticed later.
-- `local push` - Offers direct communication with the device. ioBroker will be notified when a new status is available.
+If your adapter control some device/car/house the adapter could be connected with with various methods and receives data via different protocols.
 
-Define `connectionType` in `common` part of `io-package.json`.
+Define `connectionType` in `common` part of `io-package.json` as:
+- `local` - if the communication with device do not requie cloud access.
+- `cloud` - if the communication is via cloud.
+
+Define `dataSource` in `common` as:
+- `poll` - Querying the status means that an update may be noticed later.
+- `push` - ioBroker will be notified when a new status is available.
+- `assumption` - The status of the device cannot be determined. ioBroker takes status based on last ioBroker command.
 
 #### Defined categories for non-repo adapters
 * pilight -	 iot-systems
