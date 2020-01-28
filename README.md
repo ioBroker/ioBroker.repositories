@@ -50,7 +50,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 * Use the Adapter Checker and fix all issues shown there: https://adapter-check.iobroker.in/
 * Only commit .vscode, .idea or other IDE files/helper directories to GitHub if there is a need to. This is to prevent other users settings to interfer with yours or make PRs more complex because of this.
 * If you do not need onState/ObjectChange/Message please do not implement it
-* if you need to store passwords please encrypt them in Admin
+* if you need to store passwords please encrypt them in Admin! You can check e.g. Apollon77/iobroker.meross for example code in index_m.html and main.js
 * add all editable fields from index_m.html to io-package native with their default values
 * **You need to make sure to clean up ALL resources in "unload". Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode**
 * **Please test in compact mode!** Especially starting, running, stopping adapter and verify that nothing runs any longer and no logs are triggered and also a new start works.
