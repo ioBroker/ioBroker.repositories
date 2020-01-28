@@ -47,7 +47,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 ## Development and Coding best practices
 * Best use the adapter creator (https://github.com/ioBroker/create-adapter) or get a fresh relevant version from the Template Repository (https://github.com/ioBroker/ioBroker.template) to start coding to always get the latest basic version and also updates. You should not always copy basic files from former adapters!
 * Do not copy a package.json or io-package.json after an installation because some fields might have been added on installation! e.g. io-package with common.installedFrom eds to be removed
-* Use the Adapter Checker and fix all issues shown there: https://adapter-check.iobroker.in/
+* **Use the Adapter Checker and fix all issues shown there: https://adapter-check.iobroker.in/**
 * Only commit .vscode, .idea or other IDE files/helper directories to GitHub if there is a need to. This is to prevent other users settings to interfer with yours or make PRs more complex because of this.
 * If you do not need onState/ObjectChange/Message please do not implement it
 * if you need to store passwords please encrypt them in Admin! You can check e.g. Apollon77/iobroker.meross for example code in index_m.html and main.js
@@ -60,7 +60,8 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 * If you use "connections" to other systems (Websockets, MQTT, TCP, Serial or other) please also implement the info.connection state (directly create objects by including in io-package) and set the connection value accordingly. Using this enables Admin to differentiate the status between green (ok, running), yellow (basically running but not connected) and red (not running).
 * Consider and understand the asynchronous nature of JavaScript and make sure to know what will happen in parallel and what makes more sence to be sequencially! It is ok to use callbacks or Promises/async/await - the latter makes it more easy to understand and control how your code really flows.
 * Consider using ESLink or other JavaScript code and type checker to see errors in your code before releasing a new version.
-* The adapter etsting using Travis and/or GitHub Actions is not for us - it is for you! Please check it after pushing changes to GitHub and before telling it to users or publish an NPM package. If testing is "red" you should check the testing log to see whats broken.
+* **Please activate adapter testing with at least package- and integration-tests on Travis-CI**
+* The adapter testing using Travis and/or GitHub Actions is not for us - it is for you! Please check it after pushing changes to GitHub and before telling it to users or publish an NPM package. If testing is "red" you should check the testing log to see whats broken.
 * If you like to increase testing you can start implementing adapter specific tests that always run when you push changes to GitHub.
 * You can/should use https://translator.iobroker.in/ to auto translate all relevant texts into all needed languages by providing the english text
 
