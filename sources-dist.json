@@ -1537,8 +1537,8 @@
     "type": "household"
   },
     "wled": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wled/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wled/admin/wled.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wled/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wled/master/admin/wled.png",
     "type": "lighting"
   },
   "wm-bus": {
