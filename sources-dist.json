@@ -732,6 +732,11 @@
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.miele/master/admin/xmiele.png",
     "type": "household"
   },
+  "mielecloudservice": {
+    "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.mielecloudservice/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.mielecloudservice/master/admin/mielecloudservice.png",
+    "type": "household"
+  },
   "mihome": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome/master/admin/mihome.png",
