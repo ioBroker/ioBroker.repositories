@@ -4,6 +4,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
     "type": "general"
   },
+  "alarm": {
+    "meta": "https://raw.githubusercontent.com/misanorot/ioBroker.alarm/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/misanorot/ioBroker.alarm/master/admin/alarm.png",
+    "type": "alarm"
+  },
   "alexa2": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/admin/alexa.png",
