@@ -880,12 +880,6 @@
     "type": "hardware",
     "version": "1.1.2"
   },
-  "nuki2": {
-    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki-extended/nuki2/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki-extended/nuki2/admin/nuki-logo.png",
-    "type": "hardware",
-    "version": "1.0.5"
-  },
   "nuki-extended": {
     "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki-extended/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.nuki-extended/master/admin/nuki-extended.png",
