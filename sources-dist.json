@@ -1068,8 +1068,8 @@
     "type": "misc-data"
   },
   "roomba": {
-    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.roomba/master/admin/roomba.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roomba/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roomba/master/admin/roomba.png",
     "type": "household"
   },
   "rpi2": {
