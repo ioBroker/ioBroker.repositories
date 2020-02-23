@@ -422,8 +422,8 @@
   "hp-ilo": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/admin/hp-ilo.png",
-    "version": "1.0.5",
-    "type": "hardware"
+    "type": "hardware",
+    "version": "1.0.5"
   },
   "hs100": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.hs100/master/io-package.json",
