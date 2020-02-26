@@ -1351,6 +1351,11 @@
     "icon": "https://raw.githubusercontent.com/jens-maus/ioBroker.unifi/master/admin/unifi.png",
     "type": "network"
   },
+  "unifi-protect": {
+    "meta": "https://raw.githubusercontent.com/peterbaumert/ioBroker.unifi-protect/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/peterbaumert/ioBroker.unifi-protect/master/admin/unifi-protect.png",
+    "type": "alarm"
+  },
   "upnp": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.upnp/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.upnp/master/admin/upnp.png",
