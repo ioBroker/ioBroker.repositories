@@ -23,7 +23,8 @@
     "nodates": "node lib/scripts.js nodates",
     "addToLatest": "node lib/scripts.js addToLatest",
     "addToStable": "node lib/scripts.js addToStable",
-    "check": "node lib/check.js"
+    "check": "node lib/check.js",
+    "stable": "node lib/readyForStable.js"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
