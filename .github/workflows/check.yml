@@ -1,9 +1,10 @@
-name: Publish
+name: Check changed adapters
 
 on:
   pull_request:
-    types: [created]
-
+    types: [opened]
+    branches:
+      - master
 jobs:
   check:
     runs-on: ubuntu-latest
