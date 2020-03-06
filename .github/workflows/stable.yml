@@ -15,3 +15,5 @@ jobs:
           node-version: 10
       - run: npm i
       - run: npm run stable
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
