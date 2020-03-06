@@ -1128,8 +1128,8 @@
     "type": "date-and-time"
   },
   "senec": {
-    "meta": "https://raw.githubusercontent.com/nobl/ioBroker.Senec/master/io-package.json",
-    "icon": "https://github.com/nobl/ioBroker.Senec/blob/master/admin/senec.png",
+    "meta": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/io-package.json",
+    "icon": "https://github.com/nobl/ioBroker.senec/blob/master/admin/senec.png",
     "type": "energy"
   },
   "shelly": {
