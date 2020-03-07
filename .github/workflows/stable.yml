@@ -16,4 +16,4 @@ jobs:
       - run: npm i
       - run: npm run stable
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
