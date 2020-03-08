@@ -5,6 +5,8 @@ on:
     types: [opened, edited]
     branches:
       - master
+  issue_comment:
+    types: [created]
 jobs:
   check:
     runs-on: ubuntu-latest
