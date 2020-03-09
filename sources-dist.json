@@ -1129,7 +1129,7 @@
   },
   "senec": {
     "meta": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/io-package.json",
-    "icon": "https://github.com/nobl/ioBroker.senec/blob/master/admin/senec.png",
+    "icon": "https://raw.githubusercontent.com/nobl/ioBroker.senec/blob/master/admin/senec.png",
     "type": "energy"
   },
   "shelly": {
