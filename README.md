@@ -48,6 +48,9 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 * Best use the adapter creator (https://github.com/ioBroker/create-adapter) or get a fresh relevant version from the Template Repository (https://github.com/ioBroker/ioBroker.template) to start coding to always get the latest basic version and also updates. You should not always copy basic files from former adapters!
 * Do not copy a package.json or io-package.json after an installation because some fields might have been added on installation! e.g. io-package with common.installedFrom eds to be removed
 * **Use the Adapter Checker and fix all issues shown there: https://adapter-check.iobroker.in/**
+* Respect Onject and state definitions, types and roles Values not definied here should not be used. Discussions about missing roles or types are welcome:
+  * https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/objectsschema.md#object-types
+  * https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/stateroles.md
 * Only commit .vscode, .idea or other IDE files/helper directories to GitHub if there is a need to. This is to prevent other users settings to interfer with yours or make PRs more complex because of this.
 * If you do not need onState/ObjectChange/Message please do not implement it
 * if you need to store passwords please encrypt them in Admin! You can check e.g. Apollon77/iobroker.meross for example code in index_m.html and main.js
