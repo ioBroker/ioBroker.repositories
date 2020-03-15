@@ -147,7 +147,12 @@
   "countdown": {
     "meta": "https://raw.githubusercontent.com/jack-blackson/ioBroker.countdown/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/jack-blackson/ioBroker.countdown/master/admin/countdown.png",
-    "type": "date-and-time"
+    "type": "misc-data"
+  },
+  "covid-19": {
+    "meta": "https://raw.githubusercontent.com/jiobroker-community-adapters/ioBroker.covid-19/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.covid-19/master/admin/covid-19.png",
+    "type": "health"
   },
   "cul": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cul/master/io-package.json",
@@ -1391,14 +1396,14 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.upnp/master/admin/upnp.png",
     "type": "network"
   },
-  "valloxmv": {
-    "meta": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/admin/valloxmv.png",
-    "type": "climate-control"
-  },
   "vaillant": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.vaillant/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.vaillant/master/admin/vaillant.png",
+    "type": "climate-control"
+  },
+  "valloxmv": {
+    "meta": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/admin/valloxmv.png",
     "type": "climate-control"
   },
   "vcard": {
