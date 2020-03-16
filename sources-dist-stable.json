@@ -140,7 +140,7 @@
     "coronavirus-statistics": {
     "meta": "https://raw.githubusercontent.com/jiobroker-community-adapters/ioBroker.coronavirus-statistics/master/io-package.json",     
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.coronavirus-statistics/master/admin/coronavirus-statistics.png",
-    "type": "health"
+    "type": "health",
     "version": "0.2.1"
   },  
   "countdown": {
