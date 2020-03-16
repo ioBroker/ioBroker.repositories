@@ -1092,6 +1092,11 @@
     "icon": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.roadtraffic/master/admin/roadtraffic.png",
     "type": "misc-data"
   },
+  "robonect": {
+    "meta": "https://raw.githubusercontent.com/braindead1/ioBroker.robonect/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/braindead1/ioBroker.robonect/master/admin/robonect.png",
+    "type": "garden"
+  },
   "roomba": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roomba/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roomba/master/admin/roomba.png",
@@ -1680,10 +1685,5 @@
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware"
-  },
-  "robonect": {
-    "meta": "https://raw.githubusercontent.com/braindead1/ioBroker.robonect/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/braindead1/ioBroker.robonect/master/admin/robonect.png",
-    "type": "garden"
   }
 }
