@@ -137,10 +137,16 @@
     "type": "alarm",
     "version": "1.0.0"
   },
+    "coronavirus-statistics": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.coronavirus-statistics/master/io-package.json",     
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.coronavirus-statistics/master/admin/coronavirus-statistics.png",
+    "type": "health",
+    "version": "0.2.1"
+  },
   "countdown": {
     "meta": "https://raw.githubusercontent.com/jack-blackson/ioBroker.countdown/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/jack-blackson/ioBroker.countdown/master/admin/countdown.png",
-    "type": "date-and-time",
+    "type": "misc-data",
     "version": "1.0.5"
   },
   "cul": {
