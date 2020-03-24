@@ -138,7 +138,7 @@
     "version": "1.0.0"
   },
   "coronavirus-statistics": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.coronavirus-statistics/master/io-package.json",     
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.coronavirus-statistics/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.coronavirus-statistics/master/admin/coronavirus-statistics.png",
     "type": "health",
     "version": "0.4.0"
@@ -1120,6 +1120,12 @@
     "type": "hardware",
     "version": "1.0.5"
   },
+  "robonect": {
+    "meta": "https://raw.githubusercontent.com/braindead1/ioBroker.robonect/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/braindead1/ioBroker.robonect/master/admin/robonect.png",
+    "type": "garden",
+    "version": "0.0.10"
+  },
   "roomba": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roomba/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roomba/master/admin/roomba.png",
@@ -1587,7 +1593,7 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wled/master/admin/wled.png",
     "type": "lighting",
     "version": "0.5.0"
-  },  
+  },
   "wm-bus": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.wm-bus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.wm-bus/master/admin/wm-bus.png",
