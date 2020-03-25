@@ -333,7 +333,7 @@
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.fullybrowser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.fullybrowser/master/admin/fully.png",
     "type": "utility",
-    "version": "1.0.0"
+    "version": "1.0.3"
   },
   "g-homa": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.g-homa/master/io-package.json",
@@ -453,7 +453,7 @@
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.hs100/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.hs100/master/admin/hs100.png",
     "type": "hardware",
-    "version": "1.0.10"
+    "version": "1.1.1"
   },
   "hue": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hue/master/io-package.json",
