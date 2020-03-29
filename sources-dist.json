@@ -144,6 +144,11 @@
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.daikin/master/admin/daikin.jpg",
     "type": "climate-control"
   },
+  "darksky": {
+    "meta": "https://raw.githubusercontent.com/StrathCole/ioBroker.darksky/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/StrathCole/ioBroker.darksky/master/admin/darksky.png",
+    "type": "weather"
+  },
   "daswetter": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/admin/daswettercom.png",
