@@ -1288,6 +1288,12 @@
     "type": "multimedia",
     "version": "1.0.0"
   },
+  "squeezeboxrpc": {
+    "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.squeezeboxrpc/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.squeezeboxrpc/master/admin/squeezeboxrpc.png",
+    "type": "multimedia",
+    "version": "1.0.0"
+  },
   "starline": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.starline/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.starline/master/admin/starline.png",
