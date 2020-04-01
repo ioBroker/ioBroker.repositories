@@ -1117,6 +1117,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.rpi2/master/admin/rpi.png",
     "type": "hardware"
   },
+  "rssfeed": {
+    "meta": "https://raw.githubusercontent.com/oweitman/iobroker.rssfeed/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/oweitman/iobroker.rssfeed/master/admin/rssfeed-logo.png",
+    "type": "misc-data"
+  },
   "s7": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.s7/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.s7/master/admin/S7.png",
