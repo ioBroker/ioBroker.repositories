@@ -1307,6 +1307,11 @@
     "icon": "https://raw.githubusercontent.com/waoler/iobroker.stockmarket/master/admin/stockmarket.png",
     "type": "misc-data"
   },
+  "sunnyportal": {
+    "meta": "https://raw.githubusercontent.com/marvincaspar/ioBroker.sunnyportal/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/marvincaspar/ioBroker.sunnyportal/master/admin/sunnyportal.png",
+    "type": "energy"
+  },
   "swiss-weather-api": {
     "meta": "https://raw.githubusercontent.com/baerengraben/ioBroker.swiss-weather-api/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/baerengraben/ioBroker.swiss-weather-api/master/admin/swiss-weather-api.png",
