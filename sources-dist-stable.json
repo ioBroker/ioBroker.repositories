@@ -288,8 +288,8 @@
     "version": "0.2.15"
   },
   "firetv": {
-    "meta": "https://raw.githubusercontent.com/soef/ioBroker.firetv/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/soef/ioBroker.firetv/master/admin/firetv.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.firetv/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.firetv/master/admin/firetv.png",
     "type": "multimedia",
     "version": "0.0.27"
   },
@@ -1607,8 +1607,8 @@
     "version": "2.2.0"
   },
   "wifilight": {
-    "meta": "https://raw.githubusercontent.com/soef/ioBroker.wifilight/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/soef/ioBroker.wifilight/master/admin/wifilight.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wifilight/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wifilight/master/admin/wifilight.png",
     "type": "lighting",
     "version": "0.2.0"
   },
