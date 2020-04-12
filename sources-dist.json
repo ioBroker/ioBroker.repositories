@@ -1147,6 +1147,11 @@
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.samsung/master/admin/samsung.png",
     "type": "multimedia"
   },
+  "sanext": {
+    "meta": "https://raw.githubusercontent.com/instalator/ioBroker.sanext/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/instalator/ioBroker.sanext/master/admin/sanext.png",
+    "type": "energy"
+  },
   "sayit": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sayit/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sayit/master/admin/sayit.png",
