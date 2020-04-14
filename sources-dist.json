@@ -1631,11 +1631,6 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.weishaupt-wem/master/admin/weishaupt-wem.png",
     "type": "climate-control"
   },
-  "wetty": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.wetty/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.wetty/master/admin/wetty.png",
-    "type": "utility"
-  },
   "wiffi-wz": {
     "meta": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.wiffi-wz/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.wiffi-wz/master/admin/wiffi-wz.png",
