@@ -1427,8 +1427,8 @@
     "type": "misc-data"
   },
   "unifi": {
-    "meta": "https://raw.githubusercontent.com/jens-maus/ioBroker.unifi/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/jens-maus/ioBroker.unifi/master/admin/unifi.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.unifi/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.unifi/master/admin/unifi.png",
     "type": "network"
   },
   "unifi-protect": {
