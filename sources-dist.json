@@ -1287,6 +1287,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/admin/sql.png",
     "type": "storage"
   },
+  "sqlstatistics": {
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.sqlstatistics/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.sqlstatistics/master/admin/sqlstatistics.png",
+    "type": "storage"
+  },
   "squeezebox": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.squeezebox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.squeezebox/master/admin/squeezebox.png",
