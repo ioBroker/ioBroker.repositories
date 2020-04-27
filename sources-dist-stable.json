@@ -742,6 +742,12 @@
     "type": "energy",
     "version": "2.1.4"
   },
+    "mclighting": {
+    "meta": "https://raw.githubusercontent.com/instalator/ioBroker.mclighting/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/instalator/ioBroker.mclighting/master/admin/mclighting.png",
+    "type": "lighting",
+    "version": "0.1.1"
+  },
   "megad": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/admin/megad.png",
