@@ -212,8 +212,7 @@
   "doorio": {
     "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.doorio/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Bettman66/ioBroker.doorio/master/admin/doorio.png",
-    "type": "communication",
-    "version": "0.0.8"
+    "type": "communication"
   },
   "doorbird": {
     "meta": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/io-package.json",
