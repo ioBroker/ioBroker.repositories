@@ -214,6 +214,11 @@
     "icon": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/admin/doorbird.png",
     "type": "iot-systems"
   },
+  "doorio": {
+    "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.doorio/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Bettman66/ioBroker.doorio/master/admin/doorio.png",
+    "type": "communication"
+  },
   "ds18b20": {
     "meta": "https://raw.githubusercontent.com/crycode-de/ioBroker.ds18b20/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/crycode-de/ioBroker.ds18b20/master/admin/ds18b20.png",

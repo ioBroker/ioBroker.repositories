@@ -203,6 +203,12 @@
     "type": "general",
     "version": "2.2.2"
   },
+  "doorio": {
+    "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.doorio/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Bettman66/ioBroker.doorio/master/admin/doorio.png",
+    "type": "communication",
+    "version": "1.0.0"
+  },
   "ds18b20": {
     "meta": "https://raw.githubusercontent.com/crycode-de/ioBroker.ds18b20/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/crycode-de/ioBroker.ds18b20/master/admin/ds18b20.png",
