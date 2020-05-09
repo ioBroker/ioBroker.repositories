@@ -1377,6 +1377,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.tileboard/master/admin/tileboard.png",
     "type": "visualization"
   },
+  "time-switch": {
+    "meta": "https://raw.githubusercontent.com/walli545/ioBroker.time-switch/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/walli545/ioBroker.time-switch/master/admin/time-switch.png",
+    "type": "time-and-date"
+  },
   "tinker": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.tinker/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.tinker/master/admin/tinker.png",
