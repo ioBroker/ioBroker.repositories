@@ -1408,6 +1408,12 @@
     "type": "lighting",
     "version": "2.6.1"
   },
+  "trashschedule": {
+    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.trashschedule/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.trashschedule/master/admin/trashschedule.png",
+    "type": "date-and-time",
+    "version": "0.0.7"
+  },
   "tunnelbroker-endpoint-updater": {
     "meta": "https://raw.githubusercontent.com/PowerPan/ioBroker.tunnelbroker-endpoint-updater/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PowerPan/ioBroker.tunnelbroker-endpoint-updater/master/admin/tunnelbroker-endpoint-updater.png",
