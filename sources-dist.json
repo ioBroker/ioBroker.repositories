@@ -199,6 +199,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.digitalstrom/master/admin/digitalstrom.png",
     "type": "iot-systems"
   },
+  "dingz": {
+    "meta": "https://raw.githubusercontent.com/rgwch/ioBroker.dingz/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rgwch/ioBroker.dingz/master/admin/dingz.png",
+    "type": "lighting"
+  },
   "discovergy": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.discovergy/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.discovergy/master/admin/discovergy.png",
@@ -767,7 +772,7 @@
     "published": "2019-08-12T18:00:00.00Z",
     "versionDate": "2019-08-12T18:00:00.000Z"
   },
-   "midea": {
+  "midea": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.midea/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.midea/master/admin/midea.png",
     "type": "climate-control"
