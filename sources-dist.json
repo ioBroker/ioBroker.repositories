@@ -887,6 +887,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mysensors/master/admin/mysensors.png",
     "type": "iot-systems"
   },
+  "mystrom-wifi-button": {
+    "meta": "https://raw.githubusercontent.com/rgwch/ioBroker.mystrom-wifi-button/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rgwch/ioBroker.mystrom-wifi-button/master/admin/mystrom-wifi-button.png",
+    "type": "iot-systems"
+  },
   "myvbus": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myvbus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myvbus/master/admin/myvbus.png",
