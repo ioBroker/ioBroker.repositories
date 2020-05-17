@@ -887,6 +887,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mysensors/master/admin/mysensors.png",
     "type": "iot-systems"
   },
+  "mystrom-wifi-bulb": {
+    "meta": "https://raw.githubusercontent.com/rgwch/ioBroker.mystrom-wifi-bulb/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rgwch/ioBroker.mystrom-wifi-bulb/master/admin/mystrom-wifi-bulb.jpg",
+    "type": "lighting"
+  },
   "mystrom-wifi-button": {
     "meta": "https://raw.githubusercontent.com/rgwch/ioBroker.mystrom-wifi-button/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rgwch/ioBroker.mystrom-wifi-button/master/admin/mystrom-wifi-button.png",
