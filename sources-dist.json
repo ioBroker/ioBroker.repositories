@@ -1541,14 +1541,9 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-hqwidgets/master/admin/hqwidgets.png",
     "type": "visualization-widgets"
   },
-  "vis-icontwo": {
-    "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-icontwo/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-icontwo/master/admin/i2_150.png",
-    "type": "visualization-icons"
-  },
   "vis-inventwo": {
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-inventwo/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-inventwo/master/admin/i1_150.png",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-inventwo/master/admin/i_150.png",
     "type": "visualization-widgets"
   },
   "vis-jqui-mfd": {
