@@ -239,6 +239,11 @@
     "icon": "https://raw.githubusercontent.com/mrbungle64/ioBroker.ecovacs-deebot/master/admin/ecovacs-deebot.png",
     "type": "household"
   },
+  "e-control-at-fuel": {
+    "meta": "https://raw.githubusercontent.com/xXBJXx/ioBroker.e-control-at-fuel/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/xXBJXx/ioBroker.e-control-at-fuel/master/admin/e-control-at-fuel.png",
+    "type": "misc-data"
+  },
   "egigeozone": {
     "meta": "https://raw.githubusercontent.com/BasGo/ioBroker.egigeozone/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/BasGo/ioBroker.egigeozone/master/admin/egigeozone.png",
