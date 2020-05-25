@@ -962,6 +962,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.onkyo/master/admin/onkyo.png",
     "type": "multimedia"
   },
+   "onkyo2": {
+    "meta": "https://raw.githubusercontent.com/instalator/ioBroker.onkyo2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/instalator/ioBroker.onkyo2/master/admin/onkyo2.png",
+    "type": "multimedia"
+  },
   "onvif": {
     "meta": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/admin/onvif.png",
