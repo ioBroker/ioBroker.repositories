@@ -820,6 +820,12 @@
     "type": "weather",
     "version": "1.0.9"
   },
+  "midea": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.midea/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.midea/master/admin/midea.png",
+    "type": "climate-control",
+    "version": "0.0.6"
+  },
   "miele": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.miele/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.miele/master/admin/xmiele.png",
