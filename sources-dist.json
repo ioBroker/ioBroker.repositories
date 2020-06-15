@@ -620,6 +620,11 @@
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.kodi/master/admin/kodi.png",
     "type": "multimedia"
   },
+  "kostal-piko-ba": {
+    "meta": "https://raw.githubusercontent.com/hombach/ioBroker.kostal-piko-ba/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/hombach/ioBroker.kostal-piko-ba/master/admin/picoba.png",
+    "type": "energy"
+  },
   "kress": {
     "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.kress/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MeisterTR/ioBroker.kress/master/admin/kress.png",
