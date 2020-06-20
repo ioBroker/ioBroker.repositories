@@ -1077,11 +1077,6 @@
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.pollenflug/master/admin/pollenflug.png",
     "type": "weather"
   },
-  "primelab": {
-    "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.primelab/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.primelab/master/admin/primelab.png",
-    "type": "misc-data"
-  },
   "proxmox": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.proxmox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.proxmox/master/admin/logo.png",
