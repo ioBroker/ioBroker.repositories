@@ -837,6 +837,11 @@
     "icon": "https://raw.githubusercontent.com/Steiger04/ioBroker.milight-smart-light/master/admin/lib/images/milight-smart-light-md.png",
     "type": "lighting"
   },
+  "minuvis": {
+    "meta": "https://raw.githubusercontent.com/minukodu/ioBroker.minuvis/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/minukodu/ioBroker.minuvis/master/admin/minuvis.png",
+    "type": "visualization"
+  },
   "mobile": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/admin/mobile.png",
