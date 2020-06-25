@@ -13,7 +13,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 1. Fork this repo and clone your fork
 2. Run `npm i`
 3. Run `npm run addToLatest -- --name <adapter-name> --type <adapter-type>`  
-    (replace `<adapter-name>` with your adapter's name and `<adapter-type>` with the adapter type)
+    (replace `<adapter-name>` with your adapter's name (without 'iobroker.' prefix) and `<adapter-type>` with the adapter type)
 4. Push a commit with the changes to `sources-dist.json`
 5. Create a PR
 
