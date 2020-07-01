@@ -760,6 +760,11 @@
     "icon": "https://raw.githubusercontent.com/ausHaus/ioBroker.megaesp/master/admin/megad.png",
     "type": "hardware"
   },
+  "melcloud": {
+    "meta": "https://raw.githubusercontent.com/Black-Thunder/ioBroker.melcloud/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Black-Thunder/ioBroker.melcloud/master/admin/melcloud.png",
+    "type": "climate-control"
+  },
   "mercedesme": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.mercedesme/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.mercedesme/master/admin/mercedesme.png",
