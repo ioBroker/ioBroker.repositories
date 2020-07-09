@@ -5,6 +5,15 @@ const rq      = require('request-promise-native');
 let latest;
 let stable;
 
+const reservedAdapterNames = [
+    'config',
+    'system',
+    'alias',
+    'design',
+    'all',
+    'self',
+];
+
 describe('Test Repository', function () {
     it('Test Repository: latest', done => {
         let text = fs.readFileSync(__dirname + '/../sources-dist.json');
@@ -26,6 +35,16 @@ describe('Test Repository', function () {
         done();
     });
 
+	it('Check reserved names', done => {
+		// check stable names
+		let id = Object.keys(stable).find(id => reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')));
+        expect(id).to.be.not.ok;
+		// check latest names
+		id = Object.keys(latest).find(id => reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')));
+        expect(id).to.be.not.ok;
+                done();
+	});
+	
     it('Test Repository: compare types', async () => {
         for (let id in stable) {
             if (stable.hasOwnProperty(id)) {
