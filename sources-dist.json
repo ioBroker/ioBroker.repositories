@@ -364,6 +364,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.geofency/master/admin/geofency.png",
     "type": "geoposition"
   },
+  "go-echarger": {
+    "meta": "https://raw.githubusercontent.com/MK-2001/ioBroker.go-echarger/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MK-2001/ioBroker.go-echarger/master/admin/go-echarger.png",
+    "type": "vehicle"
+  },
   "gruenbeck": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/admin/gruenbeck.png",
