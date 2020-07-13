@@ -1322,6 +1322,11 @@
     "icon": "https://raw.githubusercontent.com/twonky4/ioBroker.spotify-premium/master/admin/spotify-premium.png",
     "type": "multimedia"
   },
+  "sprinklecontrol": {
+    "meta": "https://raw.githubusercontent.com/Dirk-Peter-md/ioBroker.sprinklecontrol/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Dirk-Peter-md/ioBroker.sprinklecontrol/master/admin/sprinklecontrol.png",
+    "type": "garden"
+  },
   "sql": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/admin/sql.png",
@@ -1780,10 +1785,5 @@
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware"
-  },
-  "sprinklecontrol": {
-    "meta": "https://raw.githubusercontent.com/Dirk-Peter-md/ioBroker.sprinklecontrol/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Dirk-Peter-md/ioBroker.sprinklecontrol/master/admin/sprinklecontrol.png",
-    "type": "garden"
   }
 }
