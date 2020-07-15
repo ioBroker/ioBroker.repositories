@@ -483,7 +483,7 @@
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/admin/hp-ilo.png",
     "type": "hardware",
-    "version": "1.0.5"
+    "version": "1.0.6"
   },
   "hs100": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.hs100/master/io-package.json",
@@ -686,7 +686,7 @@
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/admin/lgtv.png",
     "type": "multimedia",
-    "version": "1.1.8"
+    "version": "1.1.9"
   },
   "lgtv-rs": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.lgtv-rs/master/io-package.json",
