@@ -441,7 +441,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.history/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.history/master/admin/history.png",
     "type": "storage",
-    "version": "1.9.9"
+    "version": "1.9.10"
   },
   "hm-rega": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/io-package.json",
@@ -459,7 +459,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/admin/homematic.png",
     "type": "hardware",
-    "version": "0.0.11"
+    "version": "1.2.0"
   },
   "homeconnect": {
     "meta": "https://raw.githubusercontent.com/dna909/ioBroker.homeconnect/master/io-package.json",
@@ -567,7 +567,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/admin/influxdb.png",
     "type": "storage",
-    "version": "1.8.6"
+    "version": "1.9.1"
   },
   "info": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.info/master/io-package.json",
@@ -1064,7 +1064,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.owntracks/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.owntracks/master/admin/owntracks.png",
     "type": "geoposition",
-    "version": "0.6.2"
+    "version": "0.6.3"
   },
   "panasonic-viera": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.panasonic-viera/master/io-package.json",
@@ -1370,7 +1370,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/admin/sql.png",
     "type": "storage",
-    "version": "1.12.5"
+    "version": "1.15.2"
   },
   "squeezebox": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.squeezebox/master/io-package.json",
