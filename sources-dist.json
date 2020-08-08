@@ -690,6 +690,11 @@
     "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.linkeddevices/master/admin/linkeddevices.png",
     "type": "logic"
   },
+  "linux-control": {
+    "meta": "https://raw.githubusercontent.com/Scrounger/iobroker.linux-control/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/iobroker.linux-control/master/admin/linux-control.png",
+    "type": "hardware"
+  },  
   "logparser": {
     "meta": "https://raw.githubusercontent.com/Mic-M/ioBroker.logparser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Mic-M/ioBroker.logparser/master/admin/logparser.png",
