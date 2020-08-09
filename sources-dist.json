@@ -691,8 +691,8 @@
     "type": "logic"
   },
   "linux-control": {
-    "meta": "https://raw.githubusercontent.com/Scrounger/iobroker.linux-control/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Scrounger/iobroker.linux-control/master/admin/linux-control.png",
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.linux-control/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.linux-control/master/admin/linux-control.png",
     "type": "hardware"
   },  
   "logparser": {
