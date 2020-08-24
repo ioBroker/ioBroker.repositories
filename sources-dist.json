@@ -274,6 +274,11 @@
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
     "type": "iot-systems"
   },
+  "enigma2": {
+    "meta": "https://raw.githubusercontent.com/Matten-Matten/ioBroker.enigma2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Matten-Matten/ioBroker.enigma2/master/admin/enigma2.png",
+    "type": "multimedia"
+  },
   "epson_stylus_px830": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.epson_stylus_px830/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.epson_stylus_px830/master/admin/epson_stylus_px830.png",
