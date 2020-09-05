@@ -1686,6 +1686,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wled/master/admin/wled.png",
     "type": "lighting"
   },
+   "wallpanel": {
+    "meta": "https://raw.githubusercontent.com/xXBJXx/ioBroker.wallpanel/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/xXBJXx/ioBroker.wallpanel/master/admin/wallpanel.png",
+    "type": "general"
+  },
   "wm-bus": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.wm-bus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.wm-bus/master/admin/wm-bus.png",
