@@ -1602,13 +1602,13 @@
   },
   "vis-icontwo": {
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-icontwo/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-icontwo/master/admin/i2_150.png",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-icontwo/master/admin/icontwo.png",
     "type": "visualization-icons",
     "version": "0.10.0"
   },
   "vis-inventwo": {
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-inventwo/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-inventwo/master/admin/i1_150.png",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-inventwo/master/admin/inventwo.png",
     "type": "visualization-widgets",
     "version": "1.3.8"
   },
