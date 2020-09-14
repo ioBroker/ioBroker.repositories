@@ -937,6 +937,11 @@
     "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.nello/master/admin/nello.png",
     "type": "hardware"
   },
+  "net-tools": {
+    "meta": "https://raw.githubusercontent.com/jey-cee/ioBroker.net-tools/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/jey-cee/ioBroker.net-tools/master/admin/net-tools.png",
+    "type": "network"
+  },
   "netatmo": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/admin/netatmo.png",
