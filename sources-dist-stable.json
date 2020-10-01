@@ -730,6 +730,12 @@
     "type": "logic",
     "version": "1.2.2"
   },
+  "linux-control": {
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.linux-control/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.linux-control/master/admin/linux-control.png",
+    "type": "hardware",
+    "version": "1.0.0"
+  },  
   "logparser": {
     "meta": "https://raw.githubusercontent.com/Mic-M/ioBroker.logparser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Mic-M/ioBroker.logparser/master/admin/logparser.png",
