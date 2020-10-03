@@ -599,6 +599,12 @@
     "type": "visualization",
     "version": "1.0.0"
   },
+  "jarvis": {
+    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.jarvis/v1.0.x/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.jarvis/v1.0.x/admin/jarvis.png",
+    "type": "vis",
+    "version": "1.0.6"
+  },
   "javascript": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/admin/javascript.png",
