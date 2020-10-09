@@ -609,7 +609,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/admin/javascript.png",
     "type": "logic",
-    "version": "4.6.17"
+    "version": "4.8.4"
   },
   "jeelink": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.jeelink/master/io-package.json",
@@ -741,7 +741,7 @@
     "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.linux-control/master/admin/linux-control.png",
     "type": "hardware",
     "version": "1.0.0"
-  },  
+  },
   "logparser": {
     "meta": "https://raw.githubusercontent.com/Mic-M/ioBroker.logparser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Mic-M/ioBroker.logparser/master/admin/logparser.png",
