@@ -602,7 +602,7 @@
   "jarvis": {
     "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.jarvis/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.jarvis/master/admin/jarvis.png",
-    "type": "vis",
+    "type": "visualization",
     "version": "1.0.6"
   },
   "javascript": {
