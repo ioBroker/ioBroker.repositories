@@ -1082,6 +1082,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.phantomjs/master/admin/phantomjs.png",
     "type": "utility"
   },
+  "philips-air": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.philips-air/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.philips-air/master/admin/philips-air.png",
+    "type": "household"
+  },
   "pi-hole": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.pi-hole/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.pi-hole/master/admin/pi-hole.png",
