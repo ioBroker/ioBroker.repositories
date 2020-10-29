@@ -1024,6 +1024,12 @@
     "type": "hardware",
     "version": "1.1.3"
   },
+  "octoprint": {
+    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.octoprint/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.octoprint/master/admin/octoprint.png",
+    "type": "hardware",
+    "version": "1.0.0"
+  },
   "odl": {
     "meta": "https://raw.githubusercontent.com/crycode-de/ioBroker.odl/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/crycode-de/ioBroker.odl/master/admin/odl.png",
