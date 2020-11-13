@@ -1324,6 +1324,12 @@
     "type": "energy",
     "version": "0.2.2"
   },
+  "smartcontrol": {
+      "meta": "https://raw.githubusercontent.com/Mic-M/ioBroker.smartcontrol/master/io-package.json",
+      "icon": "https://raw.githubusercontent.com/Mic-M/ioBroker.smartcontrol/master/admin/smartcontrol.png",
+      "type": "logic",
+      "version": "1.0.0"
+  },
   "smartgarden": {
     "meta": "https://raw.githubusercontent.com/jpgorganizer/ioBroker.smartgarden/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/jpgorganizer/ioBroker.smartgarden/master/admin/smartgarden.png",
