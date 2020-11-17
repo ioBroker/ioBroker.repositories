@@ -942,6 +942,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mysensors/master/admin/mysensors.png",
     "type": "iot-systems"
   },
+  "mytime": {
+    "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.mytime/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.mytime/master/admin/mytime.png",
+    "type": "general"
+  },
   "myvbus": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myvbus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myvbus/master/admin/myvbus.png",
