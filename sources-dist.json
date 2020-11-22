@@ -1860,5 +1860,10 @@
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware"
+  },
+  "frontier_silicon": {
+    "meta": "https://raw.githubusercontent.com/halloamt/ioBroker.frontier_silicon/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/halloamt/ioBroker.frontier_silicon/master/admin/radio.png",
+    "type": "multimedia"
   }
 }
