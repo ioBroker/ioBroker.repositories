@@ -69,6 +69,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 * The adapter testing using Travis and/or GitHub Actions is not for us - it is for you! Please check it after pushing changes to GitHub and before telling it to users or publish an NPM package. If testing is "red" you should check the testing log to see whats broken.
 * If you like to increase testing you can start implementing adapter specific tests that always run when you push changes to GitHub.
 * You can/should use https://translator.iobroker.in/ to auto translate all relevant texts into all needed languages by providing the english text
+* If an adapter instance want to generate a object structure it should use objects from the type device, channel or folder to define sub-structures and provide objects of type state only on the last "level". Different levels can be separated by a ".". An object of the type "state" should never have more objecte below it. The allowed field for the relevant object types are documented in https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/objectsschema.md#core-concept
 
 ## Add a new adapter to the stable repository
 1. Fork this repo and clone your fork
