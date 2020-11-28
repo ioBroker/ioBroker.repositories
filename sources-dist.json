@@ -4,6 +4,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/admin/accuweather.png",
     "type": "weather"
   },
+  "adb": {
+    "meta": "https://raw.githubusercontent.com/om2804/ioBroker.adb/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/om2804/ioBroker.adb/master/admin/adb.png",
+    "type": "hardware"
+  },
   "admin": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
@@ -348,6 +353,11 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/admin/flot.png",
     "type": "visualization"
+  },
+  "followthesun": {
+    "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.followthesun/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.followthesun/master/admin/followthesun.png",
+    "type": "general"
   },
   "foobar2000": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.foobar2000/master/io-package.json",
@@ -1292,11 +1302,14 @@
     "icon": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/admin/senec.png",
     "type": "energy"
   },
+
+
   "seq": {
     "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.seq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.seq/master/admin/seq.png",
     "type": "logic"
   },
+
   "shelly": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
