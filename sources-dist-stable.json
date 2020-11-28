@@ -694,6 +694,12 @@
     "type": "iot-systems",
     "version": "0.3.2"
   },
+  "legrand-ecocompteur": {
+    "meta": "https://raw.githubusercontent.com/raintonr/ioBroker.legrand-ecocompteur/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/raintonr/ioBroker.legrand-ecocompteur/master/admin/legrand-ecocompteur.png",
+    "type": "energy",
+    "version": "1.0.0"
+  },
   "letrika_comgw": {
     "meta": "https://raw.githubusercontent.com/AWhiteKnight/ioBroker.letrika_comgw/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AWhiteKnight/ioBroker.letrika_comgw/master/admin/letrika_comgw.png",
