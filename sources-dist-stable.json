@@ -359,6 +359,12 @@
     "type": "energy",
     "version": "1.0.5"
   },
+  "frontier_silicon": {
+    "meta": "https://raw.githubusercontent.com/halloamt/ioBroker.frontier_silicon/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/halloamt/ioBroker.frontier_silicon/master/admin/radio.png",
+    "type": "multimedia",
+    "version": "0.0.10"
+  },
   "fullcalendar": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.fullcalendar/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.fullcalendar/master/admin/fullcalendar.png",
@@ -1869,11 +1875,5 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware",
     "version": "1.7.10"
-  },
-  "frontier_silicon": {
-    "meta": "https://raw.githubusercontent.com/halloamt/ioBroker.frontier_silicon/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/halloamt/ioBroker.frontier_silicon/master/admin/radio.png",
-    "type": "multimedia",
-    "version": "0.0.8"
   }
 }
