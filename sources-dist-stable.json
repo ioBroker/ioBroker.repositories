@@ -425,6 +425,12 @@
     "type": "climate-control",
     "version": "1.0.0"
   },
+  "heos": {
+    "meta": "https://raw.githubusercontent.com/withstu/ioBroker.heos/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/withstu/ioBroker.heos/master/admin/heos.png",
+    "type": "multimedia",
+    "version": "1.6.1"
+  },
   "heytech": {
     "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.heytech/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.heytech/master/admin/heytech.png",
