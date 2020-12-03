@@ -389,6 +389,12 @@
     "type": "geoposition",
     "version": "0.3.2"
   },
+  "growatt": {
+    "meta": "https://raw.githubusercontent.com/PLCHome/ioBroker.growatt/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/PLCHome/ioBroker.growatt/master/admin/growatt.png",
+    "type": "energy"
+    "version": "0.0.14"
+  },
   "gruenbeck": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/admin/gruenbeck.png",
