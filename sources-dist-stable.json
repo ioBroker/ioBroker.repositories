@@ -398,7 +398,7 @@
   "growatt": {
     "meta": "https://raw.githubusercontent.com/PLCHome/ioBroker.growatt/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PLCHome/ioBroker.growatt/master/admin/growatt.png",
-    "type": "energy"
+    "type": "energy",
     "version": "0.0.14"
   },
   "gruenbeck": {
