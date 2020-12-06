@@ -992,11 +992,6 @@
     "icon": "https://raw.githubusercontent.com/daniel-2k/ioBroker.nanoleaf-lightpanels/master/admin/nanoleaf-lightpanels.png",
     "type": "lighting"
   },
-  "nello": {
-    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.nello/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.nello/master/admin/nello.png",
-    "type": "hardware"
-  },
   "net-tools": {
     "meta": "https://raw.githubusercontent.com/jey-cee/ioBroker.net-tools/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/jey-cee/ioBroker.net-tools/master/admin/net-tools.png",

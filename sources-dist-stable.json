@@ -704,7 +704,7 @@
     "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.lametric/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.lametric/master/admin/lametric.png",
     "type": "hardware",
-    "version": "0.0.9"
+    "version": "1.0.0"
   },
   "landroid": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.landroid/master/io-package.json",
@@ -1018,12 +1018,6 @@
     "type": "lighting",
     "version": "1.0.6"
   },
-  "nello": {
-    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.nello/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.nello/master/admin/nello.png",
-    "type": "hardware",
-    "version": "2.0.6"
-  },
   "netatmo": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/admin/netatmo.png",
@@ -1076,7 +1070,7 @@
     "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.octoprint/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.octoprint/master/admin/octoprint.png",
     "type": "hardware",
-    "version": "1.0.1"
+    "version": "1.0.3"
   },
   "odl": {
     "meta": "https://raw.githubusercontent.com/crycode-de/ioBroker.odl/master/io-package.json",
