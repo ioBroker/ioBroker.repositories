@@ -405,7 +405,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/admin/gruenbeck.png",
     "type": "household",
-    "version": "0.0.18"
+    "version": "0.0.21"
   },
   "habpanel": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/io-package.json",
@@ -872,7 +872,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.mercedesme/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.mercedesme/master/admin/mercedesme.png",
     "type": "vehicle",
-    "version": "0.0.21"
+    "version": "0.0.42"
   },
   "mercury": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.mercury/master/io-package.json",
@@ -1040,7 +1040,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/admin/nina.png",
     "type": "misc-data",
-    "version": "0.0.22"
+    "version": "0.0.23"
   },
   "node-red": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/io-package.json",
@@ -1622,7 +1622,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.velux/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.velux/master/admin/velux.png",
     "type": "household",
-    "version": "0.0.5"
+    "version": "0.0.6"
   },
   "viessmann": {
     "meta": "https://raw.githubusercontent.com/misanorot/ioBroker.viessmann/master/io-package.json",
@@ -1768,6 +1768,12 @@
     "type": "visualization-widgets",
     "version": "2.5.2"
   },
+  "volvo": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.volvo/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.volvo/master/admin/volvo.png",
+    "type": "vehicle",
+    "version": "0.0.3"
+  },
   "vr200": {
     "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.vr200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.vr200/master/admin/VR200.png",
@@ -1778,7 +1784,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.vw-connect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.vw-connect/master/admin/vw-connect.png",
     "type": "vehicle",
-    "version": "0.0.15"
+    "version": "0.0.21"
   },
   "weatherunderground": {
     "meta": "https://raw.githubusercontent.com/dschaedl/ioBroker.weatherunderground/master/io-package.json",
