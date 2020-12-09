@@ -191,17 +191,17 @@
     "type": "multimedia",
     "version": "1.7.7"
   },
-  "devices": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/admin/devices.png",
-    "type": "general",
-    "version": "0.3.13"
-  },
   "device-reminder": {
     "meta": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/admin/icon.png",
     "type": "energy",
     "version": "0.6.2"
+  },
+  "devices": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/admin/devices.png",
+    "type": "general",
+    "version": "0.3.13"
   },
   "digitalstrom": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.digitalstrom/master/io-package.json",
@@ -298,6 +298,12 @@
     "icon": "https://raw.githubusercontent.com/instalator/ioBroker.exchangerates/master/admin/exchangerates.png",
     "type": "misc-data",
     "version": "0.0.13"
+  },
+  "fahrplan": {
+    "meta": "https://raw.githubusercontent.com/gaudes/ioBroker.fahrplan/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/gaudes/ioBroker.fahrplan/master/admin/fahrplan.png",
+    "type": "date-and-time",
+    "version": "1.0.0"
   },
   "fakeroku": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.fakeroku/master/io-package.json",
