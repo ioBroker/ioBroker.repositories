@@ -204,15 +204,15 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
     "type": "multimedia"
   },
+  "device-reminder": {
+    "meta": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/admin/icon.png",
+    "type": "energy"
+  },
   "devices": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/admin/devices.png",
     "type": "general"
-  },
-    "device-reminder": {
-    "meta": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/admin/icon.png",
-    "type": "energy"
   },
   "digitalstrom": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.digitalstrom/master/io-package.json",
@@ -1312,14 +1312,11 @@
     "icon": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/admin/senec.png",
     "type": "energy"
   },
-
-
   "seq": {
     "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.seq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.seq/master/admin/seq.png",
     "type": "logic"
   },
-
   "shelly": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
@@ -1588,6 +1585,11 @@
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/admin/tvspielfilm.png",
     "type": "misc-data"
+  },
+  "twinkly": {
+    "meta": "https://raw.githubusercontent.com/patrickbs96/ioBroker.twinkly/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/patrickbs96/ioBroker.twinkly/master/admin/twinkly.png",
+    "type": "lighting"
   },
   "unifi": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.unifi/master/io-package.json",
