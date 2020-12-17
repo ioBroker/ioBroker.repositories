@@ -214,6 +214,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/admin/devices.png",
     "type": "general"
   },
+  "device-reminder": {
+    "meta": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/admin/icon.png",
+    "type": "energy"
+  },
   "digitalstrom": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.digitalstrom/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.digitalstrom/master/admin/digitalstrom.png",
@@ -357,7 +362,7 @@
   "followthesun": {
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.followthesun/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.followthesun/master/admin/followthesun.png",
-    "type": "general"
+    "type": "geoposition"
   },
   "foobar2000": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.foobar2000/master/io-package.json",
@@ -443,6 +448,11 @@
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
     "type": "multimedia"
+  },
+  "hass": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hass/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hass/master/admin/hass.png",
+    "type": "iot-systems"
   },
   "hass-mqtt": {
     "meta": "https://raw.githubusercontent.com/smarthomefans/ioBroker.hass-mqtt/master/io-package.json",
