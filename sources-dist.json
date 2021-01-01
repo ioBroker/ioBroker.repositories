@@ -1067,6 +1067,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/admin/oilfox.png",
     "type": "hardware"
   },
+  "omron-fins": {
+    "meta": "https://raw.githubusercontent.com/TheBam1990/ioBroker.omron-fins/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.omron-fins/master/admin/omron-fins.png",
+    "type": "hardware"
+  },
   "onkyo": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.onkyo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.onkyo/master/admin/onkyo.png",
