@@ -204,15 +204,15 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
     "type": "multimedia"
   },
-  "devices": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/admin/devices.png",
-    "type": "general"
-  },
   "device-reminder": {
     "meta": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/admin/icon.png",
     "type": "energy"
+  },
+  "devices": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/admin/devices.png",
+    "type": "general"
   },
   "digitalstrom": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.digitalstrom/master/io-package.json",
@@ -418,6 +418,11 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/admin/gruenbeck.png",
     "type": "household"
+  },
+  "haassohn": {
+    "meta": "https://raw.githubusercontent.com/marvingrieger/ioBroker.haassohn/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/marvingrieger/ioBroker.haassohn/master/admin/haassohn.png",
+    "type": "iot-systems"
   },
   "habpanel": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/io-package.json",
