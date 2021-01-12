@@ -1219,7 +1219,7 @@
   "plenticore": {
     "meta": "https://raw.githubusercontent.com/StrathCole/ioBroker.plenticore/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/StrathCole/ioBroker.plenticore/master/admin/plenticore.png",
-    "type": "energy"
+    "type": "energy",
     "version": "2.1.6"
   },
   "plex": {
