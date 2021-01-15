@@ -204,15 +204,15 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
     "type": "multimedia"
   },
-  "devices": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/admin/devices.png",
-    "type": "general"
-  },
   "device-reminder": {
     "meta": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/admin/icon.png",
     "type": "energy"
+  },
+  "devices": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/admin/devices.png",
+    "type": "general"
   },
   "digitalstrom": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.digitalstrom/master/io-package.json",
@@ -293,6 +293,11 @@
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
     "type": "iot-systems"
+  },
+  "epson_ecotank_et_2750": {
+    "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.epson_ecotank_et_2750/master/io-package.json",
+    "icon": "https://github.com/o0shojo0o/ioBroker.epson_ecotank_et_2750/blob/master/admin/epson_ecotank_et_2750.png",
+    "type": "infrastructure"
   },
   "epson_stylus_px830": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.epson_stylus_px830/master/io-package.json",
