@@ -1295,8 +1295,8 @@
     "version": "1.0.0"
   },
   "ring": {
-    "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.ring/master/admin/ring.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ring/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ring/master/admin/ring.png",
     "type": "hardware",
     "version": "1.1.3"
   },
