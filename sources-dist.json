@@ -127,7 +127,7 @@
   "bydbatt": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.bydbatt/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.bydbatt/master/admin/byd-batterybox.png",
-    "type": "hardware"
+    "type": "household"
   },    
   "calendar": {
     "meta": "https://raw.githubusercontent.com/WLAN-Kabel/ioBroker.calendar/master/io-package.json",
