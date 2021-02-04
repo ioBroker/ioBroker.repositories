@@ -41,7 +41,7 @@ This file contains a checklist for adapter reviews
 * especially search for timeouts/intervals (also in lib files) and check that they are cleared in unload
 * "schedule" not used for external communication
 * only needed event handlers are used (stateChange/objectChange/message))
-* verify that no strictObjectChecks: false is used or jusified
+* verify that no strictObjectChecks: false is used unjustified
 * check used object roles
 * verify no setObject (ideally)
 * onStateChange check ack handling
