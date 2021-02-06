@@ -1132,6 +1132,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.owntracks/master/admin/owntracks.png",
     "type": "geoposition"
   },
+  "palazzetti": {
+    "meta": "https://raw.githubusercontent.com/inapsis/ioBroker.palazzetti/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/inapsis/ioBroker.palazzetti/master/admin/palazzetti.png",
+    "type": "climate-control"
+  },
   "panasonic-viera": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.panasonic-viera/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.panasonic-viera/master/admin/panasonic-viera.png",
