@@ -1682,8 +1682,8 @@
     "type": "hardware"
   },
   "zoe2": {
-    "meta": "https://github.com/fungus75/ioBroker.zoe2/blob/master/io-package.json",
-    "icon": "https://github.com/fungus75/ioBroker.zoe2/blob/master/admin/zoe.png",
+    "meta": "https://raw.githubusercontent.com/fungus75/ioBroker.zoe2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/fungus75/ioBroker.zoe2/master/admin/zoe.png",
     "type": "vehicle"
   },
   "zoneminder": {
