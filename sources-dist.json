@@ -1611,6 +1611,11 @@
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.tuya/master/admin/tuya.png",
     "type": "iot-systems"
   },
+  "tvprogram": {
+    "meta": "https://raw.githubusercontent.com/oweitman/iobroker.tvprogram/master/io-package.json",
+    "icon": "https://github.com/oweitman/iobroker.tvprogram/blob/master/admin/tvprogram.png",
+    "type": "misc-data"
+  },
   "tvspielfilm": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/admin/tvspielfilm.png",
