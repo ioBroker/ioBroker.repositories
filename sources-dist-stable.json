@@ -431,6 +431,12 @@
     "type": "household",
     "version": "0.0.28"
   },
+  "haassohn": {
+    "meta": "https://raw.githubusercontent.com/marvingrieger/ioBroker.haassohn/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/marvingrieger/ioBroker.haassohn/master/admin/haassohn.png",
+    "type": "iot-systems",
+    "version": "1.0.3"
+  },
   "habpanel": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/admin/habpanel.png",
@@ -501,7 +507,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
     "type": "iot-systems",
-    "version": "1.14.24"
+    "version": "1.14.35"
   },
   "hmip": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/io-package.json",
@@ -1047,6 +1053,12 @@
     "icon": "https://raw.githubusercontent.com/daniel-2k/ioBroker.nanoleaf-lightpanels/master/admin/nanoleaf-lightpanels.png",
     "type": "lighting",
     "version": "1.0.6"
+  },
+  "net-tools": {
+    "meta": "https://raw.githubusercontent.com/jey-cee/ioBroker.net-tools/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/jey-cee/ioBroker.net-tools/master/admin/net-tools.png",
+    "type": "network",
+    "version": "0.1.2"
   },
   "netatmo": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.netatmo/master/io-package.json",
@@ -1676,7 +1688,7 @@
     "meta": "https://raw.githubusercontent.com/Omega236/ioBroker.virtualpowermeter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Omega236/ioBroker.virtualpowermeter/master/admin/virtualpowermeter.png",
     "type": "energy",
-    "version": "1.2.2"
+    "version": "1.4.1"
   },
   "vis": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
@@ -1940,7 +1952,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/admin/zigbee.png",
     "type": "hardware",
-    "version": "1.4.3"
+    "version": "1.4.4"
   },
   "zont": {
     "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/io-package.json",
