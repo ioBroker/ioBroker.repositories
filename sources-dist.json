@@ -314,6 +314,11 @@
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
     "type": "iot-systems"
   },
+  "esphome": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.esphome/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.esphome/master/admin/enet.png",
+    "type": "hardware
+  },
   "epson_ecotank_et_2750": {
     "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.epson_ecotank_et_2750/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.epson_ecotank_et_2750/master/admin/epson_ecotank_et_2750.png",
