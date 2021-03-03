@@ -224,9 +224,9 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/admin/devices.png",
     "type": "general"
   },
-  "diashow": {
-    "meta": "https://raw.githubusercontent.com/gaudes/ioBroker.diashow/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/gaudes/ioBroker.diashow/main/admin/diashow.png",
+  "slideshow": {
+    "meta": "https://raw.githubusercontent.com/gaudes/ioBroker.slideshow/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/gaudes/ioBroker.slideshow/main/admin/slideshow.png",
     "type": "visualization"
   },
   "digitalstrom": {
