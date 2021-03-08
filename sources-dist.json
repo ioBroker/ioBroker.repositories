@@ -224,11 +224,6 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/admin/devices.png",
     "type": "general"
   },
-  "slideshow": {
-    "meta": "https://raw.githubusercontent.com/gaudes/ioBroker.slideshow/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/gaudes/ioBroker.slideshow/main/admin/slideshow.png",
-    "type": "visualization"
-  },
   "digitalstrom": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.digitalstrom/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.digitalstrom/master/admin/digitalstrom.png",
@@ -1411,6 +1406,11 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/admin/simple-api.png",
     "type": "communication"
+  },
+  "slideshow": {
+    "meta": "https://raw.githubusercontent.com/gaudes/ioBroker.slideshow/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/gaudes/ioBroker.slideshow/main/admin/slideshow.png",
+    "type": "visualization"
   },
   "sma-em": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sma-em/master/io-package.json",
