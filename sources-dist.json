@@ -324,6 +324,11 @@
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.epson_stylus_px830/master/admin/epson_stylus_px830.png",
     "type": "infrastructure"
   },
+  "eufy-security": {
+    "meta": "https://raw.githubusercontent.com/bropat/ioBroker.eufy-security/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bropat/ioBroker.eufy-security/master/admin/eufy-security.png",
+    "type": "alarm"
+  },
   "eventlist": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.eventlist/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.eventlist/master/admin/eventlist.png",
