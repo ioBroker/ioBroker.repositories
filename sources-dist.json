@@ -1153,8 +1153,8 @@
     "type": "misc-data"
   },
   "opentherm": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.opentherm/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.opentherm/master/admin/opentherm.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.opentherm/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.opentherm/master/admin/opentherm.png",
     "type": "hardware"
   },
   "openweathermap": {
