@@ -1952,8 +1952,8 @@
     "type": "hardware"
   },
   "wlanthermo-nano": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wlanthermo-nano/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wlanthermo-nano/master/admin/wlanthermo-nano.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wlanthermo-nano/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wlanthermo-nano/master/admin/wlanthermo-nano.png",
     "type": "household"
   },
   "wled": {
