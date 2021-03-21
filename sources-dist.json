@@ -175,8 +175,8 @@
     "type": "alarm"
   },
   "coronavirus-statistics": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.coronavirus-statistics/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.coronavirus-statistics/master/admin/coronavirus-statistics.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.coronavirus-statistics/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.coronavirus-statistics/master/admin/coronavirus-statistics.png",
     "type": "health"
   },
   "corrently": {
