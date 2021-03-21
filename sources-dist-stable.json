@@ -1677,7 +1677,7 @@
     "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.tvprogram/master/admin/tvprogram.png",
     "type": "misc-data",
     "version": "0.0.32"
-  },  
+  },
   "tvspielfilm": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.tvspielfilm/master/admin/tvspielfilm.png",
@@ -1931,8 +1931,8 @@
     "version": "0.1.5"
   },
   "wled": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wled/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wled/master/admin/wled.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/master/admin/wled.png",
     "type": "lighting",
     "version": "0.5.6"
   },
