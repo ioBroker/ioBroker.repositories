@@ -175,8 +175,8 @@
     "type": "alarm"
   },
   "coronavirus-statistics": {
-    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.coronavirus-statistics/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.coronavirus-statistics/master/admin/coronavirus-statistics.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.coronavirus-statistics/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.coronavirus-statistics/main/admin/coronavirus-statistics.png",
     "type": "health"
   },
   "corrently": {
@@ -230,8 +230,8 @@
     "type": "iot-systems"
   },
   "discovergy": {
-    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.discovergy/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.discovergy/master/admin/discovergy.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.discovergy/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.discovergy/main/admin/discovergy.png",
     "type": "energy"
   },
   "discovery": {
@@ -320,8 +320,8 @@
     "type": "iot-systems"
   },
   "esphome": {
-    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/master/admin/esphome.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/admin/esphome.png",
     "type": "hardware"
   },
   "epson_ecotank_et_2750": {
@@ -721,8 +721,8 @@
     "type": "climate-control"
   },
   "knmi-weather": {
-    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.knmi-weather/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.knmi-weather/master/admin/knmi-weather.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.knmi-weather/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.knmi-weather/main/admin/knmi-weather.png",
     "type": "weather"
   },
   "knx": {
@@ -1013,8 +1013,8 @@
     "type": "protocols"
   },
   "multicast": {
-    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.multicast/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.multicast/master/admin/multicast.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.multicast/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.multicast/main/admin/multicast.png",
     "type": "network"
   },
   "musiccast": {
@@ -1153,8 +1153,8 @@
     "type": "misc-data"
   },
   "opentherm": {
-    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.opentherm/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.opentherm/master/admin/opentherm.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.opentherm/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.opentherm/main/admin/opentherm.png",
     "type": "hardware"
   },
   "openweathermap": {
@@ -1508,8 +1508,8 @@
     "type": "multimedia"
   },
   "sourceanalytix": {
-    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.sourceanalytix/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.sourceanalytix/master/admin/sourceanalytix.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.sourceanalytix/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.sourceanalytix/main/admin/sourceanalytix.png",
     "type": "energy"
   },
   "spotify-premium": {
@@ -1583,8 +1583,8 @@
     "type": "misc-data"
   },
   "tado": {
-    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.tado/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.tado/master/admin/tado.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.tado/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.tado/main/admin/tado.png",
     "type": "climate-control"
   },
   "tahoma": {
@@ -1732,8 +1732,8 @@
     "type": "misc-data"
   },
   "vedirect": {
-    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.vedirect/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.vedirect/master/admin/Vedirect_Adapterimage.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.vedirect/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.vedirect/main/admin/Vedirect_Adapterimage.png",
     "type": "energy"
   },
   "velux": {
@@ -1922,8 +1922,8 @@
     "type": "general"
   },
   "web-speedy": {
-    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.web-speedy/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.web-speedy/master/admin/web-speedy.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.web-speedy/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.web-speedy/main/admin/web-speedy.png",
     "type": "network"
   },
   "weishaupt-wem": {
@@ -1952,13 +1952,13 @@
     "type": "hardware"
   },
   "wlanthermo-nano": {
-    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wlanthermo-nano/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wlanthermo-nano/master/admin/wlanthermo-nano.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wlanthermo-nano/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wlanthermo-nano/main/admin/wlanthermo-nano.png",
     "type": "household"
   },
   "wled": {
-    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/master/admin/wled.png",
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/main/admin/wled.png",
     "type": "lighting"
   },
   "wm-bus": {
