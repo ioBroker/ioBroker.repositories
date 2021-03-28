@@ -89,6 +89,11 @@
     "icon": "https://raw.githubusercontent.com/Flashy-GER/ioBroker.blink4home/master/admin/blink4home.png",
     "type": "alarm"
   },
+  "bluelink": {
+    "meta": "https://raw.githubusercontent.com/Newan/ioBroker.bluelink/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Newan/ioBroker.bluelink/master/admin/bluelink.png",
+    "type": "vehicle"
+  },
   "bmw": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/admin/bmw.png",
