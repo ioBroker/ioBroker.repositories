@@ -133,7 +133,7 @@
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.bydbatt/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.bydbatt/master/admin/byd-batterybox.png",
     "type": "household"
-  },    
+  },
   "calendar": {
     "meta": "https://raw.githubusercontent.com/WLAN-Kabel/ioBroker.calendar/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/WLAN-Kabel/ioBroker.calendar/master/admin/calendar.png",
@@ -724,7 +724,7 @@
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.judoisoft/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.judoisoft/master/admin/judo.png",
     "type": "household"
-  },        
+  },
   "kecontact": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/admin/charger.png",
@@ -1980,11 +1980,6 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wifilight/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wifilight/master/admin/wifilight.png",
     "type": "lighting"
-  },
-  "windows-control": {
-    "meta": "https://raw.githubusercontent.com/Mic-M/ioBroker.windows-control/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Mic-M/ioBroker.windows-control/master/admin/windows-control.png",
-    "type": "hardware"
   },
   "wlanthermo-nano": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wlanthermo-nano/main/io-package.json",
