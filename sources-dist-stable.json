@@ -1948,6 +1948,12 @@
     "type": "lighting",
     "version": "1.1.0"
   },
+  "windows-control": {
+    "meta": "https://raw.githubusercontent.com/Mic-M/ioBroker.windows-control/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Mic-M/ioBroker.windows-control/master/admin/windows-control.png",
+    "type": "hardware",
+    "version": "0.1.5"
+  },
   "wled": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/main/admin/wled.png",
