@@ -2,9 +2,6 @@
 
 This is github project for storage of latest and stable repositories.
 
-Write ```npm run update``` to just get new adapters from sources-dist.json into sources-dist-stable.json.
-And write ```npm run update adapterName``` to write latest version of adapterName into sources-dist-stable.json
-
 ## Update of the version in stable
 1. Be sure that the version is tested in forum by users or you fix the critical bug with that.
 2. Delete the versionTime if exists
@@ -13,7 +10,7 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 1. Fork this repo and clone your fork
 2. Run `npm i`
 3. Run `npm run addToLatest -- --name <adapter-name> --type <adapter-type>`  
-    (replace `<adapter-name>` with your adapter's name and `<adapter-type>` with the adapter type)
+    (replace `<adapter-name>` with your adapter's name (without 'iobroker.' prefix) and `<adapter-type>` with the adapter type)
 4. Push a commit with the changes to `sources-dist.json`
 5. Create a PR
 
@@ -48,10 +45,10 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 * Best use the adapter creator (https://github.com/ioBroker/create-adapter) or get a fresh relevant version from the Template Repository (https://github.com/ioBroker/ioBroker.template) to start coding to always get the latest basic version and also updates. You should not always copy basic files from former adapters!
 * Do not copy a package.json or io-package.json after an installation because some fields might have been added on installation! e.g. io-package with common.installedFrom eds to be removed
 * **Use the Adapter Checker and fix all issues shown there: https://adapter-check.iobroker.in/**
-* Respect Onject and state definitions, types and roles Values not definied here should not be used. Discussions about missing roles or types are welcome:
+* Respect Object and state definitions, types and roles Values not defined here should not be used. Discussions about missing roles or types are welcome:
   * https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/objectsschema.md#object-types
   * https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/stateroles.md
-* Only commit .vscode, .idea or other IDE files/helper directories to GitHub if there is a need to. This is to prevent other users settings to interfer with yours or make PRs more complex because of this.
+* Only commit .vscode, .idea or other IDE files/helper directories to GitHub if there is a need to. This is to prevent other users settings to interfere with yours or make PRs more complex because of this.
 * If you do not need onState/ObjectChange/Message please do not implement it
 * if you need to store passwords please encrypt them in Admin! You can check e.g. Apollon77/iobroker.meross for example code in index_m.html and main.js
 * add all editable fields from index_m.html to io-package native with their default values
@@ -64,12 +61,12 @@ And write ```npm run update adapterName``` to write latest version of adapterNam
 * When using Intervals together with external communication think about timeout and error cases - an interval triggers the next call also if the last has not finished. So requests might pile up and you DOS the external API. A better practice might be to use setTimeout and set at the end of one call for the next call
 * If you use "connections" to other systems (Websockets, MQTT, TCP, Serial or other) please also implement the info.connection state (directly create objects by including in io-package) and set the connection value accordingly. Using this enables Admin to differentiate the status between green (ok, running), yellow (basically running but not connected) and red (not running).
 * Consider and understand the asynchronous nature of JavaScript and make sure to know what will happen in parallel and what makes more sence to be sequencially! It is ok to use callbacks or Promises/async/await - the latter makes it more easy to understand and control how your code really flows.
-* Consider using ESLink or other JavaScript code and type checker to see errors in your code before releasing a new version.
+* Consider using ESLint or other JavaScript code and type checker to see errors in your code before releasing a new version.
 * **Please activate adapter testing with at least package- and integration-tests on Travis-CI** GitHub Actions are not enough at the moment because they do not allow us to get an easy overview, especially when we want to see how our adapters behave with new nodejs versions.
 * The adapter testing using Travis and/or GitHub Actions is not for us - it is for you! Please check it after pushing changes to GitHub and before telling it to users or publish an NPM package. If testing is "red" you should check the testing log to see whats broken.
 * If you like to increase testing you can start implementing adapter specific tests that always run when you push changes to GitHub.
 * You can/should use https://translator.iobroker.in/ to auto translate all relevant texts into all needed languages by providing the english text
-* If an adapter instance want to generate a object structure it should use objects from the type device, channel or folder to define sub-structures and provide objects of type state only on the last "level". Different levels can be separated by a ".". An object of the type "state" should never have more objecte below it. The allowed field for the relevant object types are documented in https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/objectsschema.md#core-concept
+* If an adapter instance want to generate an object structure it should use objects from the type device, channel or folder to define sub-structures and provide objects of type state only on the last "level". Different levels can be separated by a ".". An object of the type "state" should never have more objecte below it. The allowed field for the relevant object types are documented in https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/objectsschema.md#core-concept
 
 ## Add a new adapter to the stable repository
 1. Fork this repo and clone your fork
