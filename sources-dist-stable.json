@@ -89,6 +89,12 @@
     "type": "hardware",
     "version": "0.12.0"
   },
+  "bluelink": {
+    "meta": "https://raw.githubusercontent.com/Newan/ioBroker.bluelink/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Newan/ioBroker.bluelink/master/admin/bluelink.png",
+    "type": "vehicle",
+    "version": "1.0.4"
+  },
   "bmw": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.bmw/master/admin/bmw.png",
@@ -262,6 +268,12 @@
     "icon": "https://raw.githubusercontent.com/Newan/ioBroker.easee/master/admin/easee.png",
     "type": "vehicle",
     "version": "0.1.2"
+  },
+  "easee": {
+    "meta": "https://raw.githubusercontent.com/Newan/ioBroker.easee/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Newan/ioBroker.easee/master/admin/easee.png",
+    "type": "vehicle",
+    "version": "1.0.2"
   },
   "ebus": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.ebus/master/io-package.json",
