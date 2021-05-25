@@ -489,13 +489,13 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham/master/admin/ham.png",
     "type": "iot-systems",
-    "version": "4.0.1"
+    "version": "4.0.2"
   },
   "ham-wemo": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham-wemo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham-wemo/master/admin/ham-wemo.png",
     "type": "iot-systems",
-    "version": "1.1.1"
+    "version": "2.0.0"
   },
   "harmony": {
     "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/io-package.json",
@@ -956,7 +956,7 @@
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.meross/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.meross/master/admin/meross.png",
     "type": "iot-systems",
-    "version": "1.5.1"
+    "version": "1.6.2"
   },
   "meteoalarm": {
     "meta": "https://raw.githubusercontent.com/jack-blackson/ioBroker.meteoalarm/master/io-package.json",
@@ -1142,7 +1142,7 @@
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.nut/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.nut/master/admin/nut.png",
     "type": "hardware",
-    "version": "1.4.3"
+    "version": "1.5.0"
   },
   "octoprint": {
     "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.octoprint/master/io-package.json",
