@@ -344,6 +344,11 @@
     "icon": "https://raw.githubusercontent.com/tikodu/ioBroker.epson_xp540/master/admin/epson_xp540.png",
     "type": "infrastructure"
   },
+  "eufy-security": {
+    "meta": "https://raw.githubusercontent.com/bropat/ioBroker.eufy-security/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bropat/ioBroker.eufy-security/master/admin/eufy-security.png",
+    "type": "alarm"
+  },
   "eventlist": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.eventlist/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.eventlist/master/admin/eventlist.png",
