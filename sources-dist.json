@@ -1721,6 +1721,11 @@
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.trashschedule/master/admin/trashschedule.png",
     "type": "date-and-time"
   },
+  "trivum": {
+    "meta": "https://raw.githubusercontent.com/TheBam1990/ioBroker.trivum/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.trivum/main/admin/trivum.png",
+    "type": "multimedia"
+  },
   "tunnelbroker-endpoint-updater": {
     "meta": "https://raw.githubusercontent.com/PowerPan/ioBroker.tunnelbroker-endpoint-updater/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PowerPan/ioBroker.tunnelbroker-endpoint-updater/master/admin/tunnelbroker-endpoint-updater.png",
