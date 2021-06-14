@@ -2064,7 +2064,6 @@
     "bydhvs": { 
     "meta" : "https://raw.githubusercontent.com/christianh17/ioBroker.bydhvs/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/christianh17/ioBroker.bydhvs/master/admin/bydhvs.png",
-    "type": "energy",
-    "version": "1.2.1"
+    "type": "energy"
   }
 }
