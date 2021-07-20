@@ -634,6 +634,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ical/master/admin/ical.png",
     "type": "date-and-time"
   },
+  "ico": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ico/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ico/master/admin/ico.png",
+    "type": "metering"
+  },
   "icons-addictive-flavour-png": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-addictive-flavour-png/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-addictive-flavour-png/master/admin/icons-addictive-flavour-png.png",
