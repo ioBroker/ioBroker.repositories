@@ -19,6 +19,11 @@
     "icon": "https://raw.githubusercontent.com/weggetor/ioBroker.airconwithme/main/admin/airconwithme.png",
     "type": "climate-control"
   },
+  "airzone": {
+    "meta": "https://raw.githubusercontent.com/SilentPhoenix11/ioBroker.airzone/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SilentPhoenix11/ioBroker.airzone/master/admin/Airzone.png",
+    "type": "climate-control"
+  },
   "alarm": {
     "meta": "https://raw.githubusercontent.com/misanorot/ioBroker.alarm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/misanorot/ioBroker.alarm/master/admin/alarm.png",
