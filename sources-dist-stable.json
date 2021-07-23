@@ -23,6 +23,18 @@
     "type": "general",
     "version": "1.2.1"
   },
+  "airconwithme": {
+    "meta": "https://raw.githubusercontent.com/weggetor/ioBroker.airconwithme/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/weggetor/ioBroker.airconwithme/main/admin/airconwithme.png",
+    "type": "climate-control",
+    "version": "0.0.3"
+  },
+  "airzone": {
+    "meta": "https://raw.githubusercontent.com/SilentPhoenix11/ioBroker.airzone/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SilentPhoenix11/ioBroker.airzone/master/admin/Airzone.png",
+    "type": "climate-control",
+    "version": "1.0.4"
+  },
   "alpha2": {
     "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/admin/mh-logo.png",
@@ -261,7 +273,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.dwd/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.dwd/master/admin/dwd.png",
     "type": "weather",
-    "version": "2.7.5"
+    "version": "2.7.7"
   },
   "dysonairpurifier": {
     "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.dysonairpurifier/master/io-package.json",
@@ -309,7 +321,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.email/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.email/master/admin/email.png",
     "type": "messaging",
-    "version": "1.0.9"
+    "version": "1.0.10"
   },
   "emby": {
     "meta": "https://raw.githubusercontent.com/thewhobox/ioBroker.emby/master/io-package.json",
@@ -1064,7 +1076,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.modbus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.modbus/master/admin/modbus.png",
     "type": "protocols",
-    "version": "3.2.6"
+    "version": "3.4.9"
   },
   "moma": {
     "meta": "https://raw.githubusercontent.com/AWhiteKnight/ioBroker.moma/master/io-package.json",
@@ -1100,7 +1112,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mydlink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mydlink/master/admin/mydlink.png",
     "type": "hardware",
-    "version": "1.1.7"
+    "version": "1.1.12"
   },
   "mysensors": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mysensors/master/io-package.json",
@@ -1196,7 +1208,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.onkyo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.onkyo/master/admin/onkyo.png",
     "type": "multimedia",
-    "version": "2.0.5"
+    "version": "2.1.0"
   },
   "onvif": {
     "meta": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/io-package.json",
@@ -1496,7 +1508,7 @@
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.siegenia/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.siegenia/master/admin/siegenia.png",
     "type": "climate-control",
-    "version": "1.1.0"
+    "version": "1.1.1"
   },
   "simple-api": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/io-package.json",
