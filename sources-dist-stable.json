@@ -155,6 +155,12 @@
     "type": "household",
     "version": "1.0.5"
   },
+  "bydhvs": {
+    "meta": "https://raw.githubusercontent.com/ChristianH17/ioBroker.bydhvs/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ChristianH17/ioBroker.bydhvs/master/admin/bydhvs.png",
+    "type": "energy",
+    "version": "1.2.3"
+  },
   "chromecast": {
     "meta": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/admin/chromecast.png",
@@ -357,7 +363,7 @@
     "meta": "https://raw.githubusercontent.com/tikodu/ioBroker.epson_xp540/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/tikodu/ioBroker.epson_xp540/master/admin/epson_xp540.png",
     "type": "infrastructure",
-	"version": "1.0.6"
+    "version": "1.0.6"
   },
   "exchangerates": {
     "meta": "https://raw.githubusercontent.com/instalator/ioBroker.exchangerates/master/io-package.json",
