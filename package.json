@@ -23,6 +23,7 @@
     "nodates": "node lib/scripts.js nodates",
     "addToLatest": "node lib/scripts.js addToLatest",
     "addToStable": "node lib/scripts.js addToStable",
+    "updateStable": "node lib/scripts.js updateStable",
     "check": "node lib/check.js",
     "stable": "node lib/readyForStable.js"
   },
