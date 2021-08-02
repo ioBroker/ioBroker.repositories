@@ -23,6 +23,7 @@
     "nodates": "node lib/scripts.js nodates",
     "addToLatest": "node lib/scripts.js addToLatest",
     "addToStable": "node lib/scripts.js addToStable",
+    "updateStable": "node lib/scripts.js updateStable",
     "check": "node lib/check.js",
     "stable": "node lib/readyForStable.js"
   },
@@ -43,13 +44,13 @@
     "chai": "^4.2.0",
     "eslint": "^7.7.0",
     "gulp": "^4.0.2",
+    "image-size": "^0.8.3",
     "minimist": "^1.2.5",
     "mocha": "^8.1.1",
     "node.extend": "^2.0.2",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9",
     "semver": "^7.3.2",
-    "unzipper": "^0.10.11",
-    "image-size": "^0.8.3"
+    "unzipper": "^0.10.11"
   }
 }
