@@ -538,6 +538,11 @@
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/admin/heatingcontrol.png",
     "type": "climate-control"
+  },  
+  "heizoel": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.heizoel/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.heizoel/master/admin/heizoel.png",
+    "type": "metering"
   },
   "heos": {
     "meta": "https://raw.githubusercontent.com/withstu/ioBroker.heos/master/io-package.json",
@@ -1321,11 +1326,6 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
     "type": "network"
-  },
-  "psa": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.psa/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.psa/master/admin/psa.png",
-    "type": "vehicle"
   },
   "pushbullet": {
     "meta": "https://raw.githubusercontent.com/Jens1809/ioBroker.pushbullet/master/io-package.json",
