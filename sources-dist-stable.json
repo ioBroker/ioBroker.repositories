@@ -1,4 +1,10 @@
 {
+  "adguard": {
+    "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.adguard/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.adguard/master/admin/adguard.png",
+    "type": "network",
+    "version": "0.0.8"
+  },
   "admin": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
