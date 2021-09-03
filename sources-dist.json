@@ -568,7 +568,7 @@
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/admin/heatingcontrol.png",
     "type": "climate-control"
-  },  
+  },
   "heizoel": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.heizoel/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.heizoel/master/admin/heizoel.png",
@@ -1696,6 +1696,11 @@
     "meta": "https://raw.githubusercontent.com/baerengraben/ioBroker.swiss-weather-api/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/baerengraben/ioBroker.swiss-weather-api/master/admin/swiss-weather-api.png",
     "type": "weather"
+  },
+  "switchbot-hub": {
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.switchbot-hub/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.switchbot-hub/master/admin/switchbot-hub.png",
+    "type": "hardware"
   },
   "synology": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.synology/master/io-package.json",
