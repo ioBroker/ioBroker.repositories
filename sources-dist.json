@@ -568,7 +568,7 @@
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/admin/heatingcontrol.png",
     "type": "climate-control"
-  },  
+  },
   "heizoel": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.heizoel/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.heizoel/master/admin/heizoel.png",
@@ -781,7 +781,7 @@
     "type": "hardware"
   },
   "js-controller": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.js-controller/master/io-package.json",
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.js-controller/master/packages/controller/io-package.json",
     "url": "https://github.com/ioBroker/ioBroker.js-controller/tarball/master",
     "type": "general"
   },
