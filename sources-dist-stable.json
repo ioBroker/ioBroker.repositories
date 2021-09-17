@@ -1727,8 +1727,8 @@
     "version": "0.1.2"
   },
   "tesla-motors": {
-    "meta": "https://raw.githubusercontent.com/dbweb-ch/ioBroker.tesla-motors/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/dbweb-ch/ioBroker.tesla-motors/master/admin/tesla-motors.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tesla-motors/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tesla-motors/master/admin/tesla-motors.png",
     "type": "vehicle",
     "version": "0.5.2"
   },
