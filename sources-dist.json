@@ -750,6 +750,11 @@
     "icon": "https://raw.githubusercontent.com/maxtox/ioBroker.intesishome/master/admin/intesishome.png",
     "type": "climate-control"
   },
+  "intex": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.intex/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.intex/master/admin/intex.png",
+    "type": "household"
+  },
   "iogo": {
     "meta": "https://raw.githubusercontent.com/nisiode/ioBroker.iogo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/nisiode/ioBroker.iogo/master/admin/iogo.png",
