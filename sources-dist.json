@@ -2151,6 +2151,11 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/admin/xbox.png",
     "type": "multimedia"
   },
+  "xiaomi-gateway3": {
+    "meta": "https://raw.githubusercontent.com/lasthead0/ioBroker.xiaomi-gateway3/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/lasthead0/ioBroker.xiaomi-gateway3/master/admin/xiaomi-gateway3.png",
+    "type": "iot-systems"
+  },
   "xs1": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/admin/xs1.png",
