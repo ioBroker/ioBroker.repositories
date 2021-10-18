@@ -569,6 +569,11 @@
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/admin/heatingcontrol.png",
     "type": "climate-control"
   },
+  "heizoel": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.heizoel/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.heizoel/master/admin/heizoel.png",
+    "type": "misc-data"
+  },
   "heos": {
     "meta": "https://raw.githubusercontent.com/withstu/ioBroker.heos/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/withstu/ioBroker.heos/master/admin/heos.png",
@@ -750,6 +755,11 @@
     "icon": "https://raw.githubusercontent.com/nisiode/ioBroker.iogo/master/admin/iogo.png",
     "type": "visualization"
   },
+  "iogopro": {
+    "meta": "https://raw.githubusercontent.com/nisiode/ioBroker.iogopro/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/nisiode/ioBroker.iogopro/master/admin/iogopro.png",
+    "type": "visualization"
+  },
   "iot": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.iot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.iot/master/admin/iot.png",
@@ -776,7 +786,7 @@
     "type": "hardware"
   },
   "js-controller": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.js-controller/master/io-package.json",
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.js-controller/master/packages/controller/io-package.json",
     "url": "https://github.com/ioBroker/ioBroker.js-controller/tarball/master",
     "type": "general"
   },
@@ -928,6 +938,11 @@
   "luxtronik1": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.luxtronik1/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.luxtronik1/master/admin/luxtronik1.png",
+    "type": "climate-control"
+  },
+  "luxtronik2": {
+    "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.luxtronik2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.luxtronik2/master/admin/luxtronik2.png",
     "type": "climate-control"
   },
   "material": {
@@ -1482,6 +1497,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/admin/scenes.png",
     "type": "logic"
   },
+  "scheduler": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.scheduler/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.scheduler/master/admin/scheduler.png",
+    "type": "logic"
+  },
   "schoolfree": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.schoolfree/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.schoolfree/master/admin/schoolfree.png",
@@ -1723,8 +1743,8 @@
     "type": "utility"
   },
   "tesla-motors": {
-    "meta": "https://raw.githubusercontent.com/dbweb-ch/ioBroker.tesla-motors/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/dbweb-ch/ioBroker.tesla-motors/master/admin/tesla-motors.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tesla-motors/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tesla-motors/master/admin/tesla-motors.png",
     "type": "vehicle"
   },
   "text2command": {
@@ -2135,6 +2155,11 @@
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/admin/xs1.png",
     "type": "iot-systems"
+  },
+  "xterm": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.xterm/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.xterm/master/admin/xterm.png",
+    "type": "utility"
   },
   "yahka": {
     "meta": "https://raw.githubusercontent.com/jensweigele/ioBroker.yahka/master/io-package.json",
