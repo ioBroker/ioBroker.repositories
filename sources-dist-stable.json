@@ -17,6 +17,12 @@
     "type": "general",
     "version": "5.1.25"
   },
+  "aio": {
+    "meta": "https://raw.githubusercontent.com/Newan/ioBroker.aio/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Newan/ioBroker.aio/master/admin/aio.png",
+    "type": "energy",
+    "version": "0.0.3"
+  },
   "airconwithme": {
     "meta": "https://raw.githubusercontent.com/weggetor/ioBroker.airconwithme/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/weggetor/ioBroker.airconwithme/main/admin/airconwithme.png",
