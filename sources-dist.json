@@ -94,6 +94,11 @@
     "icon": "https://raw.githubusercontent.com/dkleber89/ioBroker.beckhoff/master/admin/beckhoff.png",
     "type": "hardware"
   },
+  "benchmark": {
+    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.benchmark/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.benchmark/main/admin/benchmark.png",
+    "type": "utility"
+  },
   "benq": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.benq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.benq/master/admin/benq.png",
@@ -463,6 +468,11 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.foobar2000/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.foobar2000/master/admin/foobar2000.png",
     "type": "multimedia"
+  },
+  "ford": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.ford/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.ford/master/admin/ford.png",
+    "type": "vehicle"
   },
   "fritzbox": {
     "meta": "https://raw.githubusercontent.com/ruhr70/ioBroker.fritzbox/master/io-package.json",
