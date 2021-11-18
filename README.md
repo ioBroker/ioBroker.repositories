@@ -143,7 +143,7 @@ Of course, you can add your own licenses, even WTFPL.
 You must of course take in count the licenses of components, that used in your adapter. E.g. if you use main packet under GPLv2 license, you cannot make CC-BY-NC from that.
 
 ### Testing
-TBD Add details again
+The Adapter Creator will create all needed files and deps for the testing, see also https://github.com/ioBroker/ioBroker.example/tree/master/JavaScript/test .  Tests are then run by GitHub Action (also pre-generated)
     
 ### Types
 The io-package.json must have attribute type in common part.
