@@ -1360,6 +1360,12 @@
     "type": "network",
     "version": "1.5.0"
   },
+  "pjlinkv2": {
+    "meta": "https://raw.githubusercontent.com/oberstel/ioBroker.PJLinkV2/master/io-package.json",
+    "icon": "https://github.com/oberstel/ioBroker.PJLinkV2/blob/master/admin/pjlink.png",
+    "type": "daemon",
+    "version": "2.1.0"
+  },
   "places": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.places/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.places/master/admin/places.png",
