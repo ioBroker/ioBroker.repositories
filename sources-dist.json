@@ -1358,8 +1358,8 @@
     "type": "hardware"
   },
   "pjlinkv2": {
-    "meta": "https://raw.githubusercontent.com/oberstel/ioBroker.PJLinkV2/master/io-package.json",
-    "icon": "https://github.com/oberstel/ioBroker.PJLinkV2/blob/master/admin/pjlink.png",
+    "meta": "https://raw.githubusercontent.com/oberstel/iobroker.pjlinkv2/master/io-package.json",
+    "icon": "https://github.com/oberstel/iobroker.pjlinkv2/blob/master/admin/pjlink.png",
     "type": "daemon"
   },
   "places": {
