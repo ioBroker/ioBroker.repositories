@@ -1357,11 +1357,6 @@
     "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.pixelit/master/admin/pixelit.png",
     "type": "hardware"
   },
-  "pjlinkv2": {
-    "meta": "https://raw.githubusercontent.com/oberstel/ioBroker.pjlinkv2/master/io-package.json",
-    "icon": "https://github.com/oberstel/ioBroker.pjlinkv2/blob/master/admin/pjlink.png",
-    "type": "daemon"
-  },
   "places": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.places/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.places/master/admin/places.png",
