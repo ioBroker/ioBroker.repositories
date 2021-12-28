@@ -1187,6 +1187,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/admin/nina.png",
     "type": "misc-data"
   },
+  "nissan": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nissan/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nissan/master/admin/nissan.png",
+    "type": "vehicle"
+  },
   "node-red": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/admin/node-red.png",
