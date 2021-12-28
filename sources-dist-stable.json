@@ -2181,5 +2181,11 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware",
     "version": "2.4.1"
+  },
+    "ems-esp": {
+    "meta": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/master/admin/ems-esp.png",
+    "type": "climate-control",
+    "version": "0.9.9"
   }
 }
