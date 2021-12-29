@@ -104,6 +104,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.benq/master/admin/benq.png",
     "type": "multimedia"
   },
+  "bestway": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.bestway/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.bestway/master/admin/bestway.png",
+    "type": "household"
+  },
   "binance": {
     "meta": "https://raw.githubusercontent.com/Kartax/ioBroker.binance/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Kartax/ioBroker.binance/master/admin/binance.png",
@@ -578,6 +583,11 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.heizoel/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.heizoel/master/admin/heizoel.png",
     "type": "misc-data"
+  },
+  "helios": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.helios/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.helios/master/admin/helios.png",
+    "type": "climate-control"
   },
   "heos": {
     "meta": "https://raw.githubusercontent.com/withstu/ioBroker.heos/master/io-package.json",
@@ -1186,6 +1196,11 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/admin/nina.png",
     "type": "misc-data"
+  },
+  "nissan": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nissan/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nissan/master/admin/nissan.png",
+    "type": "vehicle"
   },
   "node-red": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/io-package.json",
@@ -1912,8 +1927,8 @@
     "type": "climate-control"
   },
   "viessmannapi": {
-    "meta": "https://raw.githubusercontent.com/thovid/ioBroker.viessmannapi/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/thovid/ioBroker.viessmannapi/master/admin/viessmannapi.png",
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.viessmannapi/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.viessmannapi/master/admin/viessmannapi.png",
     "type": "climate-control"
   },
   "virtualpowermeter": {
@@ -2145,6 +2160,11 @@
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.wm-bus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.wm-bus/master/admin/wm-bus.png",
     "type": "protocols"
+  },
+  "wmswebcontrol": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.wmswebcontrol/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.wmswebcontrol/master/admin/wmswebcontrol.png",
+    "type": "iot-systems"
   },
   "wolf": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.wolf/master/io-package.json",
