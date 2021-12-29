@@ -1607,6 +1607,11 @@
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.smartmeter/master/admin/smartmeter.png",
     "type": "energy"
   },
+  "smartthings": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.smartthings/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.smartthings/master/admin/smartthings.png",
+    "type": "household"
+  },
   "snips": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.snips/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.snips/master/admin/snips.png",
