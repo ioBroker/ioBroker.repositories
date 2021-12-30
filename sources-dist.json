@@ -1846,6 +1846,11 @@
     "icon": "https://raw.githubusercontent.com/rde-master/ioBroker.todoist2/master/admin/todoist.png",
     "type": "messaging"
   },
+  "toyota": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.toyota/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.toyota/master/admin/toyota.png",
+    "type": "vehicle"
+  },
   "tr-064": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tr-064/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tr-064/master/admin/tr-064.png",
