@@ -880,6 +880,11 @@
     "icon": "https://raw.githubusercontent.com/Morluktom/ioBroker.lg-ess-home/master/admin/lg-ess-home.png",
     "type": "energy"
   },
+   "lg-thinq": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.lg-thinq/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.lg-thinq/master/admin/lg-thinq.png",
+    "type": "household"
+  },
   "lgtv": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/admin/lgtv.png",
