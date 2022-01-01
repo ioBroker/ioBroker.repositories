@@ -743,12 +743,6 @@
     "type": "iot-systems",
     "version": "0.3.7"
   },
-  "iogo": {
-    "meta": "https://raw.githubusercontent.com/nisiode/ioBroker.iogo/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/nisiode/ioBroker.iogo/master/admin/iogo.png",
-    "type": "visualization",
-    "version": "0.7.0"
-  },
   "iogopro": {
     "meta": "https://raw.githubusercontent.com/nisiode/ioBroker.iogopro/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/nisiode/ioBroker.iogopro/master/admin/iogopro.png",
