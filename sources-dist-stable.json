@@ -1362,9 +1362,9 @@
   },
   "pjlinkv2": {
     "meta": "https://raw.githubusercontent.com/oberstel/ioBroker.pjlinkv2/master/io-package.json",
-    "icon": "https://github.com/oberstel/ioBroker.pjlinkv2/blob/master/admin/pjlink.png",
+    "icon": "https://raw.githubusercontent.com/oberstel/ioBroker.pjlinkv2/master/admin/pjlink.png",
     "type": "daemon",
-    "version": "2.1.4"
+    "version": "2.1.6"
   },
   "places": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.places/master/io-package.json",
