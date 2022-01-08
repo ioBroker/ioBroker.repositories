@@ -484,7 +484,7 @@
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.fritzdect/master/admin/fritzdect_logo.png",
     "type": "hardware"
   },
-   "froeling": {
+  "froeling": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.froeling/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.froeling/master/admin/froeling.png",
     "type": "climate-control"
@@ -900,7 +900,7 @@
     "icon": "https://raw.githubusercontent.com/Morluktom/ioBroker.lg-ess-home/master/admin/lg-ess-home.png",
     "type": "energy"
   },
-   "lg-thinq": {
+  "lg-thinq": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.lg-thinq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.lg-thinq/master/admin/lg-thinq.png",
     "type": "household"
@@ -1252,6 +1252,11 @@
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.nut/master/admin/nut.png",
     "type": "hardware"
   },
+  "ocpp": {
+    "meta": "ssh://git@raw.githubusercontent.com/foxriver76/ioBroker.ocpp/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.ocpp/main/admin/ocpp.png",
+    "type": "energy"
+  },
   "octoprint": {
     "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.octoprint/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.octoprint/master/admin/octoprint.png",
@@ -1296,7 +1301,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.openhab/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.openhab/master/admin/openhab.png",
     "type": "iot-systems"
-  },  
+  },
   "openknx": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.openknx/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.openknx/master/admin/openknx.png",
@@ -1476,7 +1481,7 @@
     "meta": "https://raw.githubusercontent.com/StrathCole/ioBroker.rainbird/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/StrathCole/ioBroker.rainbird/master/admin/rainbird.png",
     "type": "garden"
-  },  
+  },
   "renault": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/admin/renault.png",
