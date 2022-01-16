@@ -127,8 +127,7 @@
   "blebox": {
     "meta": "https://raw.githubusercontent.com/ka-vaNu/ioBroker.blebox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ka-vaNu/ioBroker.blebox/master/admin/blebox.png",
-    "type": "iot-systems",
-    "version": "0.1.1"
+    "type": "iot-systems"
   },
   "blink4home": {
     "meta": "https://raw.githubusercontent.com/Flashy-GER/ioBroker.blink4home/master/io-package.json",
