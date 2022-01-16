@@ -900,7 +900,7 @@
     "icon": "https://raw.githubusercontent.com/Morluktom/ioBroker.lg-ess-home/master/admin/lg-ess-home.png",
     "type": "energy"
   },
-   "lg-thinq": {
+  "lg-thinq": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.lg-thinq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.lg-thinq/master/admin/lg-thinq.png",
     "type": "household"
@@ -1766,6 +1766,11 @@
     "meta": "https://raw.githubusercontent.com/waoler/ioBroker.stockmarket/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/waoler/iobroker.stockmarket/master/admin/stockmarket.png",
     "type": "misc-data"
+  },
+  "sureflap": {
+    "meta": "https://raw.githubusercontent.com/Sickboy78/ioBroker.sureflap/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Sickboy78/ioBroker.sureflap/master/admin/sureflap.png",
+    "type": "iot-systems"
   },
   "sureflap": {
     "meta": "https://raw.githubusercontent.com/Sickboy78/ioBroker.sureflap/master/io-package.json",
