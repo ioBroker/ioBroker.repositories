@@ -2092,12 +2092,6 @@
     "type": "lighting",
     "version": "0.6.3"
   },
-  "wm-bus": {
-    "meta": "https://raw.githubusercontent.com/soef/ioBroker.wm-bus/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/soef/ioBroker.wm-bus/master/admin/wm-bus.png",
-    "type": "protocols",
-    "version": "0.3.1"
-  },
   "wolf": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.wolf/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.wolf/master/admin/wolf.png",
