@@ -19,6 +19,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
     "type": "general"
   },
+  "aio": {
+    "meta": "https://raw.githubusercontent.com/Newan/ioBroker.aio/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Newan/ioBroker.aio/master/admin/aio.png",
+    "type": "energy"
+  },
   "airconwithme": {
     "meta": "https://raw.githubusercontent.com/weggetor/ioBroker.airconwithme/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/weggetor/ioBroker.airconwithme/main/admin/airconwithme.png",
@@ -62,6 +67,11 @@
   "artnet": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/admin/artnet.png",
+    "type": "lighting"
+  },
+  "artnet-recorder": {
+    "meta": "https://raw.githubusercontent.com/Bannsaenger/ioBroker.artnet-recorder/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Bannsaenger/ioBroker.artnet-recorder/master/admin/artnet-recorder.png",
     "type": "lighting"
   },
   "asterisk": {
@@ -900,7 +910,7 @@
     "icon": "https://raw.githubusercontent.com/Morluktom/ioBroker.lg-ess-home/master/admin/lg-ess-home.png",
     "type": "energy"
   },
-   "lg-thinq": {
+  "lg-thinq": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.lg-thinq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.lg-thinq/master/admin/lg-thinq.png",
     "type": "household"
@@ -1211,6 +1221,11 @@
     "meta": "https://raw.githubusercontent.com/Bart1909/ioBroker.netatmo-crawler/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Bart1909/ioBroker.netatmo-crawler/master/admin/netatmo-crawler.png",
     "type": "weather"
+  },
+  "netro": {
+    "meta": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/main/admin/netro.png",
+    "type": "garden"
   },
   "nibeuplink": {
     "meta": "https://raw.githubusercontent.com/sebilm/ioBroker.nibeuplink/master/io-package.json",
@@ -2230,6 +2245,11 @@
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.xbox/master/admin/xbox.png",
     "type": "multimedia"
+  },
+  "xiaomi-gateway3": {
+    "meta": "https://raw.githubusercontent.com/lasthead0/ioBroker.xiaomi-gateway3/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/lasthead0/ioBroker.xiaomi-gateway3/master/admin/xiaomi-gateway3.png",
+    "type": "iot-systems"
   },
   "xs1": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",
