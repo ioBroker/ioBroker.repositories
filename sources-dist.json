@@ -1622,6 +1622,11 @@
     "icon": "https://raw.githubusercontent.com/Excodibur/ioBroker.schwoerer-ventcube/master/admin/schwoerer-ventcube.png",
     "type": "climate-control"
   },
+  "selverf": {
+    "meta": "https://raw.githubusercontent.com/Rintrium/ioBroker.selverf/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Rintrium/ioBroker.selverf/master/admin/selverf.png",
+    "type": "iot-systems"
+  },
   "senec": {
     "meta": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/admin/senec.png",

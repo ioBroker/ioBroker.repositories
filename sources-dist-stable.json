@@ -1613,6 +1613,12 @@
     "type": "climate-control",
     "version": "1.4.2"
   },
+  "selverf": {
+    "meta": "https://raw.githubusercontent.com/Rintrium/ioBroker.selverf/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Rintrium/ioBroker.selverf/master/admin/selverf.png",
+    "type": "iot-systems",
+    "version": "0.6.1"
+  },
   "seq": {
     "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.seq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.seq/master/admin/seq.png",
