@@ -2308,5 +2308,11 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware",
     "version": "2.4.1"
+  },
+  "huum-sauna": {
+    "meta": "https://raw.githubusercontent.com/Chris-1965/ioBroker.huum-sauna/main/package.json",
+    "icon": "https://raw.githubusercontent.com/Chris-1965/ioBroker.huum-sauna/main/admin/huum-sauna.png",
+    "type": "climate-control",
+    "version": "0.2.1"
   }
 }
