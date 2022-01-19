@@ -384,6 +384,11 @@
     "icon": "https://raw.githubusercontent.com/thewhobox/ioBroker.emby/master/admin/emby.png",
     "type": "multimedia"
   },
+  "ems-esp": {
+    "meta": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/master/admin/ems-esp.png",
+    "type": "climate-control"
+  },
   "energymanager": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/admin/energymanager.png",
