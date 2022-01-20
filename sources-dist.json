@@ -872,7 +872,7 @@
   },
   "kecontact": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/admin/charger.png",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/admin/kecontact.png",
     "type": "hardware"
   },
   "klf200": {
@@ -1249,7 +1249,7 @@
   },
   "netro": {
     "meta": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/main/admin/netro.png",
+    "icon": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/master/admin/netro.png",
     "type": "garden"
   },
   "nibeuplink": {
@@ -1584,7 +1584,7 @@
   },
   "s7": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.s7/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.s7/master/admin/S7.png",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.s7/master/admin/s7.png",
     "type": "iot-systems"
   },
   "sainlogic": {
