@@ -663,7 +663,7 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/admin/homematic.png",
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/io-package.json",
     "type": "hardware",
-    "version": "1.13.2"
+    "version": "1.15.2"
   },
   "homeconnect": {
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homeconnect/master/admin/homeconnect.png",
@@ -717,7 +717,7 @@
     "icon": "https://raw.githubusercontent.com/Chris-1965/ioBroker.huum-sauna/main/admin/huum-sauna.png",
     "meta": "https://raw.githubusercontent.com/Chris-1965/ioBroker.huum-sauna/main/package.json",
     "type": "climate-control",
-    "version": "0.1.6"
+    "version": "0.1.7"
   },
   "i2c": {
     "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.i2c/master/admin/i2c.png",
@@ -1571,7 +1571,7 @@
     "version": "1.0.0"
   },
   "s7": {
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.s7/master/admin/S7.png",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.s7/master/admin/s7.png",
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.s7/master/io-package.json",
     "type": "iot-systems",
     "version": "1.3.6"
