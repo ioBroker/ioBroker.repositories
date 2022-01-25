@@ -2207,6 +2207,12 @@
     "type": "hardware",
     "version": "0.1.5"
   },
+    "wiobrowser": {
+    "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.wiobrowser/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Bettman66/ioBroker.wiobrowser/maaster/admin/wiobrowser.png",
+    "type": "communication",
+    "version": "0.2.1"
+  },
   "withings": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.withings/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.withings/master/admin/withings.png",
