@@ -425,8 +425,8 @@
     "type": "hardware"
   },
   "eusec": {
-    "meta": "https://raw.githubusercontent.com/bropat/ioBroker.euSec/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/bropat/ioBroker.euSec/master/admin/euSec.png",
+    "meta": "https://raw.githubusercontent.com/bropat/ioBroker.eusec/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bropat/ioBroker.eusec/master/admin/eusec.png",
     "type": "alarm"
   },
   "eventlist": {
