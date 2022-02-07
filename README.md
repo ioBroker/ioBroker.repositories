@@ -82,7 +82,7 @@ Additionally, to all above listed points:
 
 15. Forum thread with question to test the adapter.
 16. Some feedback on [forum](http://forum.iobroker.net).
-17. **Important** Discovery function! If device can be found automatically (USB, IP) it must be implemented in discovery adapter.
+17. **Important** Discovery function! If device can be found automatically (USB, IP) it should be implemented in discovery adapter after (Discovery PR will be merged after stable acceptance).
 
 ## How-to
 ### How to publish on npm

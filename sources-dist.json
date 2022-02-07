@@ -344,6 +344,11 @@
     "icon": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.dysonairpurifier/master/admin/dyson_logo.svg",
     "type": "climate-control"
   },
+  "e3dc-rscp": {
+    "meta": "https://raw.githubusercontent.com/git-kick/ioBroker.e3dc-rscp/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/git-kick/ioBroker.e3dc-rscp/master/admin/e3dc-rscp.png",
+    "type": "energy"
+  },
   "easee": {
     "meta": "https://raw.githubusercontent.com/Newan/ioBroker.easee/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Newan/ioBroker.easee/master/admin/easee.png",
@@ -418,6 +423,11 @@
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/admin/esphome.png",
     "type": "hardware"
+  },
+  "eusec": {
+    "meta": "https://raw.githubusercontent.com/bropat/ioBroker.euSec/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bropat/ioBroker.euSec/master/admin/euSec.png",
+    "type": "alarm"
   },
   "eventlist": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.eventlist/master/io-package.json",
@@ -867,7 +877,7 @@
   },
   "kecontact": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/admin/charger.png",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/admin/kecontact.png",
     "type": "hardware"
   },
   "klf200": {
@@ -1244,7 +1254,7 @@
   },
   "netro": {
     "meta": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/main/admin/netro.png",
+    "icon": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/master/admin/netro.png",
     "type": "garden"
   },
   "nibeuplink": {
@@ -1288,7 +1298,7 @@
     "type": "hardware"
   },
   "ocpp": {
-    "meta": "ssh://git@raw.githubusercontent.com/foxriver76/ioBroker.ocpp/main/io-package.json",
+    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.ocpp/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.ocpp/main/admin/ocpp.png",
     "type": "energy"
   },
@@ -1579,7 +1589,7 @@
   },
   "s7": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.s7/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.s7/master/admin/S7.png",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.s7/master/admin/s7.png",
     "type": "iot-systems"
   },
   "sainlogic": {
@@ -2235,6 +2245,11 @@
     "meta": "https://raw.githubusercontent.com/Mic-M/ioBroker.windows-control/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Mic-M/ioBroker.windows-control/master/admin/windows-control.png",
     "type": "hardware"
+  },
+  "wiobrowser": {
+    "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.wiobrowser/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Bettman66/ioBroker.wiobrowser/master/admin/wiobrowser.png",
+    "type": "communication"
   },
   "wireless-mbus": {
     "meta": "https://raw.githubusercontent.com/lvogt/ioBroker.wireless-mbus/master/io-package.json",
