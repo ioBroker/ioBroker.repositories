@@ -395,8 +395,8 @@
     "type": "multimedia"
   },
   "ems-esp": {
-    "meta": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/master/admin/ems-esp.png",
+    "meta": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/admin/ems-esp.png",
     "type": "climate-control"
   },
   "energymanager": {
@@ -428,6 +428,11 @@
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/admin/esphome.png",
     "type": "hardware"
+  },
+  "eusec": {
+    "meta": "https://raw.githubusercontent.com/bropat/ioBroker.eusec/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bropat/ioBroker.eusec/master/admin/eusec.png",
+    "type": "alarm"
   },
   "eventlist": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.eventlist/master/io-package.json",
@@ -1653,8 +1658,8 @@
     "type": "logic"
   },
   "shelly": {
-    "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/admin/shelly.png",
     "type": "iot-systems"
   },
   "shuttercontrol": {
@@ -2271,6 +2276,11 @@
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/main/admin/wled.png",
     "type": "lighting"
   },
+  "ws": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ws/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ws/main/admin/ws.png",
+    "type": "communication"
+  },
   "wmswebcontrol": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.wmswebcontrol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.wmswebcontrol/master/admin/wmswebcontrol.png",
@@ -2370,5 +2380,5 @@
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware"
-  }  
-}
+  }
+}  
