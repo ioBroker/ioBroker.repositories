@@ -393,7 +393,7 @@
     "meta": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/admin/ems-esp.png",
     "type": "climate-control",
-    "version": "1.1.0"
+    "version": "1.1.1"
   },
   "energymanager": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/io-package.json",
@@ -843,7 +843,7 @@
     "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.jarvis/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.jarvis/master/admin/jarvis.png",
     "type": "visualization",
-    "version": "2.2.1"
+    "version": "3.0.11"
   },
   "javascript": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/io-package.json",
@@ -1364,7 +1364,7 @@
     "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.openligadb/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.openligadb/master/admin/openligadb_b.png",
     "type": "misc-data",
-    "version": "1.2.2"
+    "version": "1.2.4"
   },
   "openweathermap": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.openweathermap/master/io-package.json",

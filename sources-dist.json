@@ -664,6 +664,11 @@
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/admin/hid.png",
     "type": "utility"
   },
+  "hikvision-alarmserver": {
+    "meta": "https://raw.githubusercontent.com/raintonr/ioBroker.hikvision-alarmserver/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/raintonr/ioBroker.hikvision-alarmserver/main/admin/hikvision-alarmserver.png",
+    "type": "alarm"
+  },
   "hilink": {
     "meta": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/admin/hilink.png",
@@ -1547,6 +1552,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/admin/renault.png",
     "type": "vehicle"
   },
+  "resol": {
+    "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.resol/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/grizzelbee/ioBroker.resol/master/admin/resol.svg",
+    "type": "energy"
+  },
   "rflink": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.rflink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.rflink/master/admin/rflink.png",
@@ -2381,4 +2391,4 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware"
   }
-}  
+}
