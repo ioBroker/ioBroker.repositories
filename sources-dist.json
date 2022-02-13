@@ -390,8 +390,8 @@
     "type": "multimedia"
   },
   "ems-esp": {
-    "icon": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/master/admin/ems-esp.png",
-    "meta": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/master/io-package.json",
+    "meta": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/admin/ems-esp.png",
     "type": "climate-control"
   },
   "energymanager": {
@@ -423,6 +423,11 @@
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/admin/esphome.png",
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/io-package.json",
     "type": "hardware"
+  },
+  "eusec": {
+    "meta": "https://raw.githubusercontent.com/bropat/ioBroker.eusec/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bropat/ioBroker.eusec/master/admin/eusec.png",
+    "type": "alarm"
   },
   "eventlist": {
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.eventlist/master/admin/eventlist.png",
@@ -653,6 +658,11 @@
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/admin/hid.png",
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/io-package.json",
     "type": "utility"
+  },
+  "hikvision-alarmserver": {
+    "meta": "https://raw.githubusercontent.com/raintonr/ioBroker.hikvision-alarmserver/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/raintonr/ioBroker.hikvision-alarmserver/main/admin/hikvision-alarmserver.png",
+    "type": "alarm"
   },
   "hilink": {
     "icon": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/admin/hilink.png",
@@ -1542,6 +1552,11 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/io-package.json",
     "type": "vehicle"
   },
+  "resol": {
+    "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.resol/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/grizzelbee/ioBroker.resol/master/admin/resol.svg",
+    "type": "energy"
+  },
   "rflink": {
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.rflink/master/admin/rflink.png",
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.rflink/master/io-package.json",
@@ -1653,8 +1668,8 @@
     "type": "logic"
   },
   "shelly": {
-    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/admin/shelly.png",
-    "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly/master/io-package.json",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/admin/shelly.png",
     "type": "iot-systems"
   },
   "shuttercontrol": {
@@ -2270,6 +2285,11 @@
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/main/admin/wled.png",
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/main/io-package.json",
     "type": "lighting"
+  },
+  "ws": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ws/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ws/main/admin/ws.png",
+    "type": "communication"
   },
   "wmswebcontrol": {
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.wmswebcontrol/master/admin/wmswebcontrol.png",
