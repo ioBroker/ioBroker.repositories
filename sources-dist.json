@@ -1020,7 +1020,7 @@
   "netatmo-energy": {
     "meta": "https://raw.githubusercontent.com/Homemade-Disaster/ioBroker.netatmo-energy/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Homemade-Disaster/ioBroker.netatmo-energy/master/admin/netatmo-energy.png",
-    "type": "iot-systems"
+    "type": "climate-control"
   },
   "nibeuplink": {
     "meta": "https://raw.githubusercontent.com/sebilm/ioBroker.nibeuplink/master/io-package.json",
