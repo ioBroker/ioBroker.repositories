@@ -134,6 +134,11 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.ble/master/admin/ble.png",
     "type": "hardware"
   },
+  "blebox": {
+    "meta": "https://raw.githubusercontent.com/ka-vaNu/ioBroker.blebox/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ka-vaNu/ioBroker.blebox/master/admin/blebox.png",
+    "type": "iot-systems"
+  },
   "blink4home": {
     "meta": "https://raw.githubusercontent.com/Flashy-GER/ioBroker.blink4home/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Flashy-GER/ioBroker.blink4home/master/admin/blink4home.png",
