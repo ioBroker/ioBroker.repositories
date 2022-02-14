@@ -535,8 +535,8 @@
     "type": "multimedia"
   },
   "fuelpricemonitor": {
-    "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.fuelpricemonitor/master/admin/fuelpricemonitor.png",
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.fuelpricemonitor/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.fuelpricemonitor/master/admin/fuelpricemonitor.png",
     "type": "vehicle"
   },
   "fullcalendar": {
