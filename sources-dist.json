@@ -1272,6 +1272,11 @@
     "icon": "https://raw.githubusercontent.com/Bart1909/ioBroker.netatmo-crawler/master/admin/netatmo-crawler.png",
     "type": "weather"
   },
+  "netatmo-energy": {
+    "meta": "https://raw.githubusercontent.com/Homemade-Disaster/ioBroker.netatmo-energy/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Homemade-Disaster/ioBroker.netatmo-energy/master/admin/netatmo-energy.png",
+    "type": "climate-control"
+  },
   "netro": {
     "meta": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/master/admin/netro.png",
