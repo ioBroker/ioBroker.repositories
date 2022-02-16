@@ -1702,6 +1702,12 @@
     "type": "climate-control",
     "version": "1.1.1"
   },
+  "signal-cmb": {
+    "meta": "https://raw.githubusercontent.com/necotec/ioBroker.signal-cmb/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/necotec/ioBroker.signal-cmb/master/admin/signal-cmb.png",
+    "type": "messaging",
+    "version": "0.1.7"
+  },
   "simple-api": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/admin/simple-api.png",
