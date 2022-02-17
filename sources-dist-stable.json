@@ -77,6 +77,12 @@
     "type": "iot-systems",
     "version": "1.0.8"
   },
+  "apcups": {
+    "meta": "https://raw.githubusercontent.com/xhunter74/ioBroker.apcups/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/xhunter74/ioBroker.apcups/master/admin/ups.png",
+    "type": "energy",
+    "version": "0.0.6"
+  },
   "artnet": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/admin/artnet.png",
