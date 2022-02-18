@@ -584,6 +584,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.ford/master/admin/ford.png",
     "type": "vehicle"
   },
+  "freeathome": {
+    "meta": "https://raw.githubusercontent.com/mobilutz/ioBroker.freeathome/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mobilutz/ioBroker.freeathome/master/admin/freeathome.png",
+    "type": "climate-control"
+  },
   "fritzbox": {
     "meta": "https://raw.githubusercontent.com/ruhr70/ioBroker.fritzbox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ruhr70/ioBroker.fritzbox/master/admin/fritzbox.png",
