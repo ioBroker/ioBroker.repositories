@@ -1336,6 +1336,12 @@
     "type": "hardware",
     "version": "1.5.0"
   },
+  "ocpp": {
+    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.ocpp/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.ocpp/main/admin/ocpp.png",
+    "type": "energy",
+    "version": "0.3.3"
+  },
   "octoprint": {
     "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.octoprint/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.octoprint/master/admin/octoprint.png",
