@@ -755,7 +755,7 @@
     "type": "lighting"
   },
   "huum-sauna": {
-    "meta": "https://raw.githubusercontent.com/Chris-1965/ioBroker.huum-sauna/main/package.json",
+    "meta": "https://raw.githubusercontent.com/Chris-1965/ioBroker.huum-sauna/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Chris-1965/ioBroker.huum-sauna/main/admin/huum-sauna.png",
     "type": "climate-control"
   },
