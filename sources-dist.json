@@ -1568,9 +1568,9 @@
     "type": "messaging"
   },
   "pvforecast": {
-    "meta": "https://raw.githubusercontent.com/Patrick-Walther/ioBroker.pvforecast/main/io-package.json",
-    "icon": "https://github.com/Patrick-Walther/ioBroker.pvforecast/raw/main/admin/pvforecast.png",
-    "type": "weather",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pvforecast/main/io-package.json",
+    "icon": "https://github.com/iobroker-community-adapters/ioBroker.pvforecast/raw/main/admin/pvforecast.png",
+    "type": "weather"
   },
   "radar2": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.radar2/master/io-package.json",

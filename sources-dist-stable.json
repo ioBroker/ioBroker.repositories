@@ -1571,10 +1571,10 @@
     "version": "1.0.3"
   },
   "pvforecast": {
-    "meta": "https://raw.githubusercontent.com/Patrick-Walther/ioBroker.pvforecast/main/io-package.json",
-    "icon": "https://github.com/Patrick-Walther/ioBroker.pvforecast/raw/main/admin/pvforecast.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pvforecast/main/io-package.json",
+    "icon": "https://github.com/iobroker-community-adapters/ioBroker.pvforecast/raw/main/admin/pvforecast.png",
     "type": "weather",
-    "version": "0.2.4"
+    "version": "0.1.8"
   },
   "radar2": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.radar2/master/io-package.json",
