@@ -2309,7 +2309,7 @@
   "winsipbrowser": {
     "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.winsipbrowser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Bettman66/ioBroker.winsipbrowser/master/admin/winsipbrowser.png",
-    "type": "communication"
+    "type": "utility"
   },
   "wiobrowser": {
     "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.wiobrowser/master/io-package.json",
