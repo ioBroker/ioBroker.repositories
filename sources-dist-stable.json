@@ -1572,7 +1572,7 @@
   },
   "pvforecast": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pvforecast/main/io-package.json",
-    "icon": "https://github.com/iobroker-community-adapters/ioBroker.pvforecast/raw/main/admin/pvforecast.png",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pvforecast/main/admin/pvforecast.png",
     "type": "weather",
     "version": "0.1.8"
   },
