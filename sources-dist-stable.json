@@ -215,7 +215,7 @@
     "type": "iot-systems",
     "version": "0.1.16"
   },
-   "bwt": {
+  "bwt": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.bwt/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.bwt/master/admin/bwt.png",
     "type": "household",
@@ -831,6 +831,12 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-ultimate-png/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-ultimate-png/master/admin/icons-ultimate-png.png",
     "type": "visualization-icons",
+    "version": "1.0.1"
+  },
+  "ikettle2": {
+    "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.ikettle2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.ikettle2/master/admin/ikettle2.png",
+    "type": "household",
     "version": "1.0.1"
   },
   "influxdb": {
