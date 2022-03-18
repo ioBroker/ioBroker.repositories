@@ -1783,8 +1783,8 @@
     "type": "iot-systems"
   },
   "snmp": {
-    "meta": "https://raw.githubusercontent.com/ctjaeger/ioBroker.snmp/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ctjaeger/ioBroker.snmp/master/admin/snmp.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.snmp/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.snmp/master/admin/snmp.png",
     "type": "infrastructure"
   },
   "socketio": {
