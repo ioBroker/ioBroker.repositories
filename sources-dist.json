@@ -509,6 +509,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fitbit-api/master/admin/fitbit-api.png",
     "type": "health"
   },
+  "fitbit-fitness": {
+    "meta": "https://github.com/Chris-1965/ioBroker.fitbit-fitness/main/io-package.json",
+    "icon": "https://github.com/Chris-1965/ioBroker.fitbit-fitness/main/admin/fitbit-fitness.png",
+    "type": "health"
+  },
   "flot": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/admin/flot.png",
