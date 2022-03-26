@@ -18,7 +18,7 @@ This is GitHub project for storage of latest and stable repositories.
 
 *already required for latest repository*
 
-1. Your GitHub repository must have name - "ioBroker.<adaptername>". **B** is capital in "ioBroker", but in the package.json the *name* must be low case, because npm does not allow upper case letters. Your repository must have "topics". Add these with `Manage topics`.
+1. Your GitHub repository must have the name - "ioBroker.<adaptername>". **B** is capital in "ioBroker", but in the package.json the *name* must be low case, because npm does not allow upper case letters. Your repository must have "topics". Add these with `Manage topics`.
 2. Do not use in the title the words "ioBroker" or "Adapter". It is clear anyway, that it is adapter for ioBroker.
 3. *title* in io-package.json (common) is simple short name of adapter in english. *titleLang* is object that consist short names in many languages. *Lang* ist not german `Länge`, but english `LANGuages`.
 4. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md).
@@ -26,7 +26,7 @@ This is GitHub project for storage of latest and stable repositories.
    **In README.md, there must be a link to the device or the manufacturer's website. Devices must have a photo. Services do not require a photo, but are still welcome.**
 5. Adapter must have a predefined license.
 6. Please remove www, widgets and docs directories (admin/tab_m.html, admin/custom_m.html) if not used.
-7. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI (optionally and Appveyor). More information in Forum from apollon77 (Just take from other adapters the samples)
+7. Adapter needs to have at least Adapter basic testing (installing, running) using GitHub actions  (optionally Travis-CI and/or Appveyor - but GitHub actions is better). More information in Forum from apollon77 (Just take from other adapters the samples)
 8. Define one of the types in io-package.json. See details [here](#types)
 9. Define one of the connection types (if applied) in io-package.json. See details [here](#connection-types)
 10. All states must have according [valid roles](https://github.com/ioBroker/ioBroker/blob/master/doc/STATE_ROLES.md#state-roles) (and not just "state")
@@ -62,8 +62,8 @@ This is GitHub project for storage of latest and stable repositories.
 * If you use "connections" to other systems (Websockets, MQTT, TCP, Serial or other) please also implement the `info.connection` state (directly create objects by including in io-package) and set the connection value accordingly. Using this enables Admin to differentiate the status between green (ok, running), yellow (basically running but not connected) and red (not running).
 * Consider and understand the asynchronous nature of JavaScript and make sure to know what will happen in parallel and what makes more sense to be sequentially! It is ok to use callbacks or Promises/async/await - the latter makes it more easy to understand and control how your code really flows.
 * Consider using ESLint or other JavaScript code and type checker to see errors in your code before releasing a new version.
-* **Please activate adapter testing with at least package- and integration-tests on Travis-CI** GitHub Actions are not enough at the moment because they do not allow us to get an easy overview, especially when we want to see how our adapters behave with new nodejs versions.
-* The adapter testing using Travis and/or GitHub Actions is not for us - it is for you! Please check it after pushing changes to GitHub and before telling it to users or publish an NPM package. If testing is "red" you should check the testing log to see what is broken.
+* **Please activate adapter testing with at least package- and integration-tests on GitHub Actions**
+* The adapter testing using GitHub Actions or Travis is not for us - it is for you! Please check it after pushing changes to GitHub and before telling it to users or publish an NPM package. If testing is "red" you should check the testing log to see what is broken.
 * If you like to increase testing you can start implementing adapter specific tests that always run when you push changes to GitHub.
 * You can/should use https://translator.iobroker.in/ to auto translate all relevant texts into all needed languages by providing the english text
 * If an adapter instance want to generate an object structure it should use objects from the type device, channel or folder to define sub-structures and provide objects of type state only on the last "level". Different levels can be separated by a ".". An object of the type "state" should never have more objects below it. The allowed field for the relevant object types are documented in https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/objectsschema.md#core-concept
@@ -82,7 +82,7 @@ Additionally, to all above listed points:
 
 15. Forum thread with question to test the adapter.
 16. Some feedback on [forum](http://forum.iobroker.net).
-17. **Important** Discovery function! If device can be found automatically (USB, IP) it must be implemented in discovery adapter.
+17. **Important** Discovery function! If device can be found automatically (USB, IP) it should be implemented in discovery adapter after (Discovery PR will be merged after stable acceptance).
 
 ## How-to
 ### How to publish on npm
