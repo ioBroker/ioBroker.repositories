@@ -2433,5 +2433,11 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware",
     "version": "2.4.5"
+  },
+  "synochat": {
+    "meta": "https://raw.githubusercontent.com/phoeluga/ioBroker.synochat/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/phoeluga/ioBroker.synochat/master/admin/synochat.png",
+    "type": "messaging",
+    "version": "1.0.0"
   }
 }
