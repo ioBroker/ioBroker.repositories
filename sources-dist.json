@@ -1597,6 +1597,11 @@
     "icon": "https://raw.githubusercontent.com/grizzelbee/ioBroker.resol/master/admin/resol.svg",
     "type": "energy"
   },
+  "rest-api": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.rest-api/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.rest-api/master/admin/rest-api.png",
+    "type": "communication"
+  },
   "rflink": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.rflink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.rflink/master/admin/rflink.png",
