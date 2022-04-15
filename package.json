@@ -10,7 +10,7 @@
     "node": ">=12"
   },
   "dependencies": {
-    "request-promise-native": "^1.0.7"
+    "request-promise-native": "^1.0.9"
   },
   "homepage": "http://iobroker.net",
   "description": "List of all official adapters for ioBroker project",
@@ -23,6 +23,7 @@
     "nodates": "node lib/scripts.js nodates",
     "addToLatest": "node lib/scripts.js addToLatest",
     "addToStable": "node lib/scripts.js addToStable",
+    "updateStable": "node lib/scripts.js updateStable",
     "check": "node lib/check.js",
     "stable": "node lib/readyForStable.js"
   },
@@ -40,16 +41,17 @@
     "bluefox <dogafox@gmail.com>"
   ],
   "devDependencies": {
-    "chai": "^4.2.0",
-    "eslint": "^6.8.0",
+    "axios": "^0.23.0",
+    "chai": "^4.3.4",
+    "eslint": "^8.0.1",
     "gulp": "^4.0.2",
-    "minimist": "^1.2.0",
-    "mocha": "^7.1.0",
+    "image-size": "^1.0.0",
+    "minimist": "^1.2.6",
+    "mocha": "^9.1.3",
     "node.extend": "^2.0.2",
     "request": "^2.88.2",
-    "request-promise-native": "^1.0.8",
-    "semver": "^7.1.3",
-    "unzip": "^0.1.11",
-    "image-size": "^0.8.3"
+    "request-promise-native": "^1.0.9",
+    "semver": "^7.3.5",
+    "unzipper": "^0.10.11"
   }
 }
