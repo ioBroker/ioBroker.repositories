@@ -717,7 +717,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homeconnect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homeconnect/master/admin/homeconnect.png",
     "type": "household",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "homee": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.homee/master/io-package.json",
@@ -2330,7 +2330,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.withings/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.withings/master/admin/withings.png",
     "type": "health",
-    "version": "0.0.6"
+    "version": "0.0.7"
   },
   "wled": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/main/io-package.json",
