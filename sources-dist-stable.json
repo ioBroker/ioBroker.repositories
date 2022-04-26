@@ -813,13 +813,13 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-mfd-png/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-mfd-png/master/admin/icons-mfd-png.png",
     "type": "visualization-icons",
-    "version": "1.0.2"
+    "version": "1.1.0"
   },
   "icons-mfd-svg": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-mfd-svg/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-mfd-svg/master/admin/icons-mfd-svg.png",
     "type": "visualization-icons",
-    "version": "1.0.2"
+    "version": "1.1.0"
   },
   "icons-open-icon-library-png": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-open-icon-library-png/master/io-package.json",
@@ -2114,7 +2114,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/admin/vis.png",
     "type": "visualization",
-    "version": "1.4.5"
+    "version": "1.4.15"
   },
   "vis-bars": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-bars/master/io-package.json",
@@ -2156,7 +2156,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-hqwidgets/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-hqwidgets/master/admin/hqwidgets.png",
     "type": "visualization-widgets",
-    "version": "1.1.9"
+    "version": "1.2.0"
   },
   "vis-icontwo": {
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-icontwo/master/io-package.json",
