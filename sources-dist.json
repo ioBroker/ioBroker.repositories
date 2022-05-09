@@ -2011,6 +2011,11 @@
     "icon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.trivum/main/admin/trivum.png",
     "type": "multimedia"
   },
+  "tronity": {
+    "meta": "https://raw.githubusercontent.com/tronity/ioBroker.tronity/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/tronity/ioBroker.tronity/main/admin/tronity.png",
+    "type": "vehicle"
+  },
   "tunnelbroker-endpoint-updater": {
     "meta": "https://raw.githubusercontent.com/PowerPan/ioBroker.tunnelbroker-endpoint-updater/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PowerPan/ioBroker.tunnelbroker-endpoint-updater/master/admin/tunnelbroker-endpoint-updater.png",
