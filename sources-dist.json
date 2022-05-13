@@ -324,6 +324,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.digitalstrom/master/admin/digitalstrom.png",
     "type": "iot-systems"
   },
+  "discord": {
+    "meta": "https://raw.githubusercontent.com/crycode-de/ioBroker.discord/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/crycode-de/ioBroker.discord/main/admin/discord.png",
+    "type": "messaging"
+  },
   "discovergy": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.discovergy/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.discovergy/main/admin/discovergy.png",
