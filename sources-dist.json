@@ -881,8 +881,8 @@
     "type": "visualization"
   },
   "iwg-vpn": {
-    "meta": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/master/admin/iwg-vpn.png",
+    "meta": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/admin/iwg-vpn.png",
     "type": "network"
   },
   "jarvis": {
