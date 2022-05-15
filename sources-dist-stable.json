@@ -1612,6 +1612,12 @@
     "type": "messaging",
     "version": "1.0.3"
   },
+  "pvforecast": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pvforecast/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pvforecast/main/admin/pvforecast.png",
+    "type": "weather",
+    "version": "1.0.1"
+  },
   "radar2": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.radar2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.radar2/master/admin/radar2.png",
