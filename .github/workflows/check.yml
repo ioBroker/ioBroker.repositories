@@ -19,3 +19,8 @@ jobs:
           OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
           GITHUB_REF: ${{ env.GITHUB_REF }}
           GITHUB_EVENT_PATH: ${{ env.GITHUB_EVENT_PATH }}
+      - run: npm run test
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
+          GITHUB_REF: ${{ env.GITHUB_REF }}
+          GITHUB_EVENT_PATH: ${{ env.GITHUB_EVENT_PATH }}

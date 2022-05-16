@@ -1245,7 +1245,7 @@
   "mydlink": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mydlink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mydlink/master/admin/mydlink.png",
-    "type": "hardware"
+    "type": "iot-systems"
   },
   "myq": {
     "meta": "https://raw.githubusercontent.com/StrathCole/ioBroker.myq/master/io-package.json",
@@ -1888,8 +1888,8 @@
     "type": "vehicle"
   },
   "statistics": {
-    "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.statistics/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.statistics/master/admin/statistics.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.statistics/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.statistics/master/admin/statistics.png",
     "type": "misc-data"
   },
   "stiebel-isg": {
