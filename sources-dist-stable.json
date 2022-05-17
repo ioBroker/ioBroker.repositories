@@ -1948,6 +1948,12 @@
     "type": "weather",
     "version": "1.0.3"
   },
+  "synochat": {
+    "meta": "https://raw.githubusercontent.com/phoeluga/ioBroker.synochat/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/phoeluga/ioBroker.synochat/master/admin/synochat.png",
+    "type": "messaging",
+    "version": "1.2.0"
+  },
   "synology": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.synology/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.synology/master/admin/synology.png",
@@ -2475,11 +2481,5 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware",
     "version": "2.5.0"
-  },
-  "synochat": {
-    "meta": "https://raw.githubusercontent.com/phoeluga/ioBroker.synochat/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/phoeluga/ioBroker.synochat/master/admin/synochat.png",
-    "type": "messaging",
-    "version": "1.1.1"
   }
 }
