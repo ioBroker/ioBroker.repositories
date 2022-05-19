@@ -2291,6 +2291,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.vw-connect/master/admin/vw-connect.png",
     "type": "vehicle"
   },
+  "warp": {
+    "meta": "https://raw.githubusercontent.com/pottio/ioBroker.warp/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/pottio/ioBroker.warp/main/admin/warp.png",
+    "type": "vehicle"
+  },
   "weatherflow_udp": {
     "meta": "https://raw.githubusercontent.com/woessmich/ioBroker.weatherflow_udp/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/woessmich/ioBroker.weatherflow_udp/master/admin/weatherflow_udp.png",
