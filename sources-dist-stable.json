@@ -279,7 +279,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cul/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cul/master/admin/busware.jpg",
     "type": "iot-systems",
-    "version": "1.3.5"
+    "version": "2.0.2"
   },
   "daikin": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.daikin/master/io-package.json",
@@ -735,7 +735,7 @@
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.homekit-controller/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.homekit-controller/main/admin/homekit-controller.png",
     "type": "iot-systems",
-    "version": "0.4.3"
+    "version": "0.4.4"
   },
   "homepilot": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/io-package.json",
@@ -897,7 +897,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.javascript/master/admin/javascript.png",
     "type": "logic",
-    "version": "5.2.21"
+    "version": "5.7.0"
   },
   "jeelink": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.jeelink/master/io-package.json",
@@ -1346,7 +1346,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/admin/node-red.png",
     "type": "logic",
-    "version": "3.2.0"
+    "version": "3.3.0"
   },
   "nuki": {
     "meta": "https://raw.githubusercontent.com/smaragdschlange/ioBroker.nuki/master/io-package.json",
@@ -1478,7 +1478,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/admin/parser.png",
     "type": "logic",
-    "version": "1.1.4"
+    "version": "1.1.5"
   },
   "paw": {
     "meta": "https://raw.githubusercontent.com/bondrogeen/ioBroker.paw/master/io-package.json",
@@ -1538,7 +1538,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.places/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.places/master/admin/places.png",
     "type": "geoposition",
-    "version": "1.1.1"
+    "version": "1.1.2"
   },
   "plenticore": {
     "meta": "https://raw.githubusercontent.com/StrathCole/ioBroker.plenticore/master/io-package.json",
@@ -1958,7 +1958,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.synology/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.synology/master/admin/synology.png",
     "type": "infrastructure",
-    "version": "2.1.6"
+    "version": "2.1.7"
   },
   "systeminfo": {
     "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.systeminfo/master/io-package.json",
@@ -1988,7 +1988,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/admin/telegram.png",
     "type": "messaging",
-    "version": "1.12.2"
+    "version": "1.12.6"
   },
   "terminal": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/io-package.json",
@@ -2444,7 +2444,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.yamaha/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.yamaha/master/admin/yamaha.png",
     "type": "multimedia",
-    "version": "0.5.1"
+    "version": "0.5.2"
   },
   "yeelight-2": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.yeelight-2/master/io-package.json",
