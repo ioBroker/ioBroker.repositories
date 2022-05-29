@@ -143,12 +143,6 @@
     "type": "household",
     "version": "0.0.1"
   },
-  "binance": {
-    "meta": "https://raw.githubusercontent.com/Kartax/ioBroker.binance/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Kartax/ioBroker.binance/master/admin/binance.png",
-    "type": "misc-data",
-    "version": "1.1.3"
-  },
   "birthdays": {
     "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.birthdays/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.birthdays/master/admin/birthdays.png",
