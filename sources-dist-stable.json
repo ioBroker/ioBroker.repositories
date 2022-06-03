@@ -910,6 +910,12 @@
     "type": "general",
     "version": "4.0.23"
   },
+  "judoisoft": {
+    "meta": "https://raw.githubusercontent.com/arteck/ioBroker.judoisoft/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/arteck/ioBroker.judoisoft/master/admin/judo.png",
+    "type": "household"
+    "version": "1.0.15"
+  },
   "kecontact": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/admin/kecontact.png",
