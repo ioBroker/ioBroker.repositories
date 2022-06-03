@@ -905,6 +905,11 @@
     "icon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/admin/iwg-vpn.png",
     "type": "network"
   },
+  "janitza-gridvis": {
+    "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.janitza-gridvis/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.janitza-gridvis/main/admin/janitza-gridvis.png",
+    "type": "energy"
+  },
   "jarvis": {
     "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.jarvis/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.jarvis/master/admin/jarvis.png",
@@ -1146,10 +1151,10 @@
     "type": "iot-systems"
   },
   "message-queue": {
-     "meta": "https://raw.githubusercontent.com/MK-2001/ioBroker.message-queue/main/io-package.json",
-     "icon": "https://raw.githubusercontent.com/MK-2001/ioBroker.message-queue/main/admin/message-queue.png",
-     "type": "communication"
-   },
+    "meta": "https://raw.githubusercontent.com/MK-2001/ioBroker.message-queue/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MK-2001/ioBroker.message-queue/main/admin/message-queue.png",
+    "type": "communication"
+  },
   "meteoalarm": {
     "meta": "https://raw.githubusercontent.com/jack-blackson/ioBroker.meteoalarm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/jack-blackson/ioBroker.meteoalarm/master/admin/meteoalarm.png",
