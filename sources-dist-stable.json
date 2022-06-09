@@ -1540,6 +1540,12 @@
     "type": "network",
     "version": "1.5.3"
   },
+  "pixelit": {
+    "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.pixelit/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.pixelit/master/admin/pixelit.png",
+    "type": "hardware",
+    "version": "0.0.8"
+  },
   "places": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.places/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.places/master/admin/places.png",
