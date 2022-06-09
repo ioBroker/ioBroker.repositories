@@ -1,8 +1,8 @@
-const gulp    = require('gulp');
-const fs      = require('fs');
-const exec    = require('child_process').exec;
-const del     = require('del');
-const request = require('request');
+const gulp  = require('gulp');
+const fs    = require('fs');
+const exec  = require('child_process').exec;
+const del   = require('del');
+const axios = require('axios');
 
 if (!fs.existsSync(__dirname + '/tools.js')) {
     fs.writeFileSync(__dirname + '/tools.js', fs.readFileSync(__dirname + '/../lib/tools.js'));
@@ -15,24 +15,23 @@ function getLogos(list, destination, callback) {
         callback && callback();
     } else {
         const task = list.pop();
-        console.log('Get ' + task.url + '...');
-        request.get({url: task.url, encoding: 'binary'}, (error, response, body) => {
-            if (!error && body) {
-                fs.writeFile(destination + task.name, body, 'binary', err => {
-                    if (err) {
-                        console.error('Cannot save file "' + destination + task.name + ': ' + err);
-                    }
-                    setTimeout(() => {
-                        getLogos(list, destination, callback);
-                    }, 100);
-                });
-            } else {
-                console.error('Cannot get URL "' + task.url + ':' + error);
-                setTimeout(() => {
-                    getLogos(list, destination, callback);
-                }, 100);
-            }
-        });
+        console.log(`Get ${task.url}...`);
+        axios(task.url, {responseType: 'arraybuffer'})
+            .then(response => {
+                if (response.data) {
+                    fs.writeFile(destination + task.name, response.data, 'binary', err => {
+                        err && console.error(`Cannot save file "${destination}${task.name}: ${err}`);
+                        setTimeout(() => getLogos(list, destination, callback), 100);
+                    });
+                } else {
+                    console.error(`Got no data for "${task.url}`);
+                    setTimeout(() => getLogos(list, destination, callback), 100);
+                }
+            })
+            .catch(error => {
+                console.error(`Cannot get URL "${task.url}: ${error}`);
+                setTimeout(() => getLogos(list, destination, callback), 100);
+            });
     }
 }
 
@@ -47,11 +46,7 @@ function createRepo(done) {
         'node-gyp': '*'
     };
 
-    for (const a in stable) {
-        if (stable.hasOwnProperty(a)) {
-            packStable.dependencies['iobroker.' + a] = stable[a].version;
-        }
-    }
+    Object.keys(stable).forEach(a => packStable.dependencies['iobroker.' + a] = stable[a].version);
 
     if (!fs.existsSync(__dirname + '/public')) {
         fs.mkdirSync(__dirname + '/public');
@@ -71,9 +66,11 @@ function createRepo(done) {
         // get all icons
         const list = [];
         for (const i in data) {
-            if (!data.hasOwnProperty(i) || !data[i].extIcon) continue;
-            list.push({url: data[i].extIcon, name: 'logo-' + i.toLowerCase() + '.png'});
-            data[i].extIcon = '/imgs/logo-' + i.toLowerCase() + '.png';
+            if (!data.hasOwnProperty(i) || !data[i].extIcon) {
+                continue;
+            }
+            list.push({url: data[i].extIcon, name: `logo-${i.toLowerCase()}.png`});
+            data[i].extIcon = `/imgs/logo-${i.toLowerCase()}.png`;
         }
 
 
