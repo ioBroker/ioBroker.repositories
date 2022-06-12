@@ -2404,6 +2404,12 @@
     "type": "health",
     "version": "0.0.7"
   },
+  "wlanthermo-nano": {
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wlanthermo-nano/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wlanthermo-nano/main/admin/wlanthermo-nano.png",
+    "type": "household",
+    "version": "0.2.1"
+  },
   "wled": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wled/main/admin/wled.png",
