@@ -79,6 +79,11 @@
     "icon": "https://raw.githubusercontent.com/xhunter74/ioBroker.apcups/master/admin/ups.png",
     "type": "hardware"
   },
+  "apple-find-me": {
+    "meta": "https://raw.githubusercontent.com/PfisterDaniel/ioBroker.apple-find-me/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/PfisterDaniel/ioBroker.apple-find-me/master/admin/find-me.png",
+    "type": "geoposition"
+  },
   "artnet": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/admin/artnet.png",
@@ -508,11 +513,6 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.fiat/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.fiat/master/admin/fiat.png",
     "type": "vehicle"
-  },
-  "find-my-iphone": {
-    "meta": "https://raw.githubusercontent.com/soef/ioBroker.find-my-iphone/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/soef/ioBroker.find-my-iphone/master/admin/find-my-iphone.png",
-    "type": "geoposition"
   },
   "firetv": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.firetv/master/io-package.json",
