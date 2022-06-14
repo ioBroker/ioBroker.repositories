@@ -1,7 +1,7 @@
 'use strict';
-let expect    = require('chai').expect;
-const fs      = require('fs');
-const rq      = require('request-promise-native');
+const expect  = require('chai').expect;
+const fs    = require('fs');
+const axios = require('axios');
 let latest;
 let stable;
 
@@ -16,7 +16,7 @@ const reservedAdapterNames = [
 
 describe('Test Repository', function () {
     it('Test Repository: latest', done => {
-        let text = fs.readFileSync(__dirname + '/../sources-dist.json');
+        const text = fs.readFileSync(__dirname + '/../sources-dist.json');
         try {
             latest = JSON.parse(text);
         } catch (e) {
@@ -26,7 +26,7 @@ describe('Test Repository', function () {
     });
 
     it('Test Repository: stable', done => {
-        let text = fs.readFileSync(__dirname + '/../sources-dist-stable.json');
+        const text = fs.readFileSync(__dirname + '/../sources-dist-stable.json');
         try {
             stable = JSON.parse(text);
         } catch (e) {
@@ -35,18 +35,18 @@ describe('Test Repository', function () {
         done();
     });
 
-	it('Check reserved names', done => {
-		// check stable names
-		let id = Object.keys(stable).find(id => reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')));
+    it('Check reserved names', done => {
+        // check stable names
+        let id = Object.keys(stable).find(id => reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')));
         expect(id).to.be.not.ok;
-		// check latest names
-		id = Object.keys(latest).find(id => reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')));
+        // check latest names
+        id = Object.keys(latest).find(id => reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')));
         expect(id).to.be.not.ok;
-                done();
-	});
-	
+        done();
+    });
+
     it('Test Repository: compare types', async () => {
-        for (let id in stable) {
+        for (const id in stable) {
             if (stable.hasOwnProperty(id)) {
                 expect(id).to.be.equal(id.toLowerCase());
                 expect(latest[id], id + ' not in latest but in stable').to.be.not.undefined;
@@ -58,14 +58,15 @@ describe('Test Repository', function () {
         // compare types with io-package.json
         const len = Object.keys(latest).length;
         let i = 0;
-        for (let id in latest) {
+        for (const id in latest) {
             if (latest.hasOwnProperty(id)) {
                 expect(id).to.be.equal(id.toLowerCase());
                 if (latest[id].meta && latest[id].meta.match(/io-package\.json$/)) {
-                    const pack = await rq(latest[id].meta, {method: 'GET', json: true});
+                    const response = await axios(latest[id].meta);
                     console.log(`[${i}/${len}] Check ${id}`);
+                    const pack = response.data;
                     if (pack && pack.common && pack.common.type !== latest[id].type) {
-                        console.error('Types in "' + id + '" are not equal: ' + pack.common.type  + ' !== ' + latest[id].type);
+                        console.error(`Types in "${id}" are not equal: ${pack.common.type} !== ${latest[id].type}`);
                     }
                 }
             }
@@ -74,7 +75,7 @@ describe('Test Repository', function () {
     }).timeout(360000);
 
     it('Test Repository: Versions in latest', done => {
-        let text = fs.readFileSync(__dirname + '/../sources-dist.json');
+        const text = fs.readFileSync(__dirname + '/../sources-dist.json');
         latest = JSON.parse(text);
         for (const name in latest) {
             if (!latest.hasOwnProperty(name)) {
@@ -110,7 +111,7 @@ describe('Test Repository', function () {
     });
 
     it('Test Repository: Versions in stable', done => {
-        let text = fs.readFileSync(__dirname + '/../sources-dist-stable.json');
+        const text = fs.readFileSync(__dirname + '/../sources-dist-stable.json');
         stable = JSON.parse(text);
         for (const name in stable) {
             if (!stable.hasOwnProperty(name)) {
@@ -150,7 +151,9 @@ describe('Test Repository', function () {
         stable = JSON.parse(fs.readFileSync(__dirname + '/../sources-dist-stable.json').toString('utf8'));
         latest = JSON.parse(fs.readFileSync(__dirname + '/../sources-dist.json').toString('utf8'));
         for (const name in stable) {
-            if (!stable.hasOwnProperty(name)) continue;
+            if (!stable.hasOwnProperty(name)) {
+                continue;
+            }
 
             // latest must have all stable adapters and more unstable
             expect(!!latest[name]).to.be.true;
@@ -165,57 +168,66 @@ describe('Test Repository', function () {
 
     it('Test Repository: check latest vs. stable', done => {
         console.log();
-        for (let id in latest) {
+        for (const id in latest) {
             if (latest.hasOwnProperty(id) && !stable.hasOwnProperty(id)) {
-                console.log('Info: Adapter "' + id + '" is not in stable.')
+                console.log(`Info: Adapter "${id}" is not in stable.`);
             }
         }
         done();
     });
 
-	async function checkRepos(name, repos) {
-		let error = false;
+    const cache = {};
+
+    async function checkRepos(name, repos) {
+        let error = false;
         const len = Object.keys(repos).length;
         let i = 0;
-		for (let id in repos) {
-		    if (!repos.hasOwnProperty(id)) continue;
-			let repo = repos[id];
+        for (const id in repos) {
+            if (!repos.hasOwnProperty(id)) {
+                continue;
+            }
+            const repo = repos[id];
             console.log(`${name}: [${i}/${len}] Check ${id}`);
 
-			try {
-				let res = await rq(repo.meta, {method: 'GET', json: true});
-				if (res.common.name !== id && id !== 'admin' && id !== 'admin-2') {
-					console.error('adapter names are not equal: ' + id  + ' !== ' + res.common.name);
-					error = true;
-				}
-				if (res.common.type !== repo.type) {
-					console.info('adapter types are not equal in ' + id  + ': ' + repo.type + ' !== ' + res.common.type);
-				}
-			} catch (err){
-				console.error('Meta of adapter ' + id + ': ' + repo.meta + ' not getable');
-				error = true;
-			}
-			if (repo.icon) {
-				try {
-					let res = await rq(repo.icon, {method: 'GET', json: true});
-				} catch(err){
-					console.error('Icon of adapter ' + id + ': ' + repo.icon + ' not getable');
-					error = true;
-				}
-			}
-			//console.info('done with adapter ' + id);
+            try {
+                if (!cache[repo.meta]) {
+                    const response = await axios(repo.meta);
+                    cache[repo.meta] = response.data;
+                }
+                const res = cache[repo.meta];
+                if (res.common.name !== id && id !== 'admin' && id !== 'admin-2') {
+                    console.error(`adapter names are not equal: ${id} !== ${res.common.name}`);
+                    error = true;
+                }
+                if (res.common.type !== repo.type) {
+                    console.info(`adapter types are not equal in ${id}: ${repo.type} !== ${res.common.type}`);
+                }
+            } catch (err) {
+                console.error(`Meta of adapter ${id}: ${repo.meta} not getable`);
+                error = true;
+            }
+            if (repo.icon && !cache[repo.icon]) {
+                try {
+                    await axios(repo.icon);
+                    cache[repo.icon] = true;
+                } catch(err){
+                    console.error(`Icon of adapter ${id}: ${repo.icon} not getable`);
+                    error = true;
+                }
+            }
+            //console.info('done with adapter ' + id);
             i++;
         }
-		if (error) {
+        if (error) {
             throw 'Error occurred, see console output';
         }
-	}
+    }
 
-	it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async () =>
+    it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async () =>
         await checkRepos('latest', latest)
     ).timeout(480000);
 
-	it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async () =>
+    it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async () =>
         await checkRepos('stable', stable)
     ).timeout(480000);
 
