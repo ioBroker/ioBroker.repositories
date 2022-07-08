@@ -39,7 +39,7 @@ This file contains a checklist for adapter reviews
 ## Adapter Logic
 * general check
 * especially search for timeouts/intervals (also in lib files) and check that they are cleared in unload
-* "schedule" not used for external communication
+* "schedule" not used for external communication; same for "scheduled adapzters". They need to take care of randomization of the schedule to avoind "peak load" on the queried website!
 * only needed event handlers are used (stateChange/objectChange/message))
 * verify that no strictObjectChecks: false is used unjustified
 * check used object roles
