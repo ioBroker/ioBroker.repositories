@@ -519,11 +519,6 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.firetv/master/admin/firetv.png",
     "type": "multimedia"
   },
-  "fitbit-api": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fitbit-api/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fitbit-api/master/admin/fitbit-api.png",
-    "type": "health"
-  },
   "fitbit-fitness": {
     "meta": "https://raw.githubusercontent.com/Chris-1965/ioBroker.fitbit-fitness/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Chris-1965/ioBroker.fitbit-fitness/main/admin/fitbit-fitness.png",
