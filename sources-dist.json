@@ -1038,7 +1038,7 @@
   "lowpass-filter": {
     "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lowpass-filter/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lowpass-filter/main/admin/lowpass-filter.png",
-    "type": "date-and-time"
+    "type": "misc-data"
   },
   "loxone": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/io-package.json",
