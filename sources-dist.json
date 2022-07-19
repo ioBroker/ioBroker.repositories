@@ -905,6 +905,11 @@
     "icon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/admin/iwg-vpn.png",
     "type": "network"
   },
+  "janitza-gridvis": {
+    "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.janitza-gridvis/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.janitza-gridvis/main/admin/janitza-gridvis.png",
+    "type": "energy"
+  },
   "jarvis": {
     "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.jarvis/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.jarvis/master/admin/jarvis.png",
