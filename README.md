@@ -2,6 +2,10 @@
 
 This is GitHub project for storage of latest and stable repositories.
 
+![last refresh beta](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28beta%29&query=%24.date&url=https%3A%2F%2Frepo.iobroker.live%2Fsources-dist-latest-hash.json) ![last refresh stable](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28stable%29&query=%24.date&url=https%3A%2F%2Frepo.iobroker.live%2Fsources-dist-hash.json)
+
+
+
 ## Update of the version in stable
 1. Be sure that the version is tested in forum by users, or you fix the critical bug with that.
 2. Delete the versionTime if exists
