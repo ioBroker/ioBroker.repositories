@@ -2147,8 +2147,8 @@
     "type": "misc-data"
   },
   "vds2465-server": {
-    "meta": "https://raw.githubusercontent.com/Hirsch-DE/ioBroker.vds2465-server/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Hirsch-DE/ioBroker.vds2465-server/master/admin/vds2465-server.png",
+    "meta": "https://raw.githubusercontent.com/Hirsch-DE/ioBroker.vds2465-server/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Hirsch-DE/ioBroker.vds2465-server/main/admin/vds2465-server.png",
     "type": "alarm"
   },
   "vedirect": {
