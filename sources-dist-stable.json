@@ -2536,4 +2536,10 @@
     "type": "hardware",
     "version": "2.5.0"
   }
+  "apple-find-me": {
+    "meta": "https://raw.githubusercontent.com/PfisterDaniel/ioBroker.apple-find-me/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/PfisterDaniel/ioBroker.apple-find-me/master/admin/find-me.png",
+    "type": "geoposition",
+    "version": "0.0.14"
+  },
 }
