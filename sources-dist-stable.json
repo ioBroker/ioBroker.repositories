@@ -1630,6 +1630,12 @@
     "type": "vehicle",
     "version": "0.0.10"
   },
+  "puppeteer": {
+    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.puppeteer/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.puppeteer/main/admin/puppeteer.png",
+    "type": "utility",
+    "version": "0.2.4"
+  },
   "pushbullet": {
     "meta": "https://raw.githubusercontent.com/Jens1809/ioBroker.pushbullet/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Jens1809/ioBroker.pushbullet/master/admin/pushbullet.png",
@@ -2416,17 +2422,17 @@
     "type": "infrastructure",
     "version": "1.3.1"
   },
-  "withings": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.withings/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.withings/master/admin/withings.png",
-    "type": "health",
-    "version": "0.0.9"
-  },
   "wireless-mbus": {
     "meta": "https://raw.githubusercontent.com/lvogt/ioBroker.wireless-mbus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/lvogt/ioBroker.wireless-mbus/master/admin/wireless-mbus.png",
     "type": "energy",
     "version": "0.8.2"
+  },
+  "withings": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.withings/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.withings/master/admin/withings.png",
+    "type": "health",
+    "version": "0.0.9"
   },
   "wlanthermo-nano": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wlanthermo-nano/main/io-package.json",
