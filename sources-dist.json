@@ -2540,5 +2540,10 @@
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware"
+  },
+    "wallbox": {
+    "meta": "https://github.com/SKB-CGN/ioBroker.wallbox/blob/main/io-package.json",
+    "icon": "https://github.com/SKB-CGN/ioBroker.wallbox/blob/main/admin/wallbox.png",
+    "type": "iot-systems"
   }
 }
