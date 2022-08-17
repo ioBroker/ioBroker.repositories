@@ -2542,8 +2542,8 @@
     "type": "hardware"
   },
     "my-wallbox": {
-    "meta": "https://raw.githubusercontent.com/SKB-CGN/ioBroker.my-wallbox/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/SKB-CGN/ioBroker.my-wallbox/main/admin/wallbox.png",
+    "meta": "https://raw.githubusercontent.com/SKB-CGN/ioBroker.mywallbox/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SKB-CGN/ioBroker.mywallbox/main/admin/wallbox.png",
     "type": "iot-systems"
   }
 }
