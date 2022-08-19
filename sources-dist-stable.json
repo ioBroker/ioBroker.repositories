@@ -1,4 +1,19 @@
 {
+  "_repoInfo": {
+    "stable": true,
+    "name": {
+      "en": "Official stable repository",
+      "de": "Offizielles stabiles Repository",
+      "ru": "Официальный стабильный репозиторий",
+      "pt": "Repositório estável oficial",
+      "nl": "Officiële stabiliteit",
+      "fr": "Dépôt stable officiel",
+      "it": "Repository stabile ufficiale",
+      "es": "Repositorio estable oficial",
+      "pl": "Repozytorium",
+      "zh-cn": "A. 正式稳定存放处"
+    }
+  },
   "accuweather": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/admin/accuweather.png",
