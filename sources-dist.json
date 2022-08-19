@@ -255,8 +255,8 @@
     "type": "vehicle"
   },
   "chromecast": {
-    "meta": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/angelnu/ioBroker.chromecast/master/admin/chromecast.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.chromecast/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.chromecast/master/admin/chromecast.png",
     "type": "multimedia"
   },
   "cleveron": {
