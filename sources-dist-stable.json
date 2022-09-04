@@ -1165,6 +1165,12 @@
     "type": "visualization",
     "version": "1.1.2"
   },
+  "matrix-org": {
+    "meta": "https://raw.githubusercontent.com/oelison/ioBroker.matrix-org/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/oelison/ioBroker.matrix-org/main/admin/matrix-logo.png",
+    "type": "messaging",
+    "version": "0.1.2"
+  },
   "maveo": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.maveo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.maveo/master/admin/maveo.png",
