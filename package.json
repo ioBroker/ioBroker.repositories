@@ -49,6 +49,7 @@
     "node.extend": "^2.0.2",
     "semver": "^7.3.7",
     "unzipper": "^0.10.11",
-    "compare-versions": "^5.0.1"
+    "compare-versions": "^5.0.1",
+    "json5": "^2.2.1"
   }
 }
