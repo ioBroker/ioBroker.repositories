@@ -48,6 +48,7 @@
     "mocha": "^10.0.0",
     "node.extend": "^2.0.2",
     "semver": "^7.3.7",
-    "unzipper": "^0.10.11"
+    "unzipper": "^0.10.11",
+    "compare-versions": "^5.0.1"
   }
 }
