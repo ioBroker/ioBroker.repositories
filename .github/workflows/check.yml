@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 14
       - run: npm i
-      - run: npm run test
+      - run: npm run check
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
           GITHUB_REF: ${{ env.GITHUB_REF }}
