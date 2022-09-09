@@ -1070,6 +1070,11 @@
     "icon": "https://raw.githubusercontent.com/Mic-M/ioBroker.logparser/master/admin/logparser.png",
     "type": "logic"
   },
+  "loqed": {
+    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.loqed/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.loqed/main/admin/loqed.png",
+    "type": "iot-systems"
+  },
   "lovelace": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.lovelace/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.lovelace/master/admin/lovelace.png",
