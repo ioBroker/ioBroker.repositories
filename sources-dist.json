@@ -1146,10 +1146,10 @@
     "type": "iot-systems"
   },
   "message-queue": {
-     "meta": "https://raw.githubusercontent.com/MK-2001/ioBroker.message-queue/main/io-package.json",
-     "icon": "https://raw.githubusercontent.com/MK-2001/ioBroker.message-queue/main/admin/message-queue.png",
-     "type": "communication"
-   },
+    "meta": "https://raw.githubusercontent.com/MK-2001/ioBroker.message-queue/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MK-2001/ioBroker.message-queue/main/admin/message-queue.png",
+    "type": "communication"
+  },
   "meteoalarm": {
     "meta": "https://raw.githubusercontent.com/jack-blackson/ioBroker.meteoalarm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/jack-blackson/ioBroker.meteoalarm/master/admin/meteoalarm.png",
@@ -2460,6 +2460,11 @@
     "meta": "https://raw.githubusercontent.com/jensweigele/ioBroker.yahka/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/jensweigele/ioBroker.yahka/master/admin/yahka.png",
     "type": "iot-systems"
+  },
+  "yahoo-stock-market": {
+    "meta": "https://raw.githubusercontent.com/Newan/ioBroker.yahoo-stock-market/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Newan/ioBroker.yahoo-stock-market/main/admin/yahoo-stock-market.png",
+    "type": "misc-data"
   },
   "yamaha": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.yamaha/master/io-package.json",
