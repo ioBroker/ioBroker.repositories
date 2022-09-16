@@ -875,6 +875,11 @@
     "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.ikettle2/master/admin/ikettle2.png",
     "type": "household"
   },
+  "imow": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.imow/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.imow/master/admin/imow.png",
+    "type": "household"
+  },
   "influxdb": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/admin/influxdb.png",
