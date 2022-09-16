@@ -1662,6 +1662,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/admin/renault.png",
     "type": "vehicle"
   },
+  "reolink-810a": {
+    "meta": "https://raw.githubusercontent.com/sebtig/ioBroker.reolink-810a/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sebtig/ioBroker.reolink-810a/main/admin/reolink-810a.png",
+    "type": "alarm"
+  },
   "resol": {
     "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.resol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/grizzelbee/ioBroker.resol/master/admin/resol.svg",
