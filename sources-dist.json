@@ -584,6 +584,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fronius/master/admin/fronius.png",
     "type": "energy"
   },
+  "fronius-solarweb": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.fronius-solarweb/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.fronius-solarweb/master/admin/fronius-solarweb.png",
+    "type": "energy"
+  },
   "frontier_silicon": {
     "meta": "https://raw.githubusercontent.com/halloamt/ioBroker.frontier_silicon/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/halloamt/ioBroker.frontier_silicon/master/admin/radio.png",
