@@ -689,6 +689,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.heizoel/master/admin/heizoel.png",
     "type": "misc-data"
   },
+  "heizungssteuerung": {
+    "meta": "https://raw.githubusercontent.com/jbeenenga/ioBroker.heizungssteuerung/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/jbeenenga/ioBroker.heizungssteuerung/main/admin/heizungssteuerung.png",
+    "type": "climate-control"
+  },
   "hekr": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.hekr/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.hekr/master/admin/hekr.png",
