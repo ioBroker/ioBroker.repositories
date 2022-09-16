@@ -1045,6 +1045,11 @@
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv11/master/admin/lgtv2011.png",
     "type": "multimedia"
   },
+  "libre": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.libre/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.libre/master/admin/libre.png",
+    "type": "health"
+  },
   "lifx": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/admin/lifx_logo.png",
