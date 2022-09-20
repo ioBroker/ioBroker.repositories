@@ -1525,6 +1525,12 @@
     "type": "weather",
     "version": "0.3.0"
   },
+  "operating-hours": {
+    "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.operating-hours/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.operating-hours/main/admin/operating-hours.png",
+    "type": "metering",
+    "version": "0.0.14"
+  },
   "opi": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.opi/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.opi/master/admin/opi.png",
