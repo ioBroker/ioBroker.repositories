@@ -2076,7 +2076,7 @@
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.tankerkoenig/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.tankerkoenig/master/admin/tankerkoenig.png",
     "type": "misc-data"
-  },  
+  },
   "tapo": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.tapo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.tapo/master/admin/tapo.png",
@@ -2095,6 +2095,11 @@
   "tesla-motors": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tesla-motors/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tesla-motors/master/admin/tesla-motors.png",
+    "type": "vehicle"
+  },
+  "teslamateapi": {
+    "meta": "https://raw.githubusercontent.com/virusbrain/ioBroker.teslamateapi/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/virusbrain/ioBroker.teslamateapi/main/admin/teslamateapi.png",
     "type": "vehicle"
   },
   "text2command": {
