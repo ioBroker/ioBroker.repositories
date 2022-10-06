@@ -54,7 +54,11 @@ This is GitHub project for storage of latest and stable repositories.
   * https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/stateroles.md
 * Only commit .vscode, .idea or other IDE files/helper directories to GitHub if there is a need to. This is to prevent other users settings to interfere with yours or make PRs more complex because of this.
 * If you do not need onState/ObjectChange/Message please do not implement it
-* if you need to store passwords please encrypt them in Admin! You can check e.g. `Apollon77/iobroker.meross` for example code in index_m.html and main.js
+* if you need to store passwords please encrypt them. This can be done by just configuration:
+  * Add an array with the relevant config-fieldnames in io-package.json in "encryptedNative". Additionally please also protect the access to this field by also providing "protectedNative" (see e.g. https://github.com/TA2k/ioBroker.psa/blob/master/io-package.json#L81-L82)
+  * Additionally you need to provide a dependency to js-controller >= 3.0.0 and admin 4.0.9. (Admin needs to be a "globalDependency", see https://github.com/TA2k/ioBroker.psa/blob/master/io-package.json#L75-L80 and https://github.com/TA2k/ioBroker.psa/blob/master/io-package.json#L70-L74)
+  * That's it. Encryption before storing the fields and decryption before adapter is executed is done automatically.
+  * If you have an older implementation that uses encrypt/decrypt functions in index(_m).html and in main.js you can just convert to this by remiving the extra encrypt/decrypt alls in all places and do the above
 * add all editable fields from index_m.html to io-package native with their default values
 * **You need to make sure to clean up ALL resources in "unload". Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode**
 * **Please test in compact mode!** Especially starting, running, stopping adapter and verify that nothing runs any longer and no logs are triggered and also a new start works.
