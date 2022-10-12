@@ -1903,8 +1903,8 @@
     "type": "vehicle"
   },
   "smartcontrol": {
-    "meta": "https://raw.githubusercontent.com/Mic-M/ioBroker.smartcontrol/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Mic-M/ioBroker.smartcontrol/master/admin/smartcontrol.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.smartcontrol/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.smartcontrol/master/admin/smartcontrol.png",
     "type": "logic"
   },
   "smartgarden": {
