@@ -9,9 +9,7 @@
   "engines": {
     "node": ">=12"
   },
-  "dependencies": {
-    "request-promise-native": "^1.0.9"
-  },
+  "dependencies": {},
   "homepage": "http://iobroker.net",
   "description": "List of all official adapters for ioBroker project",
   "scripts": {
@@ -41,16 +39,17 @@
     "bluefox <dogafox@gmail.com>"
   ],
   "devDependencies": {
-    "chai": "^4.2.0",
-    "eslint": "^7.7.0",
+    "axios": "^0.27.2",
+    "chai": "^4.3.6",
+    "eslint": "^8.24.0",
     "gulp": "^4.0.2",
-    "image-size": "^0.8.3",
-    "minimist": "^1.2.5",
-    "mocha": "^8.1.1",
+    "image-size": "^1.0.2",
+    "minimist": "^1.2.6",
+    "mocha": "^10.0.0",
     "node.extend": "^2.0.2",
-    "request": "^2.88.2",
-    "request-promise-native": "^1.0.9",
-    "semver": "^7.3.2",
-    "unzipper": "^0.10.11"
+    "semver": "^7.3.7",
+    "unzipper": "^0.10.11",
+    "compare-versions": "^5.0.1",
+    "json5": "^2.2.1"
   }
 }
