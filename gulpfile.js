@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const request = require('request');
+const axios = require('axios');
 
 // check if all adapters in stable have the version attribute
 // and published attribute
@@ -11,7 +11,7 @@ gulp.task('init', done => {
 gulp.task('stable', done => {
     const build = require('./lib/build');
     const tools = require('./lib/tools');
-    tools.getRepositoryFile('https://raw.githubusercontent.com/' + tools.appName + '/' + tools.appName + '.repositories/master/sources-dist-stable.json', (err, data) => {
+    tools.getRepositoryFile(`https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist-stable.json`, (err, data) => {
         if (err) {
             console.error(err);
             if (!data) process.exit(1);
@@ -33,26 +33,27 @@ gulp.task('stable', done => {
 gulp.task('latest', done => {
     const build = require('./lib/build');
     const tools = require('./lib/tools');
-    request('https://raw.githubusercontent.com/' + tools.appName + '/' + tools.appName + '.repositories/master/sources-dist-stable.json', (err, resp, body) => {
-        const latest = JSON.parse(body);
-        tools.getRepositoryFile('https://raw.githubusercontent.com/' + tools.appName + '/' + tools.appName + '.repositories/master/sources-dist.json', latest, (err, data) => {
-            if (err) {
-                console.error(err);
-                !data && process.exit(1);
-            }
-            build.getStats((err, stats) => {
-                if (stats) {
-                    for (const adapter in stats) {
-                        if (stats.hasOwnProperty(adapter) && data[adapter]) {
-                            data[adapter].stat = stats[adapter];
-                        }
-                    }
+    axios(`https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist-stable.json`)
+        .then(response => {
+            const latest = response.data;
+            tools.getRepositoryFile(`https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist.json`, latest, (err, data) => {
+                if (err) {
+                    console.error(err);
+                    !data && process.exit(1);
                 }
-                build.processRepository(data, ['--file', '/var/www/download/sources-dist.json', '--shields', '/var/www/download/img'], () =>
-                    done());
+                build.getStats((err, stats) => {
+                    if (stats) {
+                        Object.keys(stats).forEach(adapter => {
+                            if (data[adapter]) {
+                                data[adapter].stat = stats[adapter];
+                            }
+                        });
+                    }
+                    build.processRepository(data, ['--file', '/var/www/download/sources-dist.json', '--shields', '/var/www/download/img'], () =>
+                        done());
+                });
             });
         });
-    });
 });
 
 gulp.task('sort', done => {
