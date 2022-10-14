@@ -844,6 +844,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ical/master/admin/ical.png",
     "type": "date-and-time"
   },
+  "iceroad": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.iceroad/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.iceroad/main/admin/ical.png",
+    "type": "weather"
+  },
   "ico-cloud": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ico-cloud/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ico-cloud/main/admin/ico-cloud.png",
