@@ -612,7 +612,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.froeling/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.froeling/master/admin/froeling.png",
     "type": "climate-control",
-    "version": "0.0.6"
+    "version": "0.0.7"
   },
   "fronius": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fronius/master/io-package.json",
@@ -816,7 +816,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.hoover/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.hoover/master/admin/hoover.png",
     "type": "household",
-    "version": "0.0.2"
+    "version": "0.0.4"
   },
   "hp-ilo": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/io-package.json",
@@ -1469,7 +1469,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nissan/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nissan/master/admin/nissan.png",
     "type": "vehicle",
-    "version": "0.0.9"
+    "version": "0.0.11"
   },
   "niu": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.niu/master/io-package.json",
@@ -1985,7 +1985,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.smartthings/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.smartthings/master/admin/smartthings.png",
     "type": "household",
-    "version": "0.0.3"
+    "version": "0.0.4"
   },
   "snips": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.snips/master/io-package.json",
@@ -2465,7 +2465,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.vw-connect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.vw-connect/master/admin/vw-connect.png",
     "type": "vehicle",
-    "version": "0.0.52"
+    "version": "0.0.53"
   },
   "warp": {
     "meta": "https://raw.githubusercontent.com/pottio/ioBroker.warp/main/io-package.json",
@@ -2591,7 +2591,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.worx/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.worx/master/admin/worx.png",
     "type": "garden",
-    "version": "1.7.0"
+    "version": "2.0.3"
   },
   "ws": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ws/main/io-package.json",
