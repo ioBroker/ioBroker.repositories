@@ -119,6 +119,11 @@
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.backitup/master/admin/backitup.png",
     "type": "general"
   },
+  "bayernluefter": {
+    "meta": "https://raw.githubusercontent.com/Marco15453/ioBroker.bayernluefter/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Marco15453/ioBroker.bayernluefter/main/admin/bayernluefter.png",
+    "type": "climate-control"
+  },
   "beckhoff": {
     "meta": "https://raw.githubusercontent.com/dkleber89/ioBroker.beckhoff/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/dkleber89/ioBroker.beckhoff/master/admin/beckhoff.png",
