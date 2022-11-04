@@ -119,9 +119,9 @@
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.backitup/master/admin/backitup.png",
     "type": "general"
   },
-  "bayernluefter": {
-    "meta": "https://raw.githubusercontent.com/Marco15453/ioBroker.bayernluefter/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Marco15453/ioBroker.bayernluefter/main/admin/bayernluefter.png",
+  "bayernluft": {
+    "meta": "https://raw.githubusercontent.com/Marco15453/ioBroker.bayernluft/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Marco15453/ioBroker.bayernluft/main/admin/bayernluft.png",
     "type": "climate-control"
   },
   "beckhoff": {
