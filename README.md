@@ -60,7 +60,8 @@ This is GitHub project for storage of latest and stable repositories.
   * That's it. Encryption before storing the fields and decryption before adapter is executed is done automatically.
   * If you have an older implementation that uses encrypt/decrypt functions in index(_m).html and in main.js you can just convert to this by remiving the extra encrypt/decrypt alls in all places and do the above
 * add all editable fields from index_m.html to io-package native with their default values
-* **You need to make sure to clean up ALL resources in "unload". Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode**
+* **You need to make sure to clean up ALL resources in "unload". Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode** (or also see next point!)
+* Use adapter.setTimeout/setInterval and corresponding clear Methods to create timers and intervals that are automatically cleaned up when the adapter gets unloaded and make sure to not start new timers/intervals after adapter is stopped already. This can help in many cases and is near to a drop in replacement for Timers from Node.js (but it is NOT an object, so the methjods on Timer objects will not work!)
 * **Please test in compact mode!** Especially starting, running, stopping adapter and verify that nothing runs any longer and no logs are triggered and also a new start works.
 * Be careful with "setObject" because it overwrites the object and (especially in js-controller < 2.2) custom settings like history may be removed by this! Use setObjectNotExists or read the object to detect if it exists and use extendObject to update.
 * get familiar with the "ack" concept of ioBroker. Adapters normally set all "final" values with ack=true and these are mostly ignored in onStateChange handlers. ack=false are commands that normally are handled by Adapters.
