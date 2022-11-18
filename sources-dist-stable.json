@@ -1780,7 +1780,7 @@
   "pvoutputorg": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.pvoutputorg/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.pvoutputorg/master/admin/pvoutputorg.png",
-    "type": "hardware",
+    "type": "energy",
     "version": "1.8.5"
   },
   "radar2": {
