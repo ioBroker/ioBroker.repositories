@@ -2110,7 +2110,7 @@
   "tankerkoenig": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tankerkoenig/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tankerkoenig/master/admin/tankerkoenig.png",
-    "type": "misc-data"
+    "type": "vehicle"
   },
   "tapo": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.tapo/master/io-package.json",
