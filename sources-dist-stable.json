@@ -2152,7 +2152,7 @@
   "tankerkoenig": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tankerkoenig/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tankerkoenig/master/admin/tankerkoenig.png",
-    "type": "misc-data",
+    "type": "vehicle",
     "version": "2.1.1"
   },
   "tapo": {
