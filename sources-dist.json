@@ -1208,7 +1208,7 @@
   "meater": {
     "meta": "https://raw.githubusercontent.com/Standarduser/ioBroker.meater/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Standarduser/ioBroker.meater/master/admin/meater.png",
-    "type": "metering"
+    "type": "household"
   },
   "megad": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/io-package.json",
