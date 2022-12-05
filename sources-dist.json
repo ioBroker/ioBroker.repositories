@@ -804,6 +804,11 @@
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.homekit-controller/main/admin/homekit-controller.png",
     "type": "iot-systems"
   },
+  "homenet": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homenet/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homenet/master/admin/homenet.png",
+    "type": "household"
+  },
   "homepilot": {
     "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/admin/homepilot.png",
