@@ -1252,6 +1252,11 @@
     "published": "2019-08-12T18:00:00.00Z",
     "versionDate": "2019-08-12T18:00:00.000Z"
   },
+  "micronova": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.micronova/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.micronova/master/admin/micronova.png",
+    "type": "climate-control"
+  },
   "midea": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.midea/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.midea/master/admin/midea.png",
