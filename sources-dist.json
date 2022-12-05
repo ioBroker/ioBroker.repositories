@@ -805,8 +805,8 @@
     "type": "iot-systems"
   },
   "homenet": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homenet/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homenet/master/admin/homenet.png",
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.homenet/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.homenet/master/admin/homenet.png",
     "type": "household"
   },
   "homepilot": {
