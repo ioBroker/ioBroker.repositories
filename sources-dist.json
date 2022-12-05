@@ -1363,8 +1363,8 @@
     "type": "iot-systems"
   },
   "myenergi": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.myenergi/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.myenergi/master/admin/myenergi.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myenergi/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myenergi/master/admin/myenergi.png",
     "type": "energy"
   },
   "myq": {
