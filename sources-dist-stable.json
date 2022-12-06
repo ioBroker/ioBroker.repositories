@@ -1103,7 +1103,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.lg-thinq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.lg-thinq/master/admin/lg-thinq.png",
     "type": "household",
-    "version": "0.1.2"
+    "version": "0.1.4"
   },
   "lgtv": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/io-package.json",
@@ -2159,7 +2159,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.tapo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.tapo/master/admin/tapo.png",
     "type": "iot-systems",
-    "version": "0.0.7"
+    "version": "0.0.8"
   },
   "telegram": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/io-package.json",
@@ -2285,7 +2285,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.vaillant/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.vaillant/master/admin/vaillant.png",
     "type": "climate-control",
-    "version": "0.0.18"
+    "version": "0.1.0"
   },
   "valloxmv": {
     "meta": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/io-package.json",
@@ -2477,7 +2477,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.vw-connect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.vw-connect/master/admin/vw-connect.png",
     "type": "vehicle",
-    "version": "0.0.55"
+    "version": "0.0.56"
   },
   "warp": {
     "meta": "https://raw.githubusercontent.com/pottio/ioBroker.warp/main/io-package.json",
