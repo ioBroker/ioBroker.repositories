@@ -241,5 +241,8 @@ For **stable** (sources-dist-stable.json):
 ## Automatic pull request checker
 On every pull request to the repository, the GitHub Action will be triggered. It will check the following things:
 - Detect which adapters are changed by analysing the diff of changed files (See `detectAffectedAdapter` in `lib/check.js`)
-- Run adapter checker from `https://raw.githubusercontent.com/ioBroker/ioBroker.repochecker/master/index.js` for each changed adapter.
-- 
+- Run adapter checker from `@iobroker/repochecker` for each changed adapter.
+- Adds the comments to PR with the results of the checks.
+
+## Issues to move the latest version of adapter to stable
+`npm run stable`
