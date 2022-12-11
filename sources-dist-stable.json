@@ -582,7 +582,7 @@
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.followthesun/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.followthesun/main/admin/followthesun.png",
     "type": "geoposition",
-    "version": "0.3.9"
+    "version": "0.4.0"
   },
   "foobar2000": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.foobar2000/master/io-package.json",
@@ -636,7 +636,7 @@
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.fuelpricemonitor/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.fuelpricemonitor/main/admin/fuelpricemonitor.png",
     "type": "vehicle",
-    "version": "0.3.0"
+    "version": "0.3.1"
   },
   "fullcalendar": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.fullcalendar/master/io-package.json",
@@ -2147,7 +2147,7 @@
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.tado/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.tado/main/admin/tado.png",
     "type": "climate-control",
-    "version": "0.4.0"
+    "version": "0.4.3"
   },
   "tahoma": {
     "meta": "https://raw.githubusercontent.com/Excodibur/ioBroker.tahoma/master/io-package.json",
