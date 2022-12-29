@@ -771,8 +771,8 @@
     "version": "0.1.17"
   },
   "hikvision-alarmserver": {
-    "meta": "https://raw.githubusercontent.com/raintonr/ioBroker.hikvision-alarmserver/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/raintonr/ioBroker.hikvision-alarmserver/main/admin/hikvision-alarmserver.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hikvision-alarmserver/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hikvision-alarmserver/main/admin/hikvision-alarmserver.png",
     "type": "alarm",
     "version": "0.0.6"
   },
@@ -1094,8 +1094,8 @@
     "version": "1.1.1"
   },
   "legrand-ecocompteur": {
-    "meta": "https://raw.githubusercontent.com/raintonr/ioBroker.legrand-ecocompteur/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/raintonr/ioBroker.legrand-ecocompteur/master/admin/legrand-ecocompteur.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.legrand-ecocompteur/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.legrand-ecocompteur/master/admin/legrand-ecocompteur.png",
     "type": "energy",
     "version": "1.0.0"
   },

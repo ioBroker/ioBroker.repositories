@@ -755,8 +755,8 @@
     "type": "utility"
   },
   "hikvision-alarmserver": {
-    "meta": "https://raw.githubusercontent.com/raintonr/ioBroker.hikvision-alarmserver/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/raintonr/ioBroker.hikvision-alarmserver/main/admin/hikvision-alarmserver.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hikvision-alarmserver/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hikvision-alarmserver/main/admin/hikvision-alarmserver.png",
     "type": "alarm"
   },
   "hilink": {
@@ -1056,8 +1056,8 @@
     "type": "iot-systems"
   },
   "legrand-ecocompteur": {
-    "meta": "https://raw.githubusercontent.com/raintonr/ioBroker.legrand-ecocompteur/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/raintonr/ioBroker.legrand-ecocompteur/master/admin/legrand-ecocompteur.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.legrand-ecocompteur/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.legrand-ecocompteur/master/admin/legrand-ecocompteur.png",
     "type": "energy"
   },
   "letrika_comgw": {
