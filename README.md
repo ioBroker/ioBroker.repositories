@@ -89,9 +89,10 @@ This is GitHub project for storage of latest and stable repositories.
 
 Additionally, to all above listed points:
 
-15. Forum thread with question to test the adapter.
-16. Some feedback on [forum](http://forum.iobroker.net).
-17. **Important** Discovery function! If device can be found automatically (USB, IP) it should be implemented in discovery adapter after (Discovery PR will be merged after stable acceptance).
+1. The adapter must have been added to latest repository previously.
+2. Forum thread with question to test the adapter.
+3. Some feedback on [forum](http://forum.iobroker.net).
+4. **Important** Discovery function! If device can be found automatically (USB, IP) it should be implemented in discovery adapter after (Discovery PR will be merged after stable acceptance).
 
 ## How-to
 ### How to publish on npm
@@ -237,3 +238,13 @@ For **stable** (sources-dist-stable.json):
 ```
 
 *Note*: stable has always specific version.
+
+## Automatic pull request checker
+On every pull request to the repository, the GitHub Action will be triggered (see [check.yml](.github/workflows/check.yml) ). It will check the following things:
+- Detect which adapters are changed by analysing the diff of changed files (See `detectAffectedAdapter` in [lib/check.js](lib/check.js))
+- Run adapter checker from `@iobroker/repochecker` for each changed adapter.
+- Adds the comments to PR with the results of the checks.
+
+## Issues to move the latest version of adapter to stable
+Every night the GitHub Action will be triggered at 3:15 (see [stable.yml](.github/workflows/stable.yml) ). It will check the following things:
+- If latest version is good enough for stable and will create an issue if yes (See [lib/readyForStable.js](lib/readyForStable.js))
