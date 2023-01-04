@@ -764,11 +764,11 @@
     "type": "hardware",
     "version": "1.0.6"
   },
-  "hid": {
-    "meta": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/admin/hid.png",
+  "hid-community": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hid-community/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hid-community/master/admin/hid.png",
     "type": "utility",
-    "version": "0.1.17"
+    "version": "0.2.0"
   },
   "hikvision-alarmserver": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hikvision-alarmserver/main/io-package.json",
