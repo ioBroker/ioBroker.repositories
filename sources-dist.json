@@ -749,9 +749,9 @@
     "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.heytech/master/admin/heytech.png",
     "type": "hardware"
   },
-  "hid": {
-    "meta": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/soef/ioBroker.hid/master/admin/hid.png",
+  "hid-community": {
+    "meta": "https://raw.githubusercontent.com/soef/ioBroker.hid-community/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/soef/ioBroker.hid-community/master/admin/hid.png",
     "type": "utility"
   },
   "hikvision-alarmserver": {
