@@ -2,6 +2,10 @@
 
 This is GitHub project for storage of latest and stable repositories.
 
+![last refresh beta](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28beta%29&query=%24.date&url=https%3A%2F%2Frepo.iobroker.live%2Fsources-dist-latest-hash.json) ![last refresh stable](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28stable%29&query=%24.date&url=https%3A%2F%2Frepo.iobroker.live%2Fsources-dist-hash.json)
+
+
+
 ## Update of the version in stable
 1. Be sure that the version is tested in forum by users, or you fix the critical bug with that.
 2. Delete the versionTime if exists
@@ -18,7 +22,7 @@ This is GitHub project for storage of latest and stable repositories.
 
 *already required for latest repository*
 
-1. Your GitHub repository must have name - "ioBroker.<adaptername>". **B** is capital in "ioBroker", but in the package.json the *name* must be low case, because npm does not allow upper case letters. Your repository must have "topics". Add these with `Manage topics`.
+1. Your GitHub repository must have the name - "ioBroker.<adaptername>". **B** is capital in "ioBroker", but in the package.json the *name* must be low case, because npm does not allow upper case letters. Your repository must have "topics". Add these with `Manage topics`.
 2. Do not use in the title the words "ioBroker" or "Adapter". It is clear anyway, that it is adapter for ioBroker.
 3. *title* in io-package.json (common) is simple short name of adapter in english. *titleLang* is object that consist short names in many languages. *Lang* ist not german `Länge`, but english `LANGuages`.
 4. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md).
@@ -26,7 +30,7 @@ This is GitHub project for storage of latest and stable repositories.
    **In README.md, there must be a link to the device or the manufacturer's website. Devices must have a photo. Services do not require a photo, but are still welcome.**
 5. Adapter must have a predefined license.
 6. Please remove www, widgets and docs directories (admin/tab_m.html, admin/custom_m.html) if not used.
-7. Adapter needs to have at least Adapter basic testing (installing, running) using Travis-CI (optionally and Appveyor). More information in Forum from apollon77 (Just take from other adapters the samples)
+7. Adapter needs to have at least Adapter basic testing (installing, running) using GitHub actions  (optionally Travis-CI and/or Appveyor - but GitHub actions is better). More information in Forum from apollon77 (Just take from other adapters the samples)
 8. Define one of the types in io-package.json. See details [here](#types)
 9. Define one of the connection types (if applied) in io-package.json. See details [here](#connection-types)
 10. All states must have according [valid roles](https://github.com/ioBroker/ioBroker/blob/master/doc/STATE_ROLES.md#state-roles) (and not just "state")
@@ -50,9 +54,14 @@ This is GitHub project for storage of latest and stable repositories.
   * https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/stateroles.md
 * Only commit .vscode, .idea or other IDE files/helper directories to GitHub if there is a need to. This is to prevent other users settings to interfere with yours or make PRs more complex because of this.
 * If you do not need onState/ObjectChange/Message please do not implement it
-* if you need to store passwords please encrypt them in Admin! You can check e.g. `Apollon77/iobroker.meross` for example code in index_m.html and main.js
+* if you need to store passwords please encrypt them. This can be done by just configuration:
+  * Add an array with the relevant config-fieldnames in io-package.json in "encryptedNative". Additionally please also protect the access to this field by also providing "protectedNative" (see e.g. https://github.com/TA2k/ioBroker.psa/blob/master/io-package.json#L81-L82)
+  * Additionally you need to provide a dependency to js-controller >= 3.0.0 and admin 4.0.9. (Admin needs to be a "globalDependency", see https://github.com/TA2k/ioBroker.psa/blob/master/io-package.json#L75-L80 and https://github.com/TA2k/ioBroker.psa/blob/master/io-package.json#L70-L74)
+  * That's it. Encryption before storing the fields and decryption before adapter is executed is done automatically.
+  * If you have an older implementation that uses encrypt/decrypt functions in index(_m).html and in main.js you can just convert to this by remiving the extra encrypt/decrypt alls in all places and do the above
 * add all editable fields from index_m.html to io-package native with their default values
-* **You need to make sure to clean up ALL resources in "unload". Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode**
+* **You need to make sure to clean up ALL resources in "unload". Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode** (or also see next point!)
+* Use adapter.setTimeout/setInterval and corresponding clear Methods to create timers and intervals that are automatically cleaned up when the adapter gets unloaded and make sure to not start new timers/intervals after adapter is stopped already. This can help in many cases and is near to a drop in replacement for Timers from Node.js (but it is NOT an object, so the methjods on Timer objects will not work!)
 * **Please test in compact mode!** Especially starting, running, stopping adapter and verify that nothing runs any longer and no logs are triggered and also a new start works.
 * Be careful with "setObject" because it overwrites the object and (especially in js-controller < 2.2) custom settings like history may be removed by this! Use setObjectNotExists or read the object to detect if it exists and use extendObject to update.
 * get familiar with the "ack" concept of ioBroker. Adapters normally set all "final" values with ack=true and these are mostly ignored in onStateChange handlers. ack=false are commands that normally are handled by Adapters.
@@ -62,8 +71,8 @@ This is GitHub project for storage of latest and stable repositories.
 * If you use "connections" to other systems (Websockets, MQTT, TCP, Serial or other) please also implement the `info.connection` state (directly create objects by including in io-package) and set the connection value accordingly. Using this enables Admin to differentiate the status between green (ok, running), yellow (basically running but not connected) and red (not running).
 * Consider and understand the asynchronous nature of JavaScript and make sure to know what will happen in parallel and what makes more sense to be sequentially! It is ok to use callbacks or Promises/async/await - the latter makes it more easy to understand and control how your code really flows.
 * Consider using ESLint or other JavaScript code and type checker to see errors in your code before releasing a new version.
-* **Please activate adapter testing with at least package- and integration-tests on Travis-CI** GitHub Actions are not enough at the moment because they do not allow us to get an easy overview, especially when we want to see how our adapters behave with new nodejs versions.
-* The adapter testing using Travis and/or GitHub Actions is not for us - it is for you! Please check it after pushing changes to GitHub and before telling it to users or publish an NPM package. If testing is "red" you should check the testing log to see what is broken.
+* **Please activate adapter testing with at least package- and integration-tests on GitHub Actions**
+* The adapter testing using GitHub Actions or Travis is not for us - it is for you! Please check it after pushing changes to GitHub and before telling it to users or publish an NPM package. If testing is "red" you should check the testing log to see what is broken.
 * If you like to increase testing you can start implementing adapter specific tests that always run when you push changes to GitHub.
 * You can/should use https://translator.iobroker.in/ to auto translate all relevant texts into all needed languages by providing the english text
 * If an adapter instance want to generate an object structure it should use objects from the type device, channel or folder to define sub-structures and provide objects of type state only on the last "level". Different levels can be separated by a ".". An object of the type "state" should never have more objects below it. The allowed field for the relevant object types are documented in https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/objectsschema.md#core-concept
@@ -80,9 +89,10 @@ This is GitHub project for storage of latest and stable repositories.
 
 Additionally, to all above listed points:
 
-15. Forum thread with question to test the adapter.
-16. Some feedback on [forum](http://forum.iobroker.net).
-17. **Important** Discovery function! If device can be found automatically (USB, IP) it must be implemented in discovery adapter.
+1. The adapter must have been added to latest repository previously.
+2. Forum thread with question to test the adapter.
+3. Some feedback on [forum](http://forum.iobroker.net).
+4. **Important** Discovery function! If device can be found automatically (USB, IP) it should be implemented in discovery adapter after (Discovery PR will be merged after stable acceptance).
 
 ## How-to
 ### How to publish on npm
@@ -143,14 +153,8 @@ Of course, you can add your own licenses, even WTFPL.
 You must of course take in count the licenses of components, that used in your adapter. E.g. if you use main packet under GPLv2 license, you cannot make CC-BY-NC from that.
 
 ### Testing
-See how testing is implemented on ioBroker.template:
- - https://github.com/ioBroker/ioBroker.template/tree/master/test
- - https://github.com/ioBroker/ioBroker.template/blob/master/package.json#L39
- - Activate tests on travis-ci.org: https://github.com/mbonaci/mbo-storm/wiki/Integrate-Travis-CI-with-your-GitHub-repo
- - Activate appveyor (for windows) if applicable: https://www.appveyor.com/
-
-You can find some help in this [PDF](http://forum.iobroker.net/download/file.php?id=11259) (Only german) See **Adapter Testing** Section.
-
+The Adapter Creator will create all needed files and deps for the testing, see also https://github.com/ioBroker/ioBroker.example/tree/master/JavaScript/test .  Tests are then run by GitHub Action (also pre-generated)
+    
 ### Types
 The io-package.json must have attribute type in common part.
 An example can be seen [here](https://github.com/ioBroker/ioBroker.template/blob/1e48d01e69c9ad15c70ab8dced572a4d6882ae0d/io-package.json#L76):
@@ -234,3 +238,13 @@ For **stable** (sources-dist-stable.json):
 ```
 
 *Note*: stable has always specific version.
+
+## Automatic pull request checker
+On every pull request to the repository, the GitHub Action will be triggered (see [check.yml](.github/workflows/check.yml) ). It will check the following things:
+- Detect which adapters are changed by analysing the diff of changed files (See `detectAffectedAdapter` in [lib/check.js](lib/check.js))
+- Run adapter checker from `@iobroker/repochecker` for each changed adapter.
+- Adds the comments to PR with the results of the checks.
+
+## Issues to move the latest version of adapter to stable
+Every night the GitHub Action will be triggered at 3:15 (see [stable.yml](.github/workflows/stable.yml) ). It will check the following things:
+- If latest version is good enough for stable and will create an issue if yes (See [lib/readyForStable.js](lib/readyForStable.js))
