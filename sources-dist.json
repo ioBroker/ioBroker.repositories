@@ -664,7 +664,7 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/admin/gruenbeck.png",
     "type": "household"
   },
-    "gsmsms": {
+  "gsmsms": {
     "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.gsmsms/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.gsmsms/main/admin/gsmsms.png",
     "type": "messaging"
