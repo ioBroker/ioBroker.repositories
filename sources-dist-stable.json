@@ -284,6 +284,12 @@
     "type": "multimedia",
     "version": "2.3.1"
   },
+  "cleveron": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.cleveron/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.cleveron/main/admin/cleveron.png",
+    "type": "climate-control",
+    "version": "0.0.5"
+  },
   "cloud": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/admin/cloud.png",
