@@ -2669,7 +2669,7 @@
   "zigbee2mqtt": {
     "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.zigbee2mqtt/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.zigbee2mqtt/master/admin/zigbee2mqtt.png",
-    "type": "lighting"
+    "type": "hardware"
   },
   "zoe2": {
     "meta": "https://raw.githubusercontent.com/fungus75/ioBroker.zoe2/master/io-package.json",
