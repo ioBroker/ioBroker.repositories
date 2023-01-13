@@ -2704,7 +2704,7 @@
   "zigbee2mqtt": {
     "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.zigbee2mqtt/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.zigbee2mqtt/master/admin/zigbee2mqtt.png",
-    "type": "lighting",
+    "type": "hardware",
     "version": "2.6.0"
   },
   "zont": {
