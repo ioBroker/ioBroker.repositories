@@ -2706,6 +2706,12 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/admin/zigbee.png",
     "type": "hardware",
     "version": "1.8.10"
+  }, 
+  "zigbee2mqtt": {
+    "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.zigbee2mqtt/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.zigbee2mqtt/master/admin/zigbee2mqtt.png",
+    "type": "hardware",
+    "version": "2.6.0"
   },
   "zont": {
     "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/io-package.json",
