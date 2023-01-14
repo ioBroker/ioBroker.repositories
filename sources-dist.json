@@ -644,6 +644,11 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.g-homa/master/admin/g-homa.png",
     "type": "iot-systems"
   },
+  "garmin": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.garmin/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.garmin/master/admin/garmin.png",
+    "type": "health"
+  },
   "geofency": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.geofency/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.geofency/master/admin/geofency.png",
