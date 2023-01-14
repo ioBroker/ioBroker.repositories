@@ -864,6 +864,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hue-extended/master/admin/hue-extended.png",
     "type": "lighting"
   },
+  "hue-sync-box": {
+    "meta": "https://raw.githubusercontent.com/xXBJXx/ioBroker.hue-sync-box/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/xXBJXx/ioBroker.hue-sync-box/main/admin/hueSyncBox.png",
+    "type": "lighting"
+  },
   "huum-sauna": {
     "meta": "https://raw.githubusercontent.com/Chris-1965/ioBroker.huum-sauna/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Chris-1965/ioBroker.huum-sauna/main/admin/huum-sauna.png",
