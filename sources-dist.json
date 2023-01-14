@@ -1240,6 +1240,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mclighting/master/admin/mclighting.png",
     "type": "lighting"
   },
+  "meater": {
+    "meta": "https://raw.githubusercontent.com/Standarduser/ioBroker.meater/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Standarduser/ioBroker.meater/master/admin/meater.png",
+    "type": "household"
+  },
   "megad": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/admin/megad.png",
