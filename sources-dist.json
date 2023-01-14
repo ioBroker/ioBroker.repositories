@@ -1942,6 +1942,11 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.sensebox/master/admin/sensebox.svg?sanitize=true",
     "type": "weather"
   },
+  "semp": {
+    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.semp/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.semp/master/admin/semp.png",
+    "type": "energy"
+  },
   "seq": {
     "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.seq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.seq/master/admin/seq.png",
