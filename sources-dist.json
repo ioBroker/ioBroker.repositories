@@ -1407,6 +1407,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mydlink/master/admin/mydlink.png",
     "type": "iot-systems"
   },
+  "myenergi": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myenergi/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myenergi/master/admin/myenergi.png",
+    "type": "energy"
+  },
   "myq": {
     "meta": "https://raw.githubusercontent.com/StrathCole/ioBroker.myq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/StrathCole/ioBroker.myq/master/admin/myq.png",
