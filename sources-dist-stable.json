@@ -629,7 +629,7 @@
   "fronius-wattpilot": {
     "meta": "https://raw.githubusercontent.com/tim2zg/ioBroker.fronius-wattpilot/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/tim2zg/ioBroker.fronius-wattpilot/main/admin/fronius-wattpilot.png",
-    "type": "energy",
+    "type": "vehicle",
     "version": "4.3.0"
   },
   "frontier_silicon": {
