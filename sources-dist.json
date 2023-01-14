@@ -1145,6 +1145,11 @@
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.lightify/master/admin/lightify.png",
     "type": "lighting"
   },
+  "lightcontrol": {
+    "meta": "https://raw.githubusercontent.com/schmakus/ioBroker.lightcontrol/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/schmakus/ioBroker.lightcontrol/main/admin/lightcontrol.png",
+    "type": "lighting"
+  },
   "link": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.link/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.link/master/admin/link.png",
