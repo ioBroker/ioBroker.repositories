@@ -1557,6 +1557,11 @@
     "icon": "https://raw.githubusercontent.com/crycode-de/ioBroker.odl/master/admin/odl.png",
     "type": "misc-data"
   },
+  "oekofen-json": {
+    "meta": "https://raw.githubusercontent.com/chaozmc/ioBroker.oekofen-json/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/chaozmc/ioBroker.oekofen-json/main/admin/oekofen-json.png",
+    "type": "climate-control"
+  },
   "oilfox": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.oilfox/master/admin/oilfox.png",
