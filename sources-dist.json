@@ -513,6 +513,11 @@
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/admin/esphome.png",
     "type": "hardware"
+  },  
+  "euhome": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.euhome/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.euhome/master/admin/euhome.png",
+    "type": "household"
   },
   "eusec": {
     "meta": "https://raw.githubusercontent.com/bropat/ioBroker.eusec/master/io-package.json",
