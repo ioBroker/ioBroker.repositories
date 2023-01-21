@@ -2,6 +2,10 @@
 
 This is GitHub project for storage of latest and stable repositories.
 
+![last refresh beta](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28beta%29&query=%24.date&url=https%3A%2F%2Frepo.iobroker.live%2Fsources-dist-latest-hash.json) ![last refresh stable](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28stable%29&query=%24.date&url=https%3A%2F%2Frepo.iobroker.live%2Fsources-dist-hash.json)
+
+
+
 ## Update of the version in stable
 1. Be sure that the version is tested in forum by users, or you fix the critical bug with that.
 2. Delete the versionTime if exists
@@ -18,7 +22,7 @@ This is GitHub project for storage of latest and stable repositories.
 
 *already required for latest repository*
 
-1. Your GitHub repository must have name - "ioBroker.<adaptername>". **B** is capital in "ioBroker", but in the package.json the *name* must be low case, because npm does not allow upper case letters. Your repository must have "topics". Add these with `Manage topics`.
+1. Your GitHub repository must have the name - "ioBroker.<adaptername>". **B** is capital in "ioBroker", but in the package.json the *name* must be low case, because npm does not allow upper case letters. Your repository must have "topics". Add these with `Manage topics`.
 2. Do not use in the title the words "ioBroker" or "Adapter". It is clear anyway, that it is adapter for ioBroker.
 3. *title* in io-package.json (common) is simple short name of adapter in english. *titleLang* is object that consist short names in many languages. *Lang* ist not german `Länge`, but english `LANGuages`.
 4. Adapter needs to have a README.md with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md).
@@ -50,9 +54,14 @@ This is GitHub project for storage of latest and stable repositories.
   * https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/stateroles.md
 * Only commit .vscode, .idea or other IDE files/helper directories to GitHub if there is a need to. This is to prevent other users settings to interfere with yours or make PRs more complex because of this.
 * If you do not need onState/ObjectChange/Message please do not implement it
-* if you need to store passwords please encrypt them in Admin! You can check e.g. `Apollon77/iobroker.meross` for example code in index_m.html and main.js
+* if you need to store passwords please encrypt them. This can be done by just configuration:
+  * Add an array with the relevant config-fieldnames in io-package.json in "encryptedNative". Additionally please also protect the access to this field by also providing "protectedNative" (see e.g. https://github.com/TA2k/ioBroker.psa/blob/master/io-package.json#L81-L82)
+  * Additionally you need to provide a dependency to js-controller >= 3.0.0 and admin 4.0.9. (Admin needs to be a "globalDependency", see https://github.com/TA2k/ioBroker.psa/blob/master/io-package.json#L75-L80 and https://github.com/TA2k/ioBroker.psa/blob/master/io-package.json#L70-L74)
+  * That's it. Encryption before storing the fields and decryption before adapter is executed is done automatically.
+  * If you have an older implementation that uses encrypt/decrypt functions in index(_m).html and in main.js you can just convert to this by remiving the extra encrypt/decrypt alls in all places and do the above
 * add all editable fields from index_m.html to io-package native with their default values
-* **You need to make sure to clean up ALL resources in "unload". Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode**
+* **You need to make sure to clean up ALL resources in "unload". Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode** (or also see next point!)
+* Use adapter.setTimeout/setInterval and corresponding clear Methods to create timers and intervals that are automatically cleaned up when the adapter gets unloaded and make sure to not start new timers/intervals after adapter is stopped already. This can help in many cases and is near to a drop in replacement for Timers from Node.js (but it is NOT an object, so the methjods on Timer objects will not work!)
 * **Please test in compact mode!** Especially starting, running, stopping adapter and verify that nothing runs any longer and no logs are triggered and also a new start works.
 * Be careful with "setObject" because it overwrites the object and (especially in js-controller < 2.2) custom settings like history may be removed by this! Use setObjectNotExists or read the object to detect if it exists and use extendObject to update.
 * get familiar with the "ack" concept of ioBroker. Adapters normally set all "final" values with ack=true and these are mostly ignored in onStateChange handlers. ack=false are commands that normally are handled by Adapters.
@@ -80,9 +89,10 @@ This is GitHub project for storage of latest and stable repositories.
 
 Additionally, to all above listed points:
 
-15. Forum thread with question to test the adapter.
-16. Some feedback on [forum](http://forum.iobroker.net).
-17. **Important** Discovery function! If device can be found automatically (USB, IP) it should be implemented in discovery adapter after (Discovery PR will be merged after stable acceptance).
+1. The adapter must have been added to latest repository previously.
+2. Forum thread with question to test the adapter.
+3. Some feedback on [forum](http://forum.iobroker.net).
+4. **Important** Discovery function! If device can be found automatically (USB, IP) it should be implemented in discovery adapter after (Discovery PR will be merged after stable acceptance).
 
 ## How-to
 ### How to publish on npm
@@ -228,3 +238,13 @@ For **stable** (sources-dist-stable.json):
 ```
 
 *Note*: stable has always specific version.
+
+## Automatic pull request checker
+On every pull request to the repository, the GitHub Action will be triggered (see [check.yml](.github/workflows/check.yml) ). It will check the following things:
+- Detect which adapters are changed by analysing the diff of changed files (See `detectAffectedAdapter` in [lib/check.js](lib/check.js))
+- Run adapter checker from `@iobroker/repochecker` for each changed adapter.
+- Adds the comments to PR with the results of the checks.
+
+## Issues to move the latest version of adapter to stable
+Every night the GitHub Action will be triggered at 3:15 (see [stable.yml](.github/workflows/stable.yml) ). It will check the following things:
+- If latest version is good enough for stable and will create an issue if yes (See [lib/readyForStable.js](lib/readyForStable.js))
