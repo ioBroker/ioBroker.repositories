@@ -9,7 +9,9 @@ function getIpAddresses () {
     const ifaces = os.networkInterfaces();
     const result = [];
     for (const iface in ifaces) {
-        if (!ifaces.hasOwnProperty(iface)) continue;
+        if (!ifaces.hasOwnProperty(iface)) {
+            continue;
+        }
         const _iface = ifaces[iface];
         for (let alias = 0; alias < _iface.length; alias++) {
             const _alias = _iface[alias];
@@ -25,21 +27,21 @@ function getIpAddresses () {
 }
 
 const app     = express();
-let ipAddr  = argv.ip;
-const port    = argv.port || 5081;
-const npmPort = argv.npmPort  || 5080;
-let url     = argv.url || ('http://localhost:' + npmPort);
+let ipAddr    = argv.ip;
+const port    = argv.port    || 5081;
+const npmPort = argv.npmPort || 5080;
+let url       = argv.url || (`http://localhost:${npmPort}`);
 
 if (!url.match(/:(\d+)\/?/)) {
-    url = url.replace(/:$/, '') + ':' + npmPort;
+    url = `${url.replace(/:$/, '')}:${npmPort}`;
 }
 
-if (!fs.existsSync(__dirname + '/db')) {
+if (!fs.existsSync(`${__dirname}/db`)) {
     console.error('No DB with npm packets found.');
     process.exit(1);
 }
 
-if (!fs.existsSync(__dirname + '/public/sources-dist-stable.json')) {
+if (!fs.existsSync(`${__dirname}/public/sources-dist-stable.json`)) {
     console.error('please build first repository: npm i, gulp');
     process.exit(1);
 }
@@ -51,7 +53,7 @@ if (!ipAddr) {
         process.exit(2);
     }
     if (ip.length >= 1) {
-        console.warn('More than one IP address found. Take first: ' + ip[0]);
+        console.warn(`More than one IP address found. Take first: ${ip[0]}`);
         ipAddr = ip[0];
     }
 }
@@ -59,24 +61,18 @@ if (!ipAddr) {
 const file = require(__dirname + '/public/sources-dist-stable.json');
 for (const a in file) {
     if (file.hasOwnProperty(a) && file[a].extIcon) {
-        file[a].extIcon = 'http://' + ipAddr + ':' + port + file[a].extIcon;
+        file[a].extIcon = `http://${ipAddr}:${port}${file[a].extIcon}`;
     }
 }
 
-app.get('/', function (req, res) {
-    res.json(file);
-});
-app.get('/sources-dist.json', function (req, res) {
-    res.json(file);
-});
-app.get('/sources-dist-stable.json', function (req, res) {
-    res.json(file);
-});
-app.use('/imgs', express.static(__dirname + '/public/imgs'));
+app.get('/', (req, res) => res.json(file));
+app.get('/sources-dist.json', (req, res) => res.json(file));
+app.get('/sources-dist-stable.json', (req, res) => res.json(file));
+app.use('/imgs', express.static(`${__dirname}/public/imgs`));
 
-app.listen(port, function () {
-    console.log('Repo started on http://' + ipAddr + ':' + port);
-    console.log('http://' + ipAddr + ':' + port + '/sources-dist.json');
+app.listen(port, () => {
+    console.log(`Repo started on http://${ipAddr}:${port}`);
+    console.log(`http://${ipAddr}:${port}/sources-dist.json`);
 });
 
 // start local npm
@@ -87,7 +83,7 @@ const localNpm = createLocalNpm({
     remote:         'https://registry.npmjs.org',
     remoteSkim:     'https://replicate.npmjs.com',
     url:            url,
-    directory:      __dirname + '/db'
+    directory:      `${__dirname}/db`
 });
 
 console.log(`To activate this repository, write: "npm set registry http://${ipAddr}:${npmPort}" on the system, where you want to install ioBroker.`);
