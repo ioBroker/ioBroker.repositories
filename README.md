@@ -89,9 +89,10 @@ This is GitHub project for storage of latest and stable repositories.
 
 Additionally, to all above listed points:
 
-15. Forum thread with question to test the adapter.
-16. Some feedback on [forum](http://forum.iobroker.net).
-17. **Important** Discovery function! If device can be found automatically (USB, IP) it should be implemented in discovery adapter after (Discovery PR will be merged after stable acceptance).
+1. The adapter must have been added to latest repository previously.
+2. Forum thread with question to test the adapter.
+3. Some feedback on [forum](http://forum.iobroker.net).
+4. **Important** Discovery function! If device can be found automatically (USB, IP) it should be implemented in discovery adapter after (Discovery PR will be merged after stable acceptance).
 
 ## How-to
 ### How to publish on npm
