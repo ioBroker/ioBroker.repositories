@@ -230,7 +230,7 @@
     "type": "multimedia",
     "version": "0.10.3"
   },
-    "botslab360": {
+  "botslab360": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.botslab360/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.botslab360/master/admin/botslab360.png",
     "type": "household",
@@ -2124,6 +2124,12 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solarlog/master/admin/solarlog.png",
     "type": "energy",
     "version": "2.2.5"
+  },
+  "solarmanpv": {
+    "meta": "https://raw.githubusercontent.com/raschy/ioBroker.solarmanpv/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/raschy/ioBroker.solarmanpv/main/admin/solarmanpv.png",
+    "type": "iot-systems",
+    "version": "0.2.2"
   },
   "solarviewdatareader": {
     "meta": "https://raw.githubusercontent.com/afuerhoff/ioBroker.solarviewdatareader/master/io-package.json",
