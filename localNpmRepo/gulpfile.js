@@ -4,11 +4,11 @@ const exec  = require('child_process').exec;
 const del   = require('del');
 const axios = require('axios');
 
-if (!fs.existsSync(__dirname + '/tools.js')) {
-    fs.writeFileSync(__dirname + '/tools.js', fs.readFileSync(__dirname + '/../lib/tools.js'));
+if (!fs.existsSync(`${__dirname}/tools.js`)) {
+    fs.writeFileSync(`${__dirname}/tools.js`, fs.readFileSync(`${__dirname}/../lib/tools.js`));
 }
 
-const tools = require(__dirname + '/tools.js');
+const tools = require(`${__dirname}/tools.js`);
 
 function getLogos(list, destination, callback) {
     if (!list || !list.length) {
@@ -25,19 +25,21 @@ function getLogos(list, destination, callback) {
                     });
                 } else {
                     console.error(`Got no data for "${task.url}`);
-                    setTimeout(() => getLogos(list, destination, callback), 100);
+                    setTimeout(() =>
+                        getLogos(list, destination, callback), 100);
                 }
             })
             .catch(error => {
                 console.error(`Cannot get URL "${task.url}: ${error}`);
-                setTimeout(() => getLogos(list, destination, callback), 100);
+                setTimeout(() =>
+                    getLogos(list, destination, callback), 100);
             });
     }
 }
 
 function createRepo(done) {
-    const stable     = require(__dirname + '/../sources-dist-stable.json');
-    const packStable = Object.assign({}, require(__dirname + '/packageProd.json'));
+    const stable     = require(`${__dirname}/../sources-dist-stable.json`);
+    const packStable = Object.assign({}, require(`${__dirname}/packageProd.json`));
 
     // update versions
 
@@ -46,19 +48,19 @@ function createRepo(done) {
         'node-gyp': '*'
     };
 
-    Object.keys(stable).forEach(a => packStable.dependencies['iobroker.' + a] = stable[a].version);
+    Object.keys(stable).forEach(a => packStable.dependencies[`iobroker.${a}`] = stable[a].version);
 
-    if (!fs.existsSync(__dirname + '/public')) {
-        fs.mkdirSync(__dirname + '/public');
+    if (!fs.existsSync(`${__dirname}/public`)) {
+        fs.mkdirSync(`${__dirname}/public`);
     }
-    if (!fs.existsSync(__dirname + '/ioBroker')) {
-        fs.mkdirSync(__dirname + '/ioBroker');
+    if (!fs.existsSync(`${__dirname}/ioBroker`)) {
+        fs.mkdirSync(`${__dirname}/ioBroker`);
     }
 
-    fs.writeFileSync(__dirname + '/public/sources-dist-stable.json', JSON.stringify(stable, null, 2));
-    fs.writeFileSync(__dirname + '/ioBroker/package-stable.json',    JSON.stringify(packStable, null, 2));
+    fs.writeFileSync(`${__dirname}/public/sources-dist-stable.json`, JSON.stringify(stable, null, 2));
+    fs.writeFileSync(`${__dirname}/ioBroker/package-stable.json`,    JSON.stringify(packStable, null, 2));
 
-    tools.getRepositoryFile(__dirname + '/public/sources-dist-stable.json', (err, data) => {
+    tools.getRepositoryFile(`${__dirname}/public/sources-dist-stable.json`, (err, data) => {
         if (err) {
             console.error(err);
             process.exit(1);
@@ -74,13 +76,13 @@ function createRepo(done) {
         }
 
 
-        if (!fs.existsSync(__dirname + '/public/imgs')) {
-            fs.mkdirSync(__dirname + '/public/imgs');
+        if (!fs.existsSync(`${__dirname}/public/imgs`)) {
+            fs.mkdirSync(`${__dirname}/public/imgs`);
         }
 
         console.log('Get images...');
-        getLogos(list, __dirname + '/public/imgs/', () => {
-            fs.writeFileSync(__dirname + '/public/sources-dist-stable.json', JSON.stringify(data, null, 2));
+        getLogos(list, `${__dirname}/public/imgs/`, () => {
+            fs.writeFileSync(`${__dirname}/public/sources-dist-stable.json`, JSON.stringify(data, null, 2));
             done();
         });
     });
@@ -88,7 +90,7 @@ function createRepo(done) {
 
 function callInstall(done) {
     exec('npm i --production --ignore-scripts', {
-        cwd: __dirname + '/ioBroker'
+        cwd: `${__dirname}/ioBroker`
     }, err => {
         if (err) {
             console.error(err);
@@ -133,11 +135,11 @@ function activateLocalNpm(done) {
                 remote: 'https://registry.npmjs.org',
                 remoteSkim: 'https://replicate.npmjs.com',
                 url: 'http://127.0.0.1:5080',
-                directory: __dirname + '/db'
+                directory: `${__dirname}/db`
             });
 
             console.log('install all latest packages...');
-            fs.writeFileSync(__dirname + '/ioBroker/package.json', fs.readFileSync(__dirname + '/ioBroker/package-stable.json'));
+            fs.writeFileSync(`${__dirname}/ioBroker/package.json`, fs.readFileSync(`${__dirname}/ioBroker/package-stable.json`));
             callInstall(() => {
                 // work with result
                 console.log('npm set registry remote...');
@@ -161,13 +163,11 @@ gulp.task('activateLocalNpmOnly', activateLocalNpm);
 
 gulp.task('createRepoOnly', createRepo);
 
-gulp.task('0-clean', function () {
-    return del([
-        'db/**/*',
-        'ioBroker/**/*',
-        'public/**/*'
-    ]);
-});
+gulp.task('0-clean', () => del([
+    'db/**/*',
+    'ioBroker/**/*',
+    'public/**/*'
+]));
 
 gulp.task('1-createRepo', ['0-clean'], createRepo);
 
