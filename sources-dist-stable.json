@@ -597,8 +597,8 @@
     "version": "1.0.0"
   },
   "fitbit-fitness": {
-    "meta": "https://raw.githubusercontent.com/Chris-1965/ioBroker.fitbit-fitness/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Chris-1965/ioBroker.fitbit-fitness/main/admin/fitbit-fitness.png",
+    "meta": "https://raw.githubusercontent.com/Chris-656/ioBroker.fitbit-fitness/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Chris-656/ioBroker.fitbit-fitness/main/admin/fitbit-fitness.png",
     "type": "health",
     "version": "0.4.8"
   },
@@ -903,10 +903,10 @@
     "version": "2.0.0"
   },
   "huum-sauna": {
-    "meta": "https://raw.githubusercontent.com/Chris-1965/ioBroker.huum-sauna/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Chris-1965/ioBroker.huum-sauna/main/admin/huum-sauna.png",
+    "meta": "https://raw.githubusercontent.com/Chris-656/ioBroker.huum-sauna/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Chris-656/ioBroker.huum-sauna/main/admin/huum-sauna.png",
     "type": "climate-control",
-    "version": "0.4.2"
+    "version": "0.4.4"
   },
   "i2c": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.i2c/master/io-package.json",
