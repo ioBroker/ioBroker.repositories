@@ -2134,7 +2134,7 @@
   "solarmanpv": {
     "meta": "https://raw.githubusercontent.com/raschy/ioBroker.solarmanpv/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/raschy/ioBroker.solarmanpv/main/admin/solarmanpv.png",
-    "type": "iot-systems",
+    "type": "energy",
     "version": "0.2.2"
   },
   "solarviewdatareader": {
