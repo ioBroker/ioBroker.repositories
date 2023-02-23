@@ -1230,6 +1230,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.material/master/admin/material.png",
     "type": "visualization"
   },
+  "nctalk": {
+    "meta": "https://raw.githubusercontent.com/jjqoie/ioBroker.nctalk/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/jjqoie/ioBroker.nctalk/main/admin/nctalk.png",
+    "type": "messaging"
+  },
   "matrix-org": {
     "meta": "https://raw.githubusercontent.com/oelison/ioBroker.matrix-org/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/oelison/ioBroker.matrix-org/main/admin/matrix-logo.png",
