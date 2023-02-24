@@ -1145,14 +1145,14 @@
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/admin/lifx_logo.png",
     "type": "lighting"
   },
-  "lightify": {
-    "meta": "https://raw.githubusercontent.com/soef/ioBroker.lightify/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/soef/ioBroker.lightify/master/admin/lightify.png",
-    "type": "lighting"
-  },
   "lightcontrol": {
     "meta": "https://raw.githubusercontent.com/schmakus/ioBroker.lightcontrol/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmakus/ioBroker.lightcontrol/main/admin/lightcontrol.png",
+    "type": "lighting"
+  },
+  "lightify": {
+    "meta": "https://raw.githubusercontent.com/soef/ioBroker.lightify/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/soef/ioBroker.lightify/master/admin/lightify.png",
     "type": "lighting"
   },
   "link": {
@@ -1337,15 +1337,15 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mihome/master/admin/mihome.png",
     "type": "iot-systems"
   },
-  "mihome-cloud": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.mihome-cloud/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.mihome-cloud/master/admin/mihome-cloud.png",
-    "type": "iot-systems"
-  },
   "mihome-airpurifier": {
     "meta": "https://raw.githubusercontent.com/JoJ123/ioBroker.mihome-airpurifier/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/JoJ123/ioBroker.mihome-airpurifier/master/admin/mihome-airpurifier.png",
     "type": "climate-control"
+  },
+  "mihome-cloud": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.mihome-cloud/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.mihome-cloud/master/admin/mihome-cloud.png",
+    "type": "iot-systems"
   },
   "mihome-lamp": {
     "meta": "https://raw.githubusercontent.com/MeisterTR/ioBroker.mihome-lamp/master/io-package.json",
@@ -1952,6 +1952,11 @@
     "icon": "https://raw.githubusercontent.com/Rintrium/ioBroker.selverf/master/admin/selverf.png",
     "type": "iot-systems"
   },
+  "semp": {
+    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.semp/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.semp/master/admin/semp.png",
+    "type": "energy"
+  },
   "senec": {
     "meta": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/admin/senec.png",
@@ -1961,11 +1966,6 @@
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.sensebox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.sensebox/master/admin/sensebox.svg?sanitize=true",
     "type": "weather"
-  },
-  "semp": {
-    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.semp/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.semp/master/admin/semp.png",
-    "type": "energy"
   },
   "seq": {
     "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.seq/master/io-package.json",
@@ -2279,6 +2279,11 @@
   "traccar": {
     "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.traccar/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.traccar/master/admin/traccar.png",
+    "type": "geoposition"
+  },
+  "tractive-gps": {
+    "meta": "https://raw.githubusercontent.com/xXBJXx/ioBroker.tractive-gps/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/xXBJXx/ioBroker.tractive-gps/main/admin/tractive-gps.png",
     "type": "geoposition"
   },
   "tradfri": {
