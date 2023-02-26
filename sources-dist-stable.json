@@ -2407,6 +2407,12 @@
     "type": "climate-control",
     "version": "1.2.0"
   },
+  "valuetrackerovertime": {
+    "meta": "https://raw.githubusercontent.com/Omega236/ioBroker.valuetrackerovertime/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Omega236/ioBroker.valuetrackerovertime/master/admin/valuetrackerovertime.png",
+    "type": "misc-data",
+    "version": "1.0.0"
+  },
   "vcard": {
     "meta": "https://raw.githubusercontent.com/hometm/ioBroker.vcard/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/hometm/ioBroker.vcard/master/admin/vcard.png",
