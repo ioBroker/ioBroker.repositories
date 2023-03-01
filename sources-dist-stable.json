@@ -722,7 +722,7 @@
     "type": "household",
     "version": "0.0.42"
   },
-    "gsmsms": {
+  "gsmsms": {
     "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.gsmsms/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.gsmsms/main/admin/gsmsms.png",
     "type": "messaging",
