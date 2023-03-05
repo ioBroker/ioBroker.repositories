@@ -1640,10 +1640,10 @@
     "version": "2.1.2"
   },
   "onvif": {
-    "meta": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/admin/onvif.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.onvif/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.onvif/master/admin/onvif.png",
     "type": "infrastructure",
-    "version": "0.4.4"
+    "version": "1.0.2"
   },
   "openhab": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.openhab/master/io-package.json",
