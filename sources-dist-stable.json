@@ -660,7 +660,7 @@
     "meta": "https://raw.githubusercontent.com/tim2zg/ioBroker.fronius-wattpilot/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/tim2zg/ioBroker.fronius-wattpilot/main/admin/fronius-wattpilot.png",
     "type": "vehicle",
-    "version": "4.5.0"
+    "version": "4.5.1"
   },
   "frontier_silicon": {
     "meta": "https://raw.githubusercontent.com/halloamt/ioBroker.frontier_silicon/master/io-package.json",
@@ -721,6 +721,12 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.gruenbeck/master/admin/gruenbeck.png",
     "type": "household",
     "version": "0.0.42"
+  },
+  "gsmsms": {
+    "meta": "https://raw.githubusercontent.com/forelleblau/ioBroker.gsmsms/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/forelleblau/ioBroker.gsmsms/main/admin/gsmsms.png",
+    "type": "messaging",
+    "version": "0.0.4"
   },
   "haassohn": {
     "meta": "https://raw.githubusercontent.com/marvingrieger/ioBroker.haassohn/master/io-package.json",
@@ -1050,7 +1056,7 @@
     "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.janitza-gridvis/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.janitza-gridvis/main/admin/janitza-gridvis.png",
     "type": "energy",
-    "version": "2.1.25"
+    "version": "2.1.30"
   },
   "jarvis": {
     "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.jarvis/master/io-package.json",
@@ -1289,7 +1295,7 @@
     "meta": "https://raw.githubusercontent.com/oelison/ioBroker.matrix-org/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/oelison/ioBroker.matrix-org/main/admin/matrix-logo.png",
     "type": "messaging",
-    "version": "0.1.4"
+    "version": "0.1.5"
   },
   "maveo": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.maveo/master/io-package.json",
@@ -1367,7 +1373,7 @@
     "meta": "https://raw.githubusercontent.com/jack-blackson/ioBroker.meteoalarm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/jack-blackson/ioBroker.meteoalarm/master/admin/meteoalarm.png",
     "type": "weather",
-    "version": "2.3.1"
+    "version": "2.3.3"
   },
   "micronova": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.micronova/master/io-package.json",
@@ -1421,7 +1427,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mihome-vacuum/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mihome-vacuum/master/admin/mihome-vacuum.png",
     "type": "household",
-    "version": "3.8.8"
+    "version": "3.9.5"
   },
   "mikrotik": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mikrotik/master/io-package.json",
@@ -1634,10 +1640,10 @@
     "version": "2.1.2"
   },
   "onvif": {
-    "meta": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Haba1234/ioBroker.onvif/master/admin/onvif.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.onvif/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.onvif/master/admin/onvif.png",
     "type": "infrastructure",
-    "version": "0.4.4"
+    "version": "1.0.2"
   },
   "openhab": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.openhab/master/io-package.json",
@@ -2406,6 +2412,12 @@
     "icon": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/admin/valloxmv.png",
     "type": "climate-control",
     "version": "1.2.0"
+  },
+  "valuetrackerovertime": {
+    "meta": "https://raw.githubusercontent.com/Omega236/ioBroker.valuetrackerovertime/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Omega236/ioBroker.valuetrackerovertime/master/admin/valuetrackerovertime.png",
+    "type": "misc-data",
+    "version": "1.0.0"
   },
   "vcard": {
     "meta": "https://raw.githubusercontent.com/hometm/ioBroker.vcard/master/io-package.json",
