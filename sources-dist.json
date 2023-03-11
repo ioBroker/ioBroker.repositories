@@ -2661,11 +2661,6 @@
     "icon": "https://raw.githubusercontent.com/Mic-M/ioBroker.windows-control/master/admin/windows-control.png",
     "type": "hardware"
   },
-  "winsipbrowser": {
-    "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.winsipbrowser/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Bettman66/ioBroker.winsipbrowser/master/admin/winsipbrowser.png",
-    "type": "utility"
-  },
   "wiobrowser": {
     "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.wiobrowser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Bettman66/ioBroker.wiobrowser/master/admin/wiobrowser.png",
