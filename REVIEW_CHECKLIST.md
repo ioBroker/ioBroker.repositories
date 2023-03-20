@@ -28,7 +28,17 @@ This file contains a checklist for adapter reviews
 * native fields are defined - and match to `index_m.html`?
 * password fields? encrypted? `protectedNative/encryptedNative` used?
 * rough check/fly over rest
-* check that `port` attribute called really as `port` in code. The same is for `bind`. 
+  * check that `port` attribute called really as `port` in code. The same is for all web settings:
+  - `bind` - IPv4 or IPv6 bind address, 
+  - `v6bind` - explicit IPv6 bind address, 
+  - `secure` - if HTTPS used, 
+  - `certPrivate` - name of private certificate, 
+  - `certPublic` - name of public certificate, 
+  - `certChained` - name of chained certificate,
+  - `leEnabled` - (deprecated) - if usage of letsencrypt enabled,
+  - `leUpdate` - (deprecated) - if letsencrypt certificate should be updated,
+  - `leCheckPort` - (deprecated) - port for letsencrypt check, 
+  - `leCollection` - collection name of letsencrypt certificates from acme adapter. Could be `true` to use all collections, `false` - to disable letsencrypt certificates, or specific collection name. 
 
 ## Check directories and files
 * widget exists - is real widget in? `io-package.json` correct for it?
