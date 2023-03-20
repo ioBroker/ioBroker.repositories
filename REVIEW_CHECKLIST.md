@@ -17,7 +17,7 @@ This file contains a checklist for adapter reviews
 * If Sentry is used a note is included on top of Readme
 
 ## Check package.json
-* notice `adapter-cor` dependency and check `js.controller` dependency in `io-package.json`
+* notice `adapter-core` dependency and check `js.controller` dependency in `io-package.json`
 * check that minimum engine version is specified in `README.md` contains any info on minimum `node.js` version
 * rough check/fly over
 
