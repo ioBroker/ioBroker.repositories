@@ -512,12 +512,6 @@
     "type": "climate-control",
     "version": "1.26.0"
   },
-  "emporia": {
-    "meta": "https://raw.githubusercontent.com/Chris-656/ioBroker.emporia/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Chris-656/ioBroker.emporia/main/admin/emporia.png",
-    "type": "energy",
-    "version": "0.0.10"
-  },
   "energymanager": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/admin/energymanager.png",
