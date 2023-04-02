@@ -2425,6 +2425,12 @@
     "type": "misc-data",
     "version": "0.0.9"
   },
+  "vds2465-server": {
+    "meta": "https://raw.githubusercontent.com/Hirsch-DE/ioBroker.vds2465-server/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Hirsch-DE/ioBroker.vds2465-server/main/admin/vds2465-server.png",
+    "type": "alarm",
+    "version": "0.1.10"
+  },
   "velux": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.velux/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.velux/master/admin/velux.png",
