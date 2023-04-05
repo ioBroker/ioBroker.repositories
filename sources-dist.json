@@ -1186,8 +1186,8 @@
     "type": "hardware"
   },
   "logparser": {
-    "meta": "https://raw.githubusercontent.com/Mic-M/ioBroker.logparser/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Mic-M/ioBroker.logparser/master/admin/logparser.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.logparser/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.logparser/master/admin/logparser.png",
     "type": "logic"
   },
   "loqed": {
