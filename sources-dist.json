@@ -2626,6 +2626,11 @@
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.web-speedy/main/admin/web-speedy.png",
     "type": "network"
   },
+  "webcal": {
+    "meta": "https://raw.githubusercontent.com/dirkhe/ioBroker.webcal/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/dirkhe/ioBroker.webcal/master/admin/webcal.png",
+    "type": "date-and-time"
+  },  
   "weblogin": {
     "meta": "https://raw.githubusercontent.com/Vertumnus/ioBroker.weblogin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Vertumnus/ioBroker.weblogin/master/admin/logo-login.png",
