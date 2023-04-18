@@ -153,8 +153,8 @@
     "version": "2.6.16"
   },
   "beckhoff": {
-    "meta": "https://raw.githubusercontent.com/dkleber89/ioBroker.beckhoff/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/dkleber89/ioBroker.beckhoff/master/admin/beckhoff.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.beckhoff/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.beckhoff/master/admin/beckhoff.png",
     "type": "hardware",
     "version": "1.5.2"
   },
