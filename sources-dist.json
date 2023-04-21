@@ -299,6 +299,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.comfoair/master/admin/comfoair.png",
     "type": "climate-control"
   },
+  "consumption": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.consumption/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.consumption/master/admin/consumption.png",
+    "type": "energy"
+  },
   "contact": {
     "meta": "https://raw.githubusercontent.com/WLAN-Kabel/ioBroker.contact/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/WLAN-Kabel/ioBroker.contact/master/admin/contact.png",
