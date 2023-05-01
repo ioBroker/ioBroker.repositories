@@ -4,6 +4,15 @@ const fs     = require('fs');
 const axios  = require('axios');
 let latest;
 let stable;
+let axiosCounter = 0;
+
+async function request(url) {
+    axiosCounter++;
+    if (axiosCounter % 5) {
+        await new Promise(resolve => setTimeout(resolve, 300));
+    }
+    return axios(url);
+}
 
 const reservedAdapterNames = [
     'config',
@@ -67,7 +76,7 @@ describe('Test Repository', () => {
             if (latest.hasOwnProperty(id) && id !== '_repoInfo') {
                 expect(id).to.be.equal(id.toLowerCase());
                 if (latest[id].meta && latest[id].meta.match(/io-package\.json$/)) {
-                    const response = await axios(latest[id].meta);
+                    const response = await request(latest[id].meta);
                     console.log(`[${i}/${len}] Check ${id}`);
                     const pack = response.data;
                     if (pack && pack.common && pack.common.type !== latest[id].type) {
@@ -202,7 +211,7 @@ describe('Test Repository', () => {
 
             try {
                 if (!cache[repo.meta]) {
-                    const response = await axios(repo.meta);
+                    const response = await request(repo.meta);
                     cache[repo.meta] = response.data;
                 }
                 const res = cache[repo.meta];
@@ -219,7 +228,7 @@ describe('Test Repository', () => {
             }
             if (repo.icon && !cache[repo.icon]) {
                 try {
-                    await axios(repo.icon);
+                    await request(repo.icon);
                     cache[repo.icon] = true;
                 } catch(err){
                     console.error(`Icon of adapter ${id}: ${repo.icon} not gettable`);
@@ -237,10 +246,10 @@ describe('Test Repository', () => {
     it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async () => {
         latest = latest || require('../sources-dist.json');
         await checkRepos('latest', latest);
-    }).timeout(480000);
+    }).timeout(600000);
 
     it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async () => {
         stable = stable || require('../sources-dist-stable.json');
         await checkRepos('stable', stable)
-    }).timeout(480000);
+    }).timeout(600000);
 });
