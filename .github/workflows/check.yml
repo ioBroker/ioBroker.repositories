@@ -5,6 +5,11 @@ on:
     types: [opened, edited, ready_for_review, reopened]
   issue_comment:
     types: [created]
+
+concurrency:
+  group: check-${{ github.head_ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
     runs-on: ubuntu-latest
