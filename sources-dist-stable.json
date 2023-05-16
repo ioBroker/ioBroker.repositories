@@ -1201,6 +1201,12 @@
     "type": "lighting",
     "version": "0.1.1"
   },
+   "lightcontrol": {
+    "meta": "https://raw.githubusercontent.com/Schmakus/ioBroker.lightcontrol/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Schmakus/ioBroker.lightcontrol/main/admin/lightcontrol.png",
+    "type": "lighting",
+    "version": "0.2.16"
+  },
   "lightify": {
     "meta": "https://raw.githubusercontent.com/soef/ioBroker.lightify/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/soef/ioBroker.lightify/master/admin/lightify.png",
