@@ -1827,6 +1827,11 @@
     "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.radar2/master/admin/radar2.png",
     "type": "network"
   },
+  "radar-trap": {
+    "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.radar-trap/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Steiger04/ioBroker.radar-trap/main/admin/radar-trap.png",
+    "type": "vehicle"
+  },
   "radiohead": {
     "meta": "https://raw.githubusercontent.com/crycode-de/ioBroker.radiohead/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/crycode-de/ioBroker.radiohead/master/admin/radiohead.png",
