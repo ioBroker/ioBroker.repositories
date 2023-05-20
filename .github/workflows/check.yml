@@ -6,9 +6,10 @@ on:
   issue_comment:
     types: [created]
 
-concurrency:
-  group: check-${{ github.head_ref }}
-  cancel-in-progress: true
+# concurrent runs are required if more then one PR get commented with RE-CHECK! at same time
+# concurrency:
+#  group: check-${{ github.head_ref }}
+#  cancel-in-progress: true
 
 jobs:
   check:
