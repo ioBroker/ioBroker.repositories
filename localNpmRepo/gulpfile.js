@@ -1,7 +1,6 @@
 const gulp  = require('gulp');
 const fs    = require('fs');
 const exec  = require('child_process').exec;
-const del   = require('del');
 const axios = require('axios');
 
 if (!fs.existsSync(`${__dirname}/tools.js`)) {
@@ -9,6 +8,26 @@ if (!fs.existsSync(`${__dirname}/tools.js`)) {
 }
 
 const tools = require(`${__dirname}/tools.js`);
+
+function deleteFoldersRecursive(path, exceptions) {
+    if (fs.existsSync(path)) {
+        const files = fs.readdirSync(path);
+        for (const file of files) {
+            const curPath = `${path}/${file}`;
+            if (exceptions && exceptions.find(e => curPath.endsWith(e))) {
+                continue;
+            }
+
+            const stat = fs.statSync(curPath);
+            if (stat.isDirectory()) {
+                deleteFoldersRecursive(curPath);
+                fs.rmdirSync(curPath);
+            } else {
+                fs.unlinkSync(curPath);
+            }
+        }
+    }
+}
 
 function getLogos(list, destination, callback) {
     if (!list || !list.length) {
@@ -163,11 +182,12 @@ gulp.task('activateLocalNpmOnly', activateLocalNpm);
 
 gulp.task('createRepoOnly', createRepo);
 
-gulp.task('0-clean', () => del([
-    'db/**/*',
-    'ioBroker/**/*',
-    'public/**/*'
-]));
+gulp.task('0-clean', done => {
+    deleteFoldersRecursive(`${__dirname}/db`);
+    deleteFoldersRecursive(`${__dirname}/ioBroker`);
+    deleteFoldersRecursive(`${__dirname}/public`);
+    done();
+});
 
 gulp.task('1-createRepo', ['0-clean'], createRepo);
 
