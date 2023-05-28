@@ -16,6 +16,13 @@ This is GitHub project for storage of latest and stable repositories.
 4. Push a commit with the changes to `sources-dist.json`
 5. Create a PR
 
+## Add a new adapter to the latest repository (web frontend)
+1. go to iobroker.dev
+2. log in with github
+3. open the new adapter
+4. click on manage
+5. click on action "ADD TO LATEST"
+
 ## Requirements for adapter to get added to the latest repository
 *Already required for latest repository*
 
