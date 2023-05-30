@@ -3,8 +3,8 @@ name: Check archived repostories
 on:
   schedule:
     # * is a special character in YAML, so you have to quote this string
-    # every day
-    - cron:  '4/15 * * * *'
+    # every sunday at 3:33
+    - cron:  '33 3 * * 0'
 
 jobs:
   check:
