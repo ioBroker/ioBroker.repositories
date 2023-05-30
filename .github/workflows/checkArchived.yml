@@ -15,6 +15,6 @@ jobs:
         with:
           node-version: 18
       - run: npm i
-      - run: npm run checkArchive
+      - run: npm run checkArchived
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
