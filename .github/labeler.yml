@@ -2,5 +2,5 @@
 # for documentation see https://github.com/actions/labeler
 
 # add label stable to stable PRs
-stable:
-- any: ['sources-dist-stable.js']
+Stable:
+- any: ['sources-dist-stable.json']
