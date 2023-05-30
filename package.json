@@ -23,7 +23,7 @@
     "addToStable": "node lib/scripts.js addToStable",
     "updateStable": "node lib/scripts.js updateStable",
     "check": "node lib/check.js",
-    "checkArchive": "node lib/checkArchive.js",
+    "checkArchived": "node lib/checkArchived.js",
     "stable": "node lib/readyForStable.js"
   },
   "bugs": {
