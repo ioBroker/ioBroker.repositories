@@ -174,11 +174,6 @@
     "icon": "https://raw.githubusercontent.com/ka-vaNu/ioBroker.blebox/master/admin/blebox.png",
     "type": "iot-systems"
   },
-  "blink4home": {
-    "meta": "https://raw.githubusercontent.com/Flashy-GER/ioBroker.blink4home/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Flashy-GER/ioBroker.blink4home/master/admin/blink4home.png",
-    "type": "alarm"
-  },
   "bluelink": {
     "meta": "https://raw.githubusercontent.com/Newan/ioBroker.bluelink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Newan/ioBroker.bluelink/master/admin/bluelink.png",
@@ -188,11 +183,6 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.bmw/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.bmw/master/admin/bmw.png",
     "type": "vehicle"
-  },
-  "boblight": {
-    "meta": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.boblight/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ruhigundrelaxed/ioBroker.boblight/master/admin/boblight.png",
-    "type": "lighting"
   },
   "bosch-ebike": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.bosch-ebike/master/io-package.json",
@@ -302,7 +292,7 @@
   "consumption": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.consumption/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.consumption/master/admin/consumption.png",
-    "type": "energy"
+    "type": "logic"
   },
   "contact": {
     "meta": "https://raw.githubusercontent.com/WLAN-Kabel/ioBroker.contact/master/io-package.json",
@@ -452,7 +442,7 @@
   "ecoflow": {
     "meta": "https://raw.githubusercontent.com/Newan/ioBroker.ecoflow/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Newan/ioBroker.ecoflow/main/admin/ecoflow.png",
-    "type": "metering"
+    "type": "energy"
   },
   "ecovacs-deebot": {
     "meta": "https://raw.githubusercontent.com/mrbungle64/ioBroker.ecovacs-deebot/master/io-package.json",
@@ -1161,8 +1151,8 @@
     "type": "lighting"
   },
   "lightcontrol": {
-    "meta": "https://raw.githubusercontent.com/schmakus/ioBroker.lightcontrol/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/schmakus/ioBroker.lightcontrol/main/admin/lightcontrol.png",
+    "meta": "https://raw.githubusercontent.com/Schmakus/ioBroker.lightcontrol/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Schmakus/ioBroker.lightcontrol/main/admin/lightcontrol.png",
     "type": "lighting"
   },
   "link": {
@@ -1271,8 +1261,8 @@
     "type": "lighting"
   },
   "meater": {
-    "meta": "https://raw.githubusercontent.com/Standarduser/ioBroker.meater/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Standarduser/ioBroker.meater/master/admin/meater.png",
+    "meta": "https://raw.githubusercontent.com/Standarduser/ioBroker.meater/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Standarduser/ioBroker.meater/main/admin/meater.png",
     "type": "household"
   },
   "megad": {
@@ -1391,6 +1381,11 @@
     "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.milight-smart-light/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Steiger04/ioBroker.milight-smart-light/master/admin/milight-smart-light.png",
     "type": "lighting"
+  },
+  "minuaru": {
+    "meta": "https://raw.githubusercontent.com/minukodu/ioBroker.minuaru/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/minukodu/ioBroker.minuaru/main/admin/minuaru.png",
+    "type": "misc-data"
   },
   "minuvis": {
     "meta": "https://raw.githubusercontent.com/minukodu/ioBroker.minuvis/master/io-package.json",
@@ -1846,6 +1841,11 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/admin/renault.png",
     "type": "vehicle"
+  },
+  "residents": {
+    "meta": "https://raw.githubusercontent.com/jpawlowski/ioBroker.residents/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/jpawlowski/ioBroker.residents/main/admin/residents.svg",
+    "type": "logic"
   },
   "resol": {
     "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.resol/master/io-package.json",
@@ -2742,8 +2742,8 @@
     "type": "iot-systems"
   },
   "xs1": {
-    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.xs1/master/admin/xs1.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.xs1/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.xs1/master/admin/xs1.png",
     "type": "iot-systems"
   },
   "xterm": {
