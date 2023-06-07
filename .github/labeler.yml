@@ -4,6 +4,7 @@
 # add label stable to stable PRs
 Stable:
 - any: ['sources-dist-stable.json']
+- all: ['!sources-dist.json']
 
 CHANGES-BOTH-REPOSITORIES:
 - any: ['sources-dist.json']
