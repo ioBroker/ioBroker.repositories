@@ -24,6 +24,7 @@
     "updateStable": "node lib/scripts.js updateStable",
     "check": "node lib/check.js",
     "checkArchived": "node lib/checkArchived.js",
+    "checkNpm": "node lib/checkNpm.js",
     "stable": "node lib/readyForStable.js"
   },
   "bugs": {
