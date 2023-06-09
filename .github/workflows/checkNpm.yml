@@ -4,7 +4,7 @@ on:
   schedule:
     # * is a special character in YAML, so you have to quote this string
     # every sunday at 3:33
-    - cron:  '33 3 * * 0'
+    - cron:  '35 21 * * 0'
 
 jobs:
   check-npms:
