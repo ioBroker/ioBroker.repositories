@@ -22,4 +22,4 @@ jobs:
       - run: npm i
       - run: npm run setLabels
         env:
-          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
+          OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
