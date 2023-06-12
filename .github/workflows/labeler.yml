@@ -15,6 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: node lib/setLabels.js
+      - run: npm i
+      - run: npm run setLabels
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
