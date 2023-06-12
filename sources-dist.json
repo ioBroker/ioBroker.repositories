@@ -684,6 +684,11 @@
     "icon": "https://raw.githubusercontent.com/Vertumnus/ioBroker.googleauth/master/admin/logo-google.svg",
     "type": "utility"
   },
+  "govee-app": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.govee-app/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.govee-app/master/admin/govee-app.png",
+    "type": "lighting"
+  },
   "growatt": {
     "meta": "https://raw.githubusercontent.com/PLCHome/ioBroker.growatt/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PLCHome/ioBroker.growatt/master/admin/growatt.png",
