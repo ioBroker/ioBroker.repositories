@@ -5,7 +5,10 @@ name: setLabels
 on:
 - pull_request
   types: [opened, edited, reopened]
-
+  
+  issue_comment:
+    types: [created]
+    
 jobs:
   setLabels:
 
