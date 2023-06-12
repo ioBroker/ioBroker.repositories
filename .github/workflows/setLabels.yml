@@ -2,10 +2,10 @@
 # paths that are modified in the pull request.
 
 name: setLabels
+
 on:
-- pull_request
-  types: [opened, edited, reopened]
-  
+  pull_request:
+    types: [opened, edited, ready_for_review, reopened]
   issue_comment:
     types: [created]
     
