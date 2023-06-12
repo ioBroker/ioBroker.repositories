@@ -4,6 +4,7 @@
 name: setLabels
 on:
 - pull_request
+  types: [opened, edited, reopened]
 
 jobs:
   setLabels:
