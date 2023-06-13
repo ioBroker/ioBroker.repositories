@@ -3,6 +3,12 @@
 
 name: Set labels
 
+#
+# WARNING: 
+#    ** Do NOT run untrusted code when using pull_request_target **
+# pull_request_target is needed as pull_request does not provide secrets and so no 
+# labeling of PR is possible.
+#
 on:
   pull_request_target:
     types: [opened, edited, ready_for_review, reopened, labeled, unlabeled]
