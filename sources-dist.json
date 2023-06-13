@@ -1,4 +1,9 @@
 {
+  "jsonconfig-demo": {
+    "meta": "https://raw.githubusercontent.com/mcm1957/ioBroker.jsonconfig-demo/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mcm1957/ioBroker.jsonconfig-demo/master/admin/accuweather.png",
+    "type": "weather"
+  },
   "accuweather": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/admin/accuweather.png",
