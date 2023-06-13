@@ -5,9 +5,9 @@ name: Set labels
 
 on:
   pull_request:
-    types: [opened, edited, ready_for_review, reopened]
+    types: [opened, edited, ready_for_review, reopened, labeled, unlabeled]
   issue_comment:
-    types: [created]
+    types: [created, edited]
     
 jobs:
   setLabels:
