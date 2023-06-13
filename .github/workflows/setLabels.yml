@@ -4,7 +4,7 @@
 name: Set labels
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, edited, ready_for_review, reopened, labeled, unlabeled]
   issue_comment:
     types: [created, edited]
