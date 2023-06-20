@@ -698,6 +698,12 @@
     "type": "geoposition",
     "version": "1.2.4"
   },
+  "gigaset-elements": {
+    "meta": "https://raw.githubusercontent.com/matthsc/ioBroker.gigaset-elements/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/matthsc/ioBroker.gigaset-elements/main/admin/gigaset-elements.png",
+    "type": "alarm",
+    "version": "0.3.0"
+  },
   "go-e": {
     "meta": "https://raw.githubusercontent.com/MK-2001/ioBroker.go-e/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MK-2001/ioBroker.go-e/master/admin/go-echarger.png",
