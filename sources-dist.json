@@ -154,11 +154,6 @@
     "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.bidirectional-counter/main/admin/bidirectional-counter.png",
     "type": "misc-data"
   },
-  "binance": {
-    "meta": "https://raw.githubusercontent.com/Kartax/ioBroker.binance/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Kartax/ioBroker.binance/master/admin/binance.png",
-    "type": "misc-data"
-  },
   "birthdays": {
     "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.birthdays/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.birthdays/master/admin/birthdays.png",
@@ -390,8 +385,8 @@
     "type": "alarm"
   },
   "doorbird": {
-    "meta": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.doorbird/master/admin/doorbird.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.doorbird/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.doorbird/master/admin/doorbird.png",
     "type": "iot-systems"
   },
   "doorio": {

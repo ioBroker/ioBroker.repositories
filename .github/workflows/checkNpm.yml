@@ -1,0 +1,20 @@
+name: Check npm access
+
+on:
+  schedule:
+    # * is a special character in YAML, so you have to quote this string
+    # daily at 2:2
+    - cron:  '22 2 * * *'
+
+jobs:
+  check-npms:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm i
+      - run: npm run checkNpm
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
