@@ -1933,6 +1933,12 @@
     "type": "vehicle",
     "version": "0.0.15"
   },
+  "residents": {
+    "meta": "https://raw.githubusercontent.com/jpawlowski/ioBroker.residents/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/jpawlowski/ioBroker.residents/main/admin/residents.svg",
+    "type": "logic",
+    "version": "0.1.0"
+  },
   "resol": {
     "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.resol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/grizzelbee/ioBroker.resol/master/admin/resol.svg",
