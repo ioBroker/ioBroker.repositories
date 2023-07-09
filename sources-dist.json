@@ -1,6 +1,6 @@
 {
   "accuweather": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/io-package.json",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/io-package.json",rct
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/admin/accuweather.png",
     "type": "weather"
   },
@@ -1828,8 +1828,8 @@
     "type": "garden"
   },
   "rct": {
-    "meta": "https://raw.githubusercontent.com/lauff/ioBroker.rct/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/lauff/ioBroker.rct/main/admin/rct-logo.square.png",
+    "meta": "https://raw.githubusercontent.com/aruttkamp/ioBroker.rct/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/aruttkamp/ioBroker.rct/main/admin/rct-logo.square.png",
     "type": "energy"
   },
   "renault": {
