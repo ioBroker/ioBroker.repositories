@@ -284,6 +284,12 @@
     "type": "energy",
     "version": "1.4.0"
   },
+  "cameras": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cameras/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cameras/master/admin/cameras.png",
+    "type": "hardware",
+    "version": "1.1.1"
+  },
   "canbus": {
     "meta": "https://raw.githubusercontent.com/crycode-de/ioBroker.canbus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/crycode-de/ioBroker.canbus/master/admin/canbus.png",
