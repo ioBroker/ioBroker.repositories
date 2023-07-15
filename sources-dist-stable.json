@@ -146,12 +146,6 @@
     "type": "general",
     "version": "2.4.12"
   },
-  "bayernluft": {
-    "meta": "https://raw.githubusercontent.com/Marco15453/ioBroker.bayernluft/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Marco15453/ioBroker.bayernluft/main/admin/bayernluft.png",
-    "type": "climate-control",
-    "version": "1.2.2"
-  },
   "beckhoff": {
     "meta": "https://raw.githubusercontent.com/dkleber89/ioBroker.beckhoff/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/dkleber89/ioBroker.beckhoff/master/admin/beckhoff.png",
