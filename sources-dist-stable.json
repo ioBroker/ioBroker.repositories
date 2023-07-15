@@ -554,6 +554,12 @@
     "type": "energy",
     "version": "0.0.10"
   },  
+  "eventlist": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.eventlist/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.eventlist/master/admin/eventlist.png",
+    "type": "visualization",
+    "version": "1.2.3"
+  },  
   "exchangerates": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.exchangerates/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.exchangerates/master/admin/exchangerates.png",
