@@ -287,7 +287,7 @@
   "cameras": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cameras/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cameras/master/admin/cameras.png",
-    "type": "hardware",
+    "type": "multimedia",
     "version": "1.1.1"
   },
   "canbus": {
