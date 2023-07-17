@@ -2242,6 +2242,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.text2command/master/admin/text2command.png",
     "type": "logic"
   },
+  "tibberlink": {
+    "meta": "https://raw.githubusercontent.com/hombach/ioBroker.tibberlink/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/hombach/ioBroker.tibberlink/master/admin/tibberlink.png",
+    "type": "energy"
+  },
   "tileboard": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.tileboard/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.tileboard/master/admin/tileboard.png",
