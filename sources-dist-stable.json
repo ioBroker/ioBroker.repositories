@@ -553,7 +553,7 @@
     "icon": "https://raw.githubusercontent.com/Newan/ioBroker.evcc/main/admin/evcc.png",
     "type": "energy",
     "version": "0.0.10"
-  },  
+  },
   "exchangerates": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.exchangerates/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.exchangerates/master/admin/exchangerates.png",
@@ -2118,6 +2118,12 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/admin/simple-api.png",
     "type": "communication",
     "version": "2.7.2"
+  },
+  "sma-em": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sma-em/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sma-em/master/admin/sma-em.png",
+    "type": "energy",
+    "version": "0.7.0"
   },
   "smappee": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.smappee/master/io-package.json",
