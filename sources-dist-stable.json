@@ -497,7 +497,7 @@
   "elero-usb-transmitter": {
     "meta": "https://raw.githubusercontent.com/marc2016/ioBroker.elero-usb-transmitter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/marc2016/ioBroker.elero-usb-transmitter/master/admin/elero-usb-transmitter.png",
-    "type": "iot-systems"
+    "type": "iot-systems",
     "version": "0.5.2"
   },
   "email": {
