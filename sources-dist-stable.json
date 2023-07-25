@@ -422,6 +422,12 @@
     "type": "alarm",
     "version": "0.2.0"
   },
+  "doorbird": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.doorbird/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.doorbird/master/admin/doorbird.png",
+    "type": "iot-systems",
+    "version": "1.0.5"
+  },
   "doorio": {
     "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.doorio/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Bettman66/ioBroker.doorio/master/admin/doorio.png",
