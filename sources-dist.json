@@ -2279,6 +2279,11 @@
     "published": "2019-08-09T20:30:26.824Z",
     "versionDate": "2019-08-09T20:30:26.824Z"
   },
+  "tinymqttbroker": {
+    "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.tinymqttbroker/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.tinymqttbroker/main/admin/tinymqttbroker.png",
+    "type": "protocols"
+  },
   "tinyrx4": {
     "meta": "https://raw.githubusercontent.com/bowao/ioBroker.tinyrx4/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/bowao/ioBroker.tinyrx4/master/admin/tinyRX4.png",
