@@ -1,0 +1,20 @@
+name: Check archived repostories
+
+on:
+  schedule:
+    # * is a special character in YAML, so you have to quote this string
+    # every sunday at 3:33
+    - cron:  '33 3 * * 0'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm i
+      - run: npm run checkArchived
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
