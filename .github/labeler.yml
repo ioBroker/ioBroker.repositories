@@ -1,6 +1,0 @@
-# config file for labeler action
-# for documentation see https://github.com/actions/labeler
-
-# add label stable to stable PRs
-Stable:
-- any: ['sources-dist-stable.json']
