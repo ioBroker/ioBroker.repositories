@@ -23,6 +23,9 @@
     "addToStable": "node lib/scripts.js addToStable",
     "updateStable": "node lib/scripts.js updateStable",
     "check": "node lib/check.js",
+    "checkArchived": "node lib/checkArchived.js",
+    "checkNpm": "node lib/checkNpm.js",
+    "setLabels": "node lib/setLabels.js",
     "stable": "node lib/readyForStable.js"
   },
   "bugs": {
@@ -42,13 +45,13 @@
     "@iobroker/repochecker": "^2.1.6",
     "axios": "^1.4.0",
     "chai": "^4.3.7",
-    "eslint": "^8.39.0",
+    "eslint": "^8.46.0",
     "gulp": "^4.0.2",
     "image-size": "^1.0.2",
     "minimist": "^1.2.8",
     "mocha": "^10.2.0",
     "node.extend": "^2.0.2",
-    "semver": "^7.5.0",
-    "unzipper": "^0.10.11"
+    "semver": "^7.5.4",
+    "unzipper": "^0.10.14"
   }
 }
