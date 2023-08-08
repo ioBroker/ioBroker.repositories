@@ -1870,7 +1870,7 @@
   "radar-trap": {
     "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.radar-trap/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Steiger04/ioBroker.radar-trap/main/admin/radar-trap.png",
-    "type": "vehicle"
+    "type": "geoposition"
   },
   "radiohead": {
     "meta": "https://raw.githubusercontent.com/crycode-de/ioBroker.radiohead/master/io-package.json",
