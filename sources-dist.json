@@ -2752,8 +2752,8 @@
     "type": "communication"
   },
   "wireguard": {
-    "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.wireguard/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/grizzelbee/ioBroker.wireguard/master/admin/wireguard.svg",
+    "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.wireguard/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/grizzelbee/ioBroker.wireguard/main/admin/wireguard.svg",
     "type": "infrastructure"
   },
   "wireless-mbus": {
