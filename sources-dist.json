@@ -2122,6 +2122,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/admin/socketio.png",
     "type": "communication"
   },
+  "solaredge": {
+    "meta": "https://raw.githubusercontent.com/92lleo/ioBroker.solaredge/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/92lleo/ioBroker.solaredge/master/admin/solaredge.png",
+    "type": "energy"
+  },
   "solarlog": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solarlog/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solarlog/master/admin/solarlog.png",
