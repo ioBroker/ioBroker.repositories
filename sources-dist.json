@@ -80,8 +80,8 @@
     "type": "hardware"
   },
   "anelhut": {
-    "meta": "https://raw.githubusercontent.com/dan1-de/ioBroker.anelhut/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/dan1-de/ioBroker.anelhut/master/admin/anelhut.png",
+    "meta": "https://raw.githubusercontent.com/dan1-de/ioBroker.anelhut/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/dan1-de/ioBroker.anelhut/main/admin/anelhut.png",
     "type": "iot-systems"
   },
   "apcups": {
@@ -2122,6 +2122,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/admin/socketio.png",
     "type": "communication"
   },
+  "solaredge": {
+    "meta": "https://raw.githubusercontent.com/92lleo/ioBroker.solaredge/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/92lleo/ioBroker.solaredge/master/admin/solaredge.png",
+    "type": "energy"
+  },
   "solarlog": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solarlog/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solarlog/master/admin/solarlog.png",
@@ -2491,6 +2496,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/admin/vis.png",
     "type": "visualization"
   },
+  "vis-2": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2/master/admin/vis-2.png",
+    "type": "visualization"
+  },
   "vis-2-widgets-energy": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-energy/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-energy/main/admin/vis-2-widgets-energy.png",
@@ -2753,7 +2763,7 @@
   },
   "wireguard": {
     "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.wireguard/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/grizzelbee/ioBroker.wireguard/main/admin/wireguard.svg",
+    "icon": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.wireguard/main/admin/wireguard.svg",
     "type": "infrastructure"
   },
   "wireless-mbus": {
