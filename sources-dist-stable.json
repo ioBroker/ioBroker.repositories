@@ -1645,6 +1645,12 @@
     "type": "logic",
     "version": "4.0.3"
   },
+  "notification-manager": {
+    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.notification-manager/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.notification-manager/main/admin/notification-manager.png",
+    "type": "utility",
+    "version": "0.1.1"
+  },
   "nsclient": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.nsclient/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.nsclient/master/admin/nsclient.png",
