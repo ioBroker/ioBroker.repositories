@@ -1767,6 +1767,11 @@
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.pi-hole/master/admin/pi-hole.png",
     "type": "network"
   },
+  "pid": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pid/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pid/master/admin/pid.png",
+    "type": "general"
+  },
   "piface": {
     "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/admin/piface.png",
