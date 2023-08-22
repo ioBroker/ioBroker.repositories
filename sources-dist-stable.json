@@ -1892,8 +1892,8 @@
     "version": "2.2.0"
   },
   "plex": {
-    "meta": "https://raw.githubusercontent.com/Zefau/ioBroker.plex/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Zefau/ioBroker.plex/master/admin/plex.jpg",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.plex/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.plex/master/admin/plex.jpg",
     "type": "multimedia",
     "version": "0.9.1"
   },
