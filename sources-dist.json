@@ -714,6 +714,11 @@
     "icon": "https://raw.githubusercontent.com/MK-2001/ioBroker.go-e/master/admin/go-echarger.png",
     "type": "vehicle"
   },
+  "google-spreadsheet": {
+    "meta": "https://raw.githubusercontent.com/ThomasPohl/ioBroker.google-spreadsheet/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ThomasPohl/ioBroker.google-spreadsheet/main/admin/google-spreadsheet.png",
+    "type": "storage"
+  },
   "googleauth": {
     "meta": "https://raw.githubusercontent.com/Vertumnus/ioBroker.googleauth/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Vertumnus/ioBroker.googleauth/master/admin/logo-google.svg",
