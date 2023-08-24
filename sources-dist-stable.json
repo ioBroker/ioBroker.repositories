@@ -1,6 +1,6 @@
 {
   "_repoInfo": {
-    "stable": true,
+    "stable": true,daykin
     "name": {
       "en": "Official stable repository",
       "de": "Offizielles stabiles Repository",
@@ -354,7 +354,7 @@
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.daikin-cloud/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.daikin-cloud/master/admin/daikin-cloud.jpg",
     "type": "climate-control",
-    "version": "0.2.3"
+    "version": "0.3.0"
   },
   "daswetter": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/io-package.json",
