@@ -2050,7 +2050,7 @@
   "roborock": {
     "meta": "https://raw.githubusercontent.com/copystring/ioBroker.roborock/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/copystring/ioBroker.roborock/main/admin/roborock.png",
-    "type": "household"
+    "type": "household",
     "version": "0.2.1"
   },
   "roomba": {
