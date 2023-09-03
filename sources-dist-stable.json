@@ -2413,6 +2413,12 @@
     "type": "messaging",
     "version": "1.16.0"
   },
+  "telegram-menu": {
+    "meta": "https://raw.githubusercontent.com/MiRo1310/ioBroker.telegram-menu/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MiRo1310/ioBroker.telegram-menu/main/admin/telegram-menu.png",
+    "type": "messaging",
+    "version": "0.6.5"
+  },
   "terminal": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/admin/terminal.png",
