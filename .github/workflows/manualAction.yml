@@ -1,4 +1,4 @@
-name: manual action
+name: Manual action
 
 # configure manual trigger
 on:
@@ -8,6 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: manual action
-        run: 
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Manual action
+        run: |
+          npm install
           npm run manualAction
