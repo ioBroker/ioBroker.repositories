@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: manual action
         run: 
-          npm run manual
+          npm run manualAction
