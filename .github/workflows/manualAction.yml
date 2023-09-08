@@ -1,0 +1,13 @@
+name: manual action
+
+# configure manual trigger
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: manual action
+        run: 
+          npm run manualAction
