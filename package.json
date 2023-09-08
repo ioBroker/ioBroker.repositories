@@ -25,6 +25,7 @@
     "check": "node lib/check.js",
     "checkArchived": "node lib/checkArchived.js",
     "checkNpm": "node lib/checkNpm.js",
+    "manualAction": "node lib/manualAction.js",
     "setLabels": "node lib/setLabels.js",
     "stable": "node lib/readyForStable.js"
   },
