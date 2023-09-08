@@ -5,6 +5,8 @@ on:
     # * is a special character in YAML, so you have to quote this string
     # every day
     - cron:  '33 3 * * *'
+  
+  workflow_dispatch:
 
 jobs:
   ready-for-stable:
