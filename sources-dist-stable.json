@@ -1109,7 +1109,7 @@
   "iwg-vpn": {
     "meta": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/admin/iwg-vpn.png",
-    "type": "network",
+    "type": "communication",
     "version": "1.0.1"
   },
   "janitza-gridvis": {
