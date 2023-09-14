@@ -2097,6 +2097,11 @@
     "icon": "https://raw.githubusercontent.com/derAlff/ioBroker.signal-cmb/master/admin/signal-cmb.png",
     "type": "messaging"
   },
+  "signifylights": {
+    "meta": "https://raw.githubusercontent.com/disaster123/ioBroker.signifylights/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/disaster123/ioBroker.signifylights/main/admin/signifylights.png",
+    "type": "lighting"
+  },
   "simple-api": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/admin/simple-api.png",
