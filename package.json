@@ -9,9 +9,7 @@
   "engines": {
     "node": ">=12"
   },
-  "dependencies": {
-    "request-promise-native": "^1.0.9"
-  },
+  "dependencies": {},
   "homepage": "http://iobroker.net",
   "description": "List of all official adapters for ioBroker project",
   "scripts": {
@@ -25,6 +23,10 @@
     "addToStable": "node lib/scripts.js addToStable",
     "updateStable": "node lib/scripts.js updateStable",
     "check": "node lib/check.js",
+    "checkArchived": "node lib/checkArchived.js",
+    "checkNpm": "node lib/checkNpm.js",
+    "manualAction": "node lib/manualAction.js",
+    "setLabels": "node lib/setLabels.js",
     "stable": "node lib/readyForStable.js"
   },
   "bugs": {
@@ -41,17 +43,16 @@
     "bluefox <dogafox@gmail.com>"
   ],
   "devDependencies": {
-    "axios": "^0.27.2",
-    "chai": "^4.3.6",
-    "eslint": "^8.15.0",
+    "@iobroker/repochecker": "^2.1.10",
+    "axios": "^1.5.0",
+    "chai": "^4.3.8",
+    "eslint": "^8.48.0",
     "gulp": "^4.0.2",
-    "image-size": "^1.0.1",
-    "minimist": "^1.2.6",
-    "mocha": "^9.2.2",
+    "image-size": "^1.0.2",
+    "minimist": "^1.2.8",
+    "mocha": "^10.2.0",
     "node.extend": "^2.0.2",
-    "request": "^2.88.2",
-    "request-promise-native": "^1.0.9",
-    "semver": "^7.3.7",
-    "unzipper": "^0.10.11"
+    "semver": "^7.5.4",
+    "unzipper": "^0.10.14"
   }
 }
