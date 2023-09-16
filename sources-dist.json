@@ -2761,6 +2761,11 @@
     "icon": "https://raw.githubusercontent.com/Vertumnus/ioBroker.weblogin/master/admin/logo-login.png",
     "type": "utility"
   },
+  "webui": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.webui/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.webui/master/admin/logo.png",
+    "type": "visualization"
+  },
   "webuntis": {
     "meta": "https://raw.githubusercontent.com/Newan/ioBroker.webuntis/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Newan/ioBroker.webuntis/main/admin/webuntis.png",
