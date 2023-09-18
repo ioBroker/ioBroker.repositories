@@ -687,8 +687,8 @@
     "version": "0.2.5"
   },
   "fritzbox": {
-    "meta": "https://raw.githubusercontent.com/ruhr70/ioBroker.fritzbox/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ruhr70/ioBroker.fritzbox/master/admin/fritzbox.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fritzbox/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fritzbox/master/admin/fritzbox.png",
     "type": "infrastructure",
     "version": "0.5.0"
   },
