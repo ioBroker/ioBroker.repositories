@@ -249,8 +249,8 @@
     "version": "0.0.2"
   },
   "botvac": {
-    "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.botvac/master/admin/botvac.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.botvac/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.botvac/master/admin/botvac.png",
     "type": "household",
     "version": "1.0.0"
   },
