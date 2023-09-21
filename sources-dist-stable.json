@@ -2017,6 +2017,12 @@
     "type": "protocols",
     "version": "1.3.0"
   },
+  "rct": {
+    "meta": "https://raw.githubusercontent.com/aruttkamp/ioBroker.rct/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/aruttkamp/ioBroker.rct/main/admin/rct-logo.square.png",
+    "type": "energy",
+    "version": "1.2.2"
+  },
   "renault": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/admin/renault.png",
