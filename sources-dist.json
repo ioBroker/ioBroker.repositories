@@ -590,8 +590,8 @@
     "type": "infrastructure"
   },
   "feiertage": {
-    "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.feiertage/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.feiertage/master/admin/feiertage.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.feiertage/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.feiertage/master/admin/feiertage.png",
     "type": "date-and-time"
   },
   "fhem": {
