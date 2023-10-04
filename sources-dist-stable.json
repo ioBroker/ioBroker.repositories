@@ -866,6 +866,12 @@
     "type": "misc-data",
     "version": "1.0.3"
   },
+  "heizungssteuerung": {
+    "meta": "https://raw.githubusercontent.com/jbeenenga/ioBroker.heizungssteuerung/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/jbeenenga/ioBroker.heizungssteuerung/main/admin/heizungssteuerung.png",
+    "type": "climate-control",
+    "version": "1.7.0"
+  },
   "hekr": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.hekr/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.hekr/master/admin/hekr.png",
