@@ -5,12 +5,14 @@ on:
     # * is a special character in YAML, so you have to quote this string
     # every day
     - cron:  '33 3 * * *'
+  
+  workflow_dispatch:
 
 jobs:
   ready-for-stable:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: 18

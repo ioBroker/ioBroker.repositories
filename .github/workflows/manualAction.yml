@@ -1,13 +1,11 @@
-name: Check archived repostories
+name: Manual action
 
+# configure manual trigger
 on:
-  schedule:
-    # * is a special character in YAML, so you have to quote this string
-    # every sunday at 3:33
-    - cron:  '33 3 * * 0'
+  workflow_dispatch:
 
 jobs:
-  check:
+  manual-action:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,6 +13,6 @@ jobs:
         with:
           node-version: 18
       - run: npm i
-      - run: npm run checkArchived
+      - run: npm run manualAction
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
