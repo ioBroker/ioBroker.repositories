@@ -5,14 +5,19 @@ on:
     types: [opened, edited, ready_for_review, reopened]
   issue_comment:
     types: [created]
+
+concurrency:
+  group: check-${{ github.head_ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 10
+          node-version: 14
       - run: npm i
       - run: npm run check
         env:
