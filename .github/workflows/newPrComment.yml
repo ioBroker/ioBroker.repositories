@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: echo user ${{github.event.issue_comment.user.login}}
       - uses: actions/github-script@v6
         with:
           script: |
