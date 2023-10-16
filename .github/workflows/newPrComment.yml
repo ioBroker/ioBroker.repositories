@@ -1,3 +1,5 @@
+name: New PR comment
+
 on: issue_comment
 
 jobs:
@@ -7,12 +9,12 @@ jobs:
     if: |
       github.repository == 'ioBroker/ioBroker.repositories' &&
       ${{ github.event.issue.pull_request }} &&
-      !${{ github.event.issue_comment.user.login }} === 'mcm1957'
+      ${{ github.event.comment.user.login }} != 'mcm1957'
 
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo user ${{github.event.issue_comment.user.login}}
+      - run: echo user ${{github.event.comment.user.login}}
       - uses: actions/github-script@v6
         with:
           script: |
