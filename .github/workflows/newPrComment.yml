@@ -4,8 +4,13 @@ jobs:
   pr_commented:
     # This job only runs for pull request comments
     name: PR comment
-    if: ${{ github.event.issue.pull_request }}
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories' &&
+      ${{ github.event.issue.pull_request }} &&
+      !${{ github.event.issue_comment.user.login }} === 'mcm1957'
+
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/github-script@v6
         with:
@@ -14,5 +19,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              labels: ["triage"]
+              labels: ["*📬"]
             })
