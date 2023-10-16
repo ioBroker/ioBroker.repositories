@@ -2741,6 +2741,11 @@
     "icon": "https://raw.githubusercontent.com/pottio/ioBroker.warp/main/admin/warp.png",
     "type": "vehicle"
   },
+  "weather-warnings": {
+    "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.weather-warnings/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.weather-warnings/main/admin/weather-warnings.png",
+    "type": "weather"
+  },
   "weatherflow_udp": {
     "meta": "https://raw.githubusercontent.com/woessmich/ioBroker.weatherflow_udp/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/woessmich/ioBroker.weatherflow_udp/master/admin/weatherflow_udp.png",
