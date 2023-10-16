@@ -9,7 +9,7 @@ jobs:
     if: |
       github.repository == 'ioBroker/ioBroker.repositories' &&
       ${{ github.event.issue.pull_request }} &&
-      ${{ github.event.comment.user.login !== 'mcm1957'}} 
+      ${{ github.event.comment.user.login != 'mcm1957'}} 
 
     runs-on: ubuntu-latest
 
