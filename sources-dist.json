@@ -780,8 +780,8 @@
     "type": "iot-systems"
   },
   "harmony": {
-    "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.harmony/master/admin/harmony.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.harmony/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.harmony/master/admin/harmony.png",
     "type": "multimedia"
   },
   "hass": {
@@ -1181,8 +1181,8 @@
     "type": "household"
   },
   "lgtv": {
-    "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.lgtv/master/admin/lgtv.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.lgtv/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.lgtv/master/admin/lgtv.png",
     "type": "multimedia"
   },
   "lgtv-rs": {
@@ -1483,8 +1483,8 @@
     "type": "protocols"
   },
   "mqtt-client": {
-    "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.mqtt-client/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.mqtt-client/master/admin/mqtt-client.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mqtt-client/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mqtt-client/master/admin/mqtt-client.png",
     "type": "protocols"
   },
   "multicast": {
@@ -1873,8 +1873,8 @@
     "type": "utility"
   },
   "pushbullet": {
-    "meta": "https://raw.githubusercontent.com/Jens1809/ioBroker.pushbullet/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Jens1809/ioBroker.pushbullet/master/admin/pushbullet.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pushbullet/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pushbullet/master/admin/pushbullet.png",
     "type": "messaging"
   },
   "pushover": {
@@ -1896,6 +1896,16 @@
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.pvoutputorg/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.pvoutputorg/master/admin/pvoutputorg.png",
     "type": "energy"
+  },
+  "pylontech": {
+    "meta": "https://raw.githubusercontent.com/PLCHome/ioBroker.pylontech/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/PLCHome/ioBroker.pylontech/master/admin/pylontech.png",
+    "type": "energy"
+  },
+  "radar2": {
+    "meta": "https://raw.githubusercontent.com/frankjoke/ioBroker.radar2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/frankjoke/ioBroker.radar2/master/admin/radar2.png",
+    "type": "network"
   },
   "radar-trap": {
     "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.radar-trap/main/io-package.json",
@@ -2622,8 +2632,8 @@
     "type": "visualization-widgets"
   },
   "vis-justgage": {
-    "meta": "https://raw.githubusercontent.com/Pmant/ioBroker.vis-justgage/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Pmant/ioBroker.vis-justgage/master/admin/justgage.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vis-justgage/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vis-justgage/master/admin/justgage.png",
     "type": "visualization-widgets"
   },
   "vis-keyboard": {

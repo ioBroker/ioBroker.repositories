@@ -1,7 +1,7 @@
 # This workflow will triage pull requests and apply a label based on the
 # paths that are modified in the pull request.
 
-name: Set labels
+name: Stable Brand-New Info
 
 #
 # WARNING: 
@@ -11,12 +11,10 @@ name: Set labels
 #
 on:
   pull_request_target:
-    types: [opened, edited, ready_for_review, reopened, labeled, unlabeled]
-  issue_comment:
-    types: [created, edited]
+    types: [labeled, unlabeled]
     
 jobs:
-  setLabels:
+  stableBrandNewInfo:
 
     runs-on: ubuntu-latest
 
@@ -26,6 +24,6 @@ jobs:
         with:
           node-version: 18
       - run: npm i
-      - run: npm run setLabels
+      - run: npm run stableBrandNewInfo
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
