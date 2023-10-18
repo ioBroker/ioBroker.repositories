@@ -19,6 +19,9 @@ on:
 
 jobs:
   check:
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories'
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
