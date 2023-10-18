@@ -15,6 +15,9 @@ on:
     
 jobs:
   stableBrandNewInfo:
+    name: stable brand new info
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories'
 
     runs-on: ubuntu-latest
 
