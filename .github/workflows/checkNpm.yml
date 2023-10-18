@@ -1,6 +1,8 @@
 name: Check npm access
 
 on:
+  workflow_dispatch:
+
   schedule:
     # * is a special character in YAML, so you have to quote this string
     # daily at 2:2
