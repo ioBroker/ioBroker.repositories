@@ -17,6 +17,9 @@ on:
     
 jobs:
   setLabels:
+    name: set labels
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories'
 
     runs-on: ubuntu-latest
 
