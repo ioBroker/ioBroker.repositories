@@ -1,6 +1,8 @@
 name: Check archived repostories
 
 on:
+  workflow_dispatch:
+  
   schedule:
     # * is a special character in YAML, so you have to quote this string
     # every sunday at 3:33
@@ -8,6 +10,10 @@ on:
 
 jobs:
   check:
+    name: check archived
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories'
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
