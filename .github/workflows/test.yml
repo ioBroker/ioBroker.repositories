@@ -1,13 +1,13 @@
 name: Check stable versions
 
 on:
-  push:
-    workflow_dispatch:
+  workflow_dispatch:
   
+  push:
     branches:
-      - master
-    
-    pull_request: {}
+      - master  
+  
+  pull_request: {}
 
 concurrency:
     group: stable-${{ github.head_ref }}
