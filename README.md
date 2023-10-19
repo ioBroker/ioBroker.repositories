@@ -127,6 +127,8 @@ If the command does not work, just add `bluefox` as an owner.
 
 `npm owner add bluefox iobroker.<adaptername>`
 
+Attention: bluefox must accept the invite. This might last a day or two. So please be patient until the invite has been accepted. If invite expires, please retry (send a second invite).
+
 ### Example of README.md
 
 https://github.com/ioBroker/ioBroker.admin/blob/master/README.md
