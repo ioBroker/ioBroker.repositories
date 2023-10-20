@@ -28,3 +28,6 @@ jobs:
       - run: npm run manualAction
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
+          ACTION: ${{ github.event.inputs.action }}
+          REPOSITORY: ${{ github.event.inputs.repository }}
+          ISSUE: ${{ github.event.inputs.issue }}
