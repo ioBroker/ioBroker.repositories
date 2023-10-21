@@ -1,0 +1,11 @@
+name: manual command
+
+# configure manual trigger
+on:
+  workflow_dispatch:
+        
+jobs:
+  command:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm add owner mcm1957 iobroker.tesla-motors
