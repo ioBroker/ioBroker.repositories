@@ -9,3 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: npm owner add mcm1957 iobroker.tesla-motors
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
