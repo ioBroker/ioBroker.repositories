@@ -8,4 +8,4 @@ jobs:
   command:
     runs-on: ubuntu-latest
     steps:
-      - run: npm add owner mcm1957 iobroker.tesla-motors
+      - run: npm owner add mcm1957 iobroker.tesla-motors
