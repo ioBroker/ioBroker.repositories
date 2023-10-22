@@ -1015,6 +1015,11 @@
     "url": "https://github.com/ioBroker/ioBroker.icons-open-icon-library-png/tarball/master",
     "type": "visualization-icons"
   },
+  "icons-smarthome": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.icons-smarthome/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.icons-smarthome/main/admin/icons-smarthome.png",
+    "type": "visualization-icons"
+  },
   "icons-ultimate-png": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-ultimate-png/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-ultimate-png/master/admin/icons-ultimate-png.png",
