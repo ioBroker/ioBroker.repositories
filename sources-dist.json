@@ -2811,6 +2811,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.weishaupt-wem/master/admin/weishaupt-wem.png",
     "type": "climate-control"
   },
+  "welcome": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.welcome/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.welcome/master/admin/welcome.png",
+    "type": "general"
+  },
   "whatsapp-cmb": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.whatsapp-cmb/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.whatsapp-cmb/master/admin/whatsapp-cmb.png",
