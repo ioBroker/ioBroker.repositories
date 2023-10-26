@@ -1993,8 +1993,8 @@
     "type": "hardware"
   },
   "roadtraffic": {
-    "meta": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.roadtraffic/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/BuZZy1337/ioBroker.roadtraffic/master/admin/roadtraffic.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roadtraffic/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roadtraffic/master/admin/roadtraffic.png",
     "type": "misc-data"
   },
   "robonect": {
