@@ -1957,6 +1957,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/admin/renault.png",
     "type": "vehicle"
   },
+  "reolink": {
+    "meta": "https://raw.githubusercontent.com/aendue/ioBroker.reolink/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/aendue/ioBroker.reolink/main/admin/reolink_logo.png",
+    "type": "alarm"
+  },
   "residents": {
     "meta": "https://raw.githubusercontent.com/jpawlowski/ioBroker.residents/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/jpawlowski/ioBroker.residents/main/admin/residents.svg",
