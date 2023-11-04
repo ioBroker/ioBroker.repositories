@@ -1,1 +1,31 @@
-name: Check stable versionson:  push:    branches:      - master  pull_request: {}concurrency:    group: stable-${{ github.head_ref }}    cancel-in-progress: truejobs:  check:    runs-on: ubuntu-latest    steps:      - uses: actions/checkout@v4      - uses: actions/setup-node@v3        with:          node-version: 14      - run: npm i      - run: npm run test        env:          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
+name: Check stable versions
+
+on:
+  workflow_dispatch:
+  
+  push:
+    branches:
+      - master  
+  
+  pull_request: {}
+
+concurrency:
+    group: stable-${{ github.head_ref }}
+    cancel-in-progress: true
+
+jobs:
+  check:
+    name: check stable versions
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories'
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 14
+      - run: npm i
+      - run: npm run test
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}

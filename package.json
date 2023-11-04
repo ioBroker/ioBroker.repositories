@@ -45,14 +45,14 @@
   ],
   "devDependencies": {
     "@iobroker/repochecker": "^2.1.12",
-    "axios": "^1.5.1",
+    "axios": "^1.6.0",
     "chai": "^4.3.10",
-    "eslint": "^8.50.0",
+    "eslint": "^8.52.0",
     "gulp": "^4.0.2",
     "image-size": "^1.0.2",
     "minimist": "^1.2.8",
     "mocha": "^10.2.0",
-    "node.extend": "^2.0.2",
+    "node.extend": "^2.0.3",
     "semver": "^7.5.4",
     "unzipper": "^0.10.14"
   }
