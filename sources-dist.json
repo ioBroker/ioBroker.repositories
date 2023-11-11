@@ -2037,6 +2037,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung/master/admin/samsung.png",
     "type": "multimedia"
   },
+  "samsung-tizen": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung-tizen/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung-tizen/master/admin/samsung.png",
+    "type": "multimedia"
+  },
   "sanext": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sanext/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sanext/master/admin/sanext.png",
