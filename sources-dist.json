@@ -209,6 +209,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.bosch-ebike/master/admin/bosch-ebike.png",
     "type": "vehicle"
   },
+  "boschindego": {
+    "meta": "hhttps://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.boschindego/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.boschindego/master/admin/boschindego.png",
+    "type": "garden"
+  },
   "bosesoundtouch": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.bosesoundtouch/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.bosesoundtouch/master/admin/bosesoundtouch.png",
