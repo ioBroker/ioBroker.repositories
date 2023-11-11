@@ -2761,6 +2761,12 @@
     "type": "visualization-widgets",
     "version": "1.0.4"
   },
+  "vis-material": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vis-material/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vis-material/master/admin/material.png",
+    "type": "visualization-widgets",
+    "version": "0.1.5"
+  },
   "vis-material-advanced": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vis-material-advanced/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vis-material-advanced/master/admin/vis-material-advanced.png",
