@@ -66,7 +66,7 @@
     "meta": "https://raw.githubusercontent.com/misanorot/ioBroker.alarm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/misanorot/ioBroker.alarm/master/admin/alarm.png",
     "type": "alarm",
-    "version": "3.4.0"
+    "version": "3.4.3"
   },
   "alexa-shoppinglist": {
     "meta": "https://raw.githubusercontent.com/MiRo1310/ioBroker.alexa-shoppinglist/main/io-package.json",
@@ -558,7 +558,7 @@
     "meta": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/admin/ems-esp.png",
     "type": "climate-control",
-    "version": "2.5.1"
+    "version": "2.6.1"
   },
   "energymanager": {
     "meta": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.energymanager/master/io-package.json",
@@ -1187,7 +1187,7 @@
   "js-controller": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.js-controller/master/packages/controller/io-package.json",
     "type": "general",
-    "version": "5.0.12"
+    "version": "5.0.16"
   },
   "judoisoft": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.judoisoft/master/io-package.json",
@@ -2154,6 +2154,12 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung/master/admin/samsung.png",
     "type": "multimedia",
     "version": "0.5.11"
+  },
+  "samsung_tizen": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung_tizen/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung_tizen/master/admin/samsung.png",
+    "type": "multimedia",
+    "version": "1.0.0"
   },
   "sanext": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sanext/master/io-package.json",
