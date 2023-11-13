@@ -5,7 +5,7 @@
       "en": "Official stable repository",
       "de": "Offizielles stabiles Repository",
       "ru": "Официальный стабильный репозиторий",
-      "pt": "Repositório estável oficial",
+      "pt": "Repositório estável oficial",sams
       "nl": "Officiële stabiliteit",
       "fr": "Dépôt stable officiel",
       "it": "Repository stabile ufficiale",
@@ -2155,6 +2155,12 @@
     "type": "multimedia",
     "version": "0.5.11"
   },
+  "samsung_tizen": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung_tizen/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung_tizen/master/admin/samsung.png",
+    "type": "multimedia",
+    "version": "1.0.0"
+  },  
   "sanext": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sanext/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sanext/master/admin/sanext.png",
