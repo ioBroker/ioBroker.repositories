@@ -28,7 +28,8 @@
     "manualAction": "node lib/manualAction.js",
     "setLabels": "node lib/setLabels.js",
     "stable": "node lib/readyForStable.js",
-    "stableBrandNewInfo": "node lib/stableBrandNewInfo.js"
+    "stableBrandNewInfo": "node lib/stableBrandNewInfo.js",
+    "stableBrandNewReminder": "node lib/stableBrandNewReminder.js"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
