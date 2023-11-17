@@ -2065,6 +2065,12 @@
     "type": "energy",
     "version": "1.2.2"
   },
+  "renacidc": {
+    "meta": "https://raw.githubusercontent.com/raschy/ioBroker.renacidc/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/raschy/ioBroker.renacidc/main/admin/renacidc.png",
+    "type": "energy",
+    "version": "0.0.6"
+  },
   "renault": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/admin/renault.png",
