@@ -20,7 +20,7 @@
     "type": "weather",
     "version": "1.3.1"
   },
-  "acme": {
+  "acme": {material
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.acme/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.acme/main/admin/acme.png",
     "type": "general",
@@ -2789,7 +2789,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vis-material/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vis-material/master/admin/material.png",
     "type": "visualization-widgets",
-    "version": "0.1.5"
+    "version": "0.1.3"
   },
   "vis-material-advanced": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vis-material-advanced/master/io-package.json",
