@@ -1040,6 +1040,12 @@
     "type": "visualization-icons",
     "version": "0.1.0"
   },
+  "icons-eclipse-smarthome-classic": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.icons-eclipse-smarthome-classic/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.icons-eclipse-smarthome-classic/main/admin/icons-eclipse-smarthome-classic.png",
+    "type": "visualization-icons",
+    "version": "1.0.0"
+  },
   "icons-fatcow-hosting": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-fatcow-hosting/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-fatcow-hosting/master/admin/icons-fatcow-hosting.png",
