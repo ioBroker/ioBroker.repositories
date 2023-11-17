@@ -1094,6 +1094,12 @@
     "type": "visualization-icons",
     "version": "0.1.2"
   },
+  "icons-smarthome": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.icons-smarthome/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.icons-smarthome/main/admin/icons-smarthome.png",
+    "type": "visualization-icons",
+    "version": "1.0.0"
+  },
   "icons-ultimate-png": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-ultimate-png/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-ultimate-png/master/admin/icons-ultimate-png.png",
