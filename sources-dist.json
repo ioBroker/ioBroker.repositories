@@ -499,8 +499,8 @@
     "type": "messaging"
   },
   "emby": {
-    "meta": "https://raw.githubusercontent.com/thewhobox/ioBroker.emby/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/thewhobox/ioBroker.emby/master/admin/emby.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.emby/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.emby/master/admin/emby.png",
     "type": "multimedia"
   },
   "ems-esp": {
