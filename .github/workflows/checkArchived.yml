@@ -1,21 +1,16 @@
-name: Check stable versions
+name: Check archived repostories
 
 on:
   workflow_dispatch:
   
-  push:
-    branches:
-      - master  
-  
-  pull_request: {}
-
-concurrency:
-    group: stable-${{ github.head_ref }}
-    cancel-in-progress: true
+  schedule:
+    # * is a special character in YAML, so you have to quote this string
+    # every sunday at 3:33
+    - cron:  '33 3 * * 0'
 
 jobs:
   check:
-    name: check stable versions
+    name: check archived
     if: |
       github.repository == 'ioBroker/ioBroker.repositories'
 
@@ -24,8 +19,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 18
       - run: npm i
-      - run: npm run test
+      - run: npm run checkArchived
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
