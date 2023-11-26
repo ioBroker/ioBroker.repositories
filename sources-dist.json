@@ -1711,6 +1711,11 @@
     "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.opendtu/main/admin/opendtu.png",
     "type": "energy"
   },
+  "open-epaper-link": {
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.open-epaper-link/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.open-epaper-link/main/admin/open-epaper-link.png",
+    "type": "hardware"
+  },
   "openhab": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.openhab/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.openhab/master/admin/openhab.png",
