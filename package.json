@@ -25,8 +25,11 @@
     "check": "node lib/check.js",
     "checkArchived": "node lib/checkArchived.js",
     "checkNpm": "node lib/checkNpm.js",
+    "manualAction": "node lib/manualAction.js",
     "setLabels": "node lib/setLabels.js",
-    "stable": "node lib/readyForStable.js"
+    "stable": "node lib/readyForStable.js",
+    "stableBrandNewInfo": "node lib/stableBrandNewInfo.js",
+    "stableBrandNewReminder": "node lib/stableBrandNewReminder.js"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
@@ -42,15 +45,15 @@
     "bluefox <dogafox@gmail.com>"
   ],
   "devDependencies": {
-    "@iobroker/repochecker": "^2.1.6",
-    "axios": "^1.4.0",
-    "chai": "^4.3.7",
-    "eslint": "^8.46.0",
+    "@iobroker/repochecker": "^2.1.12",
+    "axios": "^1.6.0",
+    "chai": "^4.3.10",
+    "eslint": "^8.52.0",
     "gulp": "^4.0.2",
     "image-size": "^1.0.2",
     "minimist": "^1.2.8",
     "mocha": "^10.2.0",
-    "node.extend": "^2.0.2",
+    "node.extend": "^2.0.3",
     "semver": "^7.5.4",
     "unzipper": "^0.10.14"
   }
