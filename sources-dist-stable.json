@@ -788,6 +788,12 @@
     "type": "alarm",
     "version": "0.3.0"
   },
+  "gira-iot": {
+    "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.gira-iot/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.gira-iot/master/admin/gira-iot.png",
+    "type": "iot-systems",
+    "version": "0.4.0"
+  },
   "go-e": {
     "meta": "https://raw.githubusercontent.com/MK-2001/ioBroker.go-e/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/MK-2001/ioBroker.go-e/main/admin/go-echarger.png",
