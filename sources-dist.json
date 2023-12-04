@@ -1637,8 +1637,8 @@
     "type": "utility"
   },
   "nsclient": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.nsclient/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.nsclient/master/admin/nsclient.png",
+    "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.nsclient/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mcm4iob/ioBroker.nsclient/master/admin/nsclient.png",
     "type": "infrastructure"
   },
   "nuki": {
@@ -1827,8 +1827,8 @@
     "type": "network"
   },
   "pid": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pid/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pid/master/admin/pid.png",
+    "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.pid/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mcm4iob/ioBroker.pid/master/admin/pid.png",
     "type": "general"
   },
   "piface": {
