@@ -1643,8 +1643,8 @@
     "type": "utility"
   },
   "nsclient": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.nsclient/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.nsclient/master/admin/nsclient.png",
+    "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.nsclient/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mcm4iob/ioBroker.nsclient/master/admin/nsclient.png",
     "type": "infrastructure"
   },
   "nuki": {
@@ -1833,8 +1833,8 @@
     "type": "network"
   },
   "pid": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pid/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pid/master/admin/pid.png",
+    "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.pid/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mcm4iob/ioBroker.pid/master/admin/pid.png",
     "type": "general"
   },
   "piface": {
@@ -1986,6 +1986,11 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/admin/renault.png",
     "type": "vehicle"
+  },
+  "reolink": {
+    "meta": "https://raw.githubusercontent.com/aendue/ioBroker.reolink/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/aendue/ioBroker.reolink/main/admin/reolink_logo.png",
+    "type": "alarm"
   },
   "residents": {
     "meta": "https://raw.githubusercontent.com/jpawlowski/ioBroker.residents/main/io-package.json",
@@ -2228,8 +2233,8 @@
     "type": "communication"
   },
   "solaredge": {
-    "meta": "https://raw.githubusercontent.com/92lleo/ioBroker.solaredge/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/92lleo/ioBroker.solaredge/master/admin/solaredge.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solaredge/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solaredge/master/admin/solaredge.png",
     "type": "energy"
   },
   "solarlog": {
