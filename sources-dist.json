@@ -218,7 +218,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.boschindego/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.boschindego/main/admin/boschindego.png",
     "type": "garden"
-  },  
+  },
   "bosesoundtouch": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.bosesoundtouch/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.bosesoundtouch/master/admin/bosesoundtouch.png",
@@ -509,15 +509,15 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.emby/master/admin/emby.png",
     "type": "multimedia"
   },
-  "ems-esp": {
-    "meta": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/admin/ems-esp.png",
-    "type": "climate-control"
-  },
   "emporia": {
     "meta": "https://raw.githubusercontent.com/Chris-656/ioBroker.emporia/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Chris-656/ioBroker.emporia/main/admin/emporia.png",
     "type": "energy"
+  },
+  "ems-esp": {
+    "meta": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/admin/ems-esp.png",
+    "type": "climate-control"
   },
   "energiefluss": {
     "meta": "https://raw.githubusercontent.com/SKB-CGN/ioBroker.energiefluss/main/io-package.json",
@@ -1119,6 +1119,11 @@
     "meta": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/admin/iwg-vpn.png",
     "type": "communication"
+  },
+  "jablotron": {
+    "meta": "https://raw.githubusercontent.com/DEV2DEV-DE/ioBroker.jablotron/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DEV2DEV-DE/ioBroker.jablotron/main/admin/jablotron.png",
+    "type": "alarm"
   },
   "janitza-gridvis": {
     "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.janitza-gridvis/main/io-package.json",
@@ -2067,7 +2072,7 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung/master/admin/samsung.png",
     "type": "multimedia"
   },
- "samsung_tizen": {
+  "samsung_tizen": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung_tizen/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung_tizen/master/admin/samsung.png",
     "type": "multimedia"
