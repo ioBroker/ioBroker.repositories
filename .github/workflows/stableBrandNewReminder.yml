@@ -1,26 +1,30 @@
-name: Check npm access
+# This workflow will triage pull requests and apply a label based on the
+# paths that are modified in the pull request.
+
+name: Stable Brand-New Reminder
 
 on:
   workflow_dispatch:
 
   schedule:
     # * is a special character in YAML, so you have to quote this string
-    # daily at 2:2
-    - cron:  '22 2 * * *'
-
+    # every day
+    - cron:  '0 1 * * *'
+    
 jobs:
-  check-npms:
-    name: check npm access
+  stableBrandNewReminder:
+    name: stable brand new reminder
     if: |
       github.repository == 'ioBroker/ioBroker.repositories'
 
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 18
       - run: npm i
-      - run: npm run checkNpm
+      - run: npm run stableBrandNewReminder
         env:
-          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
+          OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -17,7 +17,7 @@ This is GitHub project for storage of latest and stable repositories.
 5. Create a PR
 
 ## Add a new adapter to the latest repository (web frontend)
-1. Go to iobroker.dev
+1. Go to [iobroker.dev](https://www.iobroker.dev/)
 2. Log in with GitHub
 3. Open the new adapter
 4. Click on manage
@@ -66,7 +66,7 @@ This is GitHub project for storage of latest and stable repositories.
   * If you have an older implementation that uses encrypt/decrypt functions in `index(_m).html` and in `main.js` you can just convert to this by removing the extra encrypt/decrypt usages in all places and do the above.
 * add all editable fields from `index_m.html` to `io-package.json` `native` with their default values
 * **You need to make sure to clean up ALL resources in `unload`. Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode** (or also see next point!)
-* Use `adapter.setTimeout/setInterval` and corresponding clear Methods to create timers and intervals that are automatically cleaned up when the adapter gets unloaded and make sure to not start new timers/intervals after adapter is stopped already. This can help in many cases and is near to a drop in replacement for Timers from `Node.js` (but it is NOT an object, so the methods on Timer objects will not work!)
+* Use `adapter.setTimeout/setInterval` and corresponding clear Methods to create timers and intervals that are automatically cleaned up when the adapter gets unloaded and make sure to not start new timers/intervals after adapter is stopped already. This can help in many cases and is near to a drop-in replacement for Timers from `Node.js` (but it is NOT an object, so the methods on Timer objects will not work!)
 * **Please test in compact mode!** Especially starting, running, stopping adapter and verify that nothing runs any longer and no logs are triggered and also a new start works.
 * Be careful with `setObject` because it overwrites the object and (especially in `js-controller < 2.2`) custom settings like history may be removed by this! Use `setObjectNotExists` or read the object to detect if it exists and use `extendObject` to update.
 * get familiar with the `ack` concept of ioBroker. Adapters normally set all "final" values with `ack=true` and these are mostly ignored in `onStateChange` handlers. `ack=false` are commands that normally are handled by Adapters.
@@ -78,10 +78,11 @@ This is GitHub project for storage of latest and stable repositories.
 * Consider using ESLint or other JavaScript code and type checker to see errors in your code before releasing a new version.
 * **Please activate adapter testing with at least package- and integration-tests on GitHub Actions**
 * The adapter testing using GitHub Actions is not for us - it is for you! Please check it after pushing changes to GitHub and before telling it to users or publish an NPM package. If testing is "red" you should check the testing log to see what is broken.
-* If you like to increase testing you can start implementing adapter specific tests that always run when you push changes to GitHub.
+* If you like to increase testing, you can start implementing adapter specific tests that always run when you push changes to GitHub.
 * You can/should use https://translator.iobroker.in/ to auto translate all relevant texts into all needed languages by providing the english text
 * If an adapter instance wants to generate an object structure, it should use objects from the type device, channel or folder to define sub-structures and provide objects of type state only on the last "level". Different levels can be separated by a ".". An object of the type "state" should never have more objects below it. The allowed fields for the relevant object types are documented in https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/objectsschema.md#core-concept
 * If an adapter opens a port or bind socket to some IP-address, the attributes must be called `port` and `bind` (`v6bind` for IPv6).
+* If an adapter connects to some IP-address, the IP attribute may be not called `bind` (use `ip` for that).
 
 ## Add a new adapter to the stable repository
 1. Fork this repo and clone your fork
@@ -125,6 +126,8 @@ To add the ioBroker organisation to npm packet, you must write the following aft
 If the command does not work, just add `bluefox` as an owner.
 
 `npm owner add bluefox iobroker.<adaptername>`
+
+Attention: bluefox must accept the invite. This might last a day or two. So please be patient until the invite has been accepted. If invite expires, please retry (send a second invite).
 
 ### Example of README.md
 
@@ -190,7 +193,7 @@ An example can be seen [here](https://github.com/ioBroker/ioBroker.template/blob
 - `utility` - different help adapters. Like backup, export/import
 - `vehicle` - cars 
 - `visualization` - visualisation, like vis, material, mobile
-- `visualization-icons` - icons for visualisation
+- `visualization-icons` - icons for visualization
 - `visualization-widgets` - iobroker.vis widgets
 - `weather` - weather info, air quality, environment statistics
 
@@ -215,7 +218,7 @@ Define `dataSource` in `common` as:
 * `vuplus` - multimedia
 
 ### Authors
-Please define following attributes in `package.json` :
+Please define the following attributes in `package.json` :
 - https://github.com/ioBroker/ioBroker.template/blob/master/JavaScript/package.json#L5 (Only one author)
 - https://github.com/ioBroker/ioBroker.template/blob/master/JavaScript/package.json#L9 (Many contributors)
 - https://github.com/ioBroker/ioBroker.template/blob/master/JavaScript/io-package.json#L32 (Same here, but you can set many authors/contributors if desired)
@@ -242,7 +245,7 @@ For **stable** (sources-dist-stable.json):
   },
 ```
 
-*Note*: stable has always a specific version.
+*Note*: stable always has a specific version.
 
 ## Automatic pull request checker
 On every pull request to the repository, the GitHub Action will be triggered (see [check.yml](.github/workflows/check.yml) ). It will check the following things:

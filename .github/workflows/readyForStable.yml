@@ -1,19 +1,23 @@
 name: Check ready for stable
 
 on:
+  workflow_dispatch:
+
   schedule:
     # * is a special character in YAML, so you have to quote this string
     # every day
     - cron:  '33 3 * * *'
   
-  workflow_dispatch:
-
 jobs:
   ready-for-stable:
+    name: check ready for stable
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories'
+      
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
       - run: npm i
