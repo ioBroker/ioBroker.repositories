@@ -1,31 +1,26 @@
-name: Check stable versions
+name: Check ready for stable
 
 on:
   workflow_dispatch:
-  
-  push:
-    branches:
-      - master  
-  
-  pull_request: {}
 
-concurrency:
-    group: stable-${{ github.head_ref }}
-    cancel-in-progress: true
-
+  schedule:
+    # * is a special character in YAML, so you have to quote this string
+    # every day
+    - cron:  '33 3 * * *'
+  
 jobs:
-  check:
-    name: check stable versions
+  ready-for-stable:
+    name: check ready for stable
     if: |
       github.repository == 'ioBroker/ioBroker.repositories'
-
+      
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 18
       - run: npm i
-      - run: npm run test
+      - run: npm run stable
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
