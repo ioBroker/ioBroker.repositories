@@ -2332,6 +2332,11 @@
     "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.squeezeboxrpc/master/admin/squeezeboxrpc.png",
     "type": "multimedia"
   },
+  "srm": {
+    "meta": "https://raw.githubusercontent.com/stephan1827/ioBroker.srm/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/stephan1827/ioBroker.srm/main/admin/srm.png",
+    "type": "hardware"
+  },
   "starline": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.starline/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.starline/master/admin/starline.png",
