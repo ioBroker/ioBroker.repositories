@@ -1,0 +1,33 @@
+name: Manual action
+
+# configure manual trigger
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        type: choice
+        description: action to perform
+        options:
+          - closeIssue
+          - reopenIssue
+        required: true
+      repository:
+        type: string
+      issue:
+        type: string
+        
+jobs:
+  manual-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm i
+      - run: npm run manualAction
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
+          ACTION: ${{ github.event.inputs.action }}
+          REPOSITORY: ${{ github.event.inputs.repository }}
+          ISSUE: ${{ github.event.inputs.issue }}
