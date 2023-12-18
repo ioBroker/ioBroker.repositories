@@ -1,6 +1,6 @@
 name: Manual action
 
-# configure manual trigger
+# set tag
 on:
   workflow_dispatch:
     inputs:
@@ -17,7 +17,7 @@ on:
         type: string
         
 jobs:
-  manual-action:
+  set-tag:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: 18
       - run: npm i
-      - run: npm run manualAction
+      - run: npm run setTag
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
           ACTION: ${{ github.event.inputs.action }}
