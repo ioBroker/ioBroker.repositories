@@ -2402,6 +2402,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.tapo/master/admin/tapo.png",
     "type": "iot-systems"
   },
+  "tedee": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.tedee/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.tedee/main/admin/tedee.png",
+    "type": "hardware"
+  },
   "telegram": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/admin/telegram.png",
@@ -2646,9 +2651,9 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-jaeger-design/main/admin/vis-2-widgets-jaeger-design.png",
     "type": "visualization-widgets"
   },
-  "vis-2-widgets-gauges": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-gauges/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-gauges/main/admin/vis-2-widgets-gauges.png",
+  "vis-2-widgets-radar-trap": {
+    "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.vis-2-widgets-radar-trap/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Steiger04/ioBroker.vis-2-widgets-radar-trap/main/admin/vis-2-widgets-radar-trap.png",
     "type": "visualization-widgets"
   },
   "vis-2-widgets-sweethome3d": {
@@ -2866,6 +2871,11 @@
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.web-speedy/main/admin/web-speedy.png",
     "type": "network"
   },
+  "webcal": {
+    "meta": "https://raw.githubusercontent.com/dirkhe/ioBroker.webcal/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/dirkhe/ioBroker.webcal/master/admin/webcal.png",
+    "type": "date-and-time"
+  },  
   "weblogin": {
     "meta": "https://raw.githubusercontent.com/Vertumnus/ioBroker.weblogin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Vertumnus/ioBroker.weblogin/master/admin/logo-login.png",
@@ -3030,6 +3040,11 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.zehnder-cloud/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.zehnder-cloud/master/admin/zehnder-cloud.png",
     "type": "climate-control"
+  },
+  "zendure-solarflow": {
+    "meta": "https://raw.githubusercontent.com/nograx/ioBroker.zendure-solarflow/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/nograx/ioBroker.zendure-solarflow/main/admin/zendure-solarflow.png",
+    "type": "energy"
   },
   "zigbee": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/io-package.json",
