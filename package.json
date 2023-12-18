@@ -28,6 +28,7 @@
     "manualAction": "node lib/manualAction.js",
     "setLabels": "node lib/setLabels.js",
     "setStableTag": "node lib/setStableTag.js",
+    "setTag": "node lib/setTag.js",
     "stable": "node lib/readyForStable.js",
     "stableBrandNewInfo": "node lib/stableBrandNewInfo.js",
     "stableBrandNewReminder": "node lib/stableBrandNewReminder.js"
