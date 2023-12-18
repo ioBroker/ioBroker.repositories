@@ -1,36 +1,34 @@
-name: Check changed adapters
+# This workflow will triage pull requests and apply a label based on the
+# paths that are modified in the pull request.
+
+name: Set labels
 
 #
 # WARNING: 
 #    ** Do NOT run untrusted code when using pull_request_target **
 # pull_request_target is needed as pull_request does not provide secrets and so no 
-# commenting of PR is possible.
+# labeling of PR is possible.
 #
 on:
   pull_request_target:
-    types: [opened, edited, ready_for_review, reopened]
+    types: [opened, edited, ready_for_review, reopened, labeled, unlabeled]
   issue_comment:
-    types: [created]
-
-# concurrent runs are required if more then one PR get commented with RE-CHECK! at same time
-# concurrency:
-#  group: check-${{ github.head_ref }}
-#  cancel-in-progress: true
-
+    types: [created, edited]
+    
 jobs:
-  check:
+  setLabels:
+    name: set labels
     if: |
       github.repository == 'ioBroker/ioBroker.repositories'
 
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 18
       - run: npm i
-      - run: npm run check
+      - run: npm run setLabels
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REF: ${{ env.GITHUB_REF }}
-          GITHUB_EVENT_PATH: ${{ env.GITHUB_EVENT_PATH }}
