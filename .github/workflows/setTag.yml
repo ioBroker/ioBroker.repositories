@@ -4,30 +4,27 @@ name: Set tag
 on:
   workflow_dispatch:
     inputs:
-      action:
+      tag:
         type: choice
-        description: action to perform
+        description: select tag to set
         options:
-          - closeIssue
-          - reopenIssue
+          - latest
+          - next
+          - stable
         required: true
-      repository:
+      adapter:
         type: string
-      issue:
+        required: true
+      release:
         type: string
+        required: true
         
 jobs:
   set-tag:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - run: npm i
-      - run: npm run setTag
-        env:
-          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
-          ACTION: ${{ github.event.inputs.action }}
-          REPOSITORY: ${{ github.event.inputs.repository }}
-          ISSUE: ${{ github.event.inputs.issue }}
+      - run: npm  dist-tag list iobroker.webui
+      - run: npm --//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}} dist-tag add iobroker.${{ github.event.inputs.adapter }}@${{ github.event.inputs.release }} ${{ github.event.inputs.tag }}
