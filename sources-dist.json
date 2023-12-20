@@ -20,8 +20,8 @@
     "type": "network"
   },
   "admin": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/packages/admin/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/packages/admin/admin/admin.png",
     "type": "general"
   },
   "aio": {
@@ -2875,7 +2875,7 @@
     "meta": "https://raw.githubusercontent.com/dirkhe/ioBroker.webcal/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/dirkhe/ioBroker.webcal/master/admin/webcal.png",
     "type": "date-and-time"
-  },  
+  },
   "weblogin": {
     "meta": "https://raw.githubusercontent.com/Vertumnus/ioBroker.weblogin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Vertumnus/ioBroker.weblogin/master/admin/logo-login.png",

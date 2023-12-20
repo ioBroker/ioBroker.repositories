@@ -39,8 +39,8 @@
     "version": "0.0.8"
   },
   "admin": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/packages/admin/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/packages/admin/admin/admin.png",
     "type": "general",
     "version": "6.12.0"
   },
