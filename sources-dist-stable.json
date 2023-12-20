@@ -2803,6 +2803,12 @@
     "type": "visualization-widgets",
     "version": "1.7.4"
   },
+  "vis-materialdesign": {
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.vis-materialdesign/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.vis-materialdesign/master/admin/vis-materialdesign.png",
+    "type": "visualization-widgets",
+    "version": "0.5.9"
+  },
   "vis-metro": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-metro/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-metro/master/admin/metro.png",
