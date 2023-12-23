@@ -23,20 +23,8 @@ jobs:
   set-tag:
     runs-on: ubuntu-latest
     steps:
-#      - uses: actions/setup-node@v4
-#        with:
-#          node-version: 18
-#      - run: npm  dist-tag list iobroker.webui
-#      - run: npm --//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}} dist-tag add iobroker.${{ github.event.inputs.adapter }}@${{ github.event.inputs.release }} ${{ github.event.inputs.tag }}
-      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - run: npm i
-      - run: npm run setTag
-        env:
-          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TAG }}
-          INPUT_ADAPTER: ${{  github.event.inputs.adapter }}
-          INPUT_RELEASE: ${{  github.event.inputs.release }}
-          INPUT_TAG: ${{  github.event.inputs.tag }}
+      - run: npm  dist-tag list iobroker.webui
+      - run: npm --//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}} dist-tag add iobroker.${{ github.event.inputs.adapter }}@${{ github.event.inputs.release }} ${{ github.event.inputs.tag }}
