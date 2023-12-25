@@ -4,6 +4,8 @@
 name: Handle Reminder
 
 on:
+  issue_comment:
+ 
   workflow_dispatch:
 
   schedule:
