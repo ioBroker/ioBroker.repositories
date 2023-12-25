@@ -31,7 +31,7 @@
     "setTag": "node lib/setTag.js",
     "stable": "node lib/readyForStable.js",
     "stableBrandNewInfo": "node lib/stableBrandNewInfo.js",
-    "stableBrandNewReminder": "node lib/stableBrandNewReminder.js"
+    "handleReminder": "node lib/handleReminder.js"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
