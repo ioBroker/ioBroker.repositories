@@ -1552,6 +1552,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myenergi/master/admin/myenergi.png",
     "type": "energy"
   },
+  "myuplink": {
+    "meta": "https://raw.githubusercontent.com/sebilm/ioBroker.myuplink/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sebilm/ioBroker.myuplink/master/admin/myuplink.png",
+    "type": "climate-control"
+  },
   "myq": {
     "meta": "https://raw.githubusercontent.com/StrathCole/ioBroker.myq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/StrathCole/ioBroker.myq/master/admin/myq.png",
