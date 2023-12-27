@@ -2089,6 +2089,12 @@
     "type": "vehicle",
     "version": "0.0.15"
   },
+  "reolink": {
+    "meta": "https://raw.githubusercontent.com/aendue/ioBroker.reolink/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/aendue/ioBroker.reolink/main/admin/reolink_logo.png",
+    "type": "alarm",
+    "version": "1.0.2"
+  },
   "residents": {
     "meta": "https://raw.githubusercontent.com/jpawlowski/ioBroker.residents/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/jpawlowski/ioBroker.residents/main/admin/residents.svg",
