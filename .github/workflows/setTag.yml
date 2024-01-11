@@ -27,4 +27,5 @@ jobs:
         with:
           node-version: 18
       - run: npm  dist-tag list iobroker.${{ github.event.inputs.adapter }}
+      - run: npm --//registry.npmjs.org/:_authToken=${{secrets.NPM_TAG}} dist-tag rm iobroker.${{ github.event.inputs.adapter }} ${{ github.event.inputs.tag }}
       - run: npm --//registry.npmjs.org/:_authToken=${{secrets.NPM_TAG}} dist-tag add iobroker.${{ github.event.inputs.adapter }}@${{ github.event.inputs.release }} ${{ github.event.inputs.tag }}
