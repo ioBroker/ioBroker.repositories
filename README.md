@@ -101,6 +101,12 @@ Additionally, to all above listed points:
 3. Some feedback on [forum](http://forum.iobroker.net).
 4. **Important** Discovery function! If a device can be found automatically (USB, IP) it should be implemented in discovery adapter after (Discovery PR will be merged after stable acceptance).
 
+## Common Rules and Requirements for Commercial Adapters (Adapters that require a license to be used)
+The ioBroker GmbH is sponsoring all infrastructure and services for the ioBroker world to function. This includes the repository and other central components also like the Forum and such. For all Open Source "non commercial" adapter this is 100% for free, but when adapters require a purchase then this changes.
+
+License purchases should ideally be done via the official iobroker Website. For this the ioBroker GmBh will allow license management and also provides secure components to integrate into the adapter. For this service usually a share of 30% of the revenuas are paid to the ioBroker GmbH. If you are interested in this please contact info@iobroker.net for details.
+If purchases are handled by the developer itself and the adapter should be in the repository a service fee of usually 15% of the revenue applies. Please also contact info@iobroker.net for details and negotiations.
+
 ## How-to
 ### How to publish on npm
 
