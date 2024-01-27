@@ -660,8 +660,8 @@
     "type": "vehicle"
   },
   "frigate": {
-    "meta": "https://raw.githubusercontent.com/Bettman66/ioBroker.frigate/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Bettman66/ioBroker.frigate/master/admin/frigate.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.frigate/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.frigate/master/admin/frigate.png",
     "type": "alarm"
   },
   "fritzbox": {
