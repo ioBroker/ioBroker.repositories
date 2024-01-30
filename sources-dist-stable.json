@@ -2498,10 +2498,10 @@
     "version": "3.3.7"
   },
   "tapo": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.tapo/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.tapo/master/admin/tapo.png",
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.tapo/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.tapo/main/admin/tapo.png",
     "type": "iot-systems",
-    "version": "0.0.8"
+    "version": "0.2.9"
   },
   "telegram": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/io-package.json",
