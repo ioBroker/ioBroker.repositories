@@ -508,7 +508,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.elgato-key-light/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.elgato-key-light/main/admin/elgato-key-light.png",
     "type": "lighting"
-  },  
+  },
   "email": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.email/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.email/master/admin/email.png",
@@ -1562,11 +1562,6 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myenergi/master/admin/myenergi.png",
     "type": "energy"
   },
-  "myuplink": {
-    "meta": "https://raw.githubusercontent.com/sebilm/ioBroker.myuplink/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/sebilm/ioBroker.myuplink/master/admin/myuplink.png",
-    "type": "climate-control"
-  },
   "myq": {
     "meta": "https://raw.githubusercontent.com/StrathCole/ioBroker.myq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/StrathCole/ioBroker.myq/master/admin/myq.png",
@@ -1586,6 +1581,11 @@
     "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.mytime/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.mytime/master/admin/mytime.png",
     "type": "visualization"
+  },
+  "myuplink": {
+    "meta": "https://raw.githubusercontent.com/sebilm/ioBroker.myuplink/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sebilm/ioBroker.myuplink/master/admin/myuplink.png",
+    "type": "climate-control"
   },
   "myvbus": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myvbus/master/io-package.json",
@@ -2372,6 +2372,11 @@
     "icon": "https://raw.githubusercontent.com/waoler/iobroker.stockmarket/master/admin/stockmarket.png",
     "type": "misc-data"
   },
+  "sun2000": {
+    "meta": "https://raw.githubusercontent.com/bolliy/ioBroker.sun2000/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bolliy/ioBroker.sun2000/main/admin/sun2000.png",
+    "type": "energy"
+  },
   "sun2000-modbus": {
     "meta": "https://raw.githubusercontent.com/daolis/ioBroker.sun2000-modbus/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/daolis/ioBroker.sun2000-modbus/main/admin/sun2000-modbus.png",
@@ -2671,6 +2676,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-jaeger-design/main/admin/vis-2-widgets-jaeger-design.png",
     "type": "visualization-widgets"
   },
+  "vis-2-widgets-material": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-material/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-material/main/admin/vis-2-widgets-material.png",
+    "type": "visualization-widgets"
+  },
   "vis-2-widgets-radar-trap": {
     "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.vis-2-widgets-radar-trap/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Steiger04/ioBroker.vis-2-widgets-radar-trap/main/admin/vis-2-widgets-radar-trap.png",
@@ -2679,11 +2689,6 @@
   "vis-2-widgets-sweethome3d": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-sweethome3d/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-sweethome3d/main/admin/vis-2-widgets-sweethome3d.png",
-    "type": "visualization-widgets"
-  },
-  "vis-2-widgets-material": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-material/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-material/main/admin/vis-2-widgets-material.png",
     "type": "visualization-widgets"
   },
   "vis-3dmodel": {
