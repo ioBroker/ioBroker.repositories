@@ -160,7 +160,7 @@ function activateLocalNpm(done) {
             console.log('install all latest packages...');
             fs.writeFileSync(`${__dirname}/ioBroker/package.json`, fs.readFileSync(`${__dirname}/ioBroker/package-stable.json`));
             callInstall(() => {
-                // work with result
+                // work with a result
                 console.log('npm set registry remote...');
                 exec('npm set registry https://registry.npmjs.org', err => {
                     if (err) {

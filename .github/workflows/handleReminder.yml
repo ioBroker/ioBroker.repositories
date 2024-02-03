@@ -1,9 +1,11 @@
 # This workflow will triage pull requests and apply a label based on the
 # paths that are modified in the pull request.
 
-name: Stable Brand-New Reminder
+name: Handle Reminder
 
 on:
+  issue_comment:
+ 
   workflow_dispatch:
 
   schedule:
@@ -12,8 +14,8 @@ on:
     - cron:  '0 1 * * *'
     
 jobs:
-  stableBrandNewReminder:
-    name: stable brand new reminder
+  handleReminder:
+    name: handlereminder
     if: |
       github.repository == 'ioBroker/ioBroker.repositories'
 
@@ -25,6 +27,6 @@ jobs:
         with:
           node-version: 18
       - run: npm i
-      - run: npm run stableBrandNewReminder
+      - run: npm run handleReminder
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
