@@ -614,6 +614,12 @@
     "type": "infrastructure",
     "version": "0.2.1"
   },
+  "espresense": {
+    "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.espresense/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.espresense/main/admin/espresense.png",
+    "type": "geoposition",
+    "version": "0.4.4"
+  },
   "eusec": {
     "meta": "https://raw.githubusercontent.com/bropat/ioBroker.eusec/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/bropat/ioBroker.eusec/master/admin/eusec.png",
