@@ -2461,6 +2461,12 @@
     "type": "climate-control",
     "version": "1.7.7"
   },
+  "sun2000": {
+    "meta": "https://raw.githubusercontent.com/bolliy/ioBroker.sun2000/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bolliy/ioBroker.sun2000/main/admin/sun2000.png",
+    "type": "energy",
+    "version": "0.3.1"
+  },
   "sun2000-modbus": {
     "meta": "https://raw.githubusercontent.com/daolis/ioBroker.sun2000-modbus/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/daolis/ioBroker.sun2000-modbus/main/admin/sun2000-modbus.png",
