@@ -2269,6 +2269,12 @@
     "type": "energy",
     "version": "1.3.14"
   },
+  "senec": {
+    "meta": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/admin/senec.png",
+    "type": "energy",
+    "version": "1.6.11"
+  },
   "seq": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.seq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.seq/master/admin/seq.png",
