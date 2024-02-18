@@ -1,21 +1,16 @@
-name: Check stable versions
+name: Check npm access
 
 on:
   workflow_dispatch:
-  
-  push:
-    branches:
-      - master  
-  
-  pull_request: {}
 
-concurrency:
-    group: stable-${{ github.head_ref }}
-    cancel-in-progress: true
+  schedule:
+    # * is a special character in YAML, so you have to quote this string
+    # daily at 2:2
+    - cron:  '22 2 * * *'
 
 jobs:
-  check:
-    name: check stable versions
+  check-npms:
+    name: check npm access
     if: |
       github.repository == 'ioBroker/ioBroker.repositories'
 
@@ -24,8 +19,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 18
       - run: npm i
-      - run: npm run test
+      - run: npm run checkNpm
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
