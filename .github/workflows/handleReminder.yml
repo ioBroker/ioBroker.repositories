@@ -4,6 +4,9 @@
 name: Handle Reminder
 
 on:
+  pull_request_target:
+    types: [labeled, unlabeled]
+
   issue_comment:
  
   workflow_dispatch:
