@@ -17,9 +17,9 @@ on:
     - cron:  '0 1 * * *'
 
 # avoid concurrengt runs
-concurrency:
-  group: check-reminder
-  cancel-in-progress: true
+#concurrency:
+#  group: check-reminder
+#  cancel-in-progress: true
 
 jobs:
   handleReminder:
