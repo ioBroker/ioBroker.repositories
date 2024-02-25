@@ -4,6 +4,9 @@
 name: Handle Reminder
 
 on:
+  pull_request_target:
+    types: [labeled]
+
   issue_comment:
  
   workflow_dispatch:
@@ -12,7 +15,12 @@ on:
     # * is a special character in YAML, so you have to quote this string
     # every day
     - cron:  '0 1 * * *'
-    
+
+# avoid concurrengt runs
+#concurrency:
+#  group: check-reminder
+#  cancel-in-progress: true
+
 jobs:
   handleReminder:
     name: handlereminder
