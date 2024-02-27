@@ -1897,12 +1897,6 @@
     "type": "multimedia",
     "version": "2.0.0"
   },
-  "parcel": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.parcel/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.parcel/master/admin/parcel.png",
-    "type": "misc-data",
-    "version": "0.0.27"
-  },
   "parser": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/admin/parser.png",
