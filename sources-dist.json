@@ -1656,9 +1656,9 @@
     "type": "vehicle"
   },
   "nmea": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.nmea/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.nmea/master/admin/nmea.png",
-    "type": "vehicle"
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.nmea/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.nmea/main/admin/nmea.png",
+    "type": "protocols"
   },
   "node-red": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/io-package.json",
