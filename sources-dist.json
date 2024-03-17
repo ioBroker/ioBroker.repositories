@@ -387,7 +387,7 @@
   "device-reminder": {
     "meta": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/admin/device-reminder.png",
-    "type": "energy"
+    "type": "logic"
   },
   "device-watcher": {
     "meta": "https://raw.githubusercontent.com/ciddi89/ioBroker.device-watcher/main/io-package.json",
@@ -1655,6 +1655,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.niu/master/admin/niu.png",
     "type": "vehicle"
   },
+  "nmea": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.nmea/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.nmea/master/admin/nmea.png",
+    "type": "vehicle"
+  },
   "node-red": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/admin/node-red.png",
@@ -2633,11 +2638,6 @@
     "meta": "https://raw.githubusercontent.com/pdbjjens/ioBroker.vbus-gw/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/pdbjjens/ioBroker.vbus-gw/main/admin/vbus-gw.png",
     "type": "network"
-  },
-  "vcard": {
-    "meta": "https://raw.githubusercontent.com/hometm/ioBroker.vcard/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/hometm/ioBroker.vcard/master/admin/vcard.png",
-    "type": "misc-data"
   },
   "vds2465-server": {
     "meta": "https://raw.githubusercontent.com/Hirsch-DE/ioBroker.vds2465-server/main/io-package.json",
