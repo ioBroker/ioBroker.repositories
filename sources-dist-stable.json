@@ -1400,6 +1400,12 @@
     "type": "hardware",
     "version": "0.3.1"
   },
+  "lorawan": {
+    "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lorawan/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lorawan/main/admin/lorawan.png",
+    "type": "protocols",
+    "version": "0.6.6"
+  },
   "lovelace": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.lovelace/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.lovelace/master/admin/lovelace.png",
