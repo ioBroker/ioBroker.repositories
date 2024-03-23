@@ -889,6 +889,11 @@
     "icon": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/admin/hilink.png",
     "type": "hardware"
   },
+  "hiob": {
+    "meta": "https://raw.githubusercontent.com/moba15/ioBroker.hiob/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/moba15/ioBroker.hiob/main/admin/hiob.png",
+    "type": "visualization"
+  },
   "history": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.history/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.history/master/admin/history.png",
