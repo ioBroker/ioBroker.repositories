@@ -8,6 +8,7 @@ on:
         type: choice
         description: select tag to set
         options:
+          - dev
           - latest
           - next
           - stable
