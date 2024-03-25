@@ -2834,6 +2834,12 @@
     "type": "visualization-widgets",
     "version": "1.0.0"
   },
+  "vis-homekittiles": {
+    "meta": "https://raw.githubusercontent.com/Standarduser/ioBroker.vis-homekittiles/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Standarduser/ioBroker.vis-homekittiles/main/admin/vis-homekittiles.png",
+    "type": "visualization-widgets",
+    "version": "0.0.9"
+  },
   "vis-hqwidgets": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-hqwidgets/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-hqwidgets/master/admin/hqwidgets.png",
