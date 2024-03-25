@@ -299,6 +299,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.chromecast/master/admin/chromecast.png",
     "type": "multimedia"
   },
+  "clage-dsx": {
+    "meta": "https://raw.githubusercontent.com/TheBam1990/ioBroker.clage-dsx/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.clage-dsx/master/admin/clage-dsx.png",
+    "type": "hardware"
+  },
   "cleveron": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.cleveron/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.cleveron/main/admin/cleveron.png",
