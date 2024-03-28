@@ -2605,8 +2605,8 @@
     "type": "network"
   },
   "unifi-protect": {
-    "meta": "https://raw.githubusercontent.com/peterbaumert/ioBroker.unifi-protect/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/peterbaumert/ioBroker.unifi-protect/master/admin/unifi-protect.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.unifi-protect/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.unifi-protect/master/admin/unifi-protect.png",
     "type": "alarm"
   },
   "upnp": {
