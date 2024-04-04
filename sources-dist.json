@@ -1175,11 +1175,6 @@
     "icon": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/admin/klf200.png",
     "type": "hardware"
   },
-  "km200": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.km200/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.km200/master/admin/km200.png",
-    "type": "climate-control"
-  },
   "knmi-weather": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.knmi-weather/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.knmi-weather/main/admin/knmi-weather.png",
