@@ -818,12 +818,6 @@
     "type": "geoposition",
     "version": "1.2.4"
   },
-  "gigaset-elements": {
-    "meta": "https://raw.githubusercontent.com/matthsc/ioBroker.gigaset-elements/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/matthsc/ioBroker.gigaset-elements/main/admin/gigaset-elements.png",
-    "type": "alarm",
-    "version": "0.4.3"
-  },
   "gira-iot": {
     "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.gira-iot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.gira-iot/master/admin/gira-iot.png",
