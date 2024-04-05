@@ -2552,12 +2552,6 @@
     "type": "vehicle",
     "version": "3.3.7"
   },
-  "tapo": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.tapo/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.tapo/main/admin/tapo.png",
-    "type": "iot-systems",
-    "version": "0.0.8"
-  },
   "telegram": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/admin/telegram.png",
