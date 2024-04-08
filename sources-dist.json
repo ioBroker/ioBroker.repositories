@@ -970,8 +970,8 @@
     "type": "climate-control"
   },
   "hydrawise": {
-    "meta": "https://raw.githubusercontent.com/SentiQ/ioBroker.hydrawise/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/SentiQ/ioBroker.hydrawise/master/admin/hydrawise.jpg",
+    "meta": "https://raw.githubusercontent.com/SentiQ/ioBroker.hydrawise/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SentiQ/ioBroker.hydrawise/main/admin/hydrawise.jpg",
     "type": "garden"
   },
   "hyperion": {
