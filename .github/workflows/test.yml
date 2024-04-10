@@ -1,4 +1,4 @@
-name: Check stable versions
+name: Check repository files
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ concurrency:
 
 jobs:
   check:
-    name: check stable versions
+    name: check repository files
     if: |
       github.repository == 'ioBroker/ioBroker.repositories'
 
