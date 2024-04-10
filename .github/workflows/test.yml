@@ -2,7 +2,12 @@ name: Check stable versions
 
 on:
   workflow_dispatch:
-  
+
+  schedule:
+    # * is a special character in YAML, so you have to quote this string
+    # every day
+    - cron:  '45 */6 * * *'
+
   push:
     branches:
       - master  
