@@ -2869,6 +2869,11 @@
     "icon": "https://raw.githubusercontent.com/pottio/ioBroker.warp/main/admin/warp.png",
     "type": "vehicle"
   },
+  "waterkotte-easycon": {
+    "meta": "https://raw.githubusercontent.com/theknut/ioBroker.waterkotte-easycon/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/theknut/ioBroker.waterkotte-easycon/main/admin/waterkotte-easycon.png",
+    "type": "climate-control"
+  },
   "weather-warnings": {
     "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.weather-warnings/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.weather-warnings/main/admin/weather-warnings.png",
