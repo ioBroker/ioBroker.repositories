@@ -2042,12 +2042,6 @@
     "type": "network",
     "version": "1.3.2"
   },
-  "psa": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.psa/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.psa/master/admin/psa.png",
-    "type": "vehicle",
-    "version": "0.0.11"
-  },
   "puppeteer": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.puppeteer/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.puppeteer/main/admin/puppeteer.png",
