@@ -2388,7 +2388,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/admin/socketio.png",
     "type": "communication",
-    "version": "6.6.1"
+    "version": "6.7.0"
   },
   "solaredge": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solaredge/master/io-package.json",
@@ -3132,7 +3132,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ws/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ws/main/admin/ws.png",
     "type": "communication",
-    "version": "2.5.11"
+    "version": "2.6.1"
   },
   "x-touch": {
     "meta": "https://raw.githubusercontent.com/Bannsaenger/ioBroker.x-touch/master/io-package.json",
