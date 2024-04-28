@@ -2696,6 +2696,12 @@
     "type": "network",
     "version": "0.6.7"
   },
+  "unifi-protect": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.unifi-protect/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.unifi-protect/master/admin/unifi-protect.png",
+    "type": "alarm",
+    "version": "1.0.0"
+  },
   "upnp": {
     "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.upnp/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.upnp/master/admin/upnp.png",
