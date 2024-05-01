@@ -2714,12 +2714,6 @@
     "type": "weather",
     "version": "0.6.0"
   },
-  "vaillant": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.vaillant/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.vaillant/master/admin/vaillant.png",
-    "type": "climate-control",
-    "version": "0.1.2"
-  },
   "valloxmv": {
     "meta": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/hacki11/ioBroker.valloxmv/master/admin/valloxmv.png",
