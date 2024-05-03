@@ -99,9 +99,9 @@
     "icon": "https://raw.githubusercontent.com/XHunter74/ioBroker.apcups/master/admin/ups.png",
     "type": "hardware"
   },
-  "apg-info": {
-    "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.apg-info/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.apg-info/main/admin/apg-info.png",
+  "apg-": {
+    "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.apg-/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.apg-/main/admin/apg-.png",
     "type": "general"
   },
   "artnet": {
@@ -1079,11 +1079,6 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/admin/influxdb.png",
     "type": "storage"
-  },
-  "info": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.info/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.info/master/admin/info.png",
-    "type": "misc-data"
   },
   "innogy-smarthome": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.innogy-smarthome/master/io-package.json",
