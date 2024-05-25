@@ -2162,6 +2162,12 @@
     "type": "hardware",
     "version": "5.0.10"
   },
+  "roadtraffic": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roadtraffic/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roadtraffic/master/admin/roadtraffic.png",
+    "type": "misc-data",
+    "version": "1.2.0"
+  },
   "robonect": {
     "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.robonect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.robonect/master/admin/robonect.png",
