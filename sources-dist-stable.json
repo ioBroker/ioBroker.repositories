@@ -842,6 +842,12 @@
     "type": "lighting",
     "version": "0.2.6"
   },
+  "gree-hvac": {
+    "meta": "https://raw.githubusercontent.com/XHunter74/ioBroker.gree-hvac/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/XHunter74/ioBroker.gree-hvac/master/admin/air-conditioner.png",
+    "type": "climate-control",
+    "version": "1.0.0"
+  },
   "growatt": {
     "meta": "https://raw.githubusercontent.com/PLCHome/ioBroker.growatt/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PLCHome/ioBroker.growatt/master/admin/growatt.png",
