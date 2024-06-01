@@ -769,6 +769,11 @@
     "icon": "https://raw.githubusercontent.com/boergegrunicke/ioBroker.govee-local/main/admin/govee-local.png",
     "type": "lighting"
   },
+  "gree-hvac": {
+    "meta": "https://raw.githubusercontent.com/XHunter74/ioBroker.gree-hvac/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/XHunter74/ioBroker.gree-hvac/master/admin/air-conditioner.png",
+    "type": "climate-control"
+  },
   "growatt": {
     "meta": "https://raw.githubusercontent.com/PLCHome/ioBroker.growatt/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PLCHome/ioBroker.growatt/master/admin/growatt.png",
