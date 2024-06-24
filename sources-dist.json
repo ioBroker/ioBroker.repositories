@@ -749,6 +749,11 @@
     "icon": "https://raw.githubusercontent.com/MK-2001/ioBroker.go-e/main/admin/go-echarger.png",
     "type": "vehicle"
   },
+  "google-home-nest": {
+    "meta": "https://raw.githubusercontent.com/danieldriessen/ioBroker.google-home-nest/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/danieldriessen/ioBroker.google-home-nest/main/admin/google-home-nest.png",
+    "type": "iot-systems"
+  },
   "google-spreadsheet": {
     "meta": "https://raw.githubusercontent.com/ThomasPohl/ioBroker.google-spreadsheet/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ThomasPohl/ioBroker.google-spreadsheet/main/admin/google-spreadsheet.png",
