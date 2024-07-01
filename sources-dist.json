@@ -629,6 +629,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.feiertage/master/admin/feiertage.png",
     "type": "date-and-time"
   },
+  "fenecon": {
+    "meta": "https://raw.githubusercontent.com/sg-app/ioBroker.fenecon/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sg-app/ioBroker.fenecon/main/admin/fenecon.png",
+    "type": "energy"
+  },
   "fhem": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fhem/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fhem/master/admin/fhem.png",
