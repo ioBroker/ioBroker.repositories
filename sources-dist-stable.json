@@ -2372,12 +2372,6 @@
     "type": "energy",
     "version": "3.4.0"
   },
-  "smartthings": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.smartthings/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.smartthings/master/admin/smartthings.png",
-    "type": "household",
-    "version": "0.0.4"
-  },
   "smoothed": {
     "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.smoothed/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.smoothed/main/admin/smoothed.png",
