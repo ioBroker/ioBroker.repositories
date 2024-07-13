@@ -1841,7 +1841,7 @@
   "opcua": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.opcua/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.opcua/master/admin/opcua.png",
-    "type": "infrastructure",
+    "type": "protocols",
     "version": "1.0.3"
   },
   "opendtu": {
