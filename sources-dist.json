@@ -764,6 +764,11 @@
     "icon": "https://raw.githubusercontent.com/ThomasPohl/ioBroker.gotify/main/admin/gotify.png",
     "type": "messaging"
   },
+  "gotify-ws": {
+    "meta": "https://raw.githubusercontent.com/simatec/ioBroker.gotify-ws/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/simatec/ioBroker.gotify-ws/master/admin/gotify-ws.png",
+    "type": "messaging"
+  },
   "govee-local": {
     "meta": "https://raw.githubusercontent.com/boergegrunicke/ioBroker.govee-local/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/boergegrunicke/ioBroker.govee-local/main/admin/govee-local.png",
