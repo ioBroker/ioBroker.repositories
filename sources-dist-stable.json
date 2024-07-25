@@ -518,6 +518,12 @@
     "type": "energy",
     "version": "1.2.6"
   },
+  "e3oncan": {
+    "meta": "https://raw.githubusercontent.com/MyHomeMyData/ioBroker.e3oncan/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MyHomeMyData/ioBroker.e3oncan/main/admin/e3oncan_small.png",
+    "type": "iot-systems",
+    "version": "0.9.1"
+  },
   "easee": {
     "meta": "https://raw.githubusercontent.com/Newan/ioBroker.easee/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Newan/ioBroker.easee/master/admin/easee.png",
