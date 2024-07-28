@@ -1,16 +1,26 @@
-name: Check npm access
+name: Check repository files
 
 on:
   workflow_dispatch:
 
   schedule:
     # * is a special character in YAML, so you have to quote this string
-    # daily at 2:2
-    - cron:  '22 2 * * *'
+    # every day
+    - cron:  '45 */6 * * *'
+
+  push:
+    branches:
+      - master  
+  
+  pull_request: {}
+
+concurrency:
+    group: stable-${{ github.head_ref }}
+    cancel-in-progress: true
 
 jobs:
-  check-npms:
-    name: check npm access
+  check:
+    name: check repository files
     if: |
       github.repository == 'ioBroker/ioBroker.repositories'
 
@@ -19,8 +29,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 14
       - run: npm i
-      - run: npm run checkNpm
+      - run: npm run test
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
