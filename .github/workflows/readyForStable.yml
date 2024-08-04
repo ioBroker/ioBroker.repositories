@@ -23,5 +23,6 @@ jobs:
       - run: npm i
       - run: npm run stable
         env:
+          ROLE: MMAOLiaRH6m1T17PMF
           OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
-          ROLE:'MMAOLiaRH6m1T17PMF'
+          
