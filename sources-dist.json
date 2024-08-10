@@ -1820,6 +1820,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.panasonic-viera/master/admin/panasonic-viera.png",
     "type": "multimedia"
   },
+  "paperless-ngx": {
+    "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.paperless-ngx/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.paperless-ngx/main/admin/paperless-ngx.png",
+    "type": "storage"
+  },
   "parcel": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.parcel/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.parcel/master/admin/parcel.png",
