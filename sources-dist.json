@@ -297,7 +297,7 @@
   "chargemaster": {
     "meta": "https://raw.githubusercontent.com/hombach/ioBroker.chargemaster/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/hombach/ioBroker.chargemaster/master/admin/chargemaster.png",
-    "type": "vehicle"
+    "type": "energy"
   },
   "chromecast": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.chromecast/master/io-package.json",
