@@ -1185,6 +1185,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/admin/kecontact.png",
     "type": "hardware"
   },
+  "kisshome-research": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.kisshome-research/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.kisshome-research/master/admin/kisshome-research.png",
+    "type": "utility"
+  },
   "klf200": {
     "meta": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/admin/klf200.png",
@@ -2708,7 +2713,7 @@
     "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.vis-2-widgets-ovarious/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.vis-2-widgets-ovarious/main/admin/vis-2-widgets-ovarious.png",
     "type": "visualization-widgets"
-  },  
+  },
   "vis-2-widgets-radar-trap": {
     "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.vis-2-widgets-radar-trap/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Steiger04/ioBroker.vis-2-widgets-radar-trap/main/admin/vis-2-widgets-radar-trap.png",
