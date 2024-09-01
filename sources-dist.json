@@ -2729,6 +2729,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-sweethome3d/main/admin/vis-2-widgets-sweethome3d.png",
     "type": "visualization-widgets"
   },
+  "vis-2-widgets-weather-and-heating": {
+    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-2-widgets-weather/master/admin/vis-2-widgets-weather-and-heating.png",
+    "type": "visualization-widgets"
+  },
   "vis-3dmodel": {
     "meta": "https://raw.githubusercontent.com/Excodibur/ioBroker.vis-3dmodel/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Excodibur/ioBroker.vis-3dmodel/master/admin/vis-3dmodel.png",
