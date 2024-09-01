@@ -1,0 +1,32 @@
+# This workflow will triage pull requests and apply a label based on the
+# paths that are modified in the pull request.
+
+name: Stable 0-Day PR Info
+
+#
+# WARNING: 
+#    ** Do NOT run untrusted code when using pull_request_target **
+# pull_request_target is needed as pull_request does not provide secrets and so no 
+# labeling of PR is possible.
+#
+on:
+  pull_request_target:
+    types: [labeled, unlabeled]
+    
+jobs:
+  stableBrandNewInfo:
+    name: stable brand new info
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm i
+      - run: npm run stable0DayPrInfo
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

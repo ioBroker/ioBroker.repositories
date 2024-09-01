@@ -30,6 +30,7 @@
     "setStableTag": "node lib/setStableTag.js",
     "setTag": "node lib/setTag.js",
     "stable": "node lib/readyForStable.js",
+    "stable0DayPrInfo": "node lib/stable0DayPrInfo.js",
     "stableBrandNewInfo": "node lib/stableBrandNewInfo.js",
     "handleReminder": "node lib/handleReminder.js"
   },
