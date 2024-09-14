@@ -698,6 +698,12 @@
     "type": "date-and-time",
     "version": "1.2.0"
   },
+  "fenecon": {
+    "meta": "https://raw.githubusercontent.com/sg-app/ioBroker.fenecon/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sg-app/ioBroker.fenecon/main/admin/fenecon.png",
+    "type": "energy",
+    "version": "0.5.0"
+  },
   "fhem": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fhem/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fhem/master/admin/fhem.png",
