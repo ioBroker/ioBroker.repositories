@@ -2979,6 +2979,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.whatsapp-cmb/master/admin/whatsapp-cmb.png",
     "type": "messaging"
   },
+  "wiegand-tcpip": {
+    "meta": "https://raw.githubusercontent.com/kBrausew/ioBroker.wiegand-tcpip/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/kbrausew/iobroker.wiegand-tcpip/master/admin/wiegand-tcpip.png",
+    "type": "hardware"
+  },
   "wiffi-wz": {
     "meta": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.wiffi-wz/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.wiffi-wz/master/admin/wiffi-wz.png",
