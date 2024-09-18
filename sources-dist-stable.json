@@ -2834,6 +2834,12 @@
     "type": "visualization-widgets",
     "version": "2.2.0"
   },
+  "ioBroker.vis-2-widgets-rssfeed": {
+    "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.vis-2-widgets-rssfeed/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.vis-2-widgets-rssfeed/main/admin/vis-2-widgets-rssfeed.png",
+    "type": "visualization-widgets",
+    "version": "0.3.5"
+  },
   "vis-bars": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-bars/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-bars/master/admin/bars.png",
