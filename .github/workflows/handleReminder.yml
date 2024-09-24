@@ -1,23 +1,29 @@
 # This workflow will triage pull requests and apply a label based on the
 # paths that are modified in the pull request.
 
-name: Set labels
+name: Handle Reminder
 
-#
-# WARNING: 
-#    ** Do NOT run untrusted code when using pull_request_target **
-# pull_request_target is needed as pull_request does not provide secrets and so no 
-# labeling of PR is possible.
-#
 on:
   pull_request_target:
-    types: [opened, edited, ready_for_review, reopened, labeled, unlabeled]
+    types: [labeled]
+
   issue_comment:
-    types: [created, edited]
-    
+ 
+  workflow_dispatch:
+
+  schedule:
+    # * is a special character in YAML, so you have to quote this string
+    # every day
+    - cron:  '0 1 * * *'
+
+# avoid concurrengt runs
+#concurrency:
+#  group: check-reminder
+#  cancel-in-progress: true
+
 jobs:
-  setLabels:
-    name: set labels
+  handleReminder:
+    name: handlereminder
     if: |
       github.repository == 'ioBroker/ioBroker.repositories'
 
@@ -29,6 +35,6 @@ jobs:
         with:
           node-version: 18
       - run: npm i
-      - run: npm run setLabels
+      - run: npm run handleReminder
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

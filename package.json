@@ -27,7 +27,12 @@
     "checkNpm": "node lib/checkNpm.js",
     "manualAction": "node lib/manualAction.js",
     "setLabels": "node lib/setLabels.js",
-    "stable": "node lib/readyForStable.js"
+    "setStableTag": "node lib/setStableTag.js",
+    "setTag": "node lib/setTag.js",
+    "stable": "node lib/readyForStable.js",
+    "stable0DayPrInfo": "node lib/stable0DayPrInfo.js",
+    "stableBrandNewInfo": "node lib/stableBrandNewInfo.js",
+    "handleReminder": "node lib/handleReminder.js"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
@@ -43,16 +48,15 @@
     "bluefox <dogafox@gmail.com>"
   ],
   "devDependencies": {
-    "@iobroker/repochecker": "^2.1.10",
-    "axios": "^1.5.0",
-    "chai": "^4.3.8",
-    "eslint": "^8.48.0",
-    "gulp": "^4.0.2",
-    "image-size": "^1.0.2",
+    "@iobroker/repochecker": "^3.0.7",
+    "axios": "^1.7.7",
+    "chai": "^4.5.0",
+    "eslint": "^9.11.0",
+    "image-size": "^1.1.1",
     "minimist": "^1.2.8",
-    "mocha": "^10.2.0",
-    "node.extend": "^2.0.2",
-    "semver": "^7.5.4",
-    "unzipper": "^0.10.14"
+    "mocha": "^10.7.3",
+    "node.extend": "^2.0.3",
+    "semver": "^7.6.3",
+    "unzipper": "^0.12.3"
   }
 }

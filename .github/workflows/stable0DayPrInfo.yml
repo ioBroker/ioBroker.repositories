@@ -1,7 +1,7 @@
 # This workflow will triage pull requests and apply a label based on the
 # paths that are modified in the pull request.
 
-name: Set labels
+name: Stable 0-Day PR Info
 
 #
 # WARNING: 
@@ -11,13 +11,11 @@ name: Set labels
 #
 on:
   pull_request_target:
-    types: [opened, edited, ready_for_review, reopened, labeled, unlabeled]
-  issue_comment:
-    types: [created, edited]
+    types: [labeled, unlabeled]
     
 jobs:
-  setLabels:
-    name: set labels
+  stableBrandNewInfo:
+    name: stable brand new info
     if: |
       github.repository == 'ioBroker/ioBroker.repositories'
 
@@ -29,6 +27,6 @@ jobs:
         with:
           node-version: 18
       - run: npm i
-      - run: npm run setLabels
+      - run: npm run stable0DayPrInfo
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
