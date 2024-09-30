@@ -1,7 +1,7 @@
 {
   "accuweather": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/admin/accuweather.png",
+    "icon": "https://raw.githubuserbcontent.com/iobroker-community-adapters/ioBroker.accuweather/master/admin/accuweather.png",
     "type": "weather"
   },
   "acme": {
@@ -1266,8 +1266,8 @@
     "type": "multimedia"
   },
   "libre": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.libre/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.libre/master/admin/libre.png",
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.libre/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.libre/main/admin/libre.png",
     "type": "health"
   },
   "lifx": {
@@ -1596,8 +1596,8 @@
     "type": "iot-systems"
   },
   "mytime": {
-    "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.mytime/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.mytime/master/admin/mytime.png",
+    "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.mytime/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.mytime/main/admin/mytime.png",
     "type": "visualization"
   },
   "myuplink": {
@@ -2026,8 +2026,8 @@
     "type": "energy"
   },
   "renault": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/master/admin/renault.png",
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/main/admin/renault.png",
     "type": "vehicle"
   },
   "reolink": {
@@ -2402,7 +2402,7 @@
   },
   "stockmarket": {
     "meta": "https://raw.githubusercontent.com/waoler/ioBroker.stockmarket/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/waoler/iobroker.stockmarket/master/admin/stockmarket.png",
+    "icon": "https://raw.githubusercontent.com/waoler/ioBroker.stockmarket/master/admin/stockmarket.png",
     "type": "misc-data"
   },
   "sun2000": {
