@@ -1581,8 +1581,8 @@
     "version": "3.0.3"
   },
   "micronova": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.micronova/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.micronova/master/admin/micronova.png",
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.micronova/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.micronova/main/admin/micronova.png",
     "type": "climate-control",
     "version": "0.0.2"
   },
