@@ -156,7 +156,7 @@
   },
   "bascloud": {
     "meta": "https://raw.githubusercontent.com/bascloud/ioBroker.bascloud/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/BAScloud/ioBroker.bascloud/main/admin/bascloud.png",
+    "icon": "https://raw.githubusercontent.com/bascloud/ioBroker.bascloud/main/admin/bascloud.png",
     "type": "communication"
   },
   "batrium-bms": {
@@ -215,8 +215,8 @@
     "type": "vehicle"
   },
   "bosch-ebike": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.bosch-ebike/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.bosch-ebike/master/admin/bosch-ebike.png",
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.bosch-ebike/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.bosch-ebike/main/admin/bosch-ebike.png",
     "type": "vehicle"
   },
   "boschindego": {
@@ -425,8 +425,8 @@
     "type": "general"
   },
   "divera247": {
-    "meta": "https://raw.githubusercontent.com/TKnpl/ioBroker.divera247/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TKnpl/ioBroker.divera247/master/admin/divera247.png",
+    "meta": "https://raw.githubusercontent.com/TKnpl/ioBroker.divera247/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TKnpl/ioBroker.divera247/main/admin/divera247.png",
     "type": "alarm"
   },
   "doorbird": {
