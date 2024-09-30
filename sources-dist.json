@@ -566,7 +566,7 @@
   },
   "enocean": {
     "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.enocean/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/jey-cee/ioBroker.enocean/master/admin/enocean.png",
+    "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.enocean/master/admin/enocean.png",
     "type": "hardware"
   },
   "envertech-pv": {
@@ -910,8 +910,8 @@
     "type": "alarm"
   },
   "hilink": {
-    "meta": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/bondrogeen/iobroker.hilink/master/admin/hilink.png",
+    "meta": "https://raw.githubusercontent.com/bondrogeen/ioBroker.hilink/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bondrogeen/ioBroker.hilink/master/admin/hilink.png",
     "type": "hardware"
   },
   "hiob": {
@@ -960,8 +960,8 @@
     "type": "iot-systems"
   },
   "homenet": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.homenet/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.homenet/master/admin/homenet.png",
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.homenet/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.homenet/main/admin/homenet.png",
     "type": "household"
   },
   "homepilot": {
