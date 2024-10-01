@@ -14,7 +14,7 @@ This file contains a checklist for adapter reviews
 * Adapter is described roughly in english
 * Changelog included
 * License included
-* If Sentry is used a note is included on top of Readme
+* If Sentry is used, a note is included on top of Readme
 
 ## Check package.json
 * notice `adapter-core` dependency and check `js.controller` dependency in `io-package.json`
@@ -29,7 +29,7 @@ This file contains a checklist for adapter reviews
 * password fields? encrypted? `protectedNative/encryptedNative` used?
 * rough check/fly over rest
   * check that `port` attribute called really as `port` in code. The same is for all web settings:
-  - `bind` - IPv4 or IPv6 bind address, 
+  - `bind` - IPv4 or IPv6 bind address. `bind` cannot be used for description of other devices. Only for own server.
   - `v6bind` - explicit IPv6 bind address, 
   - `secure` - if HTTPS used, 
   - `certPrivate` - name of private certificate, 
