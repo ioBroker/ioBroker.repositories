@@ -152,12 +152,6 @@
     "type": "lighting",
     "version": "0.0.5"
   },
-  "asterisk": {
-    "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.asterisk/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.asterisk/master/admin/asterisk.png",
-    "type": "communication",
-    "version": "1.0.6"
-  },
   "asuswrt": {
     "meta": "https://raw.githubusercontent.com/mcdhrts/ioBroker.asuswrt/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/mcdhrts/ioBroker.asuswrt/master/admin/asuswrt.png",
