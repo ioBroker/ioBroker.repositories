@@ -2642,12 +2642,6 @@
     "type": "protocols",
     "version": "0.1.1"
   },
-  "toyota": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.toyota/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.toyota/master/admin/toyota.png",
-    "type": "vehicle",
-    "version": "0.0.3"
-  },
   "tr-064": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tr-064/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tr-064/master/admin/tr-064.png",
