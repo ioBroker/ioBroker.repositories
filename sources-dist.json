@@ -1761,8 +1761,8 @@
     "type": "protocols"
   },
   "opendtu": {
-    "meta": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.opendtu/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/o0shojo0o/ioBroker.opendtu/main/admin/opendtu.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.opendtu/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.opendtu/main/admin/opendtu.png",
     "type": "energy"
   },
   "openhab": {
