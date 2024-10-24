@@ -3168,5 +3168,10 @@
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware"
+  },
+  "cloudless-homeconnect": {
+    "meta": "https://raw.githubusercontent.com/eifel-tech/ioBroker.cloudless-homeconnect/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/eifel-tech/ioBroker.cloudless-homeconnect/master/admin/cloudless-homeconnect.png",
+    "type": "household"
   }
 }
