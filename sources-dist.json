@@ -3170,8 +3170,8 @@
     "type": "hardware"
   },
   "cloudless-homeconnect": {
-    "meta": "https://raw.githubusercontent.com/eifel-tech/ioBroker.cloudless-homeconnect/refs/heads/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/eifel-tech/ioBroker.cloudless-homeconnect/refs/heads/master/admin/cloudless-homeconnect.png",
+    "meta": "https://raw.githubusercontent.com/eifel-tech/ioBroker.cloudless-homeconnect/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/eifel-tech/ioBroker.cloudless-homeconnect/master/admin/cloudless-homeconnect.png",
     "type": "household"
   }
 }
