@@ -1,7 +1,7 @@
 # This workflow will triage pull requests and apply a label based on the
 # paths that are modified in the pull request.
 
-name: Stable 0-Day PR Info
+name: New at LATEST PR Info
 
 #
 # WARNING: 
@@ -15,7 +15,7 @@ on:
     
 jobs:
   stableBrandNewInfo:
-    name: stable 0-day PR info
+    name: new at latest PR info
     if: |
       github.repository == 'ioBroker/ioBroker.repositories'
 
@@ -27,6 +27,6 @@ jobs:
         with:
           node-version: 18
       - run: npm i
-      - run: npm run stable0DayPrInfo
+      - run: npm run newAtLatestPrInfo
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
