@@ -39,6 +39,11 @@
     "icon": "https://raw.githubusercontent.com/weggetor/ioBroker.airconwithme/main/admin/airconwithme.png",
     "type": "climate-control"
   },
+  "airquality": {
+    "meta": "https://raw.githubusercontent.com/raschy/ioBroker.airquality/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/raschy/ioBroker.airquality/main/admin/airquality.png",
+    "type": "weather"
+  },
   "airzone": {
     "meta": "https://raw.githubusercontent.com/SilentPhoenix11/ioBroker.airzone/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SilentPhoenix11/ioBroker.airzone/master/admin/Airzone.png",
