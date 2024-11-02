@@ -2150,6 +2150,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/admin/scenes.png",
     "type": "logic"
   },
+  "schedule-switcher": {
+    "meta": "https://raw.githubusercontent.com/Lucky-ESA/ioBroker.schedule-switcher/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Lucky-ESA/ioBroker.schedule-switcher/main/admin/schedule-switcher.png",
+    "type": "date-and-time"
+  },
   "scheduler": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.scheduler/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.scheduler/master/admin/scheduler.png",
