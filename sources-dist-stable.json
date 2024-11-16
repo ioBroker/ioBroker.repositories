@@ -848,6 +848,12 @@
     "type": "vehicle",
     "version": "1.0.41"
   },
+  "gotify": {
+    "meta": "https://raw.githubusercontent.com/ThomasPohl/ioBroker.gotify/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ThomasPohl/ioBroker.gotify/main/admin/gotify.png",
+    "type": "messaging",
+    "version": "0.3.0"
+  },
   "gotify-ws": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.gotify-ws/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.gotify-ws/master/admin/gotify-ws.png",
