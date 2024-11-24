@@ -209,6 +209,11 @@
     "icon": "https://raw.githubusercontent.com/Newan/ioBroker.bluelink/master/admin/bluelink.png",
     "type": "vehicle"
   },
+  "bluesound": {
+    "meta": "https://raw.githubusercontent.com/Uwe1958/ioBroker.bluesound/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Uwe1958/ioBroker.bluesound/master/admin/bluesound.png",
+    "type": "multimedia"
+  },
   "bmw": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.bmw/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.bmw/master/admin/bmw.png",
