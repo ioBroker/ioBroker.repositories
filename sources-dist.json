@@ -1820,6 +1820,11 @@
     "icon": "https://raw.githubusercontent.com/volkerrichert/ioBroker.oppoplayer/master/admin/oppoplayer.png",
     "type": "multimedia"
   },
+  "ovarious": {
+    "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.ovarious/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.ovarious/main/admin/ovarious.png",
+    "type": "utility"
+  },
   "owfs": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/admin/owfs.png",
