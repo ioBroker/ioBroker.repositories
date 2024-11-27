@@ -1620,6 +1620,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myvbus/master/admin/myvbus.png",
     "type": "climate-control"
   },
+  "mywallbox": {
+    "meta": "https://raw.githubusercontent.com/SKB-CGN/ioBroker.mywallbox/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SKB-CGN/ioBroker.mywallbox/main/admin/wallbox.png",
+    "type": "hardware"
+  },
   "nanoleaf-lightpanels": {
     "meta": "https://raw.githubusercontent.com/daniel-2k/ioBroker.nanoleaf-lightpanels/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/daniel-2k/ioBroker.nanoleaf-lightpanels/master/admin/nanoleaf-lightpanels.png",
@@ -1814,6 +1819,11 @@
     "meta": "https://raw.githubusercontent.com/volkerrichert/ioBroker.oppoplayer/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/volkerrichert/ioBroker.oppoplayer/master/admin/oppoplayer.png",
     "type": "multimedia"
+  },
+  "ovarious": {
+    "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.ovarious/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.ovarious/main/admin/ovarious.png",
+    "type": "utility"
   },
   "owfs": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/io-package.json",
@@ -3177,11 +3187,6 @@
   "zwave2": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
-    "type": "hardware"
-  },
-    "mywallbox": {
-    "meta": "https://raw.githubusercontent.com/SKB-CGN/ioBroker.mywallbox/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/SKB-CGN/ioBroker.mywallbox/main/admin/wallbox.png",
     "type": "hardware"
   }
 }
