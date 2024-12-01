@@ -2659,6 +2659,11 @@
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.uv-protect/master/admin/uv-protect.png",
     "type": "weather"
   },
+  "uvr16xx-blnet": {
+    "meta": "https://raw.githubusercontent.com/weberk/ioBroker.uvr16xx-blnet/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/weberk/ioBroker.uvr16xx-blnet/main/admin/uvr16xx-blnet.png",
+    "type": "climate-control"
+  },
   "vaillant": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.vaillant/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.vaillant/master/admin/vaillant.png",
