@@ -194,6 +194,11 @@
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.birthdays/master/admin/birthdays.png",
     "type": "date-and-time"
   },
+  "bitaxe": {
+    "meta": "https://raw.githubusercontent.com/Hans-Wurst-21/ioBroker.bitaxe/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Hans-Wurst-21/ioBroker.bitaxe/main/admin/bitaxe.png",
+    "type": "infrastructure"
+  },
   "ble": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.ble/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.ble/master/admin/ble.png",
