@@ -1,4 +1,20 @@
 {
+  "_repoInfo": {
+    "stable": false,
+    "name": {
+      "en": "Latest (beta) repository",
+      "de": "Latest (Beta) Repository",
+      "ru": "Latest (бета) репозиторий",
+      "pt": "Latest repositório (beta)",
+      "nl": "Latest (bèta) repository",
+      "fr": "Latest dépôt (bêta)",
+      "it": "Latest repository (beta)",
+      "es": "Latest repositorio (beta)",
+      "pl": "Latest repozytorium (beta)",
+      "uk": "Latest (бета) репозиторій",
+      "zh-cn": "Latest（测试版）存储库"
+    }
+  },
   "accuweather": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/admin/accuweather.png",
