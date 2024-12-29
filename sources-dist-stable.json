@@ -2883,6 +2883,12 @@
     "type": "visualization-widgets",
     "version": "0.3.6"
   },
+  "vis-2-widgets-weather-and-heating": {
+    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating/master/admin/vis-2-widgets-weather-and-heating.png",
+    "type": "visualization-widgets",
+    "version": "0.8.0"
+  },
   "vis-bars": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-bars/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-bars/master/admin/bars.png",
