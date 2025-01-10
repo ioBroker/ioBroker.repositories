@@ -1497,6 +1497,12 @@
     "type": "climate-control",
     "version": "0.4.2"
   },
+  "luxtronik2": {
+    "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.luxtronik2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.luxtronik2/master/admin/luxtronik2.png",
+    "type": "climate-control",
+    "version": "0.4.2"
+  },
   "material": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.material/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.material/master/admin/material.png",
