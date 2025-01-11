@@ -1861,6 +1861,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.owntracks/master/admin/owntracks.png",
     "type": "geoposition"
   },
+  "oxxify-fan-control": {
+    "meta": "https://raw.githubusercontent.com/n-b-dy/ioBroker.oxxify-fan-control/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/n-b-dy/ioBroker.oxxify-fan-control/master/admin/oxxify-fan-control.png",
+    "type": "climate-control"
+  },
   "palazzetti": {
     "meta": "https://raw.githubusercontent.com/inapsis/ioBroker.palazzetti/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/inapsis/ioBroker.palazzetti/master/admin/palazzetti.png",
