@@ -2631,6 +2631,12 @@
     "type": "misc-data",
     "version": "1.2.0"
   },
+  "ta-blnet": {
+    "meta": "https://raw.githubusercontent.com/weberk/ioBroker.ta-blnet/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/weberk/ioBroker.ta-blnet/main/admin/ta-blnet.png",
+    "type": "climate-control",
+    "version": "1.0.36"
+  },
   "tado": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.tado/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.tado/main/admin/tado.png",
