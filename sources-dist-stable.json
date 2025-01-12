@@ -1753,7 +1753,7 @@
     "meta": "https://raw.githubusercontent.com/sebilm/ioBroker.myuplink/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/sebilm/ioBroker.myuplink/main/admin/myuplink.png",
     "type": "climate-control",
-    "version": "0.8.3"
+    "version": "0.8.4"
   },
   "myvbus": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myvbus/master/io-package.json",
@@ -2679,17 +2679,17 @@
     "type": "utility",
     "version": "1.0.0"
   },
-  "teslafi": {
-    "meta": "https://raw.githubusercontent.com/hombach/ioBroker.teslafi/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/hombach/ioBroker.teslafi/master/admin/teslafi.png",
-    "type": "vehicle",
-    "version": "1.0.0"
-  },
   "tesla-motors": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tesla-motors/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tesla-motors/master/admin/tesla-motors.png",
     "type": "vehicle",
     "version": "1.3.2"
+  },
+  "teslafi": {
+    "meta": "https://raw.githubusercontent.com/hombach/ioBroker.teslafi/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/hombach/ioBroker.teslafi/master/admin/teslafi.png",
+    "type": "vehicle",
+    "version": "1.0.0"
   },
   "text2command": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.text2command/master/io-package.json",
