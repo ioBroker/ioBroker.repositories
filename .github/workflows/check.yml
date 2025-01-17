@@ -32,5 +32,6 @@ jobs:
       - run: npm run check
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IOBBOT_GITHUB_TOKEN: ${{ secrets.IOBBOT_GITHUB_TOKEN }}
           GITHUB_REF: ${{ env.GITHUB_REF }}
           GITHUB_EVENT_PATH: ${{ env.GITHUB_EVENT_PATH }}
