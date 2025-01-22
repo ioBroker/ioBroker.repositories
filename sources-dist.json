@@ -1426,6 +1426,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcul/master/admin/maxcul.png",
     "type": "iot-systems"
   },
+  "maxxi-charge": {
+    "meta": "https://raw.githubusercontent.com/blabond/ioBroker.maxxi-charge/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/blabond/ioBroker.maxxi-charge/main/admin/maxxi-charge.png",
+    "type": "communication"
+  },
   "mbus": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/admin/mbus.png",
