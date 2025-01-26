@@ -1411,6 +1411,11 @@
     "icon": "https://raw.githubusercontent.com/oelison/ioBroker.matrix-org/main/admin/matrix-logo.png",
     "type": "messaging"
   },
+  "matter": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.matter/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.matter/main/admin/matter.png",
+    "type": "iot-systems"
+  },
   "maveo": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.maveo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.maveo/master/admin/maveo.png",
