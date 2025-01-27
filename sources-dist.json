@@ -2521,6 +2521,11 @@
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.tado/main/admin/tado.png",
     "type": "climate-control"
   },
+  "tagesschau": {
+    "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.tagesschau/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.tagesschau/main/admin/tagesschau.png",
+    "type": "misc-data"
+  },
   "tahoma": {
     "meta": "https://raw.githubusercontent.com/Excodibur/ioBroker.tahoma/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Excodibur/ioBroker.tahoma/master/admin/tahoma.png",
