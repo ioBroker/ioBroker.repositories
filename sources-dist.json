@@ -785,6 +785,11 @@
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.fullybrowser/master/admin/fully.png",
     "type": "utility"
   },
+  "fyta": {
+    "meta": "https://raw.githubusercontent.com/muffin142/ioBroker.fyta/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/muffin142/iobroker.fyta/main/admin/fyta.png",
+    "type": "garden"
+  },
   "g-homa": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.g-homa/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.g-homa/master/admin/g-homa.png",
@@ -2566,11 +2571,6 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/admin/terminal.png",
     "type": "utility"
   },
-  "teslafi": {
-    "meta": "https://raw.githubusercontent.com/hombach/ioBroker.teslafi/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/hombach/ioBroker.teslafi/master/admin/teslafi.png",
-    "type": "vehicle"
-  },
   "tesla-motors": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tesla-motors/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tesla-motors/master/admin/tesla-motors.png",
@@ -2579,6 +2579,11 @@
   "tesla-wallconnector3": {
     "meta": "https://raw.githubusercontent.com/nobl/ioBroker.tesla-wallconnector3/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/nobl/ioBroker.tesla-wallconnector3/main/admin/tesla-wallconnector3.png",
+    "type": "vehicle"
+  },
+  "teslafi": {
+    "meta": "https://raw.githubusercontent.com/hombach/ioBroker.teslafi/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/hombach/ioBroker.teslafi/master/admin/teslafi.png",
     "type": "vehicle"
   },
   "teslamateapi": {
