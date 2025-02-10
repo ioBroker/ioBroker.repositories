@@ -1077,12 +1077,6 @@
     "type": "iot-systems",
     "version": "1.2.3"
   },
-  "hoover": {
-    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.hoover/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.hoover/main/admin/hoover.png",
-    "type": "household",
-    "version": "0.0.7"
-  },
   "hp-ilo": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/admin/hp-ilo.png",
