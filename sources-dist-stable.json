@@ -1569,12 +1569,6 @@
     "type": "hardware",
     "version": "1.2.1"
   },
-  "megadd": {
-    "meta": "https://raw.githubusercontent.com/ausHaus/ioBroker.megadd/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ausHaus/ioBroker.megadd/master/admin/megad.png",
-    "type": "hardware",
-    "version": "0.2.0"
-  },
   "melcloud": {
     "meta": "https://raw.githubusercontent.com/Black-Thunder/ioBroker.melcloud/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Black-Thunder/ioBroker.melcloud/master/admin/melcloud.png",
