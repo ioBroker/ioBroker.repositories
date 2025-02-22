@@ -195,6 +195,11 @@
     "icon": "https://raw.githubusercontent.com/bembelstemmer/ioBroker.batrium-bms/main/admin/batrium-bms.png",
     "type": "energy"
   },
+  "bayernluft": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.bayernluft/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.bayernluft/main/admin/bayernluft.png",
+    "type": "climate-control"
+  },
   "beckhoff": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.beckhoff/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.beckhoff/master/admin/beckhoff.png",
