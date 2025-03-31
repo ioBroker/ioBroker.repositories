@@ -2121,6 +2121,11 @@
     "icon": "https://raw.githubusercontent.com/aruttkamp/ioBroker.rct/main/admin/rct-logo.square.png",
     "type": "energy"
   },
+  "refoss": {
+    "meta": "https://raw.githubusercontent.com/Refoss/ioBroker.refoss/main/io-package.json",
+    "icon": "https://bucket-meross-static.meross.com/meross/production/staticfile/image/2024/11/12/reofss/refoss.png",
+    "type": "iot-systems"
+  },
   "remeha-home": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.remeha-home/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.remeha-home/master/admin/remeha-home.png",
