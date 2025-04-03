@@ -3045,6 +3045,12 @@
     "type": "visualization-widgets",
     "version": "0.1.6"
   },
+  "vis-plumb": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-plumb/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-plumb/master/admin/plumb.png",
+    "type": "visualization-widgets",
+    "version": "1.0.2"
+  },
   "vis-rgraph": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-rgraph/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-rgraph/master/admin/rgraph.png",
