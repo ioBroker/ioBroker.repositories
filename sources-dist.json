@@ -2995,11 +2995,6 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vis-players/master/admin/players.png",
     "type": "visualization-widgets"
   },
-  "vis-plumb": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-plumb/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-plumb/master/admin/plumb.png",
-    "type": "visualization-widgets"
-  },
   "vis-rgraph": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-rgraph/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-rgraph/master/admin/rgraph.png",
