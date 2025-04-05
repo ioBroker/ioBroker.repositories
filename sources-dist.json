@@ -3145,6 +3145,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wifilight/master/admin/wifilight.png",
     "type": "lighting"
   },
+  "wiim": {
+    "meta": "https://raw.githubusercontent.com/KaiIOB/ioBroker.wiim/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/KaiIOB/ioBroker.wiim/main/admin/wiim.png",
+    "type": "multimedia"
+  },
   "windows-control": {
     "meta": "https://raw.githubusercontent.com/Mic-M/ioBroker.windows-control/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Mic-M/ioBroker.windows-control/master/admin/windows-control.png",
