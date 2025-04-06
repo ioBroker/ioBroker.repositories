@@ -2351,6 +2351,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.simple-api/master/admin/simple-api.png",
     "type": "communication"
   },
+  "skiinfo": {
+    "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.skiinfo/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.skiinfo/main/admin/skiinfo.png",
+    "type": "misc-data"
+  },
   "slideshow": {
     "meta": "https://raw.githubusercontent.com/gaudes/ioBroker.slideshow/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/gaudes/ioBroker.slideshow/main/admin/slideshow.png",
