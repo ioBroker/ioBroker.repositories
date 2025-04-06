@@ -2316,6 +2316,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/admin/shelly.png",
     "type": "iot-systems"
   },
+  "shrdzm": {
+    "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.shrdzm/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mcm4iob/ioBroker.shrdzm/main/admin/shrdzm.png",
+    "type": "energy"
+  },
   "shuttercontrol": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.shuttercontrol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.shuttercontrol/master/admin/shuttercontrol.png",
