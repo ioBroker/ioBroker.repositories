@@ -513,11 +513,11 @@
     "type": "misc-data",
     "version": "2.4.0"
   },
-  "ds18b20": {
-    "meta": "https://raw.githubusercontent.com/crycode-de/ioBroker.ds18b20/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/crycode-de/ioBroker.ds18b20/master/admin/ds18b20.png",
-    "type": "hardware",
-    "version": "3.0.1"
+  "drops-weather": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.drops-weather/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.drops-weather/main/admin/drops-weather.png",
+    "type": "weather",
+    "version": "1.2.3"
   },
   "dwd": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.dwd/master/io-package.json",
