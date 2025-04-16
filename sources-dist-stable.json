@@ -2415,6 +2415,12 @@
     "type": "iot-systems",
     "version": "9.2.0"
   },
+  "shrdzm": {
+    "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.shrdzm/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mcm4iob/ioBroker.shrdzm/main/admin/shrdzm.png",
+    "type": "energy",
+    "version": "0.2.0"
+  },
   "shuttercontrol": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.shuttercontrol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.shuttercontrol/master/admin/shuttercontrol.png",
