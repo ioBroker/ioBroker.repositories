@@ -49,15 +49,15 @@
     "bluefox <dogafox@gmail.com>"
   ],
   "devDependencies": {
-    "@iobroker/repochecker": "^3.2.2",
-    "axios": "^1.7.8",
+    "@iobroker/repochecker": "^3.5.4",
+    "axios": "^1.8.4",
     "chai": "^4.5.0",
-    "eslint": "^9.16.0",
-    "image-size": "^1.1.1",
+    "eslint": "^9.23.0",
+    "image-size": "^2.0.1",
     "minimist": "^1.2.8",
-    "mocha": "^10.8.2",
+    "mocha": "^11.1.0",
     "node.extend": "^2.0.3",
-    "semver": "^7.6.3",
+    "semver": "^7.7.1",
     "unzipper": "^0.12.3"
   }
 }
