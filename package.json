@@ -50,7 +50,7 @@
   ],
   "devDependencies": {
     "@iobroker/repochecker": "^3.5.5",
-    "axios": "^1.8.4",
+    "axios": "^1.9.0",
     "chai": "^4.5.0",
     "eslint": "^9.25.1",
     "image-size": "^2.0.1",
