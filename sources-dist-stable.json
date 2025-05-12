@@ -1551,6 +1551,12 @@
     "type": "messaging",
     "version": "1.1.0"
   },
+  "matter": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.matter/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.matter/main/admin/matter.png",
+    "type": "iot-systems"
+    "version": "0.5.0"
+  },
   "maveo": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.maveo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.maveo/master/admin/maveo.png",
