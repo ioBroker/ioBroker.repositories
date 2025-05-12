@@ -1554,7 +1554,7 @@
   "matter": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.matter/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.matter/main/admin/matter.png",
-    "type": "iot-systems"
+    "type": "iot-systems",
     "version": "0.5.0"
   },
   "maveo": {
