@@ -223,7 +223,7 @@ describe('Test Repository', () => {
                     console.info(`adapter types are not equal in ${id}: ${repo.type} !== ${res.common.type}`);
                 }
             } catch (err) {
-                console.error(`Meta of adapter ${id}: ${repo.meta} not gettable`);
+                console.error(`Meta of adapter ${id}: ${repo.meta} not gettable - ${err}`);
                 error = true;
             }
             if (repo.icon && !cache[repo.icon]) {
@@ -231,7 +231,7 @@ describe('Test Repository', () => {
                     await request(repo.icon);
                     cache[repo.icon] = true;
                 } catch(err){
-                    console.error(`Icon of adapter ${id}: ${repo.icon} not gettable`);
+                    console.error(`Icon of adapter ${id}: ${repo.icon} not gettable - ${err}`);
                     error = true;
                 }
             }
