@@ -6,6 +6,10 @@ let latest;
 let stable;
 let axiosCounter = 0;
 
+axios.defaults.headers = {
+    'Authorization': process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
+};
+
 async function request(url) {
     axiosCounter++;
     if (axiosCounter % 5) {
