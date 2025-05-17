@@ -92,7 +92,7 @@ describe('Test Repository', () => {
             }
             i++;
         }
-    }).timeout(600000);
+    }).timeout(1200000);
 
     it('Test Repository: Versions in latest', done => {
         latest = latest || require('../sources-dist.json');
@@ -252,10 +252,10 @@ describe('Test Repository', () => {
     it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async () => {
         latest = latest || require('../sources-dist.json');
         await checkRepos('latest', latest);
-    }).timeout(1200000);
+    }).timeout(3600000);
 
     it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async () => {
         stable = stable || require('../sources-dist-stable.json');
         await checkRepos('stable', stable)
-    }).timeout(1200000);
+    }).timeout(3600000);
 });
