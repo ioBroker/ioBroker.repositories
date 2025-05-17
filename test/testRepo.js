@@ -12,10 +12,11 @@ axios.defaults.headers = {
 };
 
 async function request(url) {
-    axiosCounter++;
-    if (axiosCounter % 5) {
-        await new Promise(resolve => setTimeout(resolve, 300));
-    }
+    // axiosCounter++;
+    // if (axiosCounter % 5) {
+    //     await new Promise(resolve => setTimeout(resolve, 300));
+    // }
+    await new Promise(resolve => setTimeout(resolve, 1000));
     return axios(url);
 }
 
