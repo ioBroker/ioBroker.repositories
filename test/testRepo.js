@@ -6,6 +6,7 @@ let latest;
 let stable;
 let axiosCounter = 0;
 
+console.log( `OWN_GITHUB_TOKEN: ${process.env.OWN_GITHUB_TOKEN}`);
 axios.defaults.headers = {
     'Authorization': process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
 };
