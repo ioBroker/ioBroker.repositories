@@ -7,9 +7,12 @@ let stable;
 let axiosCounter = 0;
 
 console.log( `OWN_GITHUB_TOKEN: ${process.env.OWN_GITHUB_TOKEN}`);
-axios.defaults.headers = {
-    'Authorization': process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-};
+// axios.defaults.headers = {
+//     'Authorization': process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
+// };
+if (process.env.OWN_GITHUB_TOKEN) {
+    axios.defaults.headers.common['Authorization'] = `Bearer ${process.env.OWN_GITHUB_TOKEN}`;
+}
 
 async function request(url) {
     // axiosCounter++;
