@@ -3090,6 +3090,11 @@
     "icon": "https://raw.githubusercontent.com/theknut/ioBroker.waterkotte-easycon/main/admin/waterkotte-easycon.png",
     "type": "climate-control"
   },
+  "wbec": {
+    "meta": "https://raw.githubusercontent.com/jb-io/ioBroker.wbec/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/jb-io/ioBroker.wbec/master/admin/wbec.png",
+    "type": "iot-systems"
+  },
   "weather-warnings": {
     "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.weather-warnings/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.weather-warnings/main/admin/weather-warnings.png",
