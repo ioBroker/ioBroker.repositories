@@ -406,8 +406,8 @@
     "version": "0.9.0"
   },
   "countdown": {
-    "meta": "https://raw.githubusercontent.com/jack-blackson/ioBroker.countdown/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/jack-blackson/ioBroker.countdown/master/admin/countdown.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.countdown/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.countdown/master/admin/countdown.png",
     "type": "misc-data",
     "version": "2.3.0"
   },
@@ -1636,8 +1636,8 @@
     "version": "1.17.0"
   },
   "meteoalarm": {
-    "meta": "https://raw.githubusercontent.com/jack-blackson/ioBroker.meteoalarm/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/jack-blackson/ioBroker.meteoalarm/master/admin/meteoalarm.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.meteoalarm/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.meteoalarm/master/admin/meteoalarm.png",
     "type": "weather",
     "version": "3.0.3"
   },
