@@ -6,11 +6,20 @@ let latest;
 let stable;
 let axiosCounter = 0;
 
+console.log( `OWN_GITHUB_TOKEN: ${process.env.OWN_GITHUB_TOKEN}`);
+// axios.defaults.headers = {
+//     'Authorization': process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
+// };
+if (process.env.OWN_GITHUB_TOKEN) {
+    axios.defaults.headers.common['Authorization'] = `Bearer ${process.env.OWN_GITHUB_TOKEN}`;
+}
+
 async function request(url) {
-    axiosCounter++;
-    if (axiosCounter % 5) {
-        await new Promise(resolve => setTimeout(resolve, 300));
-    }
+    // axiosCounter++;
+    // if (axiosCounter % 5) {
+    //     await new Promise(resolve => setTimeout(resolve, 300));
+    // }
+    await new Promise(resolve => setTimeout(resolve, 1000));
     return axios(url);
 }
 
@@ -86,7 +95,7 @@ describe('Test Repository', () => {
             }
             i++;
         }
-    }).timeout(600000);
+    }).timeout(1200000);
 
     it('Test Repository: Versions in latest', done => {
         latest = latest || require('../sources-dist.json');
@@ -223,7 +232,7 @@ describe('Test Repository', () => {
                     console.info(`adapter types are not equal in ${id}: ${repo.type} !== ${res.common.type}`);
                 }
             } catch (err) {
-                console.error(`Meta of adapter ${id}: ${repo.meta} not gettable`);
+                console.error(`Meta of adapter ${id}: ${repo.meta} not gettable - ${err}`);
                 error = true;
             }
             if (repo.icon && !cache[repo.icon]) {
@@ -231,7 +240,7 @@ describe('Test Repository', () => {
                     await request(repo.icon);
                     cache[repo.icon] = true;
                 } catch(err){
-                    console.error(`Icon of adapter ${id}: ${repo.icon} not gettable`);
+                    console.error(`Icon of adapter ${id}: ${repo.icon} not gettable - ${err}`);
                     error = true;
                 }
             }
@@ -246,10 +255,10 @@ describe('Test Repository', () => {
     it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async () => {
         latest = latest || require('../sources-dist.json');
         await checkRepos('latest', latest);
-    }).timeout(1200000);
+    }).timeout(3600000);
 
     it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async () => {
         stable = stable || require('../sources-dist-stable.json');
         await checkRepos('stable', stable)
-    }).timeout(1200000);
+    }).timeout(3600000);
 });

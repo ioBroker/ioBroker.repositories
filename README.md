@@ -126,11 +126,7 @@ This is not suitable.
 
 Because of that, we ask you to give ioBroker organisation publish rights to update the npm package. We will use it only in emergency, or if the author does not react to our requests.
 
-To add the ioBroker organisation to npm packet, you must write the following after the packet is published:
-
-`npm access grant read-write iobroker:developers iobroker.<adaptername>`
-
-If the command does not work, just add `bluefox` as an owner.
+Please just add `bluefox` as an owner.
 
 `npm owner add bluefox iobroker.<adaptername>`
 

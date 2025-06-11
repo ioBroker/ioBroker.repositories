@@ -406,8 +406,8 @@
     "type": "misc-data"
   },
   "countdown": {
-    "meta": "https://raw.githubusercontent.com/jack-blackson/ioBroker.countdown/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/jack-blackson/ioBroker.countdown/master/admin/countdown.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.countdown/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.countdown/master/admin/countdown.png",
     "type": "misc-data"
   },
   "cul": {
@@ -509,6 +509,11 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.dreame/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.dreame/master/admin/dreame.png",
     "type": "household"
+  },
+  "drops-weather": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.drops-weather/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.drops-weather/main/admin/drops-weather.png",
+    "type": "weather"
   },
   "ds18b20": {
     "meta": "https://raw.githubusercontent.com/crycode-de/ioBroker.ds18b20/master/io-package.json",
@@ -621,8 +626,8 @@
     "type": "energy"
   },
   "enet": {
-    "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.enet/master/admin/enet.png",
+    "meta": "https://raw.githubusercontent.com/stoffel7/ioBroker.enet/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/stoffel7/ioBroker.enet/master/admin/enet.png",
     "type": "iot-systems"
   },
   "enigma2": {
@@ -988,7 +993,7 @@
   "hilink": {
     "meta": "https://raw.githubusercontent.com/bondrogeen/ioBroker.hilink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/bondrogeen/ioBroker.hilink/master/admin/hilink.png",
-    "type": "hardware"
+    "type": "infrastructure"
   },
   "hiob": {
     "meta": "https://raw.githubusercontent.com/moba15/ioBroker.hiob/main/io-package.json",
@@ -1266,11 +1271,6 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/admin/kecontact.png",
     "type": "hardware"
   },
-  "kisshome-research": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.kisshome-research/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.kisshome-research/main/admin/kisshome-research.png",
-    "type": "utility"
-  },
   "klf200": {
     "meta": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/admin/klf200.png",
@@ -1537,8 +1537,8 @@
     "type": "communication"
   },
   "meteoalarm": {
-    "meta": "https://raw.githubusercontent.com/jack-blackson/ioBroker.meteoalarm/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/jack-blackson/ioBroker.meteoalarm/master/admin/meteoalarm.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.meteoalarm/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.meteoalarm/master/admin/meteoalarm.png",
     "type": "weather"
   },
   "mhi-wfrac": {
@@ -3188,7 +3188,7 @@
   "wireless-settings": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.wireless-settings/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.wireless-settings/master/admin/wireless-settings.png",
-    "type": "network"
+    "type": "communication"
   },
   "withings": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.withings/master/io-package.json",
