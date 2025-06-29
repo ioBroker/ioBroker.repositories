@@ -1986,6 +1986,11 @@
     "icon": "https://raw.githubusercontent.com/unltdnetworx/ioBroker.pi-hole/master/admin/pi-hole.png",
     "type": "network"
   },
+  "pi-hole2": {
+    "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.pi-hole2/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.pi-hole2/main/admin/pi-hole2.png",
+    "type": "network"
+  },
   "pid": {
     "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.pid/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/mcm4iob/ioBroker.pid/master/admin/pid.png",
