@@ -1929,6 +1929,12 @@
     "type": "multimedia",
     "version": "2.1.2"
   },
+  "onlycat": {
+    "meta": "https://raw.githubusercontent.com/Sickboy78/ioBroker.onlycat/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Sickboy78/ioBroker.onlycat/main/admin/onlycat.png",
+    "type": "iot-systems",
+    "version": "0.3.0"
+  },
   "onvif": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.onvif/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.onvif/main/admin/onvif.png",
