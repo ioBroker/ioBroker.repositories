@@ -1856,6 +1856,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.opcua/master/admin/opcua.png",
     "type": "protocols"
   },
+  "openmediavault": {
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.openmediavault/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.openmediavault/master/admin/openmediavault.png",
+    "type": "infrastructure"
+  },  
   "opendtu": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.opendtu/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.opendtu/main/admin/opendtu.png",
