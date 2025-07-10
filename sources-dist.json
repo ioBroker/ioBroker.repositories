@@ -3105,6 +3105,11 @@
     "icon": "https://raw.githubusercontent.com/woessmich/ioBroker.weatherflow_udp/master/admin/weatherflow_udp.png",
     "type": "weather"
   },
+  "weathersense": {
+    "meta": "https://raw.githubusercontent.com/ltspicer/ioBroker.weathersense/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ltspicer/ioBroker.weathersense/main/admin/weathersense.png",
+    "type": "metering"
+  },
   "weatherunderground": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.weatherunderground/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.weatherunderground/master/admin/wu.png",
