@@ -1,0 +1,38 @@
+#
+# This workflow scans a dedicated list of adapters (hardcode at setStableTag.js) and ensures that the release number listed 
+# at sources-dist-stable.json and the release tagged as 'stable' at npm are identical. If a difference is detected, the dist-tag 
+# at npmjs is changed to meet the contents of sources-dist-stable.json.
+#
+# This workflow is triggered by any push and additionally runs once a day
+#
+
+name: Set stable tag
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches: [ "master" ]
+
+  schedule:
+    # * is a special character in YAML, so you have to quote this string
+    # every day at 1:00:00
+    - cron:  '0 1 * * *'
+  
+jobs:
+  set-stable-tag:
+    name: set stable tag
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories'
+      
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm i
+      - run: npm run setStableTag
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TAG }}

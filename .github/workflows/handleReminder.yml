@@ -1,0 +1,40 @@
+# This workflow will triage pull requests and apply a label based on the
+# paths that are modified in the pull request.
+
+name: Handle Reminder
+
+on:
+  pull_request_target:
+    types: [labeled]
+
+  issue_comment:
+ 
+  workflow_dispatch:
+
+  schedule:
+    # * is a special character in YAML, so you have to quote this string
+    # every day
+    - cron:  '0 1 * * *'
+
+# avoid concurrengt runs
+#concurrency:
+#  group: check-reminder
+#  cancel-in-progress: true
+
+jobs:
+  handleReminder:
+    name: handlereminder
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm i
+      - run: npm run handleReminder
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
