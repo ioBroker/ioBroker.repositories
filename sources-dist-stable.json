@@ -1299,12 +1299,6 @@
     "type": "visualization",
     "version": "3.0.0"
   },
-  "iwg-vpn": {
-    "meta": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/admin/iwg-vpn.png",
-    "type": "communication",
-    "version": "3.0.0"
-  },
   "jablotron": {
     "meta": "https://raw.githubusercontent.com/DEV2DEV-DE/ioBroker.jablotron/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DEV2DEV-DE/ioBroker.jablotron/main/admin/jablotron.png",
