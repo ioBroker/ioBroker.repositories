@@ -1051,8 +1051,8 @@
     "type": "household"
   },
   "homepilot": {
-    "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/admin/homepilot.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homepilot/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homepilot/master/admin/homepilot.png",
     "type": "iot-systems"
   },
   "hoover": {
