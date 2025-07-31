@@ -1120,8 +1120,8 @@
     "version": "0.0.2"
   },
   "homepilot": {
-    "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/admin/homepilot.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homepilot/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homepilot/master/admin/homepilot.png",
     "type": "iot-systems",
     "version": "1.2.3"
   },
