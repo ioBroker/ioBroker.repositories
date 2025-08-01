@@ -1060,6 +1060,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.hoover/main/admin/hoover.png",
     "type": "household"
   },
+  "hoymiles-ms": {
+    "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.hoymiles-ms/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mcm1957/ioBroker.hoymiles-ms/main/admin/hoymiles-ms.png",
+    "type": "hardware"
+  },
   "hp-ilo": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/admin/hp-ilo.png",
