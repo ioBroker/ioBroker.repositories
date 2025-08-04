@@ -339,6 +339,12 @@
     "type": "household",
     "version": "1.1.0"
   },
+  "bydhvs": {
+    "meta": "https://raw.githubusercontent.com/christianH17/ioBroker.bydhvs/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/christianH17/ioBroker.bydhvs/master/admin/bydhvs.png",
+    "type": "energy",
+    "version": "1.5.0"
+  },
   "cameras": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cameras/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cameras/master/admin/cameras.png",
