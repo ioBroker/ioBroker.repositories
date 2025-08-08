@@ -1746,6 +1746,11 @@
     "icon": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/master/admin/netro.png",
     "type": "garden"
   },
+  "nextcloudtalk": {
+    "meta": "https://raw.githubusercontent.com/Rello/ioBroker.nextcloudtalk/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Rello/ioBroker.nextcloudtalk/master/admin/nextcloud.png",
+    "type": "messaging"
+  },
   "nina": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/admin/nina.png",
