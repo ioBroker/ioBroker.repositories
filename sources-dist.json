@@ -1051,14 +1051,19 @@
     "type": "household"
   },
   "homepilot": {
-    "meta": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Pix---/ioBroker.homepilot/master/admin/homepilot.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homepilot/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homepilot/master/admin/homepilot.png",
     "type": "iot-systems"
   },
   "hoover": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.hoover/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.hoover/main/admin/hoover.png",
     "type": "household"
+  },
+  "hoymiles-ms": {
+    "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.hoymiles-ms/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mcm4iob/ioBroker.hoymiles-ms/main/admin/hoymiles-ms.png",
+    "type": "hardware"
   },
   "hp-ilo": {
     "meta": "https://raw.githubusercontent.com/SebastianSchultz/ioBroker.hp-ilo/master/io-package.json",
@@ -1230,11 +1235,6 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.iqontrol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.iqontrol/master/admin/iqontrol.png",
     "type": "visualization"
-  },
-  "iwg-vpn": {
-    "meta": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iwg-vpn/ioBroker.iwg-vpn/main/admin/iwg-vpn.png",
-    "type": "communication"
   },
   "jablotron": {
     "meta": "https://raw.githubusercontent.com/DEV2DEV-DE/ioBroker.jablotron/main/io-package.json",
@@ -2211,11 +2211,6 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ring/master/admin/ring.png",
     "type": "hardware"
   },
-  "rmb-bhkw": {
-    "meta": "https://raw.githubusercontent.com/satchafunkilus/ioBroker.rmb-bhkw/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/satchafunkilus/ioBroker.rmb-bhkw/master/admin/rmb-bhkw.png",
-    "type": "energy"
-  },
   "roadtraffic": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roadtraffic/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roadtraffic/master/admin/roadtraffic.png",
@@ -3124,6 +3119,11 @@
     "meta": "https://raw.githubusercontent.com/woessmich/ioBroker.weatherflow_udp/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/woessmich/ioBroker.weatherflow_udp/master/admin/weatherflow_udp.png",
     "type": "weather"
+  },
+  "weathersense": {
+    "meta": "https://raw.githubusercontent.com/ltspicer/ioBroker.weathersense/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ltspicer/ioBroker.weathersense/main/admin/weathersense.png",
+    "type": "metering"
   },
   "weatherunderground": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.weatherunderground/master/io-package.json",
