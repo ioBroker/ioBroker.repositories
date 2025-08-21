@@ -3275,6 +3275,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.xs1/master/admin/xs1.png",
     "type": "iot-systems"
   },
+  "xsense": {
+    "meta": "https://raw.githubusercontent.com/arteck/ioBroker.xsense/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/arteck/ioBroker.xsense/master/admin/xsense.png",
+    "type": "iot-systems"
+  },
   "xterm": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.xterm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.xterm/master/admin/xterm.png",
