@@ -995,11 +995,6 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hikvision-alarmserver/main/admin/hikvision-alarmserver.png",
     "type": "alarm"
   },
-  "hilink": {
-    "meta": "https://raw.githubusercontent.com/bondrogeen/ioBroker.hilink/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/bondrogeen/ioBroker.hilink/master/admin/hilink.png",
-    "type": "infrastructure"
-  },
   "hiob": {
     "meta": "https://raw.githubusercontent.com/moba15/ioBroker.hiob/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/moba15/ioBroker.hiob/main/admin/hiob.png",
