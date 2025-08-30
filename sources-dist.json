@@ -2656,11 +2656,6 @@
     "icon": "https://raw.githubusercontent.com/hombach/ioBroker.teslafi/master/admin/teslafi.png",
     "type": "vehicle"
   },
-  "teslamateapi": {
-    "meta": "https://raw.githubusercontent.com/virusbrain/ioBroker.teslamateapi/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/virusbrain/ioBroker.teslamateapi/main/admin/teslamateapi.png",
-    "type": "vehicle"
-  },
   "text2command": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.text2command/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.text2command/master/admin/text2command.png",
