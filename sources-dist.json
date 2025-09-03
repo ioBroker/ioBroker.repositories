@@ -1916,6 +1916,11 @@
     "icon": "https://raw.githubusercontent.com/N-b-dy/ioBroker.oxxify-fan-control/main/admin/oxxify-fan-control.png",
     "type": "climate-control"
   },
+  "p2pool": {
+    "meta": "https://raw.githubusercontent.com/oelison/ioBroker.p2pool/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/oelison/ioBroker.p2pool/main/admin/p2pool.png",
+    "type": "misc-data"
+  },
   "palazzetti": {
     "meta": "https://raw.githubusercontent.com/inapsis/ioBroker.palazzetti/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/inapsis/ioBroker.palazzetti/master/admin/palazzetti.png",
