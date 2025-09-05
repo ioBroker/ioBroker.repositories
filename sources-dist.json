@@ -1701,6 +1701,11 @@
     "icon": "https://raw.githubusercontent.com/SKB-CGN/ioBroker.mywallbox/main/admin/wallbox.png",
     "type": "hardware"
   },
+  "n8n": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.n8n/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.n8n/main/admin/n8n.svg",
+    "type": "logic"
+  },
   "nanoleaf-lightpanels": {
     "meta": "https://raw.githubusercontent.com/daniel-2k/ioBroker.nanoleaf-lightpanels/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/daniel-2k/ioBroker.nanoleaf-lightpanels/master/admin/nanoleaf-lightpanels.png",
