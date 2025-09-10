@@ -2109,6 +2109,12 @@
     "type": "network",
     "version": "1.6.2"
   },
+  "pirate-weather": {
+    "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.pirate-weather/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.pirate-weather/main/admin/pirate-weather.png",
+    "type": "weather",
+    "version": "0.4.0"
+  },
   "pixelit": {
     "meta": "https://raw.githubusercontent.com/pixelit-project/ioBroker.pixelit/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/pixelit-project/ioBroker.pixelit/master/admin/pixelit.png",
