@@ -303,6 +303,12 @@
     "type": "household",
     "version": "2.2.0"
   },
+  "brightsky": {
+    "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.brightsky/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.brightsky/main/admin/brightsky.png",
+    "type": "weather",
+    "version": "0.2.4"
+  },
   "bring": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.bring/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.bring/master/admin/bring.png",
@@ -2979,17 +2985,17 @@
     "type": "visualization-widgets",
     "version": "2.0.1"
   },
-  "vis-2-widgets-inventwo": {
-    "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-2-widgets-inventwo/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-2-widgets-inventwo/main/admin/vis-2-widgets-inventwo.png",
-    "type": "visualization-widgets",
-    "version": "0.2.2"
-  },
   "vis-2-widgets-icontwo": {
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-2-widgets-icontwo/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-2-widgets-icontwo/main/admin/vis-2-widgets-icontwo.png",
     "type": "visualization-widgets",
     "version": "0.22.0"
+  },
+  "vis-2-widgets-inventwo": {
+    "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-2-widgets-inventwo/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-2-widgets-inventwo/main/admin/vis-2-widgets-inventwo.png",
+    "type": "visualization-widgets",
+    "version": "0.2.2"
   },
   "vis-2-widgets-jaeger-design": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-jaeger-design/main/io-package.json",
