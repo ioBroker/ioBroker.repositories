@@ -497,7 +497,7 @@
   },
   "docker-manager": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.docker-manager/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBrokers/ioBroker.docker-manager/main/admin/docker-manager.svg",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.docker-manager/main/admin/docker-manager.svg",
     "type": "infrastructure"
   },
   "doorbird": {
