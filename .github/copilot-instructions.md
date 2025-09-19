@@ -196,3 +196,10 @@ When making changes, always:
 3. Update tests if adding new functionality
 4. Maintain backward compatibility
 5. Document breaking changes clearly
+
+## Important Copilot Guidelines
+
+### PR Review Policy
+**NEVER add reviews to PRs** for adding an adapter to the latest or stable repository or for updates of the stable repository version. **No review remarks should be added** if only `sources-dist.json` or `sources-dist-stable.json` are changed by a PR.
+
+This is enforced automatically in `lib/check.js` which skips the review process when PRs only modify repository files.
