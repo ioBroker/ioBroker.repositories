@@ -2577,6 +2577,12 @@
     "type": "communication",
     "version": "6.7.1"
   },
+  "sofarcloud": {
+    "meta": "https://raw.githubusercontent.com/ltspicer/ioBroker.sofarcloud/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ltspicer/ioBroker.sofarcloud/main/admin/sofarcloud.jpg",
+    "type": "energy",
+    "version": "3.2.2"
+  },
   "solaredge": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solaredge/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solaredge/master/admin/solaredge.png",
