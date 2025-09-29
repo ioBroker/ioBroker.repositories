@@ -3130,6 +3130,11 @@
     "icon": "https://raw.githubusercontent.com/woessmich/ioBroker.weatherflow_udp/master/admin/weatherflow_udp.png",
     "type": "weather"
   },
+  "weatherflow-tempest-api": {
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.weatherflow-tempest-api/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.weatherflow-tempest-api/master/admin/weatherflow-tempest-api.png",
+    "type": "weather"
+  },  
   "weathersense": {
     "meta": "https://raw.githubusercontent.com/ltspicer/ioBroker.weathersense/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ltspicer/ioBroker.weathersense/main/admin/weathersense.png",
