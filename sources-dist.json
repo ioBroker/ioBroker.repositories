@@ -2274,7 +2274,7 @@
   "sbms": {
     "meta": "https://raw.githubusercontent.com/buffoletti/ioBroker.sbms/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/buffoletti/ioBroker.sbms/main/admin/sbms.png",
-    "type": "con"
+    "type": "energy"
   },
   "scenes": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/io-package.json",
