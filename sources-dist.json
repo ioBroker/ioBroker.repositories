@@ -515,6 +515,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.dreame/master/admin/dreame.png",
     "type": "household"
   },
+  "dreamehome": {
+    "meta": "https://raw.githubusercontent.com/spayrosam/ioBroker.dreamehome/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/spayrosam/ioBroker.dreamehome/main/admin/dreamehome.png",
+    "type": "household"
+  },
   "drops-weather": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.drops-weather/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.drops-weather/main/admin/drops-weather.png",
@@ -3135,16 +3140,16 @@
     "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.weather-warnings/main/admin/weather-warnings.png",
     "type": "weather"
   },
+  "weatherflow-tempest-api": {
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.weatherflow-tempest-api/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.weatherflow-tempest-api/master/admin/weatherflow-tempest-api.png",
+    "type": "weather"
+  },
   "weatherflow_udp": {
     "meta": "https://raw.githubusercontent.com/woessmich/ioBroker.weatherflow_udp/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/woessmich/ioBroker.weatherflow_udp/master/admin/weatherflow_udp.png",
     "type": "weather"
   },
-  "weatherflow-tempest-api": {
-    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.weatherflow-tempest-api/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.weatherflow-tempest-api/master/admin/weatherflow-tempest-api.png",
-    "type": "weather"
-  },  
   "weathersense": {
     "meta": "https://raw.githubusercontent.com/ltspicer/ioBroker.weathersense/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ltspicer/ioBroker.weathersense/main/admin/weathersense.png",
