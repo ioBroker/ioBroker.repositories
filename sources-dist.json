@@ -2796,8 +2796,8 @@
     "type": "network"
   },
   "unifi-network": {
-    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.unifi-network/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.unifi-network/master/admin/unifi-network.png",
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.unifi-network/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.unifi-network/main/admin/unifi-network.png",
     "type": "network"
   },  
   "unifi-protect": {
@@ -3146,8 +3146,8 @@
     "type": "weather"
   },
   "weatherflow-tempest-api": {
-    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.weatherflow-tempest-api/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.weatherflow-tempest-api/master/admin/weatherflow-tempest-api.png",
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.weatherflow-tempest-api/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.weatherflow-tempest-api/main/admin/weatherflow-tempest-api.png",
     "type": "weather"
   },  
   "weathersense": {
