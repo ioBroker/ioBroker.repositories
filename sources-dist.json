@@ -1857,8 +1857,8 @@
     "type": "protocols"
   },
   "openmediavault": {
-    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.openmediavault/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.openmediavault/master/admin/openmediavault.png",
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.openmediavault/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.openmediavault/main/admin/openmediavault.png",
     "type": "infrastructure"
   },  
   "opendtu": {
