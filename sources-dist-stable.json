@@ -2901,6 +2901,12 @@
     "type": "network",
     "version": "0.7.0"
   },
+  "unifi-network": {
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.unifi-network/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.unifi-network/main/admin/unifi-network.png",
+    "type": "network",
+    "version": "1.1.6"
+  },
   "unifi-protect": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.unifi-protect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.unifi-protect/master/admin/unifi-protect.png",
