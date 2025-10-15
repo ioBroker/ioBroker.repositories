@@ -495,6 +495,11 @@
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.dnscope/main/admin/dnscope.png",
     "type": "network"
   },
+  "docker-manager": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.docker-manager/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.docker-manager/main/admin/docker-manager.svg",
+    "type": "infrastructure"
+  },
   "doorbird": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.doorbird/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.doorbird/master/admin/doorbird.png",
