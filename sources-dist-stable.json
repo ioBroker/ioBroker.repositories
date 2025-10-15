@@ -3414,7 +3414,7 @@
    "xsense": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.xsense/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.xsense/master/admin/xsense.png",
-    "type": "iot-systems",
+    "type": "utility",
     "version": "0.1.2"
   },
   "xterm": {
