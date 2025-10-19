@@ -386,8 +386,8 @@
     "type": "logic"
   },
   "contact": {
-    "meta": "https://raw.githubusercontent.com/WLAN-Kabel/ioBroker.contact/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/WLAN-Kabel/ioBroker.contact/master/admin/contact.png",
+    "meta": "https://raw.githubusercontent.com/maxblome/ioBroker.contact/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/maxblome/ioBroker.contact/master/admin/contact.png",
     "type": "misc-data"
   },
   "contactid": {
