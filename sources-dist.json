@@ -2781,8 +2781,8 @@
     "type": "vehicle"
   },
   "tunnelbroker-endpoint-updater": {
-    "meta": "https://raw.githubusercontent.com/PowerPan/ioBroker.tunnelbroker-endpoint-updater/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/PowerPan/ioBroker.tunnelbroker-endpoint-updater/master/admin/tunnelbroker-endpoint-updater.png",
+    "meta": "https://raw.githubusercontent.com/wattnpapa/ioBroker.tunnelbroker-endpoint-updater/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/wattnpapa/ioBroker.tunnelbroker-endpoint-updater/master/admin/tunnelbroker-endpoint-updater.png",
     "type": "network"
   },
   "tuya": {
