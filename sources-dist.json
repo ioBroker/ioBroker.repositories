@@ -1677,8 +1677,8 @@
     "type": "energy"
   },
   "myq": {
-    "meta": "https://raw.githubusercontent.com/StrathCole/ioBroker.myq/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/StrathCole/ioBroker.myq/master/admin/myq.png",
+    "meta": "https://raw.githubusercontent.com/pixcept/ioBroker.myq/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/pixcept/ioBroker.myq/master/admin/myq.png",
     "type": "iot-systems"
   },
   "mysensors": {
@@ -2052,8 +2052,8 @@
     "type": "iot-systems"
   },
   "plenticore": {
-    "meta": "https://raw.githubusercontent.com/StrathCole/ioBroker.plenticore/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/StrathCole/ioBroker.plenticore/master/admin/plenticore.png",
+    "meta": "https://raw.githubusercontent.com/pixcept/ioBroker.plenticore/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/pixcept/ioBroker.plenticore/master/admin/plenticore.png",
     "type": "energy"
   },
   "plenticore-g3": {
