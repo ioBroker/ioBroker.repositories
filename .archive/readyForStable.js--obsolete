@@ -5,6 +5,8 @@ const {
     createIssue
 } = require('./common');
 
+const debug = false;
+
 const axios = require('axios');
 const semver = require('semver');
 
@@ -84,7 +86,18 @@ async function checkIssues(latest, stable, stats, result) {
             issues = issues.filter(i => i.state === 'open' && i.title.includes(TITLE));
             for (const issue of issues) {
                 const issueId = issues[0].number;
-                console.log(`\n${adapter}: [ https://www.github.com/${owner}/iobroker.${adapter} ]`);
+
+				// ########SCRIPT IS END OF LOIFE - closing all issues #################
+                console.log(`    ${issue.title} detected - issue ${issueId} - will close issue due to cleanup`);
+				try {
+					await closeIssue(owner, adapter, issueId);
+				} catch (e) {
+					console.log(e);
+				}
+				continue;
+				// #####################################################################
+				
+				console.log(`\n${adapter}: [ https://www.github.com/${owner}/iobroker.${adapter} ]`);
                 const res = result.filter(r => r.adapter === adapter);
                 let newTitle = '';
                 if (res.length) newTitle = `${TITLE} from ${res[0].stable.version} to ${res[0].latest.version}`;
@@ -173,6 +186,7 @@ async function getDiff(latest, stable, stats) {
 
     Object.keys(latest)
         .forEach(adapter => {
+            debug && console.log(`\n[DEBUG] processing ioBroker.${adapter} ...`);
             if (!adapter.startsWith('_') && !stable[adapter] ) {
 				if ( !stats.versions[adapter] ) {
 					console.log(`\nWARNING: Adapter ${adapter} not yet provides statistics`);
@@ -225,7 +239,13 @@ async function getDiff(latest, stable, stats) {
 
     Object.keys(stable)
         .forEach(adapter => {
-            if (!adapter.startsWith('_') && stable[adapter].version !== latest[adapter].version) {
+            debug && console.log(`\n[DEBUG] processing ioBroker.${adapter} ...`);
+			if (!adapter.startsWith('_') && stable[adapter].version !== latest[adapter].version) {
+
+            	if ( !stats.versions[adapter] ) {
+					console.log(`\nWARNING: Adapter ${adapter} not provide statistics`);
+					return;
+				}
 
                 const now = new Date();
                 const latestTime = new Date(latest[adapter].versionDate);
@@ -350,17 +370,17 @@ async function doIt() {
 	console.log(`\nchecking issues...`);
 	await checkIssues(latest, stable, stats, result);
 
-	console.log(`\ncreating issues...`);
-	for (const adapter of result) {
-		await generateIssue(adapter, master);
-	}
+	//console.log(`\ncreating issues...`);
+	//for (const adapter of result) {
+	//	await generateIssue(adapter, master);
+	//}
 
-	console.log(`\ntrigger repository checks...`);
-	for (const adapter of result) {
-       	await triggerRepoCheck(adapter);
-		console.log('waiting 60s ...');
-		await sleep(60000); // limit to 1 call per minute
-	}
+	//console.log(`\ntrigger repository checks...`);
+	//for (const adapter of result) {
+    //   	await triggerRepoCheck(adapter);
+	//	console.log('waiting 60s ...');
+	//	await sleep(60000); // limit to 1 call per minute
+	//}
 
 	return ('done');
 }
