@@ -2533,7 +2533,7 @@
     "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.skiinfo/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.skiinfo/main/admin/skiinfo.png",
     "type": "misc-data",
-    "version": "0.5.0"
+    "version": "1.0.0"
   },
   "sma-em": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sma-em/master/io-package.json",
@@ -3441,7 +3441,7 @@
     "type": "iot-systems",
     "version": "1.0.2"
   },
-   "xsense": {
+  "xsense": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.xsense/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.xsense/main/admin/xsense.png",
     "type": "utility",
