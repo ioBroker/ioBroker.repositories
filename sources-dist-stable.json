@@ -40,8 +40,8 @@
     "version": "1.0.1"
   },
   "admin": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/packages/admin/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/packages/admin/admin/admin.png",
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
     "type": "general",
     "version": "7.7.2"
   },
