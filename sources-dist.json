@@ -37,7 +37,7 @@
   },
   "admin": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.png",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.svg",
     "type": "general"
   },
   "ai-assistant": {
@@ -1895,7 +1895,7 @@
     "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.openmediavault/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.openmediavault/main/admin/openmediavault.png",
     "type": "infrastructure"
-  },  
+  },
   "opensmartcity": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.opensmartcity/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.opensmartcity/main/admin/opensmartcity.png",
@@ -3164,7 +3164,7 @@
     "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.weatherflow-tempest-api/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.weatherflow-tempest-api/main/admin/weatherflow-tempest-api.png",
     "type": "weather"
-  },  
+  },
   "weatherflow_udp": {
     "meta": "https://raw.githubusercontent.com/woessmich/ioBroker.weatherflow_udp/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/woessmich/ioBroker.weatherflow_udp/master/admin/weatherflow_udp.png",
