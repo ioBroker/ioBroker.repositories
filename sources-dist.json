@@ -1110,6 +1110,11 @@
     "icon": "https://raw.githubusercontent.com/SentiQ/ioBroker.hydrawise/main/admin/hydrawise.jpg",
     "type": "garden"
   },
+  "hyperion-connector": {
+    "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.hyperion-connector/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.hyperion-connector/main/admin/hyperion-connector.png",
+    "type": "lighting"
+  },
   "hyperion_ng": {
     "meta": "https://raw.githubusercontent.com/felixganzer/ioBroker.hyperion_ng/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/felixganzer/ioBroker.hyperion_ng/master/admin/hyperion_ng.png",
