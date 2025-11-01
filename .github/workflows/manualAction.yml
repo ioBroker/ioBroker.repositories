@@ -15,7 +15,7 @@ on:
         type: string
       issue:
         type: string
-        
+
 jobs:
   manual-action:
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: 22
       - run: npm i
       - run: npm run manualAction
         env:

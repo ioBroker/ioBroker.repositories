@@ -99,7 +99,7 @@ Additionally, to all above listed points:
 1. The adapter must have been added to the latest repository previously.
 2. Forum thread with question to test the adapter.
 3. Some feedback on [forum](http://forum.iobroker.net).
-4. **Important** Discovery function! If a device can be found automatically (USB, IP) it should be implemented in discovery adapter after (Discovery PR will be merged after stable acceptance).
+4. **Important** Discovery function! If a device can be found automatically (USB, IP), it should be implemented in discovery adapter after (Discovery PR will be merged after stable acceptance).
 
 ## Common Rules and Requirements for Commercial Adapters Requiring a License
 ioBroker GmbH sponsors all infrastructure and services necessary for the smooth functioning of the ioBroker world. This encompasses the repository, central components, and platforms such as the Forum. While the usage of open-source "non-commercial" adapters is entirely free, the scenario changes when adapters necessitate a purchase.
@@ -116,7 +116,7 @@ https://docs.npmjs.com/getting-started/publishing-npm-packages
 ### Add an owner to a packet
 We are really happy that other developers are contributing to ioBroker. But some of them with the time lost the enthusiasm and stopped support and maintaining the adapter.
 
-There is no problem with GitHub repository. We can just fork it and maintain it in our organisation, but the situation with `npm` is different.
+There is no problem with GitHub repository. We can just fork it and maintain it in our organization, but the situation with `npm` is different.
 
 If some name is blocked (e.g., `iobroker.rpi`) we cannot publish the changed adapter under the same name, we must change the name to e.g., iobroker.rpi2.
 
@@ -130,7 +130,9 @@ Please just add `bluefox` as an owner.
 
 `npm owner add bluefox iobroker.<adaptername>`
 
-Attention: bluefox must accept the invite. This might last a day or two. So please be patient until the invite has been accepted. If invite expires, please retry (send a second invite).
+Attention: bluefox must accept the invite.
+This might last a day or two. So please be patient until the invite has been accepted.
+If the invite expires, please retry (send a second invite).
 
 ### Example of README.md
 
@@ -186,12 +188,12 @@ An example can be seen [here](https://github.com/ioBroker/ioBroker.template/blob
 - `hardware` - different multi-purpose hardware, arduino, esp, bluetooth, ...
 - `household` - vacuum-cleaner, kitchen devices, ...
 - `infrastructure` - Network, printers, phones, NAS, ...
-- `iot-systems` - Other comprehensive smarthome systems (software and hardware)
+- `iot-systems` - Other comprehensive smart home systems (software and hardware)
 - `lighting` - light
 - `logic` - rules, scripts, parsers, scenes, ...
-- `messaging` - these adapters send and receive messages from message services: telegram, email, whatsapp, ...
-- `misc-data` - export/import of some unsorted information, contacts, systeminfo, gazoline prises, share curses, currents (EUR=>USD), ...
-- `multimedia` - TV, AV Receivers, TV play boxes, Android/apple TV boxes, multi-room music, IR controls, speech input/output, ...
+- `messaging` - these adapters send and receive messages from message services: telegram, email, WhatsApp, ...
+- `misc-data` - export/import of some unsorted information, contacts, system info, gasoline prises, share curses, currents (EUR=>USD), ...
+- `multimedia` - TV, AV Receivers, TV play boxes, Android/Apple TV boxes, multiroom music, IR controls, speech input/output, ...
 - `network` - ping, network detectors, UPnP, ...
 - `protocols` - Communication protocols: MQTT,
 - `storage` - logging, data protocols, SQL/NoSQL DBs, file storage, ...
@@ -254,12 +256,12 @@ For **stable** (sources-dist-stable.json):
 
 ## Automatic pull request checker
 On every pull request to the repository, the GitHub Action will be triggered (see [check.yml](.github/workflows/check.yml) ). It will check the following things:
-- Detect which adapters are changed by analysing the diff of changed files (See `detectAffectedAdapter` in [lib/check.js](lib/check.js))
+- Detect which adapters are changed by analyzing the diff of changed files (See `detectAffectedAdapter` in [lib/check.js](lib/check.js))
 - Run an adapter checker from `@iobroker/repochecker` for each changed adapter.
 - Add the comments to PR with the results of the checks.
 
 ## Issues to move the latest version of adapter to stable
-Every night the GitHub Action will be triggered at 3:15 (see [stable.yml](.github/workflows/stable.yml) ). It will check the following things:
+Every night the GitHub Action will be triggered at 3:15 (see TODO! [stable.yml](.github/workflows/stable.yml) ). It will check the following things:
 - If the latest version is good enough for stable and will create an issue if yes (See [lib/readyForStable.js](lib/readyForStable.js))
 
 ## How is the repository build? 
