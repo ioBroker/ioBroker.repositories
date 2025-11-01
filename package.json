@@ -49,6 +49,7 @@
   ],
   "devDependencies": {
     "@iobroker/repochecker": "^5.0.2",
+    "@iobroker/eslint-config": "^2.2.0",
     "axios": "^1.13.1",
     "chai": "^4.5.0",
     "eslint": "^9.34.0",
