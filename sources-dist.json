@@ -321,8 +321,8 @@
     "type": "household"
   },
   "bydhvs": {
-    "meta": "https://raw.githubusercontent.com/christianH17/ioBroker.bydhvs/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/christianH17/ioBroker.bydhvs/master/admin/bydhvs.png",
+    "meta": "https://raw.githubusercontent.com/christianh17/ioBroker.bydhvs/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/christianh17/ioBroker.bydhvs/master/admin/bydhvs.png",
     "type": "energy"
   },
   "calendar": {
@@ -451,8 +451,8 @@
     "type": "multimedia"
   },
   "device-reminder": {
-    "meta": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/xenon-s/ioBroker.device-reminder/master/admin/device-reminder.png",
+    "meta": "https://raw.githubusercontent.com/Xenon-s/ioBroker.device-reminder/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Xenon-s/ioBroker.device-reminder/master/admin/device-reminder.png",
     "type": "logic"
   },
   "device-watcher": {
@@ -1114,6 +1114,10 @@
     "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.hyperion-connector/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.hyperion-connector/main/admin/hyperion-connector.png",
     "type": "lighting"
+  "hydrop": {
+    "meta": "https://raw.githubusercontent.com/simatec/ioBroker.hydrop/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/simatec/ioBroker.hydrop/main/admin/hydrop.png",
+    "type": "metering"
   },
   "hyperion_ng": {
     "meta": "https://raw.githubusercontent.com/felixganzer/ioBroker.hyperion_ng/master/io-package.json",
@@ -1295,6 +1299,11 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/admin/kecontact.png",
     "type": "hardware"
+  },
+  "kisshome-defender": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.kisshome-defender/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.kisshome-defender/main/admin/kisshome-defender.svg",
+    "type": "utility"
   },
   "klf200": {
     "meta": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/io-package.json",
@@ -2022,8 +2031,8 @@
     "type": "general"
   },
   "piface": {
-    "meta": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/eisbaeeer/ioBroker.piface/master/admin/piface.png",
+    "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.piface/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.piface/master/admin/piface.png",
     "type": "hardware"
   },
   "pimatic": {
@@ -2491,6 +2500,11 @@
     "icon": "https://raw.githubusercontent.com/raschy/ioBroker.solarmanpv/main/admin/solarmanpv.png",
     "type": "energy"
   },
+  "solarprognose": {
+    "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.solarprognose/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.solarprognose/main/admin/solarprognose.png",
+    "type": "weather"
+  },
   "solarviewdatareader": {
     "meta": "https://raw.githubusercontent.com/afuerhoff/ioBroker.solarviewdatareader/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/afuerhoff/ioBroker.solarviewdatareader/master/admin/solarviewdatareader.png",
@@ -2734,8 +2748,8 @@
     "versionDate": "2019-08-09T20:30:26.824Z"
   },
   "tinymqttbroker": {
-    "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.tinymqttbroker/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.tinymqttbroker/main/admin/tinymqttbroker.png",
+    "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.tinyMQTTbroker/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.tinyMQTTbroker/main/admin/tinymqttbroker.png",
     "type": "protocols"
   },
   "tinyrx4": {
