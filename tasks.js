@@ -8,31 +8,38 @@ if (process.argv.includes('--init')) {
 } else if (process.argv.includes('--stable')) {
     const build = require('./lib/build');
     const tools = require('./lib/tools');
-    tools.getRepositoryFile(`https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist-stable.json`, (err, data) => {
-        if (err) {
-            console.error(err);
-            if (!data) {
-                process.exit(1);
-            }
-        }
-        build.getStats((err, stats) => {
-            if (stats) {
-                for (const adapter in stats) {
-                    if (stats.hasOwnProperty(adapter) && data[adapter]) {
-                        data[adapter].stat = stats[adapter];
-                    }
+    tools.getRepositoryFile(
+        `https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist-stable.json`,
+        (err, data) => {
+            if (err) {
+                console.error(err);
+                if (!data) {
+                    process.exit(1);
                 }
             }
-            build.processRepository(data, ['--file', '/var/www/download/sources-dist-latest.json'], () => {});
-        });
-    });
+            build.getStats((err, stats) => {
+                if (stats) {
+                    for (const adapter in stats) {
+                        if (Object.prototype.hasOwnProperty.call(stats, adapter) && data[adapter]) {
+                            data[adapter].stat = stats[adapter];
+                        }
+                    }
+                }
+                build.processRepository(data, ['--file', '/var/www/download/sources-dist-latest.json'], () => {});
+            });
+        },
+    );
 } else if (process.argv.includes('--latest')) {
     const build = require('./lib/build');
     const tools = require('./lib/tools');
-    axios(`https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist-stable.json`)
-        .then(response => {
-            const latest = response.data;
-            tools.getRepositoryFile(`https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist.json`, latest, (err, data) => {
+    axios(
+        `https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist-stable.json`,
+    ).then(response => {
+        const latest = response.data;
+        tools.getRepositoryFile(
+            `https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist.json`,
+            latest,
+            (err, data) => {
                 if (err) {
                     console.error(err);
                     !data && process.exit(1);
@@ -45,10 +52,15 @@ if (process.argv.includes('--init')) {
                             }
                         });
                     }
-                    build.processRepository(data, ['--file', '/var/www/download/sources-dist.json', '--shields', '/var/www/download/img'], () => {});
+                    build.processRepository(
+                        data,
+                        ['--file', '/var/www/download/sources-dist.json', '--shields', '/var/www/download/img'],
+                        () => {},
+                    );
                 });
-            });
-        });
+            },
+        );
+    });
 } else if (process.argv.includes('--sort')) {
     const scripts = require('./lib/scripts');
     scripts.sort().catch(e => console.error(e));

@@ -1,22 +1,27 @@
-const express        = require('express');
-const fs             = require('fs');
-const os             = require('os');
-const argv           = require('optimist').argv;
+const express = require('express');
+const fs = require('fs');
+const os = require('os');
+const argv = require('optimist').argv;
 const createLocalNpm = require('local-npm/lib/index');
 // --port=5081 --ip=192.168.1.1 --url=http://myURL:5080 --npmPort=5080
 
-function getIpAddresses () {
+function getIpAddresses() {
     const ifaces = os.networkInterfaces();
     const result = [];
     for (const iface in ifaces) {
-        if (!ifaces.hasOwnProperty(iface)) {
+        if (!Object.prototype.hasOwnProperty.call(ifaces, iface)) {
             continue;
         }
         const _iface = ifaces[iface];
         for (let alias = 0; alias < _iface.length; alias++) {
             const _alias = _iface[alias];
 
-            if ('IPv4' !== _alias.family || _alias.internal !== false || _alias.address === 'localhost' || _alias.address === '127.0.0.1') {
+            if (
+                'IPv4' !== _alias.family ||
+                _alias.internal !== false ||
+                _alias.address === 'localhost' ||
+                _alias.address === '127.0.0.1'
+            ) {
                 continue;
             }
 
@@ -26,11 +31,11 @@ function getIpAddresses () {
     return result.length ? result : null;
 }
 
-const app     = express();
-let ipAddr    = argv.ip;
-const port    = argv.port    || 5081;
+const app = express();
+let ipAddr = argv.ip;
+const port = argv.port || 5081;
 const npmPort = argv.npmPort || 5080;
-let url       = argv.url || (`http://localhost:${npmPort}`);
+let url = argv.url || `http://localhost:${npmPort}`;
 
 if (!url.match(/:(\d+)\/?/)) {
     url = `${url.replace(/:$/, '')}:${npmPort}`;
@@ -58,9 +63,9 @@ if (!ipAddr) {
     }
 }
 
-const file = require(__dirname + '/public/sources-dist-stable.json');
+const file = require(`${__dirname}/public/sources-dist-stable.json`);
 for (const a in file) {
-    if (file.hasOwnProperty(a) && file[a].extIcon) {
+    if (Object.prototype.hasOwnProperty.call(file, a) && file[a].extIcon) {
         file[a].extIcon = `http://${ipAddr}:${port}${file[a].extIcon}`;
     }
 }
@@ -77,15 +82,19 @@ app.listen(port, () => {
 
 // start local npm
 const localNpm = createLocalNpm({
-    port:           npmPort,
-    pouchPort:      16984,
-    logLevel:       'error',
-    remote:         'https://registry.npmjs.org',
-    remoteSkim:     'https://replicate.npmjs.com',
-    url:            url,
-    directory:      `${__dirname}/db`
+    port: npmPort,
+    pouchPort: 16984,
+    logLevel: 'error',
+    remote: 'https://registry.npmjs.org',
+    remoteSkim: 'https://replicate.npmjs.com',
+    url: url,
+    directory: `${__dirname}/db`,
 });
 
-console.log(`To activate this repository, write: "npm set registry http://${ipAddr}:${npmPort}" on the system, where you want to install ioBroker.`);
+console.log(
+    `To activate this repository, write: "npm set registry http://${ipAddr}:${npmPort}" on the system, where you want to install ioBroker.`,
+);
 console.log('To use normal npm again, write "npm set registry https://registry.npmjs.org"');
-console.log(`Add additional repository after the install of ioBroker: "iobroker repo addset http://${ipAddr}:${port}/sources-dist.json"`);
+console.log(
+    `Add additional repository after the install of ioBroker: "iobroker repo addset http://${ipAddr}:${port}/sources-dist.json"`,
+);
