@@ -19,5 +19,5 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: 22
-      - run: npm --//registry.npmjs.org/:_authToken=${{secrets.NPM_TAG}} owner add iobroker.${{ github.event.inputs.adapter }} ${{ github.event.inputs.user }}
+      - run: npm --//registry.npmjs.org/:_authToken=${{secrets.NPM_TAG}} owner add ${{ github.event.inputs.user }} iobroker.${{ github.event.inputs.adapter }}
   
