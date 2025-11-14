@@ -1,0 +1,23 @@
+name: Invite
+
+# invite user
+on:
+  workflow_dispatch:
+    inputs:
+      adapter:
+        type: string
+        required: true
+
+      user:
+        type: string
+        required: true
+
+jobs:
+  invite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: npm --//registry.npmjs.org/:_authToken=${{secrets.NPM_TAG}} owner add iobroker.${{ github.event.inputs.adapter }} ${{ github.event.inputs.user }}
+  
