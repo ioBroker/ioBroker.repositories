@@ -1816,6 +1816,11 @@
     "icon": "https://raw.githubusercontent.com/mcm4iob/ioBroker.nsclient/master/admin/nsclient.png",
     "type": "infrastructure"
   },
+  "nspanel-lovelace-ui": {
+    "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.nspanel-lovelace-ui/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.nspanel-lovelace-ui/main/admin/nspanel-lovelace-ui.png",
+    "type": "hardware"
+  },
   "nuki": {
     "meta": "https://raw.githubusercontent.com/smaragdschlange/ioBroker.nuki/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/smaragdschlange/ioBroker.nuki/master/admin/nuki-logo.png",
