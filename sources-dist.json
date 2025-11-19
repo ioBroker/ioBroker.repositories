@@ -2456,6 +2456,11 @@
     "icon": "https://raw.githubusercontent.com/quorle/ioBroker.smartloadmanager/main/admin/smartloadmanager.png",
     "type": "logic"
   },
+  "smartm": {
+    "meta": "https://raw.githubusercontent.com/strulli85/ioBroker.smartm/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/strulli85/ioBroker.smartm/master/admin/smartm.svg",
+    "type": "energy"
+  },
   "smartmeter": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.smartmeter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.smartmeter/master/admin/smartmeter.png",
