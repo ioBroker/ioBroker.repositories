@@ -605,6 +605,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.elgato-key-light/main/admin/elgato-key-light.png",
     "type": "lighting"
   },
+  "elv-sup2": {
+    "meta": "https://raw.githubusercontent.com/pdbjjens/ioBroker.elv-sup2/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/pdbjjens/ioBroker.elv-sup2/master/admin/elv-sup2.png",
+    "type": "multimedia"
+  },
   "email": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.email/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.email/master/admin/email.png",
