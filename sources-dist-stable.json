@@ -2427,6 +2427,12 @@
     "type": "hardware",
     "version": "5.0.4"
   },
+  "sbms": {
+    "meta": "https://raw.githubusercontent.com/buffoletti/ioBroker.sbms/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/buffoletti/ioBroker.sbms/main/admin/sbms.png",
+    "type": "energy",
+    "version": "0.4.2"
+  },
   "scenes": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/admin/scenes.png",
