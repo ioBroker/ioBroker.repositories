@@ -2,7 +2,7 @@
 
 This is GitHub project for storage of latest and stable repositories.
 
-![last refresh beta](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28beta%29&query=%24.date&url=https%3A%2F%2Frepo.iobroker.live%2Fsources-dist-latest-hash.json) ![last refresh stable](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28stable%29&query=%24.date&url=https%3A%2F%2Frepo.iobroker.live%2Fsources-dist-hash.json)
+![last refresh beta](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28beta%29&query=%24.date&url=https%3A%2F%2Fdownload.iobroker.net%2Fsources-dist-latest-hash.json) ![last refresh stable](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28stable%29&query=%24.date&url=https%3A%2F%2Fdownload.iobroker.net%2Fsources-dist-hash.json)
 
 ## Update of the version in stable
 1. Be sure that the version is tested in forum by users, or you fix the critical bug with that.
@@ -204,7 +204,7 @@ An example can be seen [here](https://github.com/ioBroker/ioBroker.template/blob
 - `visualization-widgets` - iobroker.vis widgets
 - `weather` - weather info, air quality, environment statistics
 
-You can see the types of existing adapters [here](http://download.iobroker.net/list.html#sortCol=type&sortDir=0) and try to find the similar one.
+You can see the types of existing adapters [here](https://download.iobroker.net/list.html#sortCol=type&sortDir=0) and try to find the similar one.
 
 ### Connection types
 If your adapter controls some device/car/house the adapter could be connected with various methods and receive data via different protocols.
