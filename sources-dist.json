@@ -140,6 +140,11 @@
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.apg-info/main/admin/apg-info.png",
     "type": "general"
   },
+  "apsystems-ez1": {
+    "meta": "https://raw.githubusercontent.com/zhihaining/ioBroker.apsystems-ez1/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/zhihaining/ioBroker.apsystems-ez1/master/admin/apsystems-ez1.png",
+    "type": "energy"
+  },
   "artnet": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/admin/artnet.png",
