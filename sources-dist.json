@@ -436,10 +436,9 @@
     "type": "climate-control"
   },
   "danfoss-ally": {
-	"meta": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/io-package.json",
-	"icon": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/admin/danfoss.png",
-	"htype": "climate-control"
-	},
+    "meta": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/admin/danfoss.png"
+  },
   "daswetter": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/admin/daswettercom.png",
@@ -1651,6 +1650,11 @@
     "icon": "https://raw.githubusercontent.com/minukodu/ioBroker.minuvis/master/admin/minuvis.png",
     "type": "visualization"
   },
+  "mitsubishi-local-control": {
+    "meta": "https://raw.githubusercontent.com/Black-Thunder/ioBroker.mitsubishi-local-control/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Black-Thunder/ioBroker.mitsubishi-local-control/main/admin/mitsubishi-local-control.png",
+    "type": "climate-control"
+  },
   "mobile": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/admin/mobile.png",
@@ -2712,9 +2716,9 @@
     "type": "messaging"
   },
   "teltonika": {
-      "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/master/io-package.json",
-      "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/master/admin/teltonika.svg",
-      "type": "network"
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/master/admin/teltonika.svg",
+    "type": "network"
   },
   "terminal": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/io-package.json",
