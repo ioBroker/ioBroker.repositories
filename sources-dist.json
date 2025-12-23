@@ -165,6 +165,11 @@
     "icon": "https://raw.githubusercontent.com/Buzze11/ioBroker.atlas-scientific-ezo-i2c/master/admin/atlas-scientific-ezo-i2c.png",
     "type": "hardware"
   },
+  "autodarts": {
+    "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/admin/autodarts.svg",
+    "type": "protocols"
+  },
   "awattar": {
     "meta": "https://raw.githubusercontent.com/sirjojo69/ioBroker.awattar/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/sirjojo69/ioBroker.awattar/master/admin/awattar.png",
@@ -436,10 +441,9 @@
     "type": "climate-control"
   },
   "danfoss-ally": {
-	"meta": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/io-package.json",
-	"icon": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/admin/danfoss.png",
-	"htype": "climate-control"
-	},
+    "meta": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/admin/danfoss.png"
+  },
   "daswetter": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/admin/daswettercom.png",
@@ -2712,9 +2716,9 @@
     "type": "messaging"
   },
   "teltonika": {
-      "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/master/io-package.json",
-      "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/master/admin/teltonika.svg",
-      "type": "network"
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/master/admin/teltonika.svg",
+    "type": "network"
   },
   "terminal": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/io-package.json",
