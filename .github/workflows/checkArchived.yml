@@ -1,8 +1,8 @@
-name: Check archived repostories
+name: Check archived repositories
 
 on:
   workflow_dispatch:
-  
+
   schedule:
     # * is a special character in YAML, so you have to quote this string
     # every sunday at 3:33
@@ -16,10 +16,10 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: 22
       - run: npm i
       - run: npm run checkArchived
         env:

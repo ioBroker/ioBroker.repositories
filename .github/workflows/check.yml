@@ -1,9 +1,9 @@
 name: Check changed adapters
 
 #
-# WARNING: 
+# WARNING:
 #    ** Do NOT run untrusted code when using pull_request_target **
-# pull_request_target is needed as pull_request does not provide secrets and so no 
+# pull_request_target is needed as pull_request does not provide secrets and so no
 # commenting of PR is possible.
 #
 on:
@@ -12,7 +12,7 @@ on:
   issue_comment:
     types: [created]
 
-# concurrent runs are required if more then one PR get commented with RE-CHECK! at same time
+# concurrent runs are required if more than one PR get commented with RE-CHECK! at the same time
 # concurrency:
 #  group: check-${{ github.head_ref }}
 #  cancel-in-progress: true
@@ -24,10 +24,10 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: 22
       - run: npm i
       - run: npm run check
         env:

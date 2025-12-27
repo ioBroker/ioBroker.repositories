@@ -4,15 +4,15 @@
 name: New at LATEST PR Info
 
 #
-# WARNING: 
+# WARNING:
 #    ** Do NOT run untrusted code when using pull_request_target **
-# pull_request_target is needed as pull_request does not provide secrets and so no 
+# pull_request_target is needed as pull_request does not provide secrets and so no
 # labeling of PR is possible.
 #
 on:
   pull_request_target:
     types: [labeled, unlabeled]
-    
+
 jobs:
   stableBrandNewInfo:
     name: new at latest PR info
@@ -22,10 +22,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: 22
       - run: npm i
       - run: npm run newAtLatestPrInfo
         env:
