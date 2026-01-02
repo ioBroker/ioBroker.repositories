@@ -1045,11 +1045,6 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/admin/homematic.png",
     "type": "hardware"
   },
-  "hombot": {
-    "meta": "https://raw.githubusercontent.com/AlGu1/ioBroker.hombot/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/AlGu1/ioBroker.hombot/master/admin/hombot.png",
-    "type": "household"
-  },
   "homeconnect": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homeconnect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homeconnect/master/admin/homeconnect.png",
