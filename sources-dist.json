@@ -3434,5 +3434,10 @@
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware"
+  },
+  "zwave2mqtt": {
+    "meta": "https://raw.githubusercontent.com/arteck/ioBroker.zwave2mqtt/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/arteck/ioBroker.zwave2mqtt/main/admin/zwave2mqtt.png?sanitize=true",
+    "type": "hardware"
   }
 }
