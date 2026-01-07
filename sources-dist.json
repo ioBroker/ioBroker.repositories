@@ -436,10 +436,10 @@
     "type": "climate-control"
   },
   "danfoss-ally": {
-	"meta": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/io-package.json",
-	"icon": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/admin/danfoss.png",
-	"type": "climate-control"
-	},
+    "meta": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/admin/danfoss.png",
+    "type": "climate-control"
+  },
   "daswetter": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/admin/daswettercom.png",
@@ -929,6 +929,11 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/admin/habpanel.png",
     "type": "visualization"
+  },
+  "hagelschutz-vkf": {
+    "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.hagelschutz-vkf/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.hagelschutz-vkf/main/admin/hagelschutz-vkf.jpg",
+    "type": "weather"
   },
   "haier": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.haier/master/io-package.json",
