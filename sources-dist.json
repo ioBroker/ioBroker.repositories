@@ -75,6 +75,11 @@
     "icon": "https://raw.githubusercontent.com/SilentPhoenix11/ioBroker.airzone/master/admin/Airzone.png",
     "type": "climate-control"
   },
+  "al-ko": {
+    "meta": "https://raw.githubusercontent.com/zechnerhubert/ioBroker.al-ko/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/zechnerhubert/ioBroker.al-ko/master/admin/al-ko-128.png",
+    "type": "garden"
+  },
   "alarm": {
     "meta": "https://raw.githubusercontent.com/misanorot/ioBroker.alarm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/misanorot/ioBroker.alarm/master/admin/alarm.png",
