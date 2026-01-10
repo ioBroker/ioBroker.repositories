@@ -165,6 +165,11 @@
     "icon": "https://raw.githubusercontent.com/Buzze11/ioBroker.atlas-scientific-ezo-i2c/master/admin/atlas-scientific-ezo-i2c.png",
     "type": "hardware"
   },
+  "autodarts": {
+    "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/admin/autodarts.svg",
+    "type": "protocols"
+  },
   "awattar": {
     "meta": "https://raw.githubusercontent.com/sirjojo69/ioBroker.awattar/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/sirjojo69/ioBroker.awattar/master/admin/awattar.png",
