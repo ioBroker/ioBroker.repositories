@@ -1951,6 +1951,11 @@
     "icon": "https://raw.githubusercontent.com/volkerrichert/ioBroker.oppoplayer/master/admin/oppoplayer.png",
     "type": "multimedia"
   },
+  "otlp": {
+    "meta": "https://raw.githubusercontent.com/OlliMartin/ioBroker.otlp/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/OlliMartin/ioBroker.otlp/main/admin/otlp.png",
+    "type": "storage"
+  },
   "owfs": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.owfs/master/admin/owfs.png",
