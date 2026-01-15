@@ -29,13 +29,13 @@
   },
   "adb": {
     "meta": "https://raw.githubusercontent.com/om2804/ioBroker.adb/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/om2804/ioBroker.adb/master/admin/adb.png",
+    "icon": "https://raw.githubusercontent.com/om2804/ioBroker.adb/master//adb.png",
     "type": "hardware",
     "version": "0.0.7"
   },
   "adguard": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.adguard/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.adguard/main/admin/adguard.png",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.adguard/main//adguard.png",
     "type": "network",
     "version": "1.0.1"
   },
@@ -43,7 +43,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.svg",
     "type": "general",
-    "version": "7.7.19"
+    "version": "7.7.22"
   },
   "aio": {
     "meta": "https://raw.githubusercontent.com/Newan/ioBroker.aio/master/io-package.json",
