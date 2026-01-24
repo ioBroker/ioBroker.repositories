@@ -3560,5 +3560,11 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
     "type": "hardware",
     "version": "3.1.0"
+  },
+  "zwavews": {
+    "meta": "https://raw.githubusercontent.com/arteck/ioBroker.zwavews/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/arteck/ioBroker.zwavews/main/admin/zwavews.png?sanitize=true",
+    "type": "hardware",
+    "version": "0.1.11"
   }
 }
