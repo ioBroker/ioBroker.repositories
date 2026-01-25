@@ -1755,6 +1755,12 @@
     "type": "visualization",
     "version": "2.3.3"
   },
+  "mitsubishi-local-control": {
+    "meta": "https://raw.githubusercontent.com/Black-Thunder/ioBroker.mitsubishi-local-control/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Black-Thunder/ioBroker.mitsubishi-local-control/main/admin/mitsubishi-local-control.png",
+    "type": "climate-control",
+    "version": "1.0.5"
+  },
   "mobile": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mobile/master/admin/mobile.png",
