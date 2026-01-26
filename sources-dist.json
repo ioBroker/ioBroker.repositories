@@ -940,6 +940,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.habpanel/master/admin/habpanel.png",
     "type": "visualization"
   },
+  "hagelschutz-vkf": {
+    "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.hagelschutz-vkf/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.hagelschutz-vkf/main/admin/hagelschutz-vkf.jpg",
+    "type": "weather"
+  },
   "haier": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.haier/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.haier/master/admin/haier.png",
