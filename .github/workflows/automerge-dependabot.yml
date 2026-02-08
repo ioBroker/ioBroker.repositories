@@ -28,7 +28,7 @@ jobs:
           # Optional: Path to your auto-merge configuration file
           # config-file-path: '.github/auto-merge.yml'
           # Optional: Merge method (merge, squash, or rebase)
-          # merge-method: 'squash'
+          merge-method: 'squash'
           # Optional: Wait for other checks to complete
           # wait-for-checks: 'true'
           # Optional: Maximum time to wait for checks in seconds (default: 3600)
