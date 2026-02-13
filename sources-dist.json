@@ -2361,6 +2361,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.scheduler/master/admin/scheduler.png",
     "type": "logic"
   },
+  "schlueter-thermostat": {
+    "meta": "https://raw.githubusercontent.com/patricknitsch/ioBroker.schlueter-thermostat/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/patricknitsch/ioBroker.schlueter-thermostat/main/admin/schlueter-thermostat.png",
+    "type": "climate"
+  },
   "schoolfree": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.schoolfree/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.schoolfree/master/admin/schoolfree.png",
@@ -2570,6 +2575,11 @@
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.solax/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.solax/master/admin/solax.png",
     "type": "energy"
+  },
+  "solectrus-influxdb": {
+    "meta": "https://raw.githubusercontent.com/patricknitsch/ioBroker.solectrus-influxdb/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/patricknitsch/ioBroker.solectrus-influxdb/main/admin/solectrus-influxdb.png",
+    "type": "communication"
   },
   "soliscloud": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.soliscloud/main/io-package.json",
