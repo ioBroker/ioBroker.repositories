@@ -175,6 +175,11 @@
     "icon": "https://raw.githubusercontent.com/sirjojo69/ioBroker.awattar/master/admin/awattar.png",
     "type": "utility"
   },
+  "awekas": {
+    "meta": "https://raw.githubusercontent.com/delfser/ioBroker.awekas/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/delfser/ioBroker.awekas/main/admin/awekas.svg",
+    "type": "weather"
+  },
   "awtrix-light": {
     "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.awtrix-light/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.awtrix-light/master/admin/awtrix-light.png",
