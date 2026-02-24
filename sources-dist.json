@@ -2281,6 +2281,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.rickshaw/master/admin/rickshaw.png",
     "type": "visualization"
   },
+  "rika-firenet": {
+    "meta": "https://raw.githubusercontent.com/xsawa32/ioBroker.rika-firenet/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.rika-firenet/master/admin/rika-firenet.png",
+    "type": "climate-control"
+  },
   "ring": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ring/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ring/master/admin/ring.png",
