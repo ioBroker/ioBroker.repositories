@@ -140,6 +140,11 @@
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.apg-info/main/admin/apg-info.png",
     "type": "general"
   },
+  "apsystems-ez1": {
+    "meta": "https://raw.githubusercontent.com/zhihaining/ioBroker.apsystems-ez1/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/zhihaining/ioBroker.apsystems-ez1/master/admin/apsystems-ez1.png",
+    "type": "energy"
+  },
   "artnet": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/admin/artnet.png",
@@ -794,6 +799,11 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.ford/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.ford/master/admin/ford.png",
     "type": "vehicle"
+  },
+  "foxesscloud": {
+    "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.foxesscloud/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.foxesscloud/main/admin/foxesscloud.png",
+    "type": "energy"
   },
   "freeair": {
     "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.freeair/main/io-package.json",
@@ -2571,6 +2581,11 @@
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.solax/master/admin/solax.png",
     "type": "energy"
   },
+  "solectrus-influxdb": {
+    "meta": "https://raw.githubusercontent.com/patricknitsch/ioBroker.solectrus-influxdb/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/patricknitsch/ioBroker.solectrus-influxdb/main/admin/solectrus-influxdb.png",
+    "type": "communication"
+  },
   "soliscloud": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.soliscloud/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.soliscloud/main/admin/solis.png",
@@ -3479,11 +3494,6 @@
     "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/admin/zont.png",
     "type": "climate-control"
-  },
-  "zwave2": {
-    "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/admin/zwave2.svg?sanitize=true",
-    "type": "hardware"
   },
   "zwavews": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.zwavews/main/io-package.json",
