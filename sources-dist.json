@@ -1536,6 +1536,11 @@
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.mbus/master/admin/mbus.png",
     "type": "energy"
   },
+  "mcdu": {
+    "meta": "https://raw.githubusercontent.com/Flixhummel/ioBroker.mcdu/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Flixhummel/ioBroker.mcdu/main/admin/mcdu.png",
+    "type": "hardware"
+  },
   "mclighting": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mclighting/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mclighting/master/admin/mclighting.png",
