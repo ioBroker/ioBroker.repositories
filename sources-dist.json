@@ -2141,6 +2141,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pollenflug/master/admin/pollenflug.png",
     "type": "weather"
   },
+  "poolcontrol": {
+    "meta": "https://raw.githubusercontent.com/DasBo1975/ioBroker.poolcontrol/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DasBo1975/ioBroker.poolcontrol/master/admin/poolcontrol.png",
+    "type": "climate-control"
+  },
   "porsche": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.porsche/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.porsche/master/admin/porsche.png",
