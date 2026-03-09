@@ -2381,6 +2381,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.scheduler/master/admin/scheduler.png",
     "type": "logic"
   },
+  "schlueter-thermostat": {
+    "meta": "https://raw.githubusercontent.com/patricknitsch/ioBroker.schlueter-thermostat/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/patricknitsch/ioBroker.schlueter-thermostat/main/admin/schlueter-thermostat.png",
+    "type": "climate-control"
+  },
   "schoolfree": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.schoolfree/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.schoolfree/master/admin/schoolfree.png",
@@ -2517,8 +2522,8 @@
     "type": "logic"
   },
   "smartm": {
-    "meta": "https://raw.githubusercontent.com/strulli85/ioBroker.smartm/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/strulli85/ioBroker.smartm/master/admin/smartm.svg",
+    "meta": "https://raw.githubusercontent.com/strulli85/ioBroker.smartm/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/strulli85/ioBroker.smartm/main/admin/smartm.svg",
     "type": "energy"
   },
   "smartmeter": {
