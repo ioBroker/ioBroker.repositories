@@ -1936,6 +1936,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.opcua/master/admin/opcua.png",
     "type": "protocols"
   },
+  "open-meteo-weather": {
+    "meta": "https://raw.githubusercontent.com/H5N1v2/ioBroker.open-meteo-weather/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/H5N1v2/ioBroker.open-meteo-weather/main/admin/open-meteo.png",
+    "type": "weather"
+  },
   "opendtu": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.opendtu/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.opendtu/main/admin/opendtu.png",
@@ -2384,7 +2389,7 @@
   "schlueter-thermostat": {
     "meta": "https://raw.githubusercontent.com/patricknitsch/ioBroker.schlueter-thermostat/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/patricknitsch/ioBroker.schlueter-thermostat/main/admin/schlueter-thermostat.png",
-    "type": "climate"
+    "type": "climate-control"
   },
   "schoolfree": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.schoolfree/master/io-package.json",
