@@ -1811,6 +1811,11 @@
     "icon": "https://raw.githubusercontent.com/realhawker/ioBroker.netro/master/admin/netro.png",
     "type": "garden"
   },
+  "nextcloud-monitoring": {
+    "meta": "https://raw.githubusercontent.com/H5N1v2/ioBroker.nextcloud-monitoring/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/H5N1v2/ioBroker.nextcloud-monitoring/main/admin/nextcloud_monitoring.png",
+    "type": "network"
+  },
   "nextcloudtalk": {
     "meta": "https://raw.githubusercontent.com/Rello/ioBroker.nextcloudtalk/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Rello/ioBroker.nextcloudtalk/master/admin/nextcloud.png",
