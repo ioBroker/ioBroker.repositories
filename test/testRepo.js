@@ -1,12 +1,12 @@
 'use strict';
 const expect = require('chai').expect;
-const fs     = require('fs');
-const axios  = require('axios');
+const fs = require('node:fs');
+const axios = require('axios');
 let latest;
 let stable;
-let axiosCounter = 0;
+// let axiosCounter = 0;
 
-console.log( `OWN_GITHUB_TOKEN: ${process.env.OWN_GITHUB_TOKEN}`);
+console.log(`OWN_GITHUB_TOKEN: ${process.env.OWN_GITHUB_TOKEN}`);
 // axios.defaults.headers = {
 //     'Authorization': process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
 // };
@@ -23,18 +23,11 @@ async function request(url) {
     return axios(url);
 }
 
-const reservedAdapterNames = [
-    'config',
-    'system',
-    'alias',
-    'design',
-    'all',
-    'self',
-];
+const reservedAdapterNames = ['config', 'system', 'alias', 'design', 'all', 'self'];
 
 describe('Test Repository', () => {
     it('Test Repository: latest', done => {
-        const text = fs.readFileSync(__dirname + '/../sources-dist.json');
+        const text = fs.readFileSync(`${__dirname}/../sources-dist.json`);
         try {
             latest = JSON.parse(text);
         } catch (e) {
@@ -44,7 +37,7 @@ describe('Test Repository', () => {
     });
 
     it('Test Repository: stable', done => {
-        const text = fs.readFileSync(__dirname + '/../sources-dist-stable.json');
+        const text = fs.readFileSync(`${__dirname}/../sources-dist-stable.json`);
         try {
             stable = JSON.parse(text);
         } catch (e) {
@@ -54,23 +47,27 @@ describe('Test Repository', () => {
     });
 
     it('Check reserved names', done => {
-        stable = stable || require('../sources-dist-stable.json');
-        latest = latest || require('../sources-dist.json');
+        stable ||= require('../sources-dist-stable.json');
+        latest ||= require('../sources-dist.json');
         // check stable names
-        let id = Object.keys(stable).find(id => reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')));
+        let id = Object.keys(stable).find(id =>
+            reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')),
+        );
         expect(id).to.be.not.ok;
-        // check latest names
-        id = Object.keys(latest).find(id => reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')));
+        // check the latest names
+        id = Object.keys(latest).find(id =>
+            reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')),
+        );
         expect(id).to.be.not.ok;
         done();
     });
 
     it('Test Repository: compare types', async () => {
-        stable = stable || require('../sources-dist-stable.json');
-        latest = latest || require('../sources-dist.json');
+        stable ||= require('../sources-dist-stable.json');
+        latest ||= require('../sources-dist.json');
 
         for (const id in stable) {
-            if (stable.hasOwnProperty(id) && id !== '_repoInfo') {
+            if (Object.prototype.hasOwnProperty.call(stable, id) && id !== '_repoInfo') {
                 expect(id).to.be.equal(id.toLowerCase());
                 expect(latest[id], `${id} not in latest but in stable`).to.be.not.undefined;
                 expect(latest[id].type).to.be.not.undefined;
@@ -82,7 +79,7 @@ describe('Test Repository', () => {
         const len = Object.keys(latest).length;
         let i = 0;
         for (const id in latest) {
-            if (latest.hasOwnProperty(id) && id !== '_repoInfo') {
+            if (Object.prototype.hasOwnProperty.call(latest, id) && id !== '_repoInfo') {
                 expect(id).to.be.equal(id.toLowerCase());
                 if (latest[id].meta && latest[id].meta.match(/io-package\.json$/)) {
                     const response = await request(latest[id].meta);
@@ -98,9 +95,9 @@ describe('Test Repository', () => {
     }).timeout(1200000);
 
     it('Test Repository: Versions in latest', done => {
-        latest = latest || require('../sources-dist.json');
+        latest ||= require('../sources-dist.json');
         for (const name in latest) {
-            if (!latest.hasOwnProperty(name) || name === '_repoInfo') {
+            if (!Object.prototype.hasOwnProperty.call(latest, name) || name === '_repoInfo') {
                 continue;
             }
             /*expect(!!latest[name].published).to.be.true;
@@ -133,9 +130,9 @@ describe('Test Repository', () => {
     });
 
     it('Test Repository: Versions in stable', done => {
-        stable = stable || require('../sources-dist-stable.json');
+        stable ||= require('../sources-dist-stable.json');
         for (const name in stable) {
-            if (!stable.hasOwnProperty(name) || name === '_repoInfo') {
+            if (!Object.prototype.hasOwnProperty.call(stable, name) || name === '_repoInfo') {
                 continue;
             }
             /*if (new Date(stable[name].published).toString() === 'Invalid Date') {
@@ -172,10 +169,10 @@ describe('Test Repository', () => {
     });
 
     it('Test Repository: Compare stable and latest', done => {
-        stable = stable || require('../sources-dist-stable.json');
-        latest = latest || require('../sources-dist.json');
+        stable ||= require('../sources-dist-stable.json');
+        latest ||= require('../sources-dist.json');
         for (const name in stable) {
-            if (!stable.hasOwnProperty(name) || name === '_repoInfo') {
+            if (!Object.prototype.hasOwnProperty.call(stable, name) || name === '_repoInfo') {
                 continue;
             }
 
@@ -194,11 +191,15 @@ describe('Test Repository', () => {
     });
 
     it('Test Repository: check latest vs. stable', done => {
-        stable = stable || require('../sources-dist-stable.json');
-        latest = latest || require('../sources-dist.json');
+        stable ||= require('../sources-dist-stable.json');
+        latest ||= require('../sources-dist.json');
         console.log();
         for (const id in latest) {
-            if (latest.hasOwnProperty(id) && !stable.hasOwnProperty(id) && id !== '_repoInfo') {
+            if (
+                Object.prototype.hasOwnProperty.call(latest, id) &&
+                !Object.prototype.hasOwnProperty.call(stable, id) &&
+                id !== '_repoInfo'
+            ) {
                 console.log(`Info: Adapter "${id}" is not in stable.`);
             }
         }
@@ -212,7 +213,7 @@ describe('Test Repository', () => {
         const len = Object.keys(repos).length;
         let i = 0;
         for (const id in repos) {
-            if (!repos.hasOwnProperty(id) || id === '_repoInfo') {
+            if (!Object.prototype.hasOwnProperty.call(repos, id) || id === '_repoInfo') {
                 continue;
             }
             const repo = repos[id];
@@ -239,7 +240,7 @@ describe('Test Repository', () => {
                 try {
                     await request(repo.icon);
                     cache[repo.icon] = true;
-                } catch(err){
+                } catch (err) {
                     console.error(`Icon of adapter ${id}: ${repo.icon} not gettable - ${err}`);
                     error = true;
                 }
@@ -253,12 +254,12 @@ describe('Test Repository', () => {
     }
 
     it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async () => {
-        latest = latest || require('../sources-dist.json');
+        latest ||= require('../sources-dist.json');
         await checkRepos('latest', latest);
     }).timeout(3600000);
 
     it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async () => {
-        stable = stable || require('../sources-dist-stable.json');
-        await checkRepos('stable', stable)
+        stable ||= require('../sources-dist-stable.json');
+        await checkRepos('stable', stable);
     }).timeout(3600000);
 });
