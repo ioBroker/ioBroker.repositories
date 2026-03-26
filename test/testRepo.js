@@ -66,31 +66,50 @@ describe('Test Repository', () => {
         stable ||= require('../sources-dist-stable.json');
         latest ||= require('../sources-dist.json');
 
+        const errors = [];
+
         for (const id in stable) {
             if (Object.prototype.hasOwnProperty.call(stable, id) && id !== '_repoInfo') {
-                expect(id).to.be.equal(id.toLowerCase());
-                expect(latest[id], `${id} not in latest but in stable`).to.be.not.undefined;
-                expect(latest[id].type).to.be.not.undefined;
-                expect(latest[id].type).to.be.not.equal('');
-                expect(latest[id].type).to.be.equal(stable[id].type);
+                if (id !== id.toLowerCase()) {
+                    errors.push(`Adapter "${id}" in stable has uppercase letters`);
+                } else if (!latest[id]) {
+                    errors.push(`Adapter "${id}" is in stable but not in latest`);
+                } else if (!latest[id].type) {
+                    errors.push(`Adapter "${id}" has no type defined in latest`);
+                } else if (latest[id].type === '') {
+                    errors.push(`Adapter "${id}" has empty type in latest`);
+                } else if (latest[id].type !== stable[id].type) {
+                    errors.push(`Adapter "${id}" has different types: latest="${latest[id].type}" vs stable="${stable[id].type}"`);
+                }
             }
         }
+
         // compare types with io-package.json
         const len = Object.keys(latest).length;
         let i = 0;
         for (const id in latest) {
             if (Object.prototype.hasOwnProperty.call(latest, id) && id !== '_repoInfo') {
-                expect(id).to.be.equal(id.toLowerCase());
+                if (id !== id.toLowerCase()) {
+                    errors.push(`Adapter "${id}" in latest has uppercase letters`);
+                }
                 if (latest[id].meta && latest[id].meta.match(/io-package\.json$/)) {
-                    const response = await request(latest[id].meta);
                     console.log(`[${i}/${len}] Check ${id}`);
-                    const pack = response.data;
-                    if (pack && pack.common && pack.common.type !== latest[id].type) {
-                        console.error(`Types in "${id}" are not equal: ${pack.common.type} !== ${latest[id].type}`);
+                    try {
+                        const response = await request(latest[id].meta);
+                        const pack = response.data;
+                        if (pack && pack.common && pack.common.type !== latest[id].type) {
+                            console.error(`Types in "${id}" are not equal: io-package.json="${pack.common.type}" vs repo="${latest[id].type}"`);
+                        }
+                    } catch (err) {
+                        console.error(`[${i}/${len}] Cannot get meta of "${id}" (${latest[id].meta}): ${err.message}`);
                     }
                 }
             }
             i++;
+        }
+
+        if (errors.length) {
+            throw new Error(`Found ${errors.length} error(s) in repository type checks:\n${errors.join('\n')}`);
         }
     }).timeout(1200000);
 
