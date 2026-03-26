@@ -3529,5 +3529,10 @@
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.zwavews/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.zwavews/main/admin/zwavews.png?sanitize=true",
     "type": "hardware"
+  },
+  "zwift": {
+    "meta": "https://raw.githubusercontent.com/Flixhummel/ioBroker.zwift/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Flixhummel/ioBroker.zwift/main/admin/zwift.png",
+    "type": "health"
   }
 }
