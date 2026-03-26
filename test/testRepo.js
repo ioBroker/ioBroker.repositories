@@ -79,11 +79,12 @@ describe('Test Repository', () => {
         const len = Object.keys(latest).length;
         let i = 0;
         for (const id in latest) {
+            console.log(`[${i}/${len}] Check ${id}`);
             if (Object.prototype.hasOwnProperty.call(latest, id) && id !== '_repoInfo') {
                 expect(id).to.be.equal(id.toLowerCase());
                 if (latest[id].meta && latest[id].meta.match(/io-package\.json$/)) {
                     const response = await request(latest[id].meta);
-                    console.log(`[${i}/${len}] Check ${id}`);
+                    // console.log(`[${i}/${len}] Check ${id}`);
                     const pack = response.data;
                     if (pack && pack.common && pack.common.type !== latest[id].type) {
                         console.error(`Types in "${id}" are not equal: ${pack.common.type} !== ${latest[id].type}`);
