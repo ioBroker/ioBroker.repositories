@@ -49,8 +49,8 @@
   ],
   "devDependencies": {
     "@iobroker/eslint-config": "^2.2.0",
-    "@iobroker/repochecker": "^5.6.5",
-    "axios": "^1.13.6",
+    "@iobroker/repochecker": "^5.6.6",
+    "axios": "^1.14.0",
     "chai": "^4.5.0",
     "image-size": "^2.0.2",
     "minimist": "^1.2.8",
