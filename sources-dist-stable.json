@@ -2181,6 +2181,12 @@
     "type": "hardware",
     "version": "1.1.4"
   },
+  "pjlink": {
+    "meta": "https://raw.githubusercontent.com/Bannsaenger/ioBroker.pjlink/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Bannsaenger/ioBroker.pjlink/main/admin/pjlink.png",
+    "type": "multimedia",
+    "version": "0.1.2"
+  },
   "places": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.places/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.places/master/admin/places.png",
