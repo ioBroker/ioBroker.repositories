@@ -140,6 +140,11 @@
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.apg-info/main/admin/apg-info.png",
     "type": "general"
   },
+  "apsystem-ez1-solar": {
+    "meta": "https://raw.githubusercontent.com/d3vc0-de/ioBroker.apsystem-ez1-solar/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/d3vc0-de/ioBroker.apsystem-ez1-solar/main/admin/apsystem-ez1-solar.png",
+    "type": "energy"
+  },
   "apsystems-ez1": {
     "meta": "https://raw.githubusercontent.com/zhihaining/ioBroker.apsystems-ez1/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/zhihaining/ioBroker.apsystems-ez1/master/admin/apsystems-ez1.png",
