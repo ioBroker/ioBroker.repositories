@@ -685,6 +685,11 @@
     "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.enocean/master/admin/enocean.png",
     "type": "hardware"
   },
+  "enpal": {
+    "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.enpal/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.enpal/main/admin/enpal.svg",
+    "type": "energy"
+  },
   "envertech-pv": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.envertech-pv/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.envertech-pv/master/admin/envertech-pv.png",
