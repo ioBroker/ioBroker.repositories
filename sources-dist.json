@@ -4,15 +4,15 @@
     "name": {
       "en": "Latest (beta) repository",
       "de": "Latest (Beta) Repository",
-      "ru": "Latest (бета) репозиторий",
-      "pt": "Latest repositório (beta)",
-      "nl": "Latest (bèta) repository",
-      "fr": "Latest dépôt (bêta)",
+      "ru": "Latest (\u0431\u0435\u0442\u0430) \u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0439",
+      "pt": "Latest reposit\u00f3rio (beta)",
+      "nl": "Latest (b\u00e8ta) repository",
+      "fr": "Latest d\u00e9p\u00f4t (b\u00eata)",
       "it": "Latest repository (beta)",
       "es": "Latest repositorio (beta)",
       "pl": "Latest repozytorium (beta)",
-      "uk": "Latest (бета) репозиторій",
-      "zh-cn": "Latest（测试版）存储库"
+      "uk": "Latest (\u0431\u0435\u0442\u0430) \u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0456\u0439",
+      "zh-cn": "Latest\uff08\u6d4b\u8bd5\u7248\uff09\u5b58\u50a8\u5e93"
     }
   },
   "accuweather": {
@@ -2420,6 +2420,11 @@
     "meta": "https://raw.githubusercontent.com/Excodibur/ioBroker.schwoerer-ventcube/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Excodibur/ioBroker.schwoerer-ventcube/master/admin/schwoerer-ventcube.png",
     "type": "climate-control"
+  },
+  "script-restore": {
+    "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.script-restore/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.script-restore/main/admin/script-restore.svg",
+    "type": "tools"
   },
   "seko": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.seko/main/io-package.json",
