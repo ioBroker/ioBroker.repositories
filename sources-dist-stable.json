@@ -1905,6 +1905,12 @@
     "type": "vehicle",
     "version": "0.0.3"
   },
+  "nmea": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.nmea/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.nmea/main/admin/nmea.png",
+    "type": "protocols",
+    "version": "0.4.2"
+  },
   "node-red": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.node-red/master/admin/node-red.png",
