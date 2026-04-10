@@ -12,16 +12,16 @@ on:
         type: string
         required: true
 
-  workflow_call:
-    inputs:
-      adapter:
-        description: Adapter name (without 'ioBroker.' prefix)
-        type: string
-        required: true
-      version:
-        description: Version to set (x.y.z)
-        type: string
-        required: true
+#  workflow_call:
+#    inputs:
+#      adapter:
+#        description: Adapter name (without 'ioBroker.' prefix)
+#        type: string
+#        required: true
+#      version:
+#        description: Version to set (x.y.z)
+#        type: string
+#        required: true
 
 jobs:
   update-stable-release:
