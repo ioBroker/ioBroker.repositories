@@ -79,9 +79,11 @@ jobs:
           echo "Version '$VERSION' of 'iobroker.$ADAPTER' found on npm"
 
       - name: Create branch and update version
+        id: create_branch
         env:
           ADAPTER: ${{ inputs.adapter }}
           VERSION: ${{ inputs.version }}
+          GH_TOKEN: ${{ secrets.IOBBOT_GITHUB_TOKEN }}
         run: |
           BRANCH="update-stable-${ADAPTER}-${VERSION}"
 
@@ -102,13 +104,24 @@ jobs:
 
           git add sources-dist-stable.json
           git commit -m "Update $ADAPTER to $VERSION"
-          git push origin "$BRANCH"
+
+          # Ensure a fork exists in iobbot's space (creates one if it doesn't exist yet)
+          gh repo fork ioBroker/ioBroker.repositories --clone=false
+
+          # Resolve the iobbot username dynamically from the token
+          IOBBOT_USER=$(gh api user --jq .login)
+          echo "iobbot_user=$IOBBOT_USER" >> "$GITHUB_OUTPUT"
+
+          # Push the branch to iobbot's fork (iobbot lacks direct push access to the main repo)
+          git remote add fork "https://x-access-token:${GH_TOKEN}@github.com/${IOBBOT_USER}/ioBroker.repositories.git"
+          git push fork "$BRANCH"
 
       - name: Create pull request
         env:
           ADAPTER: ${{ inputs.adapter }}
           VERSION: ${{ inputs.version }}
           CURRENT_VERSION: ${{ steps.check_stable.outputs.current_version }}
+          IOBBOT_USER: ${{ steps.create_branch.outputs.iobbot_user }}
           WORKFLOW_NAME: ${{ github.workflow }}
           GH_TOKEN: ${{ secrets.IOBBOT_GITHUB_TOKEN }}
         run: |
@@ -121,4 +134,5 @@ jobs:
             --title "$PR_TITLE" \
             --body "$PR_BODY" \
             --base master \
-            --head "$BRANCH"
+            --head "${IOBBOT_USER}:${BRANCH}" \
+            --repo ioBroker/ioBroker.repositories
