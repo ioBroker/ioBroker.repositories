@@ -113,9 +113,7 @@ jobs:
           BRANCH="update-stable-${ADAPTER}-${VERSION}"
 
           PR_TITLE="Update ${ADAPTER} to ${VERSION}"
-          PR_BODY="Update ${ADAPTER} from ${CURRENT_VERSION} to ${VERSION}.
-
-PR created by workflow ${WORKFLOW_NAME}"
+          PR_BODY="Update ${ADAPTER} from ${CURRENT_VERSION} to ${VERSION}."$'\n\n'"PR created by workflow ${WORKFLOW_NAME}"
 
           gh pr create \
             --title "$PR_TITLE" \
