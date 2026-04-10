@@ -36,6 +36,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.IOBBOT_GITHUB_TOKEN }}
 
       - name: Check adapter exists in stable repository
         id: check_stable
@@ -83,8 +85,8 @@ jobs:
         run: |
           BRANCH="update-stable-${ADAPTER}-${VERSION}"
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "iobbot"
+          git config user.email "iobbot@users.noreply.github.com"
 
           git checkout -b "$BRANCH"
 
@@ -108,7 +110,7 @@ jobs:
           VERSION: ${{ inputs.version }}
           CURRENT_VERSION: ${{ steps.check_stable.outputs.current_version }}
           WORKFLOW_NAME: ${{ github.workflow }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.IOBBOT_GITHUB_TOKEN }}
         run: |
           BRANCH="update-stable-${ADAPTER}-${VERSION}"
 
