@@ -1276,6 +1276,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/admin/influxdb.png",
     "type": "storage"
   },
+  "influxdb-prologger": {
+    "meta": "https://raw.githubusercontent.com/simpros/ioBroker.influxdb-prologger/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/simpros/ioBroker.influxdb-prologger/main/admin/influxdb-prologger.png",
+    "type": "storage"
+  },
   "innogy-smarthome": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.innogy-smarthome/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/PArns/ioBroker.innogy-smarthome/master/admin/innogy-smarthome.png",
