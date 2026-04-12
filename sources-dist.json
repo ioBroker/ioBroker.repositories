@@ -2601,6 +2601,11 @@
     "icon": "https://raw.githubusercontent.com/ltspicer/ioBroker.sofarcloud/main/admin/sofarcloud.jpg",
     "type": "energy"
   },
+  "solakon-one": {
+    "meta": "https://raw.githubusercontent.com/berto-1974/ioBroker.solakon-one/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/berto-1974/ioBroker.solakon-one/main/admin/solakon.png",
+    "type": "energy"
+  },
   "solaredge": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solaredge/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solaredge/master/admin/solaredge.png",
@@ -3524,11 +3529,6 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.zehnder-cloud/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.zehnder-cloud/master/admin/zehnder-cloud.png",
     "type": "climate-control"
-  },
-  "solakon-one": {
-    "meta": "https://raw.githubusercontent.com/berto-1974/ioBroker.solakon-one/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/berto-1974/ioBroker.solakon-one/main/admin/solakon.png",
-    "type": "energy"
   },
   "zendure-solarflow": {
     "meta": "https://raw.githubusercontent.com/nograx/ioBroker.zendure-solarflow/main/io-package.json",
