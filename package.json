@@ -32,7 +32,8 @@
     "stable": "node lib/readyForStable.js",
     "stable0DayPrInfo": "node lib/stable0DayPrInfo.js",
     "stableBrandNewInfo": "node lib/stableBrandNewInfo.js",
-    "handleReminder": "node lib/handleReminder.js"
+    "handleReminder": "node lib/handleReminder.js",
+    "doReCheck": "node lib/doReCheck.js"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
