@@ -18,6 +18,8 @@ jobs:
       - uses: actions/github-script@v9
         with:
           script: |
+            const body = context.payload.comment.body;
+            if (body.trim() === 'RE-CHECK!') return;
             github.rest.issues.addLabels({
               issue_number: context.issue.number,
               owner: context.repo.owner,
