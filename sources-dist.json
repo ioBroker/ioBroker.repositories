@@ -1891,6 +1891,11 @@
     "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.nspanel-lovelace-ui/main/admin/nspanel-lovelace-ui.png",
     "type": "hardware"
   },
+  "ntfy-client": {
+    "meta": "https://raw.githubusercontent.com/lubepi/ioBroker.ntfy-client/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/lubepi/ioBroker.ntfy-client/main/admin/ntfy-client.png",
+    "type": "messaging"
+  },
   "nuki": {
     "meta": "https://raw.githubusercontent.com/smaragdschlange/ioBroker.nuki/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/smaragdschlange/ioBroker.nuki/master/admin/nuki-logo.png",
