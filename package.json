@@ -26,6 +26,7 @@
     "checkNpm": "node lib/checkNpm.js",
     "manualAction": "node lib/manualAction.js",
     "newAtLatestPrInfo": "node lib/newAtLatestPrInfo.js",
+    "objJsonMissingPrInfo": "node lib/objJsonMissingPrInfo.js",
     "setLabels": "node lib/setLabels.js",
     "setStableTag": "node lib/setStableTag.js",
     "setTag": "node lib/setTag.js",
