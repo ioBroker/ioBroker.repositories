@@ -1,0 +1,37 @@
+# This workflow will triage pull requests and apply a label based on the
+# paths that are modified in the pull request.
+
+name: obj-json missing PR Info
+
+#
+# WARNING:
+#    ** Do NOT run untrusted code when using pull_request_target **
+# pull_request_target is needed as pull_request does not provide secrets and so no
+# labeling of PR is possible.
+#
+on:
+  pull_request_target:
+    types: [labeled, unlabeled]
+
+jobs:
+  objJsonMissingInfo:
+    name: obj-json missing PR info
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories'
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
+      issues: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: npm i
+      - run: npm run objJsonMissingPrInfo
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
