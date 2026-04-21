@@ -356,8 +356,8 @@
     "type": "multimedia"
   },
   "cctvql": {
-    "meta": "https://raw.githubusercontent.com/arunrajiah/cctvql/main/integrations/ioBroker.cctvql/io-package.json",
-    "icon": "https://raw.githubusercontent.com/arunrajiah/cctvql/main/integrations/ioBroker.cctvql/admin/cctvql.png",
+    "meta": "https://raw.githubusercontent.com/arunrajiah/ioBroker.cctvql/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/arunrajiah/ioBroker.cctvql/main/admin/cctvql.png",
     "type": "multimedia"
   },
   "canbus": {
