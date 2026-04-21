@@ -3045,6 +3045,11 @@
     "icon": "https://raw.githubusercontent.com/Omega236/ioBroker.virtualpowermeter/master/admin/virtualpowermeter.png",
     "type": "energy"
   },
+  "victron-cerbo": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/admin/victron-cerbo.svg",
+    "type": "energy"
+  },
   "vis": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis/master/admin/vis.png",
