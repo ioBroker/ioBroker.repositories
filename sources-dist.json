@@ -355,6 +355,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cameras/master/admin/cameras.png",
     "type": "multimedia"
   },
+  "cctvql": {
+    "meta": "https://raw.githubusercontent.com/arunrajiah/ioBroker.cctvql/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/arunrajiah/ioBroker.cctvql/main/admin/cctvql.png",
+    "type": "multimedia"
+  },
   "canbus": {
     "meta": "https://raw.githubusercontent.com/crycode-de/ioBroker.canbus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/crycode-de/ioBroker.canbus/master/admin/canbus.png",
