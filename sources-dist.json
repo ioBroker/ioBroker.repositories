@@ -130,6 +130,11 @@
     "icon": "https://raw.githubusercontent.com/ronny130286/ioBroker.ankersolix2/main/admin/ankersolix2.png",
     "type": "iot-systems"
   },
+  "anthbot": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.anthbot/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.anthbot/master/admin/anthbot.png",
+    "type": "garden"
+  },
   "apcups": {
     "meta": "https://raw.githubusercontent.com/XHunter74/ioBroker.apcups/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/XHunter74/ioBroker.apcups/master/admin/ups.png",
@@ -3045,6 +3050,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.vesync/main/admin/vesync.png",
     "type": "climate-control"
   },
+  "victron-cerbo": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/admin/victron-cerbo.svg",
+    "type": "energy"
+  },
   "viessmann": {
     "meta": "https://raw.githubusercontent.com/misanorot/ioBroker.viessmann/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/misanorot/ioBroker.viessmann/master/admin/viessmann.png",
@@ -3058,11 +3068,6 @@
   "virtualpowermeter": {
     "meta": "https://raw.githubusercontent.com/Omega236/ioBroker.virtualpowermeter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Omega236/ioBroker.virtualpowermeter/master/admin/virtualpowermeter.png",
-    "type": "energy"
-  },
-  "victron-cerbo": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/admin/victron-cerbo.svg",
     "type": "energy"
   },
   "vis": {
