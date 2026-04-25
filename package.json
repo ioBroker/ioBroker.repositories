@@ -26,13 +26,16 @@
     "checkNpm": "node lib/checkNpm.js",
     "manualAction": "node lib/manualAction.js",
     "newAtLatestPrInfo": "node lib/newAtLatestPrInfo.js",
+    "objJsonMissingPrInfo": "node lib/objJsonMissingPrInfo.js",
     "setLabels": "node lib/setLabels.js",
     "setStableTag": "node lib/setStableTag.js",
     "setTag": "node lib/setTag.js",
     "stable": "node lib/readyForStable.js",
     "stable0DayPrInfo": "node lib/stable0DayPrInfo.js",
     "stableBrandNewInfo": "node lib/stableBrandNewInfo.js",
-    "handleReminder": "node lib/handleReminder.js"
+    "handleReminder": "node lib/handleReminder.js",
+    "doReCheck": "node lib/doReCheck.js",
+    "closeWithErrors": "node lib/closeWithErrors.js"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
@@ -49,8 +52,8 @@
   ],
   "devDependencies": {
     "@iobroker/eslint-config": "^2.2.0",
-    "@iobroker/repochecker": "^5.6.5",
-    "axios": "^1.13.6",
+    "@iobroker/repochecker": "^5.11.0",
+    "axios": "^1.15.1",
     "chai": "^4.5.0",
     "image-size": "^2.0.2",
     "minimist": "^1.2.8",

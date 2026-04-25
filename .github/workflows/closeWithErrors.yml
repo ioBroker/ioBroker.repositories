@@ -1,0 +1,37 @@
+# This workflow closes PRs labeled with "CLOSE (checks contain errors)" and adds an informational comment.
+
+name: Close with Errors
+
+#
+# WARNING:
+#    ** Do NOT run untrusted code when using pull_request_target **
+# pull_request_target is needed as pull_request does not provide secrets and so no
+# labeling of PR is possible.
+#
+on:
+  pull_request_target:
+    types: [labeled, unlabeled]
+
+jobs:
+  closeWithErrors:
+    name: close with errors
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories'
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
+      issues: write
+      contents: read
+      actions: write
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: npm i
+      - run: npm run closeWithErrors
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
