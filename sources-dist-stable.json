@@ -1497,6 +1497,12 @@
     "type": "multimedia",
     "version": "1.0.5"
   },
+  "life360ng": {
+    "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.life360ng/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.life360ng/main/admin/Life360_s.svg",
+    "type": "geoposition",
+    "version": "1.1.0"
+  },
   "lifx": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/admin/lifx_logo.png",
