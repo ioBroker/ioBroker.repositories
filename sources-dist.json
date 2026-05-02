@@ -245,6 +245,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.bestway/master/admin/bestway.png",
     "type": "household"
   },
+  "beszel": {
+    "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.beszel/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.beszel/main/admin/beszel.svg",
+    "type": "hardware"
+  },
   "bidirectional-counter": {
     "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.bidirectional-counter/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.bidirectional-counter/main/admin/bidirectional-counter.png",
