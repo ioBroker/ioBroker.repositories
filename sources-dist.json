@@ -1010,6 +1010,11 @@
     "icon": "https://raw.githubusercontent.com/smarthomefans/ioBroker.hass-mqtt/master/admin/hass-mqtt.png",
     "type": "iot-systems"
   },
+  "hassemu": {
+    "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.hassemu/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.hassemu/main/admin/hassemu.svg",
+    "type": "infrastructure"
+  },
   "hausbus_de": {
     "meta": "https://raw.githubusercontent.com/hausbus/ioBroker.hausbus_de/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/hausbus/ioBroker.hausbus_de/main/admin/hausbusde.png",
