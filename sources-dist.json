@@ -265,6 +265,11 @@
     "icon": "https://raw.githubusercontent.com/ka-vaNu/ioBroker.blebox/master/admin/blebox.png",
     "type": "iot-systems"
   },
+  "blink": {
+    "meta": "https://raw.githubusercontent.com/Pischleuder1/ioBroker.blink/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Pischleuder1/ioBroker.blink/main/admin/blink.png",
+    "type": "alarm"
+  },
   "bluelink": {
     "meta": "https://raw.githubusercontent.com/Newan/ioBroker.bluelink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Newan/ioBroker.bluelink/master/admin/bluelink.png",
@@ -1105,11 +1110,6 @@
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.homee/master/admin/homee.png",
     "type": "iot-systems"
   },
-  "hoymiles": {
-    "meta": "https://raw.githubusercontent.com/Eistee82/ioBroker.hoymiles/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Eistee82/ioBroker.hoymiles/main/admin/hoymiles.png",
-    "type": "energy"
-  },
   "homekit-controller": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.homekit-controller/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.homekit-controller/main/admin/homekit-controller.png",
@@ -1129,6 +1129,11 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.hoover/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.hoover/main/admin/hoover.png",
     "type": "household"
+  },
+  "hoymiles": {
+    "meta": "https://raw.githubusercontent.com/Eistee82/ioBroker.hoymiles/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Eistee82/ioBroker.hoymiles/main/admin/hoymiles.png",
+    "type": "energy"
   },
   "hoymiles-ms": {
     "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.hoymiles-ms/main/io-package.json",
@@ -3060,6 +3065,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.vesync/main/admin/vesync.png",
     "type": "climate-control"
   },
+  "victron-cerbo": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/admin/victron-cerbo.svg",
+    "type": "energy"
+  },
   "viessmann": {
     "meta": "https://raw.githubusercontent.com/misanorot/ioBroker.viessmann/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/misanorot/ioBroker.viessmann/master/admin/viessmann.png",
@@ -3073,11 +3083,6 @@
   "virtualpowermeter": {
     "meta": "https://raw.githubusercontent.com/Omega236/ioBroker.virtualpowermeter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Omega236/ioBroker.virtualpowermeter/master/admin/virtualpowermeter.png",
-    "type": "energy"
-  },
-  "victron-cerbo": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/admin/victron-cerbo.svg",
     "type": "energy"
   },
   "vis": {
