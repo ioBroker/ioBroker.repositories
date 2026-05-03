@@ -1451,6 +1451,11 @@
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/admin/lifx_logo.png",
     "type": "lighting"
   },
+  "liquid-check": {
+    "meta": "https://raw.githubusercontent.com/matz694/ioBroker.liquid-check/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/matz694/ioBroker.liquid-check/main/admin/liquid-check.png",
+    "type": "metering"
+  },
   "lightcontrol": {
     "meta": "https://raw.githubusercontent.com/Schmakus/ioBroker.lightcontrol/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Schmakus/ioBroker.lightcontrol/main/admin/lightcontrol.png",
