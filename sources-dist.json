@@ -1200,6 +1200,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.iceroad/main/admin/iceroad.png",
     "type": "weather"
   },
+  "icloud": {
+    "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.icloud/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.icloud/main/admin/icloud.png",
+    "type": "misc-data"
+  },
   "ico-cloud": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ico-cloud/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ico-cloud/main/admin/ico-cloud.png",
