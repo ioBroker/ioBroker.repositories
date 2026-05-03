@@ -750,6 +750,11 @@
     "icon": "https://raw.githubusercontent.com/Bannsaenger/ioBroker.extron/master/admin/extron.png",
     "type": "hardware"
   },
+  "f1": {
+    "meta": "https://raw.githubusercontent.com/bloop16/ioBroker.f1/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bloop16/ioBroker.f1/main/admin/f1.png",
+    "type": "misc-data"
+  },
   "fahrplan": {
     "meta": "https://raw.githubusercontent.com/gaudes/ioBroker.fahrplan/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/gaudes/ioBroker.fahrplan/master/admin/fahrplan.png",
