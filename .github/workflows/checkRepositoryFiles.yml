@@ -1,36 +1,66 @@
 name: Check repository files
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: {}
 
   schedule:
-    # * is a special character in YAML, so you have to quote this string
-    # every day
-    - cron:  '45 */6 * * *'
+    # every day at 3:00 UTC
+    - cron: '0 3 * * *'
 
   push:
     branches:
-      - master  
-  
+      - master
+
   pull_request: {}
 
-concurrency:
-    group: stable-${{ github.head_ref }}
-    cancel-in-progress: true
-
 jobs:
-  check:
-    name: check repository files
-    if: |
-      github.repository == 'ioBroker/ioBroker.repositories'
-
+  check-latest:
+    name: Check sources-dist.json
+    if: github.repository == 'ioBroker/ioBroker.repositories'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 22
-      - run: npm i
-      - run: npm run test
-        env:
-          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
+      - uses: actions/checkout@v4
+      - run: node lib/checkRepositoryFiles.js checkLatest
+
+  check-stable:
+    name: Check sources-dist-stable.json
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - run: node lib/checkRepositoryFiles.js checkStable
+
+  check-stable-in-latest:
+    name: Check stable adapters are in latest
+    if: always() && github.repository == 'ioBroker/ioBroker.repositories'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    needs: [check-latest, check-stable]
+    steps:
+      - uses: actions/checkout@v4
+      - run: node lib/checkRepositoryFiles.js checkStableInLatest
+
+  report:
+    name: Final report
+    if: always() && github.repository == 'ioBroker/ioBroker.repositories'
+    runs-on: ubuntu-latest
+    permissions: {}
+    needs: [check-latest, check-stable, check-stable-in-latest]
+    steps:
+      - name: Report results
+        run: |
+          echo "check-latest:           ${{ needs.check-latest.result }}"
+          echo "check-stable:           ${{ needs.check-stable.result }}"
+          echo "check-stable-in-latest: ${{ needs.check-stable-in-latest.result }}"
+          if [ "${{ needs.check-latest.result }}" != "success" ] || \
+             [ "${{ needs.check-stable.result }}" != "success" ] || \
+             [ "${{ needs.check-stable-in-latest.result }}" != "success" ]; then
+            echo "One or more checks failed!"
+            exit 1
+          fi
+          echo "All checks passed!"

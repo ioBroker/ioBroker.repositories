@@ -35,7 +35,10 @@
     "stableBrandNewInfo": "node lib/stableBrandNewInfo.js",
     "handleReminder": "node lib/handleReminder.js",
     "doReCheck": "node lib/doReCheck.js",
-    "closeWithErrors": "node lib/closeWithErrors.js"
+    "closeWithErrors": "node lib/closeWithErrors.js",
+    "checkLatest": "node lib/checkRepositoryFiles.js checkLatest",
+    "checkStable": "node lib/checkRepositoryFiles.js checkStable",
+    "checkStableInLatest": "node lib/checkRepositoryFiles.js checkStableInLatest"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
