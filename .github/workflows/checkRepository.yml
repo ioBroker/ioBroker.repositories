@@ -1,0 +1,66 @@
+name: Check Repository
+
+on:
+  push:
+
+  schedule:
+    # daily at 3:00 UTC
+    - cron: '0 3 * * *'
+
+  workflow_dispatch:
+
+  pull_request:
+
+jobs:
+  checkLatestSortOrder:
+    name: Check sources-dist.json sort order
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: node lib/checkRepository_checkLatestSortOrder.js
+
+  checkStableSortOrder:
+    name: Check sources-dist-stable.json sort order
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: node lib/checkRepository_checkStableSortOrder.js
+
+  checkStableInLatest:
+    name: Check stable adapters present in latest
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: node lib/checkRepository_checkStableInLatest.js
+
+  report:
+    name: Final Report
+    if: always() && github.repository == 'ioBroker/ioBroker.repositories'
+    needs: [checkLatestSortOrder, checkStableSortOrder, checkStableInLatest]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check all jobs passed
+        run: |
+          echo "checkLatestSortOrder:  ${{ needs.checkLatestSortOrder.result }}"
+          echo "checkStableSortOrder:  ${{ needs.checkStableSortOrder.result }}"
+          echo "checkStableInLatest:   ${{ needs.checkStableInLatest.result }}"
+
+          if [[ "${{ needs.checkLatestSortOrder.result }}" == "failure" ]] || \
+             [[ "${{ needs.checkStableSortOrder.result }}" == "failure" ]] || \
+             [[ "${{ needs.checkStableInLatest.result }}" == "failure" ]]; then
+            echo "One or more checks failed!"
+            exit 1
+          fi
+          echo "All checks passed!"
