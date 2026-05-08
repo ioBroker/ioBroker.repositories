@@ -12,9 +12,57 @@ on:
   pull_request:
 
 jobs:
+  checkLatestJson:
+    name: Check sources-dist.json JSON formatting
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: node lib/checkRepository_checkJsonFormatting.js sources-dist.json
+
+  checkStableJson:
+    name: Check sources-dist-stable.json JSON formatting
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    needs: [checkLatestJson]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: node lib/checkRepository_checkJsonFormatting.js sources-dist-stable.json
+
+  checkLatestAttributes:
+    name: Check sources-dist.json attributes
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    needs: [checkLatestJson]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: node lib/checkRepository_checkLatestAttributes.js
+
+  checkStableAttributes:
+    name: Check sources-dist-stable.json attributes
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    needs: [checkLatestJson, checkStableJson]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: node lib/checkRepository_checkStableAttributes.js
+
   checkLatestSortOrder:
     name: Check sources-dist.json sort order
     if: github.repository == 'ioBroker/ioBroker.repositories'
+    needs: [checkLatestJson]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -26,6 +74,7 @@ jobs:
   checkStableSortOrder:
     name: Check sources-dist-stable.json sort order
     if: github.repository == 'ioBroker/ioBroker.repositories'
+    needs: [checkStableJson]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -37,6 +86,7 @@ jobs:
   checkStableInLatest:
     name: Check stable adapters present in latest
     if: github.repository == 'ioBroker/ioBroker.repositories'
+    needs: [checkLatestJson, checkStableJson]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -48,16 +98,24 @@ jobs:
   report:
     name: Final Report
     if: always() && github.repository == 'ioBroker/ioBroker.repositories'
-    needs: [checkLatestSortOrder, checkStableSortOrder, checkStableInLatest]
+    needs: [checkLatestJson, checkStableJson, checkLatestAttributes, checkStableAttributes, checkLatestSortOrder, checkStableSortOrder, checkStableInLatest]
     runs-on: ubuntu-latest
     steps:
       - name: Check all jobs passed
         run: |
+          echo "checkLatestJson:       ${{ needs.checkLatestJson.result }}"
+          echo "checkStableJson:       ${{ needs.checkStableJson.result }}"
+          echo "checkLatestAttributes: ${{ needs.checkLatestAttributes.result }}"
+          echo "checkStableAttributes: ${{ needs.checkStableAttributes.result }}"
           echo "checkLatestSortOrder:  ${{ needs.checkLatestSortOrder.result }}"
           echo "checkStableSortOrder:  ${{ needs.checkStableSortOrder.result }}"
           echo "checkStableInLatest:   ${{ needs.checkStableInLatest.result }}"
 
-          if [[ "${{ needs.checkLatestSortOrder.result }}" == "failure" ]] || \
+          if [[ "${{ needs.checkLatestJson.result }}" == "failure" ]] || \
+             [[ "${{ needs.checkStableJson.result }}" == "failure" ]] || \
+             [[ "${{ needs.checkLatestAttributes.result }}" == "failure" ]] || \
+             [[ "${{ needs.checkStableAttributes.result }}" == "failure" ]] || \
+             [[ "${{ needs.checkLatestSortOrder.result }}" == "failure" ]] || \
              [[ "${{ needs.checkStableSortOrder.result }}" == "failure" ]] || \
              [[ "${{ needs.checkStableInLatest.result }}" == "failure" ]]; then
             echo "One or more checks failed!"
