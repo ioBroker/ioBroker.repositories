@@ -4,33 +4,123 @@ on:
   workflow_dispatch:
 
   schedule:
-    # * is a special character in YAML, so you have to quote this string
-    # every day
-    - cron:  '45 */6 * * *'
+    - cron: '0 3 * * *'
 
-  push:
-    branches:
-      - master  
-  
-  pull_request: {}
+  push: {}
 
-concurrency:
-    group: stable-${{ github.head_ref }}
-    cancel-in-progress: true
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
 
 jobs:
-  check:
-    name: check repository files
-    if: |
-      github.repository == 'ioBroker/ioBroker.repositories'
-
+  check-sources-dist:
+    name: ioBroker/ioBroker.repositories#1
+    if: github.repository == 'ioBroker/ioBroker.repositories'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 22
-      - run: npm i
-      - run: npm run test
-        env:
-          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
+      - name: Check alphabetical order in sources-dist.json
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+
+          const file = 'sources-dist.json';
+          const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+          const keys = Object.keys(data);
+
+          const errors = [];
+          for (let i = 1; i < keys.length; i++) {
+            if (keys[i - 1].localeCompare(keys[i]) > 0) {
+              errors.push(`Out of order entry in ${file}: "${keys[i]}" should be before "${keys[i - 1]}"`);
+            }
+          }
+
+          if (errors.length) {
+            errors.forEach(error => console.error(error));
+            console.error(`Found ${errors.length} ordering issue(s) in ${file}.`);
+            process.exit(1);
+          }
+
+          console.log(`${file} keys are in alphabetical order.`);
+          NODE
+
+  check-sources-dist-stable:
+    name: ioBroker/ioBroker.repositories#2
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check alphabetical order in sources-dist-stable.json
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+
+          const file = 'sources-dist-stable.json';
+          const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+          const keys = Object.keys(data);
+
+          const errors = [];
+          for (let i = 1; i < keys.length; i++) {
+            if (keys[i - 1].localeCompare(keys[i]) > 0) {
+              errors.push(`Out of order entry in ${file}: "${keys[i]}" should be before "${keys[i - 1]}"`);
+            }
+          }
+
+          if (errors.length) {
+            errors.forEach(error => console.error(error));
+            console.error(`Found ${errors.length} ordering issue(s) in ${file}.`);
+            process.exit(1);
+          }
+
+          console.log(`${file} keys are in alphabetical order.`);
+          NODE
+
+  check-stable-in-latest:
+    name: ioBroker/ioBroker.repositories#3
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check stable adapters exist in latest
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+
+          const stable = JSON.parse(fs.readFileSync('sources-dist-stable.json', 'utf8'));
+          const latest = JSON.parse(fs.readFileSync('sources-dist.json', 'utf8'));
+
+          const missing = [];
+          for (const key of Object.keys(stable)) {
+            if (!Object.prototype.hasOwnProperty.call(latest, key)) {
+              missing.push(`Adapter "${key}" is in sources-dist-stable.json but missing in sources-dist.json`);
+            }
+          }
+
+          if (missing.length) {
+            missing.forEach(error => console.error(error));
+            console.error(`Found ${missing.length} adapter(s) missing in latest.`);
+            process.exit(1);
+          }
+
+          console.log('All stable adapters are present in latest.');
+          NODE
+
+  final-report:
+    name: Final report
+    if: always() && github.repository == 'ioBroker/ioBroker.repositories'
+    needs: [check-sources-dist, check-sources-dist-stable, check-stable-in-latest]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report job results
+        run: |
+          echo "ioBroker/ioBroker.repositories#1: ${{ needs.check-sources-dist.result }}"
+          echo "ioBroker/ioBroker.repositories#2: ${{ needs.check-sources-dist-stable.result }}"
+          echo "ioBroker/ioBroker.repositories#3: ${{ needs.check-stable-in-latest.result }}"
+
+          if [ "${{ needs.check-sources-dist.result }}" != "success" ] || \
+             [ "${{ needs.check-sources-dist-stable.result }}" != "success" ] || \
+             [ "${{ needs.check-stable-in-latest.result }}" != "success" ]; then
+            echo "At least one repository file check failed."
+            exit 1
+          fi
+
+          echo "All repository file checks passed."
