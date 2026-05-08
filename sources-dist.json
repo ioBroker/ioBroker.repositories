@@ -2468,7 +2468,7 @@
   "script-restore": {
     "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.script-restore/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.script-restore/main/admin/script-restore.svg",
-    "type": "tools"
+    "type": "utility"
   },
   "seko": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.seko/main/io-package.json",
