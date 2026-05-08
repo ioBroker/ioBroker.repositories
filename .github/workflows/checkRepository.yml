@@ -53,7 +53,7 @@ jobs:
   checkStableAttributes:
     name: Check sources-dist-stable.json attributes
     if: github.repository == 'ioBroker/ioBroker.repositories'
-    needs: [checkLatestJson, checkStableJson]
+    needs: [checkLatestJson, checkStableJson, checkLatestAttributes]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
