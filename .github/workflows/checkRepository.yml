@@ -2,6 +2,8 @@ name: Check Repository
 
 on:
   push:
+    branches:
+      - master  
 
   schedule:
     # daily at 3:00 UTC
