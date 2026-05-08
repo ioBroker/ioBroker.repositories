@@ -1258,7 +1258,6 @@
   "icons-open-icon-library-png": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-open-icon-library-png/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-open-icon-library-png/master/admin/icons-open-icon-library-png.png",
-    "url": "https://github.com/ioBroker/ioBroker.icons-open-icon-library-png/tarball/master",
     "type": "visualization-icons"
   },
   "icons-smarthome": {
@@ -2469,7 +2468,7 @@
   "script-restore": {
     "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.script-restore/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.script-restore/main/admin/script-restore.svg",
-    "type": "tools"
+    "type": "utility"
   },
   "seko": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.seko/main/io-package.json",
@@ -2914,9 +2913,7 @@
   "tino": {
     "meta": "https://raw.githubusercontent.com/bowao/ioBroker.tino/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/bowao/ioBroker.tino/master/admin/tino.png",
-    "type": "hardware",
-    "published": "2019-08-09T20:30:26.824Z",
-    "versionDate": "2019-08-09T20:30:26.824Z"
+    "type": "hardware"
   },
   "tinymqttbroker": {
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.tinymqttbroker/main/io-package.json",
@@ -2926,9 +2923,7 @@
   "tinyrx4": {
     "meta": "https://raw.githubusercontent.com/bowao/ioBroker.tinyrx4/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/bowao/ioBroker.tinyrx4/master/admin/tinyRX4.png",
-    "type": "hardware",
-    "published": "2019-08-09T19:16:19.154Z",
-    "versionDate": "2019-08-09T19:16:19.154Z"
+    "type": "hardware"
   },
   "toyota": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.toyota/master/io-package.json",
