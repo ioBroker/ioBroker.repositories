@@ -1,5 +1,5 @@
 'use strict';
-const expect = require('chai').expect;
+const assert = require('node:assert');
 const fs = require('node:fs');
 const axios = require('axios');
 let latest;
@@ -31,7 +31,7 @@ describe('Test Repository', () => {
         try {
             latest = JSON.parse(text);
         } catch (e) {
-            expect(e).to.be.null;
+            assert.equal(e, null, 'Error parsing sources-dist.json');
         }
         done();
     });
@@ -41,7 +41,7 @@ describe('Test Repository', () => {
         try {
             stable = JSON.parse(text);
         } catch (e) {
-            expect(e).to.be.null;
+            assert.equal(e, null, 'Error parsing sources-dist-stable.json');
         }
         done();
     });
@@ -53,12 +53,12 @@ describe('Test Repository', () => {
         let id = Object.keys(stable).find(id =>
             reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')),
         );
-        expect(id).to.be.not.ok;
+        assert.ok(!id, `Found reserved name in stable: ${id}`);
         // check the latest names
         id = Object.keys(latest).find(id =>
             reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')),
         );
-        expect(id).to.be.not.ok;
+        assert.ok(!id, `Found reserved name in latest: ${id}`);
         done();
     });
 
@@ -68,11 +68,11 @@ describe('Test Repository', () => {
 
         for (const id in stable) {
             if (Object.prototype.hasOwnProperty.call(stable, id) && id !== '_repoInfo') {
-                expect(id).to.be.equal(id.toLowerCase());
-                expect(latest[id], `${id} not in latest but in stable`).to.be.not.undefined;
-                expect(latest[id].type).to.be.not.undefined;
-                expect(latest[id].type).to.be.not.equal('');
-                expect(latest[id].type).to.be.equal(stable[id].type);
+                assert.equal(id, id.toLowerCase(), `Adapter id ${id} is not lowercase`);
+                assert.notEqual(latest[id], undefined, `${id} not in latest but in stable`);
+                assert.notEqual(latest[id].type, undefined, `${id} missing type in latest`);
+                assert.notEqual(latest[id].type, '', `${id} has empty type in latest`);
+                assert.equal(latest[id].type, stable[id].type, `${id} type mismatch: latest(${latest[id].type}) vs stable(${stable[id].type})`);
             }
         }
         // compare types with io-package.json
@@ -80,12 +80,12 @@ describe('Test Repository', () => {
         let i = 0;
         for (const id in latest) {
             if (Object.prototype.hasOwnProperty.call(latest, id) && id !== '_repoInfo') {
-                expect(id).to.be.equal(id.toLowerCase());
-                if (latest[id].meta && latest[id].meta.match(/io-package\.json$/)) {
+                assert.equal(id, id.toLowerCase(), `Adapter id ${id} is not lowercase`);
+                if (latest[id].meta?.match(/io-package\.json$/)) {
                     const response = await request(latest[id].meta);
                     console.log(`[${i}/${len}] Check ${id}`);
                     const pack = response.data;
-                    if (pack && pack.common && pack.common.type !== latest[id].type) {
+                    if (pack?.common && pack.common.type !== latest[id].type) {
                         console.error(`Types in "${id}" are not equal: ${pack.common.type} !== ${latest[id].type}`);
                     }
                 }
@@ -100,30 +100,30 @@ describe('Test Repository', () => {
             if (!Object.prototype.hasOwnProperty.call(latest, name) || name === '_repoInfo') {
                 continue;
             }
-            /*expect(!!latest[name].published).to.be.true;
+            /*assert.ok(latest[name].published, `${name} missing published date`);
 
             if (new Date(latest[name].published).toString() === 'Invalid Date') {
                 console.error(`Adapter ${name} has invalid published date: "${latest[name].published}"`);
             }
 
-            expect(new Date(latest[name].published).toString()).to.be.not.equal('Invalid Date');
+            assert.notEqual(new Date(latest[name].published).toString(), 'Invalid Date', `${name} has invalid published date`);
 
             if (new Date(latest[name].versionDate).toString() === 'Invalid Date') {
                 console.error(`Adapter ${name} has invalid versionDate: "${latest[name].versionDate}"`);
             }
 
-            expect(!!latest[name].versionDate).to.be.true;
-            expect(new Date(latest[name].versionDate).toString()).to.be.not.equal('Invalid Date');
+            assert.ok(latest[name].versionDate, `${name} missing versionDate`);
+            assert.notEqual(new Date(latest[name].versionDate).toString(), 'Invalid Date', `${name} has invalid versionDate`);
 */
-            expect(!!latest[name].meta).to.be.true;
-            expect(!latest[name].meta.match(/\s/)).to.be.true;
+            assert.ok(latest[name].meta, `${name} missing meta in latest`);
+            assert.ok(!latest[name].meta.match(/\s/), `${name} meta has spaces in latest`);
 
             if (name !== 'js-controller') {
                 if (!latest[name].icon) {
                     console.error(`Adapter ${name} has no icon in latest`);
                 }
-                expect(!!latest[name].icon).to.be.true;
-                expect(!latest[name].icon.match(/\s/)).to.be.true;
+                assert.ok(latest[name].icon, `${name} missing icon in latest`);
+                assert.ok(!latest[name].icon.match(/\s/), `${name} icon has spaces in latest`);
             }
         }
         done();
@@ -138,31 +138,31 @@ describe('Test Repository', () => {
             /*if (new Date(stable[name].published).toString() === 'Invalid Date') {
                 console.error(`Adapter ${name} has invalid published: "${stable[name].published}"`);
             }
-            expect(!!stable[name].published).to.be.true;
-            expect(new Date(stable[name].published).toString()).to.be.not.equal('Invalid Date');
+            assert.ok(stable[name].published, `${name} missing published date in stable`);
+            assert.notEqual(new Date(stable[name].published).toString(), 'Invalid Date', `${name} has invalid published date in stable`);
 
             if (new Date(stable[name].versionDate).toString() === 'Invalid Date') {
                 console.error(`Adapter ${name} has invalid versionDate: "${stable[name].versionDate}"`);
             }
-            expect(!!stable[name].versionDate).to.be.true;
-            expect(new Date(stable[name].versionDate).toString()).to.be.not.equal('Invalid Date');
+            assert.ok(stable[name].versionDate, `${name} missing versionDate in stable`);
+            assert.notEqual(new Date(stable[name].versionDate).toString(), 'Invalid Date', `${name} has invalid versionDate in stable`);
 */
             if (!stable[name].version) {
                 console.error(`Adapter ${name} has no version in stable`);
             }
-            expect(!!stable[name].version).to.be.true;
-            expect(!stable[name].version.match(/\s/)).to.be.true;
+            assert.ok(stable[name].version, `${name} missing version in stable`);
+            assert.ok(!stable[name].version.match(/\s/), `${name} version has spaces in stable`);
 
-            expect(!!stable[name].meta).to.be.true;
-            expect(!stable[name].meta.match(/\s/)).to.be.true;
+            assert.ok(stable[name].meta, `${name} missing meta in stable`);
+            assert.ok(!stable[name].meta.match(/\s/), `${name} meta has spaces in stable`);
 
             if (name !== 'js-controller') {
                 if (!stable[name].icon) {
                     console.error(`Adapter ${name} has no icon in stable`);
                 }
 
-                expect(!!stable[name].icon).to.be.true;
-                expect(!stable[name].icon.match(/\s/)).to.be.true;
+                assert.ok(stable[name].icon, `${name} missing icon in stable`);
+                assert.ok(!stable[name].icon.match(/\s/), `${name} icon has spaces in stable`);
             }
         }
         done();
@@ -180,11 +180,11 @@ describe('Test Repository', () => {
                 console.error(`Adapter ${name} is in stable but not in latest`);
             }
             // latest must have all stable adapters and more unstable
-            expect(!!latest[name]).to.be.true;
+            assert.ok(latest[name], `${name} is in stable but not in latest`);
 
-            expect(latest[name].meta).to.be.equal(stable[name].meta);
-            expect(latest[name].icon).to.be.equal(stable[name].icon);
-            expect(latest[name].type).to.be.equal(stable[name].type);
+            assert.strictEqual(latest[name].meta, stable[name].meta, `${name} meta mismatch stable vs latest`);
+            assert.strictEqual(latest[name].icon, stable[name].icon, `${name} icon mismatch stable vs latest`);
+            assert.strictEqual(latest[name].type, stable[name].type, `${name} type mismatch stable vs latest`);
         }
 
         done();
@@ -225,7 +225,7 @@ describe('Test Repository', () => {
                     cache[repo.meta] = response.data;
                 }
                 const res = cache[repo.meta];
-                if (res.common.name !== id && id !== 'admin' && id !== 'admin-2') {
+                if (res.common.name !== id && id !== 'admin') {
                     console.error(`adapter names are not equal: ${id} !== ${res.common.name}`);
                     error = true;
                 }

@@ -1,0 +1,138 @@
+name: Cmd Update Stable Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      adapter:
+        description: Adapter name (without 'ioBroker.' prefix)
+        type: string
+        required: true
+      version:
+        description: Version to set (x.y.z)
+        type: string
+        required: true
+
+  workflow_call:
+    inputs:
+      adapter:
+        description: Adapter name (without 'ioBroker.' prefix)
+        type: string
+        required: true
+      version:
+        description: Version to set (x.y.z)
+        type: string
+        required: true
+
+jobs:
+  update-stable-release:
+    name: Update stable release
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.IOBBOT_GITHUB_TOKEN }}
+
+      - name: Check adapter exists in stable repository
+        id: check_stable
+        env:
+          ADAPTER: ${{ inputs.adapter }}
+          VERSION: ${{ inputs.version }}
+        run: |
+          # Validate version format
+          if ! echo "$VERSION" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+            echo "::error::Version '$VERSION' does not match expected format x.y.z"
+            exit 1
+          fi
+
+          # Check adapter exists in sources-dist-stable.json
+          CURRENT_VERSION=$(node -e "
+            const stable = require('./sources-dist-stable.json');
+            const adapter = process.env.ADAPTER;
+            const entry = stable[adapter];
+            if (!entry) {
+              console.error('Adapter ' + adapter + ' not found in sources-dist-stable.json');
+              process.exit(1);
+            }
+            console.log(entry.version || '');
+          ")
+
+          echo "current_version=$CURRENT_VERSION" >> "$GITHUB_OUTPUT"
+          echo "Adapter '$ADAPTER' found in stable repository with version '$CURRENT_VERSION'"
+
+      - name: Check version exists on npm
+        env:
+          ADAPTER: ${{ inputs.adapter }}
+          VERSION: ${{ inputs.version }}
+        run: |
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://registry.npmjs.org/iobroker.${ADAPTER}/${VERSION}")
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "::error::Version '$VERSION' of 'iobroker.$ADAPTER' not found on npm (HTTP status: $HTTP_STATUS)"
+            exit 1
+          fi
+          echo "Version '$VERSION' of 'iobroker.$ADAPTER' found on npm"
+
+      - name: Create branch and update version
+        id: create_branch
+        env:
+          ADAPTER: ${{ inputs.adapter }}
+          VERSION: ${{ inputs.version }}
+          GH_TOKEN: ${{ secrets.IOBBOT_GITHUB_TOKEN }}
+        run: |
+          BRANCH="update-stable-${ADAPTER}-${VERSION}"
+
+          git config user.name "iobbot"
+          git config user.email "iobbot@users.noreply.github.com"
+
+          git checkout -b "$BRANCH"
+
+          # Update the version in sources-dist-stable.json
+          node -e "
+            const fs = require('fs');
+            const stable = JSON.parse(fs.readFileSync('./sources-dist-stable.json', 'utf8'));
+            const adapter = process.env.ADAPTER;
+            const version = process.env.VERSION;
+            stable[adapter].version = version;
+            fs.writeFileSync('./sources-dist-stable.json', JSON.stringify(stable, null, 2) + '\n', 'utf8');
+          "
+
+          git add sources-dist-stable.json
+          git commit -m "Update $ADAPTER to $VERSION"
+
+          # Ensure a fork exists in iobbot's space (creates one if it doesn't exist yet)
+          gh repo fork ioBroker/ioBroker.repositories --clone=false
+
+          # Resolve the iobbot username dynamically from the token
+          IOBBOT_USER=$(gh api user --jq .login)
+          echo "iobbot_user=$IOBBOT_USER" >> "$GITHUB_OUTPUT"
+
+          # Push the branch to iobbot's fork (iobbot lacks direct push access to the main repo)
+          git remote add fork "https://x-access-token:${GH_TOKEN}@github.com/${IOBBOT_USER}/ioBroker.repositories.git"
+          git push fork "$BRANCH"
+
+      - name: Create pull request
+        env:
+          ADAPTER: ${{ inputs.adapter }}
+          VERSION: ${{ inputs.version }}
+          CURRENT_VERSION: ${{ steps.check_stable.outputs.current_version }}
+          IOBBOT_USER: ${{ steps.create_branch.outputs.iobbot_user }}
+          WORKFLOW_NAME: ${{ github.workflow }}
+          GH_TOKEN: ${{ secrets.IOBBOT_GITHUB_TOKEN }}
+        run: |
+          BRANCH="update-stable-${ADAPTER}-${VERSION}"
+
+          PR_TITLE="Update ${ADAPTER} to ${VERSION}"
+          PR_BODY="Update ${ADAPTER} from ${CURRENT_VERSION} to ${VERSION}."$'\n\n'"PR created by workflow ${WORKFLOW_NAME}"
+
+          gh pr create \
+            --title "$PR_TITLE" \
+            --body "$PR_BODY" \
+            --base master \
+            --head "${IOBBOT_USER}:${BRANCH}" \
+            --repo ioBroker/ioBroker.repositories
