@@ -817,7 +817,7 @@
     "meta": "https://raw.githubusercontent.com/MyHomeMyData/ioBroker.flexcharts/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/MyHomeMyData/ioBroker.flexcharts/main/admin/flexcharts-icon.png",
     "type": "visualization",
-    "version": "0.7.0"
+    "version": "0.7.2"
   },
   "followthesun": {
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.followthesun/main/io-package.json",
@@ -1063,7 +1063,7 @@
     "meta": "https://raw.githubusercontent.com/ltspicer/ioBroker.heizoel24-mex/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ltspicer/ioBroker.heizoel24-mex/main/admin/heizoel24-mex.png",
     "type": "metering",
-    "version": "1.8.1"
+    "version": "1.9.0"
   },
   "heizungssteuerung": {
     "meta": "https://raw.githubusercontent.com/jbeenenga/ioBroker.heizungssteuerung/main/io-package.json",
@@ -1501,7 +1501,7 @@
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.life360ng/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.life360ng/main/admin/Life360_s.svg",
     "type": "geoposition",
-    "version": "1.1.0"
+    "version": "1.4.0"
   },
   "lifx": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/io-package.json",
@@ -1833,6 +1833,12 @@
     "type": "protocols",
     "version": "3.0.0"
   },
+  "mspa": {
+    "meta": "https://raw.githubusercontent.com/arteck/ioBroker.mspa/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/arteck/ioBroker.mspa/main/admin/mspa.png",
+    "type": "climate-control",
+    "version": "0.3.7"
+  },
   "musiccast": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.musiccast/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.musiccast/master/admin/musiccast.png",
@@ -1916,6 +1922,12 @@
     "icon": "https://raw.githubusercontent.com/H5N1v2/ioBroker.nextcloud-monitoring/main/admin/nextcloud_monitoring.png",
     "type": "network",
     "version": "2.0.6"
+  },
+  "nextcloudtalk": {
+    "meta": "https://raw.githubusercontent.com/Rello/ioBroker.nextcloudtalk/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Rello/ioBroker.nextcloudtalk/main/admin/nextcloud.png",
+    "type": "messaging",
+    "version": "1.0.3"
   },
   "nina": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/io-package.json",
@@ -2065,7 +2077,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.openknx/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.openknx/master/admin/openknx.png",
     "type": "iot-systems",
-    "version": "1.1.6"
+    "version": "1.1.11"
   },
   "openligadb": {
     "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.openligadb/main/io-package.json",
@@ -2757,6 +2769,12 @@
     "type": "energy",
     "version": "0.9.22"
   },
+  "solectrus-influxdb": {
+    "meta": "https://raw.githubusercontent.com/patricknitsch/ioBroker.solectrus-influxdb/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/patricknitsch/ioBroker.solectrus-influxdb/main/admin/solectrus-influxdb.png",
+    "type": "communication",
+    "version": "1.8.2"
+  },
   "soliscloud": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.soliscloud/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.soliscloud/main/admin/solis.png",
@@ -2965,7 +2983,7 @@
     "meta": "https://raw.githubusercontent.com/hombach/ioBroker.tibberlink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/hombach/ioBroker.tibberlink/master/admin/tibberlink.png",
     "type": "energy",
-    "version": "6.2.1"
+    "version": "6.2.2"
   },
   "tinker": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.tinker/master/io-package.json",

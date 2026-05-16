@@ -815,6 +815,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/admin/flot.png",
     "type": "visualization"
   },
+  "flowers": {
+    "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.flowers/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.flowers/main/admin/flowers.png",
+    "type": "climate-control"
+  },
   "followthesun": {
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.followthesun/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.followthesun/main/admin/followthesun.png",
@@ -1489,6 +1494,11 @@
     "meta": "https://raw.githubusercontent.com/Smart-Gang/ioBroker.linktap/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Smart-Gang/ioBroker.linktap/master/admin/LinkTap_Logo.png",
     "type": "garden"
+  },
+  "linky": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.linky/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.linky/main/admin/linky.png",
+    "type": "energy"
   },
   "linux-control": {
     "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.linux-control/master/io-package.json",
@@ -3170,6 +3180,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-sweethome3d/main/admin/vis-2-widgets-sweethome3d.png",
     "type": "visualization-widgets"
   },
+  "vis-2-widgets-tibberlink": {
+    "meta": "https://raw.githubusercontent.com/ssbingo/ioBroker.vis-2-widgets-tibberlink/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ssbingo/ioBroker.vis-2-widgets-tibberlink/main/admin/vis-2-widgets-tibberlink.png",
+    "type": "visualization-widgets"
+  },
   "vis-2-widgets-weather-and-heating": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating/master/admin/vis-2-widgets-weather-and-heating.png",
@@ -3364,6 +3379,11 @@
     "meta": "https://raw.githubusercontent.com/theknut/ioBroker.waterkotte-easycon/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/theknut/ioBroker.waterkotte-easycon/main/admin/waterkotte-easycon.png",
     "type": "climate-control"
+  },
+  "wattcycle": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.wattcycle/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.wattcycle/main/admin/wattcycle.png",
+    "type": "energy"
   },
   "weather-warnings": {
     "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.weather-warnings/main/io-package.json",
