@@ -7,6 +7,9 @@ const {
 const {
     checkAdapterRepositoryFiles,
 } = require('../lib/checkRepository_checkAdapterRepositoryFiles');
+const {
+    logCheck,
+} = require('../lib/checkRepository_common');
 
 describe('checkRepository helpers', () => {
     it('finds all reserved adapter names in latest data', () => {
@@ -82,13 +85,34 @@ describe('checkRepository helpers', () => {
                 'Adapter "brokenIcon" icon "https://example.com/broken-icon/icon.png" could not be fetched: HTTP 404',
             ],
         );
-        assert.deepStrictEqual(
-            started.sort(),
-            [
-                '[2026-05-20T00:00:00.000Z] Checking adapter "brokenIcon"',
-                '[2026-05-20T00:00:00.000Z] Checking adapter "brokenName"',
-                '[2026-05-20T00:00:00.000Z] Checking adapter "valid"',
-            ],
+        const startLogs = started.filter(line => line.includes('Checking adapter')).sort();
+        assert.deepStrictEqual(startLogs, [
+            '[2026-05-20T00:00:00.000Z] Checking adapter "brokenIcon"',
+            '[2026-05-20T00:00:00.000Z] Checking adapter "brokenName"',
+            '[2026-05-20T00:00:00.000Z] Checking adapter "valid"',
+        ]);
+        assert.ok(started.some(line => line.includes('download url="https://example.com/valid/io-package.json"')));
+        assert.ok(started.some(line => line.includes('download url="https://example.com/broken-icon/icon.png"')));
+        assert.ok(started.some(line => line.includes('adapter="brokenName" check="metaCommonName"')));
+        assert.ok(started.some(line => line.includes('adapter="brokenIcon" check="iconDownload"')));
+    });
+
+    it('formats debug check logs with adapter, check, parameters and result', () => {
+        const logs = [];
+        logCheck(
+            'myAdapter',
+            'attributeType',
+            { attribute: 'meta', value: 'https://example.com/io-package.json' },
+            true,
+            {
+                enabled: true,
+                logger: message => logs.push(message),
+                now: () => '2026-05-20T00:00:00.000Z',
+            },
         );
+
+        assert.deepStrictEqual(logs, [
+            '[2026-05-20T00:00:00.000Z] adapter="myAdapter" check="attributeType" parameters={"attribute":"meta","value":"https://example.com/io-package.json"} result=ok',
+        ]);
     });
 });
