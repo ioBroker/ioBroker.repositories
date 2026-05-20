@@ -10,11 +10,20 @@ on:
     - cron: '0 3 * * *'
 
   workflow_dispatch:
+    inputs:
+      log:
+        description: Enable timestamped per-adapter logging
+        required: false
+        type: boolean
+        default: false
 
   pull_request:
 
 permissions:
   contents: read
+
+env:
+  CHECK_REPOSITORY_LOG: ${{ github.event.inputs.log == 'true' && 'true' || 'false' }}
 
 jobs:
   checkLatestJson:
@@ -51,6 +60,18 @@ jobs:
         with:
           node-version: 22
       - run: node lib/checkRepository_checkLatestAttributes.js
+
+  checkAdapterNames:
+    name: Check adapter names
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    needs: [checkLatestAttributes]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: node lib/checkRepository_checkAdapterNames.js
 
   checkStableAttributes:
     name: Check sources-dist-stable.json attributes
@@ -100,10 +121,22 @@ jobs:
           node-version: 22
       - run: node lib/checkRepository_checkStableInLatest.js
 
+  checkAdapterRepositoryFiles:
+    name: Check adapter repository files
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    needs: [checkLatestJson, checkStableJson, checkLatestAttributes, checkAdapterNames, checkStableAttributes, checkLatestSortOrder, checkStableSortOrder, checkStableInLatest]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: node lib/checkRepository_checkAdapterRepositoryFiles.js
+
   report:
     name: Final Report
     if: always() && github.repository == 'ioBroker/ioBroker.repositories'
-    needs: [checkLatestJson, checkStableJson, checkLatestAttributes, checkStableAttributes, checkLatestSortOrder, checkStableSortOrder, checkStableInLatest]
+    needs: [checkLatestJson, checkStableJson, checkLatestAttributes, checkAdapterNames, checkStableAttributes, checkLatestSortOrder, checkStableSortOrder, checkStableInLatest, checkAdapterRepositoryFiles]
     runs-on: ubuntu-latest
     steps:
       - name: Check all jobs passed
@@ -111,18 +144,22 @@ jobs:
           echo "checkLatestJson:       ${{ needs.checkLatestJson.result }}"
           echo "checkStableJson:       ${{ needs.checkStableJson.result }}"
           echo "checkLatestAttributes: ${{ needs.checkLatestAttributes.result }}"
+          echo "checkAdapterNames:     ${{ needs.checkAdapterNames.result }}"
           echo "checkStableAttributes: ${{ needs.checkStableAttributes.result }}"
           echo "checkLatestSortOrder:  ${{ needs.checkLatestSortOrder.result }}"
           echo "checkStableSortOrder:  ${{ needs.checkStableSortOrder.result }}"
           echo "checkStableInLatest:   ${{ needs.checkStableInLatest.result }}"
+          echo "checkAdapterRepositoryFiles: ${{ needs.checkAdapterRepositoryFiles.result }}"
 
           if [[ "${{ needs.checkLatestJson.result }}" == "failure" ]] || \
              [[ "${{ needs.checkStableJson.result }}" == "failure" ]] || \
              [[ "${{ needs.checkLatestAttributes.result }}" == "failure" ]] || \
+             [[ "${{ needs.checkAdapterNames.result }}" == "failure" ]] || \
              [[ "${{ needs.checkStableAttributes.result }}" == "failure" ]] || \
              [[ "${{ needs.checkLatestSortOrder.result }}" == "failure" ]] || \
              [[ "${{ needs.checkStableSortOrder.result }}" == "failure" ]] || \
-             [[ "${{ needs.checkStableInLatest.result }}" == "failure" ]]; then
+             [[ "${{ needs.checkStableInLatest.result }}" == "failure" ]] || \
+             [[ "${{ needs.checkAdapterRepositoryFiles.result }}" == "failure" ]]; then
             echo "One or more checks failed!"
             exit 1
           fi
