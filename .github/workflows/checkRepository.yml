@@ -11,8 +11,13 @@ on:
 
   workflow_dispatch:
     inputs:
+      debug:
+        description: Enable debug logging for repository checks
+        required: false
+        type: boolean
+        default: false
       log:
-        description: Enable timestamped per-adapter logging
+        description: Legacy logging flag (same as debug)
         required: false
         type: boolean
         default: false
@@ -23,6 +28,7 @@ permissions:
   contents: read
 
 env:
+  CHECK_REPOSITORY_DEBUG: ${{ (github.event.inputs.debug == 'true' || github.event.inputs.log == 'true') && 'true' || 'false' }}
   CHECK_REPOSITORY_LOG: ${{ github.event.inputs.log == 'true' && 'true' || 'false' }}
 
 jobs:
