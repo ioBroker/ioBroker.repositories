@@ -52,7 +52,7 @@
   ],
   "devDependencies": {
     "@iobroker/eslint-config": "^2.3.4",
-    "@iobroker/repochecker": "^5.11.1",
+    "@iobroker/repochecker": "^5.12.0",
     "axios": "^1.16.1",
     "image-size": "^2.0.2",
     "minimist": "^1.2.8",
