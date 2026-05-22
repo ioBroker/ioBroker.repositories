@@ -1167,7 +1167,7 @@
   },
   "hueemu": {
     "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.hueemu/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.hueemu/main/admin/hue-emu-logo.png",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.hueemu/main/admin/hue-emu-logo.svg",
     "type": "lighting"
   },
   "huum-sauna": {
@@ -3483,7 +3483,7 @@
   "wireless-settings": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.wireless-settings/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.wireless-settings/master/admin/wireless-settings.png",
-    "type": "communication"
+    "type": "network"
   },
   "withings": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.withings/master/io-package.json",
