@@ -89,6 +89,7 @@ describe('checkObjectStructure', () => {
         const report = fs.readFileSync(result.reportPath, 'utf8');
         assert.match(report, /Filename "badname.json" does not match required pattern/);
         assert.match(report, /missing intermediate object "test.0.channel"/);
+        assert.doesNotMatch(report, /missing intermediate object "test"/);
         assert.match(report, /unknown role "unknown.role"/);
         assert.ok(result.errorCount > 0);
         assert.ok(result.warningCount > 0);
