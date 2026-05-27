@@ -1603,7 +1603,7 @@
   "mcp": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mcp/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mcp/main/admin/mcp.png",
-    "type": "hardware"
+    "type": "utility"
   },
   "meater": {
     "meta": "https://raw.githubusercontent.com/Standarduser/ioBroker.meater/main/io-package.json",
