@@ -2157,6 +2157,12 @@
     "type": "storage",
     "version": "1.0.0"
   },
+  "parcelapp": {
+    "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.parcelapp/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.parcelapp/main/admin/parcelapp.svg",
+    "type": "infrastructure",
+    "version": "0.5.3"
+  },
   "parser": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/admin/parser.png",
