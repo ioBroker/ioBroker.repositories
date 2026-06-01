@@ -1005,6 +1005,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham-wemo/master/admin/ham-wemo.png",
     "type": "iot-systems"
   },
+    "hannah": {
+    "meta": "https://raw.githubusercontent.com/NurPech/ioBroker.hannah/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/NurPech/ioBroker.hannah/main/admin/hannah.png",
+    "type": "protocols"
+  },
   "harmony": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.harmony/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.harmony/master/admin/harmony.png",
