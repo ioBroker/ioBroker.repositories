@@ -35,7 +35,8 @@
     "stableBrandNewInfo": "node lib/stableBrandNewInfo.js",
     "handleReminder": "node lib/handleReminder.js",
     "doReCheck": "node lib/doReCheck.js",
-    "closeWithErrors": "node lib/closeWithErrors.js"
+    "closeWithErrors": "node lib/closeWithErrors.js",
+    "checkObjectStructure": "node lib/checkObjectStructure.js"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
@@ -52,7 +53,7 @@
   ],
   "devDependencies": {
     "@iobroker/eslint-config": "^2.3.4",
-    "@iobroker/repochecker": "^5.13.1",
+    "@iobroker/repochecker": "^5.17.4",
     "axios": "^1.16.1",
     "image-size": "^2.0.2",
     "minimist": "^1.2.8",
