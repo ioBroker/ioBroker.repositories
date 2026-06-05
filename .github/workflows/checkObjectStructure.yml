@@ -85,7 +85,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.pr.outputs.skip != 'true'
-        run: npm ci
+        run: npm i
 
       # ------------------------------------------------------------------
       # Run the check script
