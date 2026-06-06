@@ -1197,6 +1197,12 @@
     "type": "lighting",
     "version": "3.16.2"
   },
+  "hueemu": {
+    "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.hueemu/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.hueemu/main/admin/hue-emu-logo.svg",
+    "type": "lighting",
+    "version": "1.5.1"
+  },
   "huum-sauna": {
     "meta": "https://raw.githubusercontent.com/Chris-656/ioBroker.huum-sauna/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Chris-656/ioBroker.huum-sauna/main/admin/huum-sauna.png",
