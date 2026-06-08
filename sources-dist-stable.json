@@ -3231,6 +3231,12 @@
     "type": "visualization-widgets",
     "version": "1.2.2"
   },
+  "vis-2-widgets-sigenergy": {
+    "meta": "https://raw.githubusercontent.com/ssbingo/ioBroker.vis-2-widgets-sigenergy/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ssbingo/ioBroker.vis-2-widgets-sigenergy/main/admin/vis-2-widgets-sigenergy.png",
+    "type": "visualization-widgets",
+    "version": "1.8.1"
+  },
   "vis-2-widgets-weather-and-heating": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-2-widgets-weather-and-heating/master/admin/vis-2-widgets-weather-and-heating.png",
