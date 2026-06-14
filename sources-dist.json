@@ -765,6 +765,12 @@
     "icon": "https://raw.githubusercontent.com/gaudes/ioBroker.fahrplan/master/admin/fahrplan.png",
     "type": "date-and-time"
   },
+  "fairland": {
+    "meta": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/admin/fairland.png",
+    "type": "iot-systems",
+    "version": "0.2.3"
+  },
   "fakeroku": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fakeroku/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fakeroku/master/admin/fakeroku.png",
