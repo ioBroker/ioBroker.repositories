@@ -880,15 +880,15 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.frontier_silicon/master/admin/radio.png",
     "type": "multimedia"
   },
-  "fujitsu-airstage": {
-    "meta": "https://raw.githubusercontent.com/stefan5232/ioBroker.fujitsu-airstage/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/stefan5232/ioBroker.fujitsu-airstage/main/admin/fujitsu.png",
-    "type": "climate-control"
-  },
   "fuelpricemonitor": {
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.fuelpricemonitor/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.fuelpricemonitor/main/admin/fuelpricemonitor.png",
     "type": "vehicle"
+  },
+  "fujitsu-airstage": {
+    "meta": "https://raw.githubusercontent.com/stefan5232/ioBroker.fujitsu-airstage/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/stefan5232/ioBroker.fujitsu-airstage/main/admin/fujitsu.png",
+    "type": "climate-control"
   },
   "fullcalendar": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.fullcalendar/master/io-package.json",
