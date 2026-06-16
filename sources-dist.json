@@ -2945,6 +2945,11 @@
     "icon": "https://raw.githubusercontent.com/hombach/ioBroker.tibberlink/master/admin/tibberlink.png",
     "type": "energy"
   },
+  "tidy": {
+    "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.tidy/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.tidy/main/admin/tidy.svg",
+    "type": "storage"
+  },
   "tileboard": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.tileboard/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.tileboard/master/admin/tileboard.png",
