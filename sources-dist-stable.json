@@ -1185,6 +1185,12 @@
     "type": "iot-systems",
     "version": "1.3.0"
   },
+  "homewizard": {
+    "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.homewizard/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.homewizard/main/admin/homewizard.svg",
+    "type": "energy",
+    "version": "0.12.2"
+  },
   "hoymiles-ms": {
     "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.hoymiles-ms/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/mcm4iob/ioBroker.hoymiles-ms/main/admin/hoymiles-ms.png",
