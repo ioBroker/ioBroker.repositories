@@ -1055,6 +1055,11 @@
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/admin/heatingcontrol.png",
     "type": "climate-control"
   },
+  "heishamon": {
+    "meta": "https://raw.githubusercontent.com/TobiasHanss/ioBroker.heishamon/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TobiasHanss/ioBroker.heishamon/main/admin/heishamon.png",
+    "type": "climate-control"
+  },
   "heizoel": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.heizoel/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.heizoel/master/admin/heizoel.png",
