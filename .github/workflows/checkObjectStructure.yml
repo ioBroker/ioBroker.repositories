@@ -1,0 +1,98 @@
+name: Check Object Structure
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Triggers
+# ──────────────────────────────────────────────────────────────────────────────
+on:
+  # 1. Manual run – caller supplies the PR number
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'Pull Request number to check'
+        required: true
+        type: number
+
+  # 2. PR opened or updated (new commits pushed)
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+  # 3. Comment added or edited on a PR (issue_comment fires for both issues and PRs)
+  issue_comment:
+    types: [created, edited]
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Permissions  (pull_request_target / issue_comment need write access to post)
+# ──────────────────────────────────────────────────────────────────────────────
+permissions:
+  pull-requests: write
+  issues: write
+  contents: read
+
+jobs:
+  checkObjectStructure:
+    name: Check Object Structure
+
+    # Only run in the canonical repository
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+
+    # For issue_comment events skip runs on plain Issues (no PR attached)
+    # For pull_request_target / workflow_dispatch always run
+    runs-on: ubuntu-latest
+
+    steps:
+      # ------------------------------------------------------------------
+      # Determine the PR number regardless of how the workflow was triggered
+      # ------------------------------------------------------------------
+      - name: Resolve PR number
+        id: pr
+        uses: actions/github-script@v9
+        with:
+          script: |
+            let prNumber;
+
+            if (context.eventName === 'workflow_dispatch') {
+              prNumber = parseInt(context.payload.inputs.pr_number, 10);
+
+            } else if (context.eventName === 'pull_request_target') {
+              prNumber = context.payload.pull_request.number;
+
+            } else if (context.eventName === 'issue_comment') {
+              // Only act when the comment belongs to a pull request
+              if (!context.payload.issue.pull_request) {
+                console.log('Comment is on a plain issue – skipping.');
+                core.setOutput('skip', 'true');
+                return;
+              }
+              prNumber = context.payload.issue.number;
+            }
+
+            console.log(`Resolved PR number: ${prNumber}`);
+            core.setOutput('number', String(prNumber));
+            core.setOutput('skip', 'false');
+
+      # ------------------------------------------------------------------
+      # Checkout (needed for npm install and the lib script)
+      # ------------------------------------------------------------------
+      - name: Checkout repository
+        if: steps.pr.outputs.skip != 'true'
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        if: steps.pr.outputs.skip != 'true'
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        if: steps.pr.outputs.skip != 'true'
+        run: npm i
+
+      # ------------------------------------------------------------------
+      # Run the check script
+      # ------------------------------------------------------------------
+      - name: Run checkObjectStructure script
+        if: steps.pr.outputs.skip != 'true'
+        run: npm run checkObjectStructure
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
