@@ -75,6 +75,12 @@
     "type": "climate-control",
     "version": "2.0.3"
   },
+  "al-ko": {
+    "meta": "https://raw.githubusercontent.com/zechnerhubert/ioBroker.al-ko/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/zechnerhubert/ioBroker.al-ko/master/admin/al-ko-128.png",
+    "type": "garden",
+    "version": "0.3.11"
+  },
   "alarm": {
     "meta": "https://raw.githubusercontent.com/misanorot/ioBroker.alarm/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/misanorot/ioBroker.alarm/master/admin/alarm.png",
@@ -254,6 +260,12 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.bestway/master/admin/bestway.png",
     "type": "household",
     "version": "0.0.4"
+  },
+  "beszel": {
+    "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.beszel/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.beszel/main/admin/beszel.svg",
+    "type": "hardware",
+    "version": "0.7.2"
   },
   "bidirectional-counter": {
     "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.bidirectional-counter/main/io-package.json",
@@ -709,7 +721,7 @@
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.enpal/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.enpal/main/admin/enpal.svg",
     "type": "energy",
-    "version": "0.2.0"
+    "version": "0.4.2"
   },
   "envertech-pv": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.envertech-pv/master/io-package.json",
@@ -985,7 +997,7 @@
     "meta": "https://raw.githubusercontent.com/patricknitsch/ioBroker.grohe-smarthome/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/patricknitsch/ioBroker.grohe-smarthome/main/admin/grohe-smarthome.png",
     "type": "metering",
-    "version": "0.3.3"
+    "version": "0.6.0"
   },
   "growatt": {
     "meta": "https://raw.githubusercontent.com/PLCHome/ioBroker.growatt/master/io-package.json",
@@ -1075,7 +1087,7 @@
     "meta": "https://raw.githubusercontent.com/ltspicer/ioBroker.heizoel24-mex/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ltspicer/ioBroker.heizoel24-mex/main/admin/heizoel24-mex.png",
     "type": "metering",
-    "version": "1.9.0"
+    "version": "1.10.1"
   },
   "heizungssteuerung": {
     "meta": "https://raw.githubusercontent.com/jbeenenga/ioBroker.heizungssteuerung/main/io-package.json",
@@ -1179,6 +1191,12 @@
     "type": "iot-systems",
     "version": "1.3.0"
   },
+  "homewizard": {
+    "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.homewizard/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.homewizard/main/admin/homewizard.svg",
+    "type": "energy",
+    "version": "0.12.2"
+  },
   "hoymiles-ms": {
     "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.hoymiles-ms/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/mcm4iob/ioBroker.hoymiles-ms/main/admin/hoymiles-ms.png",
@@ -1207,7 +1225,7 @@
     "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.hueemu/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.hueemu/main/admin/hue-emu-logo.svg",
     "type": "lighting",
-    "version": "1.5.1"
+    "version": "1.8.1"
   },
   "huum-sauna": {
     "meta": "https://raw.githubusercontent.com/Chris-656/ioBroker.huum-sauna/main/io-package.json",
@@ -1411,7 +1429,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.js-controller/master/packages/controller/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.js-controller/master/iobroker.png",
     "type": "general",
-    "version": "7.1.2"
+    "version": "7.2.2"
   },
   "judoisoft": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.judoisoft/master/io-package.json",
@@ -2179,7 +2197,7 @@
     "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.parcelapp/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.parcelapp/main/admin/parcelapp.svg",
     "type": "infrastructure",
-    "version": "0.5.3"
+    "version": "0.7.2"
   },
   "parser": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/io-package.json",
@@ -2575,7 +2593,7 @@
     "meta": "https://raw.githubusercontent.com/patricknitsch/ioBroker.schlueter-thermostat/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/patricknitsch/ioBroker.schlueter-thermostat/main/admin/schlueter-thermostat.png",
     "type": "climate-control",
-    "version": "0.5.2"
+    "version": "0.7.4"
   },
   "schoolfree": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.schoolfree/master/io-package.json",
@@ -2761,7 +2779,7 @@
     "meta": "https://raw.githubusercontent.com/ltspicer/ioBroker.sofarcloud/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ltspicer/ioBroker.sofarcloud/main/admin/sofarcloud.jpg",
     "type": "energy",
-    "version": "3.4.0"
+    "version": "3.4.3"
   },
   "solaredge": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solaredge/master/io-package.json",
@@ -2857,7 +2875,7 @@
     "meta": "https://raw.githubusercontent.com/Dirk-Peter-md/ioBroker.sprinklecontrol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Dirk-Peter-md/ioBroker.sprinklecontrol/master/admin/sprinklecontrol.png",
     "type": "garden",
-    "version": "0.2.19"
+    "version": "1.0.8"
   },
   "sql": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sql/master/io-package.json",
@@ -3427,7 +3445,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.volvo/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.volvo/master/admin/volvo.png",
     "type": "vehicle",
-    "version": "3.0.0"
+    "version": "3.0.1"
   },
   "vr200": {
     "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.vr200/master/io-package.json",
