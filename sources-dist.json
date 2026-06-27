@@ -905,6 +905,11 @@
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.fuelpricemonitor/main/admin/fuelpricemonitor.png",
     "type": "vehicle"
   },
+  "fujitsu-airstage": {
+    "meta": "https://raw.githubusercontent.com/stefan5232/ioBroker.fujitsu-airstage/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/stefan5232/ioBroker.fujitsu-airstage/main/admin/fujitsu.png",
+    "type": "climate-control"
+  },
   "fullcalendar": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.fullcalendar/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.fullcalendar/master/admin/fullcalendar.png",
