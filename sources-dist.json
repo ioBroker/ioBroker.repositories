@@ -570,6 +570,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.dreame/main/admin/dreame.png",
     "type": "household"
   },
+  "dreo": {
+    "meta": "https://raw.githubusercontent.com/alexandertartler-web/ioBroker.dreo/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/alexandertartler-web/ioBroker.dreo/main/admin/dreo.png",
+    "type": "climate-control"
+  },
   "drops-weather": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.drops-weather/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.drops-weather/main/admin/drops-weather.png",
