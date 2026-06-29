@@ -53,13 +53,13 @@
   ],
   "devDependencies": {
     "@iobroker/eslint-config": "^2.3.4",
-    "@iobroker/repochecker": "^5.18.7",
-    "axios": "^1.17.0",
+    "@iobroker/repochecker": "^5.19.3",
+    "axios": "^1.18.1",
     "image-size": "^2.0.2",
     "minimist": "^1.2.8",
     "mocha": "^11.7.6",
     "node.extend": "^2.0.3",
-    "semver": "^7.8.4",
-    "unzipper": "^0.12.3"
+    "semver": "^7.8.5",
+    "unzipper": "^0.12.5"
   }
 }
