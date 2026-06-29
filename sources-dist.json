@@ -645,6 +645,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ekey/master/admin/ekey.png",
     "type": "hardware"
   },
+  "electrolux-aeg": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.electrolux-aeg/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.electrolux-aeg/main/admin/electrolux-aeg.png",
+    "type": "household"
+  },
   "elero-usb-transmitter": {
     "meta": "https://raw.githubusercontent.com/marc2016/ioBroker.elero-usb-transmitter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/marc2016/ioBroker.elero-usb-transmitter/master/admin/elero-usb-transmitter.png",
