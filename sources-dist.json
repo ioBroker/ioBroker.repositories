@@ -915,6 +915,11 @@
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.fullybrowser/master/admin/fully.png",
     "type": "utility"
   },
+  "futterautomat": {
+    "meta": "https://raw.githubusercontent.com/ssbingo/ioBroker.futterautomat/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ssbingo/ioBroker.futterautomat/main/admin/futterautomat.png",
+    "type": "garden"
+  },
   "fyta": {
     "meta": "https://raw.githubusercontent.com/muffin142/ioBroker.fyta/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/muffin142/ioBroker.fyta/main/admin/fyta.png",
