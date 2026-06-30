@@ -1,5 +1,5 @@
 # Adapter Review Checklist
-This file contains a checklist for adapter reviews
+This file contains a checklist for adapter reviews 
 
 ## run RE-CHECK!
 * and check comments
