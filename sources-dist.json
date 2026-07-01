@@ -1820,6 +1820,11 @@
     "icon": "https://raw.githubusercontent.com/AWhiteKnight/ioBroker.moma/master/admin/moma.png",
     "type": "general"
   },
+  "motioneye": {
+    "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.motioneye/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.motioneye/main/admin/motioneye.png",
+    "type": "hardware"
+  },
   "mpd": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mpd/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mpd/master/admin/mpd.png",
@@ -2743,6 +2748,11 @@
   "sofarcloud": {
     "meta": "https://raw.githubusercontent.com/ltspicer/ioBroker.sofarcloud/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ltspicer/ioBroker.sofarcloud/main/admin/sofarcloud.jpg",
+    "type": "energy"
+  },
+  "solakon-one": {
+    "meta": "https://raw.githubusercontent.com/berto-1974/ioBroker.solakon-one/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/berto-1974/ioBroker.solakon-one/main/admin/solakon.png",
     "type": "energy"
   },
   "solaredge": {
