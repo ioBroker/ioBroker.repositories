@@ -135,6 +135,11 @@
     "icon": "https://raw.githubusercontent.com/ronny130286/ioBroker.ankersolix2/main/admin/ankersolix2.png",
     "type": "iot-systems"
   },
+  "anthbot-genie": {
+    "meta": "https://raw.githubusercontent.com/reloxx13/ioBroker.anthbot-genie/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/reloxx13/ioBroker.anthbot-genie/main/admin/anthbot-genie.png",
+    "type": "garden"
+  },
   "apcups": {
     "meta": "https://raw.githubusercontent.com/XHunter74/ioBroker.apcups/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/XHunter74/ioBroker.apcups/master/admin/ups.png",
