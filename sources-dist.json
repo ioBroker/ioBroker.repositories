@@ -85,6 +85,11 @@
     "icon": "https://raw.githubusercontent.com/misanorot/ioBroker.alarm/master/admin/alarm.png",
     "type": "alarm"
   },
+  "alexa-bring-bridge": {
+    "meta": "https://raw.githubusercontent.com/Deconta/ioBroker.alexa-bring-bridge/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Deconta/ioBroker.alexa-bring-bridge/main/admin/alexa-bring-bridge.png",
+    "type": "general"
+  },
   "alexa-shoppinglist": {
     "meta": "https://raw.githubusercontent.com/MiRo1310/ioBroker.alexa-shoppinglist/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/MiRo1310/ioBroker.alexa-shoppinglist/main/admin/alexa-shoppinglist.png",
