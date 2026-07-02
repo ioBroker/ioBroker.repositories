@@ -919,7 +919,7 @@
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.fuelpricemonitor/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.fuelpricemonitor/main/admin/fuelpricemonitor.png",
     "type": "vehicle",
-    "version": "0.4.2"
+    "version": "0.4.3"
   },
   "fullcalendar": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.fullcalendar/master/io-package.json",
@@ -2989,7 +2989,7 @@
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.tado/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.tado/main/admin/tado.png",
     "type": "climate-control",
-    "version": "0.8.4"
+    "version": "0.8.5"
   },
   "tagesschau": {
     "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.tagesschau/main/io-package.json",
@@ -3067,7 +3067,7 @@
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.tinymqttbroker/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.tinymqttbroker/main/admin/tinymqttbroker.png",
     "type": "protocols",
-    "version": "0.1.6"
+    "version": "0.1.7"
   },
   "tr-064": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.tr-064/master/io-package.json",
