@@ -63,7 +63,7 @@
   "airconwithme": {
     "meta": "https://raw.githubusercontent.com/weggetor/ioBroker.airconwithme/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/weggetor/ioBroker.airconwithme/main/admin/airconwithme.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "airquality": {
     "meta": "https://raw.githubusercontent.com/raschy/ioBroker.airquality/main/io-package.json",
@@ -73,7 +73,7 @@
   "airzone": {
     "meta": "https://raw.githubusercontent.com/SilentPhoenix11/ioBroker.airzone/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/SilentPhoenix11/ioBroker.airzone/master/admin/Airzone.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "al-ko": {
     "meta": "https://raw.githubusercontent.com/zechnerhubert/ioBroker.al-ko/master/io-package.json",
@@ -113,7 +113,7 @@
   "alpha2": {
     "meta": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Eisbaeeer/ioBroker.alpha2/master/admin/mh-logo.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "amazon-dash": {
     "meta": "https://raw.githubusercontent.com/PArns/ioBroker.amazon-dash/master/io-package.json",
@@ -228,7 +228,7 @@
   "bayernluft": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.bayernluft/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.bayernluft/main/admin/bayernluft.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "beckhoff": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.beckhoff/master/io-package.json",
@@ -338,7 +338,7 @@
   "bsblan": {
     "meta": "https://raw.githubusercontent.com/hacki11/ioBroker.bsblan/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/hacki11/ioBroker.bsblan/master/admin/bsblan.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "bshb": {
     "meta": "https://raw.githubusercontent.com/holomekc/ioBroker.bshb/master/io-package.json",
@@ -418,12 +418,12 @@
   "comfoair": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.comfoair/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.comfoair/master/admin/comfoair.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "comfoairq": {
     "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.comfoairq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.comfoairq/master/admin/comfoairq.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "consumption": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.consumption/master/io-package.json",
@@ -443,7 +443,7 @@
   "controme": {
     "meta": "https://raw.githubusercontent.com/MadErstam/ioBroker.controme/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/MadErstam/ioBroker.controme/main/admin/controme.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "coronavirus-statistics": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.coronavirus-statistics/main/io-package.json",
@@ -468,17 +468,17 @@
   "daikin": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.daikin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.daikin/master/admin/daikin.jpg",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "daikin-cloud": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.daikin-cloud/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.daikin-cloud/master/admin/daikin-cloud.jpg",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "danfoss-ally": {
     "meta": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Stefan8485/ioBroker.danfoss-ally/main/admin/danfoss.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "daswetter": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/io-package.json",
@@ -593,7 +593,7 @@
   "dysonairpurifier": {
     "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.dysonairpurifier/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.dysonairpurifier/main/admin/dyson_logo.svg",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "e3dc-rscp": {
     "meta": "https://raw.githubusercontent.com/git-kick/ioBroker.e3dc-rscp/master/io-package.json",
@@ -678,7 +678,7 @@
   "ems-esp": {
     "meta": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/tp1de/ioBroker.ems-esp/main/admin/ems-esp.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "energiefluss": {
     "meta": "https://raw.githubusercontent.com/SKB-CGN/ioBroker.energiefluss/main/io-package.json",
@@ -833,7 +833,7 @@
   "flowers": {
     "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.flowers/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.flowers/main/admin/flowers.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "followthesun": {
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.followthesun/main/io-package.json",
@@ -878,7 +878,7 @@
   "froeling": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.froeling/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.froeling/master/admin/froeling.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "fronius": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fronius/master/io-package.json",
@@ -983,7 +983,7 @@
   "gree-hvac": {
     "meta": "https://raw.githubusercontent.com/XHunter74/ioBroker.gree-hvac/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/XHunter74/ioBroker.gree-hvac/master/admin/air-conditioner.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "grohe-smarthome": {
     "meta": "https://raw.githubusercontent.com/patricknitsch/ioBroker.grohe-smarthome/main/io-package.json",
@@ -1023,7 +1023,7 @@
   "haier": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.haier/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.haier/master/admin/haier.png",
-    "type": "climate-conrol"
+    "type": "climate-control"
   },
   "ham": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ham/master/io-package.json",
