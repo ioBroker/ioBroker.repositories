@@ -40,6 +40,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.svg",
     "type": "general"
   },
+  "advansol-optimizer": {
+    "meta": "https://raw.githubusercontent.com/TheBam1990/ioBroker.advansol-optimizer/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.advansol-optimizer/main/admin/advansol-optimizer.svg",
+    "type": "energy"
+  },
   "ai-assistant": {
     "meta": "https://raw.githubusercontent.com/ToGe3688/ioBroker.ai-assistant/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ToGe3688/ioBroker.ai-assistant/main/admin/ai-assistant.png",
