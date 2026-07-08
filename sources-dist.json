@@ -135,6 +135,11 @@
     "icon": "https://raw.githubusercontent.com/ronny130286/ioBroker.ankersolix2/main/admin/ankersolix2.png",
     "type": "iot-systems"
   },
+  "anthbot-genie": {
+    "meta": "https://raw.githubusercontent.com/reloxx13/ioBroker.anthbot-genie/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/reloxx13/ioBroker.anthbot-genie/main/admin/anthbot-genie.png",
+    "type": "garden"
+  },
   "apcups": {
     "meta": "https://raw.githubusercontent.com/XHunter74/ioBroker.apcups/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/XHunter74/ioBroker.apcups/master/admin/ups.png",
@@ -189,6 +194,11 @@
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/admin/autodarts.svg",
     "type": "protocols"
+  },
+  "autodoc": {
+    "meta": "https://raw.githubusercontent.com/crunchip77/ioBroker.autodoc/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/crunchip77/ioBroker.autodoc/main/admin/autodoc.png",
+    "type": "general"
   },
   "awattar": {
     "meta": "https://raw.githubusercontent.com/sirjojo69/ioBroker.awattar/master/io-package.json",
@@ -294,6 +304,11 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.bosch-ebike/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.bosch-ebike/main/admin/bosch-ebike.png",
     "type": "vehicle"
+  },
+  "bosch-smart-home-camera": {
+    "meta": "https://raw.githubusercontent.com/mosandlt/ioBroker.bosch-smart-home-camera/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mosandlt/ioBroker.bosch-smart-home-camera/main/admin/bosch-camera.png",
+    "type": "multimedia"
   },
   "boschindego": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.boschindego/main/io-package.json",
@@ -945,6 +960,11 @@
     "icon": "https://raw.githubusercontent.com/MK-2001/ioBroker.go-e/main/admin/go-echarger.png",
     "type": "vehicle"
   },
+  "go-e-charger": {
+    "meta": "https://raw.githubusercontent.com/hombach/ioBroker.go-e-charger/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/hombach/ioBroker.go-e-charger/master/admin/go-eCharger.png",
+    "type": "vehicle"
+  },
   "google-sharedlocations2": {
     "meta": "https://raw.githubusercontent.com/Garfonso/ioBroker.google-sharedlocations2/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Garfonso/ioBroker.google-sharedlocations2/main/admin/google-sharedlocations2.png",
@@ -1073,6 +1093,11 @@
   "heatingcontrol": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/admin/heatingcontrol.png",
+    "type": "climate-control"
+  },
+  "heishamon": {
+    "meta": "https://raw.githubusercontent.com/TobiasHanss/ioBroker.heishamon/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TobiasHanss/ioBroker.heishamon/main/admin/heishamon.png",
     "type": "climate-control"
   },
   "heizoel": {
@@ -1343,6 +1368,11 @@
   "influxdb": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.influxdb/master/admin/influxdb.png",
+    "type": "storage"
+  },
+  "influxdb-prologger": {
+    "meta": "https://raw.githubusercontent.com/simpros/ioBroker.influxdb-prologger/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/simpros/ioBroker.influxdb-prologger/main/admin/influxdb-prologger.png",
     "type": "storage"
   },
   "innogy-smarthome": {
@@ -1814,6 +1844,11 @@
     "meta": "https://raw.githubusercontent.com/AWhiteKnight/ioBroker.moma/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AWhiteKnight/ioBroker.moma/master/admin/moma.png",
     "type": "general"
+  },
+  "motioneye": {
+    "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.motioneye/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.motioneye/main/admin/motioneye.png",
+    "type": "hardware"
   },
   "mpd": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mpd/master/io-package.json",
@@ -2325,6 +2360,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
     "type": "network"
   },
+  "public-holidays": {
+    "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.public-holidays/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.public-holidays/main/admin/public-holidays.svg",
+    "type": "date-and-time"
+  },
   "public-transport": {
     "meta": "https://raw.githubusercontent.com/tt-tom17/ioBroker.public-transport/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/tt-tom17/ioBroker.public-transport/main/admin/public-transport.png",
@@ -2740,6 +2780,11 @@
     "icon": "https://raw.githubusercontent.com/ltspicer/ioBroker.sofarcloud/main/admin/sofarcloud.jpg",
     "type": "energy"
   },
+  "solakon-one": {
+    "meta": "https://raw.githubusercontent.com/berto-1974/ioBroker.solakon-one/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/berto-1974/ioBroker.solakon-one/main/admin/solakon.png",
+    "type": "energy"
+  },
   "solaredge": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solaredge/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solaredge/master/admin/solaredge.png",
@@ -2883,6 +2928,11 @@
   "sun2000-modbus": {
     "meta": "https://raw.githubusercontent.com/daolis/ioBroker.sun2000-modbus/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/daolis/ioBroker.sun2000-modbus/main/admin/sun2000-modbus.png",
+    "type": "energy"
+  },
+  "sunenergyxt500": {
+    "meta": "https://raw.githubusercontent.com/Creekhail/ioBroker.sunenergyxt500/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Creekhail/ioBroker.sunenergyxt500/main/admin/sunenergyxt500.png",
     "type": "energy"
   },
   "sureflap": {
