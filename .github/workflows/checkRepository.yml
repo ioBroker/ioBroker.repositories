@@ -138,7 +138,8 @@ jobs:
         with:
           node-version: 22
       - run: node lib/checkRepository_checkAdapterRepositoryFiles.js
-
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   report:
     name: Final Report
     if: always() && github.repository == 'ioBroker/ioBroker.repositories'
