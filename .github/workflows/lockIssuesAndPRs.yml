@@ -8,6 +8,8 @@ on:
 
 permissions:
   issues: write
+  pull-requests: write
+  discussions: write
 
 jobs:
 
@@ -22,7 +24,8 @@ jobs:
           issue-lock-reason: 'resolved'
           process-only: 'issues'
           issue-comment: 'This issue has been locked since there has not been any recent activity after it was closed. Please open a new issue if you want to report a problem or suggest a new feature and eventually reference this issue there.'
-
+          log-output: true
+          
   lock-prs:
     runs-on: ubuntu-latest
     steps:
@@ -34,3 +37,4 @@ jobs:
           pr-lock-reason: 'resolved'
           process-only: 'prs'
           issue-comment: ''
+          log-output: true
