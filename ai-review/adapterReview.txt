@@ -1,0 +1,76 @@
+Review Checklist V2.0
+
+Load all sourcefiles of the adapter specified as requested.
+Skip all files which are used for testing purpose only.
+
+Generate a report using markdown listing problems checked and any issues detected. Add base info (adaptername, checklist version defined above). 
+Each problem should be a seperate paragraph starting with a checkmark ('- [ ] ...). Use symbolic coloured symbols for passed or failed checks.
+Concentrate identical problems within one report statement and add a maximum of 5 references per problem (i.e. if 25 log messages use german 
+instead of english text the report should contain only one problemdescription and up to 5 references). References should list effected file 
+and line number.
+
+Please sort report content to show successfull test first and tests needing some acting (failing tests) at the end.
+
+Successfull test should show a marked box ('- [x] ...') while tests needing some action should use '- [ ] ...'.
+
+Attach report to issue.
+
+
+Perform the following checks:
+
+- Readme must be written using pure english text and must not use multiple languages. README.de.md or README_de.md or something like this with german language is acceptable.
+
+- sensitive information must not be logged into logfile. Sensitive information is data store within objects named within 
+  io-package.json protectedNative or encryptedNative
+
+- invalid characters must be filtered from object ids
+  Hardcoded objectIds or objectIds contructed based on data from external systems or entered by user must be filtered. At least characters defined by
+  ioBroker contant FORBIDDE_CHARS must be removed. Stricter filtering (i.e. allowing only a-zA-Z0-9_-) are ok. In addition spaces should be removed. 
+  Converting space to underscore is acceptable.
+
+- All stateIds must be named using english wording unless the data is directly received from an external source.
+
+- All names (common.name) and descriptions (common.desc) must use either english wording or use i18n multilanguage setup. 
+
+- Log messages must be in english and must not use translation mechanism.
+
+- All text output to users must either use pure english text or must support at least english and german text.
+
+- All translated text should be available using all supported ioBroker languages 'en', 'de', 'ru', 'pt', 'nl', 'fr', 'it', 'es', 'pl', 'uk', 'zh-cn'
+
+- I18n objects must contain all supported languages ('en', 'de', 'ru', 'pt', 'nl', 'fr', 'it', 'es', 'pl', 'uk', 'zh-cn') but no other keys
+
+- onStateChange and onObjectChange handlers must be removed if not used
+
+- onStateChange handler must honor the ack flag when processing onStateChange events. Whenever the onStateChange handler is called for an own state 
+  (a state owned by the processing instance of the adapter) it must ignore this event if the ack flags is set. 
+  When processing foreign states which are output of another adapter  processing should only occure if the ack flag is true.
+
+- calls to axious or any other http/https service must use a timeout
+  
+- scheduled adapters should have small random delays if they access external systems. External systems refer to systems outside the own lan, typical some cloud services. 
+  The random delay does not need to be dynamic, some fixed dely calculated at startup or installation is ok too. The goal is to avoid that many systems from different 
+  hosts access a cloud service nearly at the same time. Note that this requirement relates to any form of schedule, either scheduled adapters or actions schedule by 
+  internal cron or such mechanisms working at specific timestamps. Daemon adapters using setInterval or setTimeout loops do not need a random delay at all. 
+  Do not suggest a random delay if an adapter starts a processing loop immidiatly after startup. Such a implementation is completly ok.
+  
+- configurable timeouts / intervals must be checked and limited to reasonale values. Values must be non zero and positive.
+  Node setTimeout/setInterval routines have a maximum allowed value of 2,147,483,647 ms. So all (user configurable) values passed to setTimeout / setInterval 
+  must be checked and limited in code as limiting at ui level might not be sufficient.
+  
+- intervals used to access cloud services must be limited to a reasonable value, typically polling more then every 10s is not desired.
+
+- if processing loops are triggered using setIntervall it must be ensured that the processing time of the loop is shorter than the minium interval. At leaset 
+  the sum of all timeouts within the processing loop must be smaller than the minimum interval time. In addition suggest to use setTimeout at the end of a processing loop 
+  instead of using setInterval
+
+- access to cloud services must not occure at fixed timestamps (i.e. at every full hour, at 5 minutes after midnight , ...)
+
+- check for dead code and unused config parameters
+
+- check for unused translations keys within i18n files
+
+- code should not modify any files within (code-) directories delivered via npm package
+
+- README.md must not contain any guide to install the adapter directly from github or using native npm commands to install the package
+
