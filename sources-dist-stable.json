@@ -2325,6 +2325,12 @@
     "type": "geoposition",
     "version": "1.4.0"
   },
+  "playstation": {
+    "meta": "https://raw.githubusercontent.com/Lucky-ESA/ioBroker.playstation/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Lucky-ESA/ioBroker.playstation/main/admin/playstation.png",
+    "type": "iot-systems",
+    "version": "0.0.4"
+  },
   "plenticore": {
     "meta": "https://raw.githubusercontent.com/pixcept/ioBroker.plenticore/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/pixcept/ioBroker.plenticore/master/admin/plenticore.png",
