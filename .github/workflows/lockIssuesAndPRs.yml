@@ -15,6 +15,7 @@ jobs:
 
   lock-issues:
     runs-on: ubuntu-latest
+    if: github.repository == 'ioBroker/ioBroker.repositories'
     steps:
       - name: Lock old closed issues
         uses: dessant/lock-threads@v6
@@ -28,6 +29,7 @@ jobs:
           
   lock-prs:
     runs-on: ubuntu-latest
+    if: github.repository == 'ioBroker/ioBroker.repositories'
     steps:
       - name: Lock old closed PRs
         uses: dessant/lock-threads@v6
