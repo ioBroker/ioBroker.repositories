@@ -23,6 +23,7 @@ on:
 jobs:
   set-tag:
     runs-on: ubuntu-latest
+    if: github.repository == 'ioBroker/ioBroker.repositories'
     steps:
       - uses: actions/setup-node@v6
         with:

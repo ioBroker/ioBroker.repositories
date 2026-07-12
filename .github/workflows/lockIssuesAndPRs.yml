@@ -1,0 +1,43 @@
+# v0.1
+name: Lock old (and closed) issues and PRs
+
+on:
+  schedule:
+    # - cron: '45 1 * * 0'
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+  discussions: write
+
+jobs:
+
+  lock-issues:
+    runs-on: ubuntu-latest
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    steps:
+      - name: Lock old closed issues
+        uses: dessant/lock-threads@v6
+        with:
+          github-token: ${{ github.token }}
+          issue-inactive-days: '90' # 3 months (approximately)
+          issue-lock-reason: 'resolved'
+          process-only: 'issues'
+          issue-comment: 'This issue has been locked since there has not been any recent activity after it was closed. Please open a new issue if you want to report a problem or suggest a new feature and eventually reference this issue there.'
+          log-output: true
+          
+  lock-prs:
+    runs-on: ubuntu-latest
+    if: github.repository == 'ioBroker/ioBroker.repositories'
+    steps:
+      - name: Lock old closed PRs
+        uses: dessant/lock-threads@v6
+        with:
+          github-token: ${{ github.token }}
+          pr-inactive-days: '7' 
+          pr-lock-reason: 'resolved'
+          process-only: 'prs'
+          issue-comment: ''
+          log-output: true
