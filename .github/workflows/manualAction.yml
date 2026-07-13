@@ -19,6 +19,7 @@ on:
 jobs:
   manual-action:
     runs-on: ubuntu-latest
+    if: github.repository == 'ioBroker/ioBroker.repositories'
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v6
