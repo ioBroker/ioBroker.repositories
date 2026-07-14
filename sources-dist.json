@@ -15,6 +15,11 @@
       "zh-cn": "Latest（测试版）存储库"
     }
   },
+  "absaar": {
+    "meta": "https://raw.githubusercontent.com/TheBam1990/ioBroker.absaar/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.absaar/main/admin/absaar.png",
+    "type": "energy"
+  },
   "accuweather": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/admin/accuweather.png",
