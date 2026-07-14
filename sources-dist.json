@@ -3765,6 +3765,11 @@
     "icon": "https://raw.githubusercontent.com/nograx/ioBroker.zendure-solarflow/main/admin/zendure-solarflow.png",
     "type": "energy"
   },
+  "zeptrion": {
+    "meta": "https://raw.githubusercontent.com/bueste/ioBroker.zeptrion/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bueste/ioBroker.zeptrion/main/admin/zeptrion.png",
+    "type": "household"
+  },
   "zigbee": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/admin/zigbee.png",
