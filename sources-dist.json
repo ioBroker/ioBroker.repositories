@@ -435,6 +435,11 @@
     "icon": "https://raw.githubusercontent.com/NurPech/ioBroker.cisco-checkpresence/main/admin/cisco-checkpresence.png",
     "type": "infrastructure"
   },
+  "clage-dsx": {
+    "meta": "https://raw.githubusercontent.com/TheBam1990/ioBroker.clage-dsx/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.clage-dsx/master/admin/clage-dsx.png",
+    "type": "hardware"
+  },
   "cloud": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/admin/cloud.png",
