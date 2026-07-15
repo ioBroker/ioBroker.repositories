@@ -300,6 +300,11 @@
     "icon": "https://raw.githubusercontent.com/ka-vaNu/ioBroker.blebox/master/admin/blebox.png",
     "type": "iot-systems"
   },
+  "blink": {
+    "meta": "https://raw.githubusercontent.com/Pischleuder1/ioBroker.blink/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Pischleuder1/ioBroker.blink/main/admin/blink.png",
+    "type": "alarm"
+  },
   "bluelink": {
     "meta": "https://raw.githubusercontent.com/Newan/ioBroker.bluelink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Newan/ioBroker.bluelink/master/admin/bluelink.png",
