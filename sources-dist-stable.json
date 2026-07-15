@@ -2643,6 +2643,12 @@
     "type": "climate-control",
     "version": "1.4.2"
   },
+  "script-restore": {
+    "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.script-restore/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.script-restore/main/admin/script-restore.svg",
+    "type": "utility",
+    "version": "0.1.8"
+  },
   "seko": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.seko/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.seko/main/admin/seko.png",
