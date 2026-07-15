@@ -3,7 +3,8 @@ name: Lock old (and closed) issues and PRs
 
 on:
   schedule:
-    - cron: '45 1 * * 0'
+    # - cron: '45 1 * * 0'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -15,6 +16,7 @@ jobs:
 
   lock-issues:
     runs-on: ubuntu-latest
+    if: github.repository == 'ioBroker/ioBroker.repositories'
     steps:
       - name: Lock old closed issues
         uses: dessant/lock-threads@v6
@@ -28,6 +30,7 @@ jobs:
           
   lock-prs:
     runs-on: ubuntu-latest
+    if: github.repository == 'ioBroker/ioBroker.repositories'
     steps:
       - name: Lock old closed PRs
         uses: dessant/lock-threads@v6

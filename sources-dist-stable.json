@@ -199,7 +199,7 @@
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/admin/autodarts.svg",
     "type": "protocols",
-    "version": "1.0.8"
+    "version": "1.0.12"
   },
   "awattar": {
     "meta": "https://raw.githubusercontent.com/sirjojo69/ioBroker.awattar/master/io-package.json",
@@ -571,7 +571,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.dreame/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.dreame/main/admin/dreame.png",
     "type": "household",
-    "version": "0.3.19"
+    "version": "0.3.24"
   },
   "drops-weather": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.drops-weather/main/io-package.json",
@@ -859,7 +859,7 @@
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.foxesscloud/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.foxesscloud/main/admin/foxesscloud.png",
     "type": "energy",
-    "version": "0.6.3"
+    "version": "0.6.4"
   },
   "freeair": {
     "meta": "https://raw.githubusercontent.com/Scrounger/ioBroker.freeair/main/io-package.json",
@@ -1555,7 +1555,7 @@
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.life360ng/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.life360ng/main/admin/Life360_s.svg",
     "type": "geoposition",
-    "version": "1.11.0"
+    "version": "1.11.4"
   },
   "lifx": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/io-package.json",
@@ -2461,7 +2461,7 @@
     "meta": "https://raw.githubusercontent.com/aruttkamp/ioBroker.rct/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/aruttkamp/ioBroker.rct/main/admin/rct-logo.square.png",
     "type": "energy",
-    "version": "1.2.26"
+    "version": "1.2.28"
   },
   "refoss": {
     "meta": "https://raw.githubusercontent.com/Refoss/ioBroker.refoss/main/io-package.json",
@@ -2863,7 +2863,7 @@
     "meta": "https://raw.githubusercontent.com/patricknitsch/ioBroker.solectrus-influxdb/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/patricknitsch/ioBroker.solectrus-influxdb/main/admin/solectrus-influxdb.png",
     "type": "communication",
-    "version": "1.8.2"
+    "version": "1.12.0"
   },
   "soliscloud": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.soliscloud/main/io-package.json",
@@ -2941,7 +2941,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.statistics/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.statistics/master/admin/statistics.png",
     "type": "misc-data",
-    "version": "4.0.0"
+    "version": "5.0.0"
   },
   "steam": {
     "meta": "https://raw.githubusercontent.com/bloop16/ioBroker.steam/main/io-package.json",
@@ -3073,7 +3073,7 @@
     "meta": "https://raw.githubusercontent.com/hombach/ioBroker.tibberlink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/hombach/ioBroker.tibberlink/master/admin/tibberlink.png",
     "type": "energy",
-    "version": "7.1.2"
+    "version": "7.1.3"
   },
   "tidy": {
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.tidy/main/io-package.json",
@@ -3265,7 +3265,7 @@
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-2-widgets-icontwo/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-2-widgets-icontwo/main/admin/vis-2-widgets-icontwo.png",
     "type": "visualization-icons",
-    "version": "1.40.0"
+    "version": "1.42.2"
   },
   "vis-2-widgets-inventwo": {
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.vis-2-widgets-inventwo/main/io-package.json",
@@ -3751,7 +3751,7 @@
     "meta": "https://raw.githubusercontent.com/nograx/ioBroker.zendure-solarflow/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/nograx/ioBroker.zendure-solarflow/main/admin/zendure-solarflow.png",
     "type": "energy",
-    "version": "4.0.4"
+    "version": "4.1.0"
   },
   "zigbee": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.zigbee/master/io-package.json",
