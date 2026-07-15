@@ -1260,6 +1260,11 @@
     "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.hueemu/main/admin/hue-emu-logo.svg",
     "type": "lighting"
   },
+  "husqvarna-automower-connect": {
+    "meta": "https://raw.githubusercontent.com/bueste/ioBroker.husqvarna-automower-connect/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bueste/ioBroker.husqvarna-automower-connect/main/admin/husqvarna-automower-connect.svg",
+    "type": "garden"
+  },
   "huum-sauna": {
     "meta": "https://raw.githubusercontent.com/Chris-656/ioBroker.huum-sauna/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Chris-656/ioBroker.huum-sauna/main/admin/huum-sauna.png",
