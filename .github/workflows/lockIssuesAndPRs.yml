@@ -4,7 +4,7 @@ name: Lock old (and closed) issues and PRs
 on:
   schedule:
     # - cron: '45 1 * * 0'
-    - cron: '*/15 * * * *'
+    - cron: '30 20 * * *'
   workflow_dispatch:
 
 permissions:
