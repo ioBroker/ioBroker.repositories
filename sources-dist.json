@@ -2555,6 +2555,11 @@
     "icon": "https://raw.githubusercontent.com/copystring/ioBroker.roborock/main/admin/roborock.png",
     "type": "household"
   },
+  "rockwell_ethernetip": {
+    "meta": "https://raw.githubusercontent.com/gokturk413/ioBroker.rockwell_ethernetip/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/gokturk413/ioBroker.rockwell_ethernetip/main/admin/rockwell_ethernetip.png",
+    "type": "protocols"
+  },
   "roomba": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roomba/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roomba/master/admin/roomba.png",
