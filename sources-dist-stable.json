@@ -97,7 +97,7 @@
     "meta": "https://raw.githubusercontent.com/MiRo1310/ioBroker.alexa-timer-vis/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/MiRo1310/ioBroker.alexa-timer-vis/main/admin/alexa-timer-vis.png",
     "type": "logic",
-    "version": "2.2.2"
+    "version": "3.0.3"
   },
   "alexa2": {
     "meta": "https://raw.githubusercontent.com/Apollon77/ioBroker.alexa2/master/io-package.json",
@@ -265,7 +265,7 @@
     "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.beszel/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.beszel/main/admin/beszel.svg",
     "type": "hardware",
-    "version": "0.8.0"
+    "version": "0.10.0"
   },
   "bidirectional-counter": {
     "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.bidirectional-counter/main/io-package.json",
@@ -997,7 +997,7 @@
     "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.govee-smart/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.govee-smart/main/admin/govee-smart.svg",
     "type": "lighting",
-    "version": "2.16.2"
+    "version": "2.21.0"
   },
   "gree-hvac": {
     "meta": "https://raw.githubusercontent.com/XHunter74/ioBroker.gree-hvac/master/io-package.json",
@@ -1081,7 +1081,7 @@
     "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.hassemu/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.hassemu/main/admin/hassemu.svg",
     "type": "infrastructure",
-    "version": "1.36.0"
+    "version": "1.38.0"
   },
   "hausbus_de": {
     "meta": "https://raw.githubusercontent.com/hausbus/ioBroker.hausbus_de/main/io-package.json",
@@ -1213,7 +1213,7 @@
     "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.homewizard/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.homewizard/main/admin/homewizard.svg",
     "type": "energy",
-    "version": "0.13.0"
+    "version": "0.15.0"
   },
   "hoymiles-ms": {
     "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.hoymiles-ms/main/io-package.json",
@@ -1243,7 +1243,7 @@
     "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.hueemu/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.hueemu/main/admin/hue-emu-logo.svg",
     "type": "lighting",
-    "version": "1.9.0"
+    "version": "1.12.0"
   },
   "huum-sauna": {
     "meta": "https://raw.githubusercontent.com/Chris-656/ioBroker.huum-sauna/main/io-package.json",
