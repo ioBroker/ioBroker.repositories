@@ -4,15 +4,15 @@
     "name": {
       "en": "Official stable repository",
       "de": "Offizielles stabiles Repository",
-      "ru": "Официальный стабильный репозиторий",
-      "pt": "Repositório estável oficial",
-      "nl": "Officiële stabiliteit",
-      "fr": "Dépôt stable officiel",
+      "ru": "ÐžÑ„Ð¸Ñ†Ð¸Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÑ‚Ð°Ð±Ð¸Ð»ÑŒÐ½Ñ‹Ð¹ Ñ€ÐµÐ¿Ð¾Ð·Ð¸Ñ‚Ð¾Ñ€Ð¸Ð¹",
+      "pt": "RepositÃ³rio estÃ¡vel oficial",
+      "nl": "OfficiÃ«le stabiliteit",
+      "fr": "DÃ©pÃ´t stable officiel",
       "it": "Repository stabile ufficiale",
       "es": "Repositorio estable oficial",
       "pl": "Repozytorium",
-      "uk": "Офіційний стабільний репозиторій",
-      "zh-cn": "A. 正式稳定存放处"
+      "uk": "ÐžÑ„Ñ–Ñ†Ñ–Ð¹Ð½Ð¸Ð¹ ÑÑ‚Ð°Ð±Ñ–Ð»ÑŒÐ½Ð¸Ð¹ Ñ€ÐµÐ¿Ð¾Ð·Ð¸Ñ‚Ð¾Ñ€Ñ–Ð¹",
+      "zh-cn": "A. æ­£å¼ç¨³å®šå­˜æ”¾å¤„"
     }
   },
   "accuweather": {
@@ -3595,7 +3595,7 @@
     "meta": "https://raw.githubusercontent.com/kBrausew/ioBroker.wiegand-tcpip/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/kBrausew/ioBroker.wiegand-tcpip/master/admin/wiegand-tcpip.png",
     "type": "hardware",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "wiffi-wz": {
     "meta": "https://raw.githubusercontent.com/t4qjXH8N/ioBroker.wiffi-wz/master/io-package.json",
