@@ -50,6 +50,11 @@
     "icon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.advansol-optimizer/main/admin/advansol-optimizer.svg",
     "type": "energy"
   },
+  "agent-dvr": {
+    "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.agent-dvr/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.agent-dvr/main/admin/agent-dvr.png",
+    "type": "alarm"
+  },
   "ai-assistant": {
     "meta": "https://raw.githubusercontent.com/ToGe3688/ioBroker.ai-assistant/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ToGe3688/ioBroker.ai-assistant/main/admin/ai-assistant.png",
