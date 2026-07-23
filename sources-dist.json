@@ -2945,6 +2945,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.starline/master/admin/starline.png",
     "type": "vehicle"
   },
+  "staticsfilefolder": {
+    "meta": "https://raw.githubusercontent.com/gokturk413/ioBroker.staticsfilefolder/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/gokturk413/ioBroker.staticsfilefolder/main/admin/staticsfilefolder.png",
+    "type": "utility"
+  },
   "statistics": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.statistics/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.statistics/master/admin/statistics.png",
