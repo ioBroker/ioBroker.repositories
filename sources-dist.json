@@ -140,6 +140,11 @@
     "icon": "https://raw.githubusercontent.com/dan1-de/ioBroker.anelhut/main/admin/anelhut.png",
     "type": "iot-systems"
   },
+  "anker-solix": {
+    "meta": "https://raw.githubusercontent.com/MatthiasUlrich1/ioBroker.anker-solix/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MatthiasUlrich1/ioBroker.anker-solix/main/admin/anker-solix.png",
+    "type": "energy"
+  },
   "ankersolix2": {
     "meta": "https://raw.githubusercontent.com/ronny130286/ioBroker.ankersolix2/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ronny130286/ioBroker.ankersolix2/main/admin/ankersolix2.png",
