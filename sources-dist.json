@@ -75,6 +75,11 @@
     "icon": "https://raw.githubusercontent.com/weggetor/ioBroker.airconwithme/main/admin/airconwithme.png",
     "type": "climate-control"
   },
+  "airly": {
+    "meta": "https://raw.githubusercontent.com/tnowak/ioBroker.airly/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/tnowak/ioBroker.airly/master/admin/airly.png",
+    "type": "weather"
+  },
   "airquality": {
     "meta": "https://raw.githubusercontent.com/raschy/ioBroker.airquality/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/raschy/ioBroker.airquality/main/admin/airquality.png",
