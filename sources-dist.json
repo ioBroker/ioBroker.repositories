@@ -3505,6 +3505,11 @@
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.vis-weather/master/admin/vis-weather.png",
     "type": "visualization-widgets"
   },
+  "vis2-materialdesign": {
+    "meta": "https://raw.githubusercontent.com/typhosj/ioBroker.vis2-materialdesign/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/typhosj/ioBroker.vis2-materialdesign/master/admin/vis-materialdesign.png",
+    "type": "visualization-widgets"
+  },
   "vivitek": {
     "meta": "https://raw.githubusercontent.com/Bannsaenger/ioBroker.vivitek/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Bannsaenger/ioBroker.vivitek/master/admin/vivitek.png",
