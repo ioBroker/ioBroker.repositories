@@ -2685,6 +2685,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.serial-gps/main/admin/serial-gps.svg",
     "type": "utility"
   },
+  "sevenio": {
+    "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.sevenio/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.sevenio/main/admin/sevenio.png",
+    "type": "messaging"
+  },
   "shelly": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/admin/shelly.png",
