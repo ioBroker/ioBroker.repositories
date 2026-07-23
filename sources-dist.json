@@ -315,6 +315,11 @@
     "icon": "https://raw.githubusercontent.com/Uwe1958/ioBroker.bluesound/main/admin/bluesound.png",
     "type": "multimedia"
   },
+  "blustream-acm": {
+    "meta": "https://raw.githubusercontent.com/AlanSRU/ioBroker.blustream-acm/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AlanSRU/ioBroker.blustream-acm/main/admin/blustream-acm.png",
+    "type": "multimedia"
+  },
   "blustream-mfp": {
     "meta": "https://raw.githubusercontent.com/AlanSRU/ioBroker.blustream-mfp/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlanSRU/ioBroker.blustream-mfp/main/admin/blustream.png",
