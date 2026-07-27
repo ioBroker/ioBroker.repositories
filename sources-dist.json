@@ -2370,6 +2370,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pollenflug/master/admin/pollenflug.png",
     "type": "weather"
   },
+  "pondpump": {
+    "meta": "https://raw.githubusercontent.com/ssbingo/ioBroker.pondpump/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ssbingo/ioBroker.pondpump/main/admin/pondpump.png",
+    "type": "garden"
+  },
   "poolcontrol": {
     "meta": "https://raw.githubusercontent.com/DasBo1975/ioBroker.poolcontrol/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DasBo1975/ioBroker.poolcontrol/main/admin/poolcontrol.png",
