@@ -315,6 +315,11 @@
     "icon": "https://raw.githubusercontent.com/Uwe1958/ioBroker.bluesound/main/admin/bluesound.png",
     "type": "multimedia"
   },
+  "bluetti": {
+    "meta": "https://raw.githubusercontent.com/Percy2Live/ioBroker.bluetti/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Percy2Live/ioBroker.bluetti/main/admin/bluetti.png",
+    "type": "energy"
+  },
   "blustream-mfp": {
     "meta": "https://raw.githubusercontent.com/AlanSRU/ioBroker.blustream-mfp/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlanSRU/ioBroker.blustream-mfp/main/admin/blustream.png",
