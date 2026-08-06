@@ -1,4 +1,5 @@
 const express = require('express');
+const rateLimit = require('express-rate-limit');
 const fs = require('fs');
 const os = require('os');
 const argv = require('optimist').argv;
@@ -69,6 +70,9 @@ for (const a in file) {
         file[a].extIcon = `http://${ipAddr}:${port}${file[a].extIcon}`;
     }
 }
+
+const limiter = rateLimit({ windowMs: 60 * 1000, max: 60 });
+app.use(limiter);
 
 app.get('/', (req, res) => res.json(file));
 app.get('/sources-dist.json', (req, res) => res.json(file));
