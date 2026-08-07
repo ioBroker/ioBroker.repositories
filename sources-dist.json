@@ -695,6 +695,11 @@
     "icon": "https://raw.githubusercontent.com/mrbungle64/ioBroker.ecovacs-deebot/master/admin/ecovacs-deebot.png",
     "type": "household"
   },
+  "eebus-go": {
+    "meta": "https://raw.githubusercontent.com/FernetMenta/ioBroker.eebus-go/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/FernetMenta/ioBroker.eebus-go/main/admin/eebus-go.png",
+    "type": "iot-systems"
+  },
   "egigeozone2": {
     "meta": "https://raw.githubusercontent.com/obakuhl/ioBroker.egigeozone2/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/obakuhl/ioBroker.egigeozone2/master/admin/egigeozone.png",
