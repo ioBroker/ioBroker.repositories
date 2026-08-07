@@ -1540,6 +1540,11 @@
     "icon": "https://raw.githubusercontent.com/hombach/ioBroker.kostal-piko-ba/master/admin/picoba.png",
     "type": "energy"
   },
+  "lamarzocco": {
+    "meta": "https://raw.githubusercontent.com/mrandreschmitz/ioBroker.lamarzocco/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mrandreschmitz/ioBroker.lamarzocco/main/admin/lamarzocco.png",
+    "type": "household"
+  },
   "lametric": {
     "meta": "https://raw.githubusercontent.com/klein0r/ioBroker.lametric/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.lametric/master/admin/lametric.png",
