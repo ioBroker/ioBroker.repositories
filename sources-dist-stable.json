@@ -417,6 +417,12 @@
     "type": "multimedia",
     "version": "4.2.0"
   },
+  "cisco-checkpresence": {
+    "meta": "https://raw.githubusercontent.com/NurPech/ioBroker.cisco-checkpresence/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/NurPech/ioBroker.cisco-checkpresence/main/admin/cisco-checkpresence.png",
+    "type": "infrastructure",
+    "version": "0.1.0"
+  },
   "cloud": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/admin/cloud.png",
