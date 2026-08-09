@@ -2769,6 +2769,12 @@
     "type": "communication",
     "version": "3.0.7"
   },
+  "simple-proxy-manager": {
+    "meta": "https://raw.githubusercontent.com/lubepi/ioBroker.simple-proxy-manager/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/lubepi/ioBroker.simple-proxy-manager/main/admin/simple-proxy-manager.png",
+    "type": "network",
+    "version": "1.0.0"
+  },
   "skiinfo": {
     "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.skiinfo/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.skiinfo/main/admin/skiinfo.png",
