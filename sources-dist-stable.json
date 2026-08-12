@@ -955,7 +955,7 @@
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.fullybrowser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.fullybrowser/master/admin/fully.png",
     "type": "utility",
-    "version": "3.1.2"
+    "version": "3.1.5"
   },
   "fyta": {
     "meta": "https://raw.githubusercontent.com/muffin142/ioBroker.fyta/main/io-package.json",
@@ -1273,7 +1273,7 @@
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.hs100/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.hs100/master/admin/hs100.png",
     "type": "hardware",
-    "version": "3.0.5"
+    "version": "3.0.6"
   },
   "hue": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hue/master/io-package.json",
@@ -2749,7 +2749,7 @@
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.seq/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.seq/master/admin/seq.png",
     "type": "logic",
-    "version": "0.4.2"
+    "version": "1.0.2"
   },
   "serial-gps": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.serial-gps/main/io-package.json",
@@ -3787,7 +3787,7 @@
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.xsense/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.xsense/main/admin/xsense.png",
     "type": "utility",
-    "version": "0.6.1"
+    "version": "0.6.4"
   },
   "xterm": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.xterm/master/io-package.json",
@@ -3853,7 +3853,7 @@
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.zigbee2mqtt/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.zigbee2mqtt/main/admin/zigbee2mqtt.png",
     "type": "hardware",
-    "version": "3.2.2"
+    "version": "3.2.4"
   },
   "zont": {
     "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/io-package.json",
@@ -3865,6 +3865,6 @@
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.zwavews/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.zwavews/main/admin/zwavews.png?sanitize=true",
     "type": "hardware",
-    "version": "0.2.1"
+    "version": "1.0.4"
   }
 }
