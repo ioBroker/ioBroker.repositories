@@ -2155,6 +2155,11 @@
     "icon": "https://raw.githubusercontent.com/Apollon77/ioBroker.nut/master/admin/nut.png",
     "type": "hardware"
   },
+  "nut2": {
+    "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.nut2/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.nut2/main/admin/nut2.svg",
+    "type": "hardware"
+  },
   "oasecontrol": {
     "meta": "https://raw.githubusercontent.com/mr-suw/ioBroker.oasecontrol/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/mr-suw/ioBroker.oasecontrol/main/admin/oasecontrol.png",
