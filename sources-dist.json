@@ -203,7 +203,7 @@
   "assistant-satellite": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.assistant-satellite/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.assistant-satellite/main/admin/assistant-satellite.svg",
-    "type": "utility"
+    "type": "communication"
   },
   "asterisk": {
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.asterisk/master/io-package.json",
