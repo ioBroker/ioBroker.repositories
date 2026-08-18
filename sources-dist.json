@@ -2065,6 +2065,11 @@
     "icon": "https://raw.githubusercontent.com/daniel-2k/ioBroker.nanoleaf-lightpanels/master/admin/nanoleaf-lightpanels.png",
     "type": "lighting"
   },
+  "navimow": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.navimow/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.navimow/main/admin/navimow.png",
+    "type": "garden"
+  },
   "net-tools": {
     "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.net-tools/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.net-tools/master/admin/net-tools.png",
