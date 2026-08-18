@@ -3945,6 +3945,11 @@
     "icon": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/admin/zont.png",
     "type": "climate-control"
   },
+  "zte-mc888": {
+    "meta": "https://raw.githubusercontent.com/muraus/ioBroker.zte-mc888/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/muraus/ioBroker.zte-mc888/main/admin/zte-mc888.png",
+    "type": "network"
+  },
   "zwavews": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.zwavews/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.zwavews/main/admin/zwavews.png?sanitize=true",
