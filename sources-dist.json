@@ -3090,15 +3090,15 @@
     "icon": "https://raw.githubusercontent.com/daolis/ioBroker.sun2000-modbus/main/admin/sun2000-modbus.png",
     "type": "energy"
   },
-  "sunseeker": {
-    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sunseeker/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sunseeker/main/admin/sunseeker.png",
-    "type": "garden"
-  },
   "sunenergyxt500": {
     "meta": "https://raw.githubusercontent.com/Creekhail/ioBroker.sunenergyxt500/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Creekhail/ioBroker.sunenergyxt500/main/admin/sunenergyxt500.png",
     "type": "energy"
+  },
+  "sunseeker": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sunseeker/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sunseeker/main/admin/sunseeker.png",
+    "type": "garden"
   },
   "sureflap": {
     "meta": "https://raw.githubusercontent.com/Sickboy78/ioBroker.sureflap/master/io-package.json",
