@@ -1535,6 +1535,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.iqontrol/master/admin/iqontrol.png",
     "type": "visualization"
   },
+  "irrigation": {
+    "meta": "https://raw.githubusercontent.com/steinwedel/ioBroker.irrigation/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/steinwedel/ioBroker.irrigation/main/admin/irrigation.png",
+    "type": "garden"
+  },
   "jablotron": {
     "meta": "https://raw.githubusercontent.com/DEV2DEV-DE/ioBroker.jablotron/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DEV2DEV-DE/ioBroker.jablotron/main/admin/jablotron.png",
