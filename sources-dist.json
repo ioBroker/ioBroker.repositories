@@ -3345,6 +3345,11 @@
     "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.upnp/master/admin/upnp.png",
     "type": "network"
   },
+  "utility-monitor": {
+    "meta": "https://raw.githubusercontent.com/fischi87/ioBroker.utility-monitor/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/fischi87/ioBroker.utility-monitor/main/admin/utility-monitor.png",
+    "type": "metering"
+  },
   "uv-protect": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.uv-protect/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.uv-protect/master/admin/uv-protect.png",
