@@ -2725,6 +2725,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sanext/master/admin/sanext.png",
     "type": "energy"
   },
+  "sax-power": {
+    "meta": "https://raw.githubusercontent.com/GodHunter/ioBroker.sax-power/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/GodHunter/ioBroker.sax-power/main/admin/sax-power.png",
+    "type": "energy"
+  },
   "sayit": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sayit/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sayit/master/admin/sayit.png",
