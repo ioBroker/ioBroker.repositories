@@ -180,6 +180,11 @@
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.apg-info/main/admin/apg-info.png",
     "type": "general"
   },
+  "apple-device-finder": {
+    "meta": "https://raw.githubusercontent.com/karo010522/ioBroker.apple-device-finder/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/karo010522/ioBroker.apple-device-finder/main/admin/apple-device-finder.png",
+    "type": "geoposition"
+  },
   "apsystems-ez1": {
     "meta": "https://raw.githubusercontent.com/zhihaining/ioBroker.apsystems-ez1/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/zhihaining/ioBroker.apsystems-ez1/master/admin/apsystems-ez1.png",
