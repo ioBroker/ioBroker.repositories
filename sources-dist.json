@@ -1870,6 +1870,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.meteoalarm/master/admin/meteoalarm.png",
     "type": "weather"
   },
+  "meteonomiqs": {
+    "meta": "https://raw.githubusercontent.com/Schimi1983/ioBroker.meteonomiqs/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Schimi1983/ioBroker.meteonomiqs/main/admin/meteonomiqs.png",
+    "type": "weather"
+  },
   "meteoswiss": {
     "meta": "https://raw.githubusercontent.com/deMynchi/ioBroker.meteoswiss/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/deMynchi/ioBroker.meteoswiss/master/admin/meteoswiss.png",
