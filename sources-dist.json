@@ -1610,6 +1610,11 @@
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.lametric/master/admin/lametric.png",
     "type": "hardware"
   },
+  "laundrylens": {
+    "meta": "https://raw.githubusercontent.com/backfisch88/ioBroker.laundrylens/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/backfisch88/ioBroker.laundrylens/main/admin/icon.png",
+    "type": "general"
+  },
   "lcn": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.lcn/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.lcn/master/admin/lcn.png",
