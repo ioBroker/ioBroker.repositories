@@ -3710,6 +3710,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.vw-connect/master/admin/vw-connect.png",
     "type": "vehicle"
   },
+  "waip-web": {
+    "meta": "https://raw.githubusercontent.com/rnc11/ioBroker.waip-web/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rnc11/ioBroker.waip-web/main/admin/waip-web.png",
+    "type": "alarm"
+  },
   "wallpanel": {
     "meta": "https://raw.githubusercontent.com/xXBJXx/ioBroker.wallpanel/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/xXBJXx/ioBroker.wallpanel/main/admin/wallpanel.png",
