@@ -1910,6 +1910,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.miele/master/admin/xmiele.png",
     "type": "household"
   },
+  "miele-local": {
+    "meta": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.miele-local/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.miele-local/main/admin/miele-local.png",
+    "type": "household"
+  },
   "mielecloudservice": {
     "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.mielecloudservice/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.mielecloudservice/master/admin/mielecloudservice.svg",
