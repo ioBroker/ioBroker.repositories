@@ -817,7 +817,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fakeroku/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fakeroku/master/admin/fakeroku.png",
     "type": "multimedia",
-    "version": "0.4.0"
+    "version": "1.1.0"
   },
   "fb-checkpresence": {
     "meta": "https://raw.githubusercontent.com/afuerhoff/ioBroker.fb-checkpresence/master/io-package.json",
@@ -1003,7 +1003,7 @@
     "meta": "https://raw.githubusercontent.com/hombach/ioBroker.go-e-charger/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/hombach/ioBroker.go-e-charger/master/admin/go-eCharger.png",
     "type": "vehicle",
-    "version": "1.2.1"
+    "version": "1.4.0"
   },
   "google-sharedlocations2": {
     "meta": "https://raw.githubusercontent.com/Garfonso/ioBroker.google-sharedlocations2/main/io-package.json",
@@ -1051,7 +1051,7 @@
     "meta": "https://raw.githubusercontent.com/patricknitsch/ioBroker.grohe-smarthome/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/patricknitsch/ioBroker.grohe-smarthome/main/admin/grohe-smarthome.png",
     "type": "metering",
-    "version": "0.6.0"
+    "version": "0.7.0"
   },
   "growatt": {
     "meta": "https://raw.githubusercontent.com/PLCHome/ioBroker.growatt/master/io-package.json",
@@ -1117,7 +1117,7 @@
     "meta": "https://raw.githubusercontent.com/meistermopper/ioBroker.harvia-fenix/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/meistermopper/ioBroker.harvia-fenix/main/admin/harvia.png",
     "type": "climate-control",
-    "version": "0.3.1"
+    "version": "0.4.0"
   },
   "hass": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hass/master/io-package.json",
@@ -1297,7 +1297,7 @@
     "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.hueemu/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.hueemu/main/admin/hue-emu-logo.svg",
     "type": "lighting",
-    "version": "1.12.0"
+    "version": "1.12.1"
   },
   "huum-sauna": {
     "meta": "https://raw.githubusercontent.com/Chris-656/ioBroker.huum-sauna/main/io-package.json",
@@ -1801,7 +1801,7 @@
     "meta": "https://raw.githubusercontent.com/oelison/ioBroker.mediola-gateway/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/oelison/ioBroker.mediola-gateway/main/admin/mediola-gateway.png",
     "type": "multimedia",
-    "version": "1.2.0"
+    "version": "1.3.0"
   },
   "megad": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.megad/master/io-package.json",
@@ -2761,7 +2761,7 @@
     "meta": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/admin/senec.png",
     "type": "energy",
-    "version": "2.14.1"
+    "version": "2.15.0"
   },
   "seplos-v3-sniffer": {
     "meta": "https://raw.githubusercontent.com/DpunktS/ioBroker.seplos-v3-sniffer/main/io-package.json",
@@ -2918,6 +2918,12 @@
     "icon": "https://raw.githubusercontent.com/ltspicer/ioBroker.sofarcloud/main/admin/sofarcloud.jpg",
     "type": "energy",
     "version": "3.4.3"
+  },
+  "solakon-one": {
+    "meta": "https://raw.githubusercontent.com/berto-1974/ioBroker.solakon-one/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/berto-1974/ioBroker.solakon-one/main/admin/solakon.png",
+    "type": "energy",
+    "version": "1.0.18"
   },
   "solaredge": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.solaredge/master/io-package.json",
@@ -3331,7 +3337,7 @@
     "meta": "https://raw.githubusercontent.com/Sefina-DS/ioBroker.victron-gx/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Sefina-DS/ioBroker.victron-gx/main/admin/victron-gx.png",
     "type": "energy",
-    "version": "0.9.4"
+    "version": "0.10.0"
   },
   "viessmann": {
     "meta": "https://raw.githubusercontent.com/misanorot/ioBroker.viessmann/master/io-package.json",
@@ -3833,7 +3839,7 @@
   },
   "yamaha": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.yamaha/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.yamaha/master/admin/yamaha.png",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.yamaha/master/admin/yamaha.svg",
     "type": "multimedia",
     "version": "0.5.4"
   },

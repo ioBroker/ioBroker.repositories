@@ -26,6 +26,7 @@
     "checkNpm": "node lib/checkNpm.js",
     "manualAction": "node lib/manualAction.js",
     "newAtLatestPrInfo": "node lib/newAtLatestPrInfo.js",
+    "rdCheckedPrInfo": "node lib/rdCheckedPrInfo.js",
     "objJsonMissingPrInfo": "node lib/objJsonMissingPrInfo.js",
     "setLabels": "node lib/setLabels.js",
     "setStableTag": "node lib/setStableTag.js",
@@ -53,7 +54,7 @@
   ],
   "devDependencies": {
     "@iobroker/eslint-config": "^2.3.4",
-    "@iobroker/repochecker": "^5.20.12",
+    "@iobroker/repochecker": "^5.20.13",
     "axios": "^1.19.0",
     "image-size": "^2.0.2",
     "minimist": "^1.2.8",
