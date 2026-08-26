@@ -26,7 +26,7 @@ function findPath(path: string, url: string): string {
     if (path.substring(0, 'http://'.length) === 'http://' || path.substring(0, 'https://'.length) === 'https://') {
         return (path + url).replace(/\/\//g, '/').replace('http:/', 'http://').replace('https:/', 'https://');
     }
-    if (url && url[0] === '/') {
+    if (url[0] === '/') {
         return `${__dirname}/..${url}`;
     }
     return `${__dirname}/../${path}${url}`;
