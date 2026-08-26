@@ -7,15 +7,6 @@ require('node:events').EventEmitter.prototype._maxListeners = 100;
 import axios from 'axios';
 
 // Compare versions
-
-function getAppName(): string {
-    const parts = __dirname.replace(/\\/g, '/').split('/');
-    return parts[parts.length - 2].split('.')[0];
-}
-
-/** Derived from the directory name, e.g. 'ioBroker' for ioBroker.repositories. */
-export const appName = getAppName();
-
 function findPath(path: string, url: string): string {
     if (!url) {
         return '';
@@ -108,7 +99,7 @@ function getJson(urlOrPath: string, callback?: (...args: any[]) => void): void {
  * @param callback Optional callback to receive the version. If not provided, the function will return void.
  */
 function getNpmVersion(adapter: string, callback?: (err: any, version?: string) => void): void {
-    adapter = adapter ? `${appName}.${adapter}` : appName;
+    adapter = adapter ? `iobroker.${adapter}` : 'iobroker';
     adapter = adapter.toLowerCase();
 
     const cliCommand = `npm view ${adapter}@latest version`;
@@ -370,15 +361,15 @@ export function getRepositoryFile(
     }
 }
 
-// All paths are returned always relative to /node_modules/' + appName + '.js-controller
+// All paths are returned always relative to /node_modules/iobroker.js-controller
 // the result has always "/" as last symbol
 function getDefaultDataDir(): string {
     //var dataDir = __dirname.replace(/\\/g, '/');
     //dataDir = dataDir.split('/');
 
     // If installed with npm
-    if (fs.existsSync(`${__dirname}/../../../node_modules/${appName}.js-controller`)) {
-        return `../../${appName}-data/`;
+    if (fs.existsSync(`${__dirname}/../../../node_modules/iobroker.js-controller`)) {
+        return `../../iobroker-data/`;
     }
     //dataDir.splice(dataDir.length - 1, 1);
     //dataDir = dataDir.join('/');
