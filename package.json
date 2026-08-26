@@ -43,6 +43,15 @@
     "bugs": {
         "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
     },
+    "files": [
+        "build/",
+        "src/",
+        "list/",
+        "sources-dist.json",
+        "sources-dist-stable.json",
+        "tsconfig.json",
+        "REVIEW_CHECKLIST.md"
+    ],
     "licenses": [
         {
             "type": "MIT",

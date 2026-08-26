@@ -13,7 +13,9 @@
 
         "rootDir": "./src",
         "outDir": "./build",
-        "sourceMap": true,
+        // off on purpose: the maps roughly doubled the packed output, and build/ is only ever run
+        // by CI. Turn back on temporarily when a stack trace needs mapping to the .ts sources.
+        "sourceMap": false,
 
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
