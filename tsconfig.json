@@ -1,27 +1,32 @@
 {
     "compilerOptions": {
-        "module": "esnext",
-        "target": "esnext",
-        "moduleResolution": "node",
-        "baseUrl": "./",
+        // These are CommonJS command line scripts executed by GitHub Actions with `node build/<x>.js`,
+        // so the emit has to stay CommonJS - package.json deliberately has no "type": "module".
+        // module/moduleResolution "node16" is the TypeScript 6 successor of the deprecated "node10":
+        // it honours package.json "exports" and, because this package is not "type": "module",
+        // still treats every .ts here as CommonJS and emits require()/module.exports.
+        "target": "es2022",
+        "module": "node16",
+        "moduleResolution": "node16",
+        "lib": ["es2022"],
+        "types": ["node", "mocha"],
+
         "rootDir": "./src",
-        "allowSyntheticDefaultImports": true,
-        "checkJs": false,
-        "noEmit": false,
         "outDir": "./build",
         "sourceMap": true,
-        "sourceRoot": "./src",
-        "noImplicitAny": true,
+
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true,
-        "lib": ["es2018", "DOM"],
-        "jsx": "react",
-        "types": ["@iobroker/types"],
-        "paths": {
-            "@/*": ["./src/*"],
-        }
+
+        // Pragmatic first migration: implicit any is flagged, but the remaining strict checks are
+        // left off for now. Third party payloads (GitHub API, npm registry) are typed as `any` on
+        // purpose - tightening those is follow-up work.
+        "strict": false,
+        "noImplicitAny": true
     },
-    "exclude": ["**/node_modules", "**/build", "adminWww/**"],
-    "include": ["**/*.js", "**/*.ts", "**/*.d.ts",
-        "eslint.config.mjs"
-    ],
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "build"]
 }
