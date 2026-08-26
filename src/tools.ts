@@ -129,7 +129,7 @@ function getIoPack(sources: any, name: string, callback?: (...args: any[]) => vo
     getJson(sources[name].meta, function (ioPack: any) {
         const packUrl = sources[name].meta.replace('io-package.json', 'package.json');
         if (!ioPack) {
-            sources._helper && sources._helper.failCounter.push(name);
+            sources._helper?.failCounter.push(name);
             callback?.(sources, name);
         } else {
             setImmediate(() => {
@@ -139,26 +139,26 @@ function getIoPack(sources: any, name: string, callback?: (...args: any[]) => vo
                     // If installed from git or something else.
                     // js-controller is an exception because it can be installed from npm and from git
                     if (sources[name].url && name !== 'js-controller') {
-                        if (ioPack && ioPack.common) {
+                        if (ioPack?.common) {
                             sources[name] = extend(true, sources[name], ioPack.common);
 
                             // overwrite type of adapter from repository
                             if (type) {
                                 sources[name].type = type;
                             }
-                            if (pack && pack.licenses && pack.licenses.length) {
-                                sources[name].license = sources[name].license || pack.licenses[0].type;
-                                sources[name].licenseUrl = sources[name].licenseUrl || pack.licenses[0].url;
+                            if (pack?.licenses?.length) {
+                                sources[name].license ||= pack.licenses[0].type;
+                                sources[name].licenseUrl ||= pack.licenses[0].url;
                             }
                         }
 
                         callback?.(sources, name);
                     } else {
-                        if (ioPack && ioPack.common) {
+                        if (ioPack?.common) {
                             sources[name] = extend(true, sources[name], ioPack.common);
-                            if (pack && pack.licenses && pack.licenses.length) {
-                                sources[name].license = sources[name].license || pack.licenses[0].type;
-                                sources[name].licenseUrl = sources[name].licenseUrl || pack.licenses[0].url;
+                            if (pack?.licenses?.length) {
+                                sources[name].license ||= pack.licenses[0].type;
+                                sources[name].licenseUrl ||= pack.licenses[0].url;
                             }
                         }
 
@@ -177,7 +177,9 @@ function getIoPack(sources: any, name: string, callback?: (...args: any[]) => vo
                             ) {
                                 //installed from npm
                                 getNpmVersion(name, (err: any, version?: string) => {
-                                    err && console.error(err);
+                                    if (err) {
+                                        console.error(err);
+                                    }
 
                                     if (version) {
                                         sources[name].version = version;
@@ -330,7 +332,7 @@ export function getRepositoryFile(
         }
 
         for (const s in sources) {
-            if (Object.prototype.hasOwnProperty.call(sources, s) && additionalInfo[s] && additionalInfo[s].published) {
+            if (Object.prototype.hasOwnProperty.call(sources, s) && additionalInfo[s]?.published) {
                 sources[s].published = additionalInfo[s].published;
             }
         }
@@ -355,7 +357,9 @@ export function getRepositoryFile(
                 }
                 setImmediate(() => {
                     _getRepositoryFile(sources, path, (err?: any) => {
-                        err && console.error(`[${new Date().toString()}] ${err}`);
+                        if (err) {
+                            console.error(`[${new Date().toString()}] ${err}`);
+                        }
                         callback?.(err, sources);
                     });
                 });

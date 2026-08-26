@@ -5,6 +5,7 @@ import * as tools from './tools';
 import * as builds from './build';
 import semver from 'semver';
 import { URL } from 'url';
+import minimist from 'minimist';
 
 const latestJsonPath = path.normalize(path.join(__dirname, '../sources-dist.json'));
 const stableJsonPath = path.normalize(path.join(__dirname, '../sources-dist-stable.json'));
@@ -202,7 +203,7 @@ function getLatestCommit(latest: any, adapter: string) {
             .then(data => {
                 error403Detected = null;
                 const info = data.data;
-                if (info && info[0] && info[0].commit) {
+                if (info?.[0]?.commit) {
                     callback({ adapter, commit: true, date: new Date(info[0].commit.author.date) });
                 } else {
                     callback({ adapter });
@@ -280,12 +281,12 @@ function serial(list: any[], result: any, callback?: (result?: any) => void) {
         callback = result;
         result = [];
     }
-    if (!list || !list.length) {
-        callback && callback(result);
+    if (!list?.length) {
+        callback?.(result);
         return;
     }
     const task = list.shift();
-    result = result || [];
+    result ||= [];
     console.log(`Rest: ${list.length}`);
     task((r: any) => {
         result.push(r);
@@ -354,7 +355,7 @@ function createList() {
                                         return;
                                     }
                                     user = user.toLowerCase();
-                                    authors[user] = authors[user] || 0;
+                                    authors[user] ||= 0;
                                     authors[user]++;
                                 });
                             } else if (list) {
@@ -369,7 +370,7 @@ function createList() {
                                     return;
                                 }
                                 user = user.toLowerCase();
-                                authors[user] = authors[user] || 0;
+                                authors[user] ||= 0;
                                 authors[user]++;
                             }
                         }
@@ -381,7 +382,7 @@ function createList() {
                         }
                         const aItem: Record<string, any> = {};
                         try {
-                            types[latest[adapter].type] = types[latest[adapter].type] || 0;
+                            types[latest[adapter].type] ||= 0;
                             types[latest[adapter].type]++;
 
                             // image
@@ -399,12 +400,10 @@ function createList() {
                             const commit = results.find((result: any) => result.commit && result.adapter === adapter);
 
                             // Description
-                            aItem.desc = git && git.desc ? git.desc.en || git.desc : '';
+                            aItem.desc = git?.desc ? git.desc.en || git.desc : '';
 
                             // License
-                            aItem.license =
-                                (git && git.license) ||
-                                (npm && (npm.info.license || (npm.info.licenses && npm.info.licenses[0].type)));
+                            aItem.license = git?.license || (npm && (npm.info.license || npm.info.licenses?.[0].type));
 
                             // Type
                             aItem.type = latest[adapter].type;
@@ -415,17 +414,16 @@ function createList() {
                             aItem.typeError = git && latest[adapter].type !== git.info.common.type;
 
                             // Discovery
-                            if (discovery && discovery.includes(adapter)) {
+                            if (discovery?.includes(adapter)) {
                                 aItem.discovery = true;
                             }
 
                             // Material
-                            aItem.materialize =
-                                git && git.info && git.info.common
-                                    ? git.info.common.materialize || git.info.common.noConfig || git.info.common.onlyWWW
-                                    : false;
+                            aItem.materialize = git?.info?.common
+                                ? git.info.common.materialize || git.info.common.noConfig || git.info.common.onlyWWW
+                                : false;
 
-                            if (stats && stats[adapter]) {
+                            if (stats?.[adapter]) {
                                 aItem.installs = stats[adapter];
                             }
 
@@ -433,7 +431,7 @@ function createList() {
                             aItem.maintainers = git ? formatMaintainers(git.info.common.authors, authors) : '';
 
                             // Created on
-                            if (npm && npm.info.time.created) {
+                            if (npm?.info?.time?.created) {
                                 const date = new Date(npm.info.time.created);
                                 aItem.created = date.toISOString();
                             }
@@ -441,11 +439,11 @@ function createList() {
                             // Version
                             aItem.versions = {
                                 github: git ? git.version : '',
-                                githubDate: commit && commit.date,
+                                githubDate: commit?.date,
                                 latest: npm ? npm.version : '',
-                                latestDate: npm && npm.date,
+                                latestDate: npm?.date,
                                 stable: stable[adapter] ? stable[adapter].version : '',
-                                stableDate: npm && stable[adapter] && npm.info.time[stable[adapter].version],
+                                stableDate: stable[adapter] && npm?.info.time[stable[adapter].version],
                             };
 
                             aList[adapter] = aItem;
@@ -754,7 +752,7 @@ export { init, sort, createList as list, removeDates as nodates, addToLatest, ad
 if (require.main === module) {
     // Wrapping the following code in an IIAFE allows us to use async
     (async () => {
-        const argv = require('minimist')(process.argv.slice(2));
+        const argv = minimist(process.argv.slice(2));
         // update versions for all adapters, which do not have the version
         if (argv._.includes('init')) {
             init().then(() => process.exit());

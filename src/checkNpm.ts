@@ -65,7 +65,7 @@ async function checkNpm(adapter: string) {
     }
 
     const body = response.data;
-    if (!body.maintainers || !body.maintainers.length) {
+    if (!body.maintainers?.length) {
         return `Bluefox was not found in the collaborators on NPM!.\nPlease execute in adapter directory: "npm owner add bluefox iobroker.${adapter}"`;
     }
 

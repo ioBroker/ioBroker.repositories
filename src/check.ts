@@ -122,10 +122,10 @@ function isWhitelisted(owner: string, adapter: string, username: string) {
     const repoName = adapter.toLowerCase();
 
     return MAINTAINER_WHITELIST.some(entry => {
-        if (!entry || !entry.user || entry.user.toLowerCase() !== username.toLowerCase()) {
+        if (!entry?.user || entry.user.toLowerCase() !== username.toLowerCase()) {
             return false;
         }
-        if (!entry.repos || !entry.repos.length) {
+        if (!entry.repos?.length) {
             // No repo restriction -> whitelisted for all repositories.
             return true;
         }
@@ -151,7 +151,7 @@ function isWhitelisted(owner: string, adapter: string, username: string) {
 const RECENT_PR_SCAN_LIMIT = 25;
 
 function isDependabotPr(pr: any) {
-    const login = (pr && pr.user && pr.user.login) || '';
+    const login = pr?.user?.login || '';
     return login.toLowerCase().startsWith('dependabot');
 }
 
@@ -161,12 +161,12 @@ async function hasMergedRecentPr(owner: string, adapter: string, username: strin
             `https://api.github.com/repos/${owner}/${adapter}/pulls?state=closed&per_page=100&sort=updated&direction=desc`,
         );
         const merged = (prs || [])
-            .filter((pr: any) => pr && pr.merged_at && !isDependabotPr(pr))
+            .filter((pr: any) => pr?.merged_at && !isDependabotPr(pr))
             .slice(0, RECENT_PR_SCAN_LIMIT);
         for (const pr of merged) {
             try {
                 const detail = await getGithub(`https://api.github.com/repos/${owner}/${adapter}/pulls/${pr.number}`);
-                if (detail && detail.merged_by && detail.merged_by.login.toLowerCase() === username.toLowerCase()) {
+                if (detail?.merged_by && detail.merged_by.login.toLowerCase() === username.toLowerCase()) {
                     return true;
                 }
             } catch (e) {
@@ -282,7 +282,7 @@ async function detectChangedAdaptersInFile(filename: string, baseRef: string, he
 
     return changedAdapters
         .map(name => {
-            const meta = headJson[name] && headJson[name].meta;
+            const meta = headJson[name]?.meta;
             if (!meta) {
                 return null;
             }
@@ -507,7 +507,7 @@ async function doIt() {
     let prAuthor = '';
     try {
         const pr = await getGithub(`https://api.github.com/repos/ioBroker/ioBroker.repositories/pulls/${prID}`);
-        prAuthor = (pr.user && pr.user.login) || '';
+        prAuthor = pr.user?.login || '';
         console.log(`PR ${prID} created by ${prAuthor}`);
     } catch (e) {
         console.error(`Cannot determine author of PR ${prID}: ${e}`);
@@ -614,7 +614,7 @@ async function doIt() {
         if (data.context) {
             someChecked = true;
 
-            if (data.context.errors && data.context.errors.length) {
+            if (data.context.errors?.length) {
                 errorsFound = true;
                 comments.push({ text: `**ERRORS:**`, link, owner, adapter });
                 data.context.errors.forEach((err: string) =>
@@ -626,7 +626,7 @@ async function doIt() {
 
             comments.push({ text: ` `, link, owner, adapter });
 
-            if (data.context.warnings && data.context.warnings.filter((warn: string) => warn.startsWith('[W')).length) {
+            if (data.context.warnings?.filter((warn: string) => warn.startsWith('[W')).length) {
                 comments.push({ text: `**WARNINGS:**`, link, owner, adapter });
                 data.context.warnings
                     .filter((warn: string) => warn.startsWith('[W'))
@@ -634,7 +634,7 @@ async function doIt() {
                 comments.push({ text: ` `, link, owner, adapter });
             }
 
-            if (data.context.warnings && data.context.warnings.filter((warn: string) => warn.startsWith('[S')).length) {
+            if (data.context.warnings?.filter((warn: string) => warn.startsWith('[S')).length) {
                 comments.push({ text: `**SUGGESTIONS:**`, link, owner, adapter });
                 data.context.warnings
                     .filter((warn: string) => warn.startsWith('[S'))
@@ -695,7 +695,7 @@ async function doIt() {
                 let submittedCreatedStr = ` created _unknown_ (_unknown_ days old)`;
                 try {
                     const npmInfo = await getUrl(`https://registry.npmjs.org/iobroker.${adapterName.toLowerCase()}`);
-                    const submittedVersionDate = npmInfo && npmInfo.time && npmInfo.time[submittedRelease];
+                    const submittedVersionDate = npmInfo?.time?.[submittedRelease];
                     if (submittedVersionDate) {
                         const submittedTime = new Date(submittedVersionDate);
                         const submittedTimeStr = `${submittedTime.getDate()}.${submittedTime.getMonth() + 1}.${submittedTime.getFullYear()}`;

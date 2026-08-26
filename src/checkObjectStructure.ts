@@ -553,7 +553,7 @@ async function safeRemoveLabel(prNumber: string | number, label: string) {
         await deleteLabel(prNumber, label);
         console.log(`  Label "${label}" removed.`);
     } catch (e) {
-        const status = e.response && e.response.status;
+        const status = e.response?.status;
         if (status === 404) {
             console.log(`  Label "${label}" was not present on the PR – nothing to remove.`);
         } else {

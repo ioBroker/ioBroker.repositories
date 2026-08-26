@@ -32,8 +32,8 @@ function getStats(cb?: (err: any, stats?: any) => void) {
 }
 
 function getImages(list: any[], destination: string, callback?: () => void) {
-    if (!list || !list.length) {
-        callback && callback();
+    if (!list?.length) {
+        callback?.();
     } else {
         const name = list.pop();
         if (!fs.existsSync(`${destination + name.name}.svg`)) {
@@ -44,7 +44,9 @@ function getImages(list: any[], destination: string, callback?: () => void) {
                 .then(response => {
                     if (response.data) {
                         fs.writeFile(`${destination + name.name}.svg`, response.data, 'binary', err => {
-                            err && console.error(`Cannot save file "${destination}${name.name}.svg: ${err}`);
+                            if (err) {
+                                console.error(`Cannot save file "${destination}${name.name}.svg: ${err}`);
+                            }
                             setTimeout(() => getImages(list, destination, callback), 100);
                         });
                     } else {
@@ -67,15 +69,17 @@ function getImages(list: any[], destination: string, callback?: () => void) {
 }
 
 function getLicenses(list: any[], destination: string, callback?: () => void) {
-    if (!list || !list.length) {
-        callback && callback();
+    if (!list?.length) {
+        callback?.();
     } else {
         const name = list.pop();
         axios(`https://img.shields.io/github/license/${name}.svg?style=flat-square`, { responseType: 'arraybuffer' })
             .then(response => {
                 if (response.data) {
                     fs.writeFile(`${destination}license-${name}.svg`, response.data, 'binary', err => {
-                        err && console.error(`Cannot save file "${destination}license-${name}.svg: ${err}`);
+                        if (err) {
+                            console.error(`Cannot save file "${destination}license-${name}.svg: ${err}`);
+                        }
                         setTimeout(() => getLicenses(list, destination, callback), 100);
                     });
                 } else {
@@ -95,8 +99,8 @@ function getLicenses(list: any[], destination: string, callback?: () => void) {
 }
 
 function getLogos(list: any[], destination: string, callback?: () => void) {
-    if (!list || !list.length) {
-        callback && callback();
+    if (!list?.length) {
+        callback?.();
     } else {
         const task = list.pop();
         axios(task.url, { responseType: 'arraybuffer' })
@@ -180,7 +184,7 @@ function processRepository(data: any, argv: string[], cb?: () => void) {
                 fs.mkdirSync(argv[a + 1]);
             }
 
-            getImages(list, argv[a + 1], () => !--waitEnd && cb && cb());
+            getImages(list, argv[a + 1], () => !--waitEnd && cb?.());
         } else if (argv[a] === '--logos' && argv[a + 1]) {
             if (argv[a + 1][argv[a + 1].length - 1] !== '/') {
                 argv[a + 1] += '/';
@@ -197,7 +201,7 @@ function processRepository(data: any, argv: string[], cb?: () => void) {
                 fs.mkdirSync(argv[a + 1]);
             }
 
-            getLogos(list, argv[a + 1], () => !--waitEnd && cb && cb());
+            getLogos(list, argv[a + 1], () => !--waitEnd && cb?.());
         } else if (argv[a] === '--licenses' && argv[a + 1]) {
             if (argv[a + 1][argv[a + 1].length - 1] !== '/') {
                 argv[a + 1] += '/';
@@ -217,11 +221,15 @@ function processRepository(data: any, argv: string[], cb?: () => void) {
                 fs.mkdirSync(argv[a + 1]);
             }
 
-            getLicenses(_list, argv[a + 1], () => !--waitEnd && cb && cb());
+            getLicenses(_list, argv[a + 1], () => !--waitEnd && cb?.());
         }
     }
-    !output && console.log(JSON.stringify(data, null, 2));
-    !waitEnd && cb && cb();
+    if (!output) {
+        console.log(JSON.stringify(data, null, 2));
+    }
+    if (!waitEnd) {
+        cb?.();
+    }
 }
 
 export { getLogos, getImages, processRepository, getStats };
@@ -281,24 +289,13 @@ if (require.main === module) {
                             }
                         }
 
-                        // 2018.01.04 temporary fix for admin2. Remove it later
-                        for (const adapter in stable) {
-                            if (
-                                !adapter.startsWith('_') &&
-                                Object.prototype.hasOwnProperty.call(stable, adapter) &&
-                                typeof stable[adapter].title === 'object'
-                            ) {
-                                stable[adapter].titleLang = stable[adapter].titleLang || stable[adapter].title;
-                                stable[adapter].title = stable[adapter].title.en || stable[adapter].title.toString();
-                            }
-                        }
                         for (const adapter in latest) {
                             if (
                                 !adapter.startsWith('_') &&
                                 Object.prototype.hasOwnProperty.call(latest, adapter) &&
                                 typeof latest[adapter].title === 'object'
                             ) {
-                                latest[adapter].titleLang = latest[adapter].titleLang || latest[adapter].title;
+                                latest[adapter].titleLang ||= latest[adapter].title;
                                 latest[adapter].title = latest[adapter].title.en || latest[adapter].title.toString();
                             }
                         }
