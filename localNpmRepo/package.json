@@ -10,8 +10,8 @@
     "dependencies": {
         "local-npm": "^2.2.2",
         "gulp": "^4.0.2",
-        "axios": "^1.13.1",
-        "express": "^4.21.2",
+        "axios": "^1.20.0",
+        "express": "^5.2.1",
         "optimist": "^0.6.1",
         "node.extend": "^2.0.3",
         "npm": "^6.14.18"

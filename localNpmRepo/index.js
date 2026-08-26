@@ -1,6 +1,6 @@
 const express = require('express');
-const fs = require('fs');
-const os = require('os');
+const fs = require('node:fs');
+const os = require('node:os');
 const argv = require('optimist').argv;
 const createLocalNpm = require('local-npm/lib/index');
 // --port=5081 --ip=192.168.1.1 --url=http://myURL:5080 --npmPort=5080

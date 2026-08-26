@@ -1,11 +1,16 @@
 const gulp = require('gulp');
-const fs = require('fs');
-const exec = require('child_process').exec;
+const fs = require('node:fs');
+const exec = require('node:child_process').exec;
 const axios = require('axios');
 
-if (!fs.existsSync(`${__dirname}/tools.js`)) {
-    fs.writeFileSync(`${__dirname}/tools.js`, fs.readFileSync(`${__dirname}/../lib/tools.js`));
+// tools is TypeScript now and lives in src/, so the compiled file is the one to copy. It is
+// refreshed on every run: unlike the former hand-written lib/tools.js, the source is a build
+// artefact, and a copy taken once would silently go stale after the next build.
+const toolsBuild = `${__dirname}/../build/tools.js`;
+if (!fs.existsSync(toolsBuild)) {
+    throw new Error(`${toolsBuild} is missing - run "npm i" (or "npm run build") in the repository root first`);
 }
+fs.writeFileSync(`${__dirname}/tools.js`, fs.readFileSync(toolsBuild));
 
 const tools = require(`${__dirname}/tools.js`);
 
