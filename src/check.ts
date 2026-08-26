@@ -1,8 +1,7 @@
 import fs from 'fs';
 import axios from 'axios';
 import { addComment, addLabel, deleteLabel, getGithub, getUrl, getAllComments, deleteComment } from './common';
-
-let checker: any;
+import checker from '@iobroker/repochecker';
 
 const TEXT_RECHECK = 'RE-CHECK!';
 const TEXT_COMMENT_TITLE = '## Automated adapter checker';
@@ -52,8 +51,6 @@ function getPullRequestNumber() {
 }
 
 function executeOneAdapterCheck(adapter: string) {
-    checker = checker || require('@iobroker/repochecker');
-
     return new Promise<any>((resolve, reject) => {
         checker.handler(
             {

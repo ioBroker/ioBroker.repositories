@@ -350,7 +350,7 @@ if (require.main === module) {
                         }
                         fs.writeFileSync(
                             `${__dirname}/../sources-dist-stable.old.json`,
-                            JSON.stringify(latest, null, 2),
+                            JSON.stringify(stable, null, 2),
                         );
 
                         processRepository(latest, process.argv, () => process.exit());

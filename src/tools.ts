@@ -1,12 +1,14 @@
 import fs from 'node:fs';
 import semver from 'semver';
+import { exec } from 'node:child_process';
+import extend from 'node.extend';
+
 require('node:events').EventEmitter.prototype._maxListeners = 100;
 import axios from 'axios';
-let extend: any;
 
 // Compare versions
 
-function getAppName() {
+function getAppName(): string {
     const parts = __dirname.replace(/\\/g, '/').split('/');
     return parts[parts.length - 2].split('.')[0];
 }
@@ -14,7 +16,7 @@ function getAppName() {
 /** Derived from the directory name, e.g. 'ioBroker' for ioBroker.repositories. */
 export const appName = getAppName();
 
-function findPath(path: string, url: string) {
+function findPath(path: string, url: string): string {
     if (!url) {
         return '';
     }
@@ -30,15 +32,15 @@ function findPath(path: string, url: string) {
     return `${__dirname}/../${path}${url}`;
 }
 
-// Return the content of the json file. Download it or read directly
-function getJson(urlOrPath: string, callback?: (...args: any[]) => void) {
+// Return the content of the json file. Download it or read it directly
+function getJson(urlOrPath: string, callback?: (...args: any[]) => void): void {
     let sources: Record<string, any> = {};
     // If an object was read
     if (urlOrPath && typeof urlOrPath === 'object') {
-        callback && callback(urlOrPath);
+        callback?.(urlOrPath);
     } else if (!urlOrPath) {
         console.log('Empty url!');
-        callback && callback(null);
+        callback?.(null);
     } else {
         if (
             urlOrPath.substring(0, 'http://'.length) === 'http://' ||
@@ -46,13 +48,13 @@ function getJson(urlOrPath: string, callback?: (...args: any[]) => void) {
         ) {
             axios(urlOrPath, { timeout: 10000 })
                 .then(response => {
-                    callback && callback(response.data, urlOrPath);
+                    callback?.(response.data, urlOrPath);
                 })
                 .catch(error => {
                     console.log(
                         `Cannot download json from ${urlOrPath}. Error: ${error || (error.response && error.response.data)}`,
                     );
-                    callback && callback(null, urlOrPath);
+                    callback?.(null, urlOrPath);
                 });
         } else {
             if (fs.existsSync(urlOrPath)) {
@@ -60,31 +62,31 @@ function getJson(urlOrPath: string, callback?: (...args: any[]) => void) {
                     sources = JSON.parse(fs.readFileSync(urlOrPath).toString());
                 } catch (e) {
                     console.log(`Cannot parse json file from ${urlOrPath}. Error: ${e}`);
-                    callback && callback(null, urlOrPath);
+                    callback?.(null, urlOrPath);
                     return;
                 }
-                callback && callback(sources, urlOrPath);
+                callback?.(sources, urlOrPath);
             } else if (fs.existsSync(`${__dirname}/../${urlOrPath}`)) {
                 try {
                     sources = JSON.parse(fs.readFileSync(`${__dirname}/../${urlOrPath}`).toString());
                 } catch (e) {
                     console.log(`Cannot parse json file from ${__dirname}/../${urlOrPath}. Error: ${e}`);
-                    callback && callback(null, urlOrPath);
+                    callback?.(null, urlOrPath);
                     return;
                 }
-                callback && callback(sources, urlOrPath);
+                callback?.(sources, urlOrPath);
             } else if (fs.existsSync(`${__dirname}/../tmp/${urlOrPath}`)) {
                 try {
                     sources = JSON.parse(fs.readFileSync(`${__dirname}/../tmp/${urlOrPath}`).toString());
                 } catch (e) {
                     console.log(`Cannot parse json file from ${__dirname}/../tmp/${urlOrPath}. Error: ${e}`);
-                    callback && callback(null, urlOrPath);
+                    callback?.(null, urlOrPath);
                     return;
                 }
-                callback && callback(sources, urlOrPath);
+                callback?.(sources, urlOrPath);
             } else {
                 //if (urlOrPath.indexOf('/example/') === -1) console.log('Json file not found: ' + urlOrPath);
-                callback && callback(null, urlOrPath);
+                callback?.(null, urlOrPath);
             }
         }
     }
@@ -103,15 +105,14 @@ function getJson(urlOrPath: string, callback?: (...args: any[]) => void) {
  * Reads an adapter's npm version
  *
  * @param adapter The adapter to read the npm version from. Null for the root ioBroker packet
- * @param [callback]
+ * @param callback Optional callback to receive the version. If not provided, the function will return void.
  */
-function getNpmVersion(adapter: string, callback?: (err: any, version?: string) => void) {
+function getNpmVersion(adapter: string, callback?: (err: any, version?: string) => void): void {
     adapter = adapter ? `${appName}.${adapter}` : appName;
     adapter = adapter.toLowerCase();
 
     const cliCommand = `npm view ${adapter}@latest version`;
 
-    const exec = require('node:child_process').exec;
     exec(cliCommand, { timeout: 2000 }, (error: any, stdout: string) => {
         let version;
         if (error) {
@@ -124,12 +125,12 @@ function getNpmVersion(adapter: string, callback?: (err: any, version?: string) 
     });
 }
 
-function getIoPack(sources: any, name: string, callback?: (...args: any[]) => void) {
+function getIoPack(sources: any, name: string, callback?: (...args: any[]) => void): void {
     getJson(sources[name].meta, function (ioPack: any) {
         const packUrl = sources[name].meta.replace('io-package.json', 'package.json');
         if (!ioPack) {
             sources._helper && sources._helper.failCounter.push(name);
-            callback && callback(sources, name);
+            callback?.(sources, name);
         } else {
             setImmediate(() => {
                 getJson(packUrl, (pack: any) => {
@@ -151,7 +152,7 @@ function getIoPack(sources: any, name: string, callback?: (...args: any[]) => vo
                             }
                         }
 
-                        callback && callback(sources, name);
+                        callback?.(sources, name);
                     } else {
                         if (ioPack && ioPack.common) {
                             sources[name] = extend(true, sources[name], ioPack.common);
@@ -168,7 +169,7 @@ function getIoPack(sources: any, name: string, callback?: (...args: any[]) => vo
 
                         if (version) {
                             sources[name].version = version;
-                            callback && callback(sources, name);
+                            callback?.(sources, name);
                         } else {
                             if (
                                 sources[name].meta.substring(0, 'http://'.length) === 'http://' ||
@@ -183,10 +184,10 @@ function getIoPack(sources: any, name: string, callback?: (...args: any[]) => vo
                                     } else {
                                         sources[name].version = 'npm error';
                                     }
-                                    callback && callback(sources, name);
+                                    callback?.(sources, name);
                                 });
                             } else {
-                                callback && callback(sources, name);
+                                callback?.(sources, name);
                             }
                         }
                     }
@@ -196,7 +197,7 @@ function getIoPack(sources: any, name: string, callback?: (...args: any[]) => vo
     });
 }
 
-function _getRepositoryFile(sources: any, path: string, callback: (err?: any, sources?: any) => void) {
+function _getRepositoryFile(sources: any, path: string, callback: (err?: any, sources?: any) => void): void {
     if (!sources._helper) {
         let count = 0;
         for (const _name in sources) {
@@ -218,7 +219,7 @@ function _getRepositoryFile(sources: any, path: string, callback: (err?: any, so
                         delete sources[__name].processed;
                     }
                 }
-                callback && callback(`Timeout by read all package.json (${count}) seconds`, sources);
+                callback?.(`Timeout by read all package.json (${count}) seconds`, sources);
                 callback = null;
             }
         }, count * 2000);
@@ -258,7 +259,7 @@ function _getRepositoryFile(sources: any, path: string, callback: (err?: any, so
                                 delete sources[_name].processed;
                             }
                         }
-                        callback && callback('Looks like there is no internet.', sources);
+                        callback?.('Looks like there is no internet.', sources);
                         callback = null;
                     } else {
                         // process next
@@ -285,17 +286,17 @@ function _getRepositoryFile(sources: any, path: string, callback: (err?: any, so
                 delete sources[__name].processed;
             }
         }
-        callback && callback(err, sources);
+        callback?.(err, sources);
         callback = null;
     }
 }
 
 // Get list of all adapters and controller in some repository file or in /conf/source-dist.json
-function getRepositoryFile(
+export function getRepositoryFile(
     urlOrPath: string,
     additionalInfo?: any,
     callback?: (err: any, sources?: any, path?: string) => void,
-) {
+): void {
     let sources: Record<string, any> = {};
     let path = '';
 
@@ -307,10 +308,6 @@ function getRepositoryFile(
         additionalInfo = {};
     }
 
-    if (!extend) {
-        extend = require('node.extend');
-    }
-
     if (urlOrPath) {
         const parts = urlOrPath.split('/');
         path = `${parts.splice(0, parts.length - 1).join('/')}/`;
@@ -318,7 +315,7 @@ function getRepositoryFile(
 
     // If object was read
     if (urlOrPath && typeof urlOrPath === 'object') {
-        callback && callback(null, urlOrPath);
+        callback?.(null, urlOrPath);
     } else if (!urlOrPath) {
         try {
             sources = JSON.parse(fs.readFileSync(`${getDefaultDataDir()}sources.json`).toString());
@@ -340,9 +337,9 @@ function getRepositoryFile(
 
         _getRepositoryFile(sources, path, (err?: any) => {
             if (err) {
-                console.error(`[${new Date()}] ${err}`);
+                console.error(`[${new Date().toString()}] ${err}`);
             }
-            callback && callback(err, sources);
+            callback?.(err, sources);
         });
     } else {
         getJson(urlOrPath, (sources: any) => {
@@ -358,20 +355,20 @@ function getRepositoryFile(
                 }
                 setImmediate(() => {
                     _getRepositoryFile(sources, path, (err?: any) => {
-                        err && console.error(`[${new Date()}] ${err}`);
-                        callback && callback(err, sources);
+                        err && console.error(`[${new Date().toString()}] ${err}`);
+                        callback?.(err, sources);
                     });
                 });
             } else {
-                callback && callback(`Cannot read "${urlOrPath}"`, {});
+                callback?.(`Cannot read "${urlOrPath}"`, {});
             }
         });
     }
 }
 
-// All pathes are returned always relative to /node_modules/' + appName + '.js-controller
+// All paths are returned always relative to /node_modules/' + appName + '.js-controller
 // the result has always "/" as last symbol
-function getDefaultDataDir() {
+function getDefaultDataDir(): string {
     //var dataDir = __dirname.replace(/\\/g, '/');
     //dataDir = dataDir.split('/');
 
@@ -383,6 +380,3 @@ function getDefaultDataDir() {
     //dataDir = dataDir.join('/');
     return './data/';
 }
-
-// Only these two are used outside this file; everything else above is internal.
-export { getRepositoryFile };
