@@ -729,7 +729,7 @@ async function removeDates() {
     });
     await writeStableRepo(stable);
 
-    const latest = await readStableRepo();
+    const latest = await readLatestRepo();
     Object.keys(latest).forEach(name => {
         if (name.startsWith('_')) {
             return;
@@ -755,7 +755,7 @@ if (require.main === module) {
     // Wrapping the following code in an IIAFE allows us to use async
     (async () => {
         const argv = require('minimist')(process.argv.slice(2));
-        // update versions for all adapter, which do not have the version
+        // update versions for all adapters, which do not have the version
         if (argv._.includes('init')) {
             init().then(() => process.exit());
         } else if (argv.nodates) {

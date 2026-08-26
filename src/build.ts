@@ -230,10 +230,8 @@ export { getLogos, getImages, processRepository, getStats };
 // command line entry point and must not run when another module imports this file.
 if (require.main === module) {
     // update both repositories
-    const updatePublishes = require('./scripts').updatePublishes;
 
-    // todo save old files and process only changes
-
+    // todo save old files and process-only changes
     tools.getRepositoryFile(
         `https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist.json`,
         (err: any, latest: any) => {
@@ -325,45 +323,37 @@ if (require.main === module) {
                             }
                         }
 
-                        updatePublishes(
-                            (latest: any, stable: any) => {
-                                // save latest
-                                let pos = process.argv.indexOf('--latest');
-                                if (pos !== -1 && process.argv[pos + 1]) {
-                                    // save stable
-                                    fs.writeFileSync(process.argv[pos + 1], JSON.stringify(latest, null, 2));
-                                } else {
-                                    fs.writeFileSync(
-                                        `${__dirname}/../sources-dist.json`,
-                                        JSON.stringify(latest, null, 2),
-                                    );
-                                }
-                                fs.writeFileSync(
-                                    `${__dirname}/../sources-dist.old.json`,
-                                    JSON.stringify(latest, null, 2),
-                                );
+                        // The npm publish dates used to be filled in here by updatePublishes(), which was
+                        // replaced by updateVersions() in a14c6582 (2019) and retired altogether after that
+                        // - "dates are no more required in repos". build.js kept calling the old name, so
+                        // this path had been throwing ever since. The dates are simply not written any more.
+                        // save latest
+                        let pos = process.argv.indexOf('--latest');
+                        if (pos !== -1 && process.argv[pos + 1]) {
+                            // save stable
+                            fs.writeFileSync(process.argv[pos + 1], JSON.stringify(latest, null, 2));
+                        } else {
+                            fs.writeFileSync(`${__dirname}/../sources-dist.json`, JSON.stringify(latest, null, 2));
+                        }
+                        fs.writeFileSync(`${__dirname}/../sources-dist.old.json`, JSON.stringify(latest, null, 2));
 
-                                // save stable
-                                pos = process.argv.indexOf('--stable');
-                                if (pos !== -1 && process.argv[pos + 1]) {
-                                    // save stable
-                                    fs.writeFileSync(process.argv[pos + 1], JSON.stringify(stable, null, 2));
-                                } else {
-                                    fs.writeFileSync(
-                                        `${__dirname}/../sources-dist-stable.json`,
-                                        JSON.stringify(stable, null, 2),
-                                    );
-                                }
-                                fs.writeFileSync(
-                                    `${__dirname}/../sources-dist-stable.old.json`,
-                                    JSON.stringify(latest, null, 2),
-                                );
-
-                                processRepository(latest, process.argv, () => process.exit());
-                            },
-                            latest,
-                            stable,
+                        // save stable
+                        pos = process.argv.indexOf('--stable');
+                        if (pos !== -1 && process.argv[pos + 1]) {
+                            // save stable
+                            fs.writeFileSync(process.argv[pos + 1], JSON.stringify(stable, null, 2));
+                        } else {
+                            fs.writeFileSync(
+                                `${__dirname}/../sources-dist-stable.json`,
+                                JSON.stringify(stable, null, 2),
+                            );
+                        }
+                        fs.writeFileSync(
+                            `${__dirname}/../sources-dist-stable.old.json`,
+                            JSON.stringify(latest, null, 2),
                         );
+
+                        processRepository(latest, process.argv, () => process.exit());
                     });
                 },
             );
