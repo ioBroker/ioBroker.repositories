@@ -26,7 +26,6 @@ The repository serves as the central hub for:
 ├── test/                      # Test files
 ├── sources-dist.json          # Latest repository (beta adapters)
 ├── sources-dist-stable.json   # Stable repository (production adapters)
-├── tasks.js                   # Build tasks runner
 └── package.json              # Dependencies and scripts
 ```
 
