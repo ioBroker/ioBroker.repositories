@@ -139,8 +139,14 @@ red CI, not a style nit:
   relying on this path.
 - `src/manualAction.ts` ignores the `ACTION` / `REPOSITORY` / `ISSUE` inputs that `manualAction.yml` passes
   and instead closes one hardcoded foreign issue. Do not run that workflow until the script reads its env.
-- Of the 18 symbols `src/tools.ts` exports, only `appName` and `getRepositoryFile` are used anywhere.
-  The other 16 are dead code carried over from js-controller's tools.js (~800 of its 1000 lines).
+- `src/tools.ts` was pruned to what is actually reachable from its two consumers: it now exports only
+  `appName` and `getRepositoryFile` (1011 -> 388 lines). The remaining unexported helpers (`getJson`,
+  `getIoPack`, `getNpmVersion`, `findPath`, `getDefaultDataDir`, `_getRepositoryFile`) exist solely to
+  serve `getRepositoryFile`. If you need one of the removed js-controller helpers back, take it from
+  js-controller rather than from this file's history.
+- `localNpmRepo/gulpfile.js` still copies `../lib/tools.js`, a path that no longer exists. It only ever
+  used `getRepositoryFile`, which survived the pruning, so pointing it at `../build/tools.js` would be
+  enough - but that whole directory is an unreferenced side project.
 - `unzipper` and `image-size` are devDependencies that nothing imports.
 - No workflow runs `npm run lint`; linting is a local step only.
 - `package.json` declares `node >= 12` but every workflow runs Node 22.
