@@ -1,6 +1,6 @@
 # ioBroker.repositories
 
-This is GitHub project for storage of latest and stable repositories.
+This is a GitHub project for storage of the latest and stable repositories.
 
 ![last refresh beta](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28beta%29&query=%24.date&url=https%3A%2F%2Fdownload.iobroker.net%2Fsources-dist-latest-hash.json) ![last refresh stable](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28stable%29&query=%24.date&url=https%3A%2F%2Fdownload.iobroker.net%2Fsources-dist-hash.json)
 
@@ -21,9 +21,9 @@ This is GitHub project for storage of latest and stable repositories.
 2. Log in with GitHub
 3. Open the new adapter
 4. Click on manage
-5. Click on action "ADD TO LATEST"
+5. Click on the action "ADD TO LATEST"
 
-## Requirements for adapter to get added to the latest repository
+## Requirements for an adapter to get added to the latest repository
 *Already required for the latest repository*
 
 1. Your GitHub repository must have the name - `ioBroker.<adaptername>`. **B** is capital in "ioBroker", but in the `package.json` the *name* must be low case, because npm does not allow upper case letters. Your repository must have "topics". Add these with `Manage topics`.
@@ -54,7 +54,7 @@ This is GitHub project for storage of latest and stable repositories.
 * Best use the adapter creator (https://github.com/ioBroker/create-adapter) or get a fresh relevant version from the Template Repository (https://github.com/ioBroker/ioBroker.template) to start coding to always get the latest basic version and also updates. You should not always copy basic files from former adapters!
 * Do not copy a `package.json` or `io-package.json` after an installation because some fields might have been added on installation! e.g. io-package with common.installedFrom eds to be removed
 * **Use the Adapter Checker and fix all issues shown there: https://adapter-check.iobroker.in/**
-* Respect Object and state definitions, types and roles Values not defined here should not be used. Discussions about missing roles or types are welcome:
+* Respect Object and state definitions, types and roles. Values not defined here should not be used. Discussions about missing roles or types are welcome:
   * https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/objectsschema.md#object-types
   * https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/stateroles.md
 * Only commit `.vscode`, `.idea` or other IDE files/helper directories to GitHub if there is a need to. This is to prevent the other user's settings from interfering with yours or make PRs more complex because of this.
@@ -62,24 +62,24 @@ This is GitHub project for storage of latest and stable repositories.
 * if you need to store passwords, please encrypt them. This can be done by just configuration:
   * Add an array with the relevant config field names in `io-package.json` in `encryptedNative`. Additionally, please also protect the access to this field by also providing `protectedNative` (see e.g. https://github.com/TA2k/ioBroker.psa/blob/master/io-package.json#L81-L82)
   * Additionally, you need to provide a dependency to `js-controller >= 3.0.0` and `admin >= 4.0.9` (Admin needs to be a `globalDependency`, see https://github.com/TA2k/ioBroker.psa/blob/master/io-package.json#L75-L80 and https://github.com/TA2k/ioBroker.psa/blob/master/io-package.json#L70-L74)
-  * That's it. Encryption before storing the fields and decryption before adapter is executed is done automatically.
+  * That's it. Encryption before storing the fields and decryption before the adapter is executed is done automatically.
   * If you have an older implementation that uses encrypt/decrypt functions in `index(_m).html` and in `main.js` you can just convert to this by removing the extra encrypt/decrypt usages in all places and do the above.
 * add all editable fields from `index_m.html` to `io-package.json` `native` with their default values
-* **You need to make sure to clean up ALL resources in `unload`. Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode** (or also see next point!)
+* **You need to make sure to clean up ALL resources in `unload`. Clear all Timers, Intervals, close serial ports and servers and end everything. Else this will break the compact mode** (or also see the next point!)
 * Use `adapter.setTimeout/setInterval` and corresponding clear Methods to create timers and intervals that are automatically cleaned up when the adapter gets unloaded and make sure to not start new timers/intervals after adapter is stopped already. This can help in many cases and is near to a drop-in replacement for Timers from `Node.js` (but it is NOT an object, so the methods on Timer objects will not work!)
-* **Please test in compact mode!** Especially starting, running, stopping adapter and verify that nothing runs any longer and no logs are triggered and also a new start works.
+* **Please test in compact mode!** Especially starting, running, stopping adapter and verifying that nothing runs any longer and no logs are triggered and also a new start works.
 * Be careful with `setObject` because it overwrites the object and (especially in `js-controller < 2.2`) custom settings like history may be removed by this! Use `setObjectNotExists` or read the object to detect if it exists and use `extendObject` to update.
 * get familiar with the `ack` concept of ioBroker. Adapters normally set all "final" values with `ack=true` and these are mostly ignored in `onStateChange` handlers. `ack=false` are commands that normally are handled by Adapters.
 * Do not use `process.exit()` because this breaks compact mode. Use `adapter.terminate()` if the method is available.
 * If you consider using a scheduling library in conjunction with external/cloud services, then consider the potential consequences! If your adapter becomes successful, then all users will do their calls to the external service in the exact same second. This can become a DOS stile "attack" to that server with bad consequences. Additionally, to that using a Scheduling library just to implement intervals is overkill :-) setInterval/setTimeout should be completely sufficient AND has a good side effect that requests are not done all at the same second, but start when the adapter starts.
-* When using Intervals together with external communication, think about timeout and error cases - an interval triggers the next call also if the last has not finished. So requests might pile up and you DOS the external API. A better practice might be to use `setTimeout` and set at the end of one call for the next call
+* When using Intervals together with external communication, think about timeout and error cases - an interval triggers the next call also if the last has not finished. So requests might pile up and you DoS (Denial of Service) the external API. A better practice might be to use `setTimeout` and set at the end of one call for the next call
 * If you use connections to other systems (Websockets, MQTT, TCP, Serial or other) please also implement the `info.connection` state (directly create objects by including in io-package) and set the connection value accordingly. Using this enables Admin to differentiate the status between green (ok, running), yellow (basically running but not connected) and red (not running).
 * Consider and understand the asynchronous nature of JavaScript and make sure to know what will happen in parallel and what makes more sense to be sequential! It is ok to use `callbacks` or `Promises/async/await` - the later makes it easier to understand and control how your code really flows.
 * Consider using ESLint or other JavaScript code and type checker to see errors in your code before releasing a new version.
 * **Please activate adapter testing with at least package- and integration-tests on GitHub Actions**
-* The adapter testing using GitHub Actions is not for us - it is for you! Please check it after pushing changes to GitHub and before telling it to users or publish an NPM package. If testing is "red" you should check the testing log to see what is broken.
-* If you like to increase testing, you can start implementing adapter specific tests that always run when you push changes to GitHub.
-* You can/should use https://translator.iobroker.in/ to auto translate all relevant texts into all necessary languages by providing the english text
+* The adapter testing using GitHub Actions is not for us - it is for you! Please check it after pushing changes to GitHub and before telling it to users or publishing an NPM package. If testing is "red," you should check the testing log to see what is broken.
+* If you like to increase testing, you can start implementing adapter-specific tests that always run when you push changes to GitHub.
+* You can/should use https://translator.iobroker.in/ to auto translate all relevant texts into all necessary languages by providing the English text
 * If an adapter instance wants to generate an object structure, it should use objects from the type device, channel or folder to define substructures and provide objects of type state only on the last "level". Different levels can be separated by a ".". An object of the type "state" should never have more objects below it. The allowed fields for the relevant object types are documented in https://github.com/ioBroker/ioBroker.docs/blob/master/docs/en/dev/objectsschema.md#core-concept
 * If an adapter opens a port or bind socket to some IP-address, the attributes must be called `port` and `bind` (`v6bind` for IPv6).
 * If an adapter connects to some IP-address, the IP attribute may be not called `bind` (use `ip` for that).
@@ -92,14 +92,14 @@ This is GitHub project for storage of latest and stable repositories.
 4. Push a commit with the changes to `sources-dist-stable.json`
 5. Create a PR
 
-### Requirements for adapter to get added to the stable repository
+### Requirements for an adapter to get added to the stable repository
 
 Additionally, to all above listed points:
 
 1. The adapter must have been added to the latest repository previously.
-2. Forum thread with question to test the adapter.
+2. Forum thread with a question to test the adapter.
 3. Some feedback on [forum](http://forum.iobroker.net).
-4. **Important** Discovery function! If a device can be found automatically (USB, IP), it should be implemented in discovery adapter after (Discovery PR will be merged after stable acceptance).
+4. **Important** Discovery function! If a device can be found automatically (USB, IP), it should be implemented in the discovery adapter after (Discovery PR will be merged after stable acceptance).
 
 ## Common Rules and Requirements for Commercial Adapters Requiring a License
 ioBroker GmbH sponsors all infrastructure and services necessary for the smooth functioning of the ioBroker world. This encompasses the repository, central components, and platforms such as the Forum. While the usage of open-source "non-commercial" adapters is entirely free, the scenario changes when adapters necessitate a purchase.
@@ -114,17 +114,17 @@ In cases where purchases are managed by the developer directly, and the adapter 
 https://docs.npmjs.com/getting-started/publishing-npm-packages
 
 ### Add an owner to a packet
-We are really happy that other developers are contributing to ioBroker. But some of them with the time lost the enthusiasm and stopped support and maintaining the adapter.
+We are really happy that other developers are contributing to ioBroker. But some of them at the time lost the enthusiasm and stopped supporting and maintaining the adapter.
 
-There is no problem with GitHub repository. We can just fork it and maintain it in our organization, but the situation with `npm` is different.
+There is no problem with the GitHub repository. We can just fork it and maintain it in our organization, but the situation with `npm` is different.
 
-If some name is blocked (e.g., `iobroker.rpi`) we cannot publish the changed adapter under the same name, we must change the name to e.g., iobroker.rpi2.
+If some name is blocked (e.g., `iobroker.rpi`) we cannot publish the changed adapter under the same name; we must change the name to e.g., iobroker.rpi2.
 
-Then we must change the ioBroker repositories, and the user must install the new adapter and migrate the old settings and objects into new adapter.
+Then we must change the ioBroker repositories, and the user must install the new adapter and migrate the old settings and objects into the new adapter.
 
 This is not suitable.
 
-Because of that, we ask you to give ioBroker organisation publish rights to update the npm package. We will use it only in emergency, or if the author does not react to our requests.
+Because of that, we ask you to give ioBroker organisation publish rights to update the npm package. We will use it only in emergency or if the author does not react to our requests.
 
 Please just add `bluefox` as an owner.
 
@@ -147,7 +147,7 @@ and the files are here https://github.com/ioBroker/ioBroker.admin/tree/master/do
 And make the link in your readme file to these files, like here: https://github.com/ioBroker/ioBroker.javascript/blob/master/README.md
 
 ### Licenses
-The following licenses are used now in ioBroker project:
+The following licenses are used now in the ioBroker project:
 
 * `MIT` (used for most of the adapters and core)
 * `Apache 2.0`
@@ -185,7 +185,7 @@ An example can be seen [here](https://github.com/ioBroker/ioBroker.template/blob
 - `general` - general purpose adapters, like admin, web, discovery, ...
 - `geoposition` - geo-positioning. These adapters deliver or accept the position of other objects or persons.
 - `health` - heart pulse, blood pressure, body weight, ...
-- `hardware` - different multi-purpose hardware, arduino, esp, bluetooth, ...
+- `hardware` - different multipurpose hardware, arduino, esp, bluetooth, ...
 - `household` - vacuum-cleaner, kitchen devices, ...
 - `infrastructure` - Network, printers, phones, NAS, ...
 - `iot-systems` - Other comprehensive smart home systems (software and hardware)
@@ -207,16 +207,16 @@ An example can be seen [here](https://github.com/ioBroker/ioBroker.template/blob
 You can see the types of existing adapters [here](https://download.iobroker.net/list.html#sortCol=type&sortDir=0) and try to find the similar one.
 
 ### Connection types
-If your adapter controls some device/car/house the adapter could be connected with various methods and receive data via different protocols.
+If your adapter controls some device/car/house, the adapter could be connected with various methods and receive data via different protocols.
 
 Define `connectionType` in `common` part of `io-package.json` as:
-- `local` - if the communication with device does not require cloud access.
+- `local` - if the communication with the device does not require cloud access.
 - `cloud` - if the communication is via cloud.
 
 Define `dataSource` in `common` as:
 - `poll` - Querying the status means that an update may be noticed later.
 - `push` - ioBroker will be notified when a new status is available.
-- `assumption` - The status of the device cannot be determined. ioBroker takes status based on last ioBroker command.
+- `assumption` - The status of the device cannot be determined. ioBroker takes status based on the last ioBroker command.
 
 #### Defined categories for non-repo adapters
 * `pilight` -	 iot-systems
@@ -255,16 +255,16 @@ For **stable** (sources-dist-stable.json):
 *Note*: stable always has a specific version.
 
 ## Automatic pull request checker
-On every pull request to the repository, the GitHub Action will be triggered (see [check.yml](.github/workflows/check.yml) ). It will check the following things:
+On every pull request to the repository, the GitHub Action will be triggered (see [check.yml](.github/workflows/check.yml)). It will check the following things:
 - Detect which adapters are changed by analyzing the diff of changed files (See `detectAffectedAdapter` in [lib/check.js](lib/check.js))
 - Run an adapter checker from `@iobroker/repochecker` for each changed adapter.
 - Add the comments to PR with the results of the checks.
 
 ## Issues to move the latest version of adapter to stable
-Every night the GitHub Action will be triggered at 3:15 (see TODO! [stable.yml](.github/workflows/stable.yml) ). It will check the following things:
+Every night the GitHub Action will be triggered at 3:15 (see TODO! [stable.yml](.github/workflows/stable.yml)). It will check the following things:
 - If the latest version is good enough for stable and will create an issue if yes (See [lib/readyForStable.js](lib/readyForStable.js))
 
-## How is the repository build? 
+## How is the repository built? 
 The repository is build executing `npm run build`. However, this is currently only done on a dedicated server running on AWS.
 However, before build, the repository is pulled and thus uses the code from the repository. Hence, modifications to how the repo is 
 built should be made against this repository. 
