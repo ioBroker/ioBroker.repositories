@@ -289,17 +289,6 @@ if (require.main === module) {
                             }
                         }
 
-                        for (const adapter in latest) {
-                            if (
-                                !adapter.startsWith('_') &&
-                                Object.prototype.hasOwnProperty.call(latest, adapter) &&
-                                typeof latest[adapter].title === 'object'
-                            ) {
-                                latest[adapter].titleLang ||= latest[adapter].title;
-                                latest[adapter].title = latest[adapter].title.en || latest[adapter].title.toString();
-                            }
-                        }
-
                         // reset versionDate information
                         for (const adapter in stable) {
                             if (
