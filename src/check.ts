@@ -1,7 +1,7 @@
 import fs from 'fs';
 import axios from 'axios';
 import { addComment, addLabel, deleteLabel, getGithub, getUrl, getAllComments, deleteComment } from './common';
-import checker from '@iobroker/repochecker';
+import checker, { type RepocheckerResult } from '@iobroker/repochecker';
 
 const TEXT_RECHECK = 'RE-CHECK!';
 const TEXT_COMMENT_TITLE = '## Automated adapter checker';
@@ -50,8 +50,17 @@ function getPullRequestNumber() {
     throw new Error('Reference not found. process.env.GITHUB_REF and process.env.GITHUB_EVENT_PATH are not set!');
 }
 
-function executeOneAdapterCheck(adapter: string) {
-    return new Promise<any>((resolve, reject) => {
+/** One repochecker run, plus the badge flags the reporting step attaches afterwards. */
+interface AdapterCheckResult {
+    /** the GitHub URL the check was run against */
+    adapter: string;
+    context: RepocheckerResult;
+    badgeLatest?: boolean;
+    badgeStable?: boolean;
+}
+
+function executeOneAdapterCheck(adapter: string): Promise<AdapterCheckResult> {
+    return new Promise((resolve, reject) => {
         checker.handler(
             {
                 queryStringParameters: {
@@ -59,11 +68,13 @@ function executeOneAdapterCheck(adapter: string) {
                 },
             },
             null,
-            (err: any, data: any) => {
+            (err, data) => {
                 if (err) {
                     reject(err);
                 } else {
-                    const context = JSON.parse(data.body);
+                    // The checker answers with a bare `{ error }` body only when no url was given;
+                    // one is always passed here, so the body is a full result.
+                    const context = JSON.parse(data.body) as RepocheckerResult;
                     context.errors = context.errors.sort();
                     context.warnings = context.warnings.sort();
                     resolve({ adapter, context });
