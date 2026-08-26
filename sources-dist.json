@@ -1845,6 +1845,11 @@
     "icon": "https://raw.githubusercontent.com/Black-Thunder/ioBroker.melcloud/master/admin/melcloud.png",
     "type": "climate-control"
   },
+  "melcloudhome": {
+    "meta": "https://raw.githubusercontent.com/konrad2002/ioBroker.melcloudhome/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/konrad2002/ioBroker.melcloudhome/master/admin/melcloudhome.png",
+    "type": "climate-control"
+  },
   "mempool-space": {
     "meta": "https://raw.githubusercontent.com/Hans-Wurst-21/ioBroker.mempool-space/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Hans-Wurst-21/ioBroker.mempool-space/main/admin/mempool-space.png",
