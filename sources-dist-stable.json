@@ -1839,6 +1839,12 @@
     "type": "weather",
     "version": "1.0.2"
   },
+  "metermaster": {
+    "meta": "https://raw.githubusercontent.com/MPunktBPunkt/ioBroker.metermaster/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MPunktBPunkt/ioBroker.metermaster/main/admin/metermaster.svg",
+    "type": "general",
+    "version": "0.9.4"
+  },
   "mhi-wfrac": {
     "meta": "https://raw.githubusercontent.com/hacki11/ioBroker.mhi-wfrac/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/hacki11/ioBroker.mhi-wfrac/main/admin/mhi-wfrac.png",
