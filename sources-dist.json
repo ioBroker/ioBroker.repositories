@@ -3415,6 +3415,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.vesync/main/admin/vesync.png",
     "type": "climate-control"
   },
+  "victoriametrics": {
+    "meta": "https://raw.githubusercontent.com/seaspotter/ioBroker.victoriametrics/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/seaspotter/ioBroker.victoriametrics/main/admin/victoriametrics.png",
+    "type": "storage"
+  },
   "victron-cerbo": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/admin/victron-cerbo.svg",
