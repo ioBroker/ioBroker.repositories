@@ -1740,6 +1740,11 @@
     "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lowpass-filter/main/admin/lowpass-filter.png",
     "type": "misc-data"
   },
+  "lox2hue": {
+    "meta": "https://raw.githubusercontent.com/Infi001/ioBroker.lox2hue/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Infi001/ioBroker.lox2hue/main/admin/lox2hue.png",
+    "type": "lighting"
+  },
   "loxone": {
     "meta": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/UncleSamSwiss/ioBroker.loxone/master/admin/loxone.png",
