@@ -935,11 +935,6 @@
     "icon": "https://raw.githubusercontent.com/MyHomeMyData/ioBroker.flexcharts/main/admin/flexcharts-icon.png",
     "type": "visualization"
   },
-  "flot": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.flot/master/admin/flot.png",
-    "type": "visualization"
-  },
   "flowers": {
     "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.flowers/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.flowers/main/admin/flowers.png",
