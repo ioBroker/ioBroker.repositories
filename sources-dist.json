@@ -70,6 +70,11 @@
     "icon": "https://raw.githubusercontent.com/ToGe3688/ioBroker.ai-toolbox/main/admin/ai-toolbox.png",
     "type": "logic"
   },
+  "ai-usage": {
+    "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.ai-usage/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.ai-usage/main/admin/ai-usage.svg",
+    "type": "infrastructure"
+  },
   "aio": {
     "meta": "https://raw.githubusercontent.com/Newan/ioBroker.aio/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Newan/ioBroker.aio/master/admin/aio.png",
