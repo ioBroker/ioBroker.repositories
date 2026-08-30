@@ -180,6 +180,11 @@
     "icon": "https://raw.githubusercontent.com/chrmenne/ioBroker.aurora-nowcast/main/admin/aurora-nowcast.png",
     "type": "weather"
   },
+  "autism-support": {
+    "meta": "https://raw.githubusercontent.com/MatthiasUlrich1/ioBroker.autism-support/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MatthiasUlrich1/ioBroker.autism-support/main/admin/autism-support.png",
+    "type": "general"
+  },
   "autodarts": {
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/admin/autodarts.svg",
