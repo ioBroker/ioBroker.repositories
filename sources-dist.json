@@ -3910,6 +3910,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.xterm/master/admin/xterm.png",
     "type": "utility"
   },
+  "xtream-monitor": {
+    "meta": "https://raw.githubusercontent.com/chrvidal/ioBroker.xtream-monitor/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/chrvidal/ioBroker.xtream-monitor/main/admin/xtream-monitor.png",
+    "type": "multimedia"
+  },
   "yahka": {
     "meta": "https://raw.githubusercontent.com/jensweigele/ioBroker.yahka/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/jensweigele/ioBroker.yahka/master/admin/yahka.png",
