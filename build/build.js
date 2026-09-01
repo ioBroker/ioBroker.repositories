@@ -1,0 +1,360 @@
+"use strict";
+// This help script creates repository with full information
+// additionally it can collect all the npm version images in some folder
+// Usage:
+//  --file fileName - Output of repository into a specified file
+//  --json - Print JSON repository in the console
+//  --versions - show all current versions in the console
+//  --list - list of all adapters with descriptions in the console
+//          1. admin: Opens a webserver for the ioBroker admin UI
+//          2. artnet: Control DMX512 Devices via an Art-Net node
+//          ...
+//  --shortlist - prints a list of all adapters in the console
+//          admin
+//          artnet
+//          b-control-em
+//          chromecast
+//          ...
+//  --shields folderName - save all npm versions images into a specified folder
+//  --logos folderName - save all logos of all adapters into a specified folder under logo-adapter.png
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getLogos = getLogos;
+exports.getImages = getImages;
+exports.processRepository = processRepository;
+exports.getStats = getStats;
+const tools = __importStar(require("./tools"));
+const node_fs_1 = __importDefault(require("node:fs"));
+require('node:events').EventEmitter.prototype._maxListeners = 300;
+process.setMaxListeners(0);
+const axios_1 = __importDefault(require("axios"));
+function getStats(cb) {
+    if (cb) {
+        (0, axios_1.default)('http://iobroker.live/statistics.json').then(response => cb(null, response.data.adapters));
+    }
+    else {
+        return (0, axios_1.default)('http://iobroker.live/statistics.json').then(response => response.data.adapters);
+    }
+}
+function getImages(list, destination, callback) {
+    if (!list?.length) {
+        callback?.();
+    }
+    else {
+        const name = list.pop();
+        if (!node_fs_1.default.existsSync(`${destination + name.name}.svg`)) {
+            console.log(`IMG: ${name.name}`);
+            (0, axios_1.default)(`http://img.shields.io/npm/v/iobroker.${name.name}.svg?style=flat-square`, {
+                responseType: 'arraybuffer',
+            })
+                .then(response => {
+                if (response.data) {
+                    node_fs_1.default.writeFile(`${destination + name.name}.svg`, response.data, 'binary', err => {
+                        if (err) {
+                            console.error(`Cannot save file "${destination}${name.name}.svg: ${err}`);
+                        }
+                        setTimeout(() => getImages(list, destination, callback), 100);
+                    });
+                }
+                else {
+                    console.error(`Got empty file "http://img.shields.io/npm/v/iobroker.${name.name}.svg?style=flat-square`);
+                    setTimeout(getImages, 100, list, destination, callback);
+                }
+            })
+                .catch(error => {
+                console.error(`Cannot get URL "http://img.shields.io/npm/v/iobroker.${name.name}.svg?style=flat-square: ${error}`);
+                setTimeout(getImages, 100, list, destination, callback);
+            });
+        }
+        else {
+            setImmediate(getImages, list, destination, callback);
+        }
+    }
+}
+function getLicenses(list, destination, callback) {
+    if (!list?.length) {
+        callback?.();
+    }
+    else {
+        const name = list.pop();
+        (0, axios_1.default)(`https://img.shields.io/github/license/${name}.svg?style=flat-square`, { responseType: 'arraybuffer' })
+            .then(response => {
+            if (response.data) {
+                node_fs_1.default.writeFile(`${destination}license-${name}.svg`, response.data, 'binary', err => {
+                    if (err) {
+                        console.error(`Cannot save file "${destination}license-${name}.svg: ${err}`);
+                    }
+                    setTimeout(() => getLicenses(list, destination, callback), 100);
+                });
+            }
+            else {
+                console.error(`Got empty file "http://img.shields.io/npm/v/iobroker.${name.name}.svg?style=flat-square`);
+                setTimeout(() => getLicenses(list, destination, callback), 100);
+            }
+        })
+            .catch(error => {
+            console.error(`Cannot get URL "http://img.shields.io/npm/v/iobroker.${name.name}.svg?style=flat-square: ${error}`);
+            setTimeout(() => getLicenses(list, destination, callback), 100);
+        });
+    }
+}
+function getLogos(list, destination, callback) {
+    if (!list?.length) {
+        callback?.();
+    }
+    else {
+        const task = list.pop();
+        (0, axios_1.default)(task.url, { responseType: 'arraybuffer' })
+            .then(response => {
+            if (response.data) {
+                node_fs_1.default.writeFile(destination + task.name, response.data, 'binary', err => {
+                    if (err) {
+                        console.error(`Cannot save file "${destination}${task.name}: ${err}`);
+                    }
+                    setTimeout(() => getLogos(list, destination, callback), 100);
+                });
+            }
+            else {
+                console.error(`Got empty URL "${task.url}`);
+                setTimeout(() => getLogos(list, destination, callback), 100);
+            }
+        })
+            .catch(error => {
+            console.error(`Cannot get URL "${task.url}: ${error}`);
+            setTimeout(() => getLogos(list, destination, callback), 100);
+        });
+    }
+}
+function processRepository(data, argv, cb) {
+    let output = false;
+    let waitEnd = 0;
+    for (let a = 0; a < argv.length; a++) {
+        if (argv[a] === '--latest') {
+            output = true;
+        }
+        else if (argv[a] === '--stable') {
+            output = true;
+        }
+        else if (argv[a] === '--json') {
+            console.log(JSON.stringify(data, null, 2));
+            output = true;
+        }
+        if (argv[a] === '--versions') {
+            let count = 0;
+            for (const v in data) {
+                if (!Object.prototype.hasOwnProperty.call(data, v) || v.startsWith('_')) {
+                    continue;
+                }
+                console.log(`${++count}. ${v}: ${data[v].version}`);
+            }
+            output = true;
+        }
+        else if (argv[a] === '--list') {
+            let count = 1;
+            for (const b in data) {
+                if (!Object.prototype.hasOwnProperty.call(data, b) || b.startsWith('_')) {
+                    continue;
+                }
+                if (typeof data[b].desc === 'object') {
+                    console.log(`${count}. ${b}: ${data[b].desc.en}`);
+                }
+                else {
+                    console.log(`${count}. ${b}: ${data[b].desc}`);
+                }
+                count++;
+            }
+            output = true;
+        }
+        else if (argv[a] === '--shortlist') {
+            for (const s in data) {
+                if (!Object.prototype.hasOwnProperty.call(data, s) || s.startsWith('_')) {
+                    continue;
+                }
+                console.log(s);
+            }
+            output = true;
+        }
+        else if (argv[a] === '--shields' && argv[a + 1]) {
+            if (argv[a + 1][argv[a + 1].length - 1] !== '/') {
+                argv[a + 1] += '/';
+            }
+            const list = [];
+            for (const j in data) {
+                if (!Object.prototype.hasOwnProperty.call(data, j) || j.startsWith('_')) {
+                    continue;
+                }
+                list.push({ name: j, meta: data[j].meta });
+            }
+            waitEnd++;
+            if (!node_fs_1.default.existsSync(argv[a + 1])) {
+                node_fs_1.default.mkdirSync(argv[a + 1]);
+            }
+            getImages(list, argv[a + 1], () => !--waitEnd && cb?.());
+        }
+        else if (argv[a] === '--logos' && argv[a + 1]) {
+            if (argv[a + 1][argv[a + 1].length - 1] !== '/') {
+                argv[a + 1] += '/';
+            }
+            const list = [];
+            for (const i in data) {
+                if (!Object.prototype.hasOwnProperty.call(data, i) || i.startsWith('_')) {
+                    continue;
+                }
+                list.push({ url: data[i].extIcon, name: `logo-${i.toLowerCase()}.png` });
+            }
+            waitEnd++;
+            if (!node_fs_1.default.existsSync(argv[a + 1])) {
+                node_fs_1.default.mkdirSync(argv[a + 1]);
+            }
+            getLogos(list, argv[a + 1], () => !--waitEnd && cb?.());
+        }
+        else if (argv[a] === '--licenses' && argv[a + 1]) {
+            if (argv[a + 1][argv[a + 1].length - 1] !== '/') {
+                argv[a + 1] += '/';
+            }
+            const _list = [];
+            for (const l in data) {
+                if (!Object.prototype.hasOwnProperty.call(data, l) || l.startsWith('_')) {
+                    continue;
+                }
+                // process: https://raw.githubusercontent.com/ioBroker/ioBroker.socketio/master/io-package.json
+                const parts = data[l].meta.split('/');
+                _list.push(`${parts[3]}/${parts[4]}`);
+            }
+            waitEnd++;
+            if (!node_fs_1.default.existsSync(argv[a + 1])) {
+                node_fs_1.default.mkdirSync(argv[a + 1]);
+            }
+            getLicenses(_list, argv[a + 1], () => !--waitEnd && cb?.());
+        }
+    }
+    if (!output) {
+        console.log(JSON.stringify(data, null, 2));
+    }
+    if (!waitEnd) {
+        cb?.();
+    }
+}
+// `require.main === module` replaces the deprecated `module.parent` check: the block below is the
+// command line entry point and must not run when another module imports this file.
+if (require.main === module) {
+    // update both repositories
+    // todo save old files and process-only changes
+    tools.getRepositoryFile(`https://raw.githubusercontent.com/ioBroker/ioBroker.repositories/master/sources-dist.json`, (err, latest) => {
+        if (err) {
+            console.error(err);
+            if (!latest) {
+                process.exit(1);
+            }
+        }
+        if (!latest || !Object.keys(latest).length) {
+            console.error('Something wrong with latest repo: empty');
+            process.exit(1);
+        }
+        tools.getRepositoryFile(`https://raw.githubusercontent.com/ioBroker/ioBroker.repositories/master/sources-dist-stable.json`, latest, (err, stable) => {
+            if (err) {
+                console.error(err);
+                if (!stable) {
+                    process.exit(1);
+                }
+            }
+            if (!stable || !Object.keys(stable).length) {
+                console.error('Something wrong with stable repo: empty');
+                process.exit(1);
+            }
+            getStats((err, stats) => {
+                if (stats) {
+                    for (const adapter in stats) {
+                        if (!adapter.startsWith('_') &&
+                            Object.prototype.hasOwnProperty.call(stats, adapter) &&
+                            stable[adapter]) {
+                            stable[adapter].stat = stats[adapter];
+                        }
+                    }
+                    for (const adapter in stats) {
+                        if (!adapter.startsWith('_') &&
+                            Object.prototype.hasOwnProperty.call(stats, adapter) &&
+                            latest[adapter]) {
+                            latest[adapter].stat = stats[adapter];
+                        }
+                    }
+                }
+                // reset versionDate information
+                for (const adapter in stable) {
+                    if (!adapter.startsWith('_') &&
+                        Object.prototype.hasOwnProperty.call(stable, adapter) &&
+                        stable[adapter].versionDate) {
+                        delete stable[adapter].versionDate;
+                    }
+                }
+                for (const adapter in latest) {
+                    if (!adapter.startsWith('_') &&
+                        Object.prototype.hasOwnProperty.call(latest, adapter) &&
+                        latest[adapter].versionDate) {
+                        delete latest[adapter].versionDate;
+                    }
+                }
+                // The npm publish dates used to be filled in here by updatePublishes(), which was
+                // replaced by updateVersions() in a14c6582 (2019) and retired altogether after that
+                // - "dates are no more required in repos". build.js kept calling the old name, so
+                // this path had been throwing ever since. The dates are simply not written any more.
+                // save latest
+                let pos = process.argv.indexOf('--latest');
+                if (pos !== -1 && process.argv[pos + 1]) {
+                    // save stable
+                    node_fs_1.default.writeFileSync(process.argv[pos + 1], JSON.stringify(latest, null, 2));
+                }
+                else {
+                    node_fs_1.default.writeFileSync(`${__dirname}/../sources-dist.json`, JSON.stringify(latest, null, 2));
+                }
+                node_fs_1.default.writeFileSync(`${__dirname}/../sources-dist.old.json`, JSON.stringify(latest, null, 2));
+                // save stable
+                pos = process.argv.indexOf('--stable');
+                if (pos !== -1 && process.argv[pos + 1]) {
+                    // save stable
+                    node_fs_1.default.writeFileSync(process.argv[pos + 1], JSON.stringify(stable, null, 2));
+                }
+                else {
+                    node_fs_1.default.writeFileSync(`${__dirname}/../sources-dist-stable.json`, JSON.stringify(stable, null, 2));
+                }
+                node_fs_1.default.writeFileSync(`${__dirname}/../sources-dist-stable.old.json`, JSON.stringify(stable, null, 2));
+                processRepository(latest, process.argv, () => process.exit());
+            });
+        });
+    });
+}

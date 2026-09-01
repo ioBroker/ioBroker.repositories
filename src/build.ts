@@ -241,7 +241,7 @@ if (require.main === module) {
 
     // todo save old files and process-only changes
     tools.getRepositoryFile(
-        `https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist.json`,
+        `https://raw.githubusercontent.com/ioBroker/ioBroker.repositories/master/sources-dist.json`,
         (err: any, latest: any) => {
             if (err) {
                 console.error(err);
@@ -254,7 +254,7 @@ if (require.main === module) {
                 process.exit(1);
             }
             tools.getRepositoryFile(
-                `https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist-stable.json`,
+                `https://raw.githubusercontent.com/ioBroker/ioBroker.repositories/master/sources-dist-stable.json`,
                 latest,
                 (err: any, stable: any) => {
                     if (err) {
