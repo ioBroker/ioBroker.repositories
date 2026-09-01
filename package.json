@@ -1,66 +1,82 @@
 {
-  "name": "iobroker.repositories",
-  "version": "1.0.4",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ioBroker/ioBroker.build.git"
-  },
-  "private": true,
-  "engines": {
-    "node": ">=12"
-  },
-  "homepage": "http://iobroker.net",
-  "description": "List of all official adapters for ioBroker project",
-  "scripts": {
-    "init": "node lib/scripts.js init",
-    "sort": "node lib/scripts.js sort",
-    "test": "node node_modules/mocha/bin/mocha --exit",
-    "list": "node lib/scripts.js list --file /var/www/download/list.html",
-    "repos": "node lib/build.js --stable /var/www/download/sources-dist.json --latest /var/www/download/sources-dist-latest.json --shields /var/www/download/img",
-    "nodates": "node lib/scripts.js nodates",
-    "addToLatest": "node lib/scripts.js addToLatest",
-    "addToStable": "node lib/scripts.js addToStable",
-    "updateStable": "node lib/scripts.js updateStable",
-    "check": "node lib/check.js",
-    "checkArchived": "node lib/checkArchived.js",
-    "checkNpm": "node lib/checkNpm.js",
-    "manualAction": "node lib/manualAction.js",
-    "newAtLatestPrInfo": "node lib/newAtLatestPrInfo.js",
-    "rdCheckedPrInfo": "node lib/rdCheckedPrInfo.js",
-    "objJsonMissingPrInfo": "node lib/objJsonMissingPrInfo.js",
-    "setLabels": "node lib/setLabels.js",
-    "setStableTag": "node lib/setStableTag.js",
-    "setTag": "node lib/setTag.js",
-    "stable": "node lib/readyForStable.js",
-    "stable0DayPrInfo": "node lib/stable0DayPrInfo.js",
-    "stableBrandNewInfo": "node lib/stableBrandNewInfo.js",
-    "handleReminder": "node lib/handleReminder.js",
-    "doReCheck": "node lib/doReCheck.js",
-    "closeWithErrors": "node lib/closeWithErrors.js",
-    "checkObjectStructure": "node lib/checkObjectStructure.js"
-  },
-  "bugs": {
-    "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/ioBroker/ioBroker.repositories/blob/master/LICENSE"
+    "name": "iobroker.repositories",
+    "version": "1.0.4",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ioBroker/ioBroker.repositories.git"
+    },
+    "private": true,
+    "engines": {
+        "node": ">=22.19.0"
+    },
+    "homepage": "http://www.iobroker.net",
+    "description": "List of all official adapters for ioBroker project",
+    "scripts": {
+        "typecheck": "tsc -p tsconfig.json",
+        "lint": "eslint -c eslint.config.mjs",
+        "init": "node src/scripts.mts init",
+        "sort": "node src/scripts.mts sort",
+        "test": "mocha src/test/*.mts test/*.js --exit",
+        "list": "node src/scripts.mts list --file /var/www/download/list.html",
+        "repos": "node src/build.mts --stable /var/www/download/sources-dist.json --latest /var/www/download/sources-dist-latest.json --shields /var/www/download/img",
+        "nodates": "node src/scripts.mts nodates",
+        "addToLatest": "node src/scripts.mts addToLatest",
+        "addToStable": "node src/scripts.mts addToStable",
+        "updateStable": "node src/scripts.mts updateStable",
+        "check": "node src/check.mts",
+        "checkArchived": "node lib/checkArchived.js",
+        "checkNpm": "node lib/checkNpm.js",
+        "manualAction": "node lib/manualAction.js",
+        "newAtLatestPrInfo": "node lib/newAtLatestPrInfo.js",
+        "rdCheckedPrInfo": "node lib/rdCheckedPrInfo.js",
+        "objJsonMissingPrInfo": "node lib/objJsonMissingPrInfo.js",
+        "setLabels": "node lib/setLabels.js",
+        "setStableTag": "node lib/setStableTag.js",
+        "setTag": "node lib/setTag.js",
+        "stable": "node lib/readyForStable.js",
+        "stable0DayPrInfo": "node lib/stable0DayPrInfo.js",
+        "stableBrandNewInfo": "node lib/stableBrandNewInfo.js",
+        "handleReminder": "node lib/handleReminder.js",
+        "doReCheck": "node lib/doReCheck.js",
+        "closeWithErrors": "node lib/closeWithErrors.js",
+        "checkObjectStructure": "node lib/checkObjectStructure.js"
+    },
+    "bugs": {
+        "url": "https://github.com/ioBroker/ioBroker.repositories/issues"
+    },
+    "files": [
+        "lib/",
+        "src/",
+        "list/",
+        "sources-dist.json",
+        "sources-dist-stable.json",
+        "tsconfig.json",
+        "REVIEW_CHECKLIST.md"
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/ioBroker/ioBroker.repositories/blob/master/LICENSE"
+        }
+    ],
+    "author": "bluefox <dogafox@gmail.com>",
+    "contributors": [
+        "bluefox <dogafox@gmail.com>"
+    ],
+    "devDependencies": {
+        "@iobroker/eslint-config": "^2.3.4",
+        "@iobroker/repochecker": "^5.20.14",
+        "@types/minimist": "^1.2.5",
+        "@types/mocha": "^10.0.10",
+        "@types/node": "^24.0.0",
+        "@types/semver": "^7.7.0",
+        "axios": "^1.19.0",
+        "image-size": "^2.0.2",
+        "minimist": "^1.2.8",
+        "mocha": "^11.8.0",
+        "node.extend": "^2.0.3",
+        "semver": "^7.8.5",
+        "typescript": "^6.0.3",
+        "unzipper": "^0.12.5"
     }
-  ],
-  "author": "bluefox <dogafox@gmail.com>",
-  "contributors": [
-    "bluefox <dogafox@gmail.com>"
-  ],
-  "devDependencies": {
-    "@iobroker/eslint-config": "^2.3.4",
-    "@iobroker/repochecker": "^5.20.14",
-    "axios": "^1.19.0",
-    "image-size": "^2.0.2",
-    "minimist": "^1.2.8",
-    "mocha": "^11.8.0",
-    "node.extend": "^2.0.3",
-    "semver": "^7.8.5",
-    "unzipper": "^0.12.5"
-  }
 }

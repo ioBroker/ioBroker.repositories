@@ -1,23 +1,22 @@
-'use strict';
-const fs = require('fs');
-const path = require('path');
-const axios = require('axios');
-const tools = require('./tools');
-const builds = require('./build');
-const semver = require('semver');
-const URL = require('url').URL;
+import fs from 'fs';
+import path from 'path';
+import axios from 'axios';
+import * as builds from './build.mts';
+import semver from 'semver';
+import { URL } from 'url';
+import minimist from 'minimist';
 
-const latestJsonPath = path.normalize(path.join(__dirname, '../sources-dist.json'));
-const stableJsonPath = path.normalize(path.join(__dirname, '../sources-dist-stable.json'));
+const latestJsonPath = path.normalize(path.join(import.meta.dirname, '../sources-dist.json'));
+const stableJsonPath = path.normalize(path.join(import.meta.dirname, '../sources-dist-stable.json'));
 
-function requestPromise(url) {
+function requestPromise(url: string) {
     return axios(url).then(data => data.data);
 }
 
-function sortRepo(sources) {
+function sortRepo(sources: Record<string, any>) {
     // rebuild order
     const names = Object.keys(sources);
-    const __sources = {};
+    const __sources: Record<string, any> = {};
     names.sort();
     names.forEach(name => {
         const obj = sources[name];
@@ -41,13 +40,13 @@ function sortRepo(sources) {
 }
 
 /**
- * @param {string} adapterName
+ * @param adapterName
  */
-function getNpmApiUrl(adapterName) {
-    return `https://registry.npmjs.org/${tools.appName.toLowerCase()}.${adapterName}`;
+function getNpmApiUrl(adapterName: string) {
+    return `https://registry.npmjs.org/iobroker.${adapterName}`;
 }
 
-function updateVersions2(latest, stable) {
+function updateVersions2(latest: any, stable: any) {
     Object.keys(stable).forEach(name => {
         if (!name.startsWith('_') && stable[name].type !== latest[name].type) {
             console.log(`Update type of "${name}"`);
@@ -89,7 +88,7 @@ function updateVersions2(latest, stable) {
 
 //         request(url, (error, state, body) => {
 //             if (error) {
-//                 console.error('Cannot get version of  ' + tools.appName + '.' + name + ': ' + error);
+//                 console.error('Cannot get version of ioBroker.' + name + ': ' + error);
 //             } else {
 //                 body = JSON.parse(body);
 //                 const times = body.time;
@@ -121,10 +120,10 @@ function updateVersions2(latest, stable) {
 // }
 
 /**
- * @param {string} adapterName
+ * @param adapterName
  */
-function getNpmVersion(adapterName) {
-    return callback => {
+function getNpmVersion(adapterName: string) {
+    return (callback: (result: any) => void) => {
         const url = getNpmApiUrl(adapterName);
         // console.log('getNpmVersion: ' + url);
         axios(url).then(data => {
@@ -140,11 +139,11 @@ function getNpmVersion(adapterName) {
 }
 
 /**
- * @param {string} adapterName
+ * @param adapterName
  */
-function getNpmVersionAsync(adapterName) {
+function getNpmVersionAsync(adapterName: string) {
     return new Promise((resolve, reject) =>
-        getNpmVersion(adapterName)(result => {
+        getNpmVersion(adapterName)((result: any) => {
             if (result && typeof result.version === 'string') {
                 resolve(result.version);
             } else {
@@ -154,8 +153,8 @@ function getNpmVersionAsync(adapterName) {
     );
 }
 
-function getGitVersion(latest, adapter) {
-    return function (callback) {
+function getGitVersion(latest: any, adapter: string) {
+    return function (callback: (result: any) => void) {
         // console.log('getGitVersion: ' + latest[adapter].meta);
         axios(latest[adapter].meta).then(data => {
             try {
@@ -176,10 +175,10 @@ function getGitVersion(latest, adapter) {
     };
 }
 
-let error403Detected = null;
+let error403Detected: number | null = null;
 
-function getLatestCommit(latest, adapter) {
-    return function (callback) {
+function getLatestCommit(latest: any, adapter: string) {
+    return function (callback: (result: any) => void) {
         // https://raw.githubusercontent.com/husky-koglhof/ioBroker.hmm/master/io-package.json
         const meta = latest[adapter].meta;
         const owner = meta.match(/\.com\/([-.\d\w_]+)\/ioBroker/i);
@@ -203,7 +202,7 @@ function getLatestCommit(latest, adapter) {
             .then(data => {
                 error403Detected = null;
                 const info = data.data;
-                if (info && info[0] && info[0].commit) {
+                if (info?.[0]?.commit) {
                     callback({ adapter, commit: true, date: new Date(info[0].commit.author.date) });
                 } else {
                     callback({ adapter });
@@ -219,7 +218,16 @@ function getLatestCommit(latest, adapter) {
     };
 }
 
-function formatMaintainer(entry, authors) {
+// The maintainer strings come from the adapters' io-package.json, so they are third party
+// input which ends up as HTML in the generated list.html - escape it.
+function escapeHtml(text: unknown) {
+    return String(text === undefined || text === null ? '' : text).replace(
+        /[&<>"']/g,
+        char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char],
+    );
+}
+
+function formatMaintainer(entry: any, authors: Record<string, number>) {
     if (!entry) {
         return '';
     }
@@ -228,7 +236,7 @@ function formatMaintainer(entry, authors) {
         if (authors[name.toLowerCase()]) {
             name += `(${authors[name.toLowerCase()]})`;
         }
-        return `<a href="mailto:${entry.email}">${name}</a>`;
+        return `<a href="mailto:${escapeHtml(entry.email)}">${escapeHtml(name)}</a>`;
     }
     const email = entry.match(/<([-.@\w\d]+)>/);
     if (email) {
@@ -236,19 +244,19 @@ function formatMaintainer(entry, authors) {
         if (authors[name.toLowerCase()]) {
             name += `(${authors[name.toLowerCase()]})`;
         }
-        return `<a href="mailto:${email[1]}">${name}</a>`;
+        return `<a href="mailto:${escapeHtml(email[1])}">${escapeHtml(name)}</a>`;
     }
     let name = entry;
     if (authors[name.toLowerCase()]) {
         name += `(${authors[name.toLowerCase()]})`;
     }
-    return name;
+    return escapeHtml(name);
 }
 
-function formatMaintainers(list, authors) {
+function formatMaintainers(list: any, authors: Record<string, number>) {
     if (typeof list === 'object') {
-        const result = [];
-        list.forEach(entry => result.push(formatMaintainer(entry, authors)));
+        const result: string[] = [];
+        list.forEach((entry: any) => result.push(formatMaintainer(entry, authors)));
         return result.join('<br>');
     }
     return formatMaintainer(list, authors);
@@ -260,35 +268,35 @@ function getDiscovery() {
             /<a\shref="\/ioBroker\/ioBroker.discovery\/blob\/master\/lib\/adapters\/([-_\w\d]+)\.js/g,
         );
         if (adapters) {
-            adapters = adapters.map(a => a.match(/([-_\w\d]+)\.js/)[1]);
+            adapters = adapters.map((a: string) => a.match(/([-_\w\d]+)\.js/)[1]);
         }
         return adapters;
     });
 }
 
 // broken down to for easier understanding
-function serial(list, result, callback) {
+function serial(list: any[], result: any, callback?: (result?: any) => void) {
     if (typeof result === 'function') {
         callback = result;
         result = [];
     }
-    if (!list || !list.length) {
-        callback && callback(result);
+    if (!list?.length) {
+        callback?.(result);
         return;
     }
     const task = list.shift();
-    result = result || [];
+    result ||= [];
     console.log(`Rest: ${list.length}`);
-    task(r => {
+    task((r: any) => {
         result.push(r);
         setImmediate(serial, list, result, callback);
     });
 }
 
 function createList() {
-    let stable;
-    let latest;
-    let stats;
+    let stable: any;
+    let latest: any;
+    let stats: any;
 
     return requestPromise(
         'https://raw.githubusercontent.com/ioBroker/ioBroker.repositories/master/sources-dist-stable.json',
@@ -308,8 +316,8 @@ function createList() {
             return getDiscovery();
         })
         .then(discovery => {
-            const tasks = [];
-            Object.keys(latest).forEach(adapter => {
+            const tasks: any[] = [];
+            Object.keys(latest).forEach((adapter: string) => {
                 if (!adapter.startsWith('_')) {
                     // if (t++ > 3) return;
                     tasks.push(getNpmVersion(adapter));
@@ -318,19 +326,19 @@ function createList() {
                 }
             });
 
-            return new Promise(resolve =>
-                serial(tasks, results => {
-                    const aList = {};
+            return new Promise<string>(resolve =>
+                serial(tasks, (results: any) => {
+                    const aList: Record<string, any> = {};
 
-                    const types = {};
-                    let now = new Date();
-                    const authors = {};
+                    const types: Record<string, number> = {};
+                    const now = new Date();
+                    const authors: Record<string, number> = {};
                     for (const adapter in latest) {
-                        const git = results.find(result => result.git && result.adapter === adapter);
+                        const git = results.find((result: any) => result.git && result.adapter === adapter);
                         if (git) {
                             const list = git.info.common.authors;
                             if (typeof list === 'object') {
-                                list.forEach(entry => {
+                                list.forEach((entry: any) => {
                                     let user;
                                     if (typeof entry === 'object') {
                                         user = entry.name;
@@ -346,7 +354,7 @@ function createList() {
                                         return;
                                     }
                                     user = user.toLowerCase();
-                                    authors[user] = authors[user] || 0;
+                                    authors[user] ||= 0;
                                     authors[user]++;
                                 });
                             } else if (list) {
@@ -361,19 +369,40 @@ function createList() {
                                     return;
                                 }
                                 user = user.toLowerCase();
-                                authors[user] = authors[user] || 0;
+                                authors[user] ||= 0;
                                 authors[user]++;
                             }
                         }
                     }
 
-                    Object.keys(latest).forEach(adapter => {
+                    Object.keys(latest).forEach((adapter: string) => {
                         if (adapter.startsWith('_')) {
                             return;
                         }
-                        const aItem = {};
+                        const aItem: {
+                            link?: string;
+                            icon?: string;
+                            desc?: string;
+                            license?: string;
+                            type?: string;
+                            typeTitle?: string;
+                            typeError?: boolean;
+                            discovery?: boolean;
+                            materialize?: boolean;
+                            installs?: number;
+                            maintainers?: string;
+                            created?: string;
+                            versions?: {
+                                github?: string;
+                                githubDate?: string;
+                                latest?: string;
+                                latestDate?: string;
+                                stable?: string;
+                                stableDate?: string;
+                            };
+                        } = {};
                         try {
-                            types[latest[adapter].type] = types[latest[adapter].type] || 0;
+                            types[latest[adapter].type] ||= 0;
                             types[latest[adapter].type]++;
 
                             // image
@@ -386,17 +415,15 @@ function createList() {
                                 .replace('/master/io-package.json', '')
                                 .replace('/main/io-package.json', '');
 
-                            const git = results.find(result => result.git && result.adapter === adapter);
-                            const npm = results.find(result => result.npm && result.adapter === adapter);
-                            const commit = results.find(result => result.commit && result.adapter === adapter);
+                            const git = results.find((result: any) => result.git && result.adapter === adapter);
+                            const npm = results.find((result: any) => result.npm && result.adapter === adapter);
+                            const commit = results.find((result: any) => result.commit && result.adapter === adapter);
 
                             // Description
-                            aItem.desc = git && git.desc ? git.desc.en || git.desc : '';
+                            aItem.desc = git?.desc ? git.desc.en || git.desc : '';
 
                             // License
-                            aItem.license =
-                                (git && git.license) ||
-                                (npm && (npm.info.license || (npm.info.licenses && npm.info.licenses[0].type)));
+                            aItem.license = git?.license || (npm && (npm.info.license || npm.info.licenses?.[0].type));
 
                             // Type
                             aItem.type = latest[adapter].type;
@@ -407,17 +434,16 @@ function createList() {
                             aItem.typeError = git && latest[adapter].type !== git.info.common.type;
 
                             // Discovery
-                            if (discovery && discovery.includes(adapter)) {
+                            if (discovery?.includes(adapter)) {
                                 aItem.discovery = true;
                             }
 
                             // Material
-                            aItem.materialize =
-                                git && git.info && git.info.common
-                                    ? git.info.common.materialize || git.info.common.noConfig || git.info.common.onlyWWW
-                                    : false;
+                            aItem.materialize = git?.info?.common
+                                ? git.info.common.materialize || git.info.common.noConfig || git.info.common.onlyWWW
+                                : false;
 
-                            if (stats && stats[adapter]) {
+                            if (stats?.[adapter]) {
                                 aItem.installs = stats[adapter];
                             }
 
@@ -425,7 +451,7 @@ function createList() {
                             aItem.maintainers = git ? formatMaintainers(git.info.common.authors, authors) : '';
 
                             // Created on
-                            if (npm && npm.info.time.created) {
+                            if (npm?.info?.time?.created) {
                                 const date = new Date(npm.info.time.created);
                                 aItem.created = date.toISOString();
                             }
@@ -433,11 +459,11 @@ function createList() {
                             // Version
                             aItem.versions = {
                                 github: git ? git.version : '',
-                                githubDate: commit && commit.date,
+                                githubDate: commit?.date,
                                 latest: npm ? npm.version : '',
-                                latestDate: npm && npm.date,
+                                latestDate: npm?.date,
                                 stable: stable[adapter] ? stable[adapter].version : '',
-                                stableDate: npm && stable[adapter] && npm.info.time[stable[adapter].version],
+                                stableDate: stable[adapter] && npm?.info.time[stable[adapter].version],
                             };
 
                             aList[adapter] = aItem;
@@ -449,15 +475,21 @@ function createList() {
                     const keys = Object.keys(types);
                     keys.sort();
 
-                    now = `${now.getDate().padStart(2, '0')}.${(now.getMonth() + 1).padStart(2, '0')} ${now.getHours().padStart(2, '0')}:${now.getMinutes().padStart(2, '0')}`;
+                    const pad2 = (value: number) => String(value).padStart(2, '0');
+                    const nowText = `${pad2(now.getDate())}.${pad2(now.getMonth() + 1)} ${pad2(now.getHours())}:${pad2(now.getMinutes())}`;
 
-                    let script = `var adapters = ${JSON.stringify(aList, null, 2)};\n`;
-                    script += `\tvar types = ${JSON.stringify(types, null, 2)};\n`;
+                    // The data is injected into a <script> block of list/template.html. A literal
+                    // '</script>' in an adapter description would close that block early and spill the
+                    // rest of the data into the document as text, so escape every '<' in the JSON.
+                    const toScriptJson = (data: unknown) => JSON.stringify(data, null, 2).replace(/</g, '\\u003c');
+
+                    let script = `var adapters = ${toScriptJson(aList)};\n`;
+                    script += `\tvar types = ${toScriptJson(types)};\n`;
 
                     const text = fs
-                        .readFileSync(`${__dirname}/../list/template.html`)
+                        .readFileSync(`${import.meta.dirname}/../list/template.html`)
                         .toString()
-                        .replace('<!-- INSERT HERE -->', `(${now}) `)
+                        .replace('<!-- INSERT HERE -->', `(${nowText}) `)
                         .replace('//-- INSERT HERE --', script);
 
                     resolve(text);
@@ -469,10 +501,10 @@ function createList() {
 /**
  * Finds the git repo for the given adapter name
  *
- * @param {string} adapterName
- * @returns {Promise<string>}
+ * @param adapterName
+ * @returns
  */
-function findGitRepo(adapterName) {
+function findGitRepo(adapterName: string) {
     const url = getNpmApiUrl(adapterName);
     // console.log('findGitRepo: ' + url);
     return axios(url).then(data => {
@@ -480,7 +512,6 @@ function findGitRepo(adapterName) {
         if (!info || info.error || !info.repository || typeof info.repository.url !== 'string') {
             throw new Error(`Could not find git repo for ${adapterName}!`);
         }
-        /** @type {string} */
         return info.repository.url
             .replace(/^git\+/, '')
             .replace(/\.git$/, '')
@@ -492,10 +523,10 @@ function findGitRepo(adapterName) {
  * Turns a repository URL into the corresponding meta URL, e.g.
  * https://github.com/AlCalzone/ioBroker.zwave2 --> https://raw.githubusercontent.com/AlCalzone/ioBroker.zwave2/master/io-package.json
  *
- * @param {string} repoUrl
- * @returns {string}
+ * @param repoUrl
+ * @returns
  */
-function getMetaUrl(repoUrl, branch) {
+function getMetaUrl(repoUrl: string, branch: string) {
     const url = new URL(repoUrl);
     url.host = 'raw.githubusercontent.com';
     url.pathname += `/${branch || 'master'}/io-package.json`;
@@ -505,17 +536,16 @@ function getMetaUrl(repoUrl, branch) {
 /**
  * Retrieves the external icon URL for a given meta URL
  *
- * @param {string} metaUrl
- * @returns {Promise<string>}
+ * @param metaUrl
+ * @returns
  */
-function getIconUrl(metaUrl) {
+function getIconUrl(metaUrl: string) {
     // console.log('getIconUrl: ' + metaUrl);
     return axios(metaUrl).then(data => {
         const info = data.data;
         if (!info || info.error || !info.common || typeof info.common.extIcon !== 'string') {
             throw new Error(`Could not parse adapter meta at ${metaUrl}`);
         }
-        /** @type {string} */
         return info.common.extIcon;
     });
 }
@@ -523,10 +553,10 @@ function getIconUrl(metaUrl) {
 /**
  * Checks if a given version exists on npm for a given adapter
  *
- * @param {string} adapterName The adapter name to check the version for
- * @param {string} version The version we want to check for existence
+ * @param adapterName The adapter name to check the version for
+ * @param version The version we want to check for existence
  */
-function npmVersionExists(adapterName, version) {
+function npmVersionExists(adapterName: string, version: string) {
     const url = getNpmApiUrl(adapterName);
     // console.log('npmVersionExists: ' + url);
     return axios(url).then(data => {
@@ -538,18 +568,18 @@ function npmVersionExists(adapterName, version) {
     });
 }
 
-function repoToJsonSorted(repo) {
+function repoToJsonSorted(repo: Record<string, any>) {
     return JSON.stringify(sortRepo(repo), null, 2);
 }
 
 /**
  * Reads a repo file and returns a parsed JSON objec
  *
- * @param {string} repoPath The path to the repo file
- * @returns {Promise<Record<string, any>>}
+ * @param repoPath The path to the repo file
+ * @returns
  */
-function readRepo(repoPath) {
-    return new Promise((resolve, reject) => {
+function readRepo(repoPath: string): Promise<Record<string, any>> {
+    return new Promise<Record<string, any>>((resolve, reject) => {
         fs.readFile(repoPath, (err, data) => {
             if (err) {
                 reject(err);
@@ -571,12 +601,12 @@ function readStableRepo() {
 /**
  * Writes a repo object into a repo file, while automatically sorting the repo
  *
- * @param {string} repoPath The path to the repo file
- * @param {Record<string, any>} repoContent The content to write into the repo file
- * @returns {Promise<void>}
+ * @param repoPath The path to the repo file
+ * @param repoContent The content to write into the repo file
+ * @returns
  */
-function writeRepo(repoPath, repoContent) {
-    return new Promise((resolve, reject) => {
+function writeRepo(repoPath: string, repoContent: Record<string, any>): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
         fs.writeFile(repoPath, repoToJsonSorted(repoContent), err => {
             if (err) {
                 reject(err);
@@ -587,11 +617,11 @@ function writeRepo(repoPath, repoContent) {
     });
 }
 
-function writeLatestRepo(latestContent) {
+function writeLatestRepo(latestContent: Record<string, any>) {
     return writeRepo(latestJsonPath, latestContent);
 }
 
-function writeStableRepo(stableContent) {
+function writeStableRepo(stableContent: Record<string, any>) {
     return writeRepo(stableJsonPath, stableContent);
 }
 
@@ -613,9 +643,9 @@ async function sort() {
     await writeStableRepo(stable);
 }
 
-function findMainBranch(owner, adapterName) {
+function findMainBranch(owner: string, adapterName: string) {
     // https://api.github.com/repos/<owner>/<repo-name>
-    return axios(`https://api.github.com/repos/${owner}/${tools.appName}.${adapterName}`).then(
+    return axios(`https://api.github.com/repos/${owner}/iobroker.${adapterName}`).then(
         data => data.data.default_branch,
     );
 }
@@ -623,10 +653,10 @@ function findMainBranch(owner, adapterName) {
 /**
  * Adds the given adapter to the latest repo
  *
- * @param {string} adapterName
- * @param {string} type The type of the adapter
+ * @param adapterName
+ * @param type The type of the adapter
  */
-async function addToLatest(adapterName, type) {
+async function addToLatest(adapterName: string, type: string) {
     const gitRepo = await findGitRepo(adapterName);
     const mainBranch = await findMainBranch(gitRepo.match(/\/([-._a-zA-Z0-9]+)\/ioBroker/)[1], adapterName);
     const metaUrl = getMetaUrl(gitRepo, mainBranch);
@@ -647,10 +677,10 @@ async function addToLatest(adapterName, type) {
 /**
  * Adds the given adapter to the stable repo
  *
- * @param {string} adapterName
- * @param {string} version The version that should be added to the stable repo
+ * @param adapterName
+ * @param version The version that should be added to the stable repo
  */
-async function addToStable(adapterName, version) {
+async function addToStable(adapterName: string, version: string) {
     if (!semver.valid(version)) {
         throw new Error(`${version} is not a valid version!`);
     }
@@ -678,10 +708,10 @@ async function addToStable(adapterName, version) {
 /**
  * Updates or adds the given adapter to the stable repo
  *
- * @param {string} adapterName
- * @param {string} version The version that should be set to the stable repo
+ * @param adapterName
+ * @param version The version that should be set to the stable repo
  */
-async function updateStable(adapterName, version) {
+async function updateStable(adapterName: string, version: string) {
     if (!semver.valid(version)) {
         throw new Error(`${version} is not a valid version!`);
     }
@@ -717,7 +747,7 @@ async function removeDates() {
     });
     await writeStableRepo(stable);
 
-    const latest = await readStableRepo();
+    const latest = await readLatestRepo();
     Object.keys(latest).forEach(name => {
         if (name.startsWith('_')) {
             return;
@@ -728,28 +758,22 @@ async function removeDates() {
     await writeLatestRepo(latest);
 }
 
-function fail(reason) {
+function fail(reason: string) {
     console.error();
     console.error(`ERROR: ${reason}`);
     console.error();
     process.exit(1);
 }
 
-if (module.exports && module.parent) {
-    module.exports = {
-        init,
-        sort,
-        list: createList,
-        nodates: removeDates,
-        addToLatest,
-        addToStable,
-        updateStable,
-    };
-} else {
+export { init, sort, createList as list, removeDates as nodates, addToLatest, addToStable, updateStable };
+
+// ESM replacement for the `require.main === module` guard: the block below is the command line entry
+// point and must not run when another module imports this file.
+if (process.argv[1] && path.resolve(process.argv[1]) === import.meta.filename) {
     // Wrapping the following code in an IIAFE allows us to use async
     (async () => {
-        const argv = require('minimist')(process.argv.slice(2));
-        // update versions for all adapter, which do not have the version
+        const argv = minimist(process.argv.slice(2));
+        // update versions for all adapters, which do not have the version
         if (argv._.includes('init')) {
             init().then(() => process.exit());
         } else if (argv.nodates) {
@@ -757,8 +781,8 @@ if (module.exports && module.parent) {
         } else if (argv.sort) {
             await sort();
         } else if (argv.list) {
-            const file = argv.list === true ? `${__dirname}/../list.html` : argv.list;
-            const text = await createList(file);
+            const file = argv.list === true ? `${import.meta.dirname}/../list.html` : argv.list;
+            const text = await createList();
             fs.writeFileSync(file, text);
             process.exit();
         } else if (argv._.includes('addToStable')) {

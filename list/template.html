@@ -1,312 +1,820 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>ioBroker Adapter's List</title>
-    <meta charset="UTF-8">
-    <script
-            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-            crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ioBroker Adapter List</title>
 <style>
+    :root {
+        color-scheme: light dark;
+        --bg: #eef1f5;
+        --surface: #ffffff;
+        --surface-2: #f6f8fa;
+        --border: #dde3ea;
+        --text: #17212b;
+        --text-dim: #5c6b7a;
+        --text-faint: #8494a4;
+        --accent: #0069ae;
+        --accent-bg: rgba(0, 105, 174, .09);
+        --ok: #1a7f37;
+        --warn: #b46a00;
+        --warn-bg: rgba(180, 106, 0, .12);
+        --danger: #c0392b;
+        --shadow: 0 1px 2px rgba(16, 30, 45, .06), 0 6px 20px rgba(16, 30, 45, .07);
+        --radius: 10px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg: #11161c;
+            --surface: #1a212a;
+            --surface-2: #1f2831;
+            --border: #2b3540;
+            --text: #e6edf3;
+            --text-dim: #9fb0c0;
+            --text-faint: #6e8091;
+            --accent: #57b0ec;
+            --accent-bg: rgba(87, 176, 236, .14);
+            --ok: #4cc76e;
+            --warn: #e0a33e;
+            --warn-bg: rgba(224, 163, 62, .16);
+            --danger: #f0716a;
+            --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 6px 20px rgba(0, 0, 0, .3);
+        }
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
     body {
-        font-family: "Roboto", sans-serif;
-    }
-    .table-list {
-        font-family: "Roboto", sans-serif;
-        width: 100%;
-        border: none;
-        border-collapse: collapse;
-        border-spacing: 0;
-        font-size: 15px;
-        font-weight: normal;
-        color: rgba(0,0,0,0.87);
-        line-height: 1.5;
-    }
-    .table-list a {
-        text-decoration: none;
-        color: #0069ae;
-        font-weight: bold;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg);
+        color: var(--text);
+        font: 14px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+        -webkit-font-smoothing: antialiased;
     }
 
-    .table-list thead {
-        border-bottom: 1px solid #d0d0d0;
-    }
-    .table-list th {
-        padding: 5px 5px;
-        display: table-cell;
-        text-align: left;
-        vertical-align: middle;
+    /* ---------- top bar ---------- */
+
+    .topbar {
+        flex: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 18px;
+        padding: 12px 18px;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        z-index: 3;
     }
 
-    .table-list td, .table-list th {
-        padding: 5px 5px;
-        display: table-cell;
-        text-align: left;
-        vertical-align: middle;
+    .brand {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin-right: auto;
     }
 
-    .table-list .header-index {
-        text-align: center;
-    }
-    .table-list th {
-        background-color: #878787;
-        color: #FFF;
-    }
-    .table-list>tbody>tr:nth-child(even) {
-        background: #f2f2f2
-    }
-    .table-list>tbody>tr:nth-child(odd) {
-        /*background: #FFF*/
-    }
-    .header-desc {
-        width: 100%;
-    }
-    .table-version td, .table-version th {
-        padding: 1px 5px;
+    .brand h1 {
+        margin: 0;
+        font-size: 17px;
+        font-weight: 650;
+        letter-spacing: -.01em;
         white-space: nowrap;
     }
-    .title {
-        font-weight: bold;
-        font-size: large;
-    }
-    .header-sort {
-        cursor: pointer;
-    }
-    .update-required {
-        color: #ff9500;
-    }
-    td img {
-        border-radius: 3px;
+
+    .generated {
+        color: var(--text-faint);
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
     }
 
+    .controls {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .search {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .search svg {
+        position: absolute;
+        left: 9px;
+        width: 15px;
+        height: 15px;
+        stroke: var(--text-faint);
+        fill: none;
+        stroke-width: 2;
+        pointer-events: none;
+    }
+
+    .field {
+        appearance: none;
+        height: 32px;
+        padding: 0 10px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface-2);
+        color: var(--text);
+        font: inherit;
+        font-size: 13px;
+        transition: border-color .12s, box-shadow .12s;
+    }
+
+    .field:focus-visible {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px var(--accent-bg);
+    }
+
+    input.field { padding-left: 29px; width: 260px; }
+
+    select.field { padding-right: 26px; cursor: pointer; }
+
+    .toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        height: 32px;
+        padding: 0 10px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface-2);
+        color: var(--text-dim);
+        font-size: 13px;
+        cursor: pointer;
+        user-select: none;
+        white-space: nowrap;
+    }
+
+    .toggle:has(input:checked) {
+        border-color: var(--accent);
+        background: var(--accent-bg);
+        color: var(--accent);
+    }
+
+    .toggle input { margin: 0; accent-color: var(--accent); cursor: pointer; }
+
+    .btn {
+        height: 32px;
+        padding: 0 12px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--surface-2);
+        color: var(--text-dim);
+        font: inherit;
+        font-size: 13px;
+        cursor: pointer;
+    }
+
+    .btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    .count {
+        color: var(--text-faint);
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+    }
+
+    /* ---------- table ---------- */
+
+    .scroller {
+        flex: 1;
+        overflow: auto;
+        padding: 14px 18px 40px;
+    }
+
+    table {
+        width: 100%;
+        min-width: 1080px;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+    }
+
+    thead th {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        padding: 9px 10px;
+        background: var(--surface-2);
+        border-bottom: 1px solid var(--border);
+        color: var(--text-dim);
+        font-size: 11px;
+        font-weight: 650;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    th.sortable { cursor: pointer; user-select: none; }
+
+    th.sortable:hover { color: var(--accent); }
+
+    th[aria-sort]:not([aria-sort="none"]) { color: var(--accent); }
+
+    .arrow { display: inline-block; width: 11px; opacity: .85; }
+
+    tbody td {
+        padding: 7px 10px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: middle;
+    }
+
+    tbody tr:last-child td { border-bottom: none; }
+
+    tbody tr:nth-child(even) { background: color-mix(in srgb, var(--surface-2) 55%, transparent); }
+
+    tbody tr:hover { background: var(--accent-bg); }
+
+    .col-index { width: 1%; color: var(--text-faint); font-variant-numeric: tabular-nums; text-align: right; }
+    .col-icon  { width: 1%; }
+    .col-name  { white-space: nowrap; }
+    .col-desc  { width: 100%; min-width: 220px; color: var(--text-dim); }
+    .col-flag  { width: 1%; text-align: center; }
+    .col-num   { width: 1%; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .col-date  { width: 1%; white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .col-license { width: 1%; white-space: nowrap; }
+    .col-versions { width: 1%; }
+    .col-maint { min-width: 140px; }
+
+    td img {
+        display: block;
+        width: 34px;
+        height: 34px;
+        object-fit: contain;
+        border-radius: 6px;
+        background: var(--surface-2);
+    }
+
+    img.broken { visibility: hidden; }
+
+    a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+    a:hover { text-decoration: underline; }
+
+    .chip {
+        display: inline-block;
+        padding: 1px 8px;
+        border-radius: 999px;
+        background: var(--accent-bg);
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .chip.error { background: rgba(192, 57, 43, .13); color: var(--danger); }
+
+    .flag { color: var(--ok); font-size: 15px; }
+
+    .flag-off { color: var(--text-faint); opacity: .35; }
+
+    .badge-new {
+        margin-left: 6px;
+        padding: 0 6px;
+        border-radius: 999px;
+        background: rgba(26, 127, 55, .14);
+        color: var(--ok);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+    }
+
+    /* version block */
+
+    .ver {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 0 8px;
+        margin: 0;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .ver dt { color: var(--text-faint); }
+
+    .ver dd { margin: 0; font-variant-numeric: tabular-nums; }
+
+    .ver .age { color: var(--text-faint); }
+
+    .ver .stale {
+        padding: 0 5px;
+        border-radius: 5px;
+        background: var(--warn-bg);
+        color: var(--warn);
+        font-weight: 600;
+        cursor: help;
+    }
+
+    .muted { color: var(--text-faint); }
+
+    .empty {
+        margin: 60px auto;
+        color: var(--text-faint);
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .empty code {
+        padding: 2px 6px;
+        border-radius: 5px;
+        background: var(--surface-2);
+        font-size: 13px;
+    }
+
+    @media (max-width: 720px) {
+        .brand { width: 100%; }
+        .search { flex: 1; }
+        input.field { width: 100%; }
+    }
 </style>
 <script>
     //-- INSERT HERE --
 </script>
 </head>
 <body>
-    <span class="title">ioBroker Adapter's List</span>
-    <!-- INSERT HERE -->
+<header class="topbar">
+    <div class="brand">
+        <h1>ioBroker Adapter List</h1>
+        <span class="generated"><!-- INSERT HERE --></span>
+    </div>
+    <div class="controls">
+        <label class="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input id="search" class="field" type="search" placeholder="Search name, description, maintainer…" autocomplete="off" spellcheck="false">
+        </label>
+        <select id="filter" class="field" aria-label="Filter by type"></select>
+        <label class="toggle"><input type="checkbox" id="only-discovery"> Discovery</label>
+        <label class="toggle"><input type="checkbox" id="only-stable"> In stable</label>
+        <button id="reset" class="btn" type="button">Reset</button>
+        <span id="count" class="count"></span>
+    </div>
+</header>
 
-    <script>
-        var dirs = {
-            discovery: true,
-            installs:  true,
-            created:   true
-        };
-        var activeSort = 'name';
-        function getInterval(date) {
-            if (!date) return '';
-            if (typeof date === 'string') date = new Date(date);
+<main class="scroller">
+    <table id="table">
+        <thead><tr id="head"></tr></thead>
+        <tbody id="rows"></tbody>
+    </table>
+    <p id="empty" class="empty" hidden></p>
+</main>
 
-            let days = new Date().getTime() - date.getTime();
-            days /= 24 * 3600000;
-            days = Math.floor(days);
+<script>
+    'use strict';
+
+    (function () {
+        // `adapters` and `types` are injected by createList() in lib/scripts.js, which replaces the
+        // insert marker in the <head> script above. Opening this template directly is supported as well.
+        var ADAPTERS = typeof adapters === 'object' && adapters ? adapters : {};
+        var TYPES = typeof types === 'object' && types ? types : {};
+
+        var MONTH = 30 * 24 * 3600000;
+        var NOW = Date.now();
+
+        var COLUMNS = [
+            { id: 'index', label: '#', cls: 'col-index' },
+            { id: 'icon', label: '', cls: 'col-icon' },
+            { id: 'name', label: 'Name', cls: 'col-name', sort: true },
+            { id: 'desc', label: 'Description', cls: 'col-desc', sort: true },
+            { id: 'type', label: 'Type', cls: 'col-type', sort: true },
+            { id: 'installs', label: 'Installs', cls: 'col-num', sort: true, optional: true },
+            { id: 'discovery', label: 'Disc.', cls: 'col-flag', sort: true, title: 'Supported by ioBroker.discovery' },
+            { id: 'materialize', label: 'Admin', cls: 'col-flag', sort: true, title: 'Admin3+ ready (materialize / noConfig / onlyWWW)' },
+            { id: 'license', label: 'License', cls: 'col-license', sort: true },
+            { id: 'maintainers', label: 'Maintainer', cls: 'col-maint', sort: true },
+            { id: 'created', label: 'Created', cls: 'col-date', sort: true },
+            { id: 'versions', label: 'Versions', cls: 'col-versions', sort: true }
+        ];
+
+        var state = { sortCol: 'name', sortDir: false, filter: '', q: '', discovery: false, stable: false };
+        var showInstalls = false;
+        var entries = [];
+
+        var $search = document.getElementById('search');
+        var $filter = document.getElementById('filter');
+        var $discovery = document.getElementById('only-discovery');
+        var $stable = document.getElementById('only-stable');
+        var $reset = document.getElementById('reset');
+        var $count = document.getElementById('count');
+        var $head = document.getElementById('head');
+        var $rows = document.getElementById('rows');
+        var $table = document.getElementById('table');
+        var $empty = document.getElementById('empty');
+
+        // ---------- helpers ----------
+
+        function esc(value) {
+            return String(value === undefined || value === null ? '' : value)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function stripTags(value) {
+            return String(value || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+        }
+
+        function toTime(value) {
+            if (!value) {
+                return 0;
+            }
+            var time = value instanceof Date ? value.getTime() : new Date(value).getTime();
+            return isNaN(time) ? 0 : time;
+        }
+
+        function formatDate(value) {
+            var time = toTime(value);
+            if (!time) {
+                return '';
+            }
+            var date = new Date(time);
+            var pad = function (num) { return String(num).padStart(2, '0'); };
+            return date.getFullYear() + '.' + pad(date.getMonth() + 1) + '.' + pad(date.getDate());
+        }
+
+        function formatAge(value) {
+            var time = toTime(value);
+            if (!time) {
+                return '';
+            }
+            var days = Math.floor((NOW - time) / (24 * 3600000));
+            if (days < 1) {
+                return 'today';
+            }
             if (days < 100) {
-                return 'for ' + days + ' days';
-            } else {
-                return 'for ' + Math.floor(days / 30) + ' months';
+                return 'for ' + days + ' day' + (days === 1 ? '' : 's');
             }
+            return 'for ' + Math.floor(days / 30) + ' months';
         }
 
-        function getDate(date) {
-            if (!date) return '';
-            if (typeof date === 'string') date = new Date(date);
-            return  date.getFullYear() + '.' +
-                ('0' + (date.getMonth() + 1)).slice(-2) + '.' +
-                ('0' + (date.getDate())).slice(-2);
+        // stable lags noticeably behind latest - worth a visual hint
+        function staleHint(versions) {
+            var latest = toTime(versions.latestDate);
+            var stable = toTime(versions.stableDate);
+            if (!latest || !stable || NOW - latest <= MONTH) {
+                return '';
+            }
+            if (latest - stable > MONTH) {
+                return 'The versions differ by over ' + Math.floor((latest - stable) / (24 * 3600000)) + ' days';
+            }
+            if (latest !== stable && NOW - stable > MONTH) {
+                return 'Last update of stable is old and not equal to latest';
+            }
+            return '';
         }
 
-        var textTypes = '<select id="filter"><option value="">all</option>';
-        for (var t in types) {
-            if (types.hasOwnProperty(t))  {
-                textTypes += '<option value="' + t + '">' + t + ' - ' + types[t] + '</option>'
-            }
-        }
-        $('body').append(textTypes);
-        $('#filter').change(function () {
-            var type = $(this).val();
-            if (!type) {
-                $('.type-all').show();
-            } else {
-                $('.type-all').hide();
-                $('.type-' + type).show();
-            }
-            var data = parseHash();
-            data.filter = type;
-            setHash(data);
-        });
+        // ---------- data preparation ----------
 
-        function sortTable(name, dir) {
-            var i = 1;
-            var keys = [];
-            var useInstalls;
-
-            if (name === 'name') {
-                for (var a in adapters) {
-                    if (adapters.hasOwnProperty(a)) {
-                        keys.push(a);
-                        if (adapters[a].installs) useInstalls = true;
-                    }
+        function build() {
+            entries = Object.keys(ADAPTERS).map(function (name) {
+                var item = ADAPTERS[name] || {};
+                var versions = item.versions || {};
+                if (item.installs) {
+                    showInstalls = true;
                 }
-                keys.sort(function (a, b) {
-                    if (a > b) return (dir ? -1 : 1);
-                    if (a < b) return (dir ? 1 : -1);
-                    return 0;
-                });
-
-            } else {
-                var values = [];
-                for (var a in adapters) {
-                    if (adapters.hasOwnProperty(a)) {
-                        values.push({data: typeof adapters[a][name] === 'object' ? adapters[a][name] : ((adapters[a][name] || '').toString().toLowerCase()), name: a});
-                        if (adapters[a].installs) useInstalls = true;
-                    }
-                }
-                values.sort(function (a, b) {
-                    if (name === 'versions') {
-                        var aVersion = a.data.githubDate;
-                        if (!aVersion) aVersion = a.data.latestDate;
-                        if (!aVersion) aVersion = a.data.stableDate;
-                        var bVersion = b.data.githubDate;
-                        if (!bVersion) bVersion = b.data.latestDate;
-                        if (!bVersion) bVersion = b.data.stableDate;
-                        if ((aVersion || '') > (bVersion || '')) return (dir ? -1 : 1);
-                        if ((aVersion || '') < (bVersion || '')) return (dir ? 1 : -1);
-                        return 0;
-                    } else if (name === 'installs') {
-                        var aa = a.data !== '' ? parseInt(a.data, 10) : 0;
-                        var bb = b.data !== '' ? parseInt(b.data, 10) : 0;
-                        if (aa > bb) return (dir ? -1 : 1);
-                        if (aa < bb) return (dir ? 1 : -1);
-                    } else {
-                        if (a.data > b.data) return (dir ? -1 : 1);
-                        if (a.data < b.data) return (dir ? 1 : -1);
-                        return 0;
-                    }
-                });
-                for (var k = 0; k < values.length; k++) {
-                    keys.push(values[k].name);
-                }
-            }
-            var now = new Date().getTime();
-            var table = '<table class="table-list">';
-            table += '<tr>' +
-                '<th class="header-index"></th>' +
-                '<th class="header-img"></th>' +
-                '<th class="header-name header-sort" data-name="name">Name' + (name === 'name' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
-                '<th class="header-desc header-sort" data-name="desc">Description' + (name === 'desc' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
-                '<th class="header-type header-sort" data-name="type">Type' + (name === 'type' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
-                (useInstalls ? '<th class="header-type header-sort" data-name="installs">Installs' + (name === 'installs' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' : '') +
-                '<th class="header-discover header-sort" data-name="discovery">Discover' + (name === 'discovery' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
-                '<th class="header-materialize header-sort" data-name="materialize" title="Admin3 ready">M' + (name === 'materialize' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
-                '<th class="header-license header-sort" data-name="license">License' + (name === 'license' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
-                '<th class="header-maintainer header-sort" data-name="maintainers">Maintainer' + (name === 'maintainers' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
-                '<th class="header-created-on header-sort"data-name="created">Created' + (name === 'created' ? (dir ? '&uarr;' : '&darr;') : '') + '</th>' +
-                '<th class="header-version header-sort"data-name="versions">Versions' + (name === 'versions' ? (dir ? '&uarr;' : '&darr;') : '') + '</th></tr>';
-
-            for (var a = 0; a < keys.length; a++) {
-                var aItem = adapters[keys[a]];
-                table += '<tr class="type-all type-' + aItem.type + '">' +
-                    '<td class="header-index">' + (i++) + '</td>' +
-                    '<td>' + (aItem.icon ? '<img src="' + (aItem.icon || '') + '" width="64px"/>' : '') + '</td>' +
-                    '<td><a href="' + aItem.link + '" target="_blank">' + keys[a] + '</a></td>' +
-                    '<td>' + aItem.desc + '</td>' +
-                    '<td><span style="' + (aItem.typeError ? 'color: red' : '') + '" title="' + (aItem.typeTitle || '') + '">' + aItem.type + '</span></td>' +
-                    (useInstalls ? '<td>' + (aItem.installs || '<10') + '</td>' : '') +
-                    '<td>' + (aItem.discovery ? '☑' : '') + '</td>' +
-                    '<td>' + (aItem.materialize ? '☑' : '') + '</td>' +
-                    '<td>' + (aItem.license || '') + '</td>' +
-                    '<td>' + aItem.maintainers + '</td>' +
-                    '<td style="' + (aItem.created && (now - new Date(aItem.created).getTime() < 30 * 24 * 3600000) ? 'color: green; font-weight: bold' : '') + '">' + getDate(aItem.created) + '</td>';
-
-                var signalAboutUpdate = '';
-                if (aItem.versions.latestDate) aItem.versions.latestDate = new Date(aItem.versions.latestDate);
-                if (aItem.versions.stableDate) aItem.versions.stableDate = new Date(aItem.versions.stableDate);
-
-                // if difference is bigger than month
-                if (aItem.versions.latestDate && aItem.versions.stableDate) {
-                    if (now - aItem.versions.latestDate.getTime() > 30 * 24 * 3600000) {
-                        if (aItem.versions.latestDate.getTime() - aItem.versions.stableDate.getTime() > 30 * 24 * 3600000) {
-                            signalAboutUpdate = 'The versions differ of over ' + Math.floor((aItem.versions.latestDate.getTime() - aItem.versions.stableDate.getTime()) / (24 * 3600000)) + ' days';
-                        } else if (aItem.versions.latestDate.getTime() !== aItem.versions.stableDate.getTime() && now - aItem.versions.stableDate.getTime() >  30 * 24 * 3600000) {
-                            signalAboutUpdate = 'Last update of stable is old and not equal to latest';
-                        }
-                    }
-                }
-
-                table += '<td><table class="table-version">' +
-                    '<tr><td>github:</td><td>' + (aItem.versions.github || '-.-.-') + (aItem.versions.githubDate ? ' ' + getInterval(aItem.versions.githubDate) : '') + '</td></tr>' +
-                    '<tr><td>latest:</td><td>' + (aItem.versions.latest || '-.-.-') + (aItem.versions.latestDate ? ' ' + getInterval(aItem.versions.latestDate) : '') + '</td></tr>' +
-                    '<tr><td>stable:</td><td class="' + (signalAboutUpdate ? 'update-required': '') + '" title="' + (signalAboutUpdate || '') + '">' + (aItem.versions.stable || '-.-.-') + (aItem.versions.stableDate ? ' ' + getInterval(aItem.versions.stableDate) : '') + '</td></tr></table></td>';
-                '</tr>';
-            }
-            $('.table-list').remove();
-            $('body').append(table);
-            $('.header-sort').click(function () {
-                var name = $(this).data('name');
-                if (name !== activeSort) {
-                    if (dirs[name] === undefined) {
-                        dirs[name] = false;
-                    }
-                } else {
-                    if (dirs[name] === undefined) {
-                        dirs[name] = false;
-                    } else {
-                        dirs[name] = !dirs[name];
-                    }
-                }
-
-                activeSort = name;
-
-                var data = parseHash();
-                data.name = name;
-                data.dir = dirs[name];
-                setHash(data);
-
-                sortTable(name, dirs[name]);
+                var maintainers = stripTags(item.maintainers);
+                return {
+                    name: name,
+                    item: item,
+                    versions: versions,
+                    maintainersText: maintainers,
+                    hasStable: !!versions.stable,
+                    isNew: !!item.created && NOW - toTime(item.created) < MONTH,
+                    stale: staleHint(versions),
+                    haystack: (name + ' ' + (item.desc || '') + ' ' + (item.type || '') + ' ' +
+                        (item.license || '') + ' ' + maintainers).toLowerCase()
+                };
             });
         }
 
-        function parseHash() {
-            var result = {
-                name: 'name',
-                dir: false,
-                filter: ''
-            };
-            if (window.location.hash) {
-                var n = window.location.hash.match(/sortCol=(\w+)/);
-                if (n) {
-                    result.name = n[1];
-                }
-                n = window.location.hash.match(/sortDir=(\d+)/);
-                if (n) {
-                    result.dir = n[1] === '1';
-                }
-                n = window.location.hash.match(/filter=(\w+)/);
-                if (n) {
-                    result.filter = n[1];
-                }
-            }
-            return result;
-        }
-
-        function setHash(data) {
-            var hash = '#sortCol=' + (data.name || 'name') + '&sortDir=' + (dirs[data.name] ? 1 : 0) + '&filter=' + data.filter;
-            if (history.pushState) {
-                history.pushState(null, null, hash) ;
-            } else {
-                window.location.hash = hash;
+        function sortValue(entry, column) {
+            var item = entry.item;
+            switch (column) {
+                case 'name': return entry.name.toLowerCase();
+                case 'installs': return Number(item.installs) || 0;
+                case 'discovery': return item.discovery ? 1 : 0;
+                case 'materialize': return item.materialize ? 1 : 0;
+                case 'created': return toTime(item.created);
+                case 'maintainers': return entry.maintainersText.toLowerCase();
+                case 'versions':
+                    return toTime(entry.versions.githubDate) || toTime(entry.versions.latestDate) ||
+                        toTime(entry.versions.stableDate);
+                default: return String(item[column] === undefined ? '' : item[column]).toLowerCase();
             }
         }
 
-        var data = parseHash();
-        dirs[data.name] = data.dir;
-        sortTable(data.name, data.dir);
-        activeSort = data.name;
-        if (data.filter) {
-            $('#filter').val(data.filter).trigger('change');
+        function visible() {
+            var query = state.q.toLowerCase();
+            var list = entries.filter(function (entry) {
+                if (state.filter && entry.item.type !== state.filter) {
+                    return false;
+                }
+                if (state.discovery && !entry.item.discovery) {
+                    return false;
+                }
+                if (state.stable && !entry.hasStable) {
+                    return false;
+                }
+                return !query || entry.haystack.indexOf(query) !== -1;
+            });
+
+            var dir = state.sortDir ? -1 : 1;
+            var column = state.sortCol;
+            list.sort(function (a, b) {
+                var left = sortValue(a, column);
+                var right = sortValue(b, column);
+                if (left < right) {
+                    return -dir;
+                }
+                if (left > right) {
+                    return dir;
+                }
+                // secondary ordering by name, so equal values keep a stable position
+                return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+            });
+            return list;
         }
 
-    </script>
+        // ---------- rendering ----------
+
+        function renderHead() {
+            $head.innerHTML = COLUMNS.filter(function (column) {
+                return !column.optional || showInstalls;
+            }).map(function (column) {
+                var active = state.sortCol === column.id;
+                var arrow = active ? (state.sortDir ? '&uarr;' : '&darr;') : '';
+                return '<th class="' + column.cls + (column.sort ? ' sortable' : '') + '"' +
+                    (column.sort ? ' data-col="' + column.id + '" aria-sort="' +
+                        (active ? (state.sortDir ? 'descending' : 'ascending') : 'none') + '"' : '') +
+                    (column.title ? ' title="' + esc(column.title) + '"' : '') + '>' +
+                    esc(column.label) + '<span class="arrow">' + arrow + '</span></th>';
+            }).join('');
+        }
+
+        function renderVersions(entry) {
+            var versions = entry.versions;
+            var lines = [
+                { label: 'github', value: versions.github, date: versions.githubDate },
+                { label: 'latest', value: versions.latest, date: versions.latestDate },
+                { label: 'stable', value: versions.stable, date: versions.stableDate, stale: entry.stale }
+            ];
+            return '<dl class="ver">' + lines.map(function (line) {
+                var age = line.date ? ' <span class="age">' + esc(formatAge(line.date)) + '</span>' : '';
+                var value = esc(line.value || '-.-.-') + age;
+                if (line.stale) {
+                    value = '<span class="stale" title="' + esc(line.stale) + '">' + value + '</span>';
+                }
+                return '<dt>' + line.label + '</dt><dd>' + value + '</dd>';
+            }).join('') + '</dl>';
+        }
+
+        function renderRows() {
+            var list = visible();
+
+            $count.textContent = list.length === entries.length
+                ? entries.length + ' adapters'
+                : list.length + ' of ' + entries.length + ' adapters';
+
+            if (!entries.length) {
+                $table.hidden = true;
+                $empty.hidden = false;
+                $empty.innerHTML = 'No adapter data in this page. It is generated by <code>npm run list</code>, ' +
+                    'which injects the data into the &lt;head&gt; script of this template.';
+                return;
+            }
+
+            $table.hidden = false;
+            $empty.hidden = !!list.length;
+            $empty.textContent = 'No adapter matches the current filter.';
+
+            var fragment = document.createDocumentFragment();
+            list.forEach(function (entry, index) {
+                var row = rowFor(entry);
+                row.firstElementChild.textContent = index + 1;
+                fragment.appendChild(row);
+            });
+            $rows.replaceChildren(fragment);
+        }
+
+        // A row is built once and then re-used: sorting and filtering only move the existing nodes
+        // around, which keeps a re-render of ~800 rows cheap and, more importantly, stops the
+        // browser from re-resolving every icon URL on each sort.
+        function rowFor(entry) {
+            if (entry.row) {
+                return entry.row;
+            }
+
+            var item = entry.item;
+            var cells = [];
+
+            cells.push('<td class="col-index"></td>');
+            cells.push('<td class="col-icon">' + (item.icon
+                ? '<img src="' + esc(item.icon) + '" alt="" loading="lazy" decoding="async">'
+                : '') + '</td>');
+            cells.push('<td class="col-name"><a href="' + esc(item.link || '#') + '" target="_blank" rel="noopener">' +
+                esc(entry.name) + '</a></td>');
+            cells.push('<td class="col-desc">' + esc(item.desc) + '</td>');
+            cells.push('<td class="col-type"><span class="chip' + (item.typeError ? ' error' : '') + '"' +
+                (item.typeTitle ? ' title="' + esc(item.typeTitle) + '"' : '') + '>' +
+                esc(item.type) + '</span></td>');
+
+            if (showInstalls) {
+                cells.push('<td class="col-num">' + (item.installs
+                    ? esc(item.installs)
+                    : '<span class="muted">&lt;10</span>') + '</td>');
+            }
+
+            cells.push('<td class="col-flag"><span class="flag' + (item.discovery ? '' : ' flag-off') + '">' +
+                (item.discovery ? '&#10003;' : '&ndash;') + '</span></td>');
+            cells.push('<td class="col-flag"><span class="flag' + (item.materialize ? '' : ' flag-off') + '">' +
+                (item.materialize ? '&#10003;' : '&ndash;') + '</span></td>');
+            cells.push('<td class="col-license">' + esc(item.license) + '</td>');
+            // maintainers is HTML produced by formatMaintainers() in lib/scripts.js (escaped there)
+            cells.push('<td class="col-maint">' + (item.maintainers || '') + '</td>');
+            cells.push('<td class="col-date">' + esc(formatDate(item.created)) +
+                (entry.isNew ? '<span class="badge-new">new</span>' : '') + '</td>');
+            cells.push('<td class="col-versions">' + renderVersions(entry) + '</td>');
+
+            entry.row = document.createElement('tr');
+            entry.row.innerHTML = cells.join('');
+            return entry.row;
+        }
+
+        function renderFilter() {
+            var names = Object.keys(TYPES).sort();
+            $filter.innerHTML = '<option value="">All types</option>' + names.map(function (name) {
+                return '<option value="' + esc(name) + '">' + esc(name) + ' (' + esc(TYPES[name]) + ')</option>';
+            }).join('');
+            $filter.value = state.filter;
+        }
+
+        // ---------- url hash ----------
+
+        function readHash() {
+            // start from the defaults, so a hash that omits a key resets it instead of keeping it
+            state = { sortCol: 'name', sortDir: false, filter: '', q: '', discovery: false, stable: false };
+
+            var hash = window.location.hash.replace(/^#/, '');
+            if (hash) {
+                hash.split('&').forEach(function (part) {
+                    var pair = part.split('=');
+                    var key = decodeURIComponent(pair[0] || '');
+                    var value = decodeURIComponent((pair[1] || '').replace(/\+/g, ' '));
+                    if (key === 'sortCol' && value) {
+                        state.sortCol = value;
+                    } else if (key === 'sortDir') {
+                        state.sortDir = value === '1';
+                    } else if (key === 'filter') {
+                        state.filter = value;
+                    } else if (key === 'q') {
+                        state.q = value;
+                    } else if (key === 'discovery') {
+                        state.discovery = value === '1';
+                    } else if (key === 'stable') {
+                        state.stable = value === '1';
+                    }
+                });
+            }
+
+            var known = COLUMNS.some(function (column) { return column.sort && column.id === state.sortCol; });
+            if (!known) {
+                state.sortCol = 'name';
+            }
+        }
+
+        function writeHash() {
+            var parts = ['sortCol=' + encodeURIComponent(state.sortCol), 'sortDir=' + (state.sortDir ? 1 : 0)];
+            if (state.filter) {
+                parts.push('filter=' + encodeURIComponent(state.filter));
+            }
+            if (state.q) {
+                parts.push('q=' + encodeURIComponent(state.q));
+            }
+            if (state.discovery) {
+                parts.push('discovery=1');
+            }
+            if (state.stable) {
+                parts.push('stable=1');
+            }
+            var hash = '#' + parts.join('&');
+            if (hash !== window.location.hash) {
+                history.replaceState(null, '', hash);
+            }
+        }
+
+        function update() {
+            writeHash();
+            renderHead();
+            renderRows();
+        }
+
+        // ---------- events ----------
+
+        $head.addEventListener('click', function (event) {
+            var th = event.target.closest('th[data-col]');
+            if (!th) {
+                return;
+            }
+            var column = th.dataset.col;
+            // first click on a new column: numbers, dates and flags start with the highest value
+            state.sortDir = state.sortCol === column
+                ? !state.sortDir
+                : ['installs', 'created', 'versions', 'discovery', 'materialize'].indexOf(column) !== -1;
+            state.sortCol = column;
+            update();
+        });
+
+        var searchTimer;
+        $search.addEventListener('input', function () {
+            clearTimeout(searchTimer);
+            searchTimer = setTimeout(function () {
+                state.q = $search.value.trim();
+                update();
+            }, 120);
+        });
+
+        $filter.addEventListener('change', function () {
+            state.filter = $filter.value;
+            update();
+        });
+
+        $discovery.addEventListener('change', function () {
+            state.discovery = $discovery.checked;
+            update();
+        });
+
+        $stable.addEventListener('change', function () {
+            state.stable = $stable.checked;
+            update();
+        });
+
+        $reset.addEventListener('click', function () {
+            state.q = '';
+            state.filter = '';
+            state.discovery = false;
+            state.stable = false;
+            $search.value = '';
+            $filter.value = '';
+            $discovery.checked = false;
+            $stable.checked = false;
+            update();
+        });
+
+        // hide icons an adapter repo no longer serves ('error' does not bubble, so capture it)
+        $rows.addEventListener('error', function (event) {
+            if (event.target.tagName === 'IMG') {
+                event.target.classList.add('broken');
+            }
+        }, true);
+
+        // a deep link pasted into an already open tab, or back/forward, only changes the hash
+        window.addEventListener('hashchange', function () {
+            readHash();
+            $search.value = state.q;
+            $filter.value = state.filter;
+            $discovery.checked = state.discovery;
+            $stable.checked = state.stable;
+            renderHead();
+            renderRows();
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === '/' && document.activeElement !== $search) {
+                event.preventDefault();
+                $search.focus();
+            } else if (event.key === 'Escape' && document.activeElement === $search) {
+                $search.blur();
+            }
+        });
+
+        // ---------- start ----------
+
+        build();
+        readHash();
+        renderFilter();
+        $search.value = state.q;
+        $discovery.checked = state.discovery;
+        $stable.checked = state.stable;
+        update();
+    })();
+</script>
 </body>
 </html>

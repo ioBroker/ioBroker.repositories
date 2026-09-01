@@ -1,9 +1,12 @@
-'use strict';
-const assert = require('node:assert');
-const fs = require('node:fs');
-const axios = require('axios');
-let latest;
-let stable;
+import assert from 'node:assert';
+import fs from 'node:fs';
+import axios from 'axios';
+import { createRequire } from 'node:module';
+
+// the repository files are loaded with require() so that they are read and parsed only once
+const require = createRequire(import.meta.url);
+let latest: Record<string, any>;
+let stable: Record<string, any>;
 // let axiosCounter = 0;
 
 console.log(`OWN_GITHUB_TOKEN: ${process.env.OWN_GITHUB_TOKEN}`);
@@ -11,10 +14,10 @@ console.log(`OWN_GITHUB_TOKEN: ${process.env.OWN_GITHUB_TOKEN}`);
 //     'Authorization': process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
 // };
 if (process.env.OWN_GITHUB_TOKEN) {
-    axios.defaults.headers.common['Authorization'] = `Bearer ${process.env.OWN_GITHUB_TOKEN}`;
+    axios.defaults.headers.common.Authorization = `Bearer ${process.env.OWN_GITHUB_TOKEN}`;
 }
 
-async function request(url) {
+async function request(url: string) {
     // axiosCounter++;
     // if (axiosCounter % 5) {
     //     await new Promise(resolve => setTimeout(resolve, 300));
@@ -27,9 +30,9 @@ const reservedAdapterNames = ['config', 'system', 'alias', 'design', 'all', 'sel
 
 describe('Test Repository', () => {
     it('Test Repository: latest', done => {
-        const text = fs.readFileSync(`${__dirname}/../sources-dist.json`);
+        const text = fs.readFileSync(`${import.meta.dirname}/../../sources-dist.json`);
         try {
-            latest = JSON.parse(text);
+            latest = JSON.parse(text.toString());
         } catch (e) {
             assert.equal(e, null, 'Error parsing sources-dist.json');
         }
@@ -37,9 +40,9 @@ describe('Test Repository', () => {
     });
 
     it('Test Repository: stable', done => {
-        const text = fs.readFileSync(`${__dirname}/../sources-dist-stable.json`);
+        const text = fs.readFileSync(`${import.meta.dirname}/../../sources-dist-stable.json`);
         try {
-            stable = JSON.parse(text);
+            stable = JSON.parse(text.toString());
         } catch (e) {
             assert.equal(e, null, 'Error parsing sources-dist-stable.json');
         }
@@ -47,24 +50,24 @@ describe('Test Repository', () => {
     });
 
     it('Check reserved names', done => {
-        stable ||= require('../sources-dist-stable.json');
-        latest ||= require('../sources-dist.json');
+        stable ||= require('../../sources-dist-stable.json');
+        latest ||= require('../../sources-dist.json');
         // check stable names
         let id = Object.keys(stable).find(id =>
-            reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')),
+            reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.', '')),
         );
         assert.ok(!id, `Found reserved name in stable: ${id}`);
         // check the latest names
         id = Object.keys(latest).find(id =>
-            reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')),
+            reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.', '')),
         );
         assert.ok(!id, `Found reserved name in latest: ${id}`);
         done();
     });
 
     it('Test Repository: compare types', async () => {
-        stable ||= require('../sources-dist-stable.json');
-        latest ||= require('../sources-dist.json');
+        stable ||= require('../../sources-dist-stable.json');
+        latest ||= require('../../sources-dist.json');
 
         for (const id in stable) {
             if (Object.prototype.hasOwnProperty.call(stable, id) && id !== '_repoInfo') {
@@ -72,7 +75,11 @@ describe('Test Repository', () => {
                 assert.notEqual(latest[id], undefined, `${id} not in latest but in stable`);
                 assert.notEqual(latest[id].type, undefined, `${id} missing type in latest`);
                 assert.notEqual(latest[id].type, '', `${id} has empty type in latest`);
-                assert.equal(latest[id].type, stable[id].type, `${id} type mismatch: latest(${latest[id].type}) vs stable(${stable[id].type})`);
+                assert.equal(
+                    latest[id].type,
+                    stable[id].type,
+                    `${id} type mismatch: latest(${latest[id].type}) vs stable(${stable[id].type})`,
+                );
             }
         }
         // compare types with io-package.json
@@ -95,7 +102,7 @@ describe('Test Repository', () => {
     }).timeout(1200000);
 
     it('Test Repository: Versions in latest', done => {
-        latest ||= require('../sources-dist.json');
+        latest ||= require('../../sources-dist.json');
         for (const name in latest) {
             if (!Object.prototype.hasOwnProperty.call(latest, name) || name === '_repoInfo') {
                 continue;
@@ -130,7 +137,7 @@ describe('Test Repository', () => {
     });
 
     it('Test Repository: Versions in stable', done => {
-        stable ||= require('../sources-dist-stable.json');
+        stable ||= require('../../sources-dist-stable.json');
         for (const name in stable) {
             if (!Object.prototype.hasOwnProperty.call(stable, name) || name === '_repoInfo') {
                 continue;
@@ -169,8 +176,8 @@ describe('Test Repository', () => {
     });
 
     it('Test Repository: Compare stable and latest', done => {
-        stable ||= require('../sources-dist-stable.json');
-        latest ||= require('../sources-dist.json');
+        stable ||= require('../../sources-dist-stable.json');
+        latest ||= require('../../sources-dist.json');
         for (const name in stable) {
             if (!Object.prototype.hasOwnProperty.call(stable, name) || name === '_repoInfo') {
                 continue;
@@ -191,8 +198,8 @@ describe('Test Repository', () => {
     });
 
     it('Test Repository: check latest vs. stable', done => {
-        stable ||= require('../sources-dist-stable.json');
-        latest ||= require('../sources-dist.json');
+        stable ||= require('../../sources-dist-stable.json');
+        latest ||= require('../../sources-dist.json');
         console.log();
         for (const id in latest) {
             if (
@@ -206,9 +213,9 @@ describe('Test Repository', () => {
         done();
     });
 
-    const cache = {};
+    const cache: Record<string, any> = {};
 
-    async function checkRepos(name, repos) {
+    async function checkRepos(name: string, repos: Record<string, any>) {
         let error = false;
         const len = Object.keys(repos).length;
         let i = 0;
@@ -249,17 +256,17 @@ describe('Test Repository', () => {
             i++;
         }
         if (error) {
-            throw 'Error occurred, see console output';
+            throw new Error('Error occurred, see console output');
         }
     }
 
     it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async () => {
-        latest ||= require('../sources-dist.json');
+        latest ||= require('../../sources-dist.json');
         await checkRepos('latest', latest);
     }).timeout(3600000);
 
     it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async () => {
-        stable ||= require('../sources-dist-stable.json');
+        stable ||= require('../../sources-dist-stable.json');
         await checkRepos('stable', stable);
     }).timeout(3600000);
 });

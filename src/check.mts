@@ -1,10 +1,14 @@
-'use strict';
+import fs from 'fs';
+import axios from 'axios';
+import { addComment, addLabel, deleteLabel, getGithub, getUrl, getAllComments, deleteComment } from './common.mts';
+import type * as Repochecker from '@iobroker/repochecker';
+import { createRequire } from 'node:module';
 
-const fs = require('fs');
-const axios = require('axios');
-const { addComment, addLabel, deleteLabel, getGithub, getUrl, getAllComments, deleteComment } = require('./common');
-
-let checker;
+// @iobroker/repochecker switches between library and CLI mode on `module.parent`, which is undefined
+// when a CommonJS package is loaded through an ES module import - it would then run its CLI and
+// exit with "No repository specified". Loading it through require() keeps it in library mode.
+const require = createRequire(import.meta.url);
+const checker: typeof Repochecker = require('@iobroker/repochecker');
 
 const TEXT_RECHECK = 'RE-CHECK!';
 const TEXT_COMMENT_TITLE = '## Automated adapter checker';
@@ -12,13 +16,27 @@ const TEXT_MULTIPLE_REPOSITORIES =
     'Please create seperate PRs for every adpater to add or update. This PR might be closed as it changes or adds more than one adapter.';
 const ONE_DAY = 3600000 * 24;
 
+/** One line of the aggregated "Automated adapter checker" comment. */
+interface CommentLine {
+    text: string;
+    link?: string;
+    owner?: string;
+    adapter?: string;
+    noDecorate?: boolean;
+}
+
 // GitHub users which are always allowed to add or update adapters.
 // Each entry is an object:
 //   { user: '<github-login>' }                          -> whitelisted for ALL repositories
 //   { user: '<github-login>', repos: ['owner/repo'] }   -> whitelisted for the listed repositories only
 // A repo may be given as full name 'owner/ioBroker.adapter' or just the adapter repo
 // name 'ioBroker.adapter' (matched case-insensitively).
-const MAINTAINER_WHITELIST = [
+interface WhitelistEntry {
+    user: string;
+    repos?: string[];
+}
+
+const MAINTAINER_WHITELIST: WhitelistEntry[] = [
     { user: 'mcm1957' }, // whitelisted for all repositories
 ];
 
@@ -39,9 +57,16 @@ function getPullRequestNumber() {
     throw new Error('Reference not found. process.env.GITHUB_REF and process.env.GITHUB_EVENT_PATH are not set!');
 }
 
-function executeOneAdapterCheck(adapter) {
-    checker = checker || require('@iobroker/repochecker');
+/** One repochecker run, plus the badge flags the reporting step attaches afterwards. */
+interface AdapterCheckResult {
+    /** the GitHub URL the check was run against */
+    adapter: string;
+    context: Repochecker.RepocheckerResult;
+    badgeLatest?: boolean;
+    badgeStable?: boolean;
+}
 
+function executeOneAdapterCheck(adapter: string): Promise<AdapterCheckResult> {
     return new Promise((resolve, reject) => {
         checker.handler(
             {
@@ -54,7 +79,9 @@ function executeOneAdapterCheck(adapter) {
                 if (err) {
                     reject(err);
                 } else {
-                    const context = JSON.parse(data.body);
+                    // The checker answers with a bare `{ error }` body only when no url was given;
+                    // one is always passed here, so the body is a full result.
+                    const context = JSON.parse(data.body) as Repochecker.RepocheckerResult;
                     context.errors = context.errors.sort();
                     context.warnings = context.warnings.sort();
                     resolve({ adapter, context });
@@ -68,7 +95,7 @@ function executeOneAdapterCheck(adapter) {
  * Fetch the raw JSON content of a file at a specific ref using the GitHub Contents API.
  * Returns a parsed object or null on error.
  */
-async function fetchJsonAtRef(filename, ref) {
+async function fetchJsonAtRef(filename: string, ref: string) {
     try {
         const url = `https://api.github.com/repos/ioBroker/ioBroker.repositories/contents/${filename}?ref=${ref}`;
         const meta = await getGithub(url);
@@ -89,10 +116,12 @@ async function fetchJsonAtRef(filename, ref) {
  *   - 204 No Content -> the user is a public member
  *   - 404 Not Found  -> the user is not a public member (or membership is private)
  */
-async function isPublicOrgMember(org, username) {
+async function isPublicOrgMember(org: string, username: string) {
     try {
         // getGithub resolves on 2xx (204 -> empty body) and throws on 404.
-        await getGithub(`https://api.github.com/orgs/${encodeURIComponent(org)}/public_members/${encodeURIComponent(username)}`);
+        await getGithub(
+            `https://api.github.com/orgs/${encodeURIComponent(org)}/public_members/${encodeURIComponent(username)}`,
+        );
         return true;
     } catch {
         return false;
@@ -106,19 +135,19 @@ async function isPublicOrgMember(org, username) {
  * Otherwise the user is only whitelisted for the listed repositories. A repo entry may
  * be the full name 'owner/ioBroker.adapter' or just the repo name 'ioBroker.adapter'.
  */
-function isWhitelisted(owner, adapter, username) {
+function isWhitelisted(owner: string, adapter: string, username: string) {
     const fullName = `${owner}/${adapter}`.toLowerCase();
     const repoName = adapter.toLowerCase();
 
     return MAINTAINER_WHITELIST.some(entry => {
-        if (!entry || !entry.user || entry.user.toLowerCase() !== username.toLowerCase()) {
+        if (!entry?.user || entry.user.toLowerCase() !== username.toLowerCase()) {
             return false;
         }
-        if (!entry.repos || !entry.repos.length) {
+        if (!entry.repos?.length) {
             // No repo restriction -> whitelisted for all repositories.
             return true;
         }
-        return entry.repos.some(repo => {
+        return entry.repos.some((repo: string) => {
             const r = String(repo).toLowerCase();
             return r === fullName || r === repoName;
         });
@@ -139,25 +168,23 @@ function isWhitelisted(owner, adapter, username) {
  */
 const RECENT_PR_SCAN_LIMIT = 25;
 
-function isDependabotPr(pr) {
-    const login = (pr && pr.user && pr.user.login) || '';
+function isDependabotPr(pr: any) {
+    const login = pr?.user?.login || '';
     return login.toLowerCase().startsWith('dependabot');
 }
 
-async function hasMergedRecentPr(owner, adapter, username) {
+async function hasMergedRecentPr(owner: string, adapter: string, username: string) {
     try {
         const prs = await getGithub(
             `https://api.github.com/repos/${owner}/${adapter}/pulls?state=closed&per_page=100&sort=updated&direction=desc`,
         );
         const merged = (prs || [])
-            .filter(pr => pr && pr.merged_at && !isDependabotPr(pr))
+            .filter((pr: any) => pr?.merged_at && !isDependabotPr(pr))
             .slice(0, RECENT_PR_SCAN_LIMIT);
         for (const pr of merged) {
             try {
-                const detail = await getGithub(
-                    `https://api.github.com/repos/${owner}/${adapter}/pulls/${pr.number}`,
-                );
-                if (detail && detail.merged_by && detail.merged_by.login.toLowerCase() === username.toLowerCase()) {
+                const detail = await getGithub(`https://api.github.com/repos/${owner}/${adapter}/pulls/${pr.number}`);
+                if (detail?.merged_by && detail.merged_by.login.toLowerCase() === username.toLowerCase()) {
                     return true;
                 }
             } catch (e) {
@@ -181,12 +208,12 @@ async function hasMergedRecentPr(owner, adapter, username) {
  * Legitimacy is inferred from publicly readable facts, in order:
  *   1. The author is whitelisted (globally or for this repository).
  *   2. The author owns the repository (`owner === author`) -> always has write access.
- *   3. The repository is owned by an organization and the author is a *public* member
+ *   3. The repository is owned by an organization, and the author is a *public* member
  *      of that organization.
  *   4. The author has merged at least one of the last 100 pull requests of the repo
  *      (only users with write access can merge).
  *
- * Returns a short human readable reason string if the author is considered legitimate,
+ * Returns a short human-readable reason string if the author is considered legitimate,
  * otherwise `null`.
  *
  * This intentionally errs on the side of caution: private org members or collaborators
@@ -194,7 +221,7 @@ async function hasMergedRecentPr(owner, adapter, username) {
  * flagged with 'maintainer ?' for a manual review. The label is a review hint, not a
  * hard block, so failing "closed" (towards a manual check) is the safe direction.
  */
-async function verifyAuthorLegitimacy(owner, adapter, username) {
+async function verifyAuthorLegitimacy(owner: string, adapter: string, username: string) {
     if (!owner || !adapter || !username) {
         return null;
     }
@@ -239,7 +266,7 @@ async function verifyAuthorLegitimacy(owner, adapter, username) {
  * This mirrors exactly what GitHub shows in the "Files" tab: structural changes
  * to the JSON objects, not whitespace/formatting/sort-order noise.
  */
-async function detectChangedAdaptersInFile(filename, baseRef, headRef) {
+async function detectChangedAdaptersInFile(filename: string, baseRef: string, headRef: string) {
     console.log(`Comparing ${filename}: base=${baseRef} head=${headRef}`);
 
     const [baseJson, headJson] = await Promise.all([
@@ -271,20 +298,20 @@ async function detectChangedAdaptersInFile(filename, baseRef, headRef) {
         }
     }
 
-    return changedAdapters.map(name => {
-        const meta = headJson[name] && headJson[name].meta;
-        if (!meta) {
-            return null;
-        }
-        return {
-            url: meta
-                .replace(/\/master\/io-package\.json$/, '')
-                .replace(/\/main\/io-package\.json$/, ''),
-            // The version pinned by the entry. Only sources-dist-stable.json entries
-            // carry one - for sources-dist.json entries this stays undefined.
-            version: headJson[name].version,
-        };
-    }).filter(Boolean);
+    return changedAdapters
+        .map(name => {
+            const meta = headJson[name]?.meta;
+            if (!meta) {
+                return null;
+            }
+            return {
+                url: meta.replace(/\/master\/io-package\.json$/, '').replace(/\/main\/io-package\.json$/, ''),
+                // The version pinned by the entry. Only sources-dist-stable.json entries
+                // carry one - for sources-dist.json entries that stay undefined.
+                version: headJson[name].version,
+            };
+        })
+        .filter(Boolean);
 }
 
 /**
@@ -296,7 +323,7 @@ async function detectChangedAdaptersInFile(filename, baseRef, headRef) {
  *
  * This replaces the old commit-by-commit patch parsing that caused false positives.
  */
-async function detectAffectedAdapter(prID) {
+async function detectAffectedAdapter(prID: string) {
     // Get PR metadata for base/head refs
     const pr = await getGithub(`https://api.github.com/repos/ioBroker/ioBroker.repositories/pulls/${prID}`);
     const baseRef = pr.base.sha;
@@ -319,9 +346,7 @@ async function detectAffectedAdapter(prID) {
     // Get the list of changed files in this PR (same as GitHub "Files" tab)
     const prFiles = await getGithub(`https://api.github.com/repos/ioBroker/ioBroker.repositories/pulls/${prID}/files`);
 
-    const sourceFiles = prFiles
-        .filter(f => f.filename.startsWith('sources-dist'))
-        .map(f => f.filename);
+    const sourceFiles = prFiles.filter((f: any) => f.filename.startsWith('sources-dist')).map((f: any) => f.filename);
 
     if (!sourceFiles.length) {
         console.log('No sources-dist files changed in this PR.');
@@ -330,7 +355,7 @@ async function detectAffectedAdapter(prID) {
 
     console.log(`Changed sources files: ${sourceFiles.join(', ')}`);
 
-    const adapters = [];
+    const adapters: { url: string; isStable?: boolean; version?: string }[] = [];
 
     for (const filename of sourceFiles) {
         const changed = await detectChangedAdaptersInFile(filename, mergeBase, headRef);
@@ -345,11 +370,13 @@ async function detectAffectedAdapter(prID) {
         });
     }
 
-    console.log(`Detected changed adapters: ${adapters.map(a => a.url + (a.version ? `@${a.version}` : '')).join(', ')}`);
+    console.log(
+        `Detected changed adapters: ${adapters.map(a => a.url + (a.version ? `@${a.version}` : '')).join(', ')}`,
+    );
     return adapters;
 }
 
-function decorateLine(line) {
+function decorateLine(line: CommentLine) {
     if (line.noDecorate) {
         return line.text;
     }
@@ -441,7 +468,7 @@ function decorateLine(line) {
     return line.text;
 }
 
-function triggerRepoCheck(owner, adapter) {
+function triggerRepoCheck(owner: string, adapter: string) {
     const url = `${owner}/${adapter}`;
     console.log(`trigger repo checker for ${url}`);
 
@@ -485,10 +512,10 @@ async function doIt() {
     }
 
     const files = await getGithub(`https://api.github.com/repos/ioBroker/ioBroker.repositories/pulls/${prID}/files`);
-    const fileNames = files.map(f => f.filename);
+    const fileNames = files.map((f: any) => f.filename);
 
     console.log('Files changed:');
-    fileNames.forEach(f => console.log(` ${f}`));
+    fileNames.forEach((f: string) => console.log(` ${f}`));
 
     const isStable = fileNames.includes('sources-dist-stable.json');
 
@@ -498,7 +525,7 @@ async function doIt() {
     let prAuthor = '';
     try {
         const pr = await getGithub(`https://api.github.com/repos/ioBroker/ioBroker.repositories/pulls/${prID}`);
-        prAuthor = (pr.user && pr.user.login) || '';
+        prAuthor = pr.user?.login || '';
         console.log(`PR ${prID} created by ${prAuthor}`);
     } catch (e) {
         console.error(`Cannot determine author of PR ${prID}: ${e}`);
@@ -516,7 +543,7 @@ async function doIt() {
 
         try {
             const gitComments = await getAllComments(prID);
-            const exists = gitComments.find(comment => comment.body.includes(TEXT_MULTIPLE_REPOSITORIES));
+            const exists = gitComments.find((comment: any) => comment.body.includes(TEXT_MULTIPLE_REPOSITORIES));
             if (!exists) {
                 await addComment(prID, TEXT_MULTIPLE_REPOSITORIES);
             }
@@ -525,7 +552,7 @@ async function doIt() {
         }
     }
 
-    const comments = [{ text: TEXT_COMMENT_TITLE }];
+    const comments: CommentLine[] = [{ text: TEXT_COMMENT_TITLE }];
     // Verification result lines appended at the very end of the check result comment.
     const verificationLines = [];
     let someChecked = false;
@@ -605,10 +632,10 @@ async function doIt() {
         if (data.context) {
             someChecked = true;
 
-            if (data.context.errors && data.context.errors.length) {
+            if (data.context.errors?.length) {
                 errorsFound = true;
                 comments.push({ text: `**ERRORS:**`, link, owner, adapter });
-                data.context.errors.forEach(err =>
+                data.context.errors.forEach((err: string) =>
                     comments.push({ text: `- [ ] :heavy_exclamation_mark: ${err}`, link, owner, adapter }),
                 );
             } else {
@@ -617,19 +644,21 @@ async function doIt() {
 
             comments.push({ text: ` `, link, owner, adapter });
 
-            if (data.context.warnings && data.context.warnings.filter(warn => warn.startsWith('[W')).length) {
+            if (data.context.warnings?.filter((warn: string) => warn.startsWith('[W')).length) {
                 comments.push({ text: `**WARNINGS:**`, link, owner, adapter });
                 data.context.warnings
-                    .filter(warn => warn.startsWith('[W'))
-                    .forEach(warn => comments.push({ text: `- [ ] :eyes: ${warn}`, link, owner, adapter }));
+                    .filter((warn: string) => warn.startsWith('[W'))
+                    .forEach((warn: string) => comments.push({ text: `- [ ] :eyes: ${warn}`, link, owner, adapter }));
                 comments.push({ text: ` `, link, owner, adapter });
             }
 
-            if (data.context.warnings && data.context.warnings.filter(warn => warn.startsWith('[S')).length) {
+            if (data.context.warnings?.filter((warn: string) => warn.startsWith('[S')).length) {
                 comments.push({ text: `**SUGGESTIONS:**`, link, owner, adapter });
                 data.context.warnings
-                    .filter(warn => warn.startsWith('[S'))
-                    .forEach(warn => comments.push({ text: `- [ ] :pushpin: ${warn}`, link, owner, adapter }));
+                    .filter((warn: string) => warn.startsWith('[S'))
+                    .forEach((warn: string) =>
+                        comments.push({ text: `- [ ] :pushpin: ${warn}`, link, owner, adapter }),
+                    );
                 comments.push({ text: ` `, link, owner, adapter });
             }
         }
@@ -650,7 +679,7 @@ async function doIt() {
             });
 
             const now = new Date();
-            const totalUser = statistic['adapters'][adapterName];
+            const totalUser = statistic.adapters[adapterName];
             const latestRelease = latest[adapterName].version;
             // The release this PR actually pins in sources-dist-stable.json. Falls back
             // to the current latest release when the changed entry could not be parsed.
@@ -658,9 +687,7 @@ async function doIt() {
             const latestTime = new Date(latest[adapterName].versionDate);
             const latestTimeStr = `${latestTime.getDate()}.${latestTime.getMonth() + 1}.${latestTime.getFullYear()}`;
             const latestDaysOld = Math.floor((now.getTime() - latestTime.getTime()) / ONE_DAY);
-            const latestUser = statistic['versions'][adapterName]
-                ? statistic['versions'][adapterName][latestRelease]
-                : 0;
+            const latestUser = statistic.versions[adapterName] ? statistic.versions[adapterName][latestRelease] : 0;
             const latestUserPercent = ((latestUser / totalUser) * 100).toFixed(2);
 
             comments.push({ text: ``, noDecorate: true });
@@ -676,8 +703,8 @@ async function doIt() {
                 });
                 comments.push({ text: `${latestUser} users (${latestUserPercent}%)`, noDecorate: true });
             } else {
-                const submittedUser = statistic['versions'][adapterName]
-                    ? statistic['versions'][adapterName][submittedRelease] || 0
+                const submittedUser = statistic.versions[adapterName]
+                    ? statistic.versions[adapterName][submittedRelease] || 0
                     : 0;
                 const submittedUserPercent = ((submittedUser / totalUser) * 100).toFixed(2);
 
@@ -686,7 +713,7 @@ async function doIt() {
                 let submittedCreatedStr = ` created _unknown_ (_unknown_ days old)`;
                 try {
                     const npmInfo = await getUrl(`https://registry.npmjs.org/iobroker.${adapterName.toLowerCase()}`);
-                    const submittedVersionDate = npmInfo && npmInfo.time && npmInfo.time[submittedRelease];
+                    const submittedVersionDate = npmInfo?.time?.[submittedRelease];
                     if (submittedVersionDate) {
                         const submittedTime = new Date(submittedVersionDate);
                         const submittedTimeStr = `${submittedTime.getDate()}.${submittedTime.getMonth() + 1}.${submittedTime.getFullYear()}`;
@@ -712,9 +739,7 @@ async function doIt() {
                 const stableTime = new Date(stable[adapterName].versionDate);
                 const stableTimeStr = `${stableTime.getDate()}.${stableTime.getMonth() + 1}.${stableTime.getFullYear()}`;
                 const stableDaysOld = Math.floor((now.getTime() - stableTime.getTime()) / ONE_DAY);
-                const stableUser = statistic['versions'][adapterName]
-                    ? statistic['versions'][adapterName][stableRelease]
-                    : 0;
+                const stableUser = statistic.versions[adapterName] ? statistic.versions[adapterName][stableRelease] : 0;
                 const stableUserPercent = ((stableUser / totalUser) * 100).toFixed(2);
 
                 comments.push({ text: ``, noDecorate: true });
@@ -753,7 +778,7 @@ async function doIt() {
                 await addLabel(prID, ['new at LATEST']);
 
                 const gitComments = await getAllComments(prID);
-                let exists = gitComments.find(comment =>
+                const exists = gitComments.find((comment: any) =>
                     comment.body.includes('## ioBroker repository information about New at LATEST tagging'),
                 );
 
@@ -820,9 +845,11 @@ async function doIt() {
         comments.push({ text: 'No changed adapters found', noDecorate: true });
     } else {
         try {
-            await deleteLabel(prID, ['auto-checked ✔']);
-            await deleteLabel(prID, ['auto-checked ❌']);
-        } catch { };
+            await deleteLabel(prID, 'auto-checked ✔');
+            await deleteLabel(prID, 'auto-checked ❌');
+        } catch {
+            // the labels may not be present on the PR - nothing to clean up then
+        }
         try {
             if (errorsFound) {
                 console.log(`setting labels for PR ${prID} - errors detected`);
@@ -859,12 +886,12 @@ async function doIt() {
 
     try {
         const gitComments = await getAllComments(prID);
-        let exists = gitComments.find(comment => comment.body.includes(TEXT_COMMENT_TITLE));
+        let exists = gitComments.find((comment: any) => comment.body.includes(TEXT_COMMENT_TITLE));
         if (exists) {
             await deleteComment(prID, exists.id);
         }
 
-        exists = gitComments.find(comment => comment.body === TEXT_RECHECK);
+        exists = gitComments.find((comment: any) => comment.body === TEXT_RECHECK);
         if (exists) {
             await deleteComment(prID, exists.id);
         }
@@ -880,7 +907,7 @@ async function doIt() {
 // activate for debugging purposes
 // process.env.GITHUB_REF = 'refs/pull/3305/merge';
 // process.env.OWN_GITHUB_TOKEN = 'add-token-here';
-// process.env.GITHUB_EVENT_PATH = __dirname + '/../event.json';
+// process.env.GITHUB_EVENT_PATH = import.meta.dirname + '/../event.json';
 
 console.log(`process.env.GITHUB_REF = ${process.env.GITHUB_REF}`);
 console.log(`process.env.GITHUB_EVENT_PATH = ${process.env.GITHUB_EVENT_PATH}`);

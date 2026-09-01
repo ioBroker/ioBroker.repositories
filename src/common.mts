@@ -1,6 +1,24 @@
-const axios = require('axios');
+import axios, { type AxiosRequestConfig } from 'axios';
 
-function addLabel(prID, labels) {
+/**
+ * Thin wrappers around the GitHub REST API. Every URL is hardcoded to this repository, except
+ * createIssue(), which files issues in the adapter repositories.
+ *
+ * Responses are returned as `any` on purpose - these are third party payloads, and typing them is
+ * follow-up work.
+ */
+
+/** A pull request or issue number. Callers pass both the numeric and the string form. */
+type IssueId = string | number;
+
+function authHeaders(): Record<string, string> {
+    return {
+        Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
+        'user-agent': 'Action script',
+    };
+}
+
+export function addLabel(prID: IssueId, labels: string[]): Promise<any> {
     return axios
         .post(
             `https://api.github.com/repos/ioBroker/ioBroker.repositories/issues/${prID}/labels`,
@@ -8,44 +26,35 @@ function addLabel(prID, labels) {
                 labels,
             },
             {
-                headers: {
-                    Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-                    'user-agent': 'Action script',
-                },
+                headers: authHeaders(),
             },
         )
         .then(response => response.data);
 }
 
-function deleteLabel(prID, label) {
+export function deleteLabel(prID: IssueId, label: string): Promise<any> {
     let url = `labels/${label}`;
     if (prID) {
         url = `issues/${prID}/labels/${label}`;
     }
     return axios
         .delete(`https://api.github.com/repos/ioBroker/ioBroker.repositories/${url}`, {
-            headers: {
-                Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-                'user-agent': 'Action script',
-            },
+            headers: authHeaders(),
         })
         .then(response => response.data);
 }
 
-function getLabels(prID) {
+export function getLabels(prID: IssueId): Promise<any> {
     let url = `labels`;
     if (prID) {
         url = `issues/${prID}/labels`;
     }
     return axios(`https://api.github.com/repos/ioBroker/ioBroker.repositories/${url}`, {
-        headers: {
-            Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-            'user-agent': 'Action script',
-        },
+        headers: authHeaders(),
     }).then(response => response.data);
 }
 
-function createLabel(name, description, color) {
+export function createLabel(name: string, description: string, color: string): Promise<any> {
     return axios
         .post(
             `https://api.github.com/repos/ioBroker/ioBroker.repositories/labels`,
@@ -55,16 +64,13 @@ function createLabel(name, description, color) {
                 color: `${color}`,
             },
             {
-                headers: {
-                    Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-                    'user-agent': 'Action script',
-                },
+                headers: authHeaders(),
             },
         )
         .then(response => response.data);
 }
 
-function updateLabel(name, description, color) {
+export function updateLabel(name: string, description: string, color: string): Promise<any> {
     return axios
         .patch(
             `https://api.github.com/repos/ioBroker/ioBroker.repositories/labels/${name}`,
@@ -73,52 +79,41 @@ function updateLabel(name, description, color) {
                 color: `${color}`,
             },
             {
-                headers: {
-                    Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-                    'user-agent': 'Action script',
-                },
+                headers: authHeaders(),
             },
         )
         .then(response => response.data);
 }
-function addComment(prID, body) {
+
+export function addComment(prID: IssueId, body: string): Promise<any> {
     return axios
         .post(
             `https://api.github.com/repos/ioBroker/ioBroker.repositories/issues/${prID}/comments`,
             { body },
             {
-                headers: {
-                    Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-                    'user-agent': 'Action script',
-                },
+                headers: authHeaders(),
             },
         )
         .then(response => response.data);
 }
 
-function getAllComments(prID) {
+export function getAllComments(prID: IssueId): Promise<any> {
     ///repos/:owner/:repo/issues/:issue_number/comments
     return axios(`https://api.github.com/repos/ioBroker/ioBroker.repositories/issues/${prID}/comments?per_page=100`, {
-        headers: {
-            Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-            'user-agent': 'Action script',
-        },
+        headers: authHeaders(),
     }).then(response => response.data);
 }
 
-function deleteComment(prID, commentID) {
+export function deleteComment(prID: IssueId, commentID: IssueId): Promise<any> {
     ///repos/:owner/:repo/issues/:issue_number/comments
     return axios
         .delete(`https://api.github.com/repos/ioBroker/ioBroker.repositories/issues/comments/${commentID}`, {
-            headers: {
-                Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-                'user-agent': 'Action script',
-            },
+            headers: authHeaders(),
         })
         .then(response => response.data);
 }
 
-function createIssue(owner, adapter, json) {
+export function createIssue(owner: string, adapter: string, json: any): Promise<any> {
     /*
     {
       "title": "Found a bug",
@@ -134,21 +129,16 @@ function createIssue(owner, adapter, json) {
 */
     return axios
         .post(`https://api.github.com/repos/${owner}/${adapter}/issues`, json, {
-            headers: {
-                Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-                'user-agent': 'Action script',
-            },
+            headers: authHeaders(),
         })
         .then(response => response.data);
 }
 
-function getGithub(url, raw) {
-    const options = {
-        headers: {
-            Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-            'user-agent': 'Action script',
-        },
+export function getGithub(url: string, raw?: boolean): Promise<any> {
+    const options: AxiosRequestConfig = {
+        headers: authHeaders(),
     };
+    // unauthenticated requests must not send the literal 'none' - GitHub rejects that
     if (!process.env.OWN_GITHUB_TOKEN) {
         delete options.headers.Authorization;
     }
@@ -164,69 +154,43 @@ function getGithub(url, raw) {
         });
 }
 
-function getUrl(url, asText) {
+export function getUrl(url: string, asText?: boolean): Promise<any> {
     console.log(`Read ${url}`);
-    return axios(url, asText ? { transformResponse: x => x } : {}).then(response => response.data);
+    return axios(url, asText ? { transformResponse: (x: any) => x } : {}).then(response => response.data);
 }
 
-function triggerWorkflow(workflow, ref) {
+export function triggerWorkflow(workflow: string, ref?: string): Promise<any> {
     return axios
         .post(
             `https://api.github.com/repos/ioBroker/ioBroker.repositories/actions/workflows/${workflow}/dispatches`,
             { ref: ref || 'master' },
             {
-                headers: {
-                    Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-                    'user-agent': 'Action script',
-                },
+                headers: authHeaders(),
             },
         )
         .then(response => response.data);
 }
 
-function closePR(prID) {
+export function closePR(prID: IssueId): Promise<any> {
     return axios
         .patch(
             `https://api.github.com/repos/ioBroker/ioBroker.repositories/pulls/${prID}`,
             { state: 'closed' },
             {
-                headers: {
-                    Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-                    'user-agent': 'Action script',
-                },
+                headers: authHeaders(),
             },
         )
         .then(response => response.data);
 }
 
-function lockIssue(prID) {
+export function lockIssue(prID: IssueId): Promise<any> {
     return axios
         .put(
             `https://api.github.com/repos/ioBroker/ioBroker.repositories/issues/${prID}/lock`,
             { lock_reason: 'resolved' },
             {
-                headers: {
-                    Authorization: process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
-                    'user-agent': 'Action script',
-                },
+                headers: authHeaders(),
             },
         )
         .then(response => response.data);
 }
-
-module.exports = {
-    addComment,
-    addLabel,
-    closePR,
-    createLabel,
-    deleteLabel,
-    updateLabel,
-    getGithub,
-    getUrl,
-    createIssue,
-    deleteComment,
-    getAllComments,
-    getLabels,
-    lockIssue,
-    triggerWorkflow,
-};
