@@ -1,11 +1,21 @@
 import config from '@iobroker/eslint-config';
 
+// @iobroker/eslint-config only knows **/*.ts; the sources here are .mts (see tsconfig.json), so every
+// block of the shared config that targets .ts is widened to .mts as well.
+const TS_MTS = config.map(block =>
+    Array.isArray(block.files) && block.files.includes('**/*.ts')
+        ? { ...block, files: [...block.files, '**/*.mts'] }
+        : block,
+);
+
 export default [
     {
-        // build output and the standalone local npm mirror are not part of the TypeScript project
-        ignores: ['build/**', 'localNpmRepo/**', 'list/**', '.archive/**'],
+        // build output, the plain-JS workflow scripts in lib/ and their tests in test/ (kept in
+        // their original style on purpose) and the standalone local npm mirror are not part of
+        // the TypeScript project
+        ignores: ['build/**', 'lib/**', 'test/**', 'localNpmRepo/**', 'list/**', '.archive/**'],
     },
-    ...config,
+    ...TS_MTS,
     {
         languageOptions: {
             parserOptions: {
@@ -25,7 +35,7 @@ export default [
     {
         // only the TypeScript sources - some of these rules need type information, which the
         // .mjs config files at the repository root do not have
-        files: ['src/**/*.ts'],
+        files: ['src/**/*.ts', 'src/**/*.mts'],
         // ---------------------------------------------------------------------------------
         // Tightening backlog of the JavaScript -> TypeScript migration.
         //

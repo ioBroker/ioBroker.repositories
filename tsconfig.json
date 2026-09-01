@@ -1,21 +1,23 @@
 {
     "compilerOptions": {
-        // These are CommonJS command line scripts executed by GitHub Actions with `node build/<x>.js`,
-        // so the emit has to stay CommonJS - package.json deliberately has no "type": "module".
-        // module/moduleResolution "node16" is the TypeScript 6 successor of the deprecated "node10":
-        // it honours package.json "exports" and, because this package is not "type": "module",
-        // still treats every .ts here as CommonJS and emits require()/module.exports.
+        // The scripts in src/ are executed directly by Node's built-in type stripping
+        // (`node src/<x>.mts`, Node >= 22.19) - nothing is ever compiled, tsc is only the type checker.
+        // They are .mts on purpose: package.json must not get "type": "module" (Martin's lib/*.js are
+        // CommonJS), and a plain .ts would then be parsed twice by Node with a warning. .mts is always
+        // an ES module, hence import.meta.dirname instead of __dirname and explicit ".mts" extensions
+        // in relative imports.
+        "noEmit": true,
+        "allowImportingTsExtensions": true,
+        // reject syntax that type stripping cannot erase (enum, namespace, parameter properties, ...)
+        "erasableSyntaxOnly": true,
+        // `import type` must be explicit, otherwise a stripped import could reference a missing export
+        "verbatimModuleSyntax": true,
+
         "target": "es2022",
-        "module": "node16",
-        "moduleResolution": "node16",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
         "lib": ["es2022"],
         "types": ["node", "mocha"],
-
-        "rootDir": "./src",
-        "outDir": "./build",
-        // off on purpose: the maps roughly doubled the packed output, and build/ is only ever run
-        // by CI. Turn back on temporarily when a stack trace needs mapping to the .ts sources.
-        "sourceMap": false,
 
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
@@ -29,6 +31,6 @@
         "strict": false,
         "noImplicitAny": true
     },
-    "include": ["src/**/*.ts"],
-    "exclude": ["node_modules", "build"]
+    "include": ["src/**/*.ts", "src/**/*.mts"],
+    "exclude": ["node_modules"]
 }

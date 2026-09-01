@@ -41,9 +41,7 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
-      # npm i also runs the "prepare" script, which compiles src/ into build/
-      - run: npm i
-      - run: node build/checkRepository_checkJsonFormatting.js sources-dist.json
+      - run: node lib/checkRepository_checkJsonFormatting.js sources-dist.json
 
   checkStableJson:
     name: Check sources-dist-stable.json JSON formatting
@@ -55,9 +53,7 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
-      # npm i also runs the "prepare" script, which compiles src/ into build/
-      - run: npm i
-      - run: node build/checkRepository_checkJsonFormatting.js sources-dist-stable.json
+      - run: node lib/checkRepository_checkJsonFormatting.js sources-dist-stable.json
 
   checkLatestAttributes:
     name: Check sources-dist.json attributes
@@ -69,9 +65,7 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
-      # npm i also runs the "prepare" script, which compiles src/ into build/
-      - run: npm i
-      - run: node build/checkRepository_checkLatestAttributes.js
+      - run: node lib/checkRepository_checkLatestAttributes.js
 
   checkAdapterNames:
     name: Check adapter names
@@ -83,9 +77,7 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
-      # npm i also runs the "prepare" script, which compiles src/ into build/
-      - run: npm i
-      - run: node build/checkRepository_checkAdapterNames.js
+      - run: node lib/checkRepository_checkAdapterNames.js
 
   checkStableAttributes:
     name: Check sources-dist-stable.json attributes
@@ -97,9 +89,7 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
-      # npm i also runs the "prepare" script, which compiles src/ into build/
-      - run: npm i
-      - run: node build/checkRepository_checkStableAttributes.js
+      - run: node lib/checkRepository_checkStableAttributes.js
 
   checkLatestSortOrder:
     name: Check sources-dist.json sort order
@@ -111,9 +101,7 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
-      # npm i also runs the "prepare" script, which compiles src/ into build/
-      - run: npm i
-      - run: node build/checkRepository_checkLatestSortOrder.js
+      - run: node lib/checkRepository_checkLatestSortOrder.js
 
   checkStableSortOrder:
     name: Check sources-dist-stable.json sort order
@@ -125,9 +113,7 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
-      # npm i also runs the "prepare" script, which compiles src/ into build/
-      - run: npm i
-      - run: node build/checkRepository_checkStableSortOrder.js
+      - run: node lib/checkRepository_checkStableSortOrder.js
 
   checkStableInLatest:
     name: Check stable adapters present in latest
@@ -139,9 +125,7 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
-      # npm i also runs the "prepare" script, which compiles src/ into build/
-      - run: npm i
-      - run: node build/checkRepository_checkStableInLatest.js
+      - run: node lib/checkRepository_checkStableInLatest.js
 
   checkAdapterRepositoryFiles:
     name: Check adapter repository files
@@ -153,9 +137,7 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
-      # npm i also runs the "prepare" script, which compiles src/ into build/
-      - run: npm i
-      - run: node build/checkRepository_checkAdapterRepositoryFiles.js
+      - run: node lib/checkRepository_checkAdapterRepositoryFiles.js
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   report:
