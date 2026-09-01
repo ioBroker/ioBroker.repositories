@@ -1,9 +1,9 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import axios from 'axios';
 import * as builds from './build.mts';
 import semver from 'semver';
-import { URL } from 'url';
+import { URL } from 'node:url';
 import minimist from 'minimist';
 
 const latestJsonPath = path.normalize(path.join(import.meta.dirname, '../sources-dist.json'));
@@ -262,16 +262,21 @@ function formatMaintainers(list: any, authors: Record<string, number>) {
     return formatMaintainer(list, authors);
 }
 
-function getDiscovery() {
-    return requestPromise('https://github.com/ioBroker/ioBroker.discovery/tree/master/lib/adapters').then(body => {
-        let adapters = body.match(
-            /<a\shref="\/ioBroker\/ioBroker.discovery\/blob\/master\/lib\/adapters\/([-_\w\d]+)\.js/g,
-        );
-        if (adapters) {
-            adapters = adapters.map((a: string) => a.match(/([-_\w\d]+)\.js/)[1]);
-        }
-        return adapters;
-    });
+// The list of adapters ioBroker.discovery can find. It used to be scraped out of the rendered GitHub
+// tree page, which broke without a trace when that adapter moved its sources (lib/adapters ->
+// src/lib/adapters, .js -> .ts) - ask the contents API for the directory listing instead.
+function getDiscovery(): Promise<string[] | null> {
+    return requestPromise('https://api.github.com/repos/ioBroker/ioBroker.discovery/contents/src/lib/adapters')
+        .then((files: any[]) =>
+            (files || [])
+                .filter(file => file.type === 'file' && /\.[jt]s$/.test(file.name))
+                .map((file: any) => file.name.replace(/\.[jt]s$/, '')),
+        )
+        .catch((e: any): null => {
+            // this only decorates every adapter with one flag - it must not kill the whole page
+            console.error(`Cannot read the discovery adapters: ${e.message}`);
+            return null;
+        });
 }
 
 // broken down to for easier understanding
@@ -607,7 +612,9 @@ function readStableRepo() {
  */
 function writeRepo(repoPath: string, repoContent: Record<string, any>): Promise<void> {
     return new Promise<void>((resolve, reject) => {
-        fs.writeFile(repoPath, repoToJsonSorted(repoContent), err => {
+        // Keep the trailing newline. Every write used to strip it, so each run of sort/addToLatest/...
+        // produced a spurious "no newline at end of file" diff. The CI formatting check accepts both.
+        fs.writeFile(repoPath, `${repoToJsonSorted(repoContent)}\n`, err => {
             if (err) {
                 reject(err);
             } else {
@@ -765,6 +772,21 @@ function fail(reason: string) {
     process.exit(1);
 }
 
+function usage(): void {
+    console.error('Usage: node src/scripts.mts <command> [options]');
+    console.error();
+    console.error('Commands:');
+    console.error('  init                                              set the version for adapters that have none');
+    console.error('  sort                                              re-sort and re-normalize both repository files');
+    console.error('  nodates                                           drop published/versionDate from both files');
+    console.error('  list [--file <path>]                              build the public adapter list');
+    console.error('  addToLatest --name <name> --type <type>           add an adapter to sources-dist.json');
+    console.error('  addToStable --name <name> [--version <version>]   add an adapter to sources-dist-stable.json');
+    console.error('  updateStable --name <name> [--version <version>]  change the stable version of an adapter');
+    console.error();
+    console.error('Every command is also accepted as a flag, e.g. `--sort` instead of `sort`.');
+}
+
 export { init, sort, createList as list, removeDates as nodates, addToLatest, addToStable, updateStable };
 
 // ESM replacement for the `require.main === module` guard: the block below is the command line entry
@@ -773,19 +795,30 @@ if (process.argv[1] && path.resolve(process.argv[1]) === import.meta.filename) {
     // Wrapping the following code in an IIAFE allows us to use async
     (async () => {
         const argv = minimist(process.argv.slice(2));
+        // Accept every command both as positional (`scripts.mts sort`, the form package.json uses) and as
+        // flag (`--sort`). Only one of the two was honoured per command before, so half of the npm scripts
+        // fell through the chain and exited silently with code 0.
+        const isCommand = (name: string): boolean => argv._.includes(name) || !!argv[name];
+
         // update versions for all adapters, which do not have the version
-        if (argv._.includes('init')) {
+        if (isCommand('init')) {
             init().then(() => process.exit());
-        } else if (argv.nodates) {
+        } else if (isCommand('nodates')) {
             await removeDates();
-        } else if (argv.sort) {
+        } else if (isCommand('sort')) {
             await sort();
-        } else if (argv.list) {
-            const file = argv.list === true ? `${import.meta.dirname}/../list.html` : argv.list;
+        } else if (isCommand('list')) {
+            // the target file may be given as `--file <path>` or as the value of `--list <path>`
+            let file = `${import.meta.dirname}/../list.html`;
+            if (typeof argv.file === 'string') {
+                file = argv.file;
+            } else if (typeof argv.list === 'string') {
+                file = argv.list;
+            }
             const text = await createList();
             fs.writeFileSync(file, text);
             process.exit();
-        } else if (argv._.includes('addToStable')) {
+        } else if (isCommand('addToStable')) {
             const name = argv.name;
             let version = argv.version;
             if (typeof name !== 'string') {
@@ -801,7 +834,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === import.meta.filename) {
                 }
             }
             addToStable(name, version).catch(e => fail(e.message));
-        } else if (argv._.includes('updateStable')) {
+        } else if (isCommand('updateStable')) {
             const name = argv.name;
             let version = argv.version;
             if (typeof name !== 'string') {
@@ -817,7 +850,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === import.meta.filename) {
                 }
             }
             updateStable(name, version).catch(e => fail(e.message));
-        } else if (argv._.includes('addToLatest')) {
+        } else if (isCommand('addToLatest')) {
             const { name, type } = argv;
             if (typeof name !== 'string') {
                 fail('Please specify the adapter name!');
@@ -826,6 +859,9 @@ if (process.argv[1] && path.resolve(process.argv[1]) === import.meta.filename) {
                 fail('Please specify the adapter type!');
             }
             addToLatest(name, type).catch(e => fail(e.message));
+        } else {
+            usage();
+            fail(`Unknown command: ${process.argv.slice(2).join(' ') || '(none)'}`);
         }
     })();
 }

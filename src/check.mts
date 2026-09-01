@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'node:fs';
 import axios from 'axios';
 import { addComment, addLabel, deleteLabel, getGithub, getUrl, getAllComments, deleteComment } from './common.mts';
 import type * as Repochecker from '@iobroker/repochecker';
