@@ -163,9 +163,4 @@ red CI, not a style nit:
 - `unzipper` and `image-size` are devDependencies that nothing imports.
 - No workflow runs `npm run lint` or `npm run typecheck`; both are local steps only.
 
-## Reviewing adapters
 
-`REVIEW_CHECKLIST.md` is the human reviewer checklist; `ai-review/adapterReview.txt` is the prompt/checklist
-for an AI-driven adapter review. The adapter requirements themselves (naming, io-package fields, best
-practices for adapter authors) live in `README.md` — that section is the authoritative answer when a PR asks
-"why was my adapter rejected".
