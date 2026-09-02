@@ -5,6 +5,7 @@ import * as builds from './build.mts';
 import semver from 'semver';
 import { URL } from 'node:url';
 import minimist from 'minimist';
+import type { AdapterType } from './types.mts';
 
 const latestJsonPath = path.normalize(path.join(import.meta.dirname, '../sources-dist.json'));
 const stableJsonPath = path.normalize(path.join(import.meta.dirname, '../sources-dist-stable.json'));
@@ -126,15 +127,21 @@ function getNpmVersion(adapterName: string) {
     return (callback: (result: any) => void) => {
         const url = getNpmApiUrl(adapterName);
         // console.log('getNpmVersion: ' + url);
-        axios(url).then(data => {
-            try {
-                const info = data.data;
-                const last = info['dist-tags'].latest;
-                callback({ adapter: adapterName, version: last, npm: true, info, date: new Date(info.time[last]) });
-            } catch {
+        axios(url)
+            .then(data => {
+                try {
+                    const info = data.data;
+                    const last = info['dist-tags'].latest;
+                    callback({ adapter: adapterName, version: last, npm: true, info, date: new Date(info.time[last]) });
+                } catch {
+                    callback({ adapter: adapterName });
+                }
+            })
+            .catch(e => {
+                // without this handler one failed request (403, 404, network) ends the whole run
+                console.error(`Cannot read npm info of "${adapterName}": ${e.message}`);
                 callback({ adapter: adapterName });
-            }
-        });
+            });
     };
 }
 
@@ -156,26 +163,95 @@ function getNpmVersionAsync(adapterName: string) {
 function getGitVersion(latest: any, adapter: string) {
     return function (callback: (result: any) => void) {
         // console.log('getGitVersion: ' + latest[adapter].meta);
-        axios(latest[adapter].meta).then(data => {
-            try {
-                const info = data.data;
-                callback({
-                    adapter,
-                    license: info.common.license,
-                    version: info.common.version,
-                    desc: info.common.desc,
-                    git: true,
-                    info,
-                });
-            } catch (e) {
-                console.error(`Cannot parse GIT for "${adapter}": ${e}`);
+        axios(latest[adapter].meta)
+            .then(data => {
+                try {
+                    const info = data.data;
+                    callback({
+                        adapter,
+                        license: info.common.license,
+                        version: info.common.version,
+                        desc: info.common.desc,
+                        git: true,
+                        info,
+                    });
+                } catch (e) {
+                    console.error(`Cannot parse GIT for "${adapter}": ${e}`);
+                    callback({ adapter });
+                }
+            })
+            .catch(e => {
+                console.error(`Cannot read io-package.json of "${adapter}": ${e.message}`);
                 callback({ adapter });
-            }
-        });
+            });
     };
 }
 
-let error403Detected: number | null = null;
+// ---------- latest commit of every adapter (GitHub API) ----------
+//
+// Without a token the GitHub API answers 60 requests per hour, then 403 - one run can therefore refresh
+// the commit date of roughly 60 adapters only. The dates are cached in a file between the runs: a run
+// asks for the adapters whose cached date is the oldest (never asked ones first, equally old ones in
+// random order), stops asking after the first 403/429 and keeps the cached date for everything else.
+// Run after run this walks through the whole list. With OWN_GITHUB_TOKEN set the limit is 5000/hour
+// and every adapter is refreshed in one go.
+const commitCachePath = path.normalize(path.join(import.meta.dirname, '../commitDates.json'));
+
+/** Headers for api.github.com - authenticated when OWN_GITHUB_TOKEN is set (5000 instead of 60 requests/hour) */
+function githubApiHeaders(): Record<string, string> {
+    const headers: Record<string, string> = { 'User-Agent': 'request' };
+    if (process.env.OWN_GITHUB_TOKEN) {
+        headers.Authorization = `token ${process.env.OWN_GITHUB_TOKEN}`;
+    }
+    return headers;
+}
+
+interface CommitCacheEntry {
+    /** ISO date of the newest commit */
+    date: string;
+    /** ISO date of the last successful request to GitHub */
+    checked: string;
+}
+
+type CommitCache = Record<string, CommitCacheEntry>;
+
+function readCommitCache(): CommitCache {
+    try {
+        const cache = JSON.parse(fs.readFileSync(commitCachePath, 'utf8'));
+        return cache && typeof cache === 'object' && !Array.isArray(cache) ? cache : {};
+    } catch {
+        return {};
+    }
+}
+
+function writeCommitCache(cache: CommitCache): void {
+    try {
+        fs.writeFileSync(commitCachePath, JSON.stringify(cache, null, 2));
+    } catch (e) {
+        console.error(`Cannot write ${commitCachePath}: ${e.message}`);
+    }
+}
+
+/**
+ * The order in which GitHub is asked: never checked adapters first, then the longest unchecked ones.
+ * Equally old entries are shuffled, so the same adapters do not always end up behind the rate limit.
+ */
+function commitQueryOrder(adapters: string[], cache: CommitCache): string[] {
+    const checkedAt = (adapter: string): number =>
+        cache[adapter] ? new Date(cache[adapter].checked).getTime() || 0 : 0;
+    return (
+        adapters
+            .map(adapter => ({ adapter, random: Math.random() }))
+            .sort((a, b) => a.random - b.random)
+            .map(item => item.adapter)
+            // Array.prototype.sort is stable, so the shuffled order survives among equal timestamps
+            .sort((a, b) => checkedAt(a) - checkedAt(b))
+    );
+}
+
+let commitsBlocked = false;
+let commitsFetched = 0;
+let commitsSkipped = 0;
 
 function getLatestCommit(latest: any, adapter: string) {
     return function (callback: (result: any) => void) {
@@ -187,32 +263,35 @@ function getLatestCommit(latest: any, adapter: string) {
             return callback({ adapter });
         }
 
-        if (error403Detected && Date.now() - error403Detected < 10000) {
-            console.log(`Skip ${adapter} because of 403 error`);
+        if (commitsBlocked) {
+            commitsSkipped++;
             return callback({ adapter });
         }
 
-        console.log(`getLatestCommit: https://api.github.com/repos/${owner[1]}/ioBroker.${adapter}/commits`);
-        axios({
-            url: `https://api.github.com/repos/${owner[1]}/ioBroker.${adapter}/commits`,
-            headers: {
-                'User-Agent': 'request',
-            },
-        })
+        // only the newest commit is needed
+        const url = `https://api.github.com/repos/${owner[1]}/ioBroker.${adapter}/commits?per_page=1`;
+        console.log(`getLatestCommit: ${url}`);
+        axios({ url, headers: githubApiHeaders() })
             .then(data => {
-                error403Detected = null;
-                const info = data.data;
-                if (info?.[0]?.commit) {
-                    callback({ adapter, commit: true, date: new Date(info[0].commit.author.date) });
+                const date = new Date(data.data?.[0]?.commit?.author?.date);
+                if (!isNaN(date.getTime())) {
+                    commitsFetched++;
+                    callback({ adapter, commit: true, date });
                 } else {
                     callback({ adapter });
                 }
             })
             .catch(e => {
-                if (e.message.includes(403)) {
-                    error403Detected = Date.now();
+                const status = e.response?.status;
+                if (status === 403 || status === 429) {
+                    // rate limit reached - every following adapter keeps its cached commit date
+                    commitsBlocked = true;
+                    console.error(
+                        `GitHub API answered ${status} for "${adapter}" - no further commit requests in this run`,
+                    );
+                } else {
+                    console.error(`Cannot get latest commit "${adapter}": ${e}`);
                 }
-                console.error(`Cannot get latest commit "${adapter}": ${e}`);
                 callback({ adapter });
             });
     };
@@ -238,7 +317,7 @@ function formatMaintainer(entry: any, authors: Record<string, number>) {
         }
         return `<a href="mailto:${escapeHtml(entry.email)}">${escapeHtml(name)}</a>`;
     }
-    const email = entry.match(/<([-.@\w\d]+)>/);
+    const email = entry.match(/<([^<>\s]+)>/);
     if (email) {
         let name = entry.replace(email[0], '').trim();
         if (authors[name.toLowerCase()]) {
@@ -266,7 +345,11 @@ function formatMaintainers(list: any, authors: Record<string, number>) {
 // tree page, which broke without a trace when that adapter moved its sources (lib/adapters ->
 // src/lib/adapters, .js -> .ts) - ask the contents API for the directory listing instead.
 function getDiscovery(): Promise<string[] | null> {
-    return requestPromise('https://api.github.com/repos/ioBroker/ioBroker.discovery/contents/src/lib/adapters')
+    return axios({
+        url: 'https://api.github.com/repos/ioBroker/ioBroker.discovery/contents/src/lib/adapters',
+        headers: githubApiHeaders(),
+    })
+        .then(data => data.data)
         .then((files: any[]) =>
             (files || [])
                 .filter(file => file.type === 'file' && /\.[jt]s$/.test(file.name))
@@ -321,21 +404,25 @@ function createList() {
             return getDiscovery();
         })
         .then(discovery => {
+            const commitCache = readCommitCache();
+            commitsBlocked = false;
+            commitsFetched = 0;
+            commitsSkipped = 0;
+
+            const adapters = Object.keys(latest).filter((adapter: string) => !adapter.startsWith('_'));
             const tasks: any[] = [];
-            Object.keys(latest).forEach((adapter: string) => {
-                if (!adapter.startsWith('_')) {
-                    // if (t++ > 3) return;
-                    tasks.push(getNpmVersion(adapter));
-                    tasks.push(getGitVersion(latest, adapter));
-                    tasks.push(getLatestCommit(latest, adapter));
-                }
+            adapters.forEach((adapter: string) => {
+                tasks.push(getNpmVersion(adapter));
+                tasks.push(getGitVersion(latest, adapter));
             });
+            // the GitHub API is rate limited: ask for the adapters with the oldest cached commit date first
+            commitQueryOrder(adapters, commitCache).forEach(adapter => tasks.push(getLatestCommit(latest, adapter)));
 
             return new Promise<string>(resolve =>
                 serial(tasks, (results: any) => {
                     const aList: Record<string, any> = {};
 
-                    const types: Record<string, number> = {};
+                    const types: Partial<Record<AdapterType, number>> = {};
                     const now = new Date();
                     const authors: Record<string, number> = {};
                     for (const adapter in latest) {
@@ -348,7 +435,7 @@ function createList() {
                                     if (typeof entry === 'object') {
                                         user = entry.name;
                                     } else {
-                                        const email = entry.match(/<([-.@\w\d]+)>/);
+                                        const email = entry.match(/<([^<>\s]+)>/);
                                         if (email) {
                                             user = entry.replace(email[0], '').trim();
                                         } else {
@@ -364,7 +451,7 @@ function createList() {
                                 });
                             } else if (list) {
                                 let user;
-                                const email = list.match(/<([-.@\w\d]+)>/);
+                                const email = list.match(/<([^<>\s]+)>/);
                                 if (email) {
                                     user = list.replace(email[0], '').trim();
                                 } else {
@@ -389,11 +476,10 @@ function createList() {
                             icon?: string;
                             desc?: string;
                             license?: string;
-                            type?: string;
+                            type?: AdapterType;
                             typeTitle?: string;
                             typeError?: boolean;
                             discovery?: boolean;
-                            materialize?: boolean;
                             installs?: number;
                             maintainers?: string;
                             created?: string;
@@ -407,8 +493,8 @@ function createList() {
                             };
                         } = {};
                         try {
-                            types[latest[adapter].type] ||= 0;
-                            types[latest[adapter].type]++;
+                            const type: AdapterType = latest[adapter].type;
+                            types[type] = (types[type] || 0) + 1;
 
                             // image
                             if (latest[adapter].icon) {
@@ -423,6 +509,9 @@ function createList() {
                             const git = results.find((result: any) => result.git && result.adapter === adapter);
                             const npm = results.find((result: any) => result.npm && result.adapter === adapter);
                             const commit = results.find((result: any) => result.commit && result.adapter === adapter);
+                            if (commit) {
+                                commitCache[adapter] = { date: commit.date.toISOString(), checked: now.toISOString() };
+                            }
 
                             // Description
                             aItem.desc = git?.desc ? git.desc.en || git.desc : '';
@@ -431,22 +520,17 @@ function createList() {
                             aItem.license = git?.license || (npm && (npm.info.license || npm.info.licenses?.[0].type));
 
                             // Type
-                            aItem.type = latest[adapter].type;
+                            aItem.type = type;
                             aItem.typeTitle =
-                                git && latest[adapter].type !== git.info.common.type
-                                    ? `git: ${git.info.common.type}, repo: ${latest[adapter].type}`
+                                git && type !== git.info.common.type
+                                    ? `git: ${git.info.common.type}, repo: ${type}`
                                     : '';
-                            aItem.typeError = git && latest[adapter].type !== git.info.common.type;
+                            aItem.typeError = git && type !== git.info.common.type;
 
                             // Discovery
                             if (discovery?.includes(adapter)) {
                                 aItem.discovery = true;
                             }
-
-                            // Material
-                            aItem.materialize = git?.info?.common
-                                ? git.info.common.materialize || git.info.common.noConfig || git.info.common.onlyWWW
-                                : false;
 
                             if (stats?.[adapter]) {
                                 aItem.installs = stats[adapter];
@@ -464,7 +548,7 @@ function createList() {
                             // Version
                             aItem.versions = {
                                 github: git ? git.version : '',
-                                githubDate: commit?.date,
+                                githubDate: commit?.date || commitCache[adapter]?.date,
                                 latest: npm ? npm.version : '',
                                 latestDate: npm?.date,
                                 stable: stable[adapter] ? stable[adapter].version : '',
@@ -476,6 +560,15 @@ function createList() {
                             console.error(e);
                         }
                     });
+
+                    // adapters that left the repository do not need a cached date any longer
+                    Object.keys(commitCache).forEach(adapter => !latest[adapter] && delete commitCache[adapter]);
+                    writeCommitCache(commitCache);
+                    console.log(
+                        `Commit dates: ${commitsFetched} fetched from GitHub${
+                            commitsBlocked ? `, ${commitsSkipped} taken from ${commitCachePath} (rate limit)` : ''
+                        }`,
+                    );
 
                     const keys = Object.keys(types);
                     keys.sort();
@@ -663,7 +756,7 @@ function findMainBranch(owner: string, adapterName: string) {
  * @param adapterName
  * @param type The type of the adapter
  */
-async function addToLatest(adapterName: string, type: string) {
+async function addToLatest(adapterName: string, type: AdapterType) {
     const gitRepo = await findGitRepo(adapterName);
     const mainBranch = await findMainBranch(gitRepo.match(/\/([-._a-zA-Z0-9]+)\/ioBroker/)[1], adapterName);
     const metaUrl = getMetaUrl(gitRepo, mainBranch);

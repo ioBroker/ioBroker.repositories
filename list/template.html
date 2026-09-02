@@ -244,14 +244,21 @@
 
     .col-index { width: 1%; color: var(--text-faint); font-variant-numeric: tabular-nums; text-align: right; }
     .col-icon  { width: 1%; }
-    .col-name  { white-space: nowrap; }
-    .col-desc  { width: 100%; min-width: 220px; color: var(--text-dim); }
+    /* The description is the only column that grows; every other column sits at its minimum
+       content width. Long hyphenated names and licenses may wrap so that the whole table fits a
+       1600px wide window - on wider screens (see the media query below) they stay on one line. */
+    .col-desc  { width: 100%; min-width: 220px; color: var(--text-dim); overflow-wrap: anywhere; }
     .col-flag  { width: 1%; text-align: center; }
     .col-num   { width: 1%; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
     .col-date  { width: 1%; white-space: nowrap; font-variant-numeric: tabular-nums; }
-    .col-license { width: 1%; white-space: nowrap; }
+    .col-license { width: 1%; }
     .col-versions { width: 1%; }
-    .col-maint { min-width: 140px; }
+    /* wide enough for "iobroker-community-adapters(137)"; anything longer (a raw e-mail address) may break */
+    .col-maint { min-width: 260px; overflow-wrap: anywhere; }
+
+    @media (min-width: 1800px) {
+        .col-name, .col-license { white-space: nowrap; }
+    }
 
     td img {
         display: block;
@@ -396,7 +403,6 @@
             { id: 'type', label: 'Type', cls: 'col-type', sort: true },
             { id: 'installs', label: 'Installs', cls: 'col-num', sort: true, optional: true },
             { id: 'discovery', label: 'Disc.', cls: 'col-flag', sort: true, title: 'Supported by ioBroker.discovery' },
-            { id: 'materialize', label: 'Admin', cls: 'col-flag', sort: true, title: 'Admin3+ ready (materialize / noConfig / onlyWWW)' },
             { id: 'license', label: 'License', cls: 'col-license', sort: true },
             { id: 'maintainers', label: 'Maintainer', cls: 'col-maint', sort: true },
             { id: 'created', label: 'Created', cls: 'col-date', sort: true },
@@ -511,7 +517,6 @@
                 case 'name': return entry.name.toLowerCase();
                 case 'installs': return Number(item.installs) || 0;
                 case 'discovery': return item.discovery ? 1 : 0;
-                case 'materialize': return item.materialize ? 1 : 0;
                 case 'created': return toTime(item.created);
                 case 'maintainers': return entry.maintainersText.toLowerCase();
                 case 'versions':
@@ -644,8 +649,6 @@
 
             cells.push('<td class="col-flag"><span class="flag' + (item.discovery ? '' : ' flag-off') + '">' +
                 (item.discovery ? '&#10003;' : '&ndash;') + '</span></td>');
-            cells.push('<td class="col-flag"><span class="flag' + (item.materialize ? '' : ' flag-off') + '">' +
-                (item.materialize ? '&#10003;' : '&ndash;') + '</span></td>');
             cells.push('<td class="col-license">' + esc(item.license) + '</td>');
             // maintainers is HTML produced by formatMaintainers() in lib/scripts.js (escaped there)
             cells.push('<td class="col-maint">' + (item.maintainers || '') + '</td>');
@@ -737,7 +740,7 @@
             // first click on a new column: numbers, dates and flags start with the highest value
             state.sortDir = state.sortCol === column
                 ? !state.sortDir
-                : ['installs', 'created', 'versions', 'discovery', 'materialize'].indexOf(column) !== -1;
+                : ['installs', 'created', 'versions', 'discovery'].indexOf(column) !== -1;
             state.sortCol = column;
             update();
         });

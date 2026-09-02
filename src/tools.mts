@@ -4,6 +4,7 @@ import { exec } from 'node:child_process';
 import extend from 'node.extend';
 import { EventEmitter } from 'node:events';
 import axios from 'axios';
+import type { AdapterType } from './types.mts';
 
 EventEmitter.defaultMaxListeners = 100;
 
@@ -127,7 +128,7 @@ function getIoPack(sources: any, name: string, callback?: (...args: any[]) => vo
             setImmediate(() => {
                 getJson(packUrl, (pack: any) => {
                     const version = sources[name].version;
-                    const type = sources[name].type;
+                    const type: AdapterType | undefined = sources[name].type;
                     // If installed from git or something else.
                     // js-controller is an exception because it can be installed from npm and from git
                     if (sources[name].url && name !== 'js-controller') {
