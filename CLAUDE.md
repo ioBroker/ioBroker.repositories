@@ -124,6 +124,9 @@ red CI, not a style nit:
   adapter description would otherwise close the block early and break the whole page. Adapter-supplied strings are
   third party input: `formatMaintainer()` escapes the HTML it builds, and the template escapes everything
   else it renders. Opening the template directly (unfilled) shows an empty state instead of throwing.
+  The commit dates it shows come from the GitHub API, which allows 60 requests per hour without `OWN_GITHUB_TOKEN`.
+  `commitDates.json` (repo root, gitignored) caches them between runs: every run asks for the longest-unchecked
+  adapters first, stops asking at the first 403/429 and falls back to the cached date for the rest.
 - `src/scripts.mts` — the maintainer CLI behind `addToLatest`/`addToStable`/`updateStable`/`sort`/`init`.
 - `src/check.mts` — the PR-time adapter check. Diffs the PR against the base to find which adapters changed,
   runs `@iobroker/repochecker` on each GitHub repo, verifies the PR author is a maintainer, and writes one
