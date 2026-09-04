@@ -1210,6 +1210,11 @@
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.heatingcontrol/master/admin/heatingcontrol.png",
     "type": "climate-control"
   },
+  "heatpump-modbus": {
+    "meta": "https://raw.githubusercontent.com/helgekaiser/ioBroker.heatpump-modbus/main/io-package.json",
+    "icon": "https://github.com/helgekaiser/ioBroker.heatpump-modbus/raw/main/admin/heatpump-modbus.png",
+    "type": "climate-control"
+  },
   "heishamon": {
     "meta": "https://raw.githubusercontent.com/TobiasHanss/ioBroker.heishamon/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/TobiasHanss/ioBroker.heishamon/main/admin/heishamon.png",
