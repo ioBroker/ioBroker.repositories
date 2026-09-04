@@ -3940,6 +3940,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.yr/master/admin/yr.png",
     "type": "weather"
   },
+  "zeekr": {
+    "meta": "https://raw.githubusercontent.com/solderer-de/ioBroker.zeekr/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/solderer-de/ioBroker.zeekr/main/admin/zeekr.png",
+    "type": "vehicle"
+  },
   "zehnder-cloud": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.zehnder-cloud/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.zehnder-cloud/master/admin/zehnder-cloud.png",
