@@ -590,6 +590,11 @@
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.daswetter/master/admin/daswettercom.png",
     "type": "weather"
   },
+  "davis": {
+    "meta": "https://raw.githubusercontent.com/steinwedel/ioBroker.davis/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/steinwedel/ioBroker.davis/main/admin/davis.png",
+    "type": "weather"
+  },
   "deconz": {
     "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.deconz/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.deconz/master/admin/deconz.png",
