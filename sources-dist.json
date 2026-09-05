@@ -851,8 +851,8 @@
     "type": "infrastructure"
   },
   "esmobil": {
-    "meta": "https://raw.githubusercontent.com/beabel/ioBroker.ESmobil/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/beabel/ioBroker.ESmobil/main/admin/esmobil.png",
+    "meta": "https://raw.githubusercontent.com/beabel/ioBroker.esmobil/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/beabel/ioBroker.esmobil/main/admin/esmobil.png",
     "type": "date-and-time"
   },
   "esphome": {
