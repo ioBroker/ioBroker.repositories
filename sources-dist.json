@@ -2895,6 +2895,11 @@
     "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.skiinfo/main/admin/skiinfo.png",
     "type": "misc-data"
   },
+  "skoda-public-api": {
+    "meta": "https://raw.githubusercontent.com/tmarthy/ioBroker.skoda-public-api/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/tmarthy/ioBroker.skoda-public-api/main/admin/skoda-public-api.png",
+    "type": "vehicle"
+  },
   "sky-remote": {
     "meta": "https://raw.githubusercontent.com/AlanSRU/ioBroker.sky-remote/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlanSRU/ioBroker.sky-remote/main/admin/sky-remote.png",
