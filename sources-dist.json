@@ -740,6 +740,11 @@
     "icon": "https://raw.githubusercontent.com/mrbungle64/ioBroker.ecovacs-deebot/master/admin/ecovacs-deebot.png",
     "type": "household"
   },
+  "ecovacs-map": {
+    "meta": "https://raw.githubusercontent.com/helfi9999/ioBroker.ecovacs-map/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/helfi9999/ioBroker.ecovacs-map/main/admin/ecovacs-map.png",
+    "type": "misc"
+  },
   "eebus-go": {
     "meta": "https://raw.githubusercontent.com/FernetMenta/ioBroker.eebus-go/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/FernetMenta/ioBroker.eebus-go/main/admin/eebus-go.png",
