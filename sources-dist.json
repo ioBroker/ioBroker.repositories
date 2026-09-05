@@ -850,6 +850,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.epson_stylus_px830/master/admin/epson_stylus_px830.png",
     "type": "infrastructure"
   },
+  "esmobil": {
+    "meta": "https://raw.githubusercontent.com/beabel/ioBroker.ESmobil/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/beabel/ioBroker.ESmobil/main/admin/esmobil.png",
+    "type": "date-and-time"
+  },
   "esphome": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/admin/esphome.png",
