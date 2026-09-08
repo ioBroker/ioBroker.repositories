@@ -9,12 +9,17 @@ let latest: Record<string, any>;
 let stable: Record<string, any>;
 // let axiosCounter = 0;
 
-console.log(`OWN_GITHUB_TOKEN: ${process.env.OWN_GITHUB_TOKEN}`);
 // axios.defaults.headers = {
 //     'Authorization': process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
 // };
 if (process.env.OWN_GITHUB_TOKEN) {
     axios.defaults.headers.common.Authorization = `Bearer ${process.env.OWN_GITHUB_TOKEN}`;
+    console.log('OWN_GITHUB_TOKEN is set: requests are authenticated (higher rate limit).');
+} else {
+    console.warn(
+        'OWN_GITHUB_TOKEN is NOT set: requests are unauthenticated and may hit GitHub rate limits (HTTP 429). ' +
+            'Note: for pull_request events from forks GitHub does not expose repository secrets.',
+    );
 }
 
 async function request(url: string) {
