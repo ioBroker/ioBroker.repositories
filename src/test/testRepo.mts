@@ -89,8 +89,15 @@ describe('Test Repository', () => {
             if (Object.prototype.hasOwnProperty.call(latest, id) && id !== '_repoInfo') {
                 assert.equal(id, id.toLowerCase(), `Adapter id ${id} is not lowercase`);
                 if (latest[id].meta?.match(/io-package\.json$/)) {
-                    const response = await request(latest[id].meta);
-                    console.log(`[${i}/${len}] Check ${id}`);
+                    console.log(`[${i}/${len}] Check ${id} (${latest[id].meta})`);
+                    let response;
+                    try {
+                        response = await request(latest[id].meta);
+                    } catch (e: any) {
+                        throw new Error(
+                            `Error requesting meta for "${id}" (${latest[id].meta}): ${e.message || e}`,
+                        );
+                    }
                     const pack = response.data;
                     if (pack?.common && pack.common.type !== latest[id].type) {
                         console.error(`Types in "${id}" are not equal: ${pack.common.type} !== ${latest[id].type}`);
