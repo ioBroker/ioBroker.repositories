@@ -9,12 +9,17 @@ let latest: Record<string, any>;
 let stable: Record<string, any>;
 // let axiosCounter = 0;
 
-console.log(`OWN_GITHUB_TOKEN: ${process.env.OWN_GITHUB_TOKEN}`);
 // axios.defaults.headers = {
 //     'Authorization': process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
 // };
 if (process.env.OWN_GITHUB_TOKEN) {
     axios.defaults.headers.common.Authorization = `Bearer ${process.env.OWN_GITHUB_TOKEN}`;
+    console.log('OWN_GITHUB_TOKEN is set: requests are authenticated (higher rate limit).');
+} else {
+    console.warn(
+        'OWN_GITHUB_TOKEN is NOT set: requests are unauthenticated and may hit GitHub rate limits (HTTP 429). ' +
+            'Note: for pull_request events from forks GitHub does not expose repository secrets.',
+    );
 }
 
 async function request(url: string) {
@@ -89,8 +94,15 @@ describe('Test Repository', () => {
             if (Object.prototype.hasOwnProperty.call(latest, id) && id !== '_repoInfo') {
                 assert.equal(id, id.toLowerCase(), `Adapter id ${id} is not lowercase`);
                 if (latest[id].meta?.match(/io-package\.json$/)) {
-                    const response = await request(latest[id].meta);
-                    console.log(`[${i}/${len}] Check ${id}`);
+                    console.log(`[${i}/${len}] Check ${id} (${latest[id].meta})`);
+                    let response;
+                    try {
+                        response = await request(latest[id].meta);
+                    } catch (e: any) {
+                        throw new Error(
+                            `Error requesting meta for "${id}" (${latest[id].meta}): ${e.message || e}`,
+                        );
+                    }
                     const pack = response.data;
                     if (pack?.common && pack.common.type !== latest[id].type) {
                         console.error(`Types in "${id}" are not equal: ${pack.common.type} !== ${latest[id].type}`);

@@ -33,4 +33,10 @@ jobs:
       - run: npm i
       - run: npm run test
         env:
+          # NOTE: on `pull_request` events triggered by a PR from a fork, GitHub deliberately
+          # withholds repository secrets, so OWN_GITHUB_TOKEN is empty here. The meta requests in
+          # src/test/testRepo.mts then run unauthenticated and can hit GitHub's low anonymous rate
+          # limit (HTTP 429) - which is why fork-PR runs sometimes fail with a 429.
+          # Not a misconfiguration: it is inherent to `pull_request` + forks. Switching to
+          # `pull_request_target` would expose the secret but must not execute PR-supplied code.
           OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
