@@ -77,10 +77,13 @@ async function request(url: string) {
             }
             const hintedDelay = getRetryDelayFromResponse(e.response);
             const waitMs = hintedDelay ?? RETRY_FALLBACK_DELAYS[attempt];
+            const nextTry = new Date(Date.now() + waitMs).toISOString();
+            // Make the stall explicit: processing is paused (not hung) while we wait out the rate limit.
             console.warn(
-                `Rate limited (HTTP ${status}) for ${url}. ` +
-                    `Waiting ${Math.round(waitMs / 1000)}s before retry ${attempt + 1}/${maxRetries}` +
-                    `${hintedDelay !== undefined ? ' (from response headers)' : ' (fallback)'}.`,
+                `Rate limited (HTTP ${status}) for ${url}. Processing is PAUSED - not stuck: ` +
+                    `waiting ${Math.round(waitMs / 1000)}s ` +
+                    `${hintedDelay !== undefined ? '(from response headers)' : '(fallback)'} ` +
+                    `before retry ${attempt + 1}/${maxRetries}, next attempt at ${nextTry}.`,
             );
             await delay(waitMs);
         }
