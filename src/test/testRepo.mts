@@ -22,13 +22,69 @@ if (process.env.OWN_GITHUB_TOKEN) {
     );
 }
 
+const delay = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms));
+
+// Fallback wait times (in ms) between retries when the response carries no hint: 5 min, then 10 min.
+const RETRY_FALLBACK_DELAYS = [5 * 60 * 1000, 10 * 60 * 1000, 10 * 60 * 1000];
+
+// GitHub signals rate limiting with HTTP 429 (and sometimes 403 once the limit is exhausted).
+function isRateLimit(status: number): boolean {
+    return status === 429 || status === 403;
+}
+
+// Determine how long to wait from the response headers, honouring `Retry-After`
+// (seconds or an HTTP date) or `x-ratelimit-reset` (epoch seconds). Returns undefined if no hint.
+function getRetryDelayFromResponse(response: any): number | undefined {
+    const headers = response?.headers || {};
+    const retryAfter = headers['retry-after'];
+    if (retryAfter !== undefined) {
+        const seconds = Number(retryAfter);
+        if (!Number.isNaN(seconds)) {
+            return seconds * 1000;
+        }
+        const date = new Date(retryAfter).getTime();
+        if (!Number.isNaN(date)) {
+            return Math.max(0, date - Date.now());
+        }
+    }
+    const reset = headers['x-ratelimit-reset'];
+    if (reset !== undefined && !Number.isNaN(Number(reset))) {
+        return Math.max(0, Number(reset) * 1000 - Date.now());
+    }
+    return undefined;
+}
+
 async function request(url: string) {
     // axiosCounter++;
     // if (axiosCounter % 5) {
     //     await new Promise(resolve => setTimeout(resolve, 300));
     // }
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    return axios(url);
+    await delay(1000);
+
+    const maxRetries = 3;
+    for (let attempt = 0; ; attempt++) {
+        try {
+            return await axios(url);
+        } catch (e: any) {
+            const status = e.response?.status;
+            // 404 (not found) is a definite answer - never retry it.
+            if (status === 404) {
+                throw e;
+            }
+            // Only retry on GitHub rate limit responses; give up once retries are exhausted.
+            if (!status || !isRateLimit(status) || attempt >= maxRetries) {
+                throw e;
+            }
+            const hintedDelay = getRetryDelayFromResponse(e.response);
+            const waitMs = hintedDelay ?? RETRY_FALLBACK_DELAYS[attempt];
+            console.warn(
+                `Rate limited (HTTP ${status}) for ${url}. ` +
+                    `Waiting ${Math.round(waitMs / 1000)}s before retry ${attempt + 1}/${maxRetries}` +
+                    `${hintedDelay !== undefined ? ' (from response headers)' : ' (fallback)'}.`,
+            );
+            await delay(waitMs);
+        }
+    }
 }
 
 const reservedAdapterNames = ['config', 'system', 'alias', 'design', 'all', 'self'];
