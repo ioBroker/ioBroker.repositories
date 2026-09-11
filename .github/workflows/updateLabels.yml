@@ -1,0 +1,41 @@
+# This workflow manages the check-state labels (ai-check, rd-check, wip/ok) of open LATEST PRs.
+
+name: Update labels
+
+#
+# WARNING:
+#    ** Do NOT run untrusted code when using pull_request_target **
+# pull_request_target is needed as pull_request does not provide secrets and so no
+# labeling of PR is possible.
+#
+on:
+  pull_request_target:
+    types: [labeled, unlabeled]
+
+  issue_comment:
+    types: [created, edited]
+
+  workflow_dispatch:
+
+  schedule:
+    # * is a special character in YAML, so you have to quote this string
+    # every 3 hours
+    - cron: '0 */3 * * *'
+
+jobs:
+  updateLabels:
+    name: update labels
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: npm i
+      - run: npm run updateLabels
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

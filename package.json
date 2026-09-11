@@ -31,6 +31,7 @@
         "rdCheckedPrInfo": "node lib/rdCheckedPrInfo.js",
         "objJsonMissingPrInfo": "node lib/objJsonMissingPrInfo.js",
         "setLabels": "node lib/setLabels.js",
+        "updateLabels": "node lib/updateLabels.js",
         "setStableTag": "node lib/setStableTag.js",
         "setTag": "node lib/setTag.js",
         "stable": "node lib/readyForStable.js",
