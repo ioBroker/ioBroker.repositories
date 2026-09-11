@@ -66,7 +66,7 @@
     ],
     "devDependencies": {
         "@iobroker/eslint-config": "^2.3.4",
-        "@iobroker/repochecker": "^5.22.0",
+        "@iobroker/repochecker": "^5.22.1",
         "@types/minimist": "^1.2.5",
         "@types/mocha": "^10.0.10",
         "@types/node": "^24.0.0",
