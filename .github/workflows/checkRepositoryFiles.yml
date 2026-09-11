@@ -14,8 +14,11 @@ on:
   
   pull_request: {}
 
+# Group per ref so runs of different PRs never cancel each other.
+# refs/pull/<n>/merge is unique per PR, refs/heads/master is shared by all master runs,
+# so only a new master push (after a commit) cancels the older master run.
 concurrency:
-    group: stable-${{ github.head_ref }}
+    group: ${{ github.workflow }}-${{ github.ref }}
     cancel-in-progress: true
 
 jobs:
