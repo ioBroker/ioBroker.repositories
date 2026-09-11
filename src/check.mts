@@ -12,8 +12,8 @@ const checker: typeof Repochecker = require('@iobroker/repochecker');
 
 const TEXT_RECHECK = 'RE-CHECK!';
 const TEXT_COMMENT_TITLE = '## Automated adapter checker';
-const TEXT_MULTIPLE_REPOSITORIES =
-    'Please create seperate PRs for every adpater to add or update. This PR might be closed as it changes or adds more than one adapter.';
+const TEXT_MULTIPLE_ADAPTERS =
+    '>[!CAUTION]\n>Please create seperate PRs for every adpater to add or update. This PR might be closed as it changes or adds more than one adapter.';
 const ONE_DAY = 3600000 * 24;
 
 /** One line of the aggregated "Automated adapter checker" comment. */
@@ -534,21 +534,27 @@ async function doIt() {
     // A PR should only add or update a single adapter. If more than one adapter is
     // changed, flag the PR and ask the author to split it into separate PRs.
     if (links.length > 1) {
-        console.log(`PR ${prID} changes ${links.length} adapters - flagging as 'multiple repositories'`);
+        console.log(`PR ${prID} changes ${links.length} adapters - flagging as 'multiple adapters'`);
         try {
-            await addLabel(prID, ['multiple repositories']);
+            await addLabel(prID, ['multiple adapters']);
         } catch (e) {
-            console.error(`Cannot add label 'multiple repositories': ${e}`);
+            console.error(`Cannot add label 'multiple adapters': ${e}`);
         }
 
         try {
+            await addLabel(prID, ['⚠️check']);
+        } catch (e) {
+            console.error(`Cannot add label '⚠️check': ${e}`);
+        }
+        
+        try {
             const gitComments = await getAllComments(prID);
-            const exists = gitComments.find((comment: any) => comment.body.includes(TEXT_MULTIPLE_REPOSITORIES));
+            const exists = gitComments.find((comment: any) => comment.body.includes(TEXT_MULTIPLE_ADAPTERS));
             if (!exists) {
-                await addComment(prID, TEXT_MULTIPLE_REPOSITORIES);
+                await addComment(prID, TEXT_MULTIPLE_ADAPTERS);
             }
         } catch (e) {
-            console.error(`Cannot add 'multiple repositories' comment: ${e}`);
+            console.error(`Cannot add 'multiple adapters' comment: ${e}`);
         }
     }
 
