@@ -33,9 +33,12 @@ export function addLabel(prID: IssueId, labels: string[]): Promise<any> {
 }
 
 export function deleteLabel(prID: IssueId, label: string): Promise<any> {
-    let url = `labels/${label}`;
+    // Label names may contain spaces and non-ASCII characters (e.g. 'auto-checked ❌'),
+    // so they must be percent-encoded to form a valid request path.
+    const encodedLabel = encodeURIComponent(label);
+    let url = `labels/${encodedLabel}`;
     if (prID) {
-        url = `issues/${prID}/labels/${label}`;
+        url = `issues/${prID}/labels/${encodedLabel}`;
     }
     return axios
         .delete(`https://api.github.com/repos/ioBroker/ioBroker.repositories/${url}`, {
