@@ -471,6 +471,12 @@
     "type": "misc-data",
     "version": "3.1.0"
   },
+  "creality": {
+    "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.creality/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.creality/main/admin/creality_icon.png",
+    "type": "hardware",
+    "version": "0.4.1"
+  },
   "cul": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cul/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cul/master/admin/busware.jpg",
