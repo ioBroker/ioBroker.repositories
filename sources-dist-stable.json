@@ -1329,6 +1329,12 @@
     "type": "lighting",
     "version": "1.13.1"
   },
+  "husqvarna-automower-connect": {
+    "meta": "https://raw.githubusercontent.com/bueste/ioBroker.husqvarna-automower-connect/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bueste/ioBroker.husqvarna-automower-connect/main/admin/husqvarna-automower-connect.svg",
+    "type": "garden",
+    "version": "1.0.10"
+  },
   "huum-sauna": {
     "meta": "https://raw.githubusercontent.com/Chris-656/ioBroker.huum-sauna/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Chris-656/ioBroker.huum-sauna/main/admin/huum-sauna.png",
