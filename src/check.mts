@@ -850,11 +850,16 @@ async function doIt() {
     if (!someChecked) {
         comments.push({ text: 'No changed adapters found', noDecorate: true });
     } else {
-        try {
-            await deleteLabel(prID, 'auto-checked ✔');
-            await deleteLabel(prID, 'auto-checked ❌');
-        } catch {
-            // the labels may not be present on the PR - nothing to clean up then
+        // Remove both result labels independently: deleting a label that is not
+        // present returns 404, so a shared try/catch would abort the second delete
+        // and leave a stale label behind (e.g. a failing check followed by a
+        // passing RE-CHECK! left both 'auto-checked ✔' and 'auto-checked ❌' set).
+        for (const label of ['auto-checked ✔', 'auto-checked ❌']) {
+            try {
+                await deleteLabel(prID, label);
+            } catch {
+                // the label may not be present on the PR - nothing to clean up then
+            }
         }
         try {
             if (errorsFound) {
