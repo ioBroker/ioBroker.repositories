@@ -1585,6 +1585,11 @@
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.judoisoft/master/admin/judo.png",
     "type": "household"
   },
+  "kanban": {
+    "meta": "https://raw.githubusercontent.com/bmueller77/ioBroker.kanban/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bmueller77/ioBroker.kanban/main/admin/kanban.png",
+    "type": "misc-data"
+  },
   "kecontact": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kecontact/master/admin/kecontact.png",
