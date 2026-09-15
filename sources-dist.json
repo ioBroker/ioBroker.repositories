@@ -135,6 +135,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.alias-manager/master/admin/alias-manager.png",
     "type": "general"
   },
+  "alias-workbench": {
+    "meta": "https://raw.githubusercontent.com/RicardoHipp/ioBroker.alias-workbench/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/RicardoHipp/ioBroker.alias-workbench/main/admin/alias-workbench.png",
+    "type": "general"
+  },
   "alpha-ess": {
     "meta": "https://raw.githubusercontent.com/Gaspode69/ioBroker.alpha-ess/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Gaspode69/ioBroker.alpha-ess/main/admin/alpha-ess.png",
