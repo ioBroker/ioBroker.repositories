@@ -186,6 +186,18 @@ export function closePR(prID: IssueId): Promise<any> {
         .then(response => response.data);
 }
 
+export function setPullRequestTitle(prID: IssueId, title: string): Promise<any> {
+    return axios
+        .patch(
+            `https://api.github.com/repos/ioBroker/ioBroker.repositories/pulls/${prID}`,
+            { title },
+            {
+                headers: authHeaders(),
+            },
+        )
+        .then(response => response.data);
+}
+
 export function lockIssue(prID: IssueId): Promise<any> {
     return axios
         .put(
