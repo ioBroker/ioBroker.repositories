@@ -318,6 +318,10 @@ async function detectChangedAdaptersInFile(filename: string, baseRef: string, he
                 // The version pinned by the entry. Only sources-dist-stable.json entries
                 // carry one - for sources-dist.json entries that stay undefined.
                 version: headJson[name].version,
+                // The version pinned before this PR (undefined for a newly added entry). Used to
+                // detect whether a stable entry's version actually changed, versus a metadata-only
+                // change (e.g. an updated icon URL) that keeps the same version.
+                baseVersion: baseJson && baseJson[name] ? baseJson[name].version : undefined,
             };
         })
         .filter(Boolean);
@@ -364,7 +368,7 @@ async function detectAffectedAdapter(prID: string) {
 
     console.log(`Changed sources files: ${sourceFiles.join(', ')}`);
 
-    const adapters: { url: string; isStable?: boolean; version?: string }[] = [];
+    const adapters: { url: string; isStable?: boolean; version?: string; baseVersion?: string }[] = [];
 
     for (const filename of sourceFiles) {
         const changed = await detectChangedAdaptersInFile(filename, mergeBase, headRef);
@@ -375,6 +379,7 @@ async function detectAffectedAdapter(prID: string) {
             } else if (!existing.version && c.version) {
                 // The same adapter changed in latest AND stable - keep the pinned stable version.
                 existing.version = c.version;
+                existing.baseVersion = c.baseVersion;
             }
         });
     }
@@ -917,9 +922,11 @@ async function doIt() {
         if (newAtStable) {
             // New adapter added to the stable repository ('new at STABLE' label).
             newTitle = `Add ${titleAdapterName} ${titleVersion} to STABLE`;
-        } else if (isStable) {
+        } else if (isStable && links[0].version && links[0].version !== links[0].baseVersion) {
             // Version of an existing stable adapter updated ('Stable' label, but not 'new at STABLE').
-            newTitle = `Update ${titleAdapterName} to ${titleVersion}`;
+            // Only when the pinned version actually changed - a metadata-only change (e.g. an
+            // updated icon URL) that keeps the same version must not rename the PR.
+            newTitle = `Update ${titleAdapterName} to ${links[0].version}`;
         } else if (newAtLatest) {
             // New adapter added to the latest repository ('new at LATEST' label).
             newTitle = `Add ${titleAdapterName} to LATEST`;
