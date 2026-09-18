@@ -2097,6 +2097,12 @@
     "type": "lighting",
     "version": "1.4.0"
   },
+  "navimow": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.navimow/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.navimow/main/admin/navimow.png",
+    "type": "garden",
+    "version": "1.1.2"
+  },
   "net-tools": {
     "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.net-tools/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.net-tools/master/admin/net-tools.png",
