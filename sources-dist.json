@@ -3970,6 +3970,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.zehnder-cloud/master/admin/zehnder-cloud.png",
     "type": "climate-control"
   },
+  "zeiterfassung": {
+    "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.zeiterfassung/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.zeiterfassung/main/admin/zeiterfassung.png",
+    "type": "storage"
+  },
   "zendure-solarflow": {
     "meta": "https://raw.githubusercontent.com/nograx/ioBroker.zendure-solarflow/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/nograx/ioBroker.zendure-solarflow/main/admin/zendure-solarflow.png",
