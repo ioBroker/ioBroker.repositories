@@ -185,6 +185,11 @@
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/admin/autodarts.svg",
     "type": "protocols"
   },
+  "autodoc": {
+    "meta": "https://raw.githubusercontent.com/crunchip77/ioBroker.autodoc/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/crunchip77/ioBroker.autodoc/main/admin/autodoc.png",
+    "type": "general"
+  },
   "awattar": {
     "meta": "https://raw.githubusercontent.com/sirjojo69/ioBroker.awattar/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/sirjojo69/ioBroker.awattar/master/admin/awattar.png",
