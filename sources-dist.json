@@ -3280,6 +3280,11 @@
     "icon": "https://raw.githubusercontent.com/walli545/ioBroker.time-switch/master/admin/time-switch.png",
     "type": "date-and-time"
   },
+  "time-tracker": {
+    "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.time-tracker/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.time-tracker/main/admin/time-tracker.png",
+    "type": "storage"
+  },
   "tinker": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.tinker/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.tinker/master/admin/tinker.png",
