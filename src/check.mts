@@ -1,6 +1,15 @@
 import fs from 'node:fs';
 import axios from 'axios';
-import { addComment, addLabel, deleteLabel, getGithub, getUrl, getAllComments, deleteComment } from './common.mts';
+import {
+    addComment,
+    addLabel,
+    deleteLabel,
+    getGithub,
+    getUrl,
+    getAllComments,
+    deleteComment,
+    setPullRequestTitle,
+} from './common.mts';
 import type * as Repochecker from '@iobroker/repochecker';
 import { createRequire } from 'node:module';
 
@@ -12,8 +21,8 @@ const checker: typeof Repochecker = require('@iobroker/repochecker');
 
 const TEXT_RECHECK = 'RE-CHECK!';
 const TEXT_COMMENT_TITLE = '## Automated adapter checker';
-const TEXT_MULTIPLE_REPOSITORIES =
-    'Please create seperate PRs for every adpater to add or update. This PR might be closed as it changes or adds more than one adapter.';
+const TEXT_MULTIPLE_ADAPTERS =
+    '>[!CAUTION]\n>Please create seperate PRs for every adpater to add or update. This PR might be closed as it changes or adds more than one adapter.';
 const ONE_DAY = 3600000 * 24;
 
 /** One line of the aggregated "Automated adapter checker" comment. */
@@ -309,6 +318,10 @@ async function detectChangedAdaptersInFile(filename: string, baseRef: string, he
                 // The version pinned by the entry. Only sources-dist-stable.json entries
                 // carry one - for sources-dist.json entries that stay undefined.
                 version: headJson[name].version,
+                // The version pinned before this PR (undefined for a newly added entry). Used to
+                // detect whether a stable entry's version actually changed, versus a metadata-only
+                // change (e.g. an updated icon URL) that keeps the same version.
+                baseVersion: baseJson && baseJson[name] ? baseJson[name].version : undefined,
             };
         })
         .filter(Boolean);
@@ -355,7 +368,7 @@ async function detectAffectedAdapter(prID: string) {
 
     console.log(`Changed sources files: ${sourceFiles.join(', ')}`);
 
-    const adapters: { url: string; isStable?: boolean; version?: string }[] = [];
+    const adapters: { url: string; isStable?: boolean; version?: string; baseVersion?: string }[] = [];
 
     for (const filename of sourceFiles) {
         const changed = await detectChangedAdaptersInFile(filename, mergeBase, headRef);
@@ -366,6 +379,7 @@ async function detectAffectedAdapter(prID: string) {
             } else if (!existing.version && c.version) {
                 // The same adapter changed in latest AND stable - keep the pinned stable version.
                 existing.version = c.version;
+                existing.baseVersion = c.baseVersion;
             }
         });
     }
@@ -518,6 +532,7 @@ async function doIt() {
     fileNames.forEach((f: string) => console.log(` ${f}`));
 
     const isStable = fileNames.includes('sources-dist-stable.json');
+    const isLatest = fileNames.includes('sources-dist.json');
 
     const links = await detectAffectedAdapter(prID);
 
@@ -534,21 +549,27 @@ async function doIt() {
     // A PR should only add or update a single adapter. If more than one adapter is
     // changed, flag the PR and ask the author to split it into separate PRs.
     if (links.length > 1) {
-        console.log(`PR ${prID} changes ${links.length} adapters - flagging as 'multiple repositories'`);
+        console.log(`PR ${prID} changes ${links.length} adapters - flagging as 'multiple adapters'`);
         try {
-            await addLabel(prID, ['multiple repositories']);
+            await addLabel(prID, ['multiple adapters']);
         } catch (e) {
-            console.error(`Cannot add label 'multiple repositories': ${e}`);
+            console.error(`Cannot add label 'multiple adapters': ${e}`);
         }
 
         try {
+            await addLabel(prID, ['⚠️check']);
+        } catch (e) {
+            console.error(`Cannot add label '⚠️check': ${e}`);
+        }
+        
+        try {
             const gitComments = await getAllComments(prID);
-            const exists = gitComments.find((comment: any) => comment.body.includes(TEXT_MULTIPLE_REPOSITORIES));
+            const exists = gitComments.find((comment: any) => comment.body.includes(TEXT_MULTIPLE_ADAPTERS));
             if (!exists) {
-                await addComment(prID, TEXT_MULTIPLE_REPOSITORIES);
+                await addComment(prID, TEXT_MULTIPLE_ADAPTERS);
             }
         } catch (e) {
-            console.error(`Cannot add 'multiple repositories' comment: ${e}`);
+            console.error(`Cannot add 'multiple adapters' comment: ${e}`);
         }
     }
 
@@ -559,6 +580,14 @@ async function doIt() {
     let errorsFound = false;
     let maintainerMissing = false;
 
+    // Track the state required to auto-adjust the PR title for single-adapter PRs (see below).
+    // These mirror the labels set during the loop: 'new at STABLE', 'new at LATEST' and the
+    // 'Stable' label (a change to the stable repository file).
+    let titleAdapterName = '';
+    let titleVersion = '';
+    let newAtStable = false;
+    let newAtLatest = false;
+
     for (let i = 0; i < links.length; i++) {
         const data = await executeOneAdapterCheck(links[i].url);
         const parts = data.adapter.split('/');
@@ -566,6 +595,10 @@ async function doIt() {
         const adapterName = adapter.split('.')[1];
         const owner = parts.pop();
         const link = `https://github.com/${owner}/${adapter}`;
+
+        // Remember the adapter name (without the 'ioBroker.' prefix) for the PR title adjustment.
+        // Only relevant for single-adapter PRs, where the loop runs exactly once.
+        titleAdapterName = adapterName;
 
         console.log(``);
         console.log(`checking ${owner}/${adapter}`);
@@ -684,6 +717,8 @@ async function doIt() {
             // The release this PR actually pins in sources-dist-stable.json. Falls back
             // to the current latest release when the changed entry could not be parsed.
             const submittedRelease = links[i].version || latestRelease;
+            // Version used for the PR title adjustment (submitted stable version).
+            titleVersion = submittedRelease;
             const latestTime = new Date(latest[adapterName].versionDate);
             const latestTimeStr = `${latestTime.getDate()}.${latestTime.getMonth() + 1}.${latestTime.getFullYear()}`;
             const latestDaysOld = Math.floor((now.getTime() - latestTime.getTime()) / ONE_DAY);
@@ -751,6 +786,7 @@ async function doIt() {
             } else {
                 comments.push({ text: ``, noDecorate: true });
                 comments.push({ text: `stable release not yet available`, noDecorate: true });
+                newAtStable = true;
                 await addLabel(prID, ['new at STABLE']);
             }
 
@@ -775,6 +811,7 @@ async function doIt() {
             const latest = await getUrl('https://download.iobroker.net/sources-dist-latest.json');
 
             if (!latest[adapterName]) {
+                newAtLatest = true;
                 await addLabel(prID, ['new at LATEST']);
 
                 const gitComments = await getAllComments(prID);
@@ -844,11 +881,16 @@ async function doIt() {
     if (!someChecked) {
         comments.push({ text: 'No changed adapters found', noDecorate: true });
     } else {
-        try {
-            await deleteLabel(prID, 'auto-checked ✔');
-            await deleteLabel(prID, 'auto-checked ❌');
-        } catch {
-            // the labels may not be present on the PR - nothing to clean up then
+        // Remove both result labels independently: deleting a label that is not
+        // present returns 404, so a shared try/catch would abort the second delete
+        // and leave a stale label behind (e.g. a failing check followed by a
+        // passing RE-CHECK! left both 'auto-checked ✔' and 'auto-checked ❌' set).
+        for (const label of ['auto-checked ✔', 'auto-checked ❌']) {
+            try {
+                await deleteLabel(prID, label);
+            } catch {
+                // the label may not be present on the PR - nothing to clean up then
+            }
         }
         try {
             if (errorsFound) {
@@ -868,6 +910,34 @@ async function doIt() {
                 await addLabel(prID, ['maintainer ?']);
             } catch (e) {
                 console.error(`Cannot add label 'maintainer ?': ${e}`);
+            }
+        }
+    }
+
+    // Auto-adjust the PR title for single-adapter PRs. Multi-adapter PRs (links.length > 1),
+    // PRs that change both repository files (latest AND stable) and PRs that neither add nor
+    // update an adapter are left untouched.
+    if (links.length === 1 && !(isStable && isLatest)) {
+        let newTitle = '';
+        if (newAtStable) {
+            // New adapter added to the stable repository ('new at STABLE' label).
+            newTitle = `Add ${titleAdapterName} ${titleVersion} to STABLE`;
+        } else if (isStable && links[0].version && links[0].version !== links[0].baseVersion) {
+            // Version of an existing stable adapter updated ('Stable' label, but not 'new at STABLE').
+            // Only when the pinned version actually changed - a metadata-only change (e.g. an
+            // updated icon URL) that keeps the same version must not rename the PR.
+            newTitle = `Update ${titleAdapterName} to ${links[0].version}`;
+        } else if (newAtLatest) {
+            // New adapter added to the latest repository ('new at LATEST' label).
+            newTitle = `Add ${titleAdapterName} to LATEST`;
+        }
+
+        if (newTitle) {
+            try {
+                console.log(`adjusting title of PR ${prID} to '${newTitle}'`);
+                await setPullRequestTitle(prID, newTitle);
+            } catch (e) {
+                console.error(`Cannot adjust title of PR ${prID}: ${e}`);
             }
         }
     }

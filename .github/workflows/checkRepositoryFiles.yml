@@ -14,8 +14,11 @@ on:
   
   pull_request: {}
 
+# Group per ref so runs of different PRs never cancel each other.
+# refs/pull/<n>/merge is unique per PR, refs/heads/master is shared by all master runs,
+# so only a new master push (after a commit) cancels the older master run.
 concurrency:
-    group: stable-${{ github.head_ref }}
+    group: ${{ github.workflow }}-${{ github.ref }}
     cancel-in-progress: true
 
 jobs:
@@ -25,6 +28,8 @@ jobs:
       github.repository == 'ioBroker/ioBroker.repositories'
 
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -33,4 +38,9 @@ jobs:
       - run: npm i
       - run: npm run test
         env:
-          OWN_GITHUB_TOKEN: ${{ secrets.OWN_GITHUB_TOKEN }}
+          # Use the automatic GITHUB_TOKEN instead of a repository secret. Repository secrets are
+          # withheld from `pull_request` events triggered by forks, so OWN_GITHUB_TOKEN was empty on
+          # such runs and the meta requests in src/test/testRepo.mts hit GitHub's low anonymous rate
+          # limit (HTTP 429). github.token IS provided on fork PRs; read access is sufficient here
+          # and it raises the API rate limit from 60 to 1000 requests/hour.
+          OWN_GITHUB_TOKEN: ${{ github.token }}
