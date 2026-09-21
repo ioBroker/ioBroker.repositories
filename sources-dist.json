@@ -855,6 +855,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.epson_stylus_px830/master/admin/epson_stylus_px830.png",
     "type": "infrastructure"
   },
+  "esmobil": {
+    "meta": "https://raw.githubusercontent.com/beabel/ioBroker.esmobil/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/beabel/ioBroker.esmobil/main/admin/esmobil.png",
+    "type": "date-and-time"
+  },
   "esphome": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/admin/esphome.png",
@@ -3592,7 +3597,7 @@
   },
   "vis-fancyswitch": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-fancyswitch/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-fancyswitch/master/admin/fancyswitch.png",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-fancyswitch/master/admin/fancyswitch.svg",
     "type": "visualization-widgets"
   },
   "vis-google-fonts": {
