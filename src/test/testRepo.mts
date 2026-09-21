@@ -1,35 +1,102 @@
-'use strict';
-const assert = require('node:assert');
-const fs = require('node:fs');
-const axios = require('axios');
-let latest;
-let stable;
+import assert from 'node:assert';
+import fs from 'node:fs';
+import axios from 'axios';
+import { createRequire } from 'node:module';
+
+// the repository files are loaded with require() so that they are read and parsed only once
+const require = createRequire(import.meta.url);
+let latest: Record<string, any>;
+let stable: Record<string, any>;
 // let axiosCounter = 0;
 
-console.log(`OWN_GITHUB_TOKEN: ${process.env.OWN_GITHUB_TOKEN}`);
 // axios.defaults.headers = {
 //     'Authorization': process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
 // };
 if (process.env.OWN_GITHUB_TOKEN) {
-    axios.defaults.headers.common['Authorization'] = `Bearer ${process.env.OWN_GITHUB_TOKEN}`;
+    axios.defaults.headers.common.Authorization = `Bearer ${process.env.OWN_GITHUB_TOKEN}`;
+    console.log('OWN_GITHUB_TOKEN is set: requests are authenticated (higher rate limit).');
+} else {
+    console.warn(
+        'OWN_GITHUB_TOKEN is NOT set: requests are unauthenticated and may hit GitHub rate limits (HTTP 429). ' +
+            'Note: for pull_request events from forks GitHub does not expose repository secrets.',
+    );
 }
 
-async function request(url) {
+const delay = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms));
+
+// Fallback wait times (in ms) between retries when the response carries no hint: 5 min, then 10 min.
+const RETRY_FALLBACK_DELAYS = [5 * 60 * 1000, 10 * 60 * 1000, 10 * 60 * 1000];
+
+// GitHub signals rate limiting with HTTP 429 (and sometimes 403 once the limit is exhausted).
+function isRateLimit(status: number): boolean {
+    return status === 429 || status === 403;
+}
+
+// Determine how long to wait from the response headers, honouring `Retry-After`
+// (seconds or an HTTP date) or `x-ratelimit-reset` (epoch seconds). Returns undefined if no hint.
+function getRetryDelayFromResponse(response: any): number | undefined {
+    const headers = response?.headers || {};
+    const retryAfter = headers['retry-after'];
+    if (retryAfter !== undefined) {
+        const seconds = Number(retryAfter);
+        if (!Number.isNaN(seconds)) {
+            return seconds * 1000;
+        }
+        const date = new Date(retryAfter).getTime();
+        if (!Number.isNaN(date)) {
+            return Math.max(0, date - Date.now());
+        }
+    }
+    const reset = headers['x-ratelimit-reset'];
+    if (reset !== undefined && !Number.isNaN(Number(reset))) {
+        return Math.max(0, Number(reset) * 1000 - Date.now());
+    }
+    return undefined;
+}
+
+async function request(url: string) {
     // axiosCounter++;
     // if (axiosCounter % 5) {
     //     await new Promise(resolve => setTimeout(resolve, 300));
     // }
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    return axios(url);
+    await delay(1000);
+
+    const maxRetries = 3;
+    for (let attempt = 0; ; attempt++) {
+        try {
+            return await axios(url);
+        } catch (e: any) {
+            const status = e.response?.status;
+            // 404 (not found) is a definite answer - never retry it.
+            if (status === 404) {
+                throw e;
+            }
+            // Only retry on GitHub rate limit responses; give up once retries are exhausted.
+            if (!status || !isRateLimit(status) || attempt >= maxRetries) {
+                throw e;
+            }
+            const hintedDelay = getRetryDelayFromResponse(e.response);
+            const waitMs = hintedDelay ?? RETRY_FALLBACK_DELAYS[attempt];
+            const nextTry = new Date(Date.now() + waitMs).toISOString();
+            // Make the stall explicit: processing is paused (not hung) while we wait out the rate limit.
+            console.warn(
+                `Rate limited (HTTP ${status}) for ${url}. Processing is PAUSED - not stuck: ` +
+                    `waiting ${Math.round(waitMs / 1000)}s ` +
+                    `${hintedDelay !== undefined ? '(from response headers)' : '(fallback)'} ` +
+                    `before retry ${attempt + 1}/${maxRetries}, next attempt at ${nextTry}.`,
+            );
+            await delay(waitMs);
+        }
+    }
 }
 
 const reservedAdapterNames = ['config', 'system', 'alias', 'design', 'all', 'self'];
 
 describe('Test Repository', () => {
     it('Test Repository: latest', done => {
-        const text = fs.readFileSync(`${__dirname}/../sources-dist.json`);
+        const text = fs.readFileSync(`${import.meta.dirname}/../../sources-dist.json`);
         try {
-            latest = JSON.parse(text);
+            latest = JSON.parse(text.toString());
         } catch (e) {
             assert.equal(e, null, 'Error parsing sources-dist.json');
         }
@@ -37,9 +104,9 @@ describe('Test Repository', () => {
     });
 
     it('Test Repository: stable', done => {
-        const text = fs.readFileSync(`${__dirname}/../sources-dist-stable.json`);
+        const text = fs.readFileSync(`${import.meta.dirname}/../../sources-dist-stable.json`);
         try {
-            stable = JSON.parse(text);
+            stable = JSON.parse(text.toString());
         } catch (e) {
             assert.equal(e, null, 'Error parsing sources-dist-stable.json');
         }
@@ -47,24 +114,24 @@ describe('Test Repository', () => {
     });
 
     it('Check reserved names', done => {
-        stable ||= require('../sources-dist-stable.json');
-        latest ||= require('../sources-dist.json');
+        stable ||= require('../../sources-dist-stable.json');
+        latest ||= require('../../sources-dist.json');
         // check stable names
         let id = Object.keys(stable).find(id =>
-            reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')),
+            reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.', '')),
         );
         assert.ok(!id, `Found reserved name in stable: ${id}`);
         // check the latest names
         id = Object.keys(latest).find(id =>
-            reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.')),
+            reservedAdapterNames.includes(id.replace('iobroker.', '').replace('ioBroker.', '')),
         );
         assert.ok(!id, `Found reserved name in latest: ${id}`);
         done();
     });
 
     it('Test Repository: compare types', async () => {
-        stable ||= require('../sources-dist-stable.json');
-        latest ||= require('../sources-dist.json');
+        stable ||= require('../../sources-dist-stable.json');
+        latest ||= require('../../sources-dist.json');
 
         for (const id in stable) {
             if (Object.prototype.hasOwnProperty.call(stable, id) && id !== '_repoInfo') {
@@ -72,7 +139,11 @@ describe('Test Repository', () => {
                 assert.notEqual(latest[id], undefined, `${id} not in latest but in stable`);
                 assert.notEqual(latest[id].type, undefined, `${id} missing type in latest`);
                 assert.notEqual(latest[id].type, '', `${id} has empty type in latest`);
-                assert.equal(latest[id].type, stable[id].type, `${id} type mismatch: latest(${latest[id].type}) vs stable(${stable[id].type})`);
+                assert.equal(
+                    latest[id].type,
+                    stable[id].type,
+                    `${id} type mismatch: latest(${latest[id].type}) vs stable(${stable[id].type})`,
+                );
             }
         }
         // compare types with io-package.json
@@ -82,8 +153,15 @@ describe('Test Repository', () => {
             if (Object.prototype.hasOwnProperty.call(latest, id) && id !== '_repoInfo') {
                 assert.equal(id, id.toLowerCase(), `Adapter id ${id} is not lowercase`);
                 if (latest[id].meta?.match(/io-package\.json$/)) {
-                    const response = await request(latest[id].meta);
-                    console.log(`[${i}/${len}] Check ${id}`);
+                    console.log(`[${i}/${len}] Check ${id} (${latest[id].meta})`);
+                    let response;
+                    try {
+                        response = await request(latest[id].meta);
+                    } catch (e: any) {
+                        throw new Error(
+                            `Error requesting meta for "${id}" (${latest[id].meta}): ${e.message || e}`,
+                        );
+                    }
                     const pack = response.data;
                     if (pack?.common && pack.common.type !== latest[id].type) {
                         console.error(`Types in "${id}" are not equal: ${pack.common.type} !== ${latest[id].type}`);
@@ -95,7 +173,7 @@ describe('Test Repository', () => {
     }).timeout(1200000);
 
     it('Test Repository: Versions in latest', done => {
-        latest ||= require('../sources-dist.json');
+        latest ||= require('../../sources-dist.json');
         for (const name in latest) {
             if (!Object.prototype.hasOwnProperty.call(latest, name) || name === '_repoInfo') {
                 continue;
@@ -130,7 +208,7 @@ describe('Test Repository', () => {
     });
 
     it('Test Repository: Versions in stable', done => {
-        stable ||= require('../sources-dist-stable.json');
+        stable ||= require('../../sources-dist-stable.json');
         for (const name in stable) {
             if (!Object.prototype.hasOwnProperty.call(stable, name) || name === '_repoInfo') {
                 continue;
@@ -169,8 +247,8 @@ describe('Test Repository', () => {
     });
 
     it('Test Repository: Compare stable and latest', done => {
-        stable ||= require('../sources-dist-stable.json');
-        latest ||= require('../sources-dist.json');
+        stable ||= require('../../sources-dist-stable.json');
+        latest ||= require('../../sources-dist.json');
         for (const name in stable) {
             if (!Object.prototype.hasOwnProperty.call(stable, name) || name === '_repoInfo') {
                 continue;
@@ -191,8 +269,8 @@ describe('Test Repository', () => {
     });
 
     it('Test Repository: check latest vs. stable', done => {
-        stable ||= require('../sources-dist-stable.json');
-        latest ||= require('../sources-dist.json');
+        stable ||= require('../../sources-dist-stable.json');
+        latest ||= require('../../sources-dist.json');
         console.log();
         for (const id in latest) {
             if (
@@ -206,9 +284,9 @@ describe('Test Repository', () => {
         done();
     });
 
-    const cache = {};
+    const cache: Record<string, any> = {};
 
-    async function checkRepos(name, repos) {
+    async function checkRepos(name: string, repos: Record<string, any>) {
         let error = false;
         const len = Object.keys(repos).length;
         let i = 0;
@@ -249,17 +327,17 @@ describe('Test Repository', () => {
             i++;
         }
         if (error) {
-            throw 'Error occurred, see console output';
+            throw new Error('Error occurred, see console output');
         }
     }
 
     it('Test all Packages in latest are loadable via http and name is equal to io-package.json are ', async () => {
-        latest ||= require('../sources-dist.json');
+        latest ||= require('../../sources-dist.json');
         await checkRepos('latest', latest);
     }).timeout(3600000);
 
     it('Test all Packages in stable are loadable via http and name is equal to io-package.json are ', async () => {
-        stable ||= require('../sources-dist-stable.json');
+        stable ||= require('../../sources-dist-stable.json');
         await checkRepos('stable', stable);
     }).timeout(3600000);
 });

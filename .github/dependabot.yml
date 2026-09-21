@@ -16,3 +16,8 @@ updates:
       timezone: Europe/Berlin
     open-pull-requests-limit: 5
     versioning-strategy: increase
+    cooldown:
+      default-days: 7
+      # Update @iobroker/repochecker as soon as a new version is available
+      exclude:
+        - "@iobroker/repochecker"
