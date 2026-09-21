@@ -1779,6 +1779,12 @@
     "type": "climate-control",
     "version": "0.4.2"
   },
+  "luxtronik2-controller": {
+    "meta": "https://raw.githubusercontent.com/TbsJah/ioBroker.luxtronik2-controller/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TbsJah/ioBroker.luxtronik2-controller/main/admin/luxtronik2-controller.png",
+    "type": "climate-control",
+    "version": "0.10.1"
+  },
   "material": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.material/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.material/master/admin/material.png",
