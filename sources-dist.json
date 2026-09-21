@@ -2918,6 +2918,8 @@
   "skoda-public-api": {
     "meta": "https://raw.githubusercontent.com/tmarthy/ioBroker.skoda-public-api/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/tmarthy/ioBroker.skoda-public-api/main/admin/skoda-public-api.png",
+    "type": "vehicle"
+  },    
   "skoda-order-status": {
     "meta": "https://raw.githubusercontent.com/SentiQ/ioBroker.skoda-order-status/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/SentiQ/ioBroker.skoda-order-status/main/admin/skoda-order-status.png",
