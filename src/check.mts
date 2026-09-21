@@ -23,6 +23,7 @@ const TEXT_RECHECK = 'RE-CHECK!';
 const TEXT_COMMENT_TITLE = '## Automated adapter checker';
 const TEXT_MULTIPLE_ADAPTERS =
     '>[!CAUTION]\n>Please create seperate PRs for every adpater to add or update. This PR might be closed as it changes or adds more than one adapter.';
+const LABEL_REMOVED = 'removed from repository';
 const ONE_DAY = 3600000 * 24;
 
 /** One line of the aggregated "Automated adapter checker" comment. */
@@ -270,7 +271,10 @@ async function verifyAuthorLegitimacy(owner: string, adapter: string, username: 
  * Strategy: compare the parsed JSON objects of the file at base vs head.
  * - An adapter is "changed" if it is present in head but absent from base (new adapter),
  *   OR if it is present in both but its content differs (modified adapter).
- * - Deleted adapters (present in base, absent in head) are NOT checked.
+ * - Deleted adapters (present in base, absent in head) are reported separately in
+ *   `removed`. They are not run through the repochecker (the entry is gone), but the
+ *   caller uses them to flag PRs that silently drop an adapter (e.g. a PR that removes
+ *   one adapter while adding another - which would otherwise look like a single add).
  *
  * This mirrors exactly what GitHub shows in the "Files" tab: structural changes
  * to the JSON objects, not whitespace/formatting/sort-order noise.
@@ -285,7 +289,7 @@ async function detectChangedAdaptersInFile(filename: string, baseRef: string, he
 
     if (!headJson) {
         console.error(`Cannot read head version of ${filename}, skipping.`);
-        return [];
+        return { changed: [], removed: [] };
     }
 
     const changedAdapters = [];
@@ -307,7 +311,22 @@ async function detectChangedAdaptersInFile(filename: string, baseRef: string, he
         }
     }
 
-    return changedAdapters
+    // Deleted adapters: present in base, absent in head. Keys beginning with '_' are
+    // repository metadata (e.g. '_repoInfo'), not adapters, and must be ignored.
+    const removed = [];
+    if (baseJson) {
+        for (const adapterName of Object.keys(baseJson)) {
+            if (adapterName.startsWith('_')) {
+                continue;
+            }
+            if (!headJson[adapterName]) {
+                console.log(`  [removed]  ${adapterName}`);
+                removed.push(adapterName);
+            }
+        }
+    }
+
+    const changed = changedAdapters
         .map(name => {
             const meta = headJson[name]?.meta;
             if (!meta) {
@@ -325,6 +344,8 @@ async function detectChangedAdaptersInFile(filename: string, baseRef: string, he
             };
         })
         .filter(Boolean);
+
+    return { changed, removed };
 }
 
 /**
@@ -363,15 +384,18 @@ async function detectAffectedAdapter(prID: string) {
 
     if (!sourceFiles.length) {
         console.log('No sources-dist files changed in this PR.');
-        return [];
+        return { adapters: [], removed: [] };
     }
 
     console.log(`Changed sources files: ${sourceFiles.join(', ')}`);
 
     const adapters: { url: string; isStable?: boolean; version?: string; baseVersion?: string }[] = [];
+    // Names of adapters removed (present in base, absent in head) across all touched source
+    // files, de-duplicated. Reported to the caller so a PR that drops an adapter is flagged.
+    const removed: string[] = [];
 
     for (const filename of sourceFiles) {
-        const changed = await detectChangedAdaptersInFile(filename, mergeBase, headRef);
+        const { changed, removed: removedInFile } = await detectChangedAdaptersInFile(filename, mergeBase, headRef);
         changed.forEach(c => {
             const existing = adapters.find(a => a.url === c.url);
             if (!existing) {
@@ -382,12 +406,20 @@ async function detectAffectedAdapter(prID: string) {
                 existing.baseVersion = c.baseVersion;
             }
         });
+        removedInFile.forEach(name => {
+            if (!removed.includes(name)) {
+                removed.push(name);
+            }
+        });
     }
 
     console.log(
         `Detected changed adapters: ${adapters.map(a => a.url + (a.version ? `@${a.version}` : '')).join(', ')}`,
     );
-    return adapters;
+    if (removed.length) {
+        console.log(`Detected removed adapters: ${removed.join(', ')}`);
+    }
+    return { adapters, removed };
 }
 
 function decorateLine(line: CommentLine) {
@@ -534,7 +566,7 @@ async function doIt() {
     const isStable = fileNames.includes('sources-dist-stable.json');
     const isLatest = fileNames.includes('sources-dist.json');
 
-    const links = await detectAffectedAdapter(prID);
+    const { adapters: links, removed: removedAdapters } = await detectAffectedAdapter(prID);
 
     // Determine the creator (author) of this PR - required to validate maintainer access.
     let prAuthor = '';
@@ -546,10 +578,44 @@ async function doIt() {
         console.error(`Cannot determine author of PR ${prID}: ${e}`);
     }
 
-    // A PR should only add or update a single adapter. If more than one adapter is
-    // changed, flag the PR and ask the author to split it into separate PRs.
-    if (links.length > 1) {
-        console.log(`PR ${prID} changes ${links.length} adapters - flagging as 'multiple adapters'`);
+    // A removed adapter (present in base, absent in head) counts as a change just like an
+    // add or update. Flag such PRs so a silent removal - e.g. a PR that drops one adapter
+    // while adding another, which would otherwise look like a single add - is not missed.
+    if (removedAdapters.length) {
+        console.log(`PR ${prID} removes ${removedAdapters.length} adapter(s): ${removedAdapters.join(', ')}`);
+        try {
+            await addLabel(prID, [LABEL_REMOVED]);
+        } catch (e) {
+            console.error(`Cannot add label '${LABEL_REMOVED}': ${e}`);
+        }
+
+        try {
+            await addLabel(prID, ['⚠️check']);
+        } catch (e) {
+            console.error(`Cannot add label '⚠️check': ${e}`);
+        }
+
+        for (const name of removedAdapters) {
+            const removalText = `>[!WARNING]\n>The adapter **${name}** has been removed from the repository by this PR. Please verify that this removal is intended.`;
+            try {
+                const gitComments = await getAllComments(prID);
+                const exists = gitComments.find((comment: any) => comment.body.includes(removalText));
+                if (!exists) {
+                    await addComment(prID, removalText);
+                }
+            } catch (e) {
+                console.error(`Cannot add 'removed from repository' comment for ${name}: ${e}`);
+            }
+        }
+    }
+
+    // A PR should only add or update a single adapter. Removals count as changes too, so a
+    // PR that e.g. removes one adapter and adds another is treated as changing more than one
+    // adapter. If more than one adapter is changed, flag the PR and ask the author to split
+    // it into separate PRs.
+    const totalChanges = links.length + removedAdapters.length;
+    if (totalChanges > 1) {
+        console.log(`PR ${prID} changes ${totalChanges} adapters - flagging as 'multiple adapters'`);
         try {
             await addLabel(prID, ['multiple adapters']);
         } catch (e) {
@@ -561,7 +627,7 @@ async function doIt() {
         } catch (e) {
             console.error(`Cannot add label '⚠️check': ${e}`);
         }
-        
+
         try {
             const gitComments = await getAllComments(prID);
             const exists = gitComments.find((comment: any) => comment.body.includes(TEXT_MULTIPLE_ADAPTERS));
@@ -917,7 +983,7 @@ async function doIt() {
     // Auto-adjust the PR title for single-adapter PRs. Multi-adapter PRs (links.length > 1),
     // PRs that change both repository files (latest AND stable) and PRs that neither add nor
     // update an adapter are left untouched.
-    if (links.length === 1 && !(isStable && isLatest)) {
+    if (links.length === 1 && !removedAdapters.length && !(isStable && isLatest)) {
         let newTitle = '';
         if (newAtStable) {
             // New adapter added to the stable repository ('new at STABLE' label).
