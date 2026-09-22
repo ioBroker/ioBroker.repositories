@@ -26,6 +26,17 @@ const TEXT_MULTIPLE_ADAPTERS =
 const LABEL_REMOVED = 'removed from repository';
 const ONE_DAY = 3600000 * 24;
 
+// STABLE age labels attached for young releases, mapped to the info workflow that posts the
+// matching explanatory comment. The label is added with OWN_GITHUB_TOKEN (the default
+// GITHUB_TOKEN), and events triggered by that token never start another workflow run - so the
+// 'labeled' info workflows would stay silent. They are therefore dispatched explicitly (see
+// triggerLabelWorkflow), which is why each workflow additionally accepts a workflow_dispatch
+// carrying the PR number.
+const STABLE_INFO_WORKFLOWS: Record<string, string> = {
+    'STABLE - 0-Day PR': 'stable0DayPrInfo.yml',
+    'STABLE - brand new': 'stableBrandNewInfo.yml',
+};
+
 /** One line of the aggregated "Automated adapter checker" comment. */
 interface CommentLine {
     text: string;
@@ -114,6 +125,83 @@ async function fetchJsonAtRef(filename: string, ref: string) {
         return JSON.parse(decoded);
     } catch (e) {
         console.error(`Cannot fetch ${filename} at ref ${ref}: ${e}`);
+        return null;
+    }
+}
+
+/**
+ * Determine the ISO date at which an adapter entry was first added to the LATEST repository file
+ * (sources-dist.json) by walking the git history of that file.
+ *
+ * The entry's `versionDate` only records when the npm release was published, which can predate the
+ * addition to the repository by a long time - so the addition date must come from the commit
+ * history instead. This mirrors getFileEntryAddedDate() in iobroker-bot-orga/check-tasks
+ * (lib/githubTools.js): a binary search over the commits that touched sources-dist.json for the
+ * earliest commit whose snapshot already contains the adapter key. No cache is used - a PR check
+ * runs for a single adapter only.
+ *
+ * Returns the committer date (ISO string) of that commit, or null if it cannot be determined.
+ */
+async function getAdapterAddedToLatestDate(key: string): Promise<string | null> {
+    const owner = 'ioBroker';
+    const repository = 'ioBroker.repositories';
+    const path = 'sources-dist.json';
+    const apiBase = `https://api.github.com/repos/${owner}/${repository}/commits`;
+    const rawBase = `https://raw.githubusercontent.com/${owner}/${repository}`;
+
+    // Latest commit that touched sources-dist.json at or before `untilIso` (HEAD when null).
+    async function latestCommitBefore(untilIso: string | null): Promise<{ sha: string; date: string } | null> {
+        let url = `${apiBase}?path=${encodeURIComponent(path)}&per_page=1`;
+        if (untilIso) {
+            url += `&until=${encodeURIComponent(untilIso)}`;
+        }
+        const data = await getGithub(url);
+        if (Array.isArray(data) && data.length) {
+            return { sha: data[0].sha, date: data[0].commit.committer.date };
+        }
+        return null;
+    }
+
+    // Whether the adapter key is present in the sources-dist.json snapshot at the given commit.
+    async function keyPresentAt(sha: string): Promise<boolean> {
+        const raw = await getUrl(`${rawBase}/${sha}/${path}`, true);
+        try {
+            const json = JSON.parse(raw);
+            return Object.prototype.hasOwnProperty.call(json, key);
+        } catch {
+            return String(raw).includes(`"${key}":`);
+        }
+    }
+
+    try {
+        const head = await latestCommitBefore(null);
+        if (!head || !(await keyPresentAt(head.sha))) {
+            return null;
+        }
+
+        let loMs = Date.parse('2014-01-01T00:00:00Z');
+        let hiDate = head.date;
+        let hiMs = Date.parse(hiDate);
+
+        let guard = 0;
+        while (hiMs - loMs > ONE_DAY && guard < 25) {
+            guard++;
+            const midMs = loMs + Math.floor((hiMs - loMs) / 2);
+            const commit = await latestCommitBefore(new Date(midMs).toISOString());
+            if (!commit) {
+                loMs = midMs;
+                continue;
+            }
+            if (await keyPresentAt(commit.sha)) {
+                hiDate = commit.date;
+                hiMs = Date.parse(commit.date);
+            } else {
+                loMs = Date.parse(commit.date);
+            }
+        }
+        return hiDate;
+    } catch (e) {
+        console.error(`Cannot determine date '${key}' was added to LATEST: ${e}`);
         return null;
     }
 }
@@ -570,6 +658,33 @@ function triggerRepoCheck(owner: string, adapter: string) {
         .catch(e => console.error(e));
 }
 
+/**
+ * Explicitly dispatch a label info workflow (e.g. stable0DayPrInfo.yml) for a PR.
+ *
+ * The info workflows normally run on the 'labeled' event, but a label added by this script uses
+ * the default GITHUB_TOKEN, and events triggered by that token do not start further workflow
+ * runs. The bot's personal access token (IOBBOT_GITHUB_TOKEN) is used here instead, and the PR
+ * number is passed as a workflow_dispatch input because a dispatch event carries no PR context.
+ */
+function triggerLabelWorkflow(workflow: string, prID: string | number) {
+    console.log(`trigger workflow ${workflow} for PR ${prID}`);
+    const axiosInstance = axios.create(); // clean instance to avoid injection from other packages
+    return axiosInstance
+        .post(
+            `https://api.github.com/repos/ioBroker/ioBroker.repositories/actions/workflows/${workflow}/dispatches`,
+            { ref: 'master', inputs: { pr: `${prID}` } },
+            {
+                headers: {
+                    Authorization: `Bearer ${process.env.IOBBOT_GITHUB_TOKEN}`,
+                    Accept: 'application/vnd.github+json',
+                    'user-agent': 'Action script',
+                },
+            },
+        )
+        .then(response => response.data)
+        .catch(e => console.error(e));
+}
+
 async function doIt() {
     const prID = getPullRequestNumber();
     console.log(`Process PR ${prID}`);
@@ -685,6 +800,10 @@ async function doIt() {
     let titleVersion = '';
     let newAtStable = false;
     let newAtLatest = false;
+
+    // STABLE age labels ('STABLE - 0-Day PR' / 'STABLE - brand new') attached during the loop.
+    // The related info workflows are dispatched once after the loop (see below).
+    const stableInfoLabels = new Set<string>();
 
     for (let i = 0; i < links.length; i++) {
         const data = await executeOneAdapterCheck(links[i].url);
@@ -884,6 +1003,22 @@ async function doIt() {
             } else {
                 comments.push({ text: ``, noDecorate: true });
                 comments.push({ text: `stable release not yet available`, noDecorate: true });
+
+                // New at STABLE: report when the adapter was first added to the LATEST repository.
+                // This must come from the git history of sources-dist.json - the entry's
+                // versionDate only records the npm release date, which can be long before the
+                // adapter actually entered the repository.
+                const addedIso = await getAdapterAddedToLatestDate(adapterName);
+                if (addedIso) {
+                    const addedTime = new Date(addedIso);
+                    const addedTimeStr = `${addedTime.getDate()}.${addedTime.getMonth() + 1}.${addedTime.getFullYear()}`;
+                    const addedDaysOld = Math.floor((now.getTime() - addedTime.getTime()) / ONE_DAY);
+                    comments.push({
+                        text: `Adapter added to LATEST repository ${addedTimeStr} (${addedDaysOld} days ago)`,
+                        noDecorate: true,
+                    });
+                }
+
                 newAtStable = true;
                 await addLabel(prID, ['new at STABLE']);
             }
@@ -905,6 +1040,29 @@ async function doIt() {
                 text: `**Please verify that this PR really tries to update to release ${submittedRelease}!**\n`,
                 noDecorate: true,
             });
+
+            // Flag very young releases submitted to stable. The age is the number of days the
+            // latest release has been available, derived from the LATEST repository's versionDate
+            // exactly like iobroker-bot-orga/check-tasks checkReadyForStable does:
+            //   Math.floor((now - new Date(latest[adapter].versionDate)) / ONE_DAY)  == latestDaysOld
+            // A release younger than one day has not even settled at LATEST yet; one below five
+            // days is still brand new. The matching info workflow (dispatched after the loop)
+            // posts the explanatory comment.
+            let ageLabel = '';
+            if (latestDaysOld < 1) {
+                ageLabel = 'STABLE - 0-Day PR';
+            } else if (latestDaysOld < 5) {
+                ageLabel = 'STABLE - brand new';
+            }
+            if (ageLabel) {
+                try {
+                    console.log(`latest release ${latestRelease} is ${latestDaysOld} days old - adding label '${ageLabel}'`);
+                    await addLabel(prID, [ageLabel]);
+                    stableInfoLabels.add(ageLabel);
+                } catch (e) {
+                    console.error(`Cannot add label '${ageLabel}': ${e}`);
+                }
+            }
         } else {
             const latest = await getUrl('https://download.iobroker.net/sources-dist-latest.json');
 
@@ -973,6 +1131,16 @@ async function doIt() {
                     }
                 }
             }
+        }
+    }
+
+    // A STABLE age label added above uses the default GITHUB_TOKEN and therefore does not start
+    // its 'labeled' info workflow. Dispatch each such workflow explicitly so the matching
+    // explanatory comment is posted (the workflow re-checks the label before commenting).
+    for (const label of stableInfoLabels) {
+        const workflow = STABLE_INFO_WORKFLOWS[label];
+        if (workflow) {
+            await triggerLabelWorkflow(workflow, prID);
         }
     }
 
