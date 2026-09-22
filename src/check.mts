@@ -23,7 +23,19 @@ const TEXT_RECHECK = 'RE-CHECK!';
 const TEXT_COMMENT_TITLE = '## Automated adapter checker';
 const TEXT_MULTIPLE_ADAPTERS =
     '>[!CAUTION]\n>Please create seperate PRs for every adpater to add or update. This PR might be closed as it changes or adds more than one adapter.';
+const LABEL_REMOVED = 'removed from repository';
 const ONE_DAY = 3600000 * 24;
+
+// STABLE age labels attached for young releases, mapped to the info workflow that posts the
+// matching explanatory comment. The label is added with OWN_GITHUB_TOKEN (the default
+// GITHUB_TOKEN), and events triggered by that token never start another workflow run - so the
+// 'labeled' info workflows would stay silent. They are therefore dispatched explicitly (see
+// triggerLabelWorkflow), which is why each workflow additionally accepts a workflow_dispatch
+// carrying the PR number.
+const STABLE_INFO_WORKFLOWS: Record<string, string> = {
+    'STABLE - 0-Day PR': 'stable0DayPrInfo.yml',
+    'STABLE - brand new': 'stableBrandNewInfo.yml',
+};
 
 /** One line of the aggregated "Automated adapter checker" comment. */
 interface CommentLine {
@@ -118,6 +130,83 @@ async function fetchJsonAtRef(filename: string, ref: string) {
 }
 
 /**
+ * Determine the ISO date at which an adapter entry was first added to the LATEST repository file
+ * (sources-dist.json) by walking the git history of that file.
+ *
+ * The entry's `versionDate` only records when the npm release was published, which can predate the
+ * addition to the repository by a long time - so the addition date must come from the commit
+ * history instead. This mirrors getFileEntryAddedDate() in iobroker-bot-orga/check-tasks
+ * (lib/githubTools.js): a binary search over the commits that touched sources-dist.json for the
+ * earliest commit whose snapshot already contains the adapter key. No cache is used - a PR check
+ * runs for a single adapter only.
+ *
+ * Returns the committer date (ISO string) of that commit, or null if it cannot be determined.
+ */
+async function getAdapterAddedToLatestDate(key: string): Promise<string | null> {
+    const owner = 'ioBroker';
+    const repository = 'ioBroker.repositories';
+    const path = 'sources-dist.json';
+    const apiBase = `https://api.github.com/repos/${owner}/${repository}/commits`;
+    const rawBase = `https://raw.githubusercontent.com/${owner}/${repository}`;
+
+    // Latest commit that touched sources-dist.json at or before `untilIso` (HEAD when null).
+    async function latestCommitBefore(untilIso: string | null): Promise<{ sha: string; date: string } | null> {
+        let url = `${apiBase}?path=${encodeURIComponent(path)}&per_page=1`;
+        if (untilIso) {
+            url += `&until=${encodeURIComponent(untilIso)}`;
+        }
+        const data = await getGithub(url);
+        if (Array.isArray(data) && data.length) {
+            return { sha: data[0].sha, date: data[0].commit.committer.date };
+        }
+        return null;
+    }
+
+    // Whether the adapter key is present in the sources-dist.json snapshot at the given commit.
+    async function keyPresentAt(sha: string): Promise<boolean> {
+        const raw = await getUrl(`${rawBase}/${sha}/${path}`, true);
+        try {
+            const json = JSON.parse(raw);
+            return Object.prototype.hasOwnProperty.call(json, key);
+        } catch {
+            return String(raw).includes(`"${key}":`);
+        }
+    }
+
+    try {
+        const head = await latestCommitBefore(null);
+        if (!head || !(await keyPresentAt(head.sha))) {
+            return null;
+        }
+
+        let loMs = Date.parse('2014-01-01T00:00:00Z');
+        let hiDate = head.date;
+        let hiMs = Date.parse(hiDate);
+
+        let guard = 0;
+        while (hiMs - loMs > ONE_DAY && guard < 25) {
+            guard++;
+            const midMs = loMs + Math.floor((hiMs - loMs) / 2);
+            const commit = await latestCommitBefore(new Date(midMs).toISOString());
+            if (!commit) {
+                loMs = midMs;
+                continue;
+            }
+            if (await keyPresentAt(commit.sha)) {
+                hiDate = commit.date;
+                hiMs = Date.parse(commit.date);
+            } else {
+                loMs = Date.parse(commit.date);
+            }
+        }
+        return hiDate;
+    } catch (e) {
+        console.error(`Cannot determine date '${key}' was added to LATEST: ${e}`);
+        return null;
+    }
+}
+
+/**
  * Check whether a GitHub user is a public member of an organization.
  *
  * Uses "GET /orgs/{org}/public_members/{username}" which is readable without any
@@ -207,6 +296,58 @@ async function hasMergedRecentPr(owner: string, adapter: string, username: strin
 }
 
 /**
+ * Check whether the user tagged the latest release of the repository. Only users with
+ * write (push) access can push annotated tags, so being the tagger of the most recent
+ * release is a reliable - and publicly readable - indication that the user is a maintainer.
+ *
+ * The release itself is almost always *published* by an automated workflow (e.g.
+ * github-actions[bot]), so the release `author.login` is useless here. The person who
+ * actually created the tag is only recorded in the annotated git tag object's `tagger`,
+ * which carries a name/email/date but no GitHub login. The tagger email is therefore
+ * matched against the PR author's publicly visible email (`GET /users/{login}.email`).
+ *
+ * A match requires:
+ *   - an annotated tag (lightweight tags have no tagger object), and
+ *   - the PR author to have a public email that equals the tagger email.
+ * If the author has no public email the tagger cannot be attributed and the function
+ * returns false, leaving the PR to be flagged for manual review. This runs only as a
+ * fallback after the cheaper checks failed.
+ */
+async function hasTaggedLatestRelease(owner: string, adapter: string, username: string) {
+    try {
+        const releases = await getGithub(`https://api.github.com/repos/${owner}/${adapter}/releases?per_page=1`);
+        const latest = (releases || [])[0];
+        if (!latest?.tag_name) {
+            return false;
+        }
+
+        // The PR author must have a publicly visible email to attribute a tagger by email.
+        const userInfo = await getGithub(`https://api.github.com/users/${encodeURIComponent(username)}`);
+        const userEmail = userInfo?.email ? String(userInfo.email).toLowerCase() : '';
+        if (!userEmail) {
+            return false;
+        }
+
+        // Resolve the tag ref -> annotated tag object, which carries the tagger email.
+        const ref = await getGithub(
+            `https://api.github.com/repos/${owner}/${adapter}/git/ref/tags/${encodeURIComponent(latest.tag_name)}`,
+        );
+        if (ref?.object?.type !== 'tag') {
+            // Lightweight tag: no tagger information available.
+            return false;
+        }
+        const tag = await getGithub(`https://api.github.com/repos/${owner}/${adapter}/git/tags/${ref.object.sha}`);
+        const taggerEmail = tag?.tagger?.email ? String(tag.tagger.email).toLowerCase() : '';
+        if (taggerEmail && taggerEmail === userEmail) {
+            return true;
+        }
+    } catch (e) {
+        console.error(`Cannot determine tagger of latest release of ${owner}/${adapter}: ${e}`);
+    }
+    return false;
+}
+
+/**
  * Determine whether the PR author is a legitimate maintainer of the adapter repository
  * WITHOUT requiring write (push) access to that repository for the checking token.
  *
@@ -221,6 +362,8 @@ async function hasMergedRecentPr(owner: string, adapter: string, username: strin
  *      of that organization.
  *   4. The author has merged at least one of the last 100 pull requests of the repo
  *      (only users with write access can merge).
+ *   5. The author published/tagged the latest release of the repo
+ *      (only users with write access can push tags and publish releases).
  *
  * Returns a short human-readable reason string if the author is considered legitimate,
  * otherwise `null`.
@@ -260,6 +403,11 @@ async function verifyAuthorLegitimacy(owner: string, adapter: string, username: 
         return 'has merged a recent pull request of the repository';
     }
 
+    // 5. Author published/tagged the latest release of the repository.
+    if (await hasTaggedLatestRelease(owner, adapter, username)) {
+        return 'has tagged the latest release of the repository';
+    }
+
     return null;
 }
 
@@ -270,7 +418,10 @@ async function verifyAuthorLegitimacy(owner: string, adapter: string, username: 
  * Strategy: compare the parsed JSON objects of the file at base vs head.
  * - An adapter is "changed" if it is present in head but absent from base (new adapter),
  *   OR if it is present in both but its content differs (modified adapter).
- * - Deleted adapters (present in base, absent in head) are NOT checked.
+ * - Deleted adapters (present in base, absent in head) are reported separately in
+ *   `removed`. They are not run through the repochecker (the entry is gone), but the
+ *   caller uses them to flag PRs that silently drop an adapter (e.g. a PR that removes
+ *   one adapter while adding another - which would otherwise look like a single add).
  *
  * This mirrors exactly what GitHub shows in the "Files" tab: structural changes
  * to the JSON objects, not whitespace/formatting/sort-order noise.
@@ -285,7 +436,7 @@ async function detectChangedAdaptersInFile(filename: string, baseRef: string, he
 
     if (!headJson) {
         console.error(`Cannot read head version of ${filename}, skipping.`);
-        return [];
+        return { changed: [], removed: [] };
     }
 
     const changedAdapters = [];
@@ -307,7 +458,22 @@ async function detectChangedAdaptersInFile(filename: string, baseRef: string, he
         }
     }
 
-    return changedAdapters
+    // Deleted adapters: present in base, absent in head. Keys beginning with '_' are
+    // repository metadata (e.g. '_repoInfo'), not adapters, and must be ignored.
+    const removed = [];
+    if (baseJson) {
+        for (const adapterName of Object.keys(baseJson)) {
+            if (adapterName.startsWith('_')) {
+                continue;
+            }
+            if (!headJson[adapterName]) {
+                console.log(`  [removed]  ${adapterName}`);
+                removed.push(adapterName);
+            }
+        }
+    }
+
+    const changed = changedAdapters
         .map(name => {
             const meta = headJson[name]?.meta;
             if (!meta) {
@@ -325,6 +491,8 @@ async function detectChangedAdaptersInFile(filename: string, baseRef: string, he
             };
         })
         .filter(Boolean);
+
+    return { changed, removed };
 }
 
 /**
@@ -363,15 +531,18 @@ async function detectAffectedAdapter(prID: string) {
 
     if (!sourceFiles.length) {
         console.log('No sources-dist files changed in this PR.');
-        return [];
+        return { adapters: [], removed: [] };
     }
 
     console.log(`Changed sources files: ${sourceFiles.join(', ')}`);
 
     const adapters: { url: string; isStable?: boolean; version?: string; baseVersion?: string }[] = [];
+    // Names of adapters removed (present in base, absent in head) across all touched source
+    // files, de-duplicated. Reported to the caller so a PR that drops an adapter is flagged.
+    const removed: string[] = [];
 
     for (const filename of sourceFiles) {
-        const changed = await detectChangedAdaptersInFile(filename, mergeBase, headRef);
+        const { changed, removed: removedInFile } = await detectChangedAdaptersInFile(filename, mergeBase, headRef);
         changed.forEach(c => {
             const existing = adapters.find(a => a.url === c.url);
             if (!existing) {
@@ -382,12 +553,20 @@ async function detectAffectedAdapter(prID: string) {
                 existing.baseVersion = c.baseVersion;
             }
         });
+        removedInFile.forEach(name => {
+            if (!removed.includes(name)) {
+                removed.push(name);
+            }
+        });
     }
 
     console.log(
         `Detected changed adapters: ${adapters.map(a => a.url + (a.version ? `@${a.version}` : '')).join(', ')}`,
     );
-    return adapters;
+    if (removed.length) {
+        console.log(`Detected removed adapters: ${removed.join(', ')}`);
+    }
+    return { adapters, removed };
 }
 
 function decorateLine(line: CommentLine) {
@@ -506,6 +685,33 @@ function triggerRepoCheck(owner: string, adapter: string) {
         .catch(e => console.error(e));
 }
 
+/**
+ * Explicitly dispatch a label info workflow (e.g. stable0DayPrInfo.yml) for a PR.
+ *
+ * The info workflows normally run on the 'labeled' event, but a label added by this script uses
+ * the default GITHUB_TOKEN, and events triggered by that token do not start further workflow
+ * runs. The bot's personal access token (IOBBOT_GITHUB_TOKEN) is used here instead, and the PR
+ * number is passed as a workflow_dispatch input because a dispatch event carries no PR context.
+ */
+function triggerLabelWorkflow(workflow: string, prID: string | number) {
+    console.log(`trigger workflow ${workflow} for PR ${prID}`);
+    const axiosInstance = axios.create(); // clean instance to avoid injection from other packages
+    return axiosInstance
+        .post(
+            `https://api.github.com/repos/ioBroker/ioBroker.repositories/actions/workflows/${workflow}/dispatches`,
+            { ref: 'master', inputs: { pr: `${prID}` } },
+            {
+                headers: {
+                    Authorization: `Bearer ${process.env.IOBBOT_GITHUB_TOKEN}`,
+                    Accept: 'application/vnd.github+json',
+                    'user-agent': 'Action script',
+                },
+            },
+        )
+        .then(response => response.data)
+        .catch(e => console.error(e));
+}
+
 async function doIt() {
     const prID = getPullRequestNumber();
     console.log(`Process PR ${prID}`);
@@ -534,7 +740,7 @@ async function doIt() {
     const isStable = fileNames.includes('sources-dist-stable.json');
     const isLatest = fileNames.includes('sources-dist.json');
 
-    const links = await detectAffectedAdapter(prID);
+    const { adapters: links, removed: removedAdapters } = await detectAffectedAdapter(prID);
 
     // Determine the creator (author) of this PR - required to validate maintainer access.
     let prAuthor = '';
@@ -546,10 +752,44 @@ async function doIt() {
         console.error(`Cannot determine author of PR ${prID}: ${e}`);
     }
 
-    // A PR should only add or update a single adapter. If more than one adapter is
-    // changed, flag the PR and ask the author to split it into separate PRs.
-    if (links.length > 1) {
-        console.log(`PR ${prID} changes ${links.length} adapters - flagging as 'multiple adapters'`);
+    // A removed adapter (present in base, absent in head) counts as a change just like an
+    // add or update. Flag such PRs so a silent removal - e.g. a PR that drops one adapter
+    // while adding another, which would otherwise look like a single add - is not missed.
+    if (removedAdapters.length) {
+        console.log(`PR ${prID} removes ${removedAdapters.length} adapter(s): ${removedAdapters.join(', ')}`);
+        try {
+            await addLabel(prID, [LABEL_REMOVED]);
+        } catch (e) {
+            console.error(`Cannot add label '${LABEL_REMOVED}': ${e}`);
+        }
+
+        try {
+            await addLabel(prID, ['⚠️check']);
+        } catch (e) {
+            console.error(`Cannot add label '⚠️check': ${e}`);
+        }
+
+        for (const name of removedAdapters) {
+            const removalText = `>[!WARNING]\n>The adapter **${name}** has been removed from the repository by this PR. Please verify that this removal is intended.`;
+            try {
+                const gitComments = await getAllComments(prID);
+                const exists = gitComments.find((comment: any) => comment.body.includes(removalText));
+                if (!exists) {
+                    await addComment(prID, removalText);
+                }
+            } catch (e) {
+                console.error(`Cannot add 'removed from repository' comment for ${name}: ${e}`);
+            }
+        }
+    }
+
+    // A PR should only add or update a single adapter. Removals count as changes too, so a
+    // PR that e.g. removes one adapter and adds another is treated as changing more than one
+    // adapter. If more than one adapter is changed, flag the PR and ask the author to split
+    // it into separate PRs.
+    const totalChanges = links.length + removedAdapters.length;
+    if (totalChanges > 1) {
+        console.log(`PR ${prID} changes ${totalChanges} adapters - flagging as 'multiple adapters'`);
         try {
             await addLabel(prID, ['multiple adapters']);
         } catch (e) {
@@ -561,7 +801,7 @@ async function doIt() {
         } catch (e) {
             console.error(`Cannot add label '⚠️check': ${e}`);
         }
-        
+
         try {
             const gitComments = await getAllComments(prID);
             const exists = gitComments.find((comment: any) => comment.body.includes(TEXT_MULTIPLE_ADAPTERS));
@@ -587,6 +827,10 @@ async function doIt() {
     let titleVersion = '';
     let newAtStable = false;
     let newAtLatest = false;
+
+    // STABLE age labels ('STABLE - 0-Day PR' / 'STABLE - brand new') attached during the loop.
+    // The related info workflows are dispatched once after the loop (see below).
+    const stableInfoLabels = new Set<string>();
 
     for (let i = 0; i < links.length; i++) {
         const data = await executeOneAdapterCheck(links[i].url);
@@ -786,6 +1030,22 @@ async function doIt() {
             } else {
                 comments.push({ text: ``, noDecorate: true });
                 comments.push({ text: `stable release not yet available`, noDecorate: true });
+
+                // New at STABLE: report when the adapter was first added to the LATEST repository.
+                // This must come from the git history of sources-dist.json - the entry's
+                // versionDate only records the npm release date, which can be long before the
+                // adapter actually entered the repository.
+                const addedIso = await getAdapterAddedToLatestDate(adapterName);
+                if (addedIso) {
+                    const addedTime = new Date(addedIso);
+                    const addedTimeStr = `${addedTime.getDate()}.${addedTime.getMonth() + 1}.${addedTime.getFullYear()}`;
+                    const addedDaysOld = Math.floor((now.getTime() - addedTime.getTime()) / ONE_DAY);
+                    comments.push({
+                        text: `Adapter added to LATEST repository ${addedTimeStr} (${addedDaysOld} days ago)`,
+                        noDecorate: true,
+                    });
+                }
+
                 newAtStable = true;
                 await addLabel(prID, ['new at STABLE']);
             }
@@ -807,6 +1067,29 @@ async function doIt() {
                 text: `**Please verify that this PR really tries to update to release ${submittedRelease}!**\n`,
                 noDecorate: true,
             });
+
+            // Flag very young releases submitted to stable. The age is the number of days the
+            // latest release has been available, derived from the LATEST repository's versionDate
+            // exactly like iobroker-bot-orga/check-tasks checkReadyForStable does:
+            //   Math.floor((now - new Date(latest[adapter].versionDate)) / ONE_DAY)  == latestDaysOld
+            // A release younger than one day has not even settled at LATEST yet; one below five
+            // days is still brand new. The matching info workflow (dispatched after the loop)
+            // posts the explanatory comment.
+            let ageLabel = '';
+            if (latestDaysOld < 1) {
+                ageLabel = 'STABLE - 0-Day PR';
+            } else if (latestDaysOld < 5) {
+                ageLabel = 'STABLE - brand new';
+            }
+            if (ageLabel) {
+                try {
+                    console.log(`latest release ${latestRelease} is ${latestDaysOld} days old - adding label '${ageLabel}'`);
+                    await addLabel(prID, [ageLabel]);
+                    stableInfoLabels.add(ageLabel);
+                } catch (e) {
+                    console.error(`Cannot add label '${ageLabel}': ${e}`);
+                }
+            }
         } else {
             const latest = await getUrl('https://download.iobroker.net/sources-dist-latest.json');
 
@@ -878,6 +1161,16 @@ async function doIt() {
         }
     }
 
+    // A STABLE age label added above uses the default GITHUB_TOKEN and therefore does not start
+    // its 'labeled' info workflow. Dispatch each such workflow explicitly so the matching
+    // explanatory comment is posted (the workflow re-checks the label before commenting).
+    for (const label of stableInfoLabels) {
+        const workflow = STABLE_INFO_WORKFLOWS[label];
+        if (workflow) {
+            await triggerLabelWorkflow(workflow, prID);
+        }
+    }
+
     if (!someChecked) {
         comments.push({ text: 'No changed adapters found', noDecorate: true });
     } else {
@@ -917,7 +1210,7 @@ async function doIt() {
     // Auto-adjust the PR title for single-adapter PRs. Multi-adapter PRs (links.length > 1),
     // PRs that change both repository files (latest AND stable) and PRs that neither add nor
     // update an adapter are left untouched.
-    if (links.length === 1 && !(isStable && isLatest)) {
+    if (links.length === 1 && !removedAdapters.length && !(isStable && isLatest)) {
         let newTitle = '';
         if (newAtStable) {
             // New adapter added to the stable repository ('new at STABLE' label).
