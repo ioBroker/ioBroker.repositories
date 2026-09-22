@@ -2205,6 +2205,12 @@
     "type": "hardware",
     "version": "1.7.0"
   },
+  "nut2": {
+    "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.nut2/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.nut2/main/admin/nut2.svg",
+    "type": "hardware",
+    "version": "0.16.0"
+  },
   "ocpp": {
     "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.ocpp/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.ocpp/main/admin/ocpp.png",
