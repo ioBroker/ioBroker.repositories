@@ -208,6 +208,31 @@ async function hasMergedRecentPr(owner: string, adapter: string, username: strin
 }
 
 /**
+ * Check whether the user has tagged/published the latest release of the repository.
+ * Only users with write (push) access can push tags and publish releases, so being the
+ * author of the most recent release is a reliable - and publicly readable - indication
+ * that the user is a maintainer.
+ *
+ * The releases endpoint returns the releases newest first. `author.login` on the newest
+ * release is the account that published it and is compared against the PR author. This
+ * runs only as a fallback after the cheaper checks failed.
+ */
+async function hasTaggedLatestRelease(owner: string, adapter: string, username: string) {
+    try {
+        const releases = await getGithub(
+            `https://api.github.com/repos/${owner}/${adapter}/releases?per_page=1`,
+        );
+        const latest = (releases || [])[0];
+        if (latest?.author?.login && latest.author.login.toLowerCase() === username.toLowerCase()) {
+            return true;
+        }
+    } catch (e) {
+        console.error(`Cannot determine author of latest release of ${owner}/${adapter}: ${e}`);
+    }
+    return false;
+}
+
+/**
  * Determine whether the PR author is a legitimate maintainer of the adapter repository
  * WITHOUT requiring write (push) access to that repository for the checking token.
  *
@@ -222,6 +247,8 @@ async function hasMergedRecentPr(owner: string, adapter: string, username: strin
  *      of that organization.
  *   4. The author has merged at least one of the last 100 pull requests of the repo
  *      (only users with write access can merge).
+ *   5. The author published/tagged the latest release of the repo
+ *      (only users with write access can push tags and publish releases).
  *
  * Returns a short human-readable reason string if the author is considered legitimate,
  * otherwise `null`.
@@ -259,6 +286,11 @@ async function verifyAuthorLegitimacy(owner: string, adapter: string, username: 
     // 4. Author has merged a recent pull request of the repository.
     if (await hasMergedRecentPr(owner, adapter, username)) {
         return 'has merged a recent pull request of the repository';
+    }
+
+    // 5. Author published/tagged the latest release of the repository.
+    if (await hasTaggedLatestRelease(owner, adapter, username)) {
+        return 'has tagged the latest release of the repository';
     }
 
     return null;
