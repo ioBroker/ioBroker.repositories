@@ -296,26 +296,53 @@ async function hasMergedRecentPr(owner: string, adapter: string, username: strin
 }
 
 /**
- * Check whether the user has tagged/published the latest release of the repository.
- * Only users with write (push) access can push tags and publish releases, so being the
- * author of the most recent release is a reliable - and publicly readable - indication
- * that the user is a maintainer.
+ * Check whether the user tagged the latest release of the repository. Only users with
+ * write (push) access can push annotated tags, so being the tagger of the most recent
+ * release is a reliable - and publicly readable - indication that the user is a maintainer.
  *
- * The releases endpoint returns the releases newest first. `author.login` on the newest
- * release is the account that published it and is compared against the PR author. This
- * runs only as a fallback after the cheaper checks failed.
+ * The release itself is almost always *published* by an automated workflow (e.g.
+ * github-actions[bot]), so the release `author.login` is useless here. The person who
+ * actually created the tag is only recorded in the annotated git tag object's `tagger`,
+ * which carries a name/email/date but no GitHub login. The tagger email is therefore
+ * matched against the PR author's publicly visible email (`GET /users/{login}.email`).
+ *
+ * A match requires:
+ *   - an annotated tag (lightweight tags have no tagger object), and
+ *   - the PR author to have a public email that equals the tagger email.
+ * If the author has no public email the tagger cannot be attributed and the function
+ * returns false, leaving the PR to be flagged for manual review. This runs only as a
+ * fallback after the cheaper checks failed.
  */
 async function hasTaggedLatestRelease(owner: string, adapter: string, username: string) {
     try {
-        const releases = await getGithub(
-            `https://api.github.com/repos/${owner}/${adapter}/releases?per_page=1`,
-        );
+        const releases = await getGithub(`https://api.github.com/repos/${owner}/${adapter}/releases?per_page=1`);
         const latest = (releases || [])[0];
-        if (latest?.author?.login && latest.author.login.toLowerCase() === username.toLowerCase()) {
+        if (!latest?.tag_name) {
+            return false;
+        }
+
+        // The PR author must have a publicly visible email to attribute a tagger by email.
+        const userInfo = await getGithub(`https://api.github.com/users/${encodeURIComponent(username)}`);
+        const userEmail = userInfo?.email ? String(userInfo.email).toLowerCase() : '';
+        if (!userEmail) {
+            return false;
+        }
+
+        // Resolve the tag ref -> annotated tag object, which carries the tagger email.
+        const ref = await getGithub(
+            `https://api.github.com/repos/${owner}/${adapter}/git/ref/tags/${encodeURIComponent(latest.tag_name)}`,
+        );
+        if (ref?.object?.type !== 'tag') {
+            // Lightweight tag: no tagger information available.
+            return false;
+        }
+        const tag = await getGithub(`https://api.github.com/repos/${owner}/${adapter}/git/tags/${ref.object.sha}`);
+        const taggerEmail = tag?.tagger?.email ? String(tag.tagger.email).toLowerCase() : '';
+        if (taggerEmail && taggerEmail === userEmail) {
             return true;
         }
     } catch (e) {
-        console.error(`Cannot determine author of latest release of ${owner}/${adapter}: ${e}`);
+        console.error(`Cannot determine tagger of latest release of ${owner}/${adapter}: ${e}`);
     }
     return false;
 }
