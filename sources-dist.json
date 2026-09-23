@@ -2565,6 +2565,11 @@
     "icon": "https://raw.githubusercontent.com/ylabonte/ioBroker.procon-ip/master/admin/procon-ip.png",
     "type": "iot-systems"
   },
+  "proscenic": {
+    "meta": "https://raw.githubusercontent.com/Musashi1965/ioBroker.proscenic/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Musashi1965/ioBroker.proscenic/main/admin/proscenic.png",
+    "type": "household"
+  },
   "proxmox": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.proxmox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.proxmox/master/admin/proxmox.png",
