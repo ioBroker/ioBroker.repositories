@@ -690,8 +690,8 @@ function triggerRepoCheck(owner: string, adapter: string) {
  *
  * The info workflows normally run on the 'labeled' event, but a label added by this script uses
  * the default GITHUB_TOKEN, and events triggered by that token do not start further workflow
- * runs. The bot's personal access token (IOBBOT_GITHUB_TOKEN) is used here instead, and the PR
- * number is passed as a workflow_dispatch input because a dispatch event carries no PR context.
+ * runs. An explicit workflow_dispatch via the API is used instead (OWN_GITHUB_TOKEN has
+ * Actions: write), and the PR number is passed as input because a dispatch event carries no PR context.
  */
 function triggerLabelWorkflow(workflow: string, prID: string | number) {
     console.log(`trigger workflow ${workflow} for PR ${prID}`);
@@ -702,7 +702,7 @@ function triggerLabelWorkflow(workflow: string, prID: string | number) {
             { ref: 'master', inputs: { pr: `${prID}` } },
             {
                 headers: {
-                    Authorization: `Bearer ${process.env.IOBBOT_GITHUB_TOKEN}`,
+                    Authorization: `Bearer ${process.env.OWN_GITHUB_TOKEN}`,
                     Accept: 'application/vnd.github+json',
                     'user-agent': 'Action script',
                 },
