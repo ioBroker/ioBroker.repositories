@@ -240,6 +240,11 @@
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/admin/autodarts.svg",
     "type": "protocols"
   },
+  "autodoc": {
+    "meta": "https://raw.githubusercontent.com/crunchip77/ioBroker.autodoc/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/crunchip77/ioBroker.autodoc/main/admin/autodoc.png",
+    "type": "general"
+  },
   "automatic-feeder": {
     "meta": "https://raw.githubusercontent.com/ssbingo/ioBroker.automatic-feeder/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ssbingo/ioBroker.automatic-feeder/main/admin/automatic-feeder.png",
@@ -519,6 +524,11 @@
     "meta": "https://raw.githubusercontent.com/Bannsaenger/ioBroker.codesys-nvl/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Bannsaenger/ioBroker.codesys-nvl/main/admin/codesys-nvl.png",
     "type": "hardware"
+  },
+  "cometvisu": {
+    "meta": "https://raw.githubusercontent.com/joltcoke/ioBroker.cometvisu/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/joltcoke/ioBroker.cometvisu/main/admin/cometvisu.png",
+    "type": "visualization"
   },
   "comfoair": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.comfoair/master/io-package.json",
@@ -1024,6 +1034,11 @@
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.fuelpricemonitor/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.fuelpricemonitor/main/admin/fuelpricemonitor.png",
     "type": "vehicle"
+  },
+  "fujitsu-airstage": {
+    "meta": "https://raw.githubusercontent.com/stefan5232/ioBroker.fujitsu-airstage/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/stefan5232/ioBroker.fujitsu-airstage/main/admin/fujitsu.png",
+    "type": "climate-control"
   },
   "fullcalendar": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.fullcalendar/master/io-package.json",
