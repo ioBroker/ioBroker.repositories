@@ -910,6 +910,11 @@
     "icon": "https://raw.githubusercontent.com/bloop16/ioBroker.f1/main/admin/f1.png",
     "type": "misc-data"
   },
+  "faikout": {
+    "meta": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.faikout/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.faikout/main/admin/faikout.png",
+    "type": "climate-control"
+  },
   "fairland": {
     "meta": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/admin/fairland.png",
