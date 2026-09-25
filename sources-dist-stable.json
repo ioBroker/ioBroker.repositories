@@ -3315,6 +3315,12 @@
     "type": "geoposition",
     "version": "3.1.0"
   },
+  "tractive-next": {
+    "meta": "https://raw.githubusercontent.com/Fraese73/ioBroker.tractive-next/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Fraese73/ioBroker.tractive-next/main/admin/tractive-next.png",
+    "type": "geoposition",
+    "version": "0.5.5"
+  },
   "tradfri": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.tradfri/master/admin/tradfri.png",
