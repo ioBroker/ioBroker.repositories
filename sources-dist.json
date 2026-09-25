@@ -3890,6 +3890,11 @@
     "icon": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.wireguard/main/admin/wireguard.svg",
     "type": "infrastructure"
   },
+  "wireguard-s2s": {
+    "meta": "https://raw.githubusercontent.com/System-9/ioBroker.wireguard-s2s/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/System-9/ioBroker.wireguard-s2s/main/admin/wireguard-s2s.svg",
+    "type": "network"
+  },
   "wireless-mbus": {
     "meta": "https://raw.githubusercontent.com/lvogt/ioBroker.wireless-mbus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/lvogt/ioBroker.wireless-mbus/master/admin/wireless-mbus.png",
