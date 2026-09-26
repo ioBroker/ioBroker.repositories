@@ -2065,6 +2065,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.mqtt-client/master/admin/mqtt-client.svg",
     "type": "protocols"
   },
+  "mqtt-plus": {
+    "meta": "https://raw.githubusercontent.com/Proxyyy87/ioBroker.mqtt-plus/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Proxyyy87/ioBroker.mqtt-plus/main/admin/mqtt-plus.png",
+    "type": "iot-systems"
+  },
   "mspa": {
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.mspa/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.mspa/main/admin/mspa.png",
