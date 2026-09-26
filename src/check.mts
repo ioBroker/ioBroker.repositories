@@ -690,8 +690,8 @@ function triggerRepoCheck(owner: string, adapter: string) {
  *
  * The info workflows normally run on the 'labeled' event, but a label added by this script uses
  * the default GITHUB_TOKEN, and events triggered by that token do not start further workflow
- * runs. The bot's personal access token (IOBBOT_GITHUB_TOKEN) is used here instead, and the PR
- * number is passed as a workflow_dispatch input because a dispatch event carries no PR context.
+ * runs. An explicit workflow_dispatch via the API is used instead (OWN_GITHUB_TOKEN has
+ * Actions: write), and the PR number is passed as input because a dispatch event carries no PR context.
  */
 function triggerLabelWorkflow(workflow: string, prID: string | number) {
     console.log(`trigger workflow ${workflow} for PR ${prID}`);
@@ -702,7 +702,7 @@ function triggerLabelWorkflow(workflow: string, prID: string | number) {
             { ref: 'master', inputs: { pr: `${prID}` } },
             {
                 headers: {
-                    Authorization: `Bearer ${process.env.IOBBOT_GITHUB_TOKEN}`,
+                    Authorization: `Bearer ${process.env.OWN_GITHUB_TOKEN}`,
                     Accept: 'application/vnd.github+json',
                     'user-agent': 'Action script',
                 },
@@ -966,6 +966,8 @@ async function doIt() {
             const latestTime = new Date(latest[adapterName].versionDate);
             const latestTimeStr = `${latestTime.getDate()}.${latestTime.getMonth() + 1}.${latestTime.getFullYear()}`;
             const latestDaysOld = Math.floor((now.getTime() - latestTime.getTime()) / ONE_DAY);
+            // Age of the version actually submitted; overridden below when it differs from latestRelease.
+            let submittedDaysOld: number = latestDaysOld;
             const latestUser = statistic.versions[adapterName] ? statistic.versions[adapterName][latestRelease] : 0;
             const latestUserPercent = ((latestUser / totalUser) * 100).toFixed(2);
 
@@ -996,7 +998,7 @@ async function doIt() {
                     if (submittedVersionDate) {
                         const submittedTime = new Date(submittedVersionDate);
                         const submittedTimeStr = `${submittedTime.getDate()}.${submittedTime.getMonth() + 1}.${submittedTime.getFullYear()}`;
-                        const submittedDaysOld = Math.floor((now.getTime() - submittedTime.getTime()) / ONE_DAY);
+                        submittedDaysOld = Math.floor((now.getTime() - submittedTime.getTime()) / ONE_DAY);
                         submittedCreatedStr = ` created ${submittedTimeStr} (${submittedDaysOld} days old)`;
                     }
                 } catch (e) {
@@ -1068,22 +1070,24 @@ async function doIt() {
                 noDecorate: true,
             });
 
-            // Flag very young releases submitted to stable. The age is the number of days the
-            // latest release has been available, derived from the LATEST repository's versionDate
-            // exactly like iobroker-bot-orga/check-tasks checkReadyForStable does:
-            //   Math.floor((now - new Date(latest[adapter].versionDate)) / ONE_DAY)  == latestDaysOld
+            // Flag very young releases submitted to stable. When the PR submits the current npm
+            // latest release, its age comes from the LATEST repository's versionDate (same as
+            // iobroker-bot-orga/check-tasks checkReadyForStable). When the PR submits a different
+            // version (e.g. a newer pre-release not yet the npm latest), use that version's age
+            // from npm — the submitted version is what matters, not the npm latest tag.
             // A release younger than one day has not even settled at LATEST yet; one below five
             // days is still brand new. The matching info workflow (dispatched after the loop)
             // posts the explanatory comment.
+            const effectiveDaysOld = submittedDaysOld;
             let ageLabel = '';
-            if (latestDaysOld < 1) {
+            if (effectiveDaysOld < 1) {
                 ageLabel = 'STABLE - 0-Day PR';
-            } else if (latestDaysOld < 5) {
+            } else if (effectiveDaysOld < 5) {
                 ageLabel = 'STABLE - brand new';
             }
             if (ageLabel) {
                 try {
-                    console.log(`latest release ${latestRelease} is ${latestDaysOld} days old - adding label '${ageLabel}'`);
+                    console.log(`submitted release ${submittedRelease} is ${effectiveDaysOld} days old - adding label '${ageLabel}'`);
                     await addLabel(prID, [ageLabel]);
                     stableInfoLabels.add(ageLabel);
                 } catch (e) {
