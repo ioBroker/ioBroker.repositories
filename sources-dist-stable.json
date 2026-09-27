@@ -153,6 +153,12 @@
     "type": "iot-systems",
     "version": "1.0.15"
   },
+  "anker-solix": {
+    "meta": "https://raw.githubusercontent.com/MatthiasUlrich1/ioBroker.anker-solix/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MatthiasUlrich1/ioBroker.anker-solix/main/admin/anker-solix.png",
+    "type": "energy",
+    "version": "0.10.90"
+  },
   "ankersolix2": {
     "meta": "https://raw.githubusercontent.com/ronny130286/ioBroker.ankersolix2/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ronny130286/ioBroker.ankersolix2/main/admin/ankersolix2.png",
