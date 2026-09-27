@@ -1545,11 +1545,6 @@
     "icon": "https://raw.githubusercontent.com/matthsc/ioBroker.innoxel/main/admin/innoxel.png",
     "type": "iot-systems"
   },
-  "intesishome": {
-    "meta": "https://raw.githubusercontent.com/maxtox/ioBroker.intesishome/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/maxtox/ioBroker.intesishome/master/admin/intesishome.png",
-    "type": "climate-control"
-  },
   "intex": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.intex/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.intex/master/admin/intex.png",
