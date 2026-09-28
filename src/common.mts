@@ -48,9 +48,9 @@ export function deleteLabel(prID: IssueId, label: string): Promise<any> {
 }
 
 export function getLabels(prID: IssueId): Promise<any> {
-    let url = `labels`;
+    let url = `labels?per_page=100`;
     if (prID) {
-        url = `issues/${prID}/labels`;
+        url = `issues/${prID}/labels?per_page=100`;
     }
     return axios(`https://api.github.com/repos/ioBroker/ioBroker.repositories/${url}`, {
         headers: authHeaders(),
