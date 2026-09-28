@@ -47,14 +47,30 @@ export function deleteLabel(prID: IssueId, label: string): Promise<any> {
         .then(response => response.data);
 }
 
-export function getLabels(prID: IssueId): Promise<any> {
-    let url = `labels?per_page=100`;
+export async function getLabels(prID: IssueId): Promise<any[]> {
     if (prID) {
-        url = `issues/${prID}/labels?per_page=100`;
+        const response = await axios(
+            `https://api.github.com/repos/ioBroker/ioBroker.repositories/issues/${prID}/labels?per_page=100`,
+            { headers: authHeaders() },
+        );
+        return response.data;
     }
-    return axios(`https://api.github.com/repos/ioBroker/ioBroker.repositories/${url}`, {
-        headers: authHeaders(),
-    }).then(response => response.data);
+    // repo labels: paginate until GitHub returns fewer than per_page items
+    const all: any[] = [];
+    let page = 1;
+    const perPage = 100;
+    while (true) {
+        const response = await axios(
+            `https://api.github.com/repos/ioBroker/ioBroker.repositories/labels?per_page=${perPage}&page=${page}`,
+            { headers: authHeaders() },
+        );
+        all.push(...response.data);
+        if (response.data.length < perPage) {
+            break;
+        }
+        page++;
+    }
+    return all;
 }
 
 export function createLabel(name: string, description: string, color: string): Promise<any> {
