@@ -12,6 +12,13 @@ name: Stable 0-Day PR Info
 on:
   pull_request_target:
     types: [labeled, unlabeled]
+  # Dispatched by src/check.mts, which adds the label with the default GITHUB_TOKEN - an event
+  # from that token does not start the 'labeled' run, so the PR number is passed explicitly here.
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: 'PR number to process'
+        required: true
 
 jobs:
   stableBrandNewInfo:
@@ -30,3 +37,4 @@ jobs:
       - run: npm run stable0DayPrInfo
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.inputs.pr }}
