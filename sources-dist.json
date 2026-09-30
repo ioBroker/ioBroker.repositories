@@ -670,6 +670,11 @@
     "icon": "https://raw.githubusercontent.com/TKnpl/ioBroker.divera247/main/admin/divera247.png",
     "type": "alarm"
   },
+  "dl-manager": {
+    "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.dl-manager/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.dl-manager/main/admin/dl-manager.svg",
+    "type": "infrastructure"
+  },
   "dnscope": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.dnscope/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.dnscope/main/admin/dnscope.png",
