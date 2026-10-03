@@ -1,0 +1,34 @@
+# This workflow will triage pull requests and add or remove informational
+# comments based on the 'rd-checked ✔' and 'rd-checked ❌' labels.
+
+name: RD Checked PR Info
+
+#
+# WARNING:
+#    ** Do NOT run untrusted code when using pull_request_target **
+# pull_request_target is needed as pull_request does not provide secrets and so no
+# labeling of PR is possible.
+#
+on:
+  pull_request_target:
+    types: [labeled, unlabeled]
+
+jobs:
+  rdCheckedPrInfo:
+    name: rd checked PR info
+    if: |
+      github.repository == 'ioBroker/ioBroker.repositories'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+        # safe operation as no ref is specified and so base branch is checked out
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: npm i
+      - run: npm run rdCheckedPrInfo
+        env:
+          OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
