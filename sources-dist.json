@@ -2765,6 +2765,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung/master/admin/samsung.png",
     "type": "multimedia"
   },
+  "samsung-mdc": {
+    "meta": "https://raw.githubusercontent.com/AlanSRU/ioBroker.samsung-mdc/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AlanSRU/ioBroker.samsung-mdc/main/admin/samsung-mdc.png",
+    "type": "multimedia"
+  },
   "samsung_tizen": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung_tizen/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung_tizen/master/admin/samsung.png",
