@@ -185,6 +185,11 @@
     "icon": "https://raw.githubusercontent.com/reloxx13/ioBroker.anthbot-genie/main/admin/anthbot-genie.png",
     "type": "garden"
   },
+  "anycubic-cloud": {
+    "meta": "https://raw.githubusercontent.com/hwiedermann/ioBroker.anycubic-cloud/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/hwiedermann/ioBroker.anycubic-cloud/main/admin/anycubic-cloud.svg",
+    "type": "hardware"
+  },
   "apcups": {
     "meta": "https://raw.githubusercontent.com/XHunter74/ioBroker.apcups/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/XHunter74/ioBroker.apcups/master/admin/ups.png",
