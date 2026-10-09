@@ -2865,6 +2865,11 @@
     "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.script-restore/main/admin/script-restore.svg",
     "type": "utility"
   },
+  "sehybrid": {
+    "meta": "https://raw.githubusercontent.com/heresiarch/ioBroker.sehybrid/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/heresiarch/ioBroker.sehybrid/main/admin/sehybrid.png",
+    "type": "energy"
+  },
   "seko": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.seko/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.seko/main/admin/seko.png",
