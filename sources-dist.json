@@ -380,6 +380,11 @@
     "icon": "https://raw.githubusercontent.com/Percy2Live/ioBroker.bluetti/main/admin/bluetti.png",
     "type": "energy"
   },
+  "bluetti-ble": {
+    "meta": "https://raw.githubusercontent.com/Garfonso/ioBroker.bluetti-ble/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Garfonso/ioBroker.bluetti-ble/main/admin/bluetti-ble.png",
+    "type": "energy"
+  },
   "blustream-acm": {
     "meta": "https://raw.githubusercontent.com/AlanSRU/ioBroker.blustream-acm/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlanSRU/ioBroker.blustream-acm/main/admin/blustream-acm.png",
