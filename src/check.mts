@@ -1260,15 +1260,15 @@ async function doIt() {
     }
 
     if (newAtLatest && newAtLatestUrl) {
-        comment += `\n\n---\n<sub>Prompt for documentation update:<br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtLatest.md<br>Adapter: ${newAtLatestUrl}</sub>`;
+        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtLatest.md<br>Adapter: ${newAtLatestUrl}</sub>`;
     }
 
     if (newAtStable && newAtStableUrl) {
-        comment += `\n\n---\n<sub>Prompt for documentation update:<br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtStable.md<br>Adapter: ${newAtStableUrl}</sub>`;
+        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtStable.md<br>Adapter: ${newAtStableUrl}</sub>`;
     }
 
     if (updateStableUrl && updateStableFrom && updateStableTo) {
-        comment += `\n\n---\n<sub>Prompt for documentation update:<br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsUpdateStableRelease.md<br>Adapter: ${updateStableUrl}<br>version range: ${updateStableFrom} to ${updateStableTo}</sub>`;
+        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsUpdateStableRelease.md<br>Adapter: ${updateStableUrl}<br>version range: ${updateStableFrom} to ${updateStableTo}</sub>`;
     }
 
     comment += `\n\n---\n\n**Add comment "${TEXT_RECHECK}" to start check anew**`;
