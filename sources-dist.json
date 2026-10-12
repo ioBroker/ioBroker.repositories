@@ -195,6 +195,11 @@
     "icon": "https://raw.githubusercontent.com/HGlab01/ioBroker.apg-info/main/admin/apg-info.png",
     "type": "general"
   },
+  "apple": {
+    "meta": "https://raw.githubusercontent.com/Musashi1965/ioBroker.apple/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Musashi1965/ioBroker.apple/main/admin/apple.png",
+    "type": "multimedia"
+  },
   "apsystems-ez1": {
     "meta": "https://raw.githubusercontent.com/zhihaining/ioBroker.apsystems-ez1/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/zhihaining/ioBroker.apsystems-ez1/master/admin/apsystems-ez1.png",
@@ -625,6 +630,11 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
     "type": "multimedia"
   },
+  "device-monitoring": {
+    "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.device-monitoring/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.device-monitoring/main/admin/device-monitoring.png",
+    "type": "alarm"
+  },
   "device-reminder": {
     "meta": "https://raw.githubusercontent.com/Xenon-s/ioBroker.device-reminder/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Xenon-s/ioBroker.device-reminder/master/admin/device-reminder.png",
@@ -955,6 +965,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.fiat/master/admin/fiat.png",
     "type": "vehicle"
   },
+  "fingerprint": {
+    "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.fingerprint/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.fingerprint/main/admin/fingerprint.png",
+    "type": "hardware"
+  },
   "firetv": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.firetv/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.firetv/master/admin/firetv.png",
@@ -969,6 +984,11 @@
     "meta": "https://raw.githubusercontent.com/MyHomeMyData/ioBroker.flexcharts/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/MyHomeMyData/ioBroker.flexcharts/main/admin/flexcharts-icon.png",
     "type": "visualization"
+  },
+  "flow": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.flow/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.flow/main/admin/flow.svg",
+    "type": "visualization-widgets"
   },
   "flowers": {
     "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.flowers/main/io-package.json",
@@ -1655,6 +1675,11 @@
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.lametric/master/admin/lametric.png",
     "type": "hardware"
   },
+  "laundrylens": {
+    "meta": "https://raw.githubusercontent.com/backfisch88/ioBroker.laundrylens/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/backfisch88/ioBroker.laundrylens/main/admin/icon.png",
+    "type": "general"
+  },
   "lcn": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.lcn/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.lcn/master/admin/lcn.png",
@@ -1960,6 +1985,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.miele/master/admin/xmiele.png",
     "type": "household"
   },
+  "miele-local": {
+    "meta": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.miele-local/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.miele-local/main/admin/miele-local.png",
+    "type": "household"
+  },
   "mielecloudservice": {
     "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.mielecloudservice/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.mielecloudservice/master/admin/mielecloudservice.svg",
@@ -2238,6 +2268,11 @@
   "nuki-extended": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.nuki-extended/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.nuki-extended/master/admin/nuki-extended.png",
+    "type": "hardware"
+  },
+  "nuki-local": {
+    "meta": "https://raw.githubusercontent.com/helfi9999/ioBroker.nuki-local/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/helfi9999/ioBroker.nuki-local/main/admin/nuki-local.png",
     "type": "hardware"
   },
   "nut": {
@@ -3437,7 +3472,7 @@
   },
   "utility-monitor": {
     "meta": "https://raw.githubusercontent.com/fischi87/ioBroker.utility-monitor/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/fischi87/ioBroker.utility-monitor/main/admin/utility-monitor.png",
+    "icon": "https://raw.githubusercontent.com/fischi87/ioBroker.utility-monitor/main/admin/utility-monitor.jpg",
     "type": "metering"
   },
   "uv-protect": {
