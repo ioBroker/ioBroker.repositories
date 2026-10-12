@@ -483,6 +483,12 @@
     "type": "health",
     "version": "0.9.0"
   },
+  "corrently": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.corrently/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.corrently/master/admin/corrently.png",
+    "type": "misc-data",
+    "version": "0.1.1"
+  },
   "countdown": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.countdown/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.countdown/master/admin/countdown.png",
