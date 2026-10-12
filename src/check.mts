@@ -50,15 +50,19 @@ interface CommentLine {
 // Each entry is an object:
 //   { user: '<github-login>' }                          -> whitelisted for ALL repositories
 //   { user: '<github-login>', repos: ['owner/repo'] }   -> whitelisted for the listed repositories only
+//   { user: '<github-login>', orgs: ['org'] }           -> whitelisted for all repositories owned by org
 // A repo may be given as full name 'owner/ioBroker.adapter' or just the adapter repo
 // name 'ioBroker.adapter' (matched case-insensitively).
+// An org entry matches any repository whose owner equals the org name (case-insensitively).
 interface WhitelistEntry {
     user: string;
     repos?: string[];
+    orgs?: string[];
 }
 
 const MAINTAINER_WHITELIST: WhitelistEntry[] = [
-    { user: 'mcm1957' }, // whitelisted for all repositories
+    { user: 'mcm1957' },                          // whitelisted for all repositories
+    { user: 'GermanBluefox', orgs: ['ioBroker'] }, // whitelisted for all ioBroker/* repositories
 ];
 
 function getPullRequestNumber() {
@@ -229,26 +233,32 @@ async function isPublicOrgMember(org: string, username: string) {
 /**
  * Check whether a user is whitelisted for a given repository.
  *
- * An entry without a (non-empty) `repos` list whitelists the user for ALL repositories.
- * Otherwise the user is only whitelisted for the listed repositories. A repo entry may
- * be the full name 'owner/ioBroker.adapter' or just the repo name 'ioBroker.adapter'.
+ * An entry without a (non-empty) `repos` or `orgs` list whitelists the user for ALL repositories.
+ * A `repos` entry matches by full name 'owner/ioBroker.adapter' or just 'ioBroker.adapter'.
+ * An `orgs` entry matches any repository whose owner equals one of the listed org names.
+ * Both `repos` and `orgs` may be present on the same entry; the user is whitelisted when
+ * either list matches.
  */
 function isWhitelisted(owner: string, adapter: string, username: string) {
     const fullName = `${owner}/${adapter}`.toLowerCase();
     const repoName = adapter.toLowerCase();
+    const ownerLower = owner.toLowerCase();
 
     return MAINTAINER_WHITELIST.some(entry => {
         if (!entry?.user || entry.user.toLowerCase() !== username.toLowerCase()) {
             return false;
         }
-        if (!entry.repos?.length) {
-            // No repo restriction -> whitelisted for all repositories.
+        if (!entry.repos?.length && !entry.orgs?.length) {
+            // No restriction -> whitelisted for all repositories.
             return true;
         }
-        return entry.repos.some((repo: string) => {
+        if (entry.orgs?.length && entry.orgs.some((org: string) => String(org).toLowerCase() === ownerLower)) {
+            return true;
+        }
+        return entry.repos?.some((repo: string) => {
             const r = String(repo).toLowerCase();
             return r === fullName || r === repoName;
-        });
+        }) ?? false;
     });
 }
 
