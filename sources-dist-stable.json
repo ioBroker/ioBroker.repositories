@@ -591,6 +591,12 @@
     "type": "network",
     "version": "0.3.0"
   },
+  "docker-manager": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.docker-manager/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.docker-manager/main/admin/docker-manager.svg",
+    "type": "iot-systems",
+    "version": "1.0.4"
+  },
   "doorbird": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.doorbird/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.doorbird/master/admin/doorbird.png",
