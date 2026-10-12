@@ -826,7 +826,12 @@ async function doIt() {
     let titleAdapterName = '';
     let titleVersion = '';
     let newAtStable = false;
+    let newAtStableUrl = '';
+    let updateStableUrl = '';
+    let updateStableFrom = '';
+    let updateStableTo = '';
     let newAtLatest = false;
+    let newAtLatestUrl = '';
 
     // STABLE age labels ('STABLE - 0-Day PR' / 'STABLE - brand new') attached during the loop.
     // The related info workflows are dispatched once after the loop (see below).
@@ -1029,6 +1034,12 @@ async function doIt() {
                     noDecorate: true,
                 });
                 comments.push({ text: `${stableUser} users (stable) (${stableUserPercent}%)`, noDecorate: true });
+
+                if (submittedRelease !== stableRelease) {
+                    updateStableUrl = link;
+                    updateStableFrom = stableRelease;
+                    updateStableTo = submittedRelease;
+                }
             } else {
                 comments.push({ text: ``, noDecorate: true });
                 comments.push({ text: `stable release not yet available`, noDecorate: true });
@@ -1049,6 +1060,7 @@ async function doIt() {
                 }
 
                 newAtStable = true;
+                newAtStableUrl = link;
                 await addLabel(prID, ['new at STABLE']);
             }
 
@@ -1099,6 +1111,7 @@ async function doIt() {
 
             if (!latest[adapterName]) {
                 newAtLatest = true;
+                newAtLatestUrl = link;
                 await addLabel(prID, ['new at LATEST']);
 
                 const gitComments = await getAllComments(prID);
@@ -1246,7 +1259,19 @@ async function doIt() {
         comment += verificationLines.map(line => `\n${line}`).join('');
     }
 
-    comment += `\n\n\n*Add comment "${TEXT_RECHECK}" to start check anew*`;
+    if (newAtLatest && newAtLatestUrl) {
+        comment += `\n\n---\n<sub>Prompt for documentation update:<br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtLatest.md<br>Adapter: ${newAtLatestUrl}</sub>`;
+    }
+
+    if (newAtStable && newAtStableUrl) {
+        comment += `\n\n---\n<sub>Prompt for documentation update:<br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtStable.md<br>Adapter: ${newAtStableUrl}</sub>`;
+    }
+
+    if (updateStableUrl && updateStableFrom && updateStableTo) {
+        comment += `\n\n---\n<sub>Prompt for documentation update:<br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsUpdateStableRelease.md<br>Adapter: ${updateStableUrl}<br>version range: ${updateStableFrom} to ${updateStableTo}</sub>`;
+    }
+
+    comment += `\n\n---\n\n**Add comment "${TEXT_RECHECK}" to start check anew**`;
 
     console.log('ADD PULL REQUEST COMMENT:');
     console.log(comment);
