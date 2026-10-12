@@ -2709,6 +2709,12 @@
     "type": "iot-systems",
     "version": "2.1.12"
   },
+  "rfxcom": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.rfxcom/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.rfxcom/master/admin/rfxcom.png",
+    "type": "iot-systems",
+    "version": "2.0.2"
+  },
   "rickshaw": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.rickshaw/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.rickshaw/master/admin/rickshaw.png",
