@@ -3898,10 +3898,10 @@
     "version": "0.0.13"
   },
   "witmotion": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.witmotion/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.witmotion/master/admin/witmotion.png",
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.witmotion/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.witmotion/main/admin/witmotion.png",
     "type": "utility",
-    "version": "0.0.4"
+    "version": "2.1.1"
   },
   "wlanthermo-nano": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.wlanthermo-nano/main/io-package.json",
