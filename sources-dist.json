@@ -3301,8 +3301,8 @@
     "type": "messaging"
   },
   "teltonika": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/master/admin/teltonika.svg",
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/main/admin/teltonika.svg",
     "type": "network"
   },
   "terminal": {
