@@ -33,9 +33,12 @@ export function addLabel(prID: IssueId, labels: string[]): Promise<any> {
 }
 
 export function deleteLabel(prID: IssueId, label: string): Promise<any> {
-    let url = `labels/${label}`;
+    // Label names may contain spaces and non-ASCII characters (e.g. 'auto-checked ❌'),
+    // so they must be percent-encoded to form a valid request path.
+    const encodedLabel = encodeURIComponent(label);
+    let url = `labels/${encodedLabel}`;
     if (prID) {
-        url = `issues/${prID}/labels/${label}`;
+        url = `issues/${prID}/labels/${encodedLabel}`;
     }
     return axios
         .delete(`https://api.github.com/repos/ioBroker/ioBroker.repositories/${url}`, {
@@ -44,14 +47,30 @@ export function deleteLabel(prID: IssueId, label: string): Promise<any> {
         .then(response => response.data);
 }
 
-export function getLabels(prID: IssueId): Promise<any> {
-    let url = `labels`;
+export async function getLabels(prID: IssueId): Promise<any[]> {
     if (prID) {
-        url = `issues/${prID}/labels`;
+        const response = await axios(
+            `https://api.github.com/repos/ioBroker/ioBroker.repositories/issues/${prID}/labels?per_page=100`,
+            { headers: authHeaders() },
+        );
+        return response.data;
     }
-    return axios(`https://api.github.com/repos/ioBroker/ioBroker.repositories/${url}`, {
-        headers: authHeaders(),
-    }).then(response => response.data);
+    // repo labels: paginate until GitHub returns fewer than per_page items
+    const all: any[] = [];
+    let page = 1;
+    const perPage = 100;
+    while (true) {
+        const response = await axios(
+            `https://api.github.com/repos/ioBroker/ioBroker.repositories/labels?per_page=${perPage}&page=${page}`,
+            { headers: authHeaders() },
+        );
+        all.push(...response.data);
+        if (response.data.length < perPage) {
+            break;
+        }
+        page++;
+    }
+    return all;
 }
 
 export function createLabel(name: string, description: string, color: string): Promise<any> {
@@ -176,6 +195,18 @@ export function closePR(prID: IssueId): Promise<any> {
         .patch(
             `https://api.github.com/repos/ioBroker/ioBroker.repositories/pulls/${prID}`,
             { state: 'closed' },
+            {
+                headers: authHeaders(),
+            },
+        )
+        .then(response => response.data);
+}
+
+export function setPullRequestTitle(prID: IssueId, title: string): Promise<any> {
+    return axios
+        .patch(
+            `https://api.github.com/repos/ioBroker/ioBroker.repositories/pulls/${prID}`,
+            { title },
             {
                 headers: authHeaders(),
             },

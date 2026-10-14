@@ -9,12 +9,49 @@ let latest: Record<string, any>;
 let stable: Record<string, any>;
 // let axiosCounter = 0;
 
-console.log(`OWN_GITHUB_TOKEN: ${process.env.OWN_GITHUB_TOKEN}`);
 // axios.defaults.headers = {
 //     'Authorization': process.env.OWN_GITHUB_TOKEN ? `token ${process.env.OWN_GITHUB_TOKEN}` : 'none',
 // };
 if (process.env.OWN_GITHUB_TOKEN) {
     axios.defaults.headers.common.Authorization = `Bearer ${process.env.OWN_GITHUB_TOKEN}`;
+    console.log('OWN_GITHUB_TOKEN is set: requests are authenticated (higher rate limit).');
+} else {
+    console.warn(
+        'OWN_GITHUB_TOKEN is NOT set: requests are unauthenticated and may hit GitHub rate limits (HTTP 429). ' +
+            'Note: for pull_request events from forks GitHub does not expose repository secrets.',
+    );
+}
+
+const delay = (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms));
+
+// Fallback wait times (in ms) between retries when the response carries no hint: 5 min, then 10 min.
+const RETRY_FALLBACK_DELAYS = [5 * 60 * 1000, 10 * 60 * 1000, 10 * 60 * 1000];
+
+// GitHub signals rate limiting with HTTP 429 (and sometimes 403 once the limit is exhausted).
+function isRateLimit(status: number): boolean {
+    return status === 429 || status === 403;
+}
+
+// Determine how long to wait from the response headers, honouring `Retry-After`
+// (seconds or an HTTP date) or `x-ratelimit-reset` (epoch seconds). Returns undefined if no hint.
+function getRetryDelayFromResponse(response: any): number | undefined {
+    const headers = response?.headers || {};
+    const retryAfter = headers['retry-after'];
+    if (retryAfter !== undefined) {
+        const seconds = Number(retryAfter);
+        if (!Number.isNaN(seconds)) {
+            return seconds * 1000;
+        }
+        const date = new Date(retryAfter).getTime();
+        if (!Number.isNaN(date)) {
+            return Math.max(0, date - Date.now());
+        }
+    }
+    const reset = headers['x-ratelimit-reset'];
+    if (reset !== undefined && !Number.isNaN(Number(reset))) {
+        return Math.max(0, Number(reset) * 1000 - Date.now());
+    }
+    return undefined;
 }
 
 async function request(url: string) {
@@ -22,8 +59,35 @@ async function request(url: string) {
     // if (axiosCounter % 5) {
     //     await new Promise(resolve => setTimeout(resolve, 300));
     // }
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    return axios(url);
+    await delay(1000);
+
+    const maxRetries = 3;
+    for (let attempt = 0; ; attempt++) {
+        try {
+            return await axios(url);
+        } catch (e: any) {
+            const status = e.response?.status;
+            // 404 (not found) is a definite answer - never retry it.
+            if (status === 404) {
+                throw e;
+            }
+            // Only retry on GitHub rate limit responses; give up once retries are exhausted.
+            if (!status || !isRateLimit(status) || attempt >= maxRetries) {
+                throw e;
+            }
+            const hintedDelay = getRetryDelayFromResponse(e.response);
+            const waitMs = hintedDelay ?? RETRY_FALLBACK_DELAYS[attempt];
+            const nextTry = new Date(Date.now() + waitMs).toISOString();
+            // Make the stall explicit: processing is paused (not hung) while we wait out the rate limit.
+            console.warn(
+                `Rate limited (HTTP ${status}) for ${url}. Processing is PAUSED - not stuck: ` +
+                    `waiting ${Math.round(waitMs / 1000)}s ` +
+                    `${hintedDelay !== undefined ? '(from response headers)' : '(fallback)'} ` +
+                    `before retry ${attempt + 1}/${maxRetries}, next attempt at ${nextTry}.`,
+            );
+            await delay(waitMs);
+        }
+    }
 }
 
 const reservedAdapterNames = ['config', 'system', 'alias', 'design', 'all', 'self'];
@@ -89,8 +153,15 @@ describe('Test Repository', () => {
             if (Object.prototype.hasOwnProperty.call(latest, id) && id !== '_repoInfo') {
                 assert.equal(id, id.toLowerCase(), `Adapter id ${id} is not lowercase`);
                 if (latest[id].meta?.match(/io-package\.json$/)) {
-                    const response = await request(latest[id].meta);
-                    console.log(`[${i}/${len}] Check ${id}`);
+                    console.log(`[${i}/${len}] Check ${id} (${latest[id].meta})`);
+                    let response;
+                    try {
+                        response = await request(latest[id].meta);
+                    } catch (e: any) {
+                        throw new Error(
+                            `Error requesting meta for "${id}" (${latest[id].meta}): ${e.message || e}`,
+                        );
+                    }
                     const pack = response.data;
                     if (pack?.common && pack.common.type !== latest[id].type) {
                         console.error(`Types in "${id}" are not equal: ${pack.common.type} !== ${latest[id].type}`);

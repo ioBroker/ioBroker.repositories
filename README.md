@@ -4,11 +4,11 @@ This is a GitHub project for storage of the latest and stable repositories.
 
 ![last refresh beta](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28beta%29&query=%24.date&url=https%3A%2F%2Fdownload.iobroker.net%2Fsources-dist-latest-hash.json) ![last refresh stable](https://img.shields.io/badge/dynamic/json?color=green&label=last%20refresh%20%28stable%29&query=%24.date&url=https%3A%2F%2Fdownload.iobroker.net%2Fsources-dist-hash.json)
 
-## Update of the version in stable
+## Update of the version in STABLE repository
 1. Be sure that the version is tested in forum by users, or you fix the critical bug with that.
 2. Delete the `versionTime`, if exists
 
-## Add a new adapter to the latest repository
+## Add a new adapter to the BETA (latest) repository
 1. Fork this repo and clone your fork
 2. Run `npm i`
 3. Run `npm run addToLatest -- --name <adapter-name> --type <adapter-type>`  
@@ -16,14 +16,14 @@ This is a GitHub project for storage of the latest and stable repositories.
 4. Push a commit with the changes to `sources-dist.json`
 5. Create a PR
 
-## Add a new adapter to the latest repository (web frontend)
+## Add a new adapter to the BETA (latest) repository (web frontend)
 1. Go to [iobroker.dev](https://www.iobroker.dev/)
 2. Log in with GitHub
 3. Open the new adapter
 4. Click on manage
 5. Click on the action "ADD TO LATEST"
 
-## Requirements for an adapter to get added to the latest repository
+## Requirements for an adapter to get added to the BETA (latest) repository
 *Already required for the latest repository*
 
 1. Your GitHub repository must have the name - `ioBroker.<adaptername>`. **B** is capital in "ioBroker", but in the `package.json` the *name* must be low case, because npm does not allow upper case letters. Your repository must have "topics". Add these with `Manage topics`.

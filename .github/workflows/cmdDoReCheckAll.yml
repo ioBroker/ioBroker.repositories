@@ -1,11 +1,11 @@
-name: Cmd Do ReCheck
+name: Cmd Do ReCheck All
 
 on:
   workflow_dispatch:
 
 jobs:
-  doReCheck:
-    name: Do ReCheck
+  doReCheckAll:
+    name: Do ReCheck All
     if: github.repository == 'ioBroker/ioBroker.repositories'
 
     runs-on: ubuntu-latest
@@ -20,6 +20,6 @@ jobs:
         with:
           node-version: 22
       - run: npm i
-      - run: npm run doReCheck
+      - run: npm run doReCheckAll
         env:
-          OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWN_GITHUB_TOKEN: ${{ secrets.IOBBOT_GITHUB_TOKEN }}
