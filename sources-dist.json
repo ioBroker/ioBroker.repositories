@@ -3145,11 +3145,6 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonos/master/admin/sonos.png",
     "type": "multimedia"
   },
-  "sonus": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonus/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.sonus/master/admin/sonus.png",
-    "type": "multimedia"
-  },
   "sony-bravia": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sony-bravia/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sony-bravia/master/admin/sony-bravia.png",
