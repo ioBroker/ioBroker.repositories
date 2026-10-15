@@ -217,7 +217,7 @@
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/admin/autodarts.svg",
     "type": "protocols",
-    "version": "1.0.12"
+    "version": "1.1.1"
   },
   "awattar": {
     "meta": "https://raw.githubusercontent.com/sirjojo69/ioBroker.awattar/master/io-package.json",
@@ -319,7 +319,7 @@
     "meta": "https://raw.githubusercontent.com/Newan/ioBroker.bluelink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Newan/ioBroker.bluelink/master/admin/bluelink.png",
     "type": "vehicle",
-    "version": "3.1.26"
+    "version": "3.1.34"
   },
   "bluesound": {
     "meta": "https://raw.githubusercontent.com/Uwe1958/ioBroker.bluesound/main/io-package.json",
@@ -451,13 +451,13 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cloud/master/admin/cloud.png",
     "type": "communication",
-    "version": "6.0.1"
+    "version": "6.2.7"
   },
   "cloudflare": {
     "meta": "https://raw.githubusercontent.com/Marco15453/ioBroker.cloudflare/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Marco15453/ioBroker.cloudflare/main/admin/cloudflare.png",
     "type": "infrastructure",
-    "version": "1.2.11"
+    "version": "1.2.16"
   },
   "comfoair": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.comfoair/master/io-package.json",
@@ -547,13 +547,13 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.devices/master/admin/devices.svg",
     "type": "general",
-    "version": "1.2.14"
+    "version": "4.2.2"
   },
   "deyeidc": {
     "meta": "https://raw.githubusercontent.com/raschy/ioBroker.deyeidc/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/raschy/ioBroker.deyeidc/main/admin/deyeidc.png",
     "type": "energy",
-    "version": "0.3.1"
+    "version": "0.4.0"
   },
   "digitalstrom": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.digitalstrom/master/io-package.json",
@@ -631,7 +631,7 @@
     "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.dune-hd-remote/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.dune-hd-remote/main/admin/dune-hd-remote.png",
     "type": "multimedia",
-    "version": "1.2.5"
+    "version": "1.2.8"
   },
   "dwd": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.dwd/master/io-package.json",
@@ -657,12 +657,6 @@
     "type": "iot-systems",
     "version": "1.1.3"
   },
-  "easee": {
-    "meta": "https://raw.githubusercontent.com/Newan/ioBroker.easee/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Newan/ioBroker.easee/master/admin/easee.png",
-    "type": "vehicle",
-    "version": "1.0.10"
-  },
   "ebus": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.ebus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.ebus/master/admin/ebus.png",
@@ -673,7 +667,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.echarts/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.echarts/master/admin/echarts.png",
     "type": "visualization",
-    "version": "3.1.0"
+    "version": "5.1.1"
   },
   "ecoflow-mqtt": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.ecoflow-mqtt/main/io-package.json",
@@ -763,7 +757,7 @@
     "meta": "https://raw.githubusercontent.com/energy-tracker/ioBroker.energy-tracker/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/energy-tracker/ioBroker.energy-tracker/main/admin/energy-tracker.png",
     "type": "iot-systems",
-    "version": "0.3.1"
+    "version": "1.0.0"
   },
   "energymanager": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.energymanager/master/io-package.json",
@@ -806,6 +800,12 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.epson_stylus_px830/master/admin/epson_stylus_px830.png",
     "type": "infrastructure",
     "version": "0.4.0"
+  },
+  "esphome": {
+    "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.esphome/main/admin/esphome.png",
+    "type": "hardware",
+    "version": "1.0.0"
   },
   "espresense": {
     "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.espresense/main/io-package.json",
@@ -859,7 +859,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fakeroku/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.fakeroku/master/admin/fakeroku.svg",
     "type": "multimedia",
-    "version": "1.7.1"
+    "version": "1.8.1"
   },
   "fb-checkpresence": {
     "meta": "https://raw.githubusercontent.com/afuerhoff/ioBroker.fb-checkpresence/master/io-package.json",
@@ -909,11 +909,17 @@
     "type": "visualization",
     "version": "0.7.3"
   },
+  "flow": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.flow/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.flow/main/admin/flow.svg",
+    "type": "visualization-widgets",
+    "version": "0.0.2"
+  },
   "flowers": {
     "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.flowers/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.flowers/main/admin/flowers.png",
     "type": "climate-control",
-    "version": "0.4.4"
+    "version": "0.4.6"
   },
   "followthesun": {
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.followthesun/main/io-package.json",
@@ -991,7 +997,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.frontier_silicon/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.frontier_silicon/master/admin/radio.png",
     "type": "multimedia",
-    "version": "0.5.1"
+    "version": "0.6.0"
   },
   "fuelpricemonitor": {
     "meta": "https://raw.githubusercontent.com/HGlab01/ioBroker.fuelpricemonitor/main/io-package.json",
@@ -1051,7 +1057,7 @@
     "meta": "https://raw.githubusercontent.com/typhosj/ioBroker.goodwe/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/typhosj/ioBroker.goodwe/main/admin/goodwe.png",
     "type": "energy",
-    "version": "1.1.3"
+    "version": "1.2.0"
   },
   "goodwe-pv": {
     "meta": "https://raw.githubusercontent.com/hombach/ioBroker.goodwe-pv/master/io-package.json",
@@ -1093,7 +1099,7 @@
     "meta": "https://raw.githubusercontent.com/boergegrunicke/ioBroker.govee-local/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/boergegrunicke/ioBroker.govee-local/main/admin/govee-local.png",
     "type": "lighting",
-    "version": "0.4.7"
+    "version": "0.5.0"
   },
   "govee-smart": {
     "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.govee-smart/main/io-package.json",
@@ -1177,7 +1183,7 @@
     "meta": "https://raw.githubusercontent.com/meistermopper/ioBroker.harvia-fenix/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/meistermopper/ioBroker.harvia-fenix/main/admin/fenix.png",
     "type": "climate-control",
-    "version": "0.4.0"
+    "version": "1.1.2"
   },
   "hass": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hass/master/io-package.json",
@@ -1273,13 +1279,13 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rega/master/admin/homematic.png",
     "type": "iot-systems",
-    "version": "5.1.0"
+    "version": "6.1.0"
   },
   "hm-rpc": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.hm-rpc/master/admin/homematic.png",
     "type": "iot-systems",
-    "version": "3.0.1"
+    "version": "4.1.2"
   },
   "hmip": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.hmip/master/io-package.json",
@@ -1375,7 +1381,7 @@
     "meta": "https://raw.githubusercontent.com/SentiQ/ioBroker.hydrawise/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/SentiQ/ioBroker.hydrawise/main/admin/hydrawise.jpg",
     "type": "garden",
-    "version": "1.0.6"
+    "version": "2.0.2"
   },
   "hydrop": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.hydrop/main/io-package.json",
@@ -1525,7 +1531,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.iot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.iot/master/admin/iot.png",
     "type": "communication",
-    "version": "6.0.3"
+    "version": "7.1.2"
   },
   "iqontrol": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.iqontrol/master/io-package.json",
@@ -1597,7 +1603,7 @@
     "meta": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/admin/klf200.png",
     "type": "hardware",
-    "version": "1.4.0"
+    "version": "1.4.1"
   },
   "knmi-weather": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.knmi-weather/main/io-package.json",
@@ -1609,7 +1615,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.knx/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.knx/master/admin/knx.png",
     "type": "iot-systems",
-    "version": "2.0.39"
+    "version": "2.0.41"
   },
   "kodi": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.kodi/master/io-package.json",
@@ -1669,7 +1675,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.lgtv/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.lgtv/master/admin/lgtv.png",
     "type": "multimedia",
-    "version": "2.7.4"
+    "version": "3.0.5"
   },
   "lgtv-rs": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.lgtv-rs/master/io-package.json",
@@ -1831,7 +1837,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcul/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcul/master/admin/maxcul.png",
     "type": "iot-systems",
-    "version": "1.3.1"
+    "version": "2.1.0"
   },
   "maxxi-charge": {
     "meta": "https://raw.githubusercontent.com/blabond/ioBroker.maxxi-charge/main/io-package.json",
@@ -1855,7 +1861,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.mcp/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.mcp/main/admin/mcp.png",
     "type": "utility",
-    "version": "1.0.11"
+    "version": "1.1.7"
   },
   "meater": {
     "meta": "https://raw.githubusercontent.com/Standarduser/ioBroker.meater/main/io-package.json",
@@ -1898,6 +1904,12 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.meteoalarm/master/admin/meteoalarm.png",
     "type": "weather",
     "version": "4.0.1"
+  },
+  "meteonomiqs": {
+    "meta": "https://raw.githubusercontent.com/Schimi1983/ioBroker.meteonomiqs/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Schimi1983/ioBroker.meteonomiqs/main/admin/meteonomiqs.png",
+    "type": "weather",
+    "version": "0.2.8"
   },
   "meteoswiss": {
     "meta": "https://raw.githubusercontent.com/deMynchi/ioBroker.meteoswiss/master/io-package.json",
@@ -2101,7 +2113,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myvbus/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.myvbus/master/admin/myvbus.png",
     "type": "climate-control",
-    "version": "0.6.1"
+    "version": "0.7.0"
   },
   "mywallbox": {
     "meta": "https://raw.githubusercontent.com/SKB-CGN/ioBroker.mywallbox/main/io-package.json",
@@ -2155,7 +2167,7 @@
     "meta": "https://raw.githubusercontent.com/Rello/ioBroker.nextcloudtalk/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Rello/ioBroker.nextcloudtalk/main/admin/nextcloud.png",
     "type": "messaging",
-    "version": "1.0.3"
+    "version": "2.0.0"
   },
   "nina": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/io-package.json",
@@ -2167,7 +2179,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nissan/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nissan/master/admin/nissan.png",
     "type": "vehicle",
-    "version": "0.1.18"
+    "version": "0.1.20"
   },
   "niu": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.niu/main/io-package.json",
@@ -2241,6 +2253,12 @@
     "type": "hardware",
     "version": "5.1.0"
   },
+  "octopus-energy-monitor": {
+    "meta": "https://raw.githubusercontent.com/tipp88/ioBroker.octopus-energy-monitor/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/tipp88/ioBroker.octopus-energy-monitor/master/admin/octopus-energy-monitor.svg",
+    "type": "energy",
+    "version": "1.1.0"
+  },
   "odl": {
     "meta": "https://raw.githubusercontent.com/crycode-de/ioBroker.odl/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/crycode-de/ioBroker.odl/master/admin/odl.png",
@@ -2275,7 +2293,7 @@
     "meta": "https://raw.githubusercontent.com/Sickboy78/ioBroker.onlycat/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Sickboy78/ioBroker.onlycat/main/admin/onlycat.png",
     "type": "iot-systems",
-    "version": "0.6.1"
+    "version": "0.6.3"
   },
   "onvif": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.onvif/main/io-package.json",
@@ -2287,7 +2305,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.opcua/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.opcua/master/admin/opcua.png",
     "type": "protocols",
-    "version": "1.2.1"
+    "version": "3.0.0"
   },
   "open-meteo-weather": {
     "meta": "https://raw.githubusercontent.com/H5N1v2/ioBroker.open-meteo-weather/main/io-package.json",
@@ -2329,7 +2347,7 @@
     "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.openmeteo-notify/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.openmeteo-notify/main/admin/openmeteo-notify.png",
     "type": "weather",
-    "version": "0.1.15"
+    "version": "0.2.1"
   },
   "openweathermap": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.openweathermap/master/io-package.json",
@@ -2575,7 +2593,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.pushover/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.pushover/master/admin/pushover.png",
     "type": "messaging",
-    "version": "5.0.0"
+    "version": "6.1.0"
   },
   "pushsafer": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.pushsafer/master/io-package.json",
@@ -2587,7 +2605,7 @@
     "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.pv-notifications/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.pv-notifications/main/admin/pv-notifications.png",
     "type": "energy",
-    "version": "1.2.29"
+    "version": "1.2.31"
   },
   "pvforecast": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pvforecast/main/io-package.json",
@@ -2600,6 +2618,12 @@
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.pvoutputorg/master/admin/pvoutputorg.png",
     "type": "energy",
     "version": "2.0.0"
+  },
+  "pwned-check": {
+    "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.pwned-check/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.pwned-check/main/admin/pwned-check.svg",
+    "type": "alarm",
+    "version": "0.0.10"
   },
   "pylontech": {
     "meta": "https://raw.githubusercontent.com/PLCHome/ioBroker.pylontech/master/io-package.json",
@@ -2635,7 +2659,7 @@
     "meta": "https://raw.githubusercontent.com/aruttkamp/ioBroker.rct/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/aruttkamp/ioBroker.rct/main/admin/rct-logo.square.png",
     "type": "energy",
-    "version": "1.2.29"
+    "version": "1.2.30"
   },
   "refoss": {
     "meta": "https://raw.githubusercontent.com/Refoss/ioBroker.refoss/main/io-package.json",
@@ -2654,6 +2678,12 @@
     "icon": "https://raw.githubusercontent.com/raschy/ioBroker.renacidc/main/admin/renacidc.png",
     "type": "energy",
     "version": "0.2.0"
+  },
+  "renault": {
+    "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/main/admin/renault.png",
+    "type": "vehicle",
+    "version": "1.0.0"
   },
   "reolink": {
     "meta": "https://raw.githubusercontent.com/aendue/ioBroker.reolink/main/io-package.json",
@@ -2695,7 +2725,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ring/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ring/master/admin/ring.png",
     "type": "hardware",
-    "version": "6.4.0"
+    "version": "7.0.2"
   },
   "roadtraffic": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.roadtraffic/master/io-package.json",
@@ -2743,7 +2773,7 @@
     "meta": "https://raw.githubusercontent.com/phifogg/ioBroker.sainlogic/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/phifogg/ioBroker.sainlogic/master/admin/sainlogic.png",
     "type": "weather",
-    "version": "1.2.10"
+    "version": "1.2.11"
   },
   "samsung": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.samsung/master/io-package.json",
@@ -2785,7 +2815,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.scenes/master/admin/scenes.png",
     "type": "logic",
-    "version": "4.0.4"
+    "version": "5.1.0"
   },
   "schedule-switcher": {
     "meta": "https://raw.githubusercontent.com/Lucky-ESA/ioBroker.schedule-switcher/main/io-package.json",
@@ -2869,7 +2899,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/admin/shelly.png",
     "type": "iot-systems",
-    "version": "10.6.1"
+    "version": "12.0.0"
   },
   "shrdzm": {
     "meta": "https://raw.githubusercontent.com/mcm4iob/ioBroker.shrdzm/main/io-package.json",
@@ -2911,7 +2941,7 @@
     "meta": "https://raw.githubusercontent.com/disaster123/ioBroker.signifylights/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/disaster123/ioBroker.signifylights/main/admin/signifylights.png",
     "type": "lighting",
-    "version": "1.0.0"
+    "version": "1.0.2"
   },
   "siku": {
     "meta": "https://raw.githubusercontent.com/ChrMaass/ioBroker.siku/main/io-package.json",
@@ -2937,11 +2967,17 @@
     "type": "misc-data",
     "version": "1.0.0"
   },
+  "skoda-public-api": {
+    "meta": "https://raw.githubusercontent.com/tmarthy/ioBroker.skoda-public-api/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/tmarthy/ioBroker.skoda-public-api/main/admin/skoda-public-api.png",
+    "type": "vehicle",
+    "version": "0.1.11"
+  },
   "sma-em": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sma-em/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sma-em/master/admin/sma-em.png",
     "type": "energy",
-    "version": "1.3.1"
+    "version": "1.4.0"
   },
   "smappee": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.smappee/master/io-package.json",
@@ -3181,7 +3217,7 @@
     "meta": "https://raw.githubusercontent.com/Sickboy78/ioBroker.sureflap/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Sickboy78/ioBroker.sureflap/master/admin/sureflap.png",
     "type": "iot-systems",
-    "version": "3.4.2"
+    "version": "3.4.4"
   },
   "swiss-weather-api": {
     "meta": "https://raw.githubusercontent.com/baerengraben/ioBroker.swiss-weather-api/master/io-package.json",
@@ -3247,7 +3283,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.telegram/master/admin/telegram.png",
     "type": "messaging",
-    "version": "5.0.5"
+    "version": "6.0.2"
   },
   "telegram-menu": {
     "meta": "https://raw.githubusercontent.com/MiRo1310/ioBroker.telegram-menu/main/io-package.json",
@@ -3421,7 +3457,7 @@
     "meta": "https://raw.githubusercontent.com/pdbjjens/ioBroker.vbus-gw/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/pdbjjens/ioBroker.vbus-gw/main/admin/vbus-gw.png",
     "type": "network",
-    "version": "0.3.2"
+    "version": "0.4.0"
   },
   "vds2465-server": {
     "meta": "https://raw.githubusercontent.com/Hirsch-DE/ioBroker.vds2465-server/main/io-package.json",
@@ -3463,7 +3499,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2/master/packages/iobroker.vis-2/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2/master/packages/iobroker.vis-2/admin/vis-2.svg",
     "type": "visualization",
-    "version": "2.13.8"
+    "version": "2.15.8"
   },
   "vis-2-widgets-collection": {
     "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.vis-2-widgets-collection/main/io-package.json",
@@ -3475,7 +3511,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-energy/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-energy/main/admin/vis-2-widgets-energy.png",
     "type": "visualization-widgets",
-    "version": "1.0.2"
+    "version": "2.0.1"
   },
   "vis-2-widgets-gauges": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-gauges/main/io-package.json",
@@ -3643,7 +3679,7 @@
     "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.vis-mapwidgets/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.vis-mapwidgets/main/admin/mapwidgets.svg",
     "type": "visualization-widgets",
-    "version": "0.3.3"
+    "version": "0.3.4"
   },
   "vis-material": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vis-material/master/io-package.json",
