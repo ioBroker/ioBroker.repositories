@@ -1713,12 +1713,6 @@
     "type": "lighting",
     "version": "0.2.16"
   },
-  "link": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.link/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.link/master/admin/link.png",
-    "type": "communication",
-    "version": "0.5.12"
-  },
   "link2home": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.link2home/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.link2home/main/admin/link2home.png",
