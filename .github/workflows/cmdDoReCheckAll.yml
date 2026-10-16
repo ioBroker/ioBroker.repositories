@@ -2,6 +2,33 @@ name: Cmd Do ReCheck All
 
 on:
   workflow_dispatch:
+    inputs:
+      required_label:
+        description: 'Only RE-CHECK PRs that have this label (leave empty for all PRs)'
+        required: false
+        default: ''
+        type: choice
+        options:
+          - ''
+          - 'must be fixed'
+          - 'new at LATEST'
+          - 'new at STABLE'
+          - 'obj-json-missing'
+          - 'RE-REVIEW-pending (my mcm1957)'
+          - 'REVIEW pensing (by mcm1957)'
+          - 'Stable'
+          - 'Stable - 0-Day PR'
+          - 'STABLE - brand new'
+          - 'STABLE - review needed'
+          - '⌛wip⌛'
+      exclude_stale:
+        description: 'Skip PRs with stale labels'
+        required: false
+        default: 'true'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
 
 jobs:
   doReCheckAll:
@@ -23,3 +50,5 @@ jobs:
       - run: npm run doReCheckAll
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.IOBBOT_GITHUB_TOKEN }}
+          REQUIRED_LABEL: ${{ inputs.required_label }}
+          EXCLUDE_STALE: ${{ inputs.exclude_stale }}
