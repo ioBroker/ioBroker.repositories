@@ -1115,6 +1115,15 @@ async function doIt() {
                 } catch (e) {
                     console.error(`Cannot add label '${ageLabel}': ${e}`);
                 }
+                // When a PR graduates from 0-Day to brand-new, remove the superseded label.
+                if (ageLabel === 'STABLE - brand new') {
+                    try {
+                        await deleteLabel(prID, 'STABLE - 0-Day PR');
+                        console.log(`Removed superseded label 'STABLE - 0-Day PR'`);
+                    } catch {
+                        // 404 = label was not on the PR; nothing to do
+                    }
+                }
             }
         } else {
             const latest = await getUrl('https://download.iobroker.net/sources-dist-latest.json');
