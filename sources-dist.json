@@ -3946,8 +3946,8 @@
     "type": "health"
   },
   "witmotion": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.witmotion/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.witmotion/master/admin/witmotion.png",
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.witmotion/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.witmotion/main/admin/witmotion.png",
     "type": "utility"
   },
   "wlanthermo-nano": {
