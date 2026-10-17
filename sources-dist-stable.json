@@ -3285,6 +3285,12 @@
     "type": "messaging",
     "version": "4.2.3"
   },
+  "teltonika": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.teltonika/main/admin/teltonika.svg",
+    "type": "network",
+    "version": "1.1.1"
+  },
   "terminal": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.terminal/master/admin/terminal.png",
