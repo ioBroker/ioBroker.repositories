@@ -2395,6 +2395,11 @@
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.opentherm/main/admin/opentherm.png",
     "type": "hardware"
   },
+  "openwb2": {
+    "meta": "https://raw.githubusercontent.com/seaspotter/ioBroker.openwb2/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/seaspotter/ioBroker.openwb2/main/admin/openwb2.png",
+    "type": "energy"
+  },
   "openweathermap": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.openweathermap/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.openweathermap/master/admin/openweathermap.png",
