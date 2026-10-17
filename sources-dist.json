@@ -746,8 +746,8 @@
     "type": "iot-systems"
   },
   "easee": {
-    "meta": "https://raw.githubusercontent.com/Newan/ioBroker.easee/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/Newan/ioBroker.easee/master/admin/easee.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.easee/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.easee/master/admin/easee.png",
     "type": "vehicle"
   },
   "ebus": {
