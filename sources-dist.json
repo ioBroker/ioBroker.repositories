@@ -3115,6 +3115,11 @@
     "icon": "https://raw.githubusercontent.com/patricknitsch/ioBroker.solectrus-influxdb/main/admin/solectrus-influxdb.png",
     "type": "communication"
   },
+  "solinteg": {
+    "meta": "https://raw.githubusercontent.com/bueste/ioBroker.solinteg/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bueste/ioBroker.solinteg/main/admin/solinteg.png",
+    "type": "energy"
+  },
   "soliscloud": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.soliscloud/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.soliscloud/main/admin/solis.png",
