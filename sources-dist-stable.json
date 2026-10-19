@@ -4041,6 +4041,12 @@
     "type": "hardware",
     "version": "3.2.2"
   },
+  "zoneminder": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.zoneminder/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.zoneminder/master/admin/zoneminder.png",
+    "type": "alarm",
+    "version": "0.3.3"
+  },
   "zont": {
     "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/admin/zont.png",
