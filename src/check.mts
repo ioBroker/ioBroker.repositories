@@ -50,15 +50,19 @@ interface CommentLine {
 // Each entry is an object:
 //   { user: '<github-login>' }                          -> whitelisted for ALL repositories
 //   { user: '<github-login>', repos: ['owner/repo'] }   -> whitelisted for the listed repositories only
+//   { user: '<github-login>', orgs: ['org'] }           -> whitelisted for all repositories owned by org
 // A repo may be given as full name 'owner/ioBroker.adapter' or just the adapter repo
 // name 'ioBroker.adapter' (matched case-insensitively).
+// An org entry matches any repository whose owner equals the org name (case-insensitively).
 interface WhitelistEntry {
     user: string;
     repos?: string[];
+    orgs?: string[];
 }
 
 const MAINTAINER_WHITELIST: WhitelistEntry[] = [
-    { user: 'mcm1957' }, // whitelisted for all repositories
+    { user: 'mcm1957' },                          // whitelisted for all repositories
+    { user: 'GermanBluefox', orgs: ['ioBroker'] }, // whitelisted for all ioBroker/* repositories
 ];
 
 function getPullRequestNumber() {
@@ -229,26 +233,32 @@ async function isPublicOrgMember(org: string, username: string) {
 /**
  * Check whether a user is whitelisted for a given repository.
  *
- * An entry without a (non-empty) `repos` list whitelists the user for ALL repositories.
- * Otherwise the user is only whitelisted for the listed repositories. A repo entry may
- * be the full name 'owner/ioBroker.adapter' or just the repo name 'ioBroker.adapter'.
+ * An entry without a (non-empty) `repos` or `orgs` list whitelists the user for ALL repositories.
+ * A `repos` entry matches by full name 'owner/ioBroker.adapter' or just 'ioBroker.adapter'.
+ * An `orgs` entry matches any repository whose owner equals one of the listed org names.
+ * Both `repos` and `orgs` may be present on the same entry; the user is whitelisted when
+ * either list matches.
  */
 function isWhitelisted(owner: string, adapter: string, username: string) {
     const fullName = `${owner}/${adapter}`.toLowerCase();
     const repoName = adapter.toLowerCase();
+    const ownerLower = owner.toLowerCase();
 
     return MAINTAINER_WHITELIST.some(entry => {
         if (!entry?.user || entry.user.toLowerCase() !== username.toLowerCase()) {
             return false;
         }
-        if (!entry.repos?.length) {
-            // No repo restriction -> whitelisted for all repositories.
+        if (!entry.repos?.length && !entry.orgs?.length) {
+            // No restriction -> whitelisted for all repositories.
             return true;
         }
-        return entry.repos.some((repo: string) => {
+        if (entry.orgs?.length && entry.orgs.some((org: string) => String(org).toLowerCase() === ownerLower)) {
+            return true;
+        }
+        return entry.repos?.some((repo: string) => {
             const r = String(repo).toLowerCase();
             return r === fullName || r === repoName;
-        });
+        }) ?? false;
     });
 }
 
@@ -690,8 +700,8 @@ function triggerRepoCheck(owner: string, adapter: string) {
  *
  * The info workflows normally run on the 'labeled' event, but a label added by this script uses
  * the default GITHUB_TOKEN, and events triggered by that token do not start further workflow
- * runs. The bot's personal access token (IOBBOT_GITHUB_TOKEN) is used here instead, and the PR
- * number is passed as a workflow_dispatch input because a dispatch event carries no PR context.
+ * runs. An explicit workflow_dispatch via the API is used instead (OWN_GITHUB_TOKEN has
+ * Actions: write), and the PR number is passed as input because a dispatch event carries no PR context.
  */
 function triggerLabelWorkflow(workflow: string, prID: string | number) {
     console.log(`trigger workflow ${workflow} for PR ${prID}`);
@@ -702,7 +712,7 @@ function triggerLabelWorkflow(workflow: string, prID: string | number) {
             { ref: 'master', inputs: { pr: `${prID}` } },
             {
                 headers: {
-                    Authorization: `Bearer ${process.env.IOBBOT_GITHUB_TOKEN}`,
+                    Authorization: `Bearer ${process.env.OWN_GITHUB_TOKEN}`,
                     Accept: 'application/vnd.github+json',
                     'user-agent': 'Action script',
                 },
@@ -826,7 +836,12 @@ async function doIt() {
     let titleAdapterName = '';
     let titleVersion = '';
     let newAtStable = false;
+    let newAtStableUrl = '';
+    let updateStableUrl = '';
+    let updateStableFrom = '';
+    let updateStableTo = '';
     let newAtLatest = false;
+    let newAtLatestUrl = '';
 
     // STABLE age labels ('STABLE - 0-Day PR' / 'STABLE - brand new') attached during the loop.
     // The related info workflows are dispatched once after the loop (see below).
@@ -966,6 +981,8 @@ async function doIt() {
             const latestTime = new Date(latest[adapterName].versionDate);
             const latestTimeStr = `${latestTime.getDate()}.${latestTime.getMonth() + 1}.${latestTime.getFullYear()}`;
             const latestDaysOld = Math.floor((now.getTime() - latestTime.getTime()) / ONE_DAY);
+            // Age of the version actually submitted; overridden below when it differs from latestRelease.
+            let submittedDaysOld: number = latestDaysOld;
             const latestUser = statistic.versions[adapterName] ? statistic.versions[adapterName][latestRelease] : 0;
             const latestUserPercent = ((latestUser / totalUser) * 100).toFixed(2);
 
@@ -996,7 +1013,7 @@ async function doIt() {
                     if (submittedVersionDate) {
                         const submittedTime = new Date(submittedVersionDate);
                         const submittedTimeStr = `${submittedTime.getDate()}.${submittedTime.getMonth() + 1}.${submittedTime.getFullYear()}`;
-                        const submittedDaysOld = Math.floor((now.getTime() - submittedTime.getTime()) / ONE_DAY);
+                        submittedDaysOld = Math.floor((now.getTime() - submittedTime.getTime()) / ONE_DAY);
                         submittedCreatedStr = ` created ${submittedTimeStr} (${submittedDaysOld} days old)`;
                     }
                 } catch (e) {
@@ -1027,6 +1044,12 @@ async function doIt() {
                     noDecorate: true,
                 });
                 comments.push({ text: `${stableUser} users (stable) (${stableUserPercent}%)`, noDecorate: true });
+
+                if (submittedRelease !== stableRelease) {
+                    updateStableUrl = link;
+                    updateStableFrom = stableRelease;
+                    updateStableTo = submittedRelease;
+                }
             } else {
                 comments.push({ text: ``, noDecorate: true });
                 comments.push({ text: `stable release not yet available`, noDecorate: true });
@@ -1047,6 +1070,7 @@ async function doIt() {
                 }
 
                 newAtStable = true;
+                newAtStableUrl = link;
                 await addLabel(prID, ['new at STABLE']);
             }
 
@@ -1068,26 +1092,37 @@ async function doIt() {
                 noDecorate: true,
             });
 
-            // Flag very young releases submitted to stable. The age is the number of days the
-            // latest release has been available, derived from the LATEST repository's versionDate
-            // exactly like iobroker-bot-orga/check-tasks checkReadyForStable does:
-            //   Math.floor((now - new Date(latest[adapter].versionDate)) / ONE_DAY)  == latestDaysOld
+            // Flag very young releases submitted to stable. When the PR submits the current npm
+            // latest release, its age comes from the LATEST repository's versionDate (same as
+            // iobroker-bot-orga/check-tasks checkReadyForStable). When the PR submits a different
+            // version (e.g. a newer pre-release not yet the npm latest), use that version's age
+            // from npm — the submitted version is what matters, not the npm latest tag.
             // A release younger than one day has not even settled at LATEST yet; one below five
             // days is still brand new. The matching info workflow (dispatched after the loop)
             // posts the explanatory comment.
+            const effectiveDaysOld = submittedDaysOld;
             let ageLabel = '';
-            if (latestDaysOld < 1) {
+            if (effectiveDaysOld < 1) {
                 ageLabel = 'STABLE - 0-Day PR';
-            } else if (latestDaysOld < 5) {
+            } else if (effectiveDaysOld < 5) {
                 ageLabel = 'STABLE - brand new';
             }
             if (ageLabel) {
                 try {
-                    console.log(`latest release ${latestRelease} is ${latestDaysOld} days old - adding label '${ageLabel}'`);
+                    console.log(`submitted release ${submittedRelease} is ${effectiveDaysOld} days old - adding label '${ageLabel}'`);
                     await addLabel(prID, [ageLabel]);
                     stableInfoLabels.add(ageLabel);
                 } catch (e) {
                     console.error(`Cannot add label '${ageLabel}': ${e}`);
+                }
+                // When a PR graduates from 0-Day to brand-new, remove the superseded label.
+                if (ageLabel === 'STABLE - brand new') {
+                    try {
+                        await deleteLabel(prID, 'STABLE - 0-Day PR');
+                        console.log(`Removed superseded label 'STABLE - 0-Day PR'`);
+                    } catch {
+                        // 404 = label was not on the PR; nothing to do
+                    }
                 }
             }
         } else {
@@ -1095,6 +1130,7 @@ async function doIt() {
 
             if (!latest[adapterName]) {
                 newAtLatest = true;
+                newAtLatestUrl = link;
                 await addLabel(prID, ['new at LATEST']);
 
                 const gitComments = await getAllComments(prID);
@@ -1242,7 +1278,19 @@ async function doIt() {
         comment += verificationLines.map(line => `\n${line}`).join('');
     }
 
-    comment += `\n\n\n*Add comment "${TEXT_RECHECK}" to start check anew*`;
+    if (newAtLatest && newAtLatestUrl) {
+        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtLatest.md<br>Adapter: ${newAtLatestUrl}</sub>`;
+    }
+
+    if (newAtStable && newAtStableUrl) {
+        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtStable.md<br>Adapter: ${newAtStableUrl}</sub>`;
+    }
+
+    if (updateStableUrl && updateStableFrom && updateStableTo) {
+        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsUpdateStableRelease.md<br>Adapter: ${updateStableUrl}<br>version range: ${updateStableFrom} to ${updateStableTo}</sub>`;
+    }
+
+    comment += `\n\n---\n\n**Add comment "${TEXT_RECHECK}" to start check anew**`;
 
     console.log('ADD PULL REQUEST COMMENT:');
     console.log(comment);
