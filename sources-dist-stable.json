@@ -189,6 +189,12 @@
     "type": "lighting",
     "version": "0.1.5"
   },
+  "assistant": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.assistant/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.assistant/main/admin/assistant.svg",
+    "type": "logic",
+    "version": "1.0.2"
+  },
   "assistant-satellite": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.assistant-satellite/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.assistant-satellite/main/admin/assistant-satellite.svg",
