@@ -3330,11 +3330,6 @@
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.tidy/main/admin/tidy.svg",
     "type": "storage"
   },
-  "tileboard": {
-    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.tileboard/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.tileboard/master/admin/tileboard.png",
-    "type": "visualization"
-  },
   "time-switch": {
     "meta": "https://raw.githubusercontent.com/walli545/ioBroker.time-switch/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/walli545/ioBroker.time-switch/master/admin/time-switch.png",
