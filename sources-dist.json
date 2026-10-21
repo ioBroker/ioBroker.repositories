@@ -3545,6 +3545,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.viessmannapi/master/admin/viessmannapi.png",
     "type": "climate-control"
   },
+  "violet": {
+    "meta": "https://raw.githubusercontent.com/AlPi-BRV/ioBroker.violet/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AlPi-BRV/ioBroker.violet/main/admin/violet.png",
+    "type": "climate-control"
+  },
   "virtualpowermeter": {
     "meta": "https://raw.githubusercontent.com/Omega236/ioBroker.virtualpowermeter/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Omega236/ioBroker.virtualpowermeter/master/admin/virtualpowermeter.png",
