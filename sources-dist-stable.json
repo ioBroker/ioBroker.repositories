@@ -15,6 +15,12 @@
       "zh-cn": "A. 正式稳定存放处"
     }
   },
+  "absolutehumidity": {
+    "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.absolutehumidity/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.absolutehumidity/main/admin/absolutehumidity.svg",
+    "type": "weather",
+    "version": "0.1.8"
+  },
   "accuweather": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.accuweather/master/admin/accuweather.png",
@@ -554,6 +560,12 @@
     "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.denon/master/admin/denon.png",
     "type": "multimedia",
     "version": "1.15.12"
+  },
+  "device-monitoring": {
+    "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.device-monitoring/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.device-monitoring/main/admin/device-monitoring.png",
+    "type": "alarm",
+    "version": "0.0.45"
   },
   "device-watcher": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.device-watcher/main/io-package.json",
@@ -1319,7 +1331,7 @@
   },
   "homeconnect": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homeconnect/master/io-package.json",
-    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homeconnect/master/admin/homeconnect.png",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.homeconnect/master/admin/homeconnect.svg",
     "type": "household",
     "version": "1.6.1"
   },
