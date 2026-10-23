@@ -215,6 +215,11 @@
     "icon": "https://raw.githubusercontent.com/Bannsaenger/ioBroker.artnet-recorder/master/admin/artnet-recorder.png",
     "type": "lighting"
   },
+  "arylic": {
+    "meta": "https://raw.githubusercontent.com/schnti/ioBroker.arylic/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/schnti/ioBroker.arylic/main/admin/arylic.png",
+    "type": "multimedia"
+  },
   "assistant": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.assistant/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.assistant/main/admin/assistant.svg",
