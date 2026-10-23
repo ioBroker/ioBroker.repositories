@@ -455,6 +455,11 @@
     "icon": "https://raw.githubusercontent.com/holomekc/ioBroker.bshb/master/admin/bshb-logo.jpg",
     "type": "iot-systems"
   },
+  "buderus-mx400": {
+    "meta": "https://raw.githubusercontent.com/septa-cr/ioBroker.buderus-mx400/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/septa-cr/ioBroker.buderus-mx400/main/admin/buderus-mx400.png",
+    "type": "climate-control"
+  },
   "bwt": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.bwt/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.bwt/master/admin/bwt.png",
