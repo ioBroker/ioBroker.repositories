@@ -1650,6 +1650,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.kisshome-defender/main/admin/kisshome-defender.svg",
     "type": "utility"
   },
+  "kitchenowl": {
+    "meta": "https://raw.githubusercontent.com/n1tr0-5urf3r/ioBroker.kitchenowl/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/n1tr0-5urf3r/ioBroker.kitchenowl/main/admin/kitchenowl.png",
+    "type": "household"
+  },
   "klf200": {
     "meta": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/admin/klf200.png",
