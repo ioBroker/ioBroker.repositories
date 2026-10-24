@@ -18,15 +18,14 @@ The repository serves as the central hub for:
 ├── .github/                    # GitHub Actions workflows and templates
 │   ├── workflows/             # Automated workflows for checking, building, validation
 │   └── PULL_REQUEST_TEMPLATE/ # PR templates
-├── lib/                       # Core functionality modules
-│   ├── build.js              # Repository building and processing
-│   ├── check.js              # Adapter validation and PR checking
-│   ├── scripts.js            # Core scripts for repo management
-│   └── tools.js              # Utility functions
+├── src/                       # Core functionality modules (TypeScript)
+│   ├── build.ts              # Repository building and processing
+│   ├── check.ts              # Adapter validation and PR checking
+│   ├── scripts.ts            # Core scripts for repo management
+│   └── tools.ts              # Utility functions
 ├── test/                      # Test files
 ├── sources-dist.json          # Latest repository (beta adapters)
 ├── sources-dist-stable.json   # Stable repository (production adapters)
-├── tasks.js                   # Build tasks runner
 └── package.json              # Dependencies and scripts
 ```
 
@@ -72,19 +71,19 @@ The repository serves as the central hub for:
 
 ## Key Components
 
-### Main Scripts (`lib/scripts.js`)
+### Main Scripts (`src/scripts.ts`)
 - `addToLatest()` - Adds adapter to latest repository
 - `addToStable()` - Adds adapter to stable repository  
 - `sort()` - Sorts repository entries alphabetically
 - `nodates()` - Removes versionTime attributes
 
-### Validation (`lib/check.js`)
+### Validation (`src/check.ts`)
 - Detects changed adapters in PRs
 - Runs `@iobroker/repochecker` validation
 - Posts validation results as PR comments
 - Checks npm package existence and ownership
 
-### Build System (`lib/build.js`)
+### Build System (`src/build.ts`)
 - Processes repository JSON files
 - Generates statistics and download counts
 - Creates HTML lists and badge images
@@ -202,4 +201,4 @@ When making changes, always:
 ### PR Review Policy
 **NEVER add reviews to PRs** for adding an adapter to the latest or stable repository or for updates of the stable repository version. **No review remarks should be added** if only `sources-dist.json` or `sources-dist-stable.json` are changed by a PR.
 
-This is enforced automatically in `lib/check.js` which skips the review process when PRs only modify repository files.
+This is enforced automatically in `src/check.ts` which skips the review process when PRs only modify repository files.

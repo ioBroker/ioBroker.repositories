@@ -1,29 +1,31 @@
 // This help script creates repository with full information
 // additionally it can collect all the npm version images in some folder
 // Usage:
-//  --file fileName - Output of repository into specified file
-//  --json - Print json repository in the console
+//  --file fileName - Output of repository into a specified file
+//  --json - Print JSON repository in the console
 //  --versions - show all current versions in the console
 //  --list - list of all adapters with descriptions in the console
 //          1. admin: Opens a webserver for the ioBroker admin UI
 //          2. artnet: Control DMX512 Devices via an Art-Net node
 //          ...
-//  --shortlist - print list of all adapters in the console
+//  --shortlist - prints a list of all adapters in the console
 //          admin
 //          artnet
 //          b-control-em
 //          chromecast
 //          ...
-//  --shields folderName - save all npm versions images into specified folder
-//  --logos folderName - save all logos of all adapters into specified folder under logo-adapter.png
+//  --shields folderName - save all npm versions images into a specified folder
+//  --logos folderName - save all logos of all adapters into a specified folder under logo-adapter.png
 
-const tools = require('./tools.js');
-const fs = require('node:fs');
-require('node:events').EventEmitter.prototype._maxListeners = 300;
+import * as tools from './tools.mts';
+import fs from 'node:fs';
+import path from 'node:path';
+import { EventEmitter } from 'node:events';
+EventEmitter.defaultMaxListeners = 300;
 process.setMaxListeners(0);
-const axios = require('axios');
+import axios from 'axios';
 
-function getStats(cb) {
+function getStats(cb?: (err: any, stats?: any) => void) {
     if (cb) {
         axios('http://iobroker.live/statistics.json').then(response => cb(null, response.data.adapters));
     } else {
@@ -31,9 +33,9 @@ function getStats(cb) {
     }
 }
 
-function getImages(list, destination, callback) {
-    if (!list || !list.length) {
-        callback && callback();
+function getImages(list: any[], destination: string, callback?: () => void) {
+    if (!list?.length) {
+        callback?.();
     } else {
         const name = list.pop();
         if (!fs.existsSync(`${destination + name.name}.svg`)) {
@@ -44,7 +46,9 @@ function getImages(list, destination, callback) {
                 .then(response => {
                     if (response.data) {
                         fs.writeFile(`${destination + name.name}.svg`, response.data, 'binary', err => {
-                            err && console.error(`Cannot save file "${destination}${name.name}.svg: ${err}`);
+                            if (err) {
+                                console.error(`Cannot save file "${destination}${name.name}.svg: ${err}`);
+                            }
                             setTimeout(() => getImages(list, destination, callback), 100);
                         });
                     } else {
@@ -66,16 +70,18 @@ function getImages(list, destination, callback) {
     }
 }
 
-function getLicenses(list, destination, callback) {
-    if (!list || !list.length) {
-        callback && callback();
+function getLicenses(list: any[], destination: string, callback?: () => void) {
+    if (!list?.length) {
+        callback?.();
     } else {
         const name = list.pop();
         axios(`https://img.shields.io/github/license/${name}.svg?style=flat-square`, { responseType: 'arraybuffer' })
             .then(response => {
                 if (response.data) {
                     fs.writeFile(`${destination}license-${name}.svg`, response.data, 'binary', err => {
-                        err && console.error(`Cannot save file "${destination}license-${name}.svg: ${err}`);
+                        if (err) {
+                            console.error(`Cannot save file "${destination}license-${name}.svg: ${err}`);
+                        }
                         setTimeout(() => getLicenses(list, destination, callback), 100);
                     });
                 } else {
@@ -94,9 +100,9 @@ function getLicenses(list, destination, callback) {
     }
 }
 
-function getLogos(list, destination, callback) {
-    if (!list || !list.length) {
-        callback && callback();
+function getLogos(list: any[], destination: string, callback?: () => void) {
+    if (!list?.length) {
+        callback?.();
     } else {
         const task = list.pop();
         axios(task.url, { responseType: 'arraybuffer' })
@@ -120,7 +126,7 @@ function getLogos(list, destination, callback) {
     }
 }
 
-function processRepository(data, argv, cb) {
+function processRepository(data: any, argv: string[], cb?: () => void) {
     let output = false;
     let waitEnd = 0;
     for (let a = 0; a < argv.length; a++) {
@@ -180,7 +186,7 @@ function processRepository(data, argv, cb) {
                 fs.mkdirSync(argv[a + 1]);
             }
 
-            getImages(list, argv[a + 1], () => !--waitEnd && cb && cb());
+            getImages(list, argv[a + 1], () => !--waitEnd && cb?.());
         } else if (argv[a] === '--logos' && argv[a + 1]) {
             if (argv[a + 1][argv[a + 1].length - 1] !== '/') {
                 argv[a + 1] += '/';
@@ -197,7 +203,7 @@ function processRepository(data, argv, cb) {
                 fs.mkdirSync(argv[a + 1]);
             }
 
-            getLogos(list, argv[a + 1], () => !--waitEnd && cb && cb());
+            getLogos(list, argv[a + 1], () => !--waitEnd && cb?.());
         } else if (argv[a] === '--licenses' && argv[a + 1]) {
             if (argv[a + 1][argv[a + 1].length - 1] !== '/') {
                 argv[a + 1] += '/';
@@ -217,27 +223,28 @@ function processRepository(data, argv, cb) {
                 fs.mkdirSync(argv[a + 1]);
             }
 
-            getLicenses(_list, argv[a + 1], () => !--waitEnd && cb && cb());
+            getLicenses(_list, argv[a + 1], () => !--waitEnd && cb?.());
         }
     }
-    !output && console.log(JSON.stringify(data, null, 2));
-    !waitEnd && cb && cb();
+    if (!output) {
+        console.log(JSON.stringify(data, null, 2));
+    }
+    if (!waitEnd) {
+        cb?.();
+    }
 }
 
-if (module.exports && module.parent) {
-    module.exports.getLogos = getLogos;
-    module.exports.getImages = getImages;
-    module.exports.processRepository = processRepository;
-    module.exports.getStats = getStats;
-} else {
+export { getLogos, getImages, processRepository, getStats };
+
+// ESM replacement for the `require.main === module` guard: the block below is the command line entry
+// point and must not run when another module imports this file.
+if (process.argv[1] && path.resolve(process.argv[1]) === import.meta.filename) {
     // update both repositories
-    const updatePublishes = require('./scripts').updatePublishes;
 
-    // todo save old files and process only changes
-
+    // todo save old files and process-only changes
     tools.getRepositoryFile(
-        `https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist.json`,
-        (err, latest) => {
+        `https://raw.githubusercontent.com/ioBroker/ioBroker.repositories/master/sources-dist.json`,
+        (err: any, latest: any) => {
             if (err) {
                 console.error(err);
                 if (!latest) {
@@ -249,9 +256,9 @@ if (module.exports && module.parent) {
                 process.exit(1);
             }
             tools.getRepositoryFile(
-                `https://raw.githubusercontent.com/${tools.appName}/${tools.appName}.repositories/master/sources-dist-stable.json`,
+                `https://raw.githubusercontent.com/ioBroker/ioBroker.repositories/master/sources-dist-stable.json`,
                 latest,
-                (err, stable) => {
+                (err: any, stable: any) => {
                     if (err) {
                         console.error(err);
                         if (!stable) {
@@ -262,7 +269,7 @@ if (module.exports && module.parent) {
                         console.error('Something wrong with stable repo: empty');
                         process.exit(1);
                     }
-                    getStats((err, stats) => {
+                    getStats((err: any, stats: any) => {
                         if (stats) {
                             for (const adapter in stats) {
                                 if (
@@ -281,28 +288,6 @@ if (module.exports && module.parent) {
                                 ) {
                                     latest[adapter].stat = stats[adapter];
                                 }
-                            }
-                        }
-
-                        // 2018.01.04 temporary fix for admin2. Remove it later
-                        for (const adapter in stable) {
-                            if (
-                                !adapter.startsWith('_') &&
-                                Object.prototype.hasOwnProperty.call(stable, adapter) &&
-                                typeof stable[adapter].title === 'object'
-                            ) {
-                                stable[adapter].titleLang = stable[adapter].titleLang || stable[adapter].title;
-                                stable[adapter].title = stable[adapter].title.en || stable[adapter].title.toString();
-                            }
-                        }
-                        for (const adapter in latest) {
-                            if (
-                                !adapter.startsWith('_') &&
-                                Object.prototype.hasOwnProperty.call(latest, adapter) &&
-                                typeof latest[adapter].title === 'object'
-                            ) {
-                                latest[adapter].titleLang = latest[adapter].titleLang || latest[adapter].title;
-                                latest[adapter].title = latest[adapter].title.en || latest[adapter].title.toString();
                             }
                         }
 
@@ -326,45 +311,43 @@ if (module.exports && module.parent) {
                             }
                         }
 
-                        updatePublishes(
-                            (latest, stable) => {
-                                // save latest
-                                let pos = process.argv.indexOf('--latest');
-                                if (pos !== -1 && process.argv[pos + 1]) {
-                                    // save stable
-                                    fs.writeFileSync(process.argv[pos + 1], JSON.stringify(latest, null, 2));
-                                } else {
-                                    fs.writeFileSync(
-                                        `${__dirname}/../sources-dist.json`,
-                                        JSON.stringify(latest, null, 2),
-                                    );
-                                }
-                                fs.writeFileSync(
-                                    `${__dirname}/../sources-dist.old.json`,
-                                    JSON.stringify(latest, null, 2),
-                                );
-
-                                // save stable
-                                pos = process.argv.indexOf('--stable');
-                                if (pos !== -1 && process.argv[pos + 1]) {
-                                    // save stable
-                                    fs.writeFileSync(process.argv[pos + 1], JSON.stringify(stable, null, 2));
-                                } else {
-                                    fs.writeFileSync(
-                                        `${__dirname}/../sources-dist-stable.json`,
-                                        JSON.stringify(stable, null, 2),
-                                    );
-                                }
-                                fs.writeFileSync(
-                                    `${__dirname}/../sources-dist-stable.old.json`,
-                                    JSON.stringify(latest, null, 2),
-                                );
-
-                                processRepository(latest, process.argv, () => process.exit());
-                            },
-                            latest,
-                            stable,
+                        // The npm publish dates used to be filled in here by updatePublishes(), which was
+                        // replaced by updateVersions() in a14c6582 (2019) and retired altogether after that
+                        // - "dates are no more required in repos". build.js kept calling the old name, so
+                        // this path had been throwing ever since. The dates are simply not written any more.
+                        // save latest
+                        let pos = process.argv.indexOf('--latest');
+                        if (pos !== -1 && process.argv[pos + 1]) {
+                            // save stable
+                            fs.writeFileSync(process.argv[pos + 1], JSON.stringify(latest, null, 2));
+                        } else {
+                            fs.writeFileSync(
+                                `${import.meta.dirname}/../sources-dist.json`,
+                                JSON.stringify(latest, null, 2),
+                            );
+                        }
+                        fs.writeFileSync(
+                            `${import.meta.dirname}/../sources-dist.old.json`,
+                            JSON.stringify(latest, null, 2),
                         );
+
+                        // save stable
+                        pos = process.argv.indexOf('--stable');
+                        if (pos !== -1 && process.argv[pos + 1]) {
+                            // save stable
+                            fs.writeFileSync(process.argv[pos + 1], JSON.stringify(stable, null, 2));
+                        } else {
+                            fs.writeFileSync(
+                                `${import.meta.dirname}/../sources-dist-stable.json`,
+                                JSON.stringify(stable, null, 2),
+                            );
+                        }
+                        fs.writeFileSync(
+                            `${import.meta.dirname}/../sources-dist-stable.old.json`,
+                            JSON.stringify(stable, null, 2),
+                        );
+
+                        processRepository(latest, process.argv, () => process.exit());
                     });
                 },
             );
