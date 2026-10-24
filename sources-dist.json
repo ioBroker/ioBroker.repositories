@@ -945,6 +945,11 @@
     "icon": "https://raw.githubusercontent.com/afuerhoff/ioBroker.fb-checkpresence/master/admin/fb-checkpresence.png",
     "type": "infrastructure"
   },
+  "fb-guard": {
+    "meta": "https://raw.githubusercontent.com/Flyor/ioBroker.fb-guard/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Flyor/ioBroker.fb-guard/main/admin/fb-guard.png",
+    "type": "infrastructure"
+  },
   "feiertage": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.feiertage/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.feiertage/master/admin/feiertage.png",
