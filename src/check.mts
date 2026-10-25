@@ -1115,6 +1115,15 @@ async function doIt() {
                 } catch (e) {
                     console.error(`Cannot add label '${ageLabel}': ${e}`);
                 }
+                // When a PR graduates from 0-Day to brand-new, remove the superseded label.
+                if (ageLabel === 'STABLE - brand new') {
+                    try {
+                        await deleteLabel(prID, 'STABLE - 0-Day PR');
+                        console.log(`Removed superseded label 'STABLE - 0-Day PR'`);
+                    } catch {
+                        // 404 = label was not on the PR; nothing to do
+                    }
+                }
             }
         } else {
             const latest = await getUrl('https://download.iobroker.net/sources-dist-latest.json');
@@ -1270,15 +1279,15 @@ async function doIt() {
     }
 
     if (newAtLatest && newAtLatestUrl) {
-        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtLatest.md<br>Adapter: ${newAtLatestUrl}</sub>`;
+        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtLatest.md<br>Merge the PR if tests pass. Solve merge conflicts if required.<br>Adapter: ${newAtLatestUrl}</sub>`;
     }
 
     if (newAtStable && newAtStableUrl) {
-        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtStable.md<br>Adapter: ${newAtStableUrl}</sub>`;
+        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtStable.md<br>Merge the PR if tests pass. Solve merge conflicts if required.<br>Adapter: ${newAtStableUrl}</sub>`;
     }
 
     if (updateStableUrl && updateStableFrom && updateStableTo) {
-        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsUpdateStableRelease.md<br>Adapter: ${updateStableUrl}<br>version range: ${updateStableFrom} to ${updateStableTo}</sub>`;
+        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsUpdateStableRelease.md<br>Merge the PR if tests pass. Solve merge conflicts if required.<br>Adapter: ${updateStableUrl}<br>version range: ${updateStableFrom} to ${updateStableTo}</sub>`;
     }
 
     comment += `\n\n---\n\n**Add comment "${TEXT_RECHECK}" to start check anew**`;
