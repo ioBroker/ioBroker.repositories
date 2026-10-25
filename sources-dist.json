@@ -930,6 +930,11 @@
     "icon": "https://raw.githubusercontent.com/bloop16/ioBroker.f1/main/admin/f1.png",
     "type": "misc-data"
   },
+  "faikout": {
+    "meta": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.faikout/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.faikout/main/admin/faikout.png",
+    "type": "climate-control"
+  },
   "fairland": {
     "meta": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/admin/fairland.png",
@@ -3578,6 +3583,11 @@
   "vis-2-widgets-energy": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-energy/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-energy/main/admin/vis-2-widgets-energy.png",
+    "type": "visualization-widgets"
+  },
+  "vis-2-widgets-eusec": {
+    "meta": "https://raw.githubusercontent.com/typhosj/ioBroker.vis-2-widgets-eusec/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/typhosj/ioBroker.vis-2-widgets-eusec/master/admin/vis-2-widgets-eusec.png",
     "type": "visualization-widgets"
   },
   "vis-2-widgets-gauges": {
