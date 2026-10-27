@@ -1600,6 +1600,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.iot/master/admin/iot.png",
     "type": "communication"
   },
+  "ipp": {
+    "meta": "https://raw.githubusercontent.com/Voodoo2man/ioBroker.ipp/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Voodoo2man/ioBroker.ipp/main/admin/ipp.png",
+    "type": "network"
+  },
   "iqontrol": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.iqontrol/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.iqontrol/master/admin/iqontrol.png",
