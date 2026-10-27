@@ -171,6 +171,12 @@
     "type": "iot-systems",
     "version": "2.4.1"
   },
+  "anthbot": {
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.anthbot/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.anthbot/master/admin/anthbot.png",
+    "type": "garden",
+    "version": "0.2.1"
+  },
   "apcups": {
     "meta": "https://raw.githubusercontent.com/XHunter74/ioBroker.apcups/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/XHunter74/ioBroker.apcups/master/admin/ups.png",
