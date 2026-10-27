@@ -927,6 +927,12 @@
     "type": "vehicle",
     "version": "0.0.8"
   },
+  "fingerprint": {
+    "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.fingerprint/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.fingerprint/main/admin/fingerprint.png",
+    "type": "hardware",
+    "version": "0.8.2"
+  },
   "firetv": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.firetv/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.firetv/master/admin/firetv.png",
