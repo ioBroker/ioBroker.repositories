@@ -3393,6 +3393,12 @@
     "type": "storage",
     "version": "0.3.3"
   },
+  "time-tracker": {
+    "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.time-tracker/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.time-tracker/main/admin/time-tracker.png",
+    "type": "storage",
+    "version": "0.8.0"
+  },
   "tinker": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.tinker/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.tinker/master/admin/tinker.png",
