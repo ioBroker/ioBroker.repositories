@@ -2583,6 +2583,12 @@
     "type": "weather",
     "version": "2.0.0"
   },
+  "poolcontrol": {
+    "meta": "https://raw.githubusercontent.com/DasBo1975/ioBroker.poolcontrol/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/DasBo1975/ioBroker.poolcontrol/main/admin/poolcontrol.png",
+    "type": "climate-control",
+    "version": "1.4.6"
+  },
   "powerfox2": {
     "meta": "https://raw.githubusercontent.com/Ax-LED/ioBroker.powerfox2/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Ax-LED/ioBroker.powerfox2/main/admin/powerfox2.png",
