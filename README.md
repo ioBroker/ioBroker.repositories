@@ -28,7 +28,7 @@ This is a GitHub project for storage of the latest and stable repositories.
 
 1. Your GitHub repository must have the name - `ioBroker.<adaptername>`. **B** is capital in "ioBroker", but in the `package.json` the *name* must be low case, because npm does not allow upper case letters. Your repository must have "topics". Add these with `Manage topics`.
 2. Do not use in the title the words `ioBroker` or `Adapter`. It is clear anyway that this adapter is for ioBroker.
-3. Pure widget adapters for vis-2 must be named vis-2-widget-xxxx.
+3. Pure widget adapters for vis-2 must be named vis-2-widgets-xxxx.
 4. `titleLang` in io-package.json is object that consists short names in many languages. `Lang` ist not german `Länge`, but english `LANGuages`.
 5. Adapter needs to have a `README.md` with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md).
 
