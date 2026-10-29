@@ -3555,6 +3555,12 @@
     "type": "household",
     "version": "0.0.8"
   },
+  "victron-cerbo": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.victron-cerbo/main/admin/victron-cerbo.svg",
+    "type": "energy",
+    "version": "1.0.1"
+  },
   "victron-gx": {
     "meta": "https://raw.githubusercontent.com/Sefina-DS/ioBroker.victron-gx/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Sefina-DS/ioBroker.victron-gx/main/admin/victron-gx.png",
