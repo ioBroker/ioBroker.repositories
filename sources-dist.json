@@ -3470,6 +3470,11 @@
     "icon": "https://raw.githubusercontent.com/patrickbs96/ioBroker.twinkly/master/admin/twinkly.png",
     "type": "lighting"
   },
+  "ultimate-updater": {
+    "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.ultimate-updater/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.ultimate-updater/main/admin/ultimate-updater.png",
+    "type": "utility"
+  },
   "ultrahuman": {
     "meta": "https://raw.githubusercontent.com/SmarterPapa/ioBroker.ultrahuman/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/SmarterPapa/ioBroker.ultrahuman/main/admin/ultrahuman.png",
