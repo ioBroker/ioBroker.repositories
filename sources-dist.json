@@ -555,7 +555,7 @@
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.comfoairq/master/admin/comfoairq.png",
     "type": "climate-control"
   },
-    "conexa": {
+  "conexa": {
     "meta": "https://raw.githubusercontent.com/ChristianPeymann/ioBroker.conexa/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ChristianPeymann/ioBroker.conexa/main/admin/conexa.png",
     "type": "energy"
