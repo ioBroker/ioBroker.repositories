@@ -2525,6 +2525,11 @@
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.philips-tv/master/admin/philips-tv.png",
     "type": "multimedia"
   },
+  "pi-agent": {
+    "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.pi-agent/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.pi-agent/main/admin/pi-agent.png",
+    "type": "general"
+  },
   "pi-hole": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pi-hole/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pi-hole/master/admin/pi-hole.png",
