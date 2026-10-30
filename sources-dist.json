@@ -555,6 +555,11 @@
     "icon": "https://raw.githubusercontent.com/klein0r/ioBroker.comfoairq/master/admin/comfoairq.png",
     "type": "climate-control"
   },
+    "conexa": {
+    "meta": "https://raw.githubusercontent.com/ChristianPeymann/ioBroker.conexa/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ChristianPeymann/ioBroker.conexa/main/admin/conexa.png",
+    "type": "energy"
+  },
   "consumption": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.consumption/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.consumption/master/admin/consumption.png",
@@ -569,11 +574,6 @@
     "meta": "https://raw.githubusercontent.com/schmupu/ioBroker.contactid/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/schmupu/ioBroker.contactid/master/admin/contactid.png",
     "type": "network"
-  },
-  "conexa": {
-    "meta": "https://raw.githubusercontent.com/ChristianPeymann/ioBroker.conexa/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/ChristianPeymann/ioBroker.conexa/main/admin/conexa.png",
-    "type": "energy"
   },
   "controme": {
     "meta": "https://raw.githubusercontent.com/MadErstam/ioBroker.controme/main/io-package.json",
