@@ -1869,6 +1869,12 @@
     "type": "household",
     "version": "0.0.5"
   },
+  "max": {
+    "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.max/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.max/main/admin/max.png",
+    "type": "messaging",
+    "version": "0.1.12"
+  },
   "maxcube": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.maxcube/master/admin/maxcube.png",
