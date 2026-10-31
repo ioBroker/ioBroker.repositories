@@ -2925,6 +2925,12 @@
     "type": "utility",
     "version": "0.1.13"
   },
+  "sehybrid": {
+    "meta": "https://raw.githubusercontent.com/heresiarch/ioBroker.sehybrid/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/heresiarch/ioBroker.sehybrid/main/admin/sehybrid.png",
+    "type": "energy",
+    "version": "1.1.2"
+  },
   "seko": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.seko/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.seko/main/admin/seko.png",
