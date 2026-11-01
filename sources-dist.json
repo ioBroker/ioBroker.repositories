@@ -255,6 +255,11 @@
     "icon": "https://raw.githubusercontent.com/chrmenne/ioBroker.aurora-nowcast/main/admin/aurora-nowcast.png",
     "type": "weather"
   },
+  "autism-support": {
+    "meta": "https://raw.githubusercontent.com/MatthiasUlrich1/ioBroker.autism-support/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/MatthiasUlrich1/ioBroker.autism-support/main/admin/autism-support.png",
+    "type": "general"
+  },
   "autodarts": {
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/admin/autodarts.svg",
@@ -858,6 +863,11 @@
   "energymanager": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.energymanager/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.energymanager/master/admin/energymanager.png",
+    "type": "energy"
+  },
+  "energypriceforecast": {
+    "meta": "https://raw.githubusercontent.com/BackupBaTTerY/ioBroker.energypriceforecast/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BackupBaTTerY/ioBroker.energypriceforecast/main/admin/energypriceforecast.png",
     "type": "energy"
   },
   "enet": {
@@ -3234,6 +3244,11 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.srm/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.srm/main/admin/srm.png",
     "type": "hardware"
+  },
+  "staleguard": {
+    "meta": "https://raw.githubusercontent.com/typhosj/ioBroker.staleguard/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/typhosj/ioBroker.staleguard/main/admin/staleguard.png",
+    "type": "utility"
   },
   "starline": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.starline/master/io-package.json",
