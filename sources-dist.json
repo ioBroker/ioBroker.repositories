@@ -1645,6 +1645,11 @@
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.jeelink/master/admin/jeelab_logo.png",
     "type": "hardware"
   },
+  "jellyfin": {
+    "meta": "https://raw.githubusercontent.com/Schimi1983/ioBroker.jellyfin/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Schimi1983/ioBroker.jellyfin/main/admin/jellyfin.png",
+    "type": "multimedia"
+  },
   "jetframe": {
     "meta": "https://raw.githubusercontent.com/backfisch88/ioBroker.jetframe/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/backfisch88/ioBroker.jetframe/main/admin/jetframe.png",
