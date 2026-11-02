@@ -4189,5 +4189,10 @@
     "meta": "https://raw.githubusercontent.com/Flixhummel/ioBroker.zwift/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Flixhummel/ioBroker.zwift/main/admin/zwift.png",
     "type": "health"
+  },
+  "waipu": {
+    "meta": "https://raw.githubusercontent.com/Thorhammer1967/ioBroker.waipu/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Thorhammer1967/ioBroker.waipu/main/admin/waipu.png",
+    "type": "multimedia"
   }
 }
