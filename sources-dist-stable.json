@@ -97,7 +97,7 @@
     "meta": "https://raw.githubusercontent.com/zechnerhubert/ioBroker.al-ko/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/zechnerhubert/ioBroker.al-ko/master/admin/al-ko-128.png",
     "type": "garden",
-    "version": "0.3.11"
+    "version": "0.3.12"
   },
   "alarm": {
     "meta": "https://raw.githubusercontent.com/misanorot/ioBroker.alarm/master/io-package.json",
@@ -445,7 +445,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cameras/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cameras/master/admin/cameras.png",
     "type": "multimedia",
-    "version": "2.1.2"
+    "version": "3.3.0"
   },
   "canbus": {
     "meta": "https://raw.githubusercontent.com/crycode-de/ioBroker.canbus/master/io-package.json",
@@ -2479,7 +2479,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.parser/master/admin/parser.png",
     "type": "logic",
-    "version": "4.0.1"
+    "version": "4.0.2"
   },
   "pegelalarm": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.pegelalarm/master/io-package.json",
