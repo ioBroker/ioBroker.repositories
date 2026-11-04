@@ -3850,6 +3850,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-rgraph/master/admin/rgraph.png",
     "type": "visualization-widgets"
   },
+  "vis-screensaver": {
+    "meta": "https://raw.githubusercontent.com/SteinchenIO/ioBroker.vis-screensaver/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SteinchenIO/ioBroker.vis-screensaver/main/admin/screensaver.svg",
+    "type": "visualization-widgets"
+  },
   "vis-timeandweather": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-timeandweather/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-timeandweather/master/admin/timeandweather.png",
