@@ -1600,6 +1600,11 @@
     "icon": "https://raw.githubusercontent.com/matthsc/ioBroker.innoxel/main/admin/innoxel.png",
     "type": "iot-systems"
   },
+  "intercom": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.intercom/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.intercom/main/admin/intercom.svg",
+    "type": "communication"
+  },
   "intex": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.intex/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.intex/master/admin/intex.png",
