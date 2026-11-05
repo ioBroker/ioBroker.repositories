@@ -19,13 +19,14 @@ on:
       release:
         type: string
         required: true
-        
+
 jobs:
   set-tag:
     runs-on: ubuntu-latest
+    if: github.repository == 'ioBroker/ioBroker.repositories'
     steps:
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
-          node-version: 18
+          node-version: 22
       - run: npm  dist-tag list iobroker.${{ github.event.inputs.adapter }}
       - run: npm --//registry.npmjs.org/:_authToken=${{secrets.NPM_TAG}} dist-tag add iobroker.${{ github.event.inputs.adapter }}@${{ github.event.inputs.release }} ${{ github.event.inputs.tag }}
