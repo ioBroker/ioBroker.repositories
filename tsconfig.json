@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        // The scripts in src/ are executed directly by Node's built-in type stripping
+        // (`node src/<x>.mts`, Node >= 22.19) - nothing is ever compiled, tsc is only the type checker.
+        // They are .mts on purpose: package.json must not get "type": "module" (Martin's lib/*.js are
+        // CommonJS), and a plain .ts would then be parsed twice by Node with a warning. .mts is always
+        // an ES module, hence import.meta.dirname instead of __dirname and explicit ".mts" extensions
+        // in relative imports.
+        "noEmit": true,
+        "allowImportingTsExtensions": true,
+        // reject syntax that type stripping cannot erase (enum, namespace, parameter properties, ...)
+        "erasableSyntaxOnly": true,
+        // `import type` must be explicit, otherwise a stripped import could reference a missing export
+        "verbatimModuleSyntax": true,
+
+        "target": "es2022",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "lib": ["es2022"],
+        "types": ["node", "mocha"],
+
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true,
+
+        // Pragmatic first migration: implicit any is flagged, but the remaining strict checks are
+        // left off for now. Third party payloads (GitHub API, npm registry) are typed as `any` on
+        // purpose - tightening those is follow-up work.
+        "strict": false,
+        "noImplicitAny": true
+    },
+    "include": ["src/**/*.ts", "src/**/*.mts"],
+    "exclude": ["node_modules"]
+}

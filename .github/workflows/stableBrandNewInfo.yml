@@ -4,15 +4,22 @@
 name: Stable Brand-New Info
 
 #
-# WARNING: 
+# WARNING:
 #    ** Do NOT run untrusted code when using pull_request_target **
-# pull_request_target is needed as pull_request does not provide secrets and so no 
+# pull_request_target is needed as pull_request does not provide secrets and so no
 # labeling of PR is possible.
 #
 on:
   pull_request_target:
     types: [labeled, unlabeled]
-    
+  # Dispatched by src/check.mts, which adds the label with the default GITHUB_TOKEN - an event
+  # from that token does not start the 'labeled' run, so the PR number is passed explicitly here.
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: 'PR number to process'
+        required: true
+
 jobs:
   stableBrandNewInfo:
     name: stable brand new info
@@ -22,11 +29,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 18
+          node-version: 22
       - run: npm i
       - run: npm run stableBrandNewInfo
         env:
           OWN_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.inputs.pr }}
