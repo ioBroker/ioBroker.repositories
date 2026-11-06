@@ -757,7 +757,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.elgato-key-light/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.elgato-key-light/main/admin/elgato-key-light.png",
     "type": "lighting",
-    "version": "2.0.0"
+    "version": "2.0.1"
   },
   "email": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.email/master/io-package.json",
@@ -1737,6 +1737,12 @@
     "type": "multimedia",
     "version": "1.0.5"
   },
+  "liebherr": {
+    "meta": "https://raw.githubusercontent.com/Gaspode69/ioBroker.liebherr/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Gaspode69/ioBroker.liebherr/main/admin/liebherr.png",
+    "type": "household",
+    "version": "0.0.5"
+  },
   "life360ng": {
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.life360ng/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.life360ng/main/admin/Life360_s.svg",
@@ -2401,7 +2407,7 @@
     "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.openmeteo-notify/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.openmeteo-notify/main/admin/openmeteo-notify.png",
     "type": "weather",
-    "version": "0.2.1"
+    "version": "0.4.1"
   },
   "opensmartcity": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.opensmartcity/main/io-package.json",
