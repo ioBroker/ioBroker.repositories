@@ -3560,6 +3560,11 @@
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.uv-protect/master/admin/uv-protect.png",
     "type": "weather"
   },
+  "vacuula": {
+    "meta": "https://raw.githubusercontent.com/muffin142/ioBroker.vacuula/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/muffin142/ioBroker.vacuula/main/admin/vacuula.png",
+    "type": "household"
+  },
   "vaillant": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.vaillant/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.vaillant/master/admin/vaillant.png",
