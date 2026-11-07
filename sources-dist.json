@@ -485,6 +485,11 @@
     "icon": "https://raw.githubusercontent.com/maxblome/ioBroker.calendar/master/admin/calendar.png",
     "type": "date-and-time"
   },
+  "cam-recorder": {
+    "meta": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.cam-recorder/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.cam-recorder/main/admin/cam-recorder.png",
+    "type": "multimedia"
+  },
   "cameras": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.cameras/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.cameras/master/admin/cameras.png",
@@ -735,6 +740,11 @@
     "icon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.dune-hd-remote/main/admin/dune-hd-remote.png",
     "type": "multimedia"
   },
+  "duofernstick": {
+    "meta": "https://raw.githubusercontent.com/FreeProgrammer1/ioBroker.duofernstick/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/FreeProgrammer1/ioBroker.duofernstick/main/admin/duofernstick.svg",
+    "type": "hardware"
+  },
   "dwd": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.dwd/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.dwd/master/admin/dwd.png",
@@ -934,6 +944,11 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.eventlist/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.eventlist/master/admin/eventlist.png",
     "type": "visualization"
+  },
+  "ewelink": {
+    "meta": "https://raw.githubusercontent.com/AlanSRU/ioBroker.ewelink/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AlanSRU/ioBroker.ewelink/main/admin/ewelink.png",
+    "type": "iot-systems"
   },
   "exchangerates": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.exchangerates/master/io-package.json",
@@ -1680,6 +1695,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.kisshome-defender/main/admin/kisshome-defender.svg",
     "type": "utility"
   },
+  "kitchenowl": {
+    "meta": "https://raw.githubusercontent.com/n1tr0-5urf3r/ioBroker.kitchenowl/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/n1tr0-5urf3r/ioBroker.kitchenowl/main/admin/kitchenowl.png",
+    "type": "household"
+  },
   "klf200": {
     "meta": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/MiSchroe/ioBroker.klf200/master/admin/klf200.png",
@@ -2009,6 +2029,11 @@
     "meta": "https://raw.githubusercontent.com/hacki11/ioBroker.mhi-wfrac/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/hacki11/ioBroker.mhi-wfrac/main/admin/mhi-wfrac.png",
     "type": "climate-control"
+  },
+  "miboxer-wl433": {
+    "meta": "https://raw.githubusercontent.com/ssbingo/ioBroker.miboxer-wl433/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ssbingo/ioBroker.miboxer-wl433/main/admin/miboxer-wl433.png",
+    "type": "lighting"
   },
   "micronova": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.micronova/main/io-package.json",
