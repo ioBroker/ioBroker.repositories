@@ -757,7 +757,7 @@
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.elgato-key-light/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.elgato-key-light/main/admin/elgato-key-light.png",
     "type": "lighting",
-    "version": "2.0.0"
+    "version": "2.0.1"
   },
   "email": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.email/master/io-package.json",
@@ -1105,7 +1105,7 @@
     "meta": "https://raw.githubusercontent.com/typhosj/ioBroker.goodwe/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/typhosj/ioBroker.goodwe/main/admin/goodwe.png",
     "type": "energy",
-    "version": "1.2.0"
+    "version": "1.2.1"
   },
   "goodwe-pv": {
     "meta": "https://raw.githubusercontent.com/hombach/ioBroker.goodwe-pv/master/io-package.json",
@@ -1123,7 +1123,7 @@
     "meta": "https://raw.githubusercontent.com/Garfonso/ioBroker.google-sharedlocations2/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Garfonso/ioBroker.google-sharedlocations2/main/admin/google-sharedlocations2.png",
     "type": "geoposition",
-    "version": "0.4.0"
+    "version": "0.5.1"
   },
   "google-spreadsheet": {
     "meta": "https://raw.githubusercontent.com/ThomasPohl/ioBroker.google-spreadsheet/main/io-package.json",
@@ -1737,11 +1737,17 @@
     "type": "multimedia",
     "version": "1.0.5"
   },
+  "liebherr": {
+    "meta": "https://raw.githubusercontent.com/Gaspode69/ioBroker.liebherr/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Gaspode69/ioBroker.liebherr/main/admin/liebherr.png",
+    "type": "household",
+    "version": "0.0.5"
+  },
   "life360ng": {
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.life360ng/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.life360ng/main/admin/Life360_s.svg",
     "type": "geoposition",
-    "version": "1.11.4"
+    "version": "1.11.7"
   },
   "lifx": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.lifx/master/io-package.json",
@@ -2269,7 +2275,7 @@
     "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.nspanel-lovelace-ui/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.nspanel-lovelace-ui/main/admin/nspanel-lovelace-ui.png",
     "type": "hardware",
-    "version": "1.4.0"
+    "version": "1.7.0"
   },
   "nuki": {
     "meta": "https://raw.githubusercontent.com/smaragdschlange/ioBroker.nuki/master/io-package.json",
@@ -2401,7 +2407,7 @@
     "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.openmeteo-notify/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.openmeteo-notify/main/admin/openmeteo-notify.png",
     "type": "weather",
-    "version": "0.2.1"
+    "version": "0.4.1"
   },
   "opensmartcity": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.opensmartcity/main/io-package.json",
@@ -2749,7 +2755,7 @@
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.renault/main/admin/renault.png",
     "type": "vehicle",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "reolink": {
     "meta": "https://raw.githubusercontent.com/aendue/ioBroker.reolink/main/io-package.json",
@@ -2967,6 +2973,12 @@
     "type": "utility",
     "version": "1.0.2"
   },
+  "sevenio": {
+    "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.sevenio/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.sevenio/main/admin/sevenio.png",
+    "type": "messaging",
+    "version": "0.1.3"
+  },
   "shelly": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/admin/shelly.png",
@@ -3175,7 +3187,7 @@
     "meta": "https://raw.githubusercontent.com/patricknitsch/ioBroker.solectrus-influxdb/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/patricknitsch/ioBroker.solectrus-influxdb/main/admin/solectrus-influxdb.png",
     "type": "communication",
-    "version": "2.0.1"
+    "version": "2.3.0"
   },
   "soliscloud": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.soliscloud/main/io-package.json",
