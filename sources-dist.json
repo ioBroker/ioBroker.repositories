@@ -3325,6 +3325,11 @@
     "icon": "https://raw.githubusercontent.com/Sickboy78/ioBroker.sureflap/master/admin/sureflap.png",
     "type": "iot-systems"
   },
+  "suru-watermonitor": {
+    "meta": "https://raw.githubusercontent.com/NurPech/ioBroker.suru-watermonitor/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/NurPech/ioBroker.suru-watermonitor/main/admin/suru-watermonitor.png",
+    "type": "household"
+  },
   "swiss-weather-api": {
     "meta": "https://raw.githubusercontent.com/baerengraben/ioBroker.swiss-weather-api/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/baerengraben/ioBroker.swiss-weather-api/master/admin/swiss-weather-api.png",
