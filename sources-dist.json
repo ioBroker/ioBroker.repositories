@@ -1055,6 +1055,11 @@
     "icon": "https://raw.githubusercontent.com/Scrounger/ioBroker.freeair/main/admin/freeair.png",
     "type": "hardware"
   },
+  "freekiosk": {
+    "meta": "https://raw.githubusercontent.com/typhosj/ioBroker.freekiosk/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/typhosj/ioBroker.freekiosk/main/admin/freekiosk.png",
+    "type": "hardware"
+  },
   "frigate": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.frigate/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.frigate/main/admin/frigate.png",
