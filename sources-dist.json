@@ -2750,6 +2750,11 @@
     "icon": "https://raw.githubusercontent.com/PLCHome/ioBroker.pylontech/master/admin/pylontech.png",
     "type": "energy"
   },
+  "quickscript": {
+    "meta": "https://raw.githubusercontent.com/ameoba32/ioBroker.quickscript/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ameoba32/ioBroker.quickscript/main/admin/quickscript.svg",
+    "type": "logic"
+  },
   "radar-trap": {
     "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.radar-trap/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Steiger04/ioBroker.radar-trap/main/admin/radar-trap.png",
