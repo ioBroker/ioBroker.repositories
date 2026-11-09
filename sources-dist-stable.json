@@ -321,6 +321,12 @@
     "type": "date-and-time",
     "version": "6.1.0"
   },
+  "blackmagic-atem": {
+    "meta": "https://raw.githubusercontent.com/AlanSRU/ioBroker.blackmagic-atem/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AlanSRU/ioBroker.blackmagic-atem/main/admin/blackmagic-atem.png",
+    "type": "multimedia",
+    "version": "0.2.10"
+  },
   "ble": {
     "meta": "https://raw.githubusercontent.com/AlCalzone/ioBroker.ble/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/AlCalzone/ioBroker.ble/master/admin/ble.png",
