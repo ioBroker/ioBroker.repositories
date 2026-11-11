@@ -2205,6 +2205,11 @@
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.multicast/main/admin/multicast.png",
     "type": "network"
   },
+  "music-assistant": {
+    "meta": "https://raw.githubusercontent.com/NurPech/ioBroker.music-assistant/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/NurPech/ioBroker.music-assistant/main/admin/music-assistant.png",
+    "type": "multimedia"
+  },
   "musiccast": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.musiccast/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/foxthefox/ioBroker.musiccast/master/admin/musiccast.png",
