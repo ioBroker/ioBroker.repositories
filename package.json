@@ -27,6 +27,7 @@
         "checkArchived": "node lib/checkArchived.js",
         "checkNpm": "node lib/checkNpm.js",
         "manualAction": "node lib/manualAction.js",
+        "aiPrecheckPrInfo": "node lib/aiPrecheckPrInfo.js",
         "newAtLatestPrInfo": "node lib/newAtLatestPrInfo.js",
         "rdCheckedPrInfo": "node lib/rdCheckedPrInfo.js",
         "objJsonMissingPrInfo": "node lib/objJsonMissingPrInfo.js",
