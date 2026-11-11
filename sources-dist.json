@@ -175,6 +175,11 @@
     "icon": "https://raw.githubusercontent.com/ronny130286/ioBroker.ankersolix2/main/admin/ankersolix2.png",
     "type": "iot-systems"
   },
+  "anomaly-detection": {
+    "meta": "https://raw.githubusercontent.com/Voodoo2man/ioBroker.anomaly-detection/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Voodoo2man/ioBroker.anomaly-detection/main/admin/anomaly-detection-icon.png",
+    "type": "logic"
+  },
   "anthbot": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.anthbot/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.anthbot/master/admin/anthbot.png",
@@ -725,6 +730,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.dreame/main/admin/dreame.png",
     "type": "household"
   },
+  "dreo-cloud": {
+    "meta": "https://raw.githubusercontent.com/mehrwiedu/ioBroker.dreo-cloud/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mehrwiedu/ioBroker.dreo-cloud/main/admin/dreo-cloud.png",
+    "type": "climate-control"
+  },
   "drops-weather": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.drops-weather/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.drops-weather/main/admin/drops-weather.png",
@@ -988,6 +998,11 @@
   "fb-checkpresence": {
     "meta": "https://raw.githubusercontent.com/afuerhoff/ioBroker.fb-checkpresence/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/afuerhoff/ioBroker.fb-checkpresence/master/admin/fb-checkpresence.png",
+    "type": "infrastructure"
+  },
+  "fb-guard": {
+    "meta": "https://raw.githubusercontent.com/Flyor/ioBroker.fb-guard/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Flyor/ioBroker.fb-guard/main/admin/fb-guard.png",
     "type": "infrastructure"
   },
   "feiertage": {
@@ -2120,6 +2135,11 @@
     "icon": "https://raw.githubusercontent.com/Steiger04/ioBroker.milight-smart-light/master/admin/milight-smart-light.png",
     "type": "lighting"
   },
+  "mill-local": {
+    "meta": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.mill-local/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.mill-local/main/admin/mill-local.png",
+    "type": "climate-control"
+  },
   "millheater": {
     "meta": "https://raw.githubusercontent.com/webbummler/ioBroker.millheater/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/webbummler/ioBroker.millheater/main/admin/millheater.png",
@@ -2189,6 +2209,11 @@
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.multicast/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.multicast/main/admin/multicast.png",
     "type": "network"
+  },
+  "music-assistant": {
+    "meta": "https://raw.githubusercontent.com/NurPech/ioBroker.music-assistant/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/NurPech/ioBroker.music-assistant/main/admin/music-assistant.png",
+    "type": "multimedia"
   },
   "musiccast": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.musiccast/master/io-package.json",
@@ -2376,8 +2401,8 @@
     "type": "garden"
   },
   "ocpp": {
-    "meta": "https://raw.githubusercontent.com/foxriver76/ioBroker.ocpp/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/foxriver76/ioBroker.ocpp/main/admin/ocpp.png",
+    "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ocpp/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.ocpp/main/admin/ocpp.png",
     "type": "energy"
   },
   "octoprint": {
@@ -3025,6 +3050,11 @@
     "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.sevenio/main/admin/sevenio.png",
     "type": "messaging"
   },
+  "shelfmate": {
+    "meta": "https://raw.githubusercontent.com/backfisch88/ioBroker.shelfmate/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/backfisch88/ioBroker.shelfmate/main/admin/shelfmate.png",
+    "type": "household"
+  },
   "shelly": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/admin/shelly.png",
@@ -3229,6 +3259,11 @@
     "meta": "https://raw.githubusercontent.com/patricknitsch/ioBroker.solectrus-influxdb/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/patricknitsch/ioBroker.solectrus-influxdb/main/admin/solectrus-influxdb.png",
     "type": "communication"
+  },
+  "solinteg": {
+    "meta": "https://raw.githubusercontent.com/bueste/ioBroker.solinteg/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bueste/ioBroker.solinteg/main/admin/solinteg.png",
+    "type": "energy"
   },
   "soliscloud": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.soliscloud/main/io-package.json",
