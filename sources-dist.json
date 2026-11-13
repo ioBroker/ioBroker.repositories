@@ -3480,6 +3480,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.text2command/master/admin/text2command.png",
     "type": "logic"
   },
+  "theben-smgw": {
+    "meta": "https://raw.githubusercontent.com/Borilu/ioBroker.theben-smgw/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Borilu/ioBroker.theben-smgw/main/admin/theben-smgw.svg",
+    "type": "energy"
+  },
   "tibberlink": {
     "meta": "https://raw.githubusercontent.com/hombach/ioBroker.tibberlink/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/hombach/ioBroker.tibberlink/master/admin/tibberlink.png",
