@@ -1995,6 +1995,11 @@
     "icon": "https://raw.githubusercontent.com/Black-Thunder/ioBroker.melcloud/master/admin/melcloud.png",
     "type": "climate-control"
   },
+  "melcloudhome": {
+    "meta": "https://raw.githubusercontent.com/konrad2002/ioBroker.melcloudhome/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/konrad2002/ioBroker.melcloudhome/master/admin/melcloudhome.png",
+    "type": "climate-control"
+  },
   "mempool-space": {
     "meta": "https://raw.githubusercontent.com/Hans-Wurst-21/ioBroker.mempool-space/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Hans-Wurst-21/ioBroker.mempool-space/main/admin/mempool-space.png",
@@ -2130,6 +2135,11 @@
     "icon": "https://raw.githubusercontent.com/Steiger04/ioBroker.milight-smart-light/master/admin/milight-smart-light.png",
     "type": "lighting"
   },
+  "mill-local": {
+    "meta": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.mill-local/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.mill-local/main/admin/mill-local.png",
+    "type": "climate-control"
+  },
   "millheater": {
     "meta": "https://raw.githubusercontent.com/webbummler/ioBroker.millheater/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/webbummler/ioBroker.millheater/main/admin/millheater.png",
@@ -2199,6 +2209,11 @@
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.multicast/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.multicast/main/admin/multicast.png",
     "type": "network"
+  },
+  "music-assistant": {
+    "meta": "https://raw.githubusercontent.com/NurPech/ioBroker.music-assistant/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/NurPech/ioBroker.music-assistant/main/admin/music-assistant.png",
+    "type": "multimedia"
   },
   "musiccast": {
     "meta": "https://raw.githubusercontent.com/foxthefox/ioBroker.musiccast/master/io-package.json",
@@ -3034,6 +3049,11 @@
     "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.sevenio/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.sevenio/main/admin/sevenio.png",
     "type": "messaging"
+  },
+  "shelfmate": {
+    "meta": "https://raw.githubusercontent.com/backfisch88/ioBroker.shelfmate/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/backfisch88/ioBroker.shelfmate/main/admin/shelfmate.png",
+    "type": "household"
   },
   "shelly": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.shelly/master/io-package.json",
