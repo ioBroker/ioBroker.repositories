@@ -2155,6 +2155,11 @@
     "icon": "https://raw.githubusercontent.com/SimonFischer04/ioBroker.miner/main/admin/miner.png",
     "type": "hardware"
   },
+  "minmax": {
+    "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.minmax/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.minmax/master/admin/minmax.png",
+    "type": "logic"
+  },
   "minuaru": {
     "meta": "https://raw.githubusercontent.com/minukodu/ioBroker.minuaru/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/minukodu/ioBroker.minuaru/main/admin/minuaru.png",
