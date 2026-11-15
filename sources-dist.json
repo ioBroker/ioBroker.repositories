@@ -3005,6 +3005,11 @@
     "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.script-restore/main/admin/script-restore.svg",
     "type": "utility"
   },
+  "sdui": {
+    "meta": "https://raw.githubusercontent.com/helfi9999/ioBroker.sdui/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/helfi9999/ioBroker.sdui/main/admin/sdui.png",
+    "type": "date-and-time"
+  },
   "sehybrid": {
     "meta": "https://raw.githubusercontent.com/heresiarch/ioBroker.sehybrid/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/heresiarch/ioBroker.sehybrid/main/admin/sehybrid.png",
