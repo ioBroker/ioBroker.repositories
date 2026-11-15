@@ -160,6 +160,11 @@
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.amtronwallbox/master/admin/amtronwallbox.png",
     "type": "energy"
   },
+  "androidtv": {
+    "meta": "https://raw.githubusercontent.com/Schimi1983/ioBroker.androidtv/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Schimi1983/ioBroker.androidtv/main/admin/androidtv.png",
+    "type": "multimedia"
+  },
   "anelhut": {
     "meta": "https://raw.githubusercontent.com/dan1-de/ioBroker.anelhut/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/dan1-de/ioBroker.anelhut/main/admin/anelhut.png",
@@ -2000,6 +2005,11 @@
     "icon": "https://raw.githubusercontent.com/Black-Thunder/ioBroker.melcloud/master/admin/melcloud.png",
     "type": "climate-control"
   },
+  "melcloudhome": {
+    "meta": "https://raw.githubusercontent.com/konrad2002/ioBroker.melcloudhome/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/konrad2002/ioBroker.melcloudhome/master/admin/melcloudhome.png",
+    "type": "climate-control"
+  },
   "mempool-space": {
     "meta": "https://raw.githubusercontent.com/Hans-Wurst-21/ioBroker.mempool-space/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Hans-Wurst-21/ioBroker.mempool-space/main/admin/mempool-space.png",
@@ -3584,6 +3594,11 @@
     "meta": "https://raw.githubusercontent.com/patrickbs96/ioBroker.twinkly/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/patrickbs96/ioBroker.twinkly/master/admin/twinkly.png",
     "type": "lighting"
+  },
+  "ultimate-updater": {
+    "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.ultimate-updater/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.ultimate-updater/main/admin/ultimate-updater.png",
+    "type": "utility"
   },
   "ultrahuman": {
     "meta": "https://raw.githubusercontent.com/SmarterPapa/ioBroker.ultrahuman/main/io-package.json",
