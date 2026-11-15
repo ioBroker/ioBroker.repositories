@@ -1863,6 +1863,12 @@
     "type": "climate-control",
     "version": "0.4.2"
   },
+  "luxtronik2-controller": {
+    "meta": "https://raw.githubusercontent.com/TbsJah/ioBroker.luxtronik2-controller/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TbsJah/ioBroker.luxtronik2-controller/main/admin/luxtronik2-controller.png",
+    "type": "climate-control",
+    "version": "0.24.0"
+  },
   "material": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.material/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.material/master/admin/material.png",
@@ -3637,7 +3643,7 @@
     "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.vis-2-widgets-collection/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Steiger04/ioBroker.vis-2-widgets-collection/main/admin/vis-2-widgets-collection.png",
     "type": "visualization-widgets",
-    "version": "1.8.1"
+    "version": "3.1.0"
   },
   "vis-2-widgets-energy": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-energy/main/io-package.json",
@@ -3674,12 +3680,6 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-material/main/admin/vis-2-widgets-material.png",
     "type": "visualization-widgets",
     "version": "2.0.4"
-  },
-  "vis-2-widgets-ovarious": {
-    "meta": "https://raw.githubusercontent.com/oweitman/ioBroker.vis-2-widgets-ovarious/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/oweitman/ioBroker.vis-2-widgets-ovarious/main/admin/vis-2-widgets-ovarious.png",
-    "type": "visualization-widgets",
-    "version": "2.0.0"
   },
   "vis-2-widgets-radar-trap": {
     "meta": "https://raw.githubusercontent.com/Steiger04/ioBroker.vis-2-widgets-radar-trap/main/io-package.json",
