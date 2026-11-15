@@ -102,7 +102,7 @@ Additionally, to all above listed points:
 1. The adapter must have been added to the latest repository previously.
 2. Forum thread with a question to test the adapter.
 3. Some feedback on [forum](http://forum.iobroker.net).
-4. **Important** Discovery function! If a device can be found automatically (USB, IP), it should be implemented in the discovery adapter after (Discovery PR will be merged after stable acceptance).
+4. **Optional** Discovery function! If a device can be found automatically (USB, IP), it should be implemented in the discovery adapter after (Discovery PR will be merged after stable acceptance).
 
 ## Common Rules and Requirements for Commercial Adapters Requiring a License
 ioBroker GmbH sponsors all infrastructure and services necessary for the smooth functioning of the ioBroker world. This encompasses the repository, central components, and platforms such as the Forum. While the usage of open-source "non-commercial" adapters is entirely free, the scenario changes when adapters necessitate a purchase.

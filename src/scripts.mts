@@ -758,7 +758,12 @@ function findMainBranch(owner: string, adapterName: string) {
  */
 async function addToLatest(adapterName: string, type: AdapterType) {
     const gitRepo = await findGitRepo(adapterName);
-    const mainBranch = await findMainBranch(gitRepo.match(/\/([-._a-zA-Z0-9]+)\/ioBroker/)[1], adapterName);
+    // Anchored on the host: for https://github.com/ioBroker/ioBroker.<name> "/github.com/ioBroker" matches too
+    const owner = gitRepo.match(/github\.com\/([-._a-zA-Z0-9]+)\//i);
+    if (!owner) {
+        throw new Error(`Could not find the owner of ${gitRepo}!`);
+    }
+    const mainBranch = await findMainBranch(owner[1], adapterName);
     const metaUrl = getMetaUrl(gitRepo, mainBranch);
     const iconUrl = await getIconUrl(metaUrl);
 

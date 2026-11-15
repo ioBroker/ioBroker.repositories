@@ -489,8 +489,17 @@ async function detectChangedAdaptersInFile(filename: string, baseRef: string, he
             if (!meta) {
                 return null;
             }
+            // meta is always a raw.githubusercontent.com URL:
+            //   https://raw.githubusercontent.com/{owner}/{repo}/{branch}/...io-package.json
+            // Extract owner and repo from path segments [1] and [2] and reconstruct the
+            // raw.githubusercontent.com base URL.  This handles monorepo layouts where
+            // io-package.json lives deeper than /{branch}/io-package.json (e.g. vis-2).
+            const rawMatch = meta.match(/^(https:\/\/raw\.githubusercontent\.com\/[^/]+\/[^/]+)\//);
+            const repoUrl = rawMatch
+                ? rawMatch[1]
+                : meta.replace(/\/master\/io-package\.json$/, '').replace(/\/main\/io-package\.json$/, '');
             return {
-                url: meta.replace(/\/master\/io-package\.json$/, '').replace(/\/main\/io-package\.json$/, ''),
+                url: repoUrl,
                 // The version pinned by the entry. Only sources-dist-stable.json entries
                 // carry one - for sources-dist.json entries that stay undefined.
                 version: headJson[name].version,
