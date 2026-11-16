@@ -3800,6 +3800,11 @@
     "icon": "https://raw.githubusercontent.com/rnc11/ioBroker.waip-web/main/admin/waip-web.png",
     "type": "alarm"
   },
+  "waipu": {
+    "meta": "https://raw.githubusercontent.com/Thorhammer1967/ioBroker.waipu/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Thorhammer1967/ioBroker.waipu/main/admin/waipu.png",
+    "type": "multimedia"
+  },
   "wallpanel": {
     "meta": "https://raw.githubusercontent.com/xXBJXx/ioBroker.wallpanel/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/xXBJXx/ioBroker.wallpanel/main/admin/wallpanel.png",
