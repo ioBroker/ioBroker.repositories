@@ -3200,6 +3200,11 @@
     "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.smoothed/main/admin/smoothed.png",
     "type": "logic"
   },
+  "snapmaker": {
+    "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.snapmaker/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.snapmaker/main/admin/snapmaker.svg",
+    "type": "hardware"
+  },
   "snips": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.snips/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.snips/master/admin/snips.png",
