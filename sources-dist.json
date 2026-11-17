@@ -2376,9 +2376,9 @@
     "type": "messaging"
   },
   "nubert-sub": {
-  "meta": "https://raw.githubusercontent.com/Smallfeuer/ioBroker.nubert-sub/main/io-package.json",
-  "icon": "https://raw.githubusercontent.com/Smallfeuer/ioBroker.nubert-sub/main/admin/nubert-sub.png",
-  "type": "multimedia"
+    "meta": "https://raw.githubusercontent.com/Smallfeuer/ioBroker.nubert-sub/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Smallfeuer/ioBroker.nubert-sub/main/admin/nubert-sub.png",
+    "type": "multimedia"
   },
   "nuki": {
     "meta": "https://raw.githubusercontent.com/smaragdschlange/ioBroker.nuki/master/io-package.json",
