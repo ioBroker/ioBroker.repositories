@@ -731,6 +731,18 @@ function triggerLabelWorkflow(workflow: string, prID: string | number) {
         .catch(e => console.error(e));
 }
 
+/** Returns -1, 0, or 1 like a comparator. Handles x.y.z semver-style strings. */
+function compareVersions(a: string, b: string): number {
+    const pa = a.split('.').map(n => parseInt(n, 10) || 0);
+    const pb = b.split('.').map(n => parseInt(n, 10) || 0);
+    const len = Math.max(pa.length, pb.length);
+    for (let idx = 0; idx < len; idx++) {
+        const diff = (pa[idx] || 0) - (pb[idx] || 0);
+        if (diff !== 0) return diff < 0 ? -1 : 1;
+    }
+    return 0;
+}
+
 async function doIt() {
     const prID = getPullRequestNumber();
     console.log(`Process PR ${prID}`);
@@ -987,6 +999,34 @@ async function doIt() {
             const submittedRelease = links[i].version || latestRelease;
             // Version used for the PR title adjustment (submitted stable version).
             titleVersion = submittedRelease;
+
+            // --- Check: submitted release must exist on npm ---
+            let submittedExistsOnNpm = false;
+            try {
+                const npmInfo = await getUrl(`https://registry.npmjs.org/iobroker.${adapterName.toLowerCase()}`);
+                submittedExistsOnNpm = !!(npmInfo?.versions?.[submittedRelease]);
+            } catch (e) {
+                console.error(`Cannot read npm info for ${adapterName}@${submittedRelease}: ${e}`);
+            }
+            if (!submittedExistsOnNpm) {
+                comments.push({ text: ``, noDecorate: true });
+                comments.push({
+                    text:
+                        `> [!CAUTION]\n` +
+                        `> ## :no_entry: ERROR: Release ${submittedRelease} does NOT exist on npm!\n` +
+                        `> This PR tries to pin a version that is not published on npm. The release must be published on npm before it can be added to the stable repository.\n` +
+                        `> **This PR must not be merged until the release is available on npm.**`,
+                    noDecorate: true,
+                });
+                comments.push({ text: ``, noDecorate: true });
+                try {
+                    await addLabel(prID, ['⛔ STOP ⛔']);
+                } catch (e) {
+                    console.error(`Cannot add label '⛔ STOP ⛔': ${e}`);
+                }
+            }
+            // --- End npm existence check ---
+
             const latestTime = new Date(latest[adapterName].versionDate);
             const latestTimeStr = `${latestTime.getDate()}.${latestTime.getMonth() + 1}.${latestTime.getFullYear()}`;
             const latestDaysOld = Math.floor((now.getTime() - latestTime.getTime()) / ONE_DAY);
@@ -1055,6 +1095,24 @@ async function doIt() {
                 comments.push({ text: `${stableUser} users (stable) (${stableUserPercent}%)`, noDecorate: true });
 
                 if (submittedRelease !== stableRelease) {
+                    // --- Check: downgrade detection ---
+                    if (compareVersions(submittedRelease, stableRelease) < 0) {
+                        comments.push({ text: ``, noDecorate: true });
+                        comments.push({
+                            text:
+                                `:warning: **WARNING: This PR submits a downgrade!** ` +
+                                `The submitted release **${submittedRelease}** is lower than the current stable release **${stableRelease}**. ` +
+                                `Please verify that this downgrade is intentional.`,
+                            noDecorate: true,
+                        });
+                        comments.push({ text: ``, noDecorate: true });
+                        try {
+                            await addLabel(prID, ['⚠️check']);
+                        } catch (e) {
+                            console.error(`Cannot add label '⚠️check': ${e}`);
+                        }
+                    }
+                    // --- End downgrade check ---
                     updateStableUrl = link;
                     updateStableFrom = stableRelease;
                     updateStableTo = submittedRelease;
