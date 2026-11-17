@@ -2745,6 +2745,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.proxmox/master/admin/proxmox.png",
     "type": "infrastructure"
   },
+  "proxon-hesp": {
+    "meta": "https://raw.githubusercontent.com/mkneppe/ioBroker.proxon-hesp/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/mkneppe/ioBroker.proxon-hesp/main/admin/proxon-hesp.svg",
+    "type": "climate-control"
+  },
   "proxy": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
