@@ -2830,6 +2830,11 @@
     "icon": "https://raw.githubusercontent.com/aruttkamp/ioBroker.rct/main/admin/rct-logo.square.png",
     "type": "energy"
   },
+  "recorder": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.recorder/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.recorder/main/admin/recorder.svg",
+    "type": "storage"
+  },
   "refoss": {
     "meta": "https://raw.githubusercontent.com/Refoss/ioBroker.refoss/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Refoss/ioBroker.refoss/main/admin/refoss.png",
