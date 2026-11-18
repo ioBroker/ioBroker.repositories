@@ -655,6 +655,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.denon/master/admin/denon.png",
     "type": "multimedia"
   },
+  "desktop-control": {
+    "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.desktop-control/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ipod86/ioBroker.desktop-control/main/admin/desktop-control.png",
+    "type": "utility"
+  },
   "device-monitoring": {
     "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.device-monitoring/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.device-monitoring/main/admin/device-monitoring.png",
@@ -1600,6 +1605,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.icons-ultimate-png/master/admin/icons-ultimate-png.png",
     "type": "visualization-icons"
   },
+  "idm-modbus": {
+    "meta": "https://raw.githubusercontent.com/seaspotter/ioBroker.idm-modbus/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/seaspotter/ioBroker.idm-modbus/main/admin/idm-modbus.png",
+    "type": "climate-control"
+  },
   "iec104": {
     "meta": "https://raw.githubusercontent.com/TheBam1990/ioBroker.iec104/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/TheBam1990/ioBroker.iec104/main/admin/iec104.svg",
@@ -2220,6 +2230,11 @@
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.mspa/main/admin/mspa.png",
     "type": "climate-control"
   },
+  "mtec": {
+    "meta": "https://raw.githubusercontent.com/derDennis99/ioBroker.mtec/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/derDennis99/ioBroker.mtec/main/admin/mtec.svg",
+    "type": "energy"
+  },
   "multicast": {
     "meta": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.multicast/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/DrozmotiX/ioBroker.multicast/main/admin/multicast.png",
@@ -2745,6 +2760,11 @@
     "icon": "https://raw.githubusercontent.com/ylabonte/ioBroker.procon-ip/master/admin/procon-ip.png",
     "type": "iot-systems"
   },
+  "prometheus": {
+    "meta": "https://raw.githubusercontent.com/bloop16/ioBroker.prometheus/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/bloop16/ioBroker.prometheus/main/admin/prometheus.png",
+    "type": "misc-data"
+  },
   "proxmox": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.proxmox/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.proxmox/master/admin/proxmox.png",
@@ -3223,6 +3243,11 @@
   "snapmaker": {
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.snapmaker/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/inventwo/ioBroker.snapmaker/main/admin/snapmaker.svg",
+    "type": "hardware"
+  },
+  "snapmaker-u1": {
+    "meta": "https://raw.githubusercontent.com/Negalein/ioBroker.snapmaker-u1/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Negalein/ioBroker.snapmaker-u1/main/admin/snapmaker-u1.png",
     "type": "hardware"
   },
   "snips": {
