@@ -369,12 +369,6 @@
     "type": "vehicle",
     "version": "5.0.5"
   },
-  "bosch-smart-home-camera": {
-    "meta": "https://raw.githubusercontent.com/mosandlt/ioBroker.bosch-smart-home-camera/main/io-package.json",
-    "icon": "https://raw.githubusercontent.com/mosandlt/ioBroker.bosch-smart-home-camera/main/admin/bosch-camera.png",
-    "type": "multimedia",
-    "version": "1.8.3"
-  },
   "boschindego": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.boschindego/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.boschindego/main/admin/boschindego.png",
@@ -1879,7 +1873,7 @@
     "meta": "https://raw.githubusercontent.com/oelison/ioBroker.matrix-org/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/oelison/ioBroker.matrix-org/main/admin/matrix-logo.png",
     "type": "messaging",
-    "version": "1.2.2"
+    "version": "1.3.1"
   },
   "matter": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.matter/main/io-package.json",
@@ -2024,6 +2018,12 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.miele/master/admin/xmiele.png",
     "type": "household",
     "version": "0.1.5"
+  },
+  "miele-local": {
+    "meta": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.miele-local/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.miele-local/main/admin/miele-local.png",
+    "type": "household",
+    "version": "0.4.3"
   },
   "mielecloudservice": {
     "meta": "https://raw.githubusercontent.com/Grizzelbee/ioBroker.mielecloudservice/master/io-package.json",
