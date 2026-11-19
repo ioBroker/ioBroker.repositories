@@ -1156,6 +1156,11 @@
     "type": "utility"
   },
   "fyta": {
+  "faikout-ac": {
+    "meta": "https://raw.githubusercontent.com/RaW79/ioBroker.faikout-ac/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/RaW79/ioBroker.faikout-ac/main/admin/faikout.png",
+    "type": "climate-control"
+  },
     "meta": "https://raw.githubusercontent.com/muffin142/ioBroker.fyta/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/muffin142/ioBroker.fyta/main/admin/fyta.png",
     "type": "garden"
