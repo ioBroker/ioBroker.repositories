@@ -3185,6 +3185,11 @@
     "icon": "https://raw.githubusercontent.com/gaudes/ioBroker.slideshow/main/admin/slideshow.png",
     "type": "visualization"
   },
+  "sma-echarger": {
+    "meta": "https://raw.githubusercontent.com/SpongeTroN86/ioBroker.sma-echarger/refs/heads/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SpongeTroN86/ioBroker.sma-echarger/refs/heads/main/admin/sma-echarger.png",
+    "type": "iot-systems"
+  },
   "sma-em": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sma-em/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.sma-em/master/admin/sma-em.png",
