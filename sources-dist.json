@@ -1190,6 +1190,11 @@
     "icon": "https://raw.githubusercontent.com/hombach/ioBroker.go-e-charger/master/admin/go-eCharger.png",
     "type": "vehicle"
   },
+  "go-e-wallbox": {
+    "meta": "https://raw.githubusercontent.com/BenZ-ITS/ioBroker.go-e-wallbox/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/BenZ-ITS/ioBroker.go-e-wallbox/main/admin/go-e-wallbox.png",
+    "type": "energy"
+  },
   "goodwe": {
     "meta": "https://raw.githubusercontent.com/typhosj/ioBroker.goodwe/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/typhosj/ioBroker.goodwe/main/admin/goodwe.png",
