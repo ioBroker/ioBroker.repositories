@@ -3657,6 +3657,12 @@
     "type": "visualization-widgets",
     "version": "3.0.3"
   },
+  "vis-2-widgets-eusec": {
+    "meta": "https://raw.githubusercontent.com/typhosj/ioBroker.vis-2-widgets-eusec/master/io-package.json",
+    "icon": "https://raw.githubusercontent.com/typhosj/ioBroker.vis-2-widgets-eusec/master/admin/vis-2-widgets-eusec.png",
+    "type": "visualization-widgets",
+    "version": "1.0.0"
+  },
   "vis-2-widgets-gauges": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-gauges/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-gauges/main/admin/vis-2-widgets-gauges.svg",
