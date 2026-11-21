@@ -235,7 +235,7 @@
     "meta": "https://raw.githubusercontent.com/chrmenne/ioBroker.aurora-nowcast/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/chrmenne/ioBroker.aurora-nowcast/main/admin/aurora-nowcast.png",
     "type": "weather",
-    "version": "2.3.0"
+    "version": "2.3.2"
   },
   "autodarts": {
     "meta": "https://raw.githubusercontent.com/inventwo/ioBroker.autodarts/main/io-package.json",
@@ -896,6 +896,12 @@
     "icon": "https://raw.githubusercontent.com/bloop16/ioBroker.f1/main/admin/f1.png",
     "type": "misc-data",
     "version": "0.1.13"
+  },
+  "faikout": {
+    "meta": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.faikout/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.faikout/main/admin/faikout.png",
+    "type": "climate-control",
+    "version": "0.1.0"
   },
   "fairland": {
     "meta": "https://raw.githubusercontent.com/dude2k/ioBroker.fairland/main/io-package.json",
@@ -2293,7 +2299,7 @@
     "meta": "https://raw.githubusercontent.com/ticaki/ioBroker.nspanel-lovelace-ui/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ticaki/ioBroker.nspanel-lovelace-ui/main/admin/nspanel-lovelace-ui.png",
     "type": "hardware",
-    "version": "2.1.0"
+    "version": "2.2.0"
   },
   "ntfy-client": {
     "meta": "https://raw.githubusercontent.com/lubepi/ioBroker.ntfy-client/main/io-package.json",
@@ -2983,7 +2989,7 @@
     "meta": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/nobl/ioBroker.senec/master/admin/senec.png",
     "type": "energy",
-    "version": "2.16.5"
+    "version": "2.16.6"
   },
   "seplos-v3-sniffer": {
     "meta": "https://raw.githubusercontent.com/DpunktS/ioBroker.seplos-v3-sniffer/main/io-package.json",
@@ -3301,7 +3307,7 @@
     "meta": "https://raw.githubusercontent.com/bloop16/ioBroker.steam/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/bloop16/ioBroker.steam/main/admin/steam.png",
     "type": "multimedia",
-    "version": "0.5.11"
+    "version": "0.5.12"
   },
   "stiebel-isg": {
     "meta": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.stiebel-isg/master/io-package.json",
@@ -4189,7 +4195,7 @@
     "meta": "https://raw.githubusercontent.com/arteck/ioBroker.zigbee2mqtt/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/arteck/ioBroker.zigbee2mqtt/main/admin/zigbee2mqtt.png",
     "type": "hardware",
-    "version": "3.2.2"
+    "version": "3.2.11"
   },
   "zont": {
     "meta": "https://raw.githubusercontent.com/kirovilya/ioBroker.zont/master/io-package.json",
