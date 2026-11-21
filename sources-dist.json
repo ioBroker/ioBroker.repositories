@@ -70,6 +70,11 @@
     "icon": "https://raw.githubusercontent.com/blabond/ioBroker.ai-energy-manager/main/admin/ai-energy-manager.png",
     "type": "energy"
   },
+  "ai-server": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ai-server/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ai-server/main/admin/ai-server.png",
+    "type": "general"
+  },
   "ai-toolbox": {
     "meta": "https://raw.githubusercontent.com/ToGe3688/ioBroker.ai-toolbox/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ToGe3688/ioBroker.ai-toolbox/main/admin/ai-toolbox.png",
