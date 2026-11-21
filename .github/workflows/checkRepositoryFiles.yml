@@ -12,7 +12,14 @@ on:
     branches:
       - master  
   
-  pull_request: {}
+  pull_request:
+    # 'closed' is included so that merging/closing a PR triggers a new (cheap) run on the same
+    # refs/pull/<n>/merge concurrency key. The cancel-in-progress group then kills any still-running
+    # check for that PR, and the new run exits immediately at the gate step below.
+    types: [opened, synchronize, reopened, closed]
+    paths:
+      - 'sources-dist.json'
+      - 'sources-dist-stable.json'
 
 # Group per ref so runs of different PRs never cancel each other.
 # refs/pull/<n>/merge is unique per PR, refs/heads/master is shared by all master runs,
@@ -31,12 +38,30 @@ jobs:
     permissions:
       contents: read
     steps:
+      # Gate: skip all subsequent steps when the PR is already closed/merged.
+      # For a 'closed' event the concurrency group above will also have cancelled any
+      # still-running check for this PR, so this run just needs to exit cleanly.
+      - name: Decide whether to run
+        id: gate
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]] && \
+             [[ "${{ github.event.pull_request.state }}" == "closed" ]]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "PR #${{ github.event.pull_request.number }} is already closed/merged — skipping."
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v7
+        if: steps.gate.outputs.run == 'true'
       - uses: actions/setup-node@v7
+        if: steps.gate.outputs.run == 'true'
         with:
           node-version: 22
       - run: npm i
+        if: steps.gate.outputs.run == 'true'
       - run: npm run test
+        if: steps.gate.outputs.run == 'true'
         env:
           # Use the automatic GITHUB_TOKEN instead of a repository secret. Repository secrets are
           # withheld from `pull_request` events triggered by forks, so OWN_GITHUB_TOKEN was empty on
