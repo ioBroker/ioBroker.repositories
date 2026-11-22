@@ -2815,6 +2815,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.pvforecast/main/admin/pvforecast.png",
     "type": "energy"
   },
+  "pvnode": {
+    "meta": "https://raw.githubusercontent.com/AlPi-BRV/ioBroker.pvnode/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/AlPi-BRV/ioBroker.pvnode/main/admin/pvnode.png",
+    "type": "energy"
+  },
   "pvoutputorg": {
     "meta": "https://raw.githubusercontent.com/rg-engineering/ioBroker.pvoutputorg/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/rg-engineering/ioBroker.pvoutputorg/master/admin/pvoutputorg.png",
