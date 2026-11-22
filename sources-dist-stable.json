@@ -1995,6 +1995,12 @@
     "type": "general",
     "version": "0.9.12"
   },
+  "mg-saic": {
+    "meta": "https://raw.githubusercontent.com/Voodoo2man/ioBroker.mg-saic/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Voodoo2man/ioBroker.mg-saic/main/admin/mg-saic.png",
+    "type": "vehicle",
+    "version": "0.1.4"
+  },
   "mhi-wfrac": {
     "meta": "https://raw.githubusercontent.com/hacki11/ioBroker.mhi-wfrac/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/hacki11/ioBroker.mhi-wfrac/main/admin/mhi-wfrac.png",
