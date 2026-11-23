@@ -4135,6 +4135,11 @@
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.welcome/main/admin/welcome.png",
     "type": "general"
   },
+  "wem-canapi": {
+    "meta": "https://raw.githubusercontent.com/TanteJoe/ioBroker.wem-canapi/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/TanteJoe/ioBroker.wem-canapi/main/admin/wem-canapi.png",
+    "type": "climate-control"
+  },
   "whatsapp-cmb": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.whatsapp-cmb/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.whatsapp-cmb/master/admin/whatsapp-cmb.png",
