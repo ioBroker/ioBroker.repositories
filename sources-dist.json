@@ -585,6 +585,11 @@
     "icon": "https://raw.githubusercontent.com/Bannsaenger/ioBroker.codesys-nvl/main/admin/codesys-nvl.png",
     "type": "hardware"
   },
+  "coffeelink": {
+    "meta": "https://raw.githubusercontent.com/chrvidal/ioBroker.coffeelink/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/chrvidal/ioBroker.coffeelink/main/admin/coffeelink.png",
+    "type": "household"
+  },
   "cometvisu": {
     "meta": "https://raw.githubusercontent.com/joltcoke/ioBroker.cometvisu/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/joltcoke/ioBroker.cometvisu/main/admin/cometvisu.png",
