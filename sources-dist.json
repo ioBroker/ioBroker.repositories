@@ -3275,6 +3275,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.smartthings/master/admin/smartthings.png",
     "type": "household"
   },
+  "smartvis": {
+    "meta": "https://raw.githubusercontent.com/Exc3pt10n/ioBroker.smartvis/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Exc3pt10n/ioBroker.smartvis/main/admin/smartvis.svg",
+    "type": "visualization"
+  },
   "smoothed": {
     "meta": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.smoothed/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.smoothed/main/admin/smoothed.png",
