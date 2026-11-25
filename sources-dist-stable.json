@@ -231,6 +231,12 @@
     "type": "hardware",
     "version": "2.3.0"
   },
+  "aura": {
+    "meta": "https://raw.githubusercontent.com/hdering/ioBroker.aura/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/hdering/ioBroker.aura/main/admin/aura.png",
+    "type": "visualization",
+    "version": "1.0.2"
+  },
   "aurora-nowcast": {
     "meta": "https://raw.githubusercontent.com/chrmenne/ioBroker.aurora-nowcast/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/chrmenne/ioBroker.aurora-nowcast/main/admin/aurora-nowcast.png",
