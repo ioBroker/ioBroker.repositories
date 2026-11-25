@@ -49,7 +49,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.admin/master/admin/admin.svg",
     "type": "general",
-    "version": "8.3.5"
+    "version": "8.3.15"
   },
   "agent-dvr": {
     "meta": "https://raw.githubusercontent.com/ipod86/ioBroker.agent-dvr/main/io-package.json",
@@ -3967,7 +3967,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.web/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.web/master/admin/web.png",
     "type": "general",
-    "version": "8.0.0"
+    "version": "9.7.0"
   },
   "webcal": {
     "meta": "https://raw.githubusercontent.com/dirkhe/ioBroker.webcal/master/io-package.json",
@@ -4111,7 +4111,7 @@
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.ws/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.ws/main/admin/ws.svg",
     "type": "communication",
-    "version": "4.1.0"
+    "version": "5.1.4"
   },
   "x-touch": {
     "meta": "https://raw.githubusercontent.com/Bannsaenger/ioBroker.x-touch/master/io-package.json",
