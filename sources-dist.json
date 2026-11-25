@@ -3105,6 +3105,11 @@
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.schoolfree/master/admin/schoolfree.png",
     "type": "date-and-time"
   },
+  "schulportal-hessen": {
+    "meta": "https://raw.githubusercontent.com/Voodoo2man/ioBroker.schulportal-hessen/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Voodoo2man/ioBroker.schulportal-hessen/main/admin/schulportal-hessen.png",
+    "type": "misc-data"
+  },
   "schwoerer-ventcube": {
     "meta": "https://raw.githubusercontent.com/Excodibur/ioBroker.schwoerer-ventcube/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Excodibur/ioBroker.schwoerer-ventcube/master/admin/schwoerer-ventcube.png",
