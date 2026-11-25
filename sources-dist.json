@@ -4070,6 +4070,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.vofo-speedtest/master/admin/vofo-speedtest.png",
     "type": "network"
   },
+  "voice": {
+    "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.voice/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.voice/main/admin/voice.svg",
+    "type": "utility"
+  },
   "voltoplus": {
     "meta": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.voltoplus/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/Jey-Cee/ioBroker.voltoplus/main/admin/voltoplus.png",
