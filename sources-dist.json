@@ -2400,6 +2400,11 @@
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nina/master/admin/nina.png",
     "type": "misc-data"
   },
+  "nintendo-switch-parental": {
+    "meta": "https://raw.githubusercontent.com/backfisch88/ioBroker.nintendo-switch-parental/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/backfisch88/ioBroker.nintendo-switch-parental/main/admin/nintendo-switch-parental.png",
+    "type": "multimedia"
+  },
   "nissan": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.nissan/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.nissan/master/admin/nissan.png",
