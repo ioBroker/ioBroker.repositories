@@ -26,27 +26,29 @@ This is a GitHub project for storage of the latest and stable repositories.
 ## Requirements for an adapter to get added to the BETA (latest) repository
 *Already required for the latest repository*
 
-1. Your GitHub repository must have the name - `ioBroker.<adaptername>`. **B** is capital in "ioBroker", but in the `package.json` the *name* must be low case, because npm does not allow upper case letters. Your repository must have "topics". Add these with `Manage topics`.
-2. Do not use in the title the words `ioBroker` or `Adapter`. It is clear anyway that this adapter is for ioBroker.
-3. Pure widget adapters for vis-2 must be named vis-2-widget-xxxx.
-4. `titleLang` in io-package.json is object that consists short names in many languages. `Lang` ist not german `Länge`, but english `LANGuages`.
-5. Adapter needs to have a `README.md` with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md).
+1. The adapter must be named using english language anless it associated with some manufactorer or trade mark (- but take care not violate tracemarks -).
+2. Your GitHub repository must have the name - `ioBroker.<adaptername>`. **B** is capital in "ioBroker", but in the `package.json` the *name* must be lower case, because npm does not allow upper case letters.
+3. The repository must have "topics". Add these with `Manage topics`.
+4. Do not use in the title the words `ioBroker` or `Adapter`. It is clear anyway that this adapter is for ioBroker.
+5. Pure widget adapters for vis-2 must be named vis-2-widget-xxxx.
+6. `titleLang` in io-package.json is object that consists short names in many languages. `Lang` ist not german `Länge`, but english `LANGuages`.
+7. Adapter needs to have a `README.md` with description, detail information and changelog. English is mandatory. Other languages are welcome. See [Example of README.md](#example-of-readme-md).
 
    **In `README.md`, there must be a link to the device description or the manufacturer's website.**
-6. Adapter must have a predefined license.
-7. Please remove `www`, `widgets` and `docs` directories (`admin/tab_m.html`, `admin/custom_m.html`) if not used.
-8. Adapter needs to have at least Adapter basic testing (installing, running) using GitHub actions. More information in Forum from `apollon77` (Just take from other adapters the samples)
-9. Define one of the types in `io-package.json`. See details [here](#types)
-10. Define one of the connection types (if applied) in `io-package.json`. See details [here](#connection-types)
-11. All states must have the according [valid roles](https://github.com/ioBroker/ioBroker/blob/master/doc/STATE_ROLES.md#state-roles) (and not just "state")
-12. Include `author` in `io-package.json` and `authors` in `io-package.json`. See [here](#authors).
-13. Adapter needs to be available as package on `npmjs.com`. See [How to publish on npm](#how-to-publish-on-npm)
-14. `iobroker` organisation must be added as an owner to `npm` package. [Why and how to do that.](#add-owner-to-packet)
-15. Add your adapter into the list (first latest and after that into stable, when tested).
+8. Adapter must have a predefined license.
+9. Please remove `www`, `widgets` and `docs` directories (`admin/tab_m.html`, `admin/custom_m.html`) if not used.
+10. Adapter needs to have at least Adapter basic testing (installing, running) using GitHub actions. More information in Forum from `apollon77` (Just take from other adapters the samples)
+11. Define one of the types in `io-package.json`. See details [here](#types)
+12. Define one of the connection types (if applied) in `io-package.json`. See details [here](#connection-types)
+13. All states must have the according [valid roles](https://github.com/ioBroker/ioBroker/blob/master/doc/STATE_ROLES.md#state-roles) (and not just "state")
+14. Include `author` in `io-package.json` and `authors` in `io-package.json`. See [here](#authors).
+15. Adapter needs to be available as package on `npmjs.com`. See [How to publish on npm](#how-to-publish-on-npm)
+16. `iobroker` organisation must be added as an owner to `npm` package. [Why and how to do that.](#add-owner-to-packet)
+17. Add your adapter into the list (first latest and after that into stable, when tested).
    Examples of entries you can find [here](#samples).
-16. No new adapters will be accepted to repo without `admin3` Configuration dialog. `Admin2` dialog is optional!
-17. Port attribute must have name `port`. 
-18. Check and follow the coding best practices listed [below](#development-and-coding-best-practices).
+18. No new adapters will be accepted to repo without `admin3` Configuration dialog. `Admin2` dialog is optional!
+19. Port attribute must have name `port`. 
+20. Check and follow the coding best practices listed [below](#development-and-coding-best-practices).
 
 *Note:* you can watch the video about it (only german) on [YouTube](https://www.youtube.com/watch?v=7N8fsJcAdlE)
 *Note:* There is a helper https://adapter-check.iobroker.in/ to check many points automatically. Just place your GitHub adapter repo there, e.g. `https://github.com/ioBroker/ioBroker.admin` and press enter or on the check button.
@@ -102,7 +104,7 @@ Additionally, to all above listed points:
 1. The adapter must have been added to the latest repository previously.
 2. Forum thread with a question to test the adapter.
 3. Some feedback on [forum](http://forum.iobroker.net).
-4. **Important** Discovery function! If a device can be found automatically (USB, IP), it should be implemented in the discovery adapter after (Discovery PR will be merged after stable acceptance).
+4. **Optional** Discovery function! If a device can be found automatically (USB, IP), it should be implemented in the [discovery adapter](https://github.com/ioBroker/ioBroker.discovery). The discovery PR is merged as soon as the adapter is in the latest repository. How to add a detection is described in [DEVELOPMENT.md](https://github.com/ioBroker/ioBroker.discovery/blob/master/DEVELOPMENT.md).
 
 ## Common Rules and Requirements for Commercial Adapters Requiring a License
 ioBroker GmbH sponsors all infrastructure and services necessary for the smooth functioning of the ioBroker world. This encompasses the repository, central components, and platforms such as the Forum. While the usage of open-source "non-commercial" adapters is entirely free, the scenario changes when adapters necessitate a purchase.
