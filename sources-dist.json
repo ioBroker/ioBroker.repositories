@@ -4250,6 +4250,11 @@
     "icon": "https://raw.githubusercontent.com/iobroker-community-adapters/ioBroker.wifilight/master/admin/wifilight.png",
     "type": "lighting"
   },
+  "wifiwhirl": {
+    "meta": "https://raw.githubusercontent.com/WifiWhirl/ioBroker.wifiwhirl/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/WifiWhirl/ioBroker.wifiwhirl/main/admin/wifiwhirl.png",
+    "type": "household"
+  },
   "wiim": {
     "meta": "https://raw.githubusercontent.com/KaiIOB/ioBroker.wiim/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/KaiIOB/ioBroker.wiim/main/admin/wiim.png",
