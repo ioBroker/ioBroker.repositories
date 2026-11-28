@@ -633,6 +633,12 @@
     "type": "alarm",
     "version": "0.2.0"
   },
+  "dl-manager": {
+    "meta": "https://raw.githubusercontent.com/krobipd/ioBroker.dl-manager/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/krobipd/ioBroker.dl-manager/main/admin/dl-manager.svg",
+    "type": "infrastructure",
+    "version": "0.5.0"
+  },
   "dnscope": {
     "meta": "https://raw.githubusercontent.com/simatec/ioBroker.dnscope/main/io-package.json",
     "icon": "https://raw.githubusercontent.com/simatec/ioBroker.dnscope/main/admin/dnscope.png",
