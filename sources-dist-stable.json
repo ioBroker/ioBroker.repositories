@@ -3357,6 +3357,12 @@
     "type": "energy",
     "version": "0.3.4"
   },
+  "sungrow-local": {
+    "meta": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.sungrow-local/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/SmarthomeElektroniker/ioBroker.sungrow-local/main/admin/sungrow-local.png",
+    "type": "energy",
+    "version": "0.5.1"
+  },
   "sureflap": {
     "meta": "https://raw.githubusercontent.com/Sickboy78/ioBroker.sureflap/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/Sickboy78/ioBroker.sureflap/master/admin/sureflap.png",
