@@ -3,8 +3,10 @@ import axios from 'axios';
 import {
     addComment,
     addLabel,
+    createLabel,
     deleteLabel,
     getGithub,
+    getLabels,
     getUrl,
     getAllComments,
     deleteComment,
@@ -20,6 +22,8 @@ const require = createRequire(import.meta.url);
 const checker: typeof Repochecker = require('@iobroker/repochecker');
 
 const TEXT_RECHECK = 'RE-CHECK!';
+const TEXT_REREVIEW = 'READY FOR RE-REVIEW';
+const LABEL_REREVIEW = 'RE-REVIEW pending (by mcm1957)';
 const TEXT_COMMENT_TITLE = '## Automated adapter checker';
 const TEXT_MULTIPLE_ADAPTERS =
     '>[!CAUTION]\n>Please create seperate PRs for every adpater to add or update. This PR might be closed as it changes or adds more than one adapter.';
@@ -743,6 +747,22 @@ function compareVersions(a: string, b: string): number {
     return 0;
 }
 
+async function handleRereviewTrigger(issueNumber: string | number): Promise<void> {
+    // Ensure the label exists in the repo, then add it to the PR
+    const existingLabels: any[] = await getLabels('');
+    if (!existingLabels.find((l: any) => l.name === LABEL_REREVIEW)) {
+        await createLabel(LABEL_REREVIEW, 'RE-REVIEW requested', 'e4e669');
+    }
+    await addLabel(issueNumber, [LABEL_REREVIEW]);
+
+    // Post a reminder comment dated 7 days from now
+    const reminderDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+    const dd = String(reminderDate.getDate()).padStart(2, '0');
+    const mm = String(reminderDate.getMonth() + 1).padStart(2, '0');
+    const yyyy = reminderDate.getFullYear();
+    await addComment(issueNumber, `reminder ${dd}.${mm}.${yyyy}`);
+}
+
 async function doIt() {
     const prID = getPullRequestNumber();
     console.log(`Process PR ${prID}`);
@@ -751,8 +771,17 @@ async function doIt() {
         const event = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
         console.log(`EVENT ${JSON.stringify(event, null, 2)}`);
         if (event.action === 'created' && event.comment) {
-            if (!event.comment.body || event.comment.body.trim() !== TEXT_RECHECK) {
+            const body: string = event.comment.body || '';
+            const isRecheck = body.includes(TEXT_RECHECK);
+            const isRereview = body.includes(TEXT_REREVIEW);
+            if (!isRecheck && !isRereview) {
                 return Promise.resolve('No check required');
+            }
+            if (isRereview) {
+                const issueNumber = event.issue ? event.issue.number : '';
+                if (issueNumber) {
+                    await handleRereviewTrigger(issueNumber);
+                }
             }
         }
     }
