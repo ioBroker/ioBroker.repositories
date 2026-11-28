@@ -27,6 +27,9 @@ const delay = (ms: number): Promise<void> => new Promise(resolve => setTimeout(r
 // Fallback wait times (in ms) between retries when the response carries no hint: 5 min, then 10 min.
 const RETRY_FALLBACK_DELAYS = [5 * 60 * 1000, 10 * 60 * 1000, 10 * 60 * 1000];
 
+// Wait times (in ms) for transient network error retries (ECONNRESET, ETIMEDOUT, etc.): 5s, 10s, 30s.
+const NETWORK_ERROR_DELAYS = [5_000, 10_000, 30_000];
+
 // GitHub signals rate limiting with HTTP 429 (and sometimes 403 once the limit is exhausted).
 function isRateLimit(status: number): boolean {
     return status === 429 || status === 403;
@@ -71,8 +74,21 @@ async function request(url: string) {
             if (status === 404) {
                 throw e;
             }
+            // Retry transient network errors (ECONNRESET, ETIMEDOUT, etc.) with short delays.
+            if (!status) {
+                if (attempt >= NETWORK_ERROR_DELAYS.length) {
+                    throw e;
+                }
+                const waitMs = NETWORK_ERROR_DELAYS[attempt];
+                console.warn(
+                    `Network error (${e.code ?? e.message}) for ${url}. ` +
+                        `Retrying in ${waitMs / 1000}s (attempt ${attempt + 1}/${NETWORK_ERROR_DELAYS.length}).`,
+                );
+                await delay(waitMs);
+                continue;
+            }
             // Only retry on GitHub rate limit responses; give up once retries are exhausted.
-            if (!status || !isRateLimit(status) || attempt >= maxRetries) {
+            if (!isRateLimit(status) || attempt >= maxRetries) {
                 throw e;
             }
             const hintedDelay = getRetryDelayFromResponse(e.response);
