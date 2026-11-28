@@ -240,6 +240,11 @@
     "icon": "https://raw.githubusercontent.com/zhihaining/ioBroker.apsystems-ez1/master/admin/apsystems-ez1.png",
     "type": "energy"
   },
+  "aquaclean-bridge": {
+    "meta": "https://raw.githubusercontent.com/barloew/ioBroker.aquaclean-bridge/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/barloew/ioBroker.aquaclean-bridge/main/admin/aquaclean-bridge.png",
+    "type": "household"
+  },
   "artnet": {
     "meta": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/ioBroker/ioBroker.artnet/master/admin/artnet.png",
