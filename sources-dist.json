@@ -3680,6 +3680,11 @@
     "icon": "https://raw.githubusercontent.com/bowao/ioBroker.tinyrx4/master/admin/tinyRX4.png",
     "type": "hardware"
   },
+  "toshiba-ac": {
+    "meta": "https://raw.githubusercontent.com/Exc3pt10n/ioBroker.toshiba-ac/main/io-package.json",
+    "icon": "https://raw.githubusercontent.com/Exc3pt10n/ioBroker.toshiba-ac/main/admin/toshiba-ac.png",
+    "type": "climate-control"
+  },
   "toyota": {
     "meta": "https://raw.githubusercontent.com/TA2k/ioBroker.toyota/master/io-package.json",
     "icon": "https://raw.githubusercontent.com/TA2k/ioBroker.toyota/master/admin/toyota.png",
