@@ -20,7 +20,7 @@ jobs:
         with:
           script: |
             const body = context.payload.comment.body;
-            if (body.includes('RE-CHECK!') || body.includes('READY FOR RE-REVIEW')) return;
+            if (body.trim() === 'RE-CHECK!') return;
             github.rest.issues.addLabels({
               issue_number: context.issue.number,
               owner: context.repo.owner,
