@@ -1374,18 +1374,6 @@ async function doIt() {
         comment += verificationLines.map(line => `\n${line}`).join('');
     }
 
-    if (newAtLatest && newAtLatestUrl) {
-        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtLatest.md<br>Merge the PR if tests pass. Solve merge conflicts if required.<br>Adapter: ${newAtLatestUrl}</sub>`;
-    }
-
-    if (newAtStable && newAtStableUrl) {
-        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsNewAtStable.md<br>Merge the PR if tests pass. Solve merge conflicts if required.<br>Adapter: ${newAtStableUrl}</sub>`;
-    }
-
-    if (updateStableUrl && updateStableFrom && updateStableTo) {
-        comment += `\n\n---\n<sub>Prompt for documentation update:<br><br>Create a new PR to add an update to history.md like described at<br>https://github.com/iobroker-bot-orga/myClaude/blob/main/CLAUDE-instructions/CLAUDE-newsUpdateStableRelease.md<br>Merge the PR if tests pass. Solve merge conflicts if required.<br>Adapter: ${updateStableUrl}<br>version range: ${updateStableFrom} to ${updateStableTo}</sub>`;
-    }
-
     comment += `\n\n---\n\n**Add comment "${TEXT_RECHECK}" to start check anew**`;
 
     console.log('ADD PULL REQUEST COMMENT:');
